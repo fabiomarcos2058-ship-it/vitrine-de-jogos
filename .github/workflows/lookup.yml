@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-concurrency: { group: precos }
+concurrency: { group: busca }
 jobs:
   busca:
     runs-on: ubuntu-latest
