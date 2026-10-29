@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/**"
+      - "scripts/update-prices.mjs"
       - ".github/workflows/precos.yml"
   workflow_dispatch:
 

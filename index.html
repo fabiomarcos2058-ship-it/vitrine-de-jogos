@@ -839,6 +839,11 @@ body { top: 0 !important; }
 .char-opt span { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 6px 6px; font-size: 11.5px; font-weight: 700; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.85)); text-align: center; line-height: 1.2; }
 .char-opt[aria-pressed="true"] { border-color: var(--brand-edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 45%, transparent); }
 .char-cap { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+.pchar { position: absolute; z-index: 0; top: 120px; left: 0; right: 0; bottom: 0; pointer-events: none; -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 65%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 18%, #000 65%, transparent 100%); }
+.pchar img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; opacity: 0.42; display: block; }
+.pbody { z-index: 1; }
+.pcard .pstats button { background: color-mix(in srgb, var(--bg) 82%, transparent); }
+.ban-prev { aspect-ratio: 3 / 1; border-radius: 14px; border: 1px solid var(--line); margin-bottom: 10px; background-size: cover; max-width: 420px; }
 .pv2-bg { background-size: cover !important; }
 
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
@@ -1948,7 +1953,7 @@ const BANNERS = [
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
 const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
 const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "", bgChar: null };
-const safeCharImg = u => typeof u === "string" && u.length < 600 && /^https:\/\/(upload|thumb)\.wikimedia\.org\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
+const safeCharImg = u => typeof u === "string" && u.length < 600 && /^https:\/\/((upload|thumb)\.wikimedia\.org|static\.wikia\.nocookie\.net)\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
 let CHARS = null;
 async function loadChars() {
   if (CHARS) return CHARS;
@@ -1965,6 +1970,10 @@ function savePimg() {
   if (acct() && fb) fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { img: pimg }, { merge: true }).catch(() => toast("Não foi possível salvar as imagens na nuvem agora"));
 }
 const selfP = () => ({ ...profile, img: pimg });
+function charHTML(p) {
+  const u = p.bgChar && safeCharImg(p.bgChar.img); if (!u) return "";
+  return `<div class="pchar" aria-hidden="true"><img src="${u}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>`;
+}
 function hexInk(h) { const n = parseInt(h.slice(1), 16); const L = (0.2126 * (n >> 16 & 255) + 0.7152 * (n >> 8 & 255) + 0.0722 * (n & 255)) / 255; return L > 0.55 ? "#14110A" : "#FFFFFF"; }
 function bannerCSS(p) {
   const im = safeImg(p.img && p.img.banner); if (im) return `url('${im}') center / cover no-repeat`;
@@ -1972,7 +1981,6 @@ function bannerCSS(p) {
   return BANNERS[p.banner] || BANNERS[0];
 }
 function bgCSS(p) {
-  const ch = p.bgChar && safeCharImg(p.bgChar.img); if (ch) return `url('${ch}') center top / cover no-repeat`;
   const h = validHex(p.bgHex); if (h) return `linear-gradient(160deg, ${h}, color-mix(in srgb, ${h} 35%, #0D0F14))`;
   return "";
 }
@@ -2261,14 +2269,14 @@ function openProfile() {
   const loadingAcct = !user && !authReady && (fbState === "loading" || fbState === "ready");
   openSheet("profile", user ? "Minha conta" : loadingAcct ? "Carregando sua conta…" : "Perfil neste aparelho", "Meu perfil", `
     <div class="pcard">
-      <div class="pbanner" style="background:${bannerCSS(selfP())}"></div>
+      <div class="pbanner" style="background:${bannerCSS(selfP())}"></div>${charHTML(p)}
       <div class="pbody">
         <div class="pav">${avatarHTML(92)}</div>
         <div class="pname">${esc(p.name || "Sem nome")}</div>
         ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
         ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
         ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
-        ${p.bgChar && safeCharImg(p.bgChar.img) ? `<p class="char-cap">Fundo: <span class="notranslate" translate="no">${esc(p.bgChar.n)}</span></p>` : ""}
+        ${p.bgChar && safeCharImg(p.bgChar.img) ? `<p class="char-cap">Personagem: <span class="notranslate" translate="no">${esc(p.bgChar.n)}</span></p>` : ""}
         <div class="pstats">
           <button type="button" id="ps-fav"><b>${favs.size}</b><small>Favoritos</small></button>
           <button type="button" data-tool="cart"><b>${cart.length}</b><small>No carrinho</small></button>
@@ -2306,7 +2314,6 @@ function openProfileEdit() {
   const games2 = [...games].sort((a, b) => a.t.localeCompare(b.t, "pt-BR"));
   const genres = [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR"));
   openSheet("profile-edit", "Personalizar", "Editar perfil", `
-    <div class="pv2" id="pv" aria-hidden="true"><div class="pv2-bg" id="pv-bg"></div><div class="pv2-card"><div class="pv2-banner" id="pv-banner"></div><div class="pv2-row"><span class="pav" id="pv-av"></span><span><b id="pv-name"></b><small id="pv-user"></small></span></div></div></div>
     <form class="form" id="pform" style="margin-top:18px" novalidate>
       <div class="two">
         <div class="field"><label for="pf-name">Nome</label><input id="pf-name" name="name" maxlength="30" value="${esc(p.name)}" autocomplete="nickname" required></div>
@@ -2321,13 +2328,13 @@ function openProfileEdit() {
         ${AV_SYMBOLS.map((c, i) => `<label class="sw sym"><input type="radio" name="sym" value="${i}" ${p.sym === i ? "checked" : ""}><span>${c}</span></label>`).join("")}
       </div></div>
       <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${!ed.colorHex && p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}${customSw("color")}</div><div class="wheel-box" id="wb-color" hidden></div></div>
-      <div class="field"><span class="lbl">Capa</span><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${!ed.bannerHex && p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}${customSw("banner")}</div><div class="wheel-box" id="wb-banner" hidden></div>
+      <div class="field"><span class="lbl">Capa</span><div class="ban-prev" id="ban-prev" aria-hidden="true"></div><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${!ed.bannerHex && p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}${customSw("banner")}</div><div class="wheel-box" id="wb-banner" hidden></div>
         <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="banner"></label><button type="button" class="btn-ghost sm" data-rmimg="banner">Remover imagem</button></div></div>
       <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
-      <div class="field"><span class="lbl">Fundo do perfil</span>
-        <div class="help" style="margin:0 0 8px">Um personagem do seu jogo favorito, ou uma cor. Aparece atrás de todo o seu perfil, para você e para os seus amigos.</div>
+      <div class="field"><span class="lbl">Personagem e fundo</span>
+        <div class="help" style="margin:0 0 8px">Escolha um personagem do seu jogo favorito para aparecer no seu cartão de perfil, e uma cor para o fundo. Seus amigos também veem.</div>
         <div id="char-box"></div>
-        <span class="lbl" style="margin-top:14px">Ou uma cor</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex && !ed.bgChar ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
+        <span class="lbl" style="margin-top:14px">Cor do fundo</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex && !ed.bgChar ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
 </div>
       <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
       <fieldset class="field chip-field"><legend class="lbl">Onde você mais joga</legend><div class="chip-opts">${[["", "Não dizer"], ["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="plat" value="${v}" ${(p.plat || "") === v ? "checked" : ""}><span>${l}</span></label>`).join("")}</div></fieldset>
@@ -2339,14 +2346,10 @@ function openProfileEdit() {
   const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value || p.color || 0), banner: Number(f.banner.value || p.banner || 0), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgChar ? "" : ed.bgHex, bgChar: ed.bgChar, img: ed.img });
   const preview = () => {
     const d = read();
-    document.getElementById("pv-banner").style.background = bannerCSS(d);
-    const pvb = document.getElementById("pv-bg"); pvb.style.background = bgCSS(d) || "none"; pvb.style.opacity = d.bgChar ? "0.5" : "1";
-    document.getElementById("pv-av").innerHTML = avatarHTML(66, d);
+    document.getElementById("ban-prev").style.background = bannerCSS(d);
     document.getElementById("pf-av-prev").innerHTML = avatarHTML(64, d);
     f.querySelectorAll("[data-rmimg]").forEach(b => { b.hidden = !ed.img[b.dataset.rmimg]; });
     f.querySelectorAll("[data-wheel]").forEach(b => { const h = customHex(b.dataset.wheel); b.classList.toggle("on", !!h); b.firstElementChild.style.background = h || ""; });
-    document.getElementById("pv-name").textContent = d.name || "Seu nome";
-    document.getElementById("pv-user").textContent = d.user ? "@" + d.user : "";
     document.getElementById("pf-bio-n").textContent = f.bio.value.length;
   };
   async function drawChars() {
@@ -2860,7 +2863,7 @@ async function openFriendProfile(uid) {
   const first = esc((p.name || "Jogador").split(" ")[0]);
   openSheet("friend", "Perfil", p.name || "Jogador", `
     <div class="pcard">
-      <div class="pbanner" style="background:${bannerCSS(p)}"></div>
+      <div class="pbanner" style="background:${bannerCSS(p)}"></div>${charHTML(p)}
       <div class="pbody">
         <div class="pav">${avatarHTML(92, p)}</div>
         <div class="pname">${esc(p.name || "Jogador")}</div>
