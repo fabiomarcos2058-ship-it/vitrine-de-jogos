@@ -1,0 +1,3584 @@
+{
+ "updated": "2026-10-29T21:07:31.416Z",
+ "new": [
+  {
+   "q": "Counter-Strike 2",
+   "steam": {
+    "appid": 730,
+    "name": "Counter-Strike 2",
+    "free": true,
+    "b": null,
+    "f": null,
+    "pct": 0,
+    "mc": null,
+    "date": "21/ago./2012",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Gratuitos para Jogar"
+    ],
+    "devs": [
+     "Valve"
+    ],
+    "pubs": [
+     "Valve"
+    ],
+    "desc": "Há mais de duas décadas, o Counter-Strike oferece uma experiência competitiva de elite moldada por milhões de jogadores mundialmente. Agora, o próximo capítulo da história do CS vai começar. Isso é Counter-Strike 2.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": true
+    },
+    "other": [
+     "Counter-Strike 2 #730",
+     "Counter-Strike 2 Soundtrack #2678630",
+     "CS2D #666220",
+     "Pure Farming 2018 - Gomselmash Palesse CS-200 #647631"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/library_600x900_2x.jpg?t=1793054556",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg?t=1793054556",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/library_hero.jpg?t=1793054556"
+   },
+   "xboxAll": [
+    {
+     "title": "Counter-Strike: GO",
+     "id": "C4Q8MJNV4564",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Graze Counter GM",
+     "id": "9PK6T8DG92K7",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Halo: Spartan Strike",
+     "id": "9WZDNCRFJBFJ",
+     "b": 10.95,
+     "f": 10.95,
+     "on": [
+      "MobileDevice",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "APG Neon Strike",
+     "id": "9N55W65CDZJZ",
+     "b": 48.95,
+     "f": 24.47,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Honor - Shooter of Warfare",
+     "id": "9N8HFT5GLV3M",
+     "b": 72.95,
+     "f": 51.06,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Sudden Strike 4 - Complete Collection",
+     "id": "BVGH0BLWLR52",
+     "b": 147.45,
+     "f": 147.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Marvel Rivals",
+   "steam": {
+    "appid": 2767030,
+    "name": "Marvel Rivals",
+    "free": true,
+    "b": null,
+    "f": null,
+    "pct": 0,
+    "mc": null,
+    "date": "5/dez./2024",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Casual",
+     "Multijogador Massivo",
+     "Corrida",
+     "RPG",
+     "Estratégia",
+     "Gratuitos para Jogar"
+    ],
+    "devs": [
+     "NetEase Games"
+    ],
+    "pubs": [
+     "NetEase Games"
+    ],
+    "desc": "Marvel Rivals é um jogo de tiro JxJ em equipe com Super Heróis! Reúna um grupo de estrelas da Marvel, crie estratégias e combine seus poderes para executar poderosas habilidades de equipe. Lute em cenários destrutíveis e campos de batalha dinâmicos pelo universo Marvel em constante evolução.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Marvel Rivals #2767030",
+     "Marvel Rivals - High-Resolution Pack #4406010"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/846b1e4bc5e334b691bbe0b19fbbb6b074d5d89f/library_capsule_2x.jpg?t=1792140776",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/c61f65c5968af5d85b0393005991ecee0184fcaf/header.jpg?t=1792140776",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/db5e6d9455ebe3142b81673a35dfc52d3f485c41/library_hero.jpg?t=1792140776"
+   },
+   "xboxAll": [
+    {
+     "title": "Marvel Rivals",
+     "id": "9N8PMW7QMD3D",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel: Ultimate Alliance",
+     "id": "BR8GGZ8XJGJ1",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Marvel: Ultimate Alliance 2",
+     "id": "BX3ZK30JL2DL",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "MARVEL vs. CAPCOM Fighting Collection: Arcade Classics",
+     "id": "9NWFM3HDJC94",
+     "b": 232,
+     "f": 76.56,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Coleção LEGO® Marvel",
+     "id": "BPD060GWC3T0",
+     "b": 229,
+     "f": 229,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Marvel vs. Capcom: Infinite Demo",
+     "id": "C07TL9SG62QC",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "PUBG: BATTLEGROUNDS",
+   "steam": {
+    "appid": 578080,
+    "name": "PUBG: BATTLEGROUNDS",
+    "free": true,
+    "b": null,
+    "f": null,
+    "pct": 0,
+    "mc": null,
+    "date": "21/dez./2017",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Multijogador Massivo",
+     "Gratuitos para Jogar"
+    ],
+    "devs": [
+     "PUBG Corporation"
+    ],
+    "pubs": [
+     "KRAFTON, Inc."
+    ],
+    "desc": "PUBG: BATTLEGROUNDS, o jogo de tiro de alto risco em que o vencedor leva tudo e que deu início ao fenômeno do Battle Royale, é gratuito! Entre em diversos mapas, saqueie armas e suprimentos exclusivos e sobreviva em uma zona cada vez menor, onde cada turno pode ser o último.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "PUBG: BATTLEGROUNDS #578080"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/36a1a274b3a7870e475ea1e110e58db8a0803c41/library_600x900_2x.jpg?t=1792718193",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1792718193",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/a14b88ee69f55d5354d3efc1f725eddf40650869/library_hero.jpg?t=1792718193"
+   },
+   "xboxAll": [
+    {
+     "title": "PUBG: BATTLEGROUNDS",
+     "id": "C0MN5DN8KR3F",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "PUBG: DED.NET",
+     "id": "9NR8QWV3WC67",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Worms Battlegrounds + Worms W.M.D",
+     "id": "9PH2RJ3T6CJS",
+     "b": 129.95,
+     "f": 129.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Worms Battlegrounds",
+     "id": "BSFCZ5066BLJ",
+     "b": 49,
+     "f": 49,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "PUBG - Pacote do Sobrevivente Exclusivo do Xbox Game Pass 2026 #3",
+     "id": "9PL6QP4Q951T",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Call of Duty: Black Ops 7",
+   "steam": {
+    "appid": 3606480,
+    "name": "Call of Duty®: Black Ops 7",
+    "free": false,
+    "b": 349.9,
+    "f": 349.9,
+    "pct": 0,
+    "mc": null,
+    "date": "21/nov./2025",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Treyarch",
+     "Raven Software",
+     "Beenox",
+     "High Moon Studios",
+     "Sledgehammer Games",
+     "Infinity Ward",
+     "Activision Shanghai",
+     "Demonware"
+    ],
+    "pubs": [
+     "Activision"
+    ],
+    "desc": "Em Call of Duty®: Black Ops 7, a Treyarch e a Raven Software trazem aos jogadores o maior Black Ops já feito, com uma Campanha Co-op inovadora, uma experiência Multijogador eletrizante e o lendário modo Zumbis por rodadas.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Call of Duty®: Black Ops 7 #3606480",
+     "Call of Duty®: Black Ops 7 - BlackCell (Temporada 06) #4200780",
+     "Call of Duty®: Black Ops 7 - Pacote Inicial: Arachnid's Mark #4098660",
+     "Pontos Call of Duty®: Black Ops 7 ou Call of Duty®: Warzone™ #2170970",
+     "Call of Duty®: Black Ops 7 - Command Force: Pacote Inicial #4233760"
+    ],
+    "capsule": null,
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
+    "hero": null
+   },
+   "xboxAll": [
+    {
+     "title": "Call of Duty®: Black Ops II",
+     "id": "C1QJM5XT9SXV",
+     "b": 219.9,
+     "f": 219.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Black Ops",
+     "id": "BVMGCSX6XPC9",
+     "b": 219.9,
+     "f": 219.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Duty: Black Ops III",
+     "id": "C3Q2WWJJ2T1H",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4",
+     "id": "9NCPSQQD1Z66",
+     "b": 349.9,
+     "f": 349.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Borderlands 4",
+   "steam": {
+    "appid": 1285190,
+    "name": "Borderlands 4",
+    "free": false,
+    "b": 379.9,
+    "f": 379.9,
+    "pct": 0,
+    "mc": 81,
+    "date": "11/set./2025",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Gearbox Software"
+    ],
+    "pubs": [
+     "2K"
+    ],
+    "desc": "Borderlands 4 é um looter shooter caótico, com bilhões de armas, inimigos mortais e ação cooperativa de tirar o fôlego. Como um dos quatro novos caça-arcas bambambãs, sua missão é fugir de um planeta cheio de perigos.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Borderlands 4 #1285190",
+     "Borderlands®4 - Loveless the Hacker #4627500",
+     "Borderlands®4 - C4SH the Rogue #4627490",
+     "Borderlands®4 - Story Pack 2: FL4K and the Last Resort #3802460",
+     "Borderlands®4 - Bounty Pack 4: Murders and Acquisitions #4614350"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/e68c1eeacfc21e61e5a03ae81a20694856665af4/library_600x900_2x.jpg?t=1789422727",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/986a88d1b0e1420b00183def2a7034508353afa3/header.jpg?t=1789422727",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/259223bf2ee8cc57227b92d1373f4b2b142427a3/library_hero.jpg?t=1789422727"
+   },
+   "xboxAll": [
+    {
+     "title": "Borderlands®4",
+     "id": "9MX6HKF5647G",
+     "b": 379.9,
+     "f": 379.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4",
+     "id": "9NCPSQQD1Z66",
+     "b": 349.9,
+     "f": 349.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Edição Deluxe de Borderlands®4",
+     "id": "9P6M51TD914L",
+     "b": 499.9,
+     "f": 249.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Edição Super Deluxe de Borderlands®4",
+     "id": "9NCQG87CH81N",
+     "b": 649.9,
+     "f": 649.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Metal Gear Solid Delta: Snake Eater",
+   "xboxAll": [
+    {
+     "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+     "id": "9PJLN214RTKQ",
+     "b": 284.9,
+     "f": 284.9,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "METAL GEAR SOLID Δ: SNAKE EATER Digital Deluxe Edition",
+     "id": "9NNHX9HW4TZW",
+     "b": 339.9,
+     "f": 339.9,
+     "on": [
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "METAL GEAR SOLID: MASTER COLLECTION Vol.1",
+     "id": "9N16X47Z5PH5",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "METAL GEAR SOLID HD EDITION: 2 & 3",
+     "id": "BWX1KN6K55Q1",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version",
+     "id": "9PL27989V9MD",
+     "b": 99.96,
+     "f": 99.96,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "METAL GEAR SOLID - Master Collection Version",
+     "id": "9NB4KT6SS2L4",
+     "b": 99.96,
+     "f": 99.96,
+     "on": [
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Mafia: The Old Country",
+   "steam": {
+    "appid": 1941540,
+    "name": "Mafia: The Old Country",
+    "free": false,
+    "b": 249.9,
+    "f": 249.9,
+    "pct": 0,
+    "mc": null,
+    "date": "7/ago./2025",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Hangar 13"
+    ],
+    "pubs": [
+     "2K"
+    ],
+    "desc": "Descubra as origens do crime organizado em Mafia: The Old Country, uma conturbada história de máfia ambientada no submundo brutal da Sicília do início do século XX. Lute para sobreviver como Enzo Favara e prove seu valor para a famiglia nesta envolvente ação em terceira pessoa.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Mafia: The Old Country #1941540",
+     "Mafia: The Old Country - Homem de Honra #4492700",
+     "Mafia: The Old Country - Padrino Pack #3269260",
+     "Mafia: The Old Country - Gatto Nero Pack #3269270",
+     "Mafia: The Old Country - Soldato Pack #3262000"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/3c2e4dee10f72e061ed382064be68b9648902534/library_600x900_2x.jpg?t=1788898865",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/d06980bb8f41737ca68da8eed40079347db09c84/header.jpg?t=1788898865",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/096bae4d126391be7b20708f7db3c82e2063400c/library_hero.jpg?t=1788898865"
+   },
+   "xboxAll": [
+    {
+     "title": "Mafia: The Old Country",
+     "id": "9P834N9S4LL0",
+     "b": 249.9,
+     "f": 249.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Mafia: The Old Country Edição Definitiva",
+     "id": "9NQK1C3SFV1K",
+     "b": 329.9,
+     "f": 197.94,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Mafia II",
+     "id": "C1H15FFSH2CB",
+     "b": 89,
+     "f": 89,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Mafia III: Definitive Edition",
+     "id": "9P724TX61F4G",
+     "b": 149.9,
+     "f": 149.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Mafia: Definitive Edition",
+     "id": "9PGWB5ZMDPDM",
+     "b": 199.9,
+     "f": 199.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Mafia: A Coleção Omertà",
+     "id": "9MTJQF3R185J",
+     "b": 499.9,
+     "f": 499.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Elden Ring Nightreign",
+   "steam": {
+    "appid": 2622380,
+    "name": "ELDEN RING NIGHTREIGN",
+    "free": false,
+    "b": 197.9,
+    "f": 197.9,
+    "pct": 0,
+    "mc": null,
+    "date": "29/mai./2025",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "RPG"
+    ],
+    "devs": [
+     "FromSoftware, Inc."
+    ],
+    "pubs": [
+     "FromSoftware, Inc.",
+     "Bandai Namco Entertainment"
+    ],
+    "desc": "ELDEN RING NIGHTREIGN é uma aventura independente dentro do universo de ELDEN RING, feita para oferecer aos jogadores uma nova experiência de jogo reimaginando o design básico do jogo.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "ELDEN RING NIGHTREIGN #2622380",
+     "ELDEN RING NIGHTREIGN The Forsaken Hollows #3531720"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/d1ee7bc631966b1a99e232a9f84af736bb298395/library_600x900_2x.jpg?t=1791488960",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/header.jpg?t=1791488960",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/d3fec2085d29f131be9ff47b5aea72d360d4e453/library_hero.jpg?t=1791488960"
+   },
+   "xboxAll": [
+    {
+     "title": "ELDEN RING NIGHTREIGN",
+     "id": "9PJ22QNVCZ3G",
+     "b": 229.9,
+     "f": 229.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ELDEN RING NIGHTREIGN Deluxe Edition",
+     "id": "9NDVX8HSXGLR",
+     "b": 313.5,
+     "f": 313.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ELDEN RING",
+     "id": "9P3J32CTXLRZ",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ELDEN RING",
+     "id": "9NL9DV1SH9LS",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Pré-Venda de ELDEN RING Edição Deluxe",
+     "id": "9N3VK2M8W2B9",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ELDEN RING Shadow of the Erdtree Edition",
+     "id": "9P1C6N09NFZP",
+     "b": 399.5,
+     "f": 399.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Dark Souls III",
+   "steam": {
+    "appid": 374320,
+    "name": "DARK SOULS™ III",
+    "free": false,
+    "b": 229.9,
+    "f": 229.9,
+    "pct": 0,
+    "mc": 89,
+    "date": "11/abr./2016",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "FromSoftware, Inc."
+    ],
+    "pubs": [
+     "FromSoftware, Inc.",
+     "Bandai Namco Entertainment"
+    ],
+    "desc": "DARK SOULS™ continua a ultrapassar seus próprios limites em um ambicioso novo capítulo da série que definiu um gênero e que é aclamada pela crítica. Prepare-se para abraçar a escuridão!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "DARK SOULS™ III #374320",
+     "DARK SOULS™ III - The Ringed City™ #506971",
+     "DARK SOULS™ III - Ashes of Ariandel™ #506970",
+     "DARK SOULS™ III - Season Pass #442010"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/library_600x900_2x.jpg?t=1748630784",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/header.jpg?t=1748630784",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/library_hero.jpg?t=1748630784"
+   },
+   "xboxAll": [
+    {
+     "title": "DARK SOULS™ III",
+     "id": "BW2XDRNSCCPZ",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "DARK SOULS™ III - Deluxe Edition",
+     "id": "C23CWXL81H3L",
+     "b": 424.5,
+     "f": 424.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "DARK SOULS™: REMASTERED",
+     "id": "BS18VCF4NLQ9",
+     "b": 199.5,
+     "f": 199.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Dark Souls™",
+     "id": "C010V77JZ9J7",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "DARK SOULS™ II: Scholar of the First Sin",
+     "id": "BVBQ72FDB4LK",
+     "b": 199.5,
+     "f": 199.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Diablo III: Reaper of Souls – Ultimate Evil Edition",
+     "id": "C2R5R5P2DF3C",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Monster Hunter: World",
+   "steam": {
+    "appid": 582010,
+    "name": "Monster Hunter: World",
+    "free": false,
+    "b": 129,
+    "f": 129,
+    "pct": 0,
+    "mc": 88,
+    "date": "8/ago./2018",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "CAPCOM Co., Ltd."
+    ],
+    "pubs": [
+     "CAPCOM Co., Ltd."
+    ],
+    "desc": "Conheça o Novo Mundo! Em Monster Hunter: World, o jogo mais recente da série, você pode curtir a experiência máxima de caçada, usando tudo à sua disposição para caçar monstros em um novo mundo repleto de surpresas e emoções.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Monster Hunter: World #582010",
+     "Monster Hunter World: Iceborne #1118010",
+     "Monster Hunter World: Iceborne Kit Deluxe #1118012",
+     "Monster Hunter: World - Kit Deluxe #891730",
+     "Monster Hunter: World Original Soundtrack #912540"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/library_600x900_2x.jpg?t=1791439347",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg?t=1791439347",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/library_hero.jpg?t=1791439347"
+   },
+   "xboxAll": [
+    {
+     "title": "MONSTER HUNTER: WORLD™",
+     "id": "BNG91PT95LQN",
+     "b": 87.29,
+     "f": 34.91,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Monster Hunter World: Iceborne Master Edition",
+     "id": "BNS4NCFZJDB0",
+     "b": 160.9,
+     "f": 40.22,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Monster Hunter World: Iceborne Ed. Master Digital Deluxe",
+     "id": "BTHQ42GWNT93",
+     "b": 217.7,
+     "f": 217.7,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Monster Panic",
+     "id": "9P8Q4M5Q1M05",
+     "b": 36.95,
+     "f": 36.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Monster Hunter Wilds",
+     "id": "9NMT6XFN0LVD",
+     "b": 199,
+     "f": 149.25,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Sega Vintage Collection: Monster World",
+     "id": "BRL4TWKNVT82",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Marvel's Spider-Man Remastered",
+   "steam": {
+    "appid": 1817070,
+    "name": "Marvel’s Spider-Man Remastered",
+    "free": false,
+    "b": 249.9,
+    "f": 249.9,
+    "pct": 0,
+    "mc": null,
+    "date": "12/ago./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Casual"
+    ],
+    "devs": [
+     "Insomniac Games",
+     "Nixxes Software"
+    ],
+    "pubs": [
+     "PlayStation Publishing LLC"
+    ],
+    "desc": "Em Marvel's Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Jogue como um Peter Parker experiente que combate as maiores ameaças do crime e vilões icônicos na Nova York da Marvel.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Marvel’s Spider-Man Remastered #1817070"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/library_600x900_2x.jpg?t=1787838689",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1787838689",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/library_hero.jpg?t=1787838689"
+   },
+   "xboxAll": [
+    {
+     "title": "Marvel Cosmic Invasion Demo",
+     "id": "9NJZQRKB5SXM",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "PC",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Shadow Man Remastered",
+     "id": "9NL3RMXG4PKV",
+     "b": 78.82,
+     "f": 78.82,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Homem-Cão: Latidos em Ação",
+     "id": "9NZC4W4JD209",
+     "b": 194.95,
+     "f": 194.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "SpiderHeck",
+     "id": "9N0TRF57SMQH",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Assassin's Creed® III Remastered",
+     "id": "BPMJ413V6BB2",
+     "b": 129,
+     "f": 129,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "DuckTales: Remastered",
+     "id": "C07J3ZJPGX6Z",
+     "b": 30,
+     "f": 30,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Days Gone",
+   "steam": {
+    "appid": 1259420,
+    "name": "Days Gone",
+    "free": false,
+    "b": 199.5,
+    "f": 199.5,
+    "pct": 0,
+    "mc": null,
+    "date": "17/mai./2021",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Bend Studio"
+    ],
+    "pubs": [
+     "PlayStation Publishing LLC"
+    ],
+    "desc": "Viaje e lute pelos Estados Unidos num cenário pós-pandêmico e mortífero. Jogue com Deacon St. John, um andarilho e caçador de recompensas que segue um caminho tortuoso, lutando para sobreviver ao mesmo tempo em que busca uma razão para viver neste jogo de aventura e ação em mundo aberto.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Days Gone #1259420",
+     "DLC Days Gone — Broken Road #3238470",
+     "Long Gone Days #510540",
+     "Days Gone By #1196550",
+     "Days Gone By Demo #1197130"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1259420/library_600x900_2x.jpg?t=1750947718",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1259420/header.jpg?t=1750947718",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1259420/library_hero.jpg?t=1750947718"
+   },
+   "xboxAll": [
+    {
+     "title": "Gears of War: E-Day",
+     "id": "9N4PT8HGCDHQ",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Deadly Days",
+     "id": "9P6XD4F453DG",
+     "b": 73.55,
+     "f": 14.71,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "7 Days to Die - Console Edition (Game Preview)",
+     "id": "9P6DWL7R6NTL",
+     "b": 167.45,
+     "f": 92.09,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Deadly Days Demo",
+     "id": "9P4F59G528JT",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Gone Home",
+     "id": "BP74GQ3N60Z1",
+     "b": 29,
+     "f": 29,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Long Gone Days",
+     "id": "9P6P8860TJNL",
+     "b": 62.45,
+     "f": 62.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Horizon Zero Dawn Remastered",
+   "steam": {
+    "appid": 2561580,
+    "name": "Horizon Zero Dawn™ Remastered",
+    "free": false,
+    "b": 249.5,
+    "f": 249.5,
+    "pct": 0,
+    "mc": null,
+    "date": "31/out./2024",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Guerrilla Games",
+     "Nixxes Software"
+    ],
+    "pubs": [
+     "PlayStation Publishing LLC"
+    ],
+    "desc": "Curta o aclamado Horizon Zero Dawn™ com recursos aprimorados e novos visuais incríveis. Em um futuro distante, dominado por máquinas colossais que vagam pela Terra, a natureza retomou as ruínas da nossa civilização esquecida, e pequenos grupos de sobreviventes se dividem em diferentes tribos.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Horizon Zero Dawn™ Remastered #2561580"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2561580/ae8e7f8cc7f0e494e6dfda3ee51161881b49acb7/library_600x900_2x.jpg?t=1750952943",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2561580/header.jpg?t=1750952943",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2561580/82ca173a29578ae2b3946e66b4e892c75dd9fd10/library_hero.jpg?t=1750952943"
+   },
+   "xboxAll": [
+    {
+     "title": "Zero Escape: Zero Time Dilemma",
+     "id": "9P3LCDLHWNMS",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "CyberBot: Zero (Xbox Series)",
+     "id": "9PNQCG7QMT7R",
+     "b": 17.45,
+     "f": 17.45,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "CyberBot: Zero (Xbox One)",
+     "id": "9MW6S19L0RSH",
+     "b": 17.45,
+     "f": 17.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "CyberBot: Zero (Windows)",
+     "id": "9NMWJDZ44RPS",
+     "b": 17.45,
+     "f": 17.45,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Katana ZERO",
+     "id": "9NXP19FZ7DZ4",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Ground Zero",
+     "id": "9P8FXPT5F7VV",
+     "b": 97.95,
+     "f": 97.95,
+     "on": [
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Death Stranding Director's Cut",
+   "steam": {
+    "appid": 1850570,
+    "name": "DEATH STRANDING DIRECTOR'S CUT",
+    "free": false,
+    "b": 159,
+    "f": 159,
+    "pct": 0,
+    "mc": 85,
+    "date": "30/mar./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "KOJIMA PRODUCTIONS"
+    ],
+    "pubs": [
+     " 505 Games"
+    ],
+    "desc": "Do lendário diretor Hideo Kojima, surge uma experiência que desafia gêneros, ainda maior em DIRECTOR’S CUT. Jogando como Sam Bridges, sua missão é entregar esperança à humanidade ao conectar os sobreviventes de uma América devastada. Você conseguirá reunir este mundo destruído, um passo de cada vez?",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "DEATH STRANDING DIRECTOR'S CUT #1850570"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/library_600x900_2x.jpg?t=1793287496",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/header.jpg?t=1793287496",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/library_hero.jpg?t=1793287496"
+   },
+   "xboxAll": [
+    {
+     "title": "DEATH STRANDING DIRECTOR'S CUT",
+     "id": "9NQGN8TGNT8P",
+     "b": 159,
+     "f": 55.65,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Death Relives",
+     "id": "9N42845FHFTR",
+     "b": 53.95,
+     "f": 53.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Heavy Metal Death Can",
+     "id": "9NQCLJNMM56W",
+     "b": 18.95,
+     "f": 18.95,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Death Crown",
+     "id": "9PH02ZWCGQBD",
+     "b": 48.45,
+     "f": 48.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Have a Nice Death",
+     "id": "9PF1ZX4HHGSW",
+     "b": 92.45,
+     "f": 92.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "DEATH BY CUBE",
+     "id": "9PP1BNQ7WDXZ",
+     "b": 53.95,
+     "f": 53.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Detroit: Become Human",
+   "steam": {
+    "appid": 1222140,
+    "name": "Detroit: Become Human",
+    "free": false,
+    "b": 199.99,
+    "f": 199.99,
+    "pct": 0,
+    "mc": 80,
+    "date": "18/jun./2020",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Quantic Dream"
+    ],
+    "pubs": [
+     "Quantic Dream"
+    ],
+    "desc": "Detroit: Become Human coloca o destino da humanidade e dos androides em suas mãos. Todas as suas escolhas afetam o resultado do jogo, com uma das narrativas mais intrinsecamente ramificadas já criadas.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Detroit: Become Human #1222140",
+     "Detroit: Become Human Demo #1224230"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/library_600x900.jpg?t=1667468479",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/header.jpg?t=1667468479",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/library_hero.jpg?t=1667468479"
+   },
+   "xboxAll": [
+    {
+     "title": "NieR:Automata BECOME AS GODS Edition",
+     "id": "9PM2P9HQD1ML",
+     "b": 143,
+     "f": 143,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "NieR:Automata™ BECOME AS GODS Edition",
+     "id": "BPPZVT8BZ15N",
+     "b": 143,
+     "f": 143,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Once Human",
+     "id": "9N0QWXC09MPT",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Too Human",
+     "id": "BQ216SGGM4M8",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Death Becomes You",
+     "id": "9N7WG2G8PJT3",
+     "b": 29.95,
+     "f": 29.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Destroy All Humans!",
+     "id": "C01MSK2X5HPQ",
+     "b": 69,
+     "f": 13.8,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Red Dead Redemption",
+   "steam": {
+    "appid": 2668510,
+    "name": "Red Dead Redemption",
+    "free": false,
+    "b": 249.5,
+    "f": 124.75,
+    "pct": 50,
+    "mc": null,
+    "date": "29/out./2024",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Rockstar Games",
+     "Double Eleven"
+    ],
+    "pubs": [
+     "Rockstar Games"
+    ],
+    "desc": "Conheça a história do ex-fora da lei John Marston e sua jornada para encontrar os últimos membros restantes da notória gangue Van der Linde na estreia para PC do aclamado predecessor de Red Dead Redemption 2.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Red Dead Redemption 2 #1174180",
+     "Red Dead Redemption #2668510",
+     "Deadrock Redemption 2 #4147110",
+     "Deadrock Redemption #2753270",
+     "Redemption Cemetery: Dead Park Collector's Edition #1112110"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/0ec15fa3f9bcd14072dc5e07ac1956eb425ec550/library_600x900_brazilian_2x.jpg?t=1781132266",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/header_brazilian.jpg?t=1781132266",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/ccdd17105b92b2a70224a742fa88cf4ad3b4ebdc/library_hero.jpg?t=1781132266"
+   },
+   "xboxAll": [
+    {
+     "title": "Red Dead Redemption 2",
+     "id": "9N2ZDN7NWQKV",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption",
+     "id": "9P5B3ZVDK19D",
+     "b": 248.95,
+     "f": 248.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption 2",
+     "id": "BPSWGQBW7R3G",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption 2: Edição Definitiva",
+     "id": "9PH339L3Z99C",
+     "b": 499.9,
+     "f": 499.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption",
+     "id": "BWKLFHWT7DHC",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption (PC)",
+     "id": "9P6V80XH1LH8",
+     "b": 248.95,
+     "f": 248.95,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Hitman World of Assassination",
+   "steam": {
+    "appid": 1659040,
+    "name": "HITMAN World of Assassination",
+    "free": false,
+    "b": 88.99,
+    "f": 88.99,
+    "pct": 0,
+    "mc": 87,
+    "date": "20/jan./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "IO Interactive A/S"
+    ],
+    "pubs": [
+     "IO Interactive A/S"
+    ],
+    "desc": "Entre no mundo do assassino supremo. HITMAN World of Assassination reúne o melhor de HITMAN, HITMAN 2 e HITMAN 3, incluindo a campanha principal, o modo de contrato, agravamentos, alvos elusivos e HITMAN: Freelancer, um modo inspirado em jogos roguelikes.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "HITMAN World of Assassination #1659040"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/893b14fe999e64777ad2660cf88c52f1f403053f/library_capsule_2x.jpg?t=1793287448",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/c62446d5c95f583a296d7f1b99045a61e2f81dea/header.jpg?t=1793287448",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/371975eece1ddb63b604d2e17d69d142ca157a23/library_hero.jpg?t=1793287448"
+   },
+   "xboxAll": [
+    {
+     "title": "HITMAN World of Assassination",
+     "id": "9NN82NH949D5",
+     "b": 341.95,
+     "f": 136.78,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "HITMAN World of Assassination Part One",
+     "id": "9NT2824TW8VR",
+     "b": 145.95,
+     "f": 145.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "HITMAN World of Assassination",
+     "id": "9PDRM8BFW1X1",
+     "b": 341.95,
+     "f": 341.95,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "HITMAN World of Assassination Part One",
+     "id": "9N6FZDV4Z4W0",
+     "b": 145.95,
+     "f": 145.95,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "HITMAN World of Assassination Deluxe Edition",
+     "id": "9N9RV75RKSL5",
+     "b": 489.95,
+     "f": 489.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "HITMAN World of Assassination Deluxe Pack",
+     "id": "9MTBW414KK0J",
+     "b": 112.45,
+     "f": 78.71,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Assassin's Creed Mirage",
+   "steam": {
+    "appid": 3035570,
+    "name": "Assassin's Creed Mirage",
+    "free": false,
+    "b": 209.99,
+    "f": 209.99,
+    "pct": 0,
+    "mc": null,
+    "date": "17/out./2024",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Ubisoft Bordeaux"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "Torne-se um Mestre Assassino letal neste jogo de ação e aventura. Explore as ruas da Bagdá do século IX através dos olhos de Basim. Elimine seus alvos e busque justiça como parte dos Ocultos.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Assassin's Creed Mirage #3035570",
+     "Assassin’s Creed® Mirage Deluxe Pack #3230650",
+     "Assassin’s Creed® Mirage Fire Demon Pack #3230730",
+     "Assassin’s Creed® Mirage Map Pack #3230630",
+     "Assassin’s Creed Mirage - Celestial Pack #4145510"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/60f638c4278782727586f112f9ef2e927c1463f2/library_600x900_2x.jpg?t=1792777978",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg?t=1792777978",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/1ea92acc5eb32140152eaaa734d6e62071ff2b2f/library_hero.jpg?t=1792777978"
+   },
+   "xboxAll": [
+    {
+     "title": "Assassin’s Creed® Mirage",
+     "id": "9N4096HX1WWQ",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed® Mirage",
+     "id": "9NZCJF5VF1NV",
+     "b": 239.95,
+     "f": 239.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed® Mirage",
+     "id": "9NTK0V6ZK6T8",
+     "b": 209.99,
+     "f": 209.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Assassin's Creed® Mirage: Edição Deluxe",
+     "id": "9NSCJVM7D76S",
+     "b": 299.95,
+     "f": 299.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Mirage - Edição Deluxe",
+     "id": "9N74Q351D90R",
+     "b": 249.99,
+     "f": 249.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Pacote Assassin’s Creed Mirage e Assassin's Creed Valhalla",
+     "id": "9NCT8VHJW6MM",
+     "b": 467.45,
+     "f": 467.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Assassin's Creed Odyssey",
+   "steam": {
+    "appid": 812140,
+    "name": "Assassin's Creed® Odyssey",
+    "free": false,
+    "b": 179.99,
+    "f": 179.99,
+    "pct": 0,
+    "mc": null,
+    "date": "5/out./2018",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Ubisoft Quebec",
+     "Ubisoft Montreal",
+     "Ubisoft Bucharest",
+     "Ubisoft Singapore",
+     "Ubisoft Montpellier",
+     "Ubisoft Kiev",
+     "Ubisoft Shanghai"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "Embarque rumo à Grécia Antiga neste jogo de ação e aventura para alterar o destino da civilização. Trave batalhas intensas em terra e mar, molde seu destino de exilado a lenda e desvende os segredos do seu passado.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Assassin's Creed® Odyssey #812140",
+     "Assassin's Creed® Odyssey - Season Pass #937890",
+     "Assassin’s CreedⓇ Odyssey - The Fate of Atlantis #937892",
+     "Assassin’s CreedⓇ Odyssey – Legacy of the First Blade #937891"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/library_600x900_2x.jpg?t=1792778552",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header.jpg?t=1792778552",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/library_hero.jpg?t=1792778552"
+   },
+   "xboxAll": [
+    {
+     "title": "Assassin's Creed Odyssey",
+     "id": "BW9TWC8L4JCS",
+     "b": 199,
+     "f": 199,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed® Odyssey",
+     "id": "9PDNF24PP2V2",
+     "b": 179.99,
+     "f": 179.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Odyssey - Edição Gold",
+     "id": "BNF5Q9ZSD84Z",
+     "b": 279,
+     "f": 279,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Odyssey - Edição Ultimate",
+     "id": "BRQGNR1PZHP4",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Odyssey - Edição Deluxe",
+     "id": "C3LC9H239V2W",
+     "b": 229,
+     "f": 229,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Odyssey - Edição Gold",
+     "id": "9N94D183942B",
+     "b": 299.99,
+     "f": 299.99,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Dying Light 2 Stay Human",
+   "steam": {
+    "appid": 534380,
+    "name": "Dying Light 2 Stay Human: Reloaded Edition",
+    "free": false,
+    "b": 249,
+    "f": 49.8,
+    "pct": 80,
+    "mc": null,
+    "date": "3/fev./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Techland"
+    ],
+    "pubs": [
+     "Techland"
+    ],
+    "desc": "A humanidade está perdendo a batalha contra o vírus. Viva em um mundo aberto pós-apocalíptico dominado por hordas de zumbis no qual suas habilidades de combate e parkour são essenciais para sobreviver. Cruze a Cidade tranquilamente durante o dia, mas cuidado com os monstros à noite.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Dying Light 2 Stay Human: Reloaded Edition #534380",
+     "Dying Light 2 Stay Human:  Chicken Bundle #2330980",
+     "Dying Light 2 Stay Human: Gunslinger Bundle #2370480",
+     "Dying Light 2 Stay Human: Hakon Bundle #2456710",
+     "Dying Light 2 Stay Human: Rahim Bundle #2370460"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/5b75126ece6e937bda12bf5f802647c30d7a2801/library_600x900_2x.jpg?t=1788258144",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/header.jpg?t=1788258144",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/ddb915c6d52fe84caf4d1942fcfe359801a36062/library_hero.jpg?t=1788258144"
+   },
+   "xboxAll": [
+    {
+     "title": "Dying Light 2: Stay Human - Reloaded Edition",
+     "id": "BPCL0TXCGJ1W",
+     "b": 264.95,
+     "f": 52.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dying Light 2 Stay Human - Ultimate Edition",
+     "id": "9P4Z34DJ9XH3",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dying Light 2 Stay Human - Deluxe Edition",
+     "id": "9P3SL80V60J1",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dying Light 2 Stay Human - Ultimate Edition",
+     "id": "9P503B7T9QN5",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dying Light 2 Stay Human: Digital Extras Edition",
+     "id": "9NHZ8B08LKQ4",
+     "b": 309.11,
+     "f": 309.11,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dying Light: The Beast",
+     "id": "9P7ZG9MQKKLN",
+     "b": 299.95,
+     "f": 149.97,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Dead by Daylight",
+   "steam": {
+    "appid": 381210,
+    "name": "Dead by Daylight",
+    "free": false,
+    "b": 69.99,
+    "f": 27.99,
+    "pct": 60,
+    "mc": null,
+    "date": "14/jun./2016",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Behaviour Interactive Inc."
+    ],
+    "pubs": [
+     "Behaviour Interactive Inc."
+    ],
+    "desc": "10 anos de terror. 10 anos de sustos e situações perigosas. 10 anos de sacrifícios brutais e fugas emocionantes. Presos para sempre em um mundo abominável onde nem a morte é uma escapatória, quatro Sobreviventes determinados enfrentam um Assassino sanguinário em um jogo perverso de coragem e astúcia",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Dead by Daylight #381210",
+     "Dead by Daylight - Chucky Chapter #2656010",
+     "Dead by Daylight: Jason #4791830",
+     "Dead by Daylight: Chorus of Sin #5060920",
+     "Dead by Daylight - Resident Evil Chapter #1634040"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/1b6ff94b7c05c205fbcbd2628f862a1469882f23/library_capsule_2x.jpg?t=1793202236",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/header.jpg?t=1793202236",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/2a0e583484963cb4d45c1f22cbf7a80123f27618/library_hero.jpg?t=1793202236"
+   },
+   "xboxAll": [
+    {
+     "title": "Dead by Daylight",
+     "id": "C0N22P73QZ60",
+     "b": 104.99,
+     "f": 41.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dead by Daylight Windows",
+     "id": "9NMS4SFNBGBH",
+     "b": 69.99,
+     "f": 27.99,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Dead by Daylight: Edição Gold",
+     "id": "9PNZFX8ST2JQ",
+     "b": 244.99,
+     "f": 244.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dead by Daylight: Edição Jason Windows",
+     "id": "9PD80HS4L5HQ",
+     "b": 78.74,
+     "f": 39.37,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Dead by Daylight: Edição Gold Windows",
+     "id": "9N1JD2F386HS",
+     "b": 244.99,
+     "f": 244.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Dead by Daylight: Edição Jason",
+     "id": "9NCPDFS5CJ8V",
+     "b": 110.24,
+     "f": 55.12,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Palworld",
+   "steam": {
+    "appid": 1623730,
+    "name": "Palworld",
+    "free": false,
+    "b": 88.99,
+    "f": 88.99,
+    "pct": 0,
+    "mc": null,
+    "date": "9/jul./2026",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "RPG"
+    ],
+    "devs": [
+     "Pocketpair"
+    ],
+    "pubs": [
+     "Pocketpair"
+    ],
+    "desc": "Este é um jogo completamente inovador de fabricação e sobrevivência em mundo aberto com suporte para vários jogadores. Nele você reúne criaturas fantásticas conhecidas como &quot;Pals&quot; em um vasto mundo e as usa em batalhas ou para trabalhos em construção, fazendas ou fábricas.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Palworld #1623730",
+     "Palworld: Palfarm #4031890",
+     "Palworld - Soundtrack #2771110",
+     "Pal♡world! ~More Than Just Pals~ #3620480"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/f85c38b444047c686d44eea5f649c9ae761fd06a/library_capsule_2x.jpg?t=1790336367",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg?t=1790336367",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/2d3bef9d1a0ad28c0ea002ec4522e12e7218fbff/library_hero.jpg?t=1790336367"
+   },
+   "xboxAll": [
+    {
+     "title": "Palworld",
+     "id": "9NKV34XDW014",
+     "b": 112.45,
+     "f": 112.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Terraria",
+   "steam": {
+    "appid": 105600,
+    "name": "Terraria",
+    "free": false,
+    "b": 32.99,
+    "f": 32.99,
+    "pct": 0,
+    "mc": 83,
+    "date": "16/mai./2011",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "RPG"
+    ],
+    "devs": [
+     "Re-Logic"
+    ],
+    "pubs": [
+     "Re-Logic"
+    ],
+    "desc": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "Terraria #105600",
+     "Terraria: Official Soundtrack #409210",
+     "Terraria: Otherworld Official Soundtrack #1323320"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900_2x.jpg?t=1792530636",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1792530636",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/library_hero.jpg?t=1792530636"
+   },
+   "xboxAll": [
+    {
+     "title": "Terraria",
+     "id": "BTNPS60N3114",
+     "b": 39,
+     "f": 19.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "It Lurks Below",
+     "id": "9PFW68JLS81F",
+     "b": 78.82,
+     "f": 78.82,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Terra Memoria",
+     "id": "9NMZ4K5V7JPC",
+     "b": 34.95,
+     "f": 34.95,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Terra-média™: Conjunto das Sombras",
+     "id": "9NGK2CXP0366",
+     "b": 349,
+     "f": 34.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Looking for Aliens",
+     "id": "9NR57TL6K0Z8",
+     "b": 25.95,
+     "f": 25.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Terra Invicta",
+     "id": "9PB0GLGXQZ83",
+     "b": 79.99,
+     "f": 79.99,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Among Us",
+   "steam": {
+    "appid": 945360,
+    "name": "Among Us",
+    "free": false,
+    "b": 14.99,
+    "f": 14.99,
+    "pct": 0,
+    "mc": 85,
+    "date": "16/nov./2018",
+    "soon": false,
+    "genres": [
+     "Casual"
+    ],
+    "devs": [
+     "Innersloth"
+    ],
+    "pubs": [
+     "Innersloth"
+    ],
+    "desc": "Um jogo de trabalho em equipe e trairagem online ou em rede local para 4 a 15 jogadores... no espaço!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "The Wolf Among Us Remastered #3884860",
+     "Among Us #945360",
+     "Among Us 3D #3168600",
+     "The Wolf Among Us 2 #1884870",
+     "AmongUs Challenger #2160150"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/library_600x900_2x.jpg?t=1792187809",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/d611f3f87743b5121532023b1d3ee2dd0e96e772/header.jpg?t=1792187809",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/library_hero.jpg?t=1792187809"
+   },
+   "xboxAll": [
+    {
+     "title": "The Wolf Among Us Remastered",
+     "id": "9NDP40GVGC80",
+     "b": 121.95,
+     "f": 97.56,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Injustice: Gods Among Us",
+     "id": "C24DMFCJKDH2",
+     "b": 129,
+     "f": 129,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Wolf Among Us",
+     "id": "C02SL8LBS5K2",
+     "b": 46,
+     "f": 46,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Among Us",
+     "id": "9NG07QJNK38J",
+     "b": 18.45,
+     "f": 18.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "The Wolf Among Us 2",
+     "id": "9NVCZGXKWRHW",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Wolf Among Us - A Telltale Games Series",
+     "id": "9NBLGGH4W0TD",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Euro Truck Simulator 2",
+   "steam": {
+    "appid": 227300,
+    "name": "Euro Truck Simulator 2",
+    "free": false,
+    "b": 66.99,
+    "f": 66.99,
+    "pct": 0,
+    "mc": 79,
+    "date": "12/out./2012",
+    "soon": false,
+    "genres": [
+     "Indie",
+     "Simulação"
+    ],
+    "devs": [
+     "SCS Software"
+    ],
+    "pubs": [
+     "SCS Software"
+    ],
+    "desc": "Viaje pela Europa como o rei da estrada, um caminhoneiro que entrega cargas importantes por distâncias impressionantes! Com dezenas de cidades para explorar, a sua resistência, habilidade e velocidade serão levadas ao limite.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "Euro Truck Simulator 2 #227300",
+     "Euro Truck Simulator 2 - Nordic Horizons #2780810",
+     "Euro Truck Simulator 2 - Iceland #3796990",
+     "Euro Truck Simulator 2 - Coaches #3809270",
+     "Euro Truck Simulator 2 - Greece #2604420"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/library_600x900_2x.jpg?t=1793285269",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/d3c44cfff95e8223687121b05c80e594d35c4c53/header_alt_assets_9.jpg?t=1793285269",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/library_hero.jpg?t=1793285269"
+   },
+   "xboxAll": [
+    {
+     "title": "Euro Truck Simulator 2",
+     "id": "9NLVC6STPS52",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Truck Simulator Cargo Driver 2025 - EURO",
+     "id": "9NFKCRPJQGMS",
+     "b": 62.95,
+     "f": 62.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Food Truck Simulator Z",
+     "id": "9PF9LQK4VSX5",
+     "b": 33.95,
+     "f": 33.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "American Truck Simulator",
+     "id": "9NWWKCK9KD5F",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Truck Simulator - 1v1 Multiplayer",
+     "id": "9PNP80PJ2WWW",
+     "b": 43.95,
+     "f": 43.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Cargo Truck Simulator Game",
+     "id": "9P52TP64BGJW",
+     "b": 19.45,
+     "f": 19.45,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Hub",
+      "MobileDevice",
+      "HoloLens"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "The Sims 4",
+   "steam": {
+    "appid": 1222670,
+    "name": "The Sims™ 4",
+    "free": true,
+    "b": null,
+    "f": null,
+    "pct": 0,
+    "mc": null,
+    "date": "18/jun./2020",
+    "soon": false,
+    "genres": [
+     "Aventura",
+     "Casual",
+     "Simulação",
+     "Gratuitos para Jogar"
+    ],
+    "devs": [
+     "Maxis"
+    ],
+    "pubs": [
+     "Electronic Arts"
+    ],
+    "desc": "Curta o poder de criar e controlar pessoas num mundo virtual onde não há regras. Seja poderoso e livre, divirta-se e jogue com a vida!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "The Sims™ 4 #1222670",
+     "The Sims™ 4 Seasons #1235733",
+     "The Sims™ 4 Cats & Dogs #1235721",
+     "The Sims™ 4 City Living #1235731",
+     "The Sims™ 4 Get To Work #1235734"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/library_600x900_2x.jpg?t=1793293287",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/header.jpg?t=1793293287",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/library_hero.jpg?t=1793293287"
+   },
+   "xboxAll": [
+    {
+     "title": "The Sims™ 4",
+     "id": "C08JXNK0VG5L",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Sims™ 4 Edição EA Play",
+     "id": "9PLFD17M47K3",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Sims™ 4 Edição EA Play",
+     "id": "9PB5T776N2SW",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4",
+     "id": "9NCPSQQD1Z66",
+     "b": 349.9,
+     "f": 349.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Need for Speed Unbound",
+   "steam": {
+    "appid": 1846380,
+    "name": "Need for Speed™ Unbound",
+    "free": false,
+    "b": 299,
+    "f": 299,
+    "pct": 0,
+    "mc": null,
+    "date": "1/dez./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Corrida"
+    ],
+    "devs": [
+     "Criterion Games"
+    ],
+    "pubs": [
+     "Electronic Arts"
+    ],
+    "desc": "Corra até o topo, mas não tropece. Despiste a polícia e entre nas eliminatórias semanais do Grand, a corrida de rua suprema. Encha sua garagem com carros personalizados e ajustados sob medida, e ilumine as ruas com seu estilo.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Need for Speed™ Unbound #1846380",
+     "Need for Speed™ Unbound - Robojets Swag Pack #2339281",
+     "Atualização a Need for Speed™ Unbound Ultimate Collection #3156380",
+     "Need for Speed™ Unbound - As chaves do mapa #2298540",
+     "Need for Speed™ Unbound - Vol.4 Customs Pack #2339283"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/library_600x900_2x.jpg?t=1777394467",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/eacea0635efb7af9054f6b299060fee32404ace7/header.jpg?t=1777394467",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1846380/library_hero.jpg?t=1777394467"
+   },
+   "xboxAll": [
+    {
+     "title": "Need for Speed™ Unbound",
+     "id": "9PP837L3Q75D",
+     "b": 339,
+     "f": 339,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Unbound",
+     "id": "9PCTJZRLV21G",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Coleção Definitiva do Need for Speed™ Unbound",
+     "id": "9N1Q2RN0JQRG",
+     "b": 429,
+     "f": 429,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Unbound Edição Palace",
+     "id": "9NBSSCJFC7R7",
+     "b": 399,
+     "f": 399,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Rivals",
+     "id": "C3VM0TMWNZ5M",
+     "b": 80,
+     "f": 80,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Heat",
+     "id": "BRZZLBF5T245",
+     "b": 239,
+     "f": 239,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "NBA 2K26",
+   "steam": {
+    "appid": 3472040,
+    "name": "NBA 2K26",
+    "free": false,
+    "b": 399.9,
+    "f": 399.9,
+    "pct": 0,
+    "mc": null,
+    "date": "4/set./2025",
+    "soon": false,
+    "genres": [
+     "Esportes"
+    ],
+    "devs": [
+     "Visual Concepts"
+    ],
+    "pubs": [
+     "2K"
+    ],
+    "desc": "Domine tudo no MyCAREER, MyTEAM, MyNBA, The W e Play Now. Mande ver em jogadas e dribles com realismo surreal, graças ao ProPLAY™. Dispute com amigos e rivais e mostre quem leva a coroa no NBA 2K26.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "NBA 2K26 #3472040",
+     "Passe Pro do NBA 2K26: Temporada 9 #3657960",
+     "Oferta de Bónus da Temporada 9 do MyCAREER do NBA 2K26 #3657980",
+     "Passe Hall of Fame do NBA 2K26: Temporada 9 #3657970",
+     "Oferta de Bónus da Temporada 9 do MyTEAM do NBA 2K26 #3657990"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3472040/bebd889b3d90330de84453f42c4dfd525a9ea06f/library_600x900_2x.jpg?t=1786115051",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3472040/f7e126add75c3b09779b44cd349be93d31b0a80b/header.jpg?t=1786115051",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3472040/70b51b8393d7c948891d09471b2ce6e68b7b374e/library_hero.jpg?t=1786115051"
+   },
+   "xboxAll": [
+    {
+     "title": "NBA 2K26 Edição Standard",
+     "id": "9PJ2RVRC0L1X",
+     "b": 399.9,
+     "f": 399.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NBA 2K26 para Xbox Series X|S",
+     "id": "9NFKCJNBR34N",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "NBA 2K26 Edição Superstar",
+     "id": "9NTMWS185JZT",
+     "b": 499.9,
+     "f": 499.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "NBA 2K26 Edição SLAM",
+     "id": "9NDZXG3B5NMG",
+     "b": 429.9,
+     "f": 429.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NBA 2K26 para Xbox One",
+     "id": "9PP9PFSCJTWR",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "NBA 2K26 Edição SLAM (PC com Windows)",
+     "id": "9MT2SQ00NC6P",
+     "b": 429.9,
+     "f": 429.9,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "eFootball",
+   "steam": {
+    "appid": 1665460,
+    "name": "eFootball™",
+    "free": true,
+    "b": null,
+    "f": null,
+    "pct": 0,
+    "mc": null,
+    "date": "29/set./2021",
+    "soon": false,
+    "genres": [
+     "Simulação",
+     "Esportes",
+     "Gratuitos para Jogar"
+    ],
+    "devs": [
+     "KONAMI"
+    ],
+    "pubs": [
+     "KONAMI"
+    ],
+    "desc": "Venha conhecer o emocionante game de futebol que já passou de 1 bilhão de downloads! Jogue e com usuários do mundo todo!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "eFootball™ #1665460"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/b9a7f2c0dc8e2cc1e3a7ea099833388f3125d4c9/library_capsule_2x.jpg?t=1792635226",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/86619d0fb7126b3d5276004175f9a62181223c0f/header.jpg?t=1792635226",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1665460/866665da08b46cd32f67e9521f4283bc861fe773/library_hero.jpg?t=1792635226"
+   },
+   "xboxAll": [
+    {
+     "title": "eFootball™: Lamine Yamal Edition 2027",
+     "id": "9NMRMZWH8CQ4",
+     "b": 69.9,
+     "f": 69.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "eFootball™: Leo Messi Edition 2027",
+     "id": "9P6XX9K7FKVB",
+     "b": 69.9,
+     "f": 69.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "eFootball™: Lamine Yamal Edition 2027 [Deluxe]",
+     "id": "9NKPZ02R8MFF",
+     "b": 109.9,
+     "f": 109.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "eFootball™: Leo Messi Edition 2027 [Deluxe]",
+     "id": "9NQ0Q5P5QBXD",
+     "b": 109.9,
+     "f": 109.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "eFootball™",
+     "id": "9NT1ZBBV6WH6",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "eFootball PES 2020",
+     "id": "C2DCVRMJ9V45",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "LEGO Star Wars: The Skywalker Saga",
+   "steam": {
+    "appid": 920210,
+    "name": "LEGO® Star Wars™: A Saga Skywalker",
+    "free": false,
+    "b": 199.99,
+    "f": 199.99,
+    "pct": 0,
+    "mc": 78,
+    "date": "5/abr./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "TT Games"
+    ],
+    "pubs": [
+     "Warner Bros. Games",
+     "Warner Bros. Interactive Entertainment"
+    ],
+    "desc": "Jogue em todos os nove filmes da saga Skywalker em um jogo diferente de qualquer outro. Com mais de 300 personagens jogáveis, mais de 100 veículos e 23 planetas para explorar, uma galáxia muito, muito distante nunca foi tão divertida! *Inclui o personagem jogável Obi-Wan Kenobi Clássico",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "LEGO® Star Wars™: The Skywalker Saga #920210",
+     "LEGO® Star Wars™: The Skywalker Saga Trooper Pack #1353946",
+     "LEGO® Star Wars™: The Skywalker Saga Andor Pack #2150635",
+     "LEGO® Star Wars™: The Skywalker Saga Rebels Pack #2150631",
+     "LEGO® Star Wars™: The Skywalker Saga Classic Character Pack #1353941"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/library_600x900_2x.jpg?t=1747346983",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/header.jpg?t=1747346983",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/library_hero.jpg?t=1747346983"
+   },
+   "xboxAll": [
+    {
+     "title": "LEGO Star Wars: TCS",
+     "id": "BTT25GGLG6KD",
+     "b": 39,
+     "f": 39,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "LEGO Star Wars II",
+     "id": "BXN9BZW89FHK",
+     "b": 59,
+     "f": 59,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "LEGO Star Wars III",
+     "id": "C27JSQ4XKP9X",
+     "b": 119,
+     "f": 119,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "LEGO® Batman™: O Legado do Cavaleiro das Trevas",
+     "id": "9PFKP8Z66G1J",
+     "b": 299.99,
+     "f": 299.99,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "LEGO® STAR WARS™: The Force Awakens - Demo",
+     "id": "BXBGMW7260D7",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "LEGO® The Hobbit™ Demo",
+     "id": "BVLJG85243FQ",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Crash Bandicoot N. Sane Trilogy",
+   "steam": {
+    "appid": 731490,
+    "name": "Crash Bandicoot™ N. Sane Trilogy",
+    "free": false,
+    "b": 219.9,
+    "f": 219.9,
+    "pct": 0,
+    "mc": null,
+    "date": "29/jun./2018",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Vicarious Visions",
+     "Iron Galaxy Studios"
+    ],
+    "pubs": [
+     "Activision"
+    ],
+    "desc": "Seu marsupial favorito, Crash Bandicoot®, voltou! Aprimorado, inspirado e pronto para dançar nessa trilogia insana. Reviva seus momentos favoritos em Crash Bandicoot™, Crash Bandicoot™ 2: Cortex Strikes Back e Crash Bandicoot™ 3: Warped, agora com gráficos HD completamente remasterizados!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Crash Bandicoot™ N. Sane Trilogy #731490"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/731490/library_600x900_2x.jpg?t=1742399696",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/731490/header.jpg?t=1742399696",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/731490/library_hero.jpg?t=1742399696"
+   },
+   "xboxAll": [
+    {
+     "title": "Crash Bandicoot™ N. Sane Trilogy",
+     "id": "C27XPR5XDMFT",
+     "b": 150,
+     "f": 150,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Pacote Crash Bandicoot™ N. Sane Trilogy + CTR Nitro-Fueled",
+     "id": "9NVQ3KCWBQG2",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Crash Bandicoot™ N. Sane Trilogy",
+     "id": "9NJ2FD5HJ7SB",
+     "b": 184,
+     "f": 184,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Pacote Triplo Crash™ + Spyro™",
+     "id": "9N1P6ZT92LNT",
+     "b": 350,
+     "f": 350,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Pacote de jogo Spyro™ + Crash Remastered",
+     "id": "C00V66BW6K1X",
+     "b": 269,
+     "f": 269,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Crash Team Rumble™ - Edição Padrão",
+     "id": "9PLQTD4LT2KS",
+     "b": 169.9,
+     "f": 169.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "NieR:Automata",
+   "steam": {
+    "appid": 524220,
+    "name": "NieR:Automata™",
+    "free": false,
+    "b": 107,
+    "f": 107,
+    "pct": 0,
+    "mc": 84,
+    "date": "17/mar./2017",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "RPG"
+    ],
+    "devs": [
+     "Square Enix",
+     "PlatinumGames Inc."
+    ],
+    "pubs": [
+     "Square Enix"
+    ],
+    "desc": "NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "NieR:Automata™ #524220",
+     "NieR:Automata™ - 3C3C1D119440927 #580600",
+     "NieR:Automata Original Soundtrack #3514130",
+     "NieR:Automata Orchestral Arrangement Album #3514280",
+     "NieR:Automata Arranged & Unreleased Tracks #3514270"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/library_600x900_2x.jpg?t=1785182957",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/header.jpg?t=1785182957",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/library_hero.jpg?t=1785182957"
+   },
+   "xboxAll": []
+  },
+  {
+   "q": "Persona 4 Golden",
+   "steam": {
+    "appid": 1113000,
+    "name": "Persona 4 Golden",
+    "free": false,
+    "b": 99.9,
+    "f": 99.9,
+    "pct": 0,
+    "mc": 87,
+    "date": "13/jun./2020",
+    "soon": false,
+    "genres": [
+     "RPG"
+    ],
+    "devs": [
+     "ATLUS"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "A coming of age story that sets the protagonist and his friends on a journey kickstarted by a chain of serial murders.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Persona 4 Golden #1113000",
+     "Persona 3 Reload - Persona 4 Golden Persona Set #2334534",
+     "Conjunto Uniforme do Yasogami P4G #2322840"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113000/library_600x900_2x.jpg?t=1763530422",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113000/header.jpg?t=1763530422",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113000/library_hero.jpg?t=1763530422"
+   },
+   "xboxAll": [
+    {
+     "title": "Call of Duty®: Modern Warfare® 4",
+     "id": "9NCPSQQD1Z66",
+     "b": 349.9,
+     "f": 349.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Persona 4 Golden",
+     "id": "9PK4B09SMN5C",
+     "b": 95,
+     "f": 95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Persona 3 Portable e Pacote Persona 4 Golden",
+     "id": "9PBWJ3X780RX",
+     "b": 194,
+     "f": 194,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Persona 4 Revival",
+     "id": "9N0D1SHFFK31",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxSeriesX",
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Cult of the Lamb",
+   "steam": {
+    "appid": 1313140,
+    "name": "Cult of the Lamb",
+    "free": false,
+    "b": 64.95,
+    "f": 64.95,
+    "pct": 0,
+    "mc": 82,
+    "date": "11/ago./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "Estratégia"
+    ],
+    "devs": [
+     "Massive Monster"
+    ],
+    "pubs": [
+     "Devolver Digital"
+    ],
+    "desc": "Crie seu próprio culto em uma terra de falsos profetas, aventurando-se por regiões misteriosas e diversas para criar uma comunidade fiel de Seguidores da floresta e para propagar sua Palavra e se tornar o único culto verdadeiro.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "Cult of the Lamb #1313140",
+     "Cult of the Lamb: Woolhaven #3840050",
+     "Cult of the Lamb Soundtrack #2015890",
+     "Cult of the Lamb: Pilgrim Pack #2890190",
+     "Cult of the Lamb: Sinful Pack #2646130"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1313140/e2e2cf16f2bffc9f4cb22d952442d328f48e908d/library_capsule_2x.jpg?t=1786554901",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1313140/19f32bb477a6e9d058e05193b4e282149bd70644/header.jpg?t=1786554901",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1313140/fdf3e24cd2ceebc37b1a32a4fe00701e5e3c50f8/library_hero.jpg?t=1786554901"
+   },
+   "xboxAll": [
+    {
+     "title": "Cult of the Lamb",
+     "id": "9PNLPMP1GGH5",
+     "b": 92.45,
+     "f": 36.98,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Cult of the Lamb: Cultist Edition",
+     "id": "9P2TNCP475RD",
+     "b": 112.45,
+     "f": 112.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Cult of the Lamb: Heretic Edition",
+     "id": "9P0PQDJVX01S",
+     "b": 129.95,
+     "f": 129.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Cult of the Lamb: Unholy Edition",
+     "id": "9MT34W33Q977",
+     "b": 167.45,
+     "f": 167.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Cult of the Lamb: Woolhaven Edition",
+     "id": "9NN87HLQ8T4W",
+     "b": 185.95,
+     "f": 185.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Cult of the Lamb: Sinful Edition",
+     "id": "9NF6L1C2W8FJ",
+     "b": 147.45,
+     "f": 147.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Dave the Diver",
+   "steam": {
+    "appid": 1868140,
+    "name": "DAVE THE DIVER",
+    "free": false,
+    "b": 59.99,
+    "f": 59.99,
+    "pct": 0,
+    "mc": 90,
+    "date": "28/jun./2023",
+    "soon": false,
+    "genres": [
+     "Aventura",
+     "Casual",
+     "RPG",
+     "Simulação"
+    ],
+    "devs": [
+     "MINTROCKET"
+    ],
+    "pubs": [
+     "MINTROCKET"
+    ],
+    "desc": "DAVE THE DIVER é um jogo solo de RPG e aventura casual de exploração das profundezas marinhas onde o jogador pode pescar durante o dia e administrar um restaurante de sushi à noite. Junte-se ao Dave e seus amigos peculiares na busca pelos segredos do misterioso Poço Azul.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "DAVE THE DIVER #1868140",
+     "DAVE THE DIVER - Subnautica 2 Content Pack #5246570",
+     "DAVE THE DIVER - In the Jungle Content Pack #4394810",
+     "DAVE THE DIVER Digital Extra #2492320",
+     "DAVE THE DIVER - Ichiban's Holiday Content Pack #3543180"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/library_600x900_2x.jpg?t=1791478061",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/81bdb3bce15d27ca1b4554a642d91096e89be229/header.jpg?t=1791478061",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/0c3532502b154938391ab420181779f2e39a8747/library_hero.jpg?t=1791478061"
+   },
+   "xboxAll": [
+    {
+     "title": "DAVE THE DIVER",
+     "id": "9PC1ZMD65L0T",
+     "b": 58.95,
+     "f": 58.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Booty Diver",
+     "id": "9NKH2R1C722L",
+     "b": 18.45,
+     "f": 18.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Nacht der Untoten Remastered",
+     "id": "9NC1DQ6ZC4NQ",
+     "b": 44.45,
+     "f": 44.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Famous Diver",
+     "id": "9MVVRRD8W4FD",
+     "b": 18.45,
+     "f": 18.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Return to Monkey Island",
+     "id": "9PC4R8N1N2T6",
+     "b": 92.45,
+     "f": 92.45,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "THE FINALS",
+     "id": "9PGD71CMDS0Z",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Subnautica",
+   "steam": {
+    "appid": 264710,
+    "name": "Subnautica",
+    "free": false,
+    "b": 124.5,
+    "f": 31.12,
+    "pct": 75,
+    "mc": 87,
+    "date": "23/jan./2018",
+    "soon": false,
+    "genres": [
+     "Aventura",
+     "Indie"
+    ],
+    "devs": [
+     "Unknown Worlds Entertainment"
+    ],
+    "pubs": [
+     "Unknown Worlds Entertainment"
+    ],
+    "desc": "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "Subnautica 2 #1962700",
+     "Subnautica #264710",
+     "Subnautica: Below Zero #848450",
+     "DAVE THE DIVER - Subnautica 2 Content Pack #5246570",
+     "Subnautica Original Soundtrack #1619300"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/library_600x900_2x.jpg?t=1777456112",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/header.jpg?t=1777456112",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/library_hero.jpg?t=1777456112"
+   },
+   "xboxAll": [
+    {
+     "title": "Subnautica 2 (Game Preview)",
+     "id": "9PJPCB188SVG",
+     "b": 119.95,
+     "f": 119.95,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Subnautica",
+     "id": "BX3S1Q5DVHRD",
+     "b": 124.5,
+     "f": 124.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Subnautica: Below Zero",
+     "id": "9NDCJXL11096",
+     "b": 124.5,
+     "f": 124.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    }
+   ]
+  }
+ ],
+ "covers": {
+  "checked": 147,
+  "missing": [
+   {
+    "t": "Uncharted: Coleção Legado dos Ladrões",
+    "w": "Uncharted: Legacy of Thieves Collection",
+    "appid": 1659420,
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_600x900_brazilian_2x.jpg?t=1779309472"
+   },
+   {
+    "t": "Fortnite",
+    "w": "Fortnite Battle Royale",
+    "appid": null
+   },
+   {
+    "t": "Minecraft",
+    "w": "Minecraft",
+    "appid": null
+   },
+   {
+    "t": "Dragon Ball Gekishin Squadra",
+    "w": "Dragon Ball Gekishin Squadra",
+    "appid": 2072560,
+    "capsule": null
+   },
+   {
+    "t": "Resident Evil Survival Unit",
+    "w": "Resident Evil Survival Unit",
+    "appid": null
+   }
+  ]
+ }
+}
