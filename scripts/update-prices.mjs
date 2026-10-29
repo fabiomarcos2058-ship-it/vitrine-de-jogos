@@ -66,7 +66,7 @@ const put = (id, k, v) => { (out.p[id] ||= {})[k] = v; };
 const report = (k, info) => { out.report[k] = info; };
 
 // ---------- STEAM ----------
-const STEAM_IDS = {"Elden Ring":1245620,"Sekiro: Shadows Die Twice":814380,"Baldur's Gate 3":1086940,"Cyberpunk 2077":1091500,"The Witcher 3: Wild Hunt":292030,"Red Dead Redemption 2":1174180,"Hogwarts Legacy":990080,"The Elder Scrolls V: Skyrim":489830,"Fallout 4":377160,"Hades":1145360,"Hades II":1145350,"Hollow Knight":367520,"Hollow Knight: Silksong":1030300,"Celeste":504230,"Stardew Valley":413150,"Balatro":2379780,"Cuphead":268910,"Stray":1332010,"Devil May Cry 5":601150,"Resident Evil 4":2050650,"Resident Evil Village":1196590,"Resident Evil 2":883710,"Resident Evil 3":952060,"Resident Evil 7: Biohazard":418370,"Monster Hunter Wilds":2246340,"Street Fighter 6":1364780,"Tekken 8":1778820,"Mortal Kombat 1":1971870,"God of War":1593500,"God of War Ragnarök":2322010,"Marvel's Spider-Man: Miles Morales":1817190,"Marvel's Spider-Man 2":2651280,"Ghost of Tsushima":2215430,"Horizon Forbidden West":2420110,"The Last of Us Part I":1888930,"The Last of Us Part II Remastered":2531310,"Returnal":1649240,"Ratchet & Clank: Em Uma Outra Dimensão":1895880,"Helldivers 2":553850,"Forza Horizon 5":1551360,"Persona 5 Royal":1687950,"Persona 3 Reload":2161700,"Lies of P":1627720,"Black Myth: Wukong":2358720,"Armored Core VI: Fires of Rubicon":1888160,"Dead Space":1693980,"Doom Eternal":782330,"Doom: The Dark Ages":3017860,"Starfield":1716740,"Indiana Jones e o Grande Círculo":2677660,"Sea of Thieves":1172620,"Hi-Fi Rush":1817230,"Clair Obscur: Expedition 33":1903340,"Kingdom Come: Deliverance II":1771300,"Silent Hill 2":2124490,"Apex Legends":1172470,"Final Fantasy XVI":2515020,"Final Fantasy VII Rebirth":2909400,"Final Fantasy VII Remake Intergrade":1462040,"Uncharted: Coleção Legado dos Ladrões":1659420,"Ori and the Will of the Wisps":1057090,"Gears 5":1097840,"Halo: The Master Chief Collection":976730,"Halo Infinite":1240440,"Like a Dragon: Infinite Wealth":2072450,"Yakuza 0":638970,"Tales of Arise":740130,"It Takes Two":1426210,"Split Fiction":2001120,"Star Wars Jedi: Survivor":1774580,"Assassin's Creed Shadows":3159330,"Prince of Persia: The Lost Crown":2751000,"Batman: Arkham Knight":208650,"Call of Duty: Black Ops 6":2933620,"Battlefield 6":2807960,"Sonic X Shadow Generations":2513280,"Sea of Stars":1244090,"Dragon Ball FighterZ":678950,"Dragon Ball Z: Kakarot":851850,"Dragon Ball Xenoverse 2":454650,"Dragon Ball Xenoverse":323470,"Dragon Ball: The Breakers":1272080,"Dragon Ball: Sparking! Zero":1790600,"Mass Effect Legendary Edition":1328670,"Diablo IV":2344520,"The Elder Scrolls IV: Oblivion Remastered":2623190,"Metaphor: ReFantazio":2679460,"Resident Evil 0":339340,"Resident Evil":304240,"Resident Evil 5":21690,"Resident Evil 6":221040,"Resident Evil Revelations":222480,"Resident Evil Revelations 2":287290,"Umbrella Corps":390340,"Grand Theft Auto IV":12210,"Final Fantasy VII":39140,"Final Fantasy VIII Remastered":1026680,"Final Fantasy IX":377840,"Final Fantasy X | X-2 HD Remaster":359870,"Final Fantasy XII: The Zodiac Age":595520,"Final Fantasy XIII":292120,"Final Fantasy XIII-2":292140,"Lightning Returns: Final Fantasy XIII":345350,"Final Fantasy XIV Online":39210,"Final Fantasy XV":637650,"Final Fantasy Type-0 HD":340170,"Dissidia Final Fantasy NT":921590,"World of Final Fantasy":552700,"Crisis Core – Final Fantasy VII – Reunion":1608070,"Nioh 2 Remastered":1325200,"Avowed":2457220,"The Outer Worlds 2":1449110,"Ninja Gaiden 4":2627260,"Stellar Blade":3489700,"Grand Theft Auto V":3240220};
+const STEAM_IDS = {"Elden Ring":1245620,"Sekiro: Shadows Die Twice":814380,"Baldur's Gate 3":1086940,"Cyberpunk 2077":1091500,"The Witcher 3: Wild Hunt":292030,"Red Dead Redemption 2":1174180,"Hogwarts Legacy":990080,"The Elder Scrolls V: Skyrim":489830,"Fallout 4":377160,"Hades":1145360,"Hades II":1145350,"Hollow Knight":367520,"Hollow Knight: Silksong":1030300,"Celeste":504230,"Stardew Valley":413150,"Balatro":2379780,"Cuphead":268910,"Stray":1332010,"Devil May Cry 5":601150,"Resident Evil 4":2050650,"Resident Evil Village":1196590,"Resident Evil 2":883710,"Resident Evil 3":952060,"Resident Evil 7: Biohazard":418370,"Monster Hunter Wilds":2246340,"Street Fighter 6":1364780,"Tekken 8":1778820,"Mortal Kombat 1":1971870,"God of War":1593500,"God of War Ragnarök":2322010,"Marvel's Spider-Man: Miles Morales":1817190,"Marvel's Spider-Man 2":2651280,"Ghost of Tsushima":2215430,"Horizon Forbidden West":2420110,"The Last of Us Part I":1888930,"The Last of Us Part II Remastered":2531310,"Returnal":1649240,"Ratchet & Clank: Em Uma Outra Dimensão":1895880,"Helldivers 2":553850,"Forza Horizon 5":1551360,"Persona 5 Royal":1687950,"Persona 3 Reload":2161700,"Lies of P":1627720,"Black Myth: Wukong":2358720,"Armored Core VI: Fires of Rubicon":1888160,"Dead Space":1693980,"Doom Eternal":782330,"Doom: The Dark Ages":3017860,"Starfield":1716740,"Indiana Jones e o Grande Círculo":2677660,"Sea of Thieves":1172620,"Hi-Fi Rush":1817230,"Clair Obscur: Expedition 33":1903340,"Kingdom Come: Deliverance II":1771300,"Silent Hill 2":2124490,"Apex Legends":1172470,"Final Fantasy XVI":2515020,"Final Fantasy VII Rebirth":2909400,"Final Fantasy VII Remake Intergrade":1462040,"Uncharted: Coleção Legado dos Ladrões":1659420,"Ori and the Will of the Wisps":1057090,"Gears 5":1097840,"Halo: The Master Chief Collection":976730,"Halo Infinite":1240440,"Like a Dragon: Infinite Wealth":2072450,"Tales of Arise":740130,"It Takes Two":1426210,"Split Fiction":2001120,"Star Wars Jedi: Survivor":1774580,"Assassin's Creed Shadows":3159330,"Prince of Persia: The Lost Crown":2751000,"Batman: Arkham Knight":208650,"Battlefield 6":2807960,"Sonic X Shadow Generations":2513280,"Sea of Stars":1244090,"Dragon Ball FighterZ":678950,"Dragon Ball Z: Kakarot":851850,"Dragon Ball Xenoverse 2":454650,"Dragon Ball Xenoverse":323470,"Dragon Ball: The Breakers":1272080,"Dragon Ball: Sparking! Zero":1790600,"Mass Effect Legendary Edition":1328670,"Diablo IV":2344520,"The Elder Scrolls IV: Oblivion Remastered":2623190,"Metaphor: ReFantazio":2679460,"Resident Evil 0":339340,"Resident Evil":304240,"Resident Evil 5":21690,"Resident Evil 6":221040,"Resident Evil Revelations":222480,"Resident Evil Revelations 2":287290,"Umbrella Corps":390340,"Grand Theft Auto IV":12210,"Final Fantasy VIII Remastered":1026680,"Final Fantasy IX":377840,"Final Fantasy X | X-2 HD Remaster":359870,"Final Fantasy XII: The Zodiac Age":595520,"Final Fantasy XIII":292120,"Final Fantasy XIII-2":292140,"Lightning Returns: Final Fantasy XIII":345350,"Final Fantasy XIV Online":39210,"Final Fantasy XV":637650,"Final Fantasy Type-0 HD":340170,"Dissidia Final Fantasy NT":921590,"World of Final Fantasy":552700,"Crisis Core – Final Fantasy VII – Reunion":1608070,"Nioh 2 Remastered":1325200,"Avowed":2457220,"The Outer Worlds 2":1449110,"Ninja Gaiden 4":2627260,"Stellar Blade":3489700,"Grand Theft Auto V":3240220};
 
 async function steam() {
   const list = games.filter(g => g.p.st !== null && g.p.st !== undefined);
@@ -120,7 +120,82 @@ async function steam() {
 
 // ---------- PLAYSTATION STORE ----------
 let psDebugSaved = false;
+const PS_GQL = "https://web.np.playstation.com/api/graphql/v1/op";
+const PS_HEADERS = { "content-type": "application/json", "x-psn-store-locale-override": "pt-BR", "apollographql-client-name": "@sie-ppr-web-store/app", origin: "https://store.playstation.com", referer: "https://store.playstation.com/" };
+async function psDiscover() {
+  const dbg = { chunks: 0, ops: {} };
+  const html = await (await get("https://store.playstation.com/pt-br/search/god%20of%20war")).text();
+  const urls = [...new Set([...html.matchAll(/src="([^"]+\/_next\/static\/[^"]+\.js)"/g)].map(m => new URL(m[1], "https://store.playstation.com").href))];
+  for (const u of urls) {
+    try {
+      const js = await (await get(u, {}, 1)).text(); dbg.chunks++;
+      for (const m of js.matchAll(/([A-Za-z]*[Ss]earch[A-Za-z]*)["']?\s*[:,]\s*[^;]{0,400}?["']([a-f0-9]{64})["']|["']([a-f0-9]{64})["'][^;]{0,400}?(get[A-Za-z]*[Ss]earch[A-Za-z]*)/g)) {
+        const name = m[1] || m[4], hash = m[2] || m[3];
+        (dbg.ops[name] ||= []).includes(hash) || dbg.ops[name].push(hash);
+      }
+      for (const m of js.matchAll(/\b(get[A-Z][A-Za-z]*Search[A-Za-z]*|[a-z]+Search[A-Z][A-Za-z]*|categoryGridRetrieve|metGet[A-Za-z]+)\b/g)) if (!(dbg.names ||= []).includes(m[1]) && dbg.names.length < 80) dbg.names.push(m[1]);
+      const hx = js.match(/["'][a-f0-9]{64}["']/g); if (hx) dbg.hex = (dbg.hex || 0) + hx.length;
+      const qi = js.indexOf("query getSearchResults"); if (qi >= 0 && !dbg.query) dbg.query = js.slice(qi, qi + 1500);
+      for (const m of js.matchAll(/operationName\s*:\s*["']([A-Za-z]+)["'][^;]{0,300}?sha256Hash\s*:\s*["']([a-f0-9]{64})["']/g)) (dbg.ops[m[1]] ||= []).includes(m[2]) || dbg.ops[m[1]].push(m[2]);
+    } catch (e) {}
+  }
+  dbg.chunkUrls = urls.length;
+  return dbg;
+}
+async function psSearch(term, op, hash) {
+  const vars = { searchTerm: term, searchContext: "MobileUniversalSearchGame", displayTitleLocale: "pt-BR", countryCode: "BR", languageCode: "pt", pageOffset: 0, pageSize: 20 };
+  const url = `${PS_GQL}?operationName=${op}&variables=${encodeURIComponent(JSON.stringify(vars))}&extensions=${encodeURIComponent(JSON.stringify({ persistedQuery: { version: 1, sha256Hash: hash } }))}`;
+  return (await get(url, { headers: PS_HEADERS }, 2)).json();
+}
 async function playstation() {
+  let api = null, disc = null;
+  try {
+    disc = await psDiscover();
+    outer: for (const [op, hashes] of Object.entries(disc.ops)) for (const h of hashes) {
+      try {
+        const r = await psSearch("God of War", op, h);
+        let n = 0; walk(r, o => { if (typeof o.name === "string" && o.price) n++; });
+        (disc.tries ||= []).push(`${op}:${h.slice(0, 8)} -> ${n} itens${r.errors ? " erro " + JSON.stringify(r.errors).slice(0, 120) : ""}`);
+        if (n) { api = { op, h }; break outer; }
+      } catch (e) { (disc.tries ||= []).push(`${op}:${h.slice(0, 8)} -> ${e.message}`); }
+    }
+  } catch (e) { disc = { error: e.message }; }
+  fs.mkdirSync(ROOT + "data", { recursive: true });
+  fs.writeFileSync(ROOT + "data/debug-ps.json", JSON.stringify({ api, disc }, null, 1).slice(0, 30000));
+  psDebugSaved = true;
+  if (api) return playstationApi(api);
+  return playstationHtml();
+}
+async function playstationApi({ op, h }) {
+  const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
+  let ok = 0; const miss = []; let errors = 0;
+  for (const g of list) {
+    const term = searchName(g);
+    try {
+      const r = await psSearch(term, op, h);
+      const cands = [];
+      walk(r, o => { if (typeof o.name === "string" && o.price && typeof o.price === "object") cands.push(o); });
+      const full = cands.filter(o => !o.storeDisplayClassification || /FULL_GAME|GAME_BUNDLE|PREMIUM_EDITION/.test(o.storeDisplayClassification) || /FULL_GAME/.test(JSON.stringify(o.localizedStoreDisplayClassification || "")));
+      const hit = best(term, full.length ? full : cands, o => o.name) || best(g.t, full.length ? full : cands, o => o.name);
+      if (!hit) { miss.push(g.t); await sleep(500); continue; }
+      if (psPut(g, hit)) ok++; else miss.push(g.t + " (preço)");
+    } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); if (errors >= 6 && ok === 0) { miss.push("parado"); break; } }
+    await sleep(500);
+  }
+  report("ps", { ok, total: list.length, errors, via: "api " + op, miss: miss.slice(0, 60) });
+}
+function psPut(g, hit) {
+  const pr = hit.price;
+  const b = pr.isFree ? 0 : pr.basePriceValue != null ? pr.basePriceValue / 100 : brNum(pr.basePrice);
+  let f = pr.isFree ? 0 : pr.discountedValue != null ? pr.discountedValue / 100 : brNum(pr.discountedPrice);
+  if (pr.isTiedToSubscription || (pr.serviceBranding || []).some(x => /PLUS/i.test(x))) f = b;
+  if (b == null || f == null || isNaN(b) || isNaN(f)) return false;
+  const pct = b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0;
+  const until = pr.endTime && /^\d+$/.test(String(pr.endTime)) ? new Date(Number(pr.endTime)).toISOString() : null;
+  put(g.id, "ps", { b, f, pct, until, url: hit.id ? `https://store.playstation.com/pt-br/product/${hit.id}` : null, n: hit.name });
+  return true;
+}
+async function playstationHtml() {
   const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
   let ok = 0; const miss = []; let errors = 0;
   for (const g of list) {
