@@ -1,8 +1,19 @@
 # ASFE Store
 
-Mais de 100 jogos famosos (incluindo toda a linha de Dragon Ball), com a nota da crítica (Metascore) e o preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store. Cada jogo tem descrição e lista de edições.
+Notas e preços de quase 150 jogos em todas as lojas (PlayStation, Xbox, Steam, Epic Games, Google Play e App Store), num lugar só.
 
-- Capas carregadas da Wikipédia; se alguma não carregar, aparece uma capa ilustrada.
-- Preços em reais, de referência (out/2026). Cada preço abre a loja oficial com o valor do dia.
+**Site:** https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/
 
-Para editar jogos, preços, edições e descrições, mude o arquivo `games.js`.
+## O que tem
+- Trailer de cada jogo, descrição, edições e escolha de edição + plataforma com o botão Continuar
+- Comparar até 3 jogos lado a lado
+- Quiz "Qual jogo é pra você?"
+- Favoritos com o total da lista e a loja mais barata
+- Calendário de lançamentos com contagem regressiva
+- Ordem para jogar Resident Evil, GTA, Final Fantasy e Dragon Ball
+- Compartilhar jogo pelo WhatsApp ou Telegram
+- Instala como app no celular e funciona sem internet
+
+## Como editar
+Jogos, preços, edições, trailers, calendário e guias ficam em `games.js`.
+Ao mudar `games.js`, troque o número depois de `games.js?v=` no `index.html` para os visitantes receberem a versão nova.
