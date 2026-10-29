@@ -2,56 +2,70 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
+    function verified() { return signedIn() && request.auth.token.email_verified == true; }
     function me() { return request.auth.uid; }
     function member(pid) { return signedIn() && me() in pid.split('_'); }
     function friends(pid) { return get(/databases/$(database)/documents/friendships/$(pid)).data.status == 'accepted'; }
+    function inGroup(gid) { return me() in get(/databases/$(database)/documents/groups/$(gid)).data.members; }
+    function okText(t) { return t is string && t.size() > 0 && t.size() <= 1000; }
 
-    // Dados privados de cada conta (perfil completo, favoritos, carrinho)
     match /users/{uid} {
-      allow read, write: if signedIn() && me() == uid;
+      allow read, write: if verified() && me() == uid;
     }
-
-    // Perfil público (nome, @, bio, avatar, favoritos)
     match /profiles/{uid} {
       allow read: if signedIn();
-      allow write: if signedIn() && me() == uid;
+      allow write: if verified() && me() == uid;
     }
-
-    // Nomes de usuário únicos: @nome -> uid
     match /handles/{handle} {
       allow read: if signedIn();
-      allow create: if signedIn() && request.resource.data.uid == me();
+      allow create: if verified() && request.resource.data.uid == me();
       allow delete: if signedIn() && resource.data.uid == me();
     }
-
-    // Amizades: o id é "uidA_uidB" em ordem alfabética
     match /friendships/{pid} {
       allow get: if member(pid);
       allow list: if signedIn() && me() in resource.data.users;
-      allow create: if member(pid)
+      allow create: if verified() && member(pid)
         && request.resource.data.users == pid.split('_')
         && ((request.resource.data.status == 'pending' && request.resource.data.from == me())
             || (request.resource.data.status == 'blocked' && request.resource.data.blockedBy == me()));
-      allow update: if member(pid)
+      allow update: if verified() && member(pid)
         && request.resource.data.users == resource.data.users
         && resource.data.status != 'blocked'
         && ((resource.data.status == 'pending' && request.resource.data.status == 'accepted' && resource.data.to == me())
             || (request.resource.data.status == 'blocked' && request.resource.data.blockedBy == me()));
       allow delete: if member(pid) && (resource.data.status != 'blocked' || resource.data.blockedBy == me());
     }
-
-    // Conversas: só entre amigos
     match /chats/{pid} {
       allow get: if member(pid);
       allow list: if signedIn() && me() in resource.data.users;
-      allow create, update: if member(pid) && friends(pid) && request.resource.data.users == pid.split('_');
+      allow create, update: if verified() && member(pid) && friends(pid) && request.resource.data.users == pid.split('_');
       match /messages/{mid} {
         allow read: if member(pid) && friends(pid);
-        allow create: if member(pid) && friends(pid)
-          && request.resource.data.from == me()
-          && request.resource.data.text is string
-          && request.resource.data.text.size() > 0
-          && request.resource.data.text.size() <= 1000;
+        allow create: if verified() && member(pid) && friends(pid)
+          && request.resource.data.from == me() && okText(request.resource.data.text);
+      }
+    }
+    match /groups/{gid} {
+      allow read: if signedIn() && me() in resource.data.members;
+      allow create: if verified()
+        && request.resource.data.owner == me()
+        && me() in request.resource.data.members
+        && request.resource.data.members.size() >= 2 && request.resource.data.members.size() <= 30
+        && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 40;
+      allow update: if verified() && me() in resource.data.members && (
+        (resource.data.owner == me()
+          && request.resource.data.members.size() <= 30
+          && request.resource.data.owner in request.resource.data.members
+          && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 40)
+        || request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastText', 'lastFrom', 'lastAt'])
+        || (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members'])
+            && request.resource.data.members.toSet() == resource.data.members.toSet().difference([me()].toSet()))
+      );
+      allow delete: if verified() && resource.data.owner == me();
+      match /messages/{mid} {
+        allow read: if signedIn() && inGroup(gid);
+        allow create: if verified() && inGroup(gid)
+          && request.resource.data.from == me() && okText(request.resource.data.text);
       }
     }
   }

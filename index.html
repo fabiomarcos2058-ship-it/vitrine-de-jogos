@@ -112,6 +112,7 @@ select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body
   .top-row { flex-wrap: wrap; gap: 10px; }
   .search { order: 5; flex-basis: 100%; max-width: none; }
   .top-row .fav-top { margin-left: auto; }
+  .top-row .fav-top[hidden] + #fav-top { margin-left: auto; }
   .selects { margin-left: 0; }
 }
 
@@ -278,20 +279,26 @@ a.shop:hover { border-color: var(--muted); }
 .go-note { flex-basis: 100%; margin: 0; font-size: 12px; color: var(--faint); }
 
 /* ---------- menu lateral ---------- */
-#menu { margin: 0; inset: 0 auto 0 0; width: min(360px, 88vw); max-width: 88vw; height: 100%; max-height: 100%; border-radius: 0 26px 26px 0; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); background: var(--bg-2); display: none; }
+#menu { margin: 0; inset: 0 auto 0 0; width: min(360px, 88vw); max-width: 88vw; height: 100%; max-height: 100%; border-radius: 0 26px 26px 0; padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); background: color-mix(in srgb, var(--bg) 62%, transparent); -webkit-backdrop-filter: blur(26px) saturate(1.6); backdrop-filter: blur(26px) saturate(1.6); border: 0; border-right: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); box-shadow: 24px 0 60px rgba(0,0,0,0.35); display: none; }
+#menu::backdrop { background: rgba(5, 7, 10, 0.28); -webkit-backdrop-filter: none; backdrop-filter: none; }
 #menu[open] { display: flex; flex-direction: column; animation: slidein .28s ease; }
 @keyframes slidein { from { transform: translateX(-24px); opacity: 0; } to { transform: none; opacity: 1; } }
-.dr-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+.dr-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid color-mix(in srgb, var(--fg) 8%, transparent); }
+.dr-head .icon-btn { background: color-mix(in srgb, var(--fg) 7%, transparent); border-color: transparent; }
 .dr-body { overflow: auto; padding: 8px 0 28px; }
 .dr-sec { padding: 14px 18px 4px; }
 .dr-sec h3 { font: 700 10.5px var(--display); letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin: 0 0 8px; }
 .dr-item { display: flex; align-items: center; gap: 12px; width: calc(100% + 16px); margin: 0 -8px; padding: 9px 8px; border: 0; border-radius: 14px; background: transparent; text-align: left; cursor: pointer; font-weight: 600; font-size: 14.5px; }
-.dr-item:hover { background: var(--surface); }
-.dr-item[aria-current="true"] { background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--brand); }
-.dr-item .ic { width: 34px; height: 34px; flex-shrink: 0; display: grid; place-items: center; border-radius: 11px; background: var(--surface); border: 1px solid var(--line); font: 700 13px var(--display); color: var(--brand-text); }
+.dr-item:hover { background: color-mix(in srgb, var(--fg) 7%, transparent); }
+.dr-item[aria-current="true"] { background: color-mix(in srgb, var(--brand) 14%, transparent); }
+.dr-item .ic { position: relative; width: 36px; height: 36px; flex-shrink: 0; display: grid; place-items: center; border-radius: 12px; background: color-mix(in srgb, var(--fg) 7%, transparent); color: var(--fg); }
+.dr-item .ic svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.dr-item[aria-current="true"] .ic { background: var(--brand); color: var(--brand-ink); }
+.dr-item .ic .avatar { --s: 36px; }
+.dr-item .ic .dot { position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; border-radius: 50%; background: var(--brand); border: 2px solid var(--bg); }
 .dr-item small { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
 .dr-item .ct { margin-left: auto; font: 600 12px var(--mono); color: var(--faint); }
-.theme-seg { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.theme-seg { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, var(--fg) 7%, transparent); }
 .theme-seg button { flex: 1; border: 0; background: transparent; border-radius: 999px; padding: 8px; font-weight: 600; font-size: 13px; color: var(--muted); cursor: pointer; }
 .theme-seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
 .dr-about { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.55; }
@@ -531,7 +538,8 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .pchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .pchips span, .pchips button { font-size: 12.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--fg); }
 .pchips button { cursor: pointer; }
-.pstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.pstats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+@media (max-width: 520px) { .pstats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .pstats button { padding: 12px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); text-align: left; cursor: pointer; min-width: 0; }
 .pstats b { display: block; font: 800 clamp(14px, 3.9vw, 19px) var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .pstats small { font-size: 12px; color: var(--muted); }
@@ -711,6 +719,48 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 .cw-v::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid #0D0F14; }
 .cw-hex { height: 42px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); padding: 0 12px; font: 600 15px var(--mono); text-transform: uppercase; }
 
+/* ---------- idiomas ---------- */
+#gt-el { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+body > .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+body { top: 0 !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
+.lang-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 12px; }
+.lang-list button { min-height: 44px; text-align: left; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; cursor: pointer; }
+.lang-list button[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
+/* ---------- confirmação de e-mail ---------- */
+.verify { text-align: center; padding: 8px 4px; }
+.verify .vi { width: 72px; height: 72px; margin: 4px auto 14px; border-radius: 22px; display: grid; place-items: center; background: color-mix(in srgb, var(--brand) 16%, transparent); color: var(--brand-text); }
+.verify .vi svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.verify .em { font-weight: 700; color: var(--fg); overflow-wrap: anywhere; }
+.verify .pactions { justify-content: center; }
+.vbanner { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; padding: 14px 16px; border-radius: 18px; background: color-mix(in srgb, var(--brand) 12%, var(--surface)); border: 1px solid var(--brand-edge); margin-bottom: 14px; }
+.vbanner span { flex: 1; min-width: 200px; font-size: 14px; }
+/* ---------- jogo favorito com busca ---------- */
+.fav-cur { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 8px; }
+.fav-cur .cover { width: 42px; padding: 0; border-radius: 8px; flex-shrink: 0; }
+.fav-cur .cover .ttl, .fav-cur .cover .mono, .fav-res .cover .ttl, .fav-res .cover .mono { display: none; }
+.fav-cur b { flex: 1; min-width: 0; font-size: 14px; }
+.fav-res { display: grid; gap: 6px; margin-top: 8px; }
+.fav-res button { display: flex; align-items: center; gap: 10px; padding: 6px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); text-align: left; cursor: pointer; font-weight: 600; font-size: 14px; }
+.fav-res .cover { width: 34px; padding: 0; border-radius: 7px; flex-shrink: 0; }
+/* ---------- conversas e grupos ---------- */
+.cv-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.cv-time { font: 600 11.5px var(--mono); color: var(--faint); flex-shrink: 0; }
+.gav { --s: 44px; width: var(--s); height: var(--s); flex-shrink: 0; border-radius: 14px; display: grid; place-items: center; color: #0D0F14; background: var(--gc, #6E9BFF); }
+.gav svg { width: 52%; height: 52%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bub .who { display: block; font-size: 12px; font-weight: 700; color: var(--brand-text); margin-bottom: 2px; }
+.pick-list { display: grid; gap: 8px; }
+.pick-row { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
+.pick-row input { width: 22px; height: 22px; accent-color: var(--brand); flex-shrink: 0; }
+.pick-row .avatar { width: 40px; height: 40px; flex-shrink: 0; }
+.pick-row b { flex: 1; min-width: 0; font-weight: 600; }
+.own-tag { font: 700 10.5px var(--mono); color: var(--brand-ink); background: var(--brand); padding: 2px 7px; border-radius: 999px; }
+@media (max-width: 420px) {
+  .top-row { gap: 8px; }
+  .icon-btn { width: 40px; height: 40px; border-radius: 13px; }
+  .icon-btn.me .avatar { --s: 40px; }
+}
+
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -719,6 +769,7 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 </style>
 </head>
 <body>
+<div id="gt-el" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="logo-mark" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring, var(--brand))" stroke-width="8" stroke-linecap="round" stroke-dasharray="146 18" transform="rotate(-62 32 32)"/><path d="M23 22h18L23 42h18" fill="none" stroke="var(--logo-z, var(--fg))" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
@@ -731,13 +782,17 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
       </button>
       <a class="brand" href="./" id="logo" aria-label="Zera: voltar ao início">
         <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-        <span><b>zera</b></span>
+        <span class="notranslate" translate="no"><b>zera</b></span>
       </a>
       <label class="search" for="q">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
         <input id="q" type="search" placeholder="Buscar jogos, séries ou estúdios" autocomplete="off" aria-label="Buscar jogos, séries ou estúdios">
       </label>
-      <button class="icon-btn fav-top" type="button" id="fav-top" aria-label="Meus favoritos">
+      <button class="icon-btn fav-top" type="button" id="chat-btn" aria-label="Conversas" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"></path></svg>
+        <span class="badge" id="chat-count" hidden>0</span>
+      </button>
+      <button class="icon-btn" type="button" id="fav-top" aria-label="Meus favoritos">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>
         <span class="badge" id="fav-count" hidden>0</span>
       </button>
@@ -801,7 +856,7 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
     <div>
       <a class="brand" href="./" data-home aria-label="Zera: voltar ao início">
         <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-        <span><b>zera</b></span>
+        <span class="notranslate" translate="no"><b>zera</b></span>
       </a>
       <p>Compare notas e preços de jogos em todas as lojas, num lugar só.</p>
     </div>
@@ -817,7 +872,7 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
   <div class="dr-head">
     <a class="brand" href="./" data-home aria-label="Zera: voltar ao início">
       <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-      <span><b>zera</b></span>
+      <span class="notranslate" translate="no"><b>zera</b></span>
     </a>
     <button class="icon-btn" type="button" id="menu-close" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
   </div>
@@ -896,7 +951,7 @@ function coverHTML(g, extras = "") {
   const initial = g.t.replace(/^(The |Marvel's )/, "").charAt(0);
   return `<div class="cover" style="${coverStyle(g)}">
     <span class="mono" aria-hidden="true">${esc(initial)}</span>
-    <div class="ttl">${esc(g.t)}</div>
+    <div class="ttl notranslate" translate="no">${esc(g.t)}</div>
     ${covers[g.t] ? `<img src="${covers[g.t]}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('ok')" onerror="this.remove()">` : ""}
     ${extras}
   </div>`;
@@ -919,7 +974,7 @@ function cardHTML(g, keys) {
   return `<button type="button" class="card" data-id="${g.id}" aria-label="Ver detalhes de ${esc(g.t)}">
     ${coverHTML(g, extras)}
     <div>
-      <div class="c-name">${esc(g.t)}</div>
+      <div class="c-name notranslate" translate="no">${esc(g.t)}</div>
       <div class="c-meta">${g.y} · ${esc(g.g)}</div>
       <div class="c-price">${price}</div>
       <div class="c-plats">${platsShort(g)}</div>
@@ -1243,7 +1298,7 @@ function renderHero() {
       ${ext.img ? `<span class="bg" style="background-image:url('${ext.img}')"></span>` : ""}
       <div>
         <span class="eyebrow"><i style="background:var(--c-st)"></i>Nº 1 na Steam · ${esc(t.tag)}</span>
-        <h2>${esc(ext.name)}</h2>
+        <h2 class="notranslate" translate="no">${esc(ext.name)}</h2>
         <p>${esc(t.fact)}</p>
         <div class="hero-cta">
           <a class="btn-brand" href="https://store.steampowered.com/app/${ext.app}" target="_blank" rel="noopener">Ver na Steam <span aria-hidden="true">↗</span></a>
@@ -1260,7 +1315,7 @@ function renderHero() {
       ${img ? `<span class="bg" style="background-image:url('${img}')"></span>` : ""}
       <div>
         <span class="eyebrow"><i style="background:var(--c-${t.store})"></i>Nº 1 no ${t.label} · ${esc(t.tag)}</span>
-        <h2>${esc(g.t)}</h2>
+        <h2 class="notranslate" translate="no">${esc(g.t)}</h2>
         <p>${esc(t.fact)}</p>
         <div class="hero-cta">
           <button type="button" class="btn-brand" data-id="${g.id}">Ver jogo <span aria-hidden="true">→</span></button>
@@ -1337,7 +1392,7 @@ function detailHTML(g) {
       ${coverHTML(g)}
       <div style="min-width:0">
         <div class="d-facts">${[["y", g.y, "Ano"], ["g", g.g, "Gênero"], ["d", g.d, "Estúdio"], ["f", g.f, "Série"]].filter(x => x[1]).map(([k, v, l]) => `<button type="button" data-tag="${k}" data-v="${esc(v)}" aria-label="${l}: ${esc(v)}. Ver outros jogos">${esc(v)}</button>`).join("")}</div>
-        <h2 class="d-title" id="d-title">${esc(g.t)}</h2>
+        <h2 class="d-title notranslate" translate="no" id="d-title">${esc(g.t)}</h2>
         <div class="d-score">${ringHTML(g)}<span class="lbl">${scoreLabel(g)}</span></div>
         ${(() => { const d = bestSale(g); return d ? `<span class="d-sale">-${d.pct}% no ${d.s.label} · ${brl(d.f)}</span>` : ""; })()}
       </div>
@@ -1391,7 +1446,7 @@ function updatePicker(g) {
   btn.href = isBase && lv && lv.url ? lv.url : s.url(isBase ? g.t : g.t + " " + name);
   btn.setAttribute("aria-label", `Continuar para ${s.name}: ${g.t}, edição ${name}`);
   const ac = document.getElementById("add-cart");
-  if (ac) { const inCart = !!user && cart.some(x => sameItem(x, { id: g.id, ei, k })); ac.classList.toggle("in", inCart); ac.firstChild ? (ac.childNodes[0].textContent = inCart ? "✓ No carrinho" : "＋ Carrinho") : (ac.textContent = inCart ? "✓ No carrinho" : "＋ Carrinho"); ac.setAttribute("aria-label", inCart ? "Já está no carrinho. Abrir carrinho" : "Adicionar ao carrinho"); }
+  if (ac) { const inCart = acct() && cart.some(x => sameItem(x, { id: g.id, ei, k })); ac.classList.toggle("in", inCart); ac.firstChild ? (ac.childNodes[0].textContent = inCart ? "✓ No carrinho" : "＋ Carrinho") : (ac.textContent = inCart ? "✓ No carrinho" : "＋ Carrinho"); ac.setAttribute("aria-label", inCart ? "Já está no carrinho. Abrir carrinho" : "Adicionar ao carrinho"); }
 }
 function trailerHTML(g) {
   const search = "https://www.youtube.com/results?search_query=" + encodeURIComponent(g.t + " trailer oficial");
@@ -1425,7 +1480,7 @@ function bindDetail(g) {
   const ac = document.getElementById("add-cart");
   if (ac) ac.addEventListener("click", () => {
     const f = document.getElementById("picker"); const it = { id: g.id, ei: Number(f.ed.value), k: f.pl.value };
-    if (user && cart.some(x => sameItem(x, it))) { openCart(); return; }
+    if (acct() && cart.some(x => sameItem(x, it))) { openCart(); return; }
     if (addToCart(it.id, it.ei, it.k)) { cartFx(ac); updatePicker(g); }
   });
   const tr = document.querySelector("#trailer button");
@@ -1535,6 +1590,9 @@ function openTool(k) {
   else if (k === "favsale") { closeSheet(); applyList("fav", true); }
   else if (k === "profile") openProfile();
   else if (k === "friends") openFriends();
+  else if (k === "chats") openChats();
+  else if (k === "verify") openVerify();
+  else if (k === "lang") openLang();
   else if (k === "login") openLogin("login");
   else if (k === "signup") openLogin("signup");
 }
@@ -1800,7 +1858,7 @@ let pimg = { avatar: "", banner: "", bg: "" };
 try { const x = JSON.parse(localStorage.getItem("zera-imagens") || "null"); if (x && typeof x === "object") pimg = { avatar: safeImg(x.avatar), banner: safeImg(x.banner), bg: safeImg(x.bg) }; } catch (e) {}
 function savePimg() {
   try { localStorage.setItem("zera-imagens", JSON.stringify(pimg)); } catch (e) {}
-  if (typeof user !== "undefined" && user && fb) fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { img: pimg }, { merge: true }).catch(() => toast("Não foi possível salvar as imagens na nuvem agora"));
+  if (acct() && fb) fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { img: pimg }, { merge: true }).catch(() => toast("Não foi possível salvar as imagens na nuvem agora"));
 }
 const selfP = () => ({ ...profile, img: pimg });
 function hexInk(h) { const n = parseInt(h.slice(1), 16); const L = (0.2126 * (n >> 16 & 255) + 0.7152 * (n >> 8 & 255) + 0.0722 * (n & 255)) / 255; return L > 0.55 ? "#14110A" : "#FFFFFF"; }
@@ -1925,8 +1983,10 @@ function cartTotal() {
   return { total, unknown };
 }
 let pendingAfterLogin = null, loginReason = "";
+const acct = () => !!(user && user.emailVerified);
 function requireAccount(reason, then) {
-  if (user) { then(); return; }
+  if (acct()) { then(); return; }
+  if (user) { pendingAfterLogin = then; openVerify(); return; }
   pendingAfterLogin = then;
   if (!authReady || fbState === "loading") { toast("Só um instante, carregando sua conta…"); return; }
   loginReason = reason; openLogin("signup");
@@ -1949,7 +2009,7 @@ function cartFx(btn) {
   dot.style.left = "0px"; dot.style.top = "0px";
 }
 function addToCart(id, ei, k) {
-  if (!user) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", () => { if (addToCart(id, ei, k) && currentId === id) updatePicker(byId[id]); }); return false; }
+  if (!acct()) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", () => { if (addToCart(id, ei, k) && currentId === id) updatePicker(byId[id]); }); return false; }
   const it = { id, ei, k };
   if (cart.some(x => sameItem(x, it))) { toast("Essa edição já está no carrinho"); return false; }
   const other = cart.findIndex(x => x.id === id);
@@ -1961,11 +2021,13 @@ function addToCart(id, ei, k) {
 }
 function renderBadges() {
   const c = document.getElementById("cart-count");
-  c.hidden = !user || cart.length === 0; c.textContent = cart.length;
+  c.hidden = !acct() || cart.length === 0; c.textContent = cart.length;
+  const cb = document.getElementById("chat-btn"); if (cb) cb.hidden = !acct();
+  if (typeof renderSocialBadges === "function") renderSocialBadges();
 }
 function storeLabel(k) { const s = STORES.find(x => x.k === k); return s ? s.label : k; }
 function openCart() {
-  if (!user) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", openCart); return; }
+  if (!acct()) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", openCart); return; }
   if (!cart.length) {
     openSheet("cart", "Carrinho", "Seu carrinho", `<div class="cmp-empty"><b>Seu carrinho está vazio</b>Abra um jogo, escolha a edição e a plataforma e toque em “＋ Carrinho”. Aqui você vê quanto tudo daria junto.</div>
       <div class="q-nav"><span></span><button type="button" class="btn-brand" id="cart-explore">Explorar jogos <span aria-hidden="true">→</span></button></div>`);
@@ -1988,7 +2050,7 @@ function openCart() {
       }
       return `<div class="ci">
         <span data-open="${g.id}">${coverHTML(g)}</span>
-        <span style="min-width:0"><b class="cn">${esc(g.t)}${it.ei === 0 && g.live && g.live[s.k] && g.live[s.k].pct > 0 ? `<span class="salechip">-${g.live[s.k].pct}%</span>` : ""}</b><span class="ce">${esc(ename)} · ${s.label}</span>${tip}</span>
+        <span style="min-width:0"><b class="cn notranslate" translate="no">${esc(g.t)}${it.ei === 0 && g.live && g.live[s.k] && g.live[s.k].pct > 0 ? `<span class="salechip">-${g.live[s.k].pct}%</span>` : ""}</b><span class="ce">${esc(ename)} · ${s.label}</span>${tip}</span>
         <span class="cp"><b>${v === "pre" ? "Pré-venda" : priceText(v)}</b><span class="row" style="margin:0"><a class="mini" href="${isBase && g.live && g.live[s.k] && g.live[s.k].url ? g.live[s.k].url : s.url(isBase ? g.t : g.t + " " + ename)}" target="_blank" rel="noopener">Comprar ↗</a><button type="button" class="mini" data-rm="${i}" aria-label="Tirar ${esc(g.t)} do carrinho">✕</button></span></span>
       </div>`;
     }).join("");
@@ -2033,10 +2095,12 @@ function openProfile() {
           <button type="button" id="ps-fav"><b>${favs.size}</b><small>Favoritos</small></button>
           <button type="button" data-tool="cart"><b>${cart.length}</b><small>No carrinho</small></button>
           <button type="button" data-tool="cart"><b>${brl(total)}</b><small>Total do carrinho</small></button>
+          <button type="button" data-tool="friends"><b>${acct() ? social.fr.filter(f => f.status === "accepted").length : 0}</b><small>Amigos</small></button>
         </div>
         <div class="pactions"><button type="button" class="btn-brand" id="p-edit">Editar perfil</button>${user ? `<button type="button" class="btn-ghost sm" data-tool="friends">Amigos e conversas${(() => { const c = socialCounts(); return c.req + c.unread ? ` <span class="fr-dot" style="display:inline-block;vertical-align:1px" aria-label="novidades"></span>` : ""; })()}</button>` : ""}<button type="button" class="btn-ghost sm" data-tool="quiz">Fazer o quiz</button></div>
       </div>
     </div>
+    ${user && !user.emailVerified ? `<div class="vbanner"><span><b>Confirme seu e-mail</b> para ativar a conta e liberar carrinho, amigos e conversas.</span><button type="button" class="btn-brand sm" data-tool="verify">Confirmar agora</button></div>` : ""}
     ${user ? `<div class="acct"><h4>Conta</h4><p>Conectado como <span class="em">${esc(user.email || "")}</span></p>
         <p>Seu perfil, favoritos e carrinho ficam salvos na nuvem e aparecem em qualquer aparelho em que você entrar.</p>
         <div class="pactions" style="margin:0"><button type="button" class="btn-ghost sm" id="p-logout">Sair</button><button type="button" class="btn-ghost sm danger" id="p-delete">Excluir conta</button></div>
@@ -2089,7 +2153,7 @@ function openProfileEdit() {
         <div class="field"><label for="pf-plat">Onde você mais joga</label><select id="pf-plat" name="plat"><option value="">Prefiro não dizer</option>${[["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<option value="${v}" ${p.plat === v ? "selected" : ""}>${l}</option>`).join("")}</select></div>
         <div class="field"><label for="pf-genre">Gênero favorito</label><select id="pf-genre" name="genre"><option value="">Prefiro não dizer</option>${genres.map(gn => `<option ${p.genre === gn ? "selected" : ""}>${esc(gn)}</option>`).join("")}</select></div>
       </div>
-      <div class="field"><label for="pf-fav">Jogo favorito</label><select id="pf-fav" name="fav"><option value="">Nenhum</option>${games2.map(g => `<option value="${g.id}" ${p.fav === g.id ? "selected" : ""}>${esc(g.t)}</option>`).join("")}</select></div>
+      <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
       <div id="pf-msg"></div>
       <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
     </form>`);
@@ -2107,6 +2171,22 @@ function openProfileEdit() {
     document.getElementById("pv-user").textContent = d.user ? "@" + d.user : "";
     document.getElementById("pf-bio-n").textContent = f.bio.value.length;
   };
+  const favCur = () => {
+    const g = byId[f.fav.value], box = document.getElementById("fav-cur");
+    box.innerHTML = g ? `<div class="fav-cur">${coverHTML(g)}<b class="notranslate" translate="no">${esc(g.t)}</b><button type="button" class="fr-btn" id="fav-rm">Remover</button></div>` : "";
+    const rm = document.getElementById("fav-rm"); if (rm) rm.addEventListener("click", () => { f.fav.value = ""; favCur(); });
+  };
+  const normT = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const favQ = document.getElementById("pf-fav-q"), favRes = document.getElementById("fav-res");
+  favQ.addEventListener("input", () => {
+    const q = normT(favQ.value.trim());
+    if (!q) { favRes.innerHTML = ""; return; }
+    const hits = games2.filter(g => normT(g.t).includes(q)).slice(0, 8);
+    favRes.innerHTML = hits.length ? hits.map(g => `<button type="button" data-favpick="${g.id}">${coverHTML(g)}<span class="notranslate" translate="no">${esc(g.t)}</span></button>`).join("") : `<p class="lede-sm" style="margin:0">Nenhum jogo encontrado.</p>`;
+  });
+  favRes.addEventListener("click", e => { const b = e.target.closest("[data-favpick]"); if (!b) return; f.fav.value = b.dataset.favpick; favQ.value = ""; favRes.innerHTML = ""; favCur(); });
+  favQ.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); const b = favRes.querySelector("[data-favpick]"); if (b) b.click(); } });
+  favCur();
   f.addEventListener("input", preview);
   f.addEventListener("change", async e => {
     const t = e.target;
@@ -2191,8 +2271,9 @@ function listenCloud() {
 }
 async function onUser(u) {
   const was = user; user = u; authReady = true;
-  if (u) { await pullCloud(); listenCloud(); startSocial(); } else { if (unsubDoc) { unsubDoc(); unsubDoc = null; } stopSocial(); }
+  if (u && u.emailVerified) { await pullCloud(); listenCloud(); startSocial(); } else { if (unsubDoc) { unsubDoc(); unsubDoc = null; } stopSocial(); }
   renderMe(); render(); renderShelves(); renderBadges();
+  if (u && !u.emailVerified) { if (sheetKind === "login" || pendingAfterLogin) openVerify(); return; }
   const next = pendingAfterLogin; pendingAfterLogin = null;
   if (u && next) { if (sheetKind === "login") closeSheet(); next(); }
   else if (!was && u && (sheetKind === "login")) openProfile();
@@ -2220,9 +2301,9 @@ async function pullCloud() {
   } catch (e) { toast("Não foi possível carregar sua conta agora"); }
 }
 let syncTimer = null;
-function scheduleSync() { if (!user || !fb) return; clearTimeout(syncTimer); syncTimer = setTimeout(pushCloud, 700); }
+function scheduleSync() { if (!acct() || !fb) return; clearTimeout(syncTimer); syncTimer = setTimeout(pushCloud, 700); }
 async function pushCloud() {
-  if (!user || !fb) return;
+  if (!acct() || !fb) return;
   try { lastSynced = syncKey(); await fb.F.setDoc(userDoc(), { profile, favs: [...favs], cart, updatedAt: fb.F.serverTimestamp() }); }
   catch (e) { console.warn("Falha ao salvar", e); }
   publishProfile();
@@ -2251,7 +2332,7 @@ function openLogin(mode = "login") {
     : "As contas estão sendo ativadas e vão funcionar em breve. Enquanto isso, você já pode personalizar um perfil e usar o carrinho neste aparelho.";
   openSheet("login", "Conta Zera", signup ? "Criar conta" : "Entrar", `
     <div class="auth-tabs" role="group" aria-label="Entrar ou criar conta"><button type="button" data-mode="login" aria-pressed="${!signup}">Entrar</button><button type="button" data-mode="signup" aria-pressed="${signup}">Criar conta</button></div>
-    ${signup ? `<ul class="auth-perks"><li>Perfil com avatar, capa e cor do app</li><li>Favoritos e carrinho salvos na nuvem</li><li>Use em qualquer aparelho</li></ul>` : ""}
+    ${signup ? `<ul class="auth-perks"><li>Perfil com foto, capa e fundo do seu jeito</li><li>Amigos, conversas e grupos</li><li>Favoritos e carrinho salvos na nuvem</li></ul><p class="lede-sm" style="margin:-4px 0 14px">Para criar a conta, você vai confirmar seu e-mail por um link que enviamos.</p>` : ""}
     ${loginReason ? `<div class="msg info" style="margin-bottom:16px">${esc(loginReason)}</div>` : ""}
     ${on ? "" : `<div class="msg info" style="margin-bottom:16px">${note}</div>`}
     <form class="form" id="aform" novalidate>
@@ -2287,10 +2368,11 @@ function openLogin(mode = "login") {
         const name = f.name.value.trim();
         const cred = await fb.A.createUserWithEmailAndPassword(fb.auth, email, pass);
         await fb.A.updateProfile(cred.user, { displayName: name }).catch(() => {});
+        await sendVerify(cred.user);
         if (!profile.name) profile.name = name;
         if (!profile.user) profile.user = name.normalize("NFD").replace(/[^\w\s.]/g, "").trim().toLowerCase().replace(/\s+/g, "_").slice(0, 20);
         saveProfile();
-        toast("Conta criada! Bem-vindo(a) ao Zera");
+        openVerify(true);
       } else {
         await fb.A.signInWithEmailAndPassword(fb.auth, email, pass);
         toast("Bem-vindo(a) de volta");
@@ -2328,11 +2410,12 @@ async function deleteAccount() {
 }
 document.getElementById("me-btn").addEventListener("click", () => openTool(user || profile.name ? "profile" : "signup"));
 document.getElementById("cart-btn").addEventListener("click", openCart);
+document.getElementById("chat-btn").addEventListener("click", () => openChats());
 
 
 // ================== AMIGOS E CONVERSAS ==================
 // Firestore: profiles/{uid} (perfil público), handles/{@} → uid, friendships/{uidA_uidB}, chats/{uidA_uidB}/messages
-const social = { ready: false, denied: false, fr: [], chats: {}, chatsLoaded: false, profiles: {}, unsub: [], chatUnsub: null, chatWith: null, firstFr: true };
+const social = { ready: false, denied: false, fr: [], chats: {}, chatsLoaded: false, groups: {}, groupsLoaded: false, lastCount: -1, profiles: {}, unsub: [], chatUnsub: null, chatWith: null, firstFr: true };
 const pairId = (a, b) => [a, b].sort().join("_");
 const otherOf = f => f.users.find(u => u !== user.uid);
 const tms = t => (t && t.toMillis) ? t.toMillis() : 0;
@@ -2343,21 +2426,24 @@ try { readMap = JSON.parse(localStorage.getItem("zera-lidas") || "{}") || {}; } 
 function markRead(pid) { readMap[pid] = Date.now(); try { localStorage.setItem("zera-lidas", JSON.stringify(readMap)); } catch (e) {} renderSocialBadges(); }
 function isUnread(pid) { const c = social.chats[pid]; return !!(user && c && c.lastFrom && c.lastFrom !== user.uid && tms(c.lastAt) > (readMap[pid] || 0)); }
 function socialCounts() {
-  if (!user) return { req: 0, unread: 0 };
-  return { req: social.fr.filter(f => f.status === "pending" && f.to === user.uid).length, unread: social.fr.filter(f => f.status === "accepted" && isUnread(f.id)).length };
+  if (!acct()) return { req: 0, unread: 0 };
+  return { req: social.fr.filter(f => f.status === "pending" && f.to === user.uid).length, unread: social.fr.filter(f => f.status === "accepted" && isUnread(f.id)).length + Object.keys(social.groups || {}).filter(isUnreadG).length };
 }
 function renderSocialBadges() {
   const b = document.getElementById("me-btn"); if (!b) return;
-  const { req, unread } = socialCounts(); const n = req + unread;
+  const { req, unread } = socialCounts(); const n = req;
+  const cc = document.getElementById("chat-count");
+  if (cc) { cc.hidden = !unread; cc.textContent = unread; }
+  const cbt = document.getElementById("chat-btn"); if (cbt) cbt.setAttribute("aria-label", unread ? `Conversas: ${unread} ${unread === 1 ? "nova" : "novas"}` : "Conversas");
   const dot = b.querySelector(".dotalert");
   if (n && !dot) b.insertAdjacentHTML("beforeend", '<span class="dotalert" aria-hidden="true"></span>');
   if (!n && dot) dot.remove();
-  if (user) b.setAttribute("aria-label", n ? `Meu perfil: ${n} ${n === 1 ? "novidade" : "novidades"} em amigos e conversas` : "Meu perfil");
+  if (user) b.setAttribute("aria-label", n ? `Meu perfil: ${n} ${n === 1 ? "pedido de amizade" : "pedidos de amizade"}` : "Meu perfil");
 }
 function publishProfile() {
-  if (!user || !fb) return;
+  if (!acct() || !fb) return;
   const P = profile;
-  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
+  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), friends: social.fr.filter(f => f.status === "accepted").length, updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
 }
 async function claimHandle(h, old) {
   const F = fb.F, ref = F.doc(fb.db, "handles", h);
@@ -2375,6 +2461,7 @@ async function loadProfiles(uids, force) {
 function refreshSocial() {
   renderSocialBadges();
   if (sheetKind === "friends") renderFriendLists();
+  if (sheetKind === "chats") renderChatList();
   if (menu.open) renderMenu();
 }
 function startSocial() {
@@ -2395,6 +2482,8 @@ function startSocial() {
       if (ch.type === "modified" && f.status === "accepted" && f.from === me && prev.get(f.id) && prev.get(f.id).status === "pending") loadProfiles([f.to]).then(() => toast(`🎉 ${pname(f.to)} aceitou seu pedido de amizade`));
     });
     social.firstFr = false;
+    const nf = social.fr.filter(f => f.status === "accepted").length;
+    if (nf !== social.lastCount) { social.lastCount = nf; publishProfile(); }
     loadProfiles(social.fr.map(otherOf)).then(refreshSocial);
     refreshSocial();
   }, err => { social.denied = !!(err && err.code === "permission-denied"); social.ready = true; refreshSocial(); }));
@@ -2409,17 +2498,30 @@ function startSocial() {
     social.chatsLoaded = true;
     refreshSocial();
   }, () => {}));
+  social.unsub.push(F.onSnapshot(F.query(F.collection(fb.db, "groups"), F.where("members", "array-contains", me)), snap => {
+    snap.docChanges().forEach(ch => {
+      const id = ch.doc.id;
+      if (ch.type === "removed") { delete social.groups[id]; return; }
+      const d = ch.doc.data({ serverTimestamps: "estimate" }), old = social.groups[id];
+      social.groups[id] = d;
+      if (social.groupsLoaded && d.lastFrom && d.lastFrom !== me && (!old || tms(d.lastAt) > tms(old.lastAt)) && social.chatWith !== "g_" + id) loadProfiles([d.lastFrom]).then(() => toast(`💬 ${d.name} · ${pname(d.lastFrom)}: ${d.lastText}`));
+    });
+    social.groupsLoaded = true;
+    loadProfiles(Object.values(social.groups).flatMap(g => g.members || [])).then(refreshSocial);
+    refreshSocial();
+  }, () => {}));
 }
 function stopSocial() {
   social.unsub.forEach(u => { try { u(); } catch (e) {} }); social.unsub = [];
   stopChat();
-  social.fr = []; social.chats = {}; social.ready = false; social.denied = false;
+  social.fr = []; social.chats = {}; social.groups = {}; social.groupsLoaded = false; social.lastCount = -1; social.ready = false; social.denied = false;
   renderSocialBadges();
 }
+function isUnreadG(gid) { const g = social.groups[gid]; return !!(user && g && g.lastFrom && g.lastFrom !== user.uid && tms(g.lastAt) > (readMap["g_" + gid] || 0)); }
 function stopChat() { if (social.chatUnsub) { try { social.chatUnsub(); } catch (e) {} social.chatUnsub = null; } social.chatWith = null; }
 
 function openFriends() {
-  if (!user) { requireAccount("Crie uma conta grátis ou entre para adicionar amigos e conversar com eles.", openFriends); return; }
+  if (!acct()) { requireAccount("Crie uma conta grátis ou entre para adicionar amigos e conversar com eles.", openFriends); return; }
   const hasHandle = !!profile.user;
   openSheet("friends", "Social", "Amigos e conversas", `
     ${hasHandle ? `<div class="fr-me"><span>Seu usuário: <b>@${esc(profile.user)}</b></span><button type="button" class="fr-btn" id="fr-copy">Copiar</button></div>`
@@ -2518,12 +2620,12 @@ function openChat(uid) {
   stopChat();
   const F = fb.F, me = user.uid, pid = pairId(me, uid), p = profLike(social.profiles[uid]);
   openSheet("chat", "Conversa", p.name || "Amigo", `
-    <div class="chat-top"><button type="button" class="fr-who" id="ch-prof">${avatarHTML(40, p)}<span><b>${esc(p.name || "Amigo")}</b><small>${p.user ? "@" + esc(p.user) + " · ver perfil" : "Ver perfil"}</small></span></button><button type="button" class="fr-btn" id="ch-back">← Amigos</button></div>
+    <div class="chat-top"><button type="button" class="fr-who" id="ch-prof">${avatarHTML(40, p)}<span><b>${esc(p.name || "Amigo")}</b><small>${p.user ? "@" + esc(p.user) + " · ver perfil" : "Ver perfil"}</small></span></button><button type="button" class="fr-btn" id="ch-back">← Conversas</button></div>
     <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Mensagens"><p class="lede-sm" style="margin:auto">Carregando mensagens…</p></div>
     <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">Mensagem para ${esc(p.name || "seu amigo")}</label><input id="chat-in" maxlength="1000" placeholder="Escreva uma mensagem" enterkeyhint="send"><button class="btn-brand sm" type="submit">Enviar</button></form>
     <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
   social.chatWith = pid;
-  document.getElementById("ch-back").addEventListener("click", openFriends);
+  document.getElementById("ch-back").addEventListener("click", () => openChats());
   document.getElementById("ch-prof").addEventListener("click", () => openFriendProfile(uid));
   const box = document.getElementById("chat-box");
   const q = F.query(F.collection(fb.db, "chats", pid, "messages"), F.orderBy("at", "desc"), F.limit(100));
@@ -2565,6 +2667,7 @@ async function openFriendProfile(uid) {
         ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
         ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
         ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
+        <div class="pchips" style="margin-top:6px"><span>${Number(raw.friends) || 0} ${Number(raw.friends) === 1 ? "amigo" : "amigos"}</span>${fv.length ? `<span>${fv.length} favoritos</span>` : ""}</div>
         <div class="pactions">${f && f.status === "accepted" ? `<button type="button" class="btn-brand" id="fp-chat">Conversar</button>` : f && f.status === "pending" && f.to === me ? `<button type="button" class="btn-brand" id="fp-acc">Aceitar pedido</button>` : ""}<button type="button" class="btn-ghost sm" id="fp-back">← Amigos</button></div>
       </div>
     </div>
@@ -2588,6 +2691,272 @@ async function openFriendProfile(uid) {
   });
 }
 
+
+// ================== ÍCONES ==================
+const ICONS = {
+  bag: '<path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 11V7a3 3 0 0 1 6 0v4"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18 14.3a6.5 6.5 0 0 1 3.5 5.7"/>',
+  chat: '<path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/>',
+  home: '<path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/>',
+  shuffle: '<path d="M16 4h4v4"/><path d="M4 20 20 4"/><path d="M20 16v4h-4"/><path d="m15 15 5 5"/><path d="m4 4 5 5"/>',
+  spark: '<path d="M12 3.5 13.9 9l5.6 1.9-5.6 1.9L12 18.5l-1.9-5.7-5.6-1.9L10.1 9z"/><path d="M19 3v3M17.5 4.5h3"/>',
+  compare: '<path d="M4 7h16"/><path d="m16 3 4 4-4 4"/><path d="M20 17H4"/><path d="m8 13-4 4 4 4"/>',
+  calendar: '<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+  listnum: '<path d="M10 6h10M10 12h10M10 18h10"/><path d="M4 5.5 5.5 4.5V9"/><path d="M4 14.5a1.5 1.5 0 1 1 2.6 1L4 19h3"/>',
+  download: '<path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/>',
+  heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  gift: '<rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8C10.5 4.5 7 4.5 7 6.5S10 8 12 8zM12 8c1.5-3.5 5-3.5 5-1.5S14 8 12 8z"/>',
+  tag: '<path d="M3.5 12.5V4.5a1 1 0 0 1 1-1h8l8 8-9 9z"/><circle cx="8" cy="8" r="1.5"/>',
+  star: '<path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>',
+  clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  pad: '<path d="M7 8h10a4.5 4.5 0 0 1 4.5 4.5v1.2a3.3 3.3 0 0 1-6 1.9L14.6 14H9.4l-.9 1.6a3.3 3.3 0 0 1-6-1.9v-1.2A4.5 4.5 0 0 1 7 8z"/><path d="M8 10.5v3M6.5 12h3"/><path d="M15.5 11h.01M17.5 13h.01"/>',
+  percent: '<path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+  layers: '<path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z"/><path d="m3.5 12.5 8.5 4.5 8.5-4.5"/>',
+  studio: '<rect x="4.5" y="3.5" width="15" height="17" rx="2"/><path d="M9 8h.01M15 8h.01M9 12h.01M15 12h.01"/><path d="M10 20.5v-4h4v4"/>',
+  globe: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.3 2.4 3.5 5.2 3.5 8.5s-1.2 6.1-3.5 8.5c-2.3-2.4-3.5-5.2-3.5-8.5s1.2-6.1 3.5-8.5z"/>',
+  mail: '<rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>'
+};
+const ico = n => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ""}</svg>`;
+const LIST_ICONS = { fav: "heart", free: "gift", under100: "tag", top90: "star", new: "spark", pre: "clock", coop: "users", exps: "pad", exxb: "pad", sale: "percent" };
+
+// ================== IDIOMAS (Google Tradutor) ==================
+function getCookie(n) { const m = document.cookie.match(new RegExp("(?:^|; )" + n + "=([^;]*)")); return m ? decodeURIComponent(m[1]) : ""; }
+function curLang() { const m = getCookie("googtrans").match(/^\/[^/]+\/(.+)$/); return m && m[1] !== "pt" ? m[1] : "pt"; }
+function langName(code) { try { const n = new Intl.DisplayNames(["pt-BR"], { type: "language" }).of(code); return n.charAt(0).toUpperCase() + n.slice(1); } catch (e) { return code; } }
+let gtLoading = null;
+function loadTranslate() {
+  if (gtLoading) return gtLoading;
+  gtLoading = new Promise((res, rej) => {
+    window.googleTranslateElementInit = () => {
+      try { new google.translate.TranslateElement({ pageLanguage: "pt", autoDisplay: false }, "gt-el"); } catch (e) { rej(e); return; }
+      const t0 = Date.now();
+      (function wait() { const c = document.querySelector("#gt-el select"); if (c && c.options.length > 2) res(c); else if (Date.now() - t0 > 15000) rej(new Error("timeout")); else setTimeout(wait, 150); })();
+    };
+    const sc = document.createElement("script");
+    sc.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    sc.onerror = () => { gtLoading = null; rej(new Error("net")); };
+    document.head.appendChild(sc);
+  });
+  return gtLoading;
+}
+function setLang(code) {
+  if (code === "pt") {
+    const h = location.hostname, parts = h.split(".");
+    [undefined, h, "." + h, "." + parts.slice(-2).join(".")].forEach(d => { document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + (d ? "; domain=" + d : ""); });
+    location.reload(); return;
+  }
+  loadTranslate().then(c => { c.value = code; c.dispatchEvent(new Event("change")); closeSheet(); }).catch(() => toast("Não foi possível carregar a tradução agora"));
+}
+async function openLang() {
+  const cur = curLang();
+  openSheet("lang", "Aparência", "Idioma do site", `
+    <div class="field"><label for="lang-q">Buscar idioma</label><input id="lang-q" type="search" placeholder="Ex.: inglês, espanhol, japonês" autocomplete="off"></div>
+    <div class="lang-list" id="lang-list"><button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button><p class="lede-sm" style="grid-column:1/-1">Carregando idiomas…</p></div>
+    <p class="fr-safe">A tradução é automática, feita pelo Google Tradutor, e pode ter alguns erros. Nomes de jogos e preços continuam iguais.</p>`);
+  const list = document.getElementById("lang-list"), q = document.getElementById("lang-q");
+  list.addEventListener("click", e => { const b = e.target.closest("[data-lang]"); if (b) setLang(b.dataset.lang); });
+  let langs = [];
+  const draw = () => {
+    const t = q.value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const pick = langs.filter(([, n]) => !t || n.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").includes(t));
+    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button>` + pick.map(([c, n]) => `<button type="button" data-lang="${esc(c)}" aria-pressed="${cur === c}">${esc(n)}</button>`).join("");
+  };
+  q.addEventListener("input", draw);
+  try {
+    const c = await loadTranslate();
+    langs = [...c.options].filter(o => o.value && o.value !== "pt").map(o => [o.value, o.textContent.trim()]).sort((a, b) => a[1].localeCompare(b[1], "pt-BR"));
+    draw();
+  } catch (e) {
+    // plano B: abre o site traduzido pelo próprio Google Tradutor
+    const host = location.hostname.replace(/-/g, "--").replace(/\./g, "-");
+    const FALLBACK = ["en", "es", "fr", "de", "it", "ja", "ko", "zh-CN", "ru", "ar", "hi", "tr", "pl", "nl", "id", "vi", "uk", "sv"];
+    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button>` + FALLBACK.map(c => `<a class="btn-ghost" style="display:flex;align-items:center;text-decoration:none;color:var(--fg);border-radius:14px;min-height:44px" href="https://${host}.translate.goog${location.pathname}?_x_tr_sl=pt&_x_tr_tl=${c}&_x_tr_hl=${c}" target="_blank" rel="noopener">${esc(langName(c))} ↗</a>`).join("") + `<p class="lede-sm" style="grid-column:1/-1">A tradução dentro do site não carregou agora, então estes links abrem o Zera traduzido pelo Google Tradutor numa nova aba (lá não dá para entrar na conta).</p>`;
+  }
+}
+if (curLang() !== "pt") loadTranslate().catch(() => {});
+
+// ================== CONFIRMAÇÃO DE E-MAIL ==================
+let verifySentAt = 0, verifyTimer = null;
+async function sendVerify(u) {
+  const target = u || (fb && fb.auth.currentUser); if (!target) return;
+  try { await fb.A.sendEmailVerification(target, { url: location.origin + location.pathname }); }
+  catch (e) { if (e && /continue-uri|unauthorized/.test(e.code || "")) await fb.A.sendEmailVerification(target); else throw e; }
+  verifySentAt = Date.now();
+}
+async function checkVerified(silent) {
+  const u = fb && fb.auth.currentUser; if (!u) return false;
+  try { await u.reload(); } catch (e) { if (!silent) toast("Sem conexão. Tente de novo."); return false; }
+  if (!u.emailVerified) return false;
+  await u.getIdToken(true).catch(() => {});
+  clearInterval(verifyTimer); verifyTimer = null;
+  toast("E-mail confirmado! Sua conta está ativa 🎉");
+  if (sheetKind === "verify") closeSheet();
+  await onUser(u);
+  return true;
+}
+function openVerify(justSent) {
+  if (!user) { openLogin("signup"); return; }
+  if (user.emailVerified) { openProfile(); return; }
+  const em = esc(user.email || "seu e-mail");
+  openSheet("verify", "Conta Zera", "Confirme seu e-mail", `
+    <div class="verify">
+      <div class="vi">${ico("mail")}</div>
+      <p class="lede-sm">${justSent || verifySentAt ? `Enviamos um link de confirmação para <span class="em">${em}</span>.` : `Sua conta ainda não está ativa. Vamos enviar um link de confirmação para <span class="em">${em}</span>.`}</p>
+      <p class="lede-sm">Abra o e-mail e toque no link. Depois volte aqui: a conta é ativada sozinha. Se não achar, olhe no <b>spam</b> ou em <b>Promoções</b>.</p>
+      <div class="pactions"><button type="button" class="btn-brand" id="vf-check">Já confirmei</button><button type="button" class="btn-ghost sm" id="vf-send">${justSent || verifySentAt ? "Reenviar e-mail" : "Enviar link"}</button></div>
+      <div id="vf-msg"></div>
+      <div class="pactions" style="margin-top:18px"><button type="button" class="btn-ghost sm" id="vf-other">Usar outro e-mail</button><button type="button" class="btn-ghost sm" id="vf-out">Sair</button></div>
+    </div>`);
+  const msg = document.getElementById("vf-msg");
+  document.getElementById("vf-check").addEventListener("click", async () => { if (!(await checkVerified())) msg.innerHTML = `<div class="msg err">Ainda não recebemos a confirmação. Toque no link do e-mail e tente de novo.</div>`; });
+  document.getElementById("vf-send").addEventListener("click", async e => {
+    const b = e.currentTarget, wait = 60 - Math.round((Date.now() - verifySentAt) / 1000);
+    if (verifySentAt && wait > 0) { msg.innerHTML = `<div class="msg info">Espere ${wait} segundos para reenviar.</div>`; return; }
+    b.disabled = true;
+    try { await sendVerify(); msg.innerHTML = `<div class="msg ok">Link enviado para ${em}.</div>`; b.textContent = "Reenviar e-mail"; }
+    catch (err) { msg.innerHTML = `<div class="msg err">${err && err.code === "auth/too-many-requests" ? "Muitos envios seguidos. Espere alguns minutos e tente de novo." : "Não foi possível enviar agora. Tente de novo."}</div>`; }
+    b.disabled = false;
+  });
+  document.getElementById("vf-other").addEventListener("click", async e => {
+    const b = e.currentTarget;
+    if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "Toque de novo para cancelar este cadastro"; return; }
+    try { await fb.A.deleteUser(fb.auth.currentUser); } catch (err) { await fb.A.signOut(fb.auth).catch(() => {}); }
+    resetLocal(); openLogin("signup");
+  });
+  document.getElementById("vf-out").addEventListener("click", async () => { await fb.A.signOut(fb.auth).catch(() => {}); resetLocal(); closeSheet(); toast("Você saiu da conta"); });
+  clearInterval(verifyTimer);
+  verifyTimer = setInterval(() => { if (sheetKind !== "verify") { clearInterval(verifyTimer); verifyTimer = null; return; } if (!document.hidden) checkVerified(true); }, 5000);
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden && user && !user.emailVerified && fb) checkVerified(true); });
+
+// ================== CONVERSAS E GRUPOS ==================
+const gColor = s => `hsl(${hashHue(s) % 360} 75% 64%)`;
+const gavHTML = (g, size = 44) => `<span class="gav" style="--s:${size}px;--gc:${gColor(g.name || "grupo")}" aria-hidden="true">${ico("users")}</span>`;
+function ago(ms) {
+  if (!ms) return "";
+  const d = new Date(ms), now = new Date();
+  if (d.toDateString() === now.toDateString()) return d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+}
+function openChats() {
+  if (!acct()) { requireAccount("Crie uma conta grátis ou entre para conversar com seus amigos.", openChats); return; }
+  openSheet("chats", "Social", "Conversas", `
+    <div class="cv-actions"><button type="button" class="btn-brand sm" id="cv-new">＋ Novo grupo</button><button type="button" class="btn-ghost sm" data-tool="friends">Amigos e pedidos</button></div>
+    <div id="cv-list"></div>
+    <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento pelas conversas.</p>`);
+  document.getElementById("cv-new").addEventListener("click", openNewGroup);
+  document.getElementById("cv-list").addEventListener("click", e => {
+    const a = e.target.closest("[data-fchat]"), g = e.target.closest("[data-gchat]");
+    if (a) openChat(a.dataset.fchat); else if (g) openGroup(g.dataset.gchat);
+  });
+  renderChatList();
+}
+function renderChatList() {
+  const box = document.getElementById("cv-list"); if (!box) return;
+  if (social.denied) { box.innerHTML = `<div class="msg info">As conversas ainda estão sendo ativadas no servidor. Tente de novo mais tarde.</div>`; return; }
+  const me = user.uid, rows = [];
+  social.fr.filter(f => f.status === "accepted").forEach(f => { const c = social.chats[f.id] || {}; rows.push({ t: tms(c.lastAt), html: () => { const o = otherOf(f), p = profLike(social.profiles[o]), un = isUnread(f.id); return `<div class="fr-row"><button type="button" class="fr-who" data-fchat="${o}">${avatarHTML(44, p)}<span><b>${esc(p.name || "Amigo")}</b><small class="${un ? "unread" : ""}">${c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(c.lastText) : "Toque para conversar"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(c.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }); });
+  Object.entries(social.groups).forEach(([id, g]) => rows.push({ t: tms(g.lastAt), html: () => { const un = isUnreadG(id); const who = g.lastFrom === me ? "Você" : (pname(g.lastFrom) || "").split(" ")[0]; return `<div class="fr-row"><button type="button" class="fr-who" data-gchat="${id}">${gavHTML(g)}<span><b>${esc(g.name)}</b><small class="${un ? "unread" : ""}">${g.lastText ? esc(who) + ": " + esc(g.lastText) : (g.members || []).length + " membros"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(g.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }));
+  rows.sort((a, b) => b.t - a.t);
+  box.innerHTML = rows.length ? rows.map(r => r.html()).join("") : `<div class="fr-empty">Nenhuma conversa ainda. Adicione amigos em “Amigos e pedidos” ou crie um grupo.</div>`;
+}
+function friendPicker(exclude = []) {
+  const list = social.fr.filter(f => f.status === "accepted").map(otherOf).filter(u => !exclude.includes(u));
+  if (!list.length) return `<div class="fr-empty">${exclude.length ? "Todos os seus amigos já estão no grupo." : "Você ainda não tem amigos para chamar. Adicione amigos primeiro."}</div>`;
+  return `<div class="pick-list">${list.map(u => { const p = profLike(social.profiles[u]); return `<label class="pick-row"><input type="checkbox" value="${u}">${avatarHTML(40, p)}<b>${esc(p.name || "Amigo")}</b><small class="cv-time">${p.user ? "@" + esc(p.user) : ""}</small></label>`; }).join("")}</div>`;
+}
+function openNewGroup() {
+  if (!acct()) return;
+  openSheet("group-new", "Conversas", "Novo grupo", `
+    <form class="form" id="gform" novalidate>
+      <div class="field"><label for="g-name">Nome do grupo</label><input id="g-name" maxlength="40" placeholder="Ex.: Squad do fim de semana" autocomplete="off" required></div>
+      <div class="field"><span class="lbl">Quem vai participar</span>${friendPicker()}</div>
+      <div id="g-msg"></div>
+      <div class="q-nav"><button type="button" class="btn-ghost" id="g-cancel">Cancelar</button><button type="submit" class="btn-brand">Criar grupo</button></div>
+    </form>`);
+  document.getElementById("g-cancel").addEventListener("click", () => openChats());
+  const f = document.getElementById("gform");
+  f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const name = document.getElementById("g-name").value.trim(), sel = [...f.querySelectorAll("input[type=checkbox]:checked")].map(i => i.value), msg = document.getElementById("g-msg");
+    if (!name) { msg.innerHTML = `<div class="msg err">Dê um nome para o grupo.</div>`; return; }
+    if (!sel.length) { msg.innerHTML = `<div class="msg err">Escolha pelo menos um amigo.</div>`; return; }
+    if (sel.length > 29) { msg.innerHTML = `<div class="msg err">Um grupo pode ter até 30 pessoas.</div>`; return; }
+    const btn = f.querySelector("[type=submit]"); btn.disabled = true;
+    try {
+      const F = fb.F;
+      const ref = await F.addDoc(F.collection(fb.db, "groups"), { name, owner: user.uid, members: [user.uid, ...sel], createdAt: F.serverTimestamp(), lastText: "Grupo criado", lastFrom: user.uid, lastAt: F.serverTimestamp() });
+      toast("Grupo criado!"); openGroup(ref.id);
+    } catch (err) { btn.disabled = false; msg.innerHTML = `<div class="msg err">${err && err.code === "permission-denied" ? "Os grupos ainda estão sendo ativados no servidor. Tente de novo mais tarde." : "Não foi possível criar o grupo agora."}</div>`; }
+  });
+}
+function openGroup(gid) {
+  if (!acct()) return;
+  stopChat();
+  const F = fb.F, me = user.uid, g = social.groups[gid] || { name: "Grupo", members: [] };
+  openSheet("chat", "Grupo", g.name, `
+    <div class="chat-top"><button type="button" class="fr-who" id="gc-info">${gavHTML(g, 40)}<span><b>${esc(g.name)}</b><small>${(g.members || []).length} membros · ver detalhes</small></span></button><button type="button" class="fr-btn" id="ch-back">← Conversas</button></div>
+    <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Mensagens do grupo"><p class="lede-sm" style="margin:auto">Carregando mensagens…</p></div>
+    <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">Mensagem para o grupo</label><input id="chat-in" maxlength="1000" placeholder="Escreva para o grupo" enterkeyhint="send"><button class="btn-brand sm" type="submit">Enviar</button></form>
+    <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
+  social.chatWith = "g_" + gid;
+  document.getElementById("ch-back").addEventListener("click", () => openChats());
+  document.getElementById("gc-info").addEventListener("click", () => openGroupInfo(gid));
+  const box = document.getElementById("chat-box");
+  const q = F.query(F.collection(fb.db, "groups", gid, "messages"), F.orderBy("at", "desc"), F.limit(100));
+  social.chatUnsub = F.onSnapshot(q, snap => {
+    const msgs = snap.docs.map(d => d.data({ serverTimestamps: "estimate" })).reverse();
+    loadProfiles(msgs.map(m => m.from)).then(() => {
+      if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Mande a primeira mensagem do grupo! 👋</p>`; markRead("g_" + gid); return; }
+      let last = "", prevFrom = "";
+      box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; if (sep) prevFrom = ""; last = day; const mine = m.from === me; const who = !mine && m.from !== prevFrom ? `<span class="who">${esc(pname(m.from))}</span>` : ""; prevFrom = m.from; return sep + `<div class="bub${mine ? " me" : ""}">${who}${esc(m.text)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+      box.scrollTop = box.scrollHeight;
+      markRead("g_" + gid);
+    });
+  }, err => { box.innerHTML = `<div class="msg info" style="margin:auto">${err && err.code === "permission-denied" ? "Você não faz mais parte deste grupo." : "Não foi possível carregar as mensagens agora."}</div>`; });
+  const form = document.getElementById("chat-form"), inp = document.getElementById("chat-in");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const text = inp.value.trim(); if (!text) return;
+    inp.value = ""; inp.focus();
+    try {
+      await F.addDoc(F.collection(fb.db, "groups", gid, "messages"), { from: me, text, at: F.serverTimestamp() });
+      await F.updateDoc(F.doc(fb.db, "groups", gid), { lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() });
+    } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+  });
+}
+async function openGroupInfo(gid) {
+  const F = fb.F, me = user.uid, g = social.groups[gid]; if (!g) { openChats(); return; }
+  await loadProfiles(g.members || []);
+  const owner = g.owner === me;
+  openSheet("group-info", "Grupo", g.name, `
+    ${owner ? `<form class="form" id="gi-form" novalidate style="margin-bottom:16px"><div class="field"><label for="gi-name">Nome do grupo</label><div class="fr-inline"><input id="gi-name" maxlength="40" value="${esc(g.name)}"><button class="btn-brand sm" type="submit">Salvar</button></div></div></form>` : ""}
+    <div class="fr-sec"><h4>Membros · ${(g.members || []).length}</h4>${(g.members || []).map(u => { const p = profLike(social.profiles[u]); return `<div class="fr-row"><span class="fr-who" style="cursor:default">${avatarHTML(40, p)}<span><b>${esc(u === me ? "Você" : p.name || "Jogador")}</b><small>${p.user ? "@" + esc(p.user) : ""}</small></span></span><span class="fr-act">${u === g.owner ? '<span class="own-tag">DONO</span>' : ""}${owner && u !== me ? `<button type="button" class="fr-btn" data-gkick="${u}">Remover</button>` : ""}</span></div>`; }).join("")}</div>
+    ${owner ? `<div class="fr-sec"><h4>Chamar mais amigos</h4>${friendPicker(g.members || [])}<div class="pactions" style="margin-top:10px"><button type="button" class="btn-ghost sm" id="gi-add">Adicionar escolhidos</button></div></div>` : ""}
+    <div id="gi-msg"></div>
+    <div class="pactions" style="margin-top:20px"><button type="button" class="btn-ghost sm" id="gi-back">← Voltar ao grupo</button><button type="button" class="btn-ghost sm danger" id="gi-leave">Sair do grupo</button></div>`);
+  const ref = F.doc(fb.db, "groups", gid), msg = document.getElementById("gi-msg");
+  const fail = () => { msg.innerHTML = `<div class="msg err">Não foi possível fazer isso agora.</div>`; };
+  document.getElementById("gi-back").addEventListener("click", () => openGroup(gid));
+  const gf = document.getElementById("gi-form");
+  if (gf) gf.addEventListener("submit", async e => { e.preventDefault(); const n = document.getElementById("gi-name").value.trim(); if (!n) return; try { await F.updateDoc(ref, { name: n }); toast("Nome do grupo salvo"); } catch (err) { fail(); } });
+  shBody.querySelectorAll("[data-gkick]").forEach(b => b.addEventListener("click", async () => { try { await F.updateDoc(ref, { members: g.members.filter(u => u !== b.dataset.gkick) }); toast("Membro removido"); setTimeout(() => openGroupInfo(gid), 300); } catch (err) { fail(); } }));
+  const add = document.getElementById("gi-add");
+  if (add) add.addEventListener("click", async () => { const sel = [...shBody.querySelectorAll(".pick-row input:checked")].map(i => i.value); if (!sel.length) return; if (g.members.length + sel.length > 30) { msg.innerHTML = `<div class="msg err">Um grupo pode ter até 30 pessoas.</div>`; return; } try { await F.updateDoc(ref, { members: [...g.members, ...sel] }); toast("Amigos adicionados"); setTimeout(() => openGroupInfo(gid), 300); } catch (err) { fail(); } });
+  document.getElementById("gi-leave").addEventListener("click", async e => {
+    const b = e.currentTarget;
+    if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "Toque de novo para sair"; return; }
+    try {
+      const rest = g.members.filter(u => u !== me);
+      if (owner && !rest.length) await F.deleteDoc(ref);
+      else if (owner) await F.updateDoc(ref, { members: rest, owner: rest[0] });
+      else await F.updateDoc(ref, { members: rest });
+      delete social.groups[gid]; toast("Você saiu do grupo"); openChats();
+    } catch (err) { fail(); }
+  });
+}
+
 // ---------- menu lateral ----------
 const menu = document.getElementById("menu");
 const menuBody = document.getElementById("menu-body");
@@ -2600,29 +2969,33 @@ applyTheme(getTheme());
 function renderMenu() {
   const count = test => games.filter(test).length;
   const item = (k, n, ic, d, test) => `<button type="button" class="dr-item" data-list="${k}" aria-current="${state.list === k}">
-      <span class="ic" aria-hidden="true">${ic}</span><span>${esc(n)}<small>${esc(d)}</small></span><span class="ct">${count(test)}</span></button>`;
+      <span class="ic">${ico(ic)}</span><span>${esc(n)}<small>${esc(d)}</small></span><span class="ct">${count(test)}</span></button>`;
+  const tool = (k, ic, n, d, extra = "") => `<button type="button" class="dr-item" ${k}><span class="ic">${ico(ic)}${extra}</span><span>${n}<small>${d}</small></span></button>`;
+  const sc = socialCounts(), nFr = acct() ? social.fr.filter(f => f.status === "accepted").length : 0;
   const theme = getTheme();
   menuBody.innerHTML = `
     <div class="dr-sec">
       <button type="button" class="dr-item" data-tool="profile"><span class="ic" aria-hidden="true" style="padding:0;overflow:hidden">${avatarHTML(34)}</span><span>${user ? esc(profile.name || "Meu perfil") : "Entrar ou criar conta"}<small>${user ? "Ver e editar seu perfil" : "Salve perfil, favoritos e carrinho"}</small></span></button>
-      <button type="button" class="dr-item" data-tool="cart"><span class="ic" aria-hidden="true">🛒</span><span>Carrinho<small>${cart.length ? cart.length + (cart.length === 1 ? " item · " : " itens · ") + brl(cartTotal().total) : "Monte e veja o total"}</small></span></button>
-      <button type="button" class="dr-item" data-tool="friends"><span class="ic" aria-hidden="true">☺</span><span>Amigos e conversas<small>${!user ? "Entre para adicionar amigos" : (() => { const c = socialCounts(); return c.req || c.unread ? [c.req && c.req + (c.req === 1 ? " pedido" : " pedidos"), c.unread && c.unread + (c.unread === 1 ? " conversa nova" : " conversas novas")].filter(Boolean).join(" · ") : social.fr.filter(f => f.status === "accepted").length + " amigos"; })()}</small></span></button>
-      <button type="button" class="dr-item" data-home><span class="ic" aria-hidden="true">⌂</span><span>Início<small>Destaques e prateleiras</small></span></button>
-      <button type="button" class="dr-item" id="surprise"><span class="ic" aria-hidden="true">?</span><span>Me surpreenda<small>Abre um jogo aleatório bem avaliado</small></span></button>
+      ${tool('data-tool="chats"', "chat", "Conversas", !acct() ? "Converse com amigos e grupos" : sc.unread ? `${sc.unread} ${sc.unread === 1 ? "conversa nova" : "conversas novas"}` : "Amigos e grupos", sc.unread ? '<span class="dot"></span>' : "")}
+      ${tool('data-tool="friends"', "users", "Amigos", !acct() ? "Entre para adicionar amigos" : sc.req ? `${sc.req} ${sc.req === 1 ? "pedido de amizade" : "pedidos de amizade"}` : `${nFr} ${nFr === 1 ? "amigo" : "amigos"}`, sc.req ? '<span class="dot"></span>' : "")}
+      ${tool('data-tool="cart"', "bag", "Carrinho", cart.length && acct() ? cart.length + (cart.length === 1 ? " item · " : " itens · ") + brl(cartTotal().total) : "Monte e veja o total")}
+      ${tool("data-home", "home", "Início", "Destaques e prateleiras")}
+      ${tool('id="surprise"', "shuffle", "Me surpreenda", "Abre um jogo aleatório bem avaliado")}
     </div>
     <div class="dr-sec"><h3>Ferramentas</h3>
-      <button type="button" class="dr-item" data-tool="quiz"><span class="ic" aria-hidden="true">?</span><span>Qual jogo é pra você?<small>Quiz com 5 perguntas</small></span></button>
-      <button type="button" class="dr-item" data-tool="compare"><span class="ic" aria-hidden="true">⇄</span><span>Comparar jogos<small>${cmp.length ? cmp.length + " escolhido" + (cmp.length > 1 ? "s" : "") : "Até 3 lado a lado"}</small></span></button>
-      <button type="button" class="dr-item" data-tool="calendar"><span class="ic" aria-hidden="true">◷</span><span>Calendário de lançamentos<small>Datas e contagem regressiva</small></span></button>
-      <button type="button" class="dr-item" data-tool="guides"><span class="ic" aria-hidden="true">#</span><span>Ordem para jogar<small>Guias de RE, GTA, FF e Dragon Ball</small></span></button>
-      ${isStandalone() ? "" : `<button type="button" class="dr-item" data-tool="install"><span class="ic" aria-hidden="true">↓</span><span>Instalar o app<small>Ícone na tela inicial, funciona offline</small></span></button>`}
+      ${tool('data-tool="quiz"', "spark", "Qual jogo é pra você?", "Quiz com 5 perguntas")}
+      ${tool('data-tool="compare"', "compare", "Comparar jogos", cmp.length ? cmp.length + " escolhido" + (cmp.length > 1 ? "s" : "") : "Até 3 lado a lado")}
+      ${tool('data-tool="calendar"', "calendar", "Calendário de lançamentos", "Datas e contagem regressiva")}
+      ${tool('data-tool="guides"', "listnum", "Ordem para jogar", "Guias de RE, GTA, FF e Dragon Ball")}
+      ${isStandalone() ? "" : tool('data-tool="install"', "download", "Instalar o app", "Ícone na tela inicial, funciona offline")}
     </div>
-    <div class="dr-sec"><h3>Listas</h3>${LISTS.map(([k, n, ic, d, t]) => item(k, n, ic, d, t)).join("")}</div>
-    <div class="dr-sec"><h3>Coleções completas</h3>${COLLECTIONS.map(([k, n, d, t]) => item(k, n, esc(n.charAt(0)), d, t)).join("")}</div>
+    <div class="dr-sec"><h3>Listas</h3>${LISTS.map(([k, n, ic, d, t]) => item(k, n, LIST_ICONS[k] || "star", d, t)).join("")}</div>
+    <div class="dr-sec"><h3>Coleções completas</h3>${COLLECTIONS.map(([k, n, d, t]) => item(k, n, ["c-db", "c-re", "c-gta", "c-ff"].includes(k) ? "layers" : "studio", d, t)).join("")}</div>
     <div class="dr-sec"><h3>Aparência</h3>
       <div class="theme-seg" role="group" aria-label="Tema">
         ${[["system", "Automático"], ["light", "Claro"], ["dark", "Escuro"]].map(([v, l]) => `<button type="button" data-theme-v="${v}" aria-pressed="${theme === v}">${l}</button>`).join("")}
       </div>
+      <div style="margin-top:10px">${tool('data-tool="lang"', "globe", "Idioma do site", curLang() === "pt" ? "Português" : langName(curLang()))}</div>
     </div>
     <div class="dr-sec"><h3>Sobre o Zera</h3>
       <p class="dr-about">Comparamos notas da crítica e preços nas lojas digitais brasileiras, com promoções atualizadas várias vezes por dia. Cada loja abre a página oficial. O mais vendido da Steam é ao vivo; os do PlayStation e do Xbox são revisados toda semana.</p>

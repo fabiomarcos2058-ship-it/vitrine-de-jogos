@@ -1,5 +1,5 @@
 // Zera — funciona offline depois da primeira visita.
-const VERSION = "zera-v5";
+const VERSION = "zera-v6";
 const SHELL = ["./", "./index.html", "./games.js", "./firebase-config.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
