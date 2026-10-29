@@ -802,6 +802,17 @@ body { top: 0 !important; }
 .d-best .off { font: 800 12px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 3px 8px; border-radius: 999px; margin-left: 8px; vertical-align: 3px; }
 .go-note { display: none; }
 
+/* ---------- escolhas em botões (perfil) ---------- */
+.chip-field { border: 0; padding: 0; margin: 0; min-width: 0; }
+.chip-field legend { padding: 0; margin-bottom: 8px; }
+.chip-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-opt { position: relative; cursor: pointer; }
+.chip-opt input { position: absolute; opacity: 0; pointer-events: none; }
+.chip-opt span { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; font-size: 14px; color: var(--muted); transition: background .15s, color .15s, border-color .15s; }
+.chip-opt:hover span { color: var(--fg); border-color: color-mix(in srgb, var(--fg) 30%, var(--line)); }
+.chip-opt input:checked + span { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
+.chip-opt input:focus-visible + span { outline: 2px solid var(--brand-edge); outline-offset: 2px; }
+
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2140,7 +2151,8 @@ function openProfile() {
   const fg = p.fav && byId[p.fav];
   const chips = [p.plat && "Joga no " + ({ ps: "PlayStation", xb: "Xbox", pc: "PC", mob: "Celular" }[p.plat] || p.plat), p.genre && "Curte " + p.genre].filter(Boolean);
   const { total } = cartTotal();
-  openSheet("profile", user ? "Minha conta" : "Perfil neste aparelho", "Meu perfil", `
+  const loadingAcct = !user && !authReady && (fbState === "loading" || fbState === "ready");
+  openSheet("profile", user ? "Minha conta" : loadingAcct ? "Carregando sua conta…" : "Perfil neste aparelho", "Meu perfil", `
     <div class="pcard">
       <div class="pbanner" style="background:${bannerCSS(selfP())}"></div>
       <div class="pbody">
@@ -2163,7 +2175,7 @@ function openProfile() {
         <p>Seu perfil, favoritos e carrinho ficam salvos na nuvem e aparecem em qualquer aparelho em que você entrar.</p>
         <div class="pactions" style="margin:0"><button type="button" class="btn-ghost sm" id="p-logout">Sair</button><button type="button" class="btn-ghost sm danger" id="p-delete">Excluir conta</button></div>
         <div id="p-msg"></div></div>`
-      : `<div class="acct"><h4>Salve na nuvem</h4><p>Este perfil está só neste aparelho. Crie uma conta grátis para não perder nada e usar em qualquer lugar.</p>
+      : loadingAcct ? `<div class="acct"><h4>Conta</h4><p>Carregando sua conta…</p></div>` : `<div class="acct"><h4>Salve na nuvem</h4><p>Este perfil está só neste aparelho. Crie uma conta grátis para não perder nada e usar em qualquer lugar.</p>
         <div class="pactions" style="margin:0"><button type="button" class="btn-brand" data-tool="signup">Criar conta</button><button type="button" class="btn-ghost sm" data-tool="login">Já tenho conta</button></div></div>`}`);
   setSheetBg(bgCSS(selfP()));
   document.getElementById("p-edit").addEventListener("click", openProfileEdit);
@@ -2207,10 +2219,8 @@ function openProfileEdit() {
         <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="bg"></label><button type="button" class="btn-ghost sm" data-rmimg="bg">Remover imagem</button></div>
         <div class="help">Aparece atrás do seu perfil, para você e para os seus amigos.</div></div>
       <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
-      <div class="two">
-        <div class="field"><label for="pf-plat">Onde você mais joga</label><select id="pf-plat" name="plat"><option value="">Prefiro não dizer</option>${[["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<option value="${v}" ${p.plat === v ? "selected" : ""}>${l}</option>`).join("")}</select></div>
-        <div class="field"><label for="pf-genre">Gênero favorito</label><select id="pf-genre" name="genre"><option value="">Prefiro não dizer</option>${genres.map(gn => `<option ${p.genre === gn ? "selected" : ""}>${esc(gn)}</option>`).join("")}</select></div>
-      </div>
+      <fieldset class="field chip-field"><legend class="lbl">Onde você mais joga</legend><div class="chip-opts">${[["", "Não dizer"], ["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="plat" value="${v}" ${(p.plat || "") === v ? "checked" : ""}><span>${l}</span></label>`).join("")}</div></fieldset>
+      <fieldset class="field chip-field"><legend class="lbl">Gênero favorito</legend><div class="chip-opts">${[["", "Não dizer"], ...genres.map(gn => [gn, gn])].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="genre" value="${esc(v)}" ${(p.genre || "") === v ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>
       <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
       <div id="pf-msg"></div>
       <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
@@ -2331,6 +2341,8 @@ async function onUser(u) {
   const was = user; user = u; authReady = true;
   if (u && u.emailVerified) { await pullCloud(); listenCloud(); startSocial(); } else { if (unsubDoc) { unsubDoc(); unsubDoc = null; } stopSocial(); }
   renderMe(); render(); renderShelves(); renderBadges();
+  if (menu.open) renderMenu();
+  if (sheetKind === "profile") openProfile();
   if (u && !u.emailVerified) { if (sheetKind === "login" || pendingAfterLogin) openVerify(); return; }
   const next = pendingAfterLogin; pendingAfterLogin = null;
   if (u && next) { if (sheetKind === "login") closeSheet(); next(); }
