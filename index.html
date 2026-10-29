@@ -618,6 +618,61 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .ps-note b { color: var(--fg); }
 .ps-note .pi { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font: 800 12px var(--mono); color: #fff; background: var(--c-ps); }
 .go-sum .psn, .ci .psn { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 2px; }
+/* ---------- carrinho: retorno visual ---------- */
+#add-cart { position: relative; transition: background .2s, color .2s, border-color .2s; }
+#add-cart.in { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
+#add-cart.pop { animation: cartpop .5s cubic-bezier(.3,1.6,.5,1); }
+@keyframes cartpop { 0% { transform: scale(1); } 35% { transform: scale(1.12); } 100% { transform: scale(1); } }
+.plus1 { position: absolute; left: 50%; top: -6px; transform: translateX(-50%); font: 800 14px var(--mono); color: var(--brand-text); pointer-events: none; animation: plus1 .9s ease-out forwards; }
+@keyframes plus1 { from { opacity: 1; transform: translate(-50%, 0); } to { opacity: 0; transform: translate(-50%, -34px); } }
+.fly-dot { position: fixed; z-index: 100; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 30%, transparent); pointer-events: none; }
+.badge.bump { animation: cartpop .5s cubic-bezier(.3,1.6,.5,1); }
+a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-items: center; }
+@media (prefers-reduced-motion: reduce) { #add-cart.pop, .badge.bump, .plus1 { animation: none; } .plus1 { display: none; } }
+
+/* ---------- tags do jogo ---------- */
+.d-facts button { font: inherit; font-size: 12.5px; font-weight: 600; color: #FFFFFF; padding: 5px 10px; border-radius: 999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.16); cursor: pointer; }
+.d-facts button:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.32); }
+.d-facts button::after { content: " →"; opacity: 0; transition: opacity .15s; }
+.d-facts button:hover::after { opacity: .8; }
+
+/* ---------- amigos e chat ---------- */
+.btn-brand.sm { padding: 11px 16px; font-size: 14px; }
+.fr-inline { display: flex; align-items: center; gap: 8px; }
+.fr-inline .at { font: 700 16px var(--mono); color: var(--muted); }
+.fr-inline input { flex: 1; min-width: 0; }
+.fr-me { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+.fr-me b { color: var(--fg); font-family: var(--mono); }
+.fr-sec { margin-top: 18px; }
+.fr-sec h4 { margin: 0 0 8px; font: 700 12px var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.fr-row { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 8px; }
+.fr-who { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; text-align: left; background: transparent; border: 0; padding: 4px; cursor: pointer; border-radius: 12px; }
+.fr-who .avatar { width: var(--s); height: var(--s); flex-shrink: 0; }
+.fr-who > span:last-child { min-width: 0; display: grid; }
+.fr-who b { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fr-who small { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fr-who small.unread { color: var(--fg); font-weight: 700; }
+.fr-act { display: flex; gap: 6px; flex-shrink: 0; align-items: center; }
+.fr-btn { min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--raised); font-weight: 700; font-size: 13.5px; cursor: pointer; }
+.fr-btn.ok { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
+.fr-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); flex-shrink: 0; }
+.fr-empty { padding: 18px; border-radius: 16px; border: 1px dashed var(--line); color: var(--muted); font-size: 14px; text-align: center; }
+.fr-safe { font-size: 12.5px; color: var(--muted); margin: 16px 0 0; }
+.chat-top { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.chat-box { height: min(52vh, 460px); overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 18px; background: var(--bg-2); border: 1px solid var(--line); overscroll-behavior: contain; }
+.bub { max-width: 80%; align-self: flex-start; padding: 9px 13px; border-radius: 18px 18px 18px 6px; background: var(--raised); font-size: 15px; line-height: 1.4; overflow-wrap: anywhere; white-space: pre-wrap; }
+.bub.me { align-self: flex-end; border-radius: 18px 18px 6px 18px; background: var(--brand); color: var(--brand-ink); }
+.bub time { display: block; font-size: 11px; opacity: .65; margin-top: 3px; text-align: right; }
+.chat-day { align-self: center; font-size: 11.5px; color: var(--muted); padding: 4px 10px; border-radius: 999px; background: var(--surface); margin: 6px 0; }
+.chat-form { display: flex; gap: 8px; margin-top: 10px; }
+.chat-form input { flex: 1; min-width: 0; height: 48px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); padding: 0 18px; font: inherit; font-size: 16px; }
+.chat-form input:focus { outline: none; border-color: var(--brand-edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.fr-favs { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 10px; }
+.fr-fav { display: grid; gap: 6px; text-align: left; background: transparent; border: 0; padding: 0; cursor: pointer; font-size: 12.5px; font-weight: 600; }
+.fr-fav .cover { border-radius: 12px; }
+.fr-fav span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -923,7 +978,17 @@ setInterval(renderLiveChip, 60 * 1000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && LIVE && Date.now() - new Date(LIVE.updated) > 20 * 60 * 1000) loadLive(); });
 
 // ---------- estado, favoritos, listas ----------
-const state = { q: "", plat: "all", genre: "", sort: "score", list: "" };
+const state = { q: "", plat: "all", genre: "", sort: "score", list: "", tag: null };
+const TAG_NAMES = { y: "Ano", d: "Estúdio", f: "Série" };
+function tagMatch(g, t) { return t.k === "y" ? String(g.y) === String(t.v) : t.k === "d" ? g.d === t.v : t.k === "f" ? g.f === t.v : true; }
+function applyTag(k, v) {
+  if (dlg.open) closeDetail();
+  if (sheet.open) closeSheet();
+  state.q = ""; state.list = ""; document.getElementById("q").value = "";
+  if (k === "g") { state.genre = v; state.tag = null; } else { state.tag = { k, v }; state.genre = ""; }
+  syncControls(); render();
+  document.getElementById("catalog").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+}
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("vitrine-favoritos") || "[]")); } catch (e) {}
 function saveFavs() { try { localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); } catch (e) {} scheduleSync(); }
@@ -967,7 +1032,7 @@ const genreSel = document.getElementById("genre");
 [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR")).forEach(g => {
   const o = document.createElement("option"); o.value = g; o.textContent = g; genreSel.appendChild(o);
 });
-const isFiltered = () => !!(state.q.trim() || state.plat !== "all" || state.genre || state.list);
+const isFiltered = () => !!(state.q.trim() || state.plat !== "all" || state.genre || state.list || state.tag);
 
 function render() {
   const q = state.q.trim().toLowerCase();
@@ -975,6 +1040,7 @@ function render() {
   const list = games.filter(g => {
     if (q && !(g.t.toLowerCase().includes(q) || g.d.toLowerCase().includes(q) || (g.f || "").toLowerCase().includes(q))) return false;
     if (state.genre && g.g !== state.genre) return false;
+    if (state.tag && !tagMatch(g, state.tag)) return false;
     if (state.list && ALL_LISTS[state.list] && !ALL_LISTS[state.list].t(g)) return false;
     if (keys && !available(g, keys)) return false;
     return true;
@@ -1000,6 +1066,7 @@ function render() {
   let kind = "Catálogo", title = "Todos os jogos";
   if (cur) { kind = cur.kind; title = cur.n; }
   else if (q) { kind = "Busca"; title = `“${state.q.trim()}”`; }
+  else if (state.tag) { kind = TAG_NAMES[state.tag.k]; title = String(state.tag.v); }
   else if (state.genre) { kind = "Gênero"; title = state.genre; }
   else if (state.plat !== "all") { kind = "Plataforma"; title = PLAT_NAMES[state.plat]; }
   document.getElementById("cat-kind").textContent = kind + (state.plat !== "all" && (cur || q || state.genre) ? " · " + PLAT_NAMES[state.plat] : "");
@@ -1229,7 +1296,7 @@ function detailHTML(g) {
       ${img ? `<span class="bg" style="background-image:url('${img}')"></span>` : `<span class="bg" style="${coverStyle(g)}"></span>`}
       ${coverHTML(g)}
       <div style="min-width:0">
-        <div class="d-facts"><span>${g.y}</span><span>${esc(g.g)}</span><span>${esc(g.d)}</span>${g.f ? `<span>${esc(g.f)}</span>` : ""}</div>
+        <div class="d-facts">${[["y", g.y, "Ano"], ["g", g.g, "Gênero"], ["d", g.d, "Estúdio"], ["f", g.f, "Série"]].filter(x => x[1]).map(([k, v, l]) => `<button type="button" data-tag="${k}" data-v="${esc(v)}" aria-label="${l}: ${esc(v)}. Ver outros jogos">${esc(v)}</button>`).join("")}</div>
         <h2 class="d-title" id="d-title">${esc(g.t)}</h2>
         <div class="d-score">${ringHTML(g)}<span class="lbl">${scoreLabel(g)}</span></div>
         ${(() => { const d = bestSale(g); return d ? `<span class="d-sale">-${d.pct}% no ${d.s.label} · ${brl(d.f)}</span>` : ""; })()}
@@ -1283,6 +1350,8 @@ function updatePicker(g) {
   const lv = g.live && g.live[k];
   btn.href = isBase && lv && lv.url ? lv.url : s.url(isBase ? g.t : g.t + " " + name);
   btn.setAttribute("aria-label", `Continuar para ${s.name}: ${g.t}, edição ${name}`);
+  const ac = document.getElementById("add-cart");
+  if (ac) { const inCart = !!user && cart.some(x => sameItem(x, { id: g.id, ei, k })); ac.classList.toggle("in", inCart); ac.firstChild ? (ac.childNodes[0].textContent = inCart ? "✓ No carrinho" : "＋ Carrinho") : (ac.textContent = inCart ? "✓ No carrinho" : "＋ Carrinho"); ac.setAttribute("aria-label", inCart ? "Já está no carrinho. Abrir carrinho" : "Adicionar ao carrinho"); }
 }
 function trailerHTML(g) {
   const search = "https://www.youtube.com/results?search_query=" + encodeURIComponent(g.t + " trailer oficial");
@@ -1312,8 +1381,13 @@ function bindDetail(g) {
   if (c) c.addEventListener("click", () => { toggleCompare(g.id); c.setAttribute("aria-pressed", String(cmp.includes(g.id))); c.textContent = cmp.includes(g.id) ? "✓ Comparando" : "⇄ Comparar"; });
   const sh = document.getElementById("share-btn");
   if (sh) sh.addEventListener("click", () => shareGame(g));
+  dContent.querySelectorAll("[data-tag]").forEach(b => b.addEventListener("click", () => applyTag(b.dataset.tag, b.dataset.tag === "y" ? Number(b.dataset.v) : b.dataset.v)));
   const ac = document.getElementById("add-cart");
-  if (ac) ac.addEventListener("click", () => { const f = document.getElementById("picker"); addToCart(g.id, Number(f.ed.value), f.pl.value); });
+  if (ac) ac.addEventListener("click", () => {
+    const f = document.getElementById("picker"); const it = { id: g.id, ei: Number(f.ed.value), k: f.pl.value };
+    if (user && cart.some(x => sameItem(x, it))) { openCart(); return; }
+    if (addToCart(it.id, it.ei, it.k)) { cartFx(ac); updatePicker(g); }
+  });
   const tr = document.querySelector("#trailer button");
   if (tr) tr.addEventListener("click", () => {
     const id = tr.dataset.yt;
@@ -1364,14 +1438,14 @@ function toCatalog() {
 }
 let typing = null;
 document.getElementById("q").addEventListener("input", e => {
-  state.q = e.target.value; render();
+  state.q = e.target.value; if (state.q) state.tag = null; render();
   clearTimeout(typing); typing = setTimeout(() => { if (state.q.trim()) toCatalog(); }, 350);
 });
 document.getElementById("plat").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
   state.plat = b.dataset.v; syncControls(); render(); toCatalog();
 });
-genreSel.addEventListener("change", e => { state.genre = e.target.value; render(); toCatalog(); });
+genreSel.addEventListener("change", e => { state.genre = e.target.value; state.tag = null; render(); toCatalog(); });
 document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; save(); render(); });
 document.getElementById("fav-top").addEventListener("click", () => applyList("fav"));
 document.getElementById("clear-all").addEventListener("click", goHome);
@@ -1392,6 +1466,8 @@ const sheet = document.getElementById("sheet");
 const shBody = document.getElementById("sh-body");
 let sheetKind = null;
 function openSheet(kind, kicker, title, html) {
+  if (kind !== "login") loginReason = "";
+  if (kind !== "chat") stopChat();
   sheetKind = kind;
   document.getElementById("sh-kicker").textContent = kicker;
   document.getElementById("sh-title").textContent = title;
@@ -1402,7 +1478,7 @@ function openSheet(kind, kicker, title, html) {
 function closeSheet() { sheetKind = null; if (sheet.open) sheet.close(); if (/^#(calendario|quiz|guias|comparar|instalar)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); }
 document.getElementById("sh-close").addEventListener("click", closeSheet);
 sheet.addEventListener("click", e => { if (e.target === sheet) closeSheet(); });
-sheet.addEventListener("close", () => { sheetKind = null; });
+sheet.addEventListener("close", () => { sheetKind = null; loginReason = ""; stopChat(); });
 document.addEventListener("click", e => {
   const o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); openDetail(o.dataset.open); return; }
   const t = e.target.closest("[data-tool]"); if (t) { e.preventDefault(); openTool(t.dataset.tool); }
@@ -1417,6 +1493,7 @@ function openTool(k) {
   else if (k === "cart") openCart();
   else if (k === "favsale") { closeSheet(); applyList("fav", true); }
   else if (k === "profile") openProfile();
+  else if (k === "friends") openFriends();
   else if (k === "login") openLogin("login");
   else if (k === "signup") openLogin("signup");
 }
@@ -1691,6 +1768,7 @@ function renderMe() {
   const custom = user || profile.name;
   b.innerHTML = custom ? avatarHTML(44) : PERSON_SVG;
   b.setAttribute("aria-label", user ? "Meu perfil" : "Entrar ou criar conta");
+  if (typeof renderSocialBadges === "function") renderSocialBadges();
 }
 
 // ---------- carrinho ----------
@@ -1704,21 +1782,48 @@ function cartTotal() {
   cart.forEach(it => { const v = itemPrice(it); if (num(v)) total += v; else if (v !== 0) unknown++; });
   return { total, unknown };
 }
+let pendingAfterLogin = null, loginReason = "";
+function requireAccount(reason, then) {
+  if (user) { then(); return; }
+  pendingAfterLogin = then;
+  if (!authReady || fbState === "loading") { toast("Só um instante, carregando sua conta…"); return; }
+  loginReason = reason; openLogin("signup");
+}
+function cartFx(btn) {
+  btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop");
+  const p = document.createElement("span"); p.className = "plus1"; p.textContent = "+1"; btn.appendChild(p); setTimeout(() => p.remove(), 950);
+  const badge = document.getElementById("cart-count");
+  badge.classList.remove("bump"); void badge.offsetWidth; badge.classList.add("bump");
+  if (reduceMotion || !btn.animate) return;
+  const a = btn.getBoundingClientRect(), b = document.getElementById("cart-btn").getBoundingClientRect();
+  const dot = document.createElement("span"); dot.className = "fly-dot";
+  (dlg.open ? dlg : document.body).appendChild(dot);
+  const x0 = a.left + a.width / 2, y0 = a.top + a.height / 2, x1 = b.left + b.width / 2, y1 = b.top + b.height / 2;
+  dot.animate([
+    { transform: `translate(${x0}px, ${y0}px) scale(1)`, opacity: 1 },
+    { transform: `translate(${(x0 + x1) / 2}px, ${Math.min(y0, y1) - 80}px) scale(1.15)`, opacity: 1, offset: 0.45 },
+    { transform: `translate(${x1}px, ${y1}px) scale(0.4)`, opacity: 0.2 }
+  ], { duration: 700, easing: "cubic-bezier(.5,0,.6,1)" }).onfinish = () => dot.remove();
+  dot.style.left = "0px"; dot.style.top = "0px";
+}
 function addToCart(id, ei, k) {
+  if (!user) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", () => { if (addToCart(id, ei, k) && currentId === id) updatePicker(byId[id]); }); return false; }
   const it = { id, ei, k };
-  if (cart.some(x => sameItem(x, it))) { toast("Essa edição já está no carrinho"); return; }
+  if (cart.some(x => sameItem(x, it))) { toast("Essa edição já está no carrinho"); return false; }
   const other = cart.findIndex(x => x.id === id);
   cart.push(it); saveCart();
   const t = cartTotal().total;
   toast(`Adicionado ao carrinho · total ${brl(t)}`);
   if (other >= 0) setTimeout(() => toast("Você tem esse jogo em outra edição ou loja no carrinho"), 2300);
+  return true;
 }
 function renderBadges() {
   const c = document.getElementById("cart-count");
-  c.hidden = cart.length === 0; c.textContent = cart.length;
+  c.hidden = !user || cart.length === 0; c.textContent = cart.length;
 }
 function storeLabel(k) { const s = STORES.find(x => x.k === k); return s ? s.label : k; }
 function openCart() {
+  if (!user) { requireAccount("Crie uma conta grátis ou entre para usar o carrinho. Assim ele fica salvo em qualquer aparelho.", openCart); return; }
   if (!cart.length) {
     openSheet("cart", "Carrinho", "Seu carrinho", `<div class="cmp-empty"><b>Seu carrinho está vazio</b>Abra um jogo, escolha a edição e a plataforma e toque em “＋ Carrinho”. Aqui você vê quanto tudo daria junto.</div>
       <div class="q-nav"><span></span><button type="button" class="btn-brand" id="cart-explore">Explorar jogos <span aria-hidden="true">→</span></button></div>`);
@@ -1787,7 +1892,7 @@ function openProfile() {
           <button type="button" data-tool="cart"><b>${cart.length}</b><small>No carrinho</small></button>
           <button type="button" data-tool="cart"><b>${brl(total)}</b><small>Total do carrinho</small></button>
         </div>
-        <div class="pactions"><button type="button" class="btn-brand" id="p-edit">Editar perfil</button><button type="button" class="btn-ghost sm" data-tool="quiz">Fazer o quiz</button></div>
+        <div class="pactions"><button type="button" class="btn-brand" id="p-edit">Editar perfil</button>${user ? `<button type="button" class="btn-ghost sm" data-tool="friends">Amigos e conversas${(() => { const c = socialCounts(); return c.req + c.unread ? ` <span class="fr-dot" style="display:inline-block;vertical-align:1px" aria-label="novidades"></span>` : ""; })()}</button>` : ""}<button type="button" class="btn-ghost sm" data-tool="quiz">Fazer o quiz</button></div>
       </div>
     </div>
     ${user ? `<div class="acct"><h4>Conta</h4><p>Conectado como <span class="em">${esc(user.email || "")}</span></p>
@@ -1851,7 +1956,13 @@ function openProfileEdit() {
     const d = read(); const msg = document.getElementById("pf-msg");
     if (!d.name) { msg.innerHTML = `<div class="msg err">Escreva um nome para o perfil.</div>`; f.name.focus(); return; }
     if (d.user && !/^[a-z0-9_.]{3,20}$/.test(d.user)) { msg.innerHTML = `<div class="msg err">O nome de usuário precisa ter de 3 a 20 caracteres: letras sem acento, números, ponto ou _.</div>`; f.user.focus(); return; }
-    profile = d; saveProfile(); applyAccent(); toast("Perfil salvo"); openProfile();
+    const finish = () => { profile = d; saveProfile(); applyAccent(); toast("Perfil salvo"); openProfile(); };
+    if (user && fb && d.user && d.user !== profile.user) {
+      claimHandle(d.user, profile.user).then(finish).catch(err => {
+        if (err && err.message === "taken") { msg.innerHTML = `<div class="msg err">O @${esc(d.user)} já é de outra pessoa. Escolha outro.</div>`; f.user.focus(); }
+        else finish();
+      });
+    } else finish();
   });
 }
 
@@ -1894,9 +2005,11 @@ function listenCloud() {
 }
 async function onUser(u) {
   const was = user; user = u; authReady = true;
-  if (u) { await pullCloud(); listenCloud(); } else if (unsubDoc) { unsubDoc(); unsubDoc = null; }
+  if (u) { await pullCloud(); listenCloud(); startSocial(); } else { if (unsubDoc) { unsubDoc(); unsubDoc = null; } stopSocial(); }
   renderMe(); render(); renderShelves(); renderBadges();
-  if (!was && u && (sheetKind === "login")) openProfile();
+  const next = pendingAfterLogin; pendingAfterLogin = null;
+  if (u && next) { if (sheetKind === "login") closeSheet(); next(); }
+  else if (!was && u && (sheetKind === "login")) openProfile();
 }
 function userDoc() { return fb.F.doc(fb.db, "users", user.uid); }
 async function pullCloud() {
@@ -1920,6 +2033,7 @@ async function pushCloud() {
   if (!user || !fb) return;
   try { lastSynced = syncKey(); await fb.F.setDoc(userDoc(), { profile, favs: [...favs], cart, updatedAt: fb.F.serverTimestamp() }); }
   catch (e) { console.warn("Falha ao salvar", e); }
+  publishProfile();
 }
 const AUTH_ERRORS = {
   "auth/email-already-in-use": "Já existe uma conta com esse e-mail. Toque em “Entrar”.",
@@ -1946,6 +2060,7 @@ function openLogin(mode = "login") {
   openSheet("login", "Conta Zera", signup ? "Criar conta" : "Entrar", `
     <div class="auth-tabs" role="group" aria-label="Entrar ou criar conta"><button type="button" data-mode="login" aria-pressed="${!signup}">Entrar</button><button type="button" data-mode="signup" aria-pressed="${signup}">Criar conta</button></div>
     ${signup ? `<ul class="auth-perks"><li>Perfil com avatar, capa e cor do app</li><li>Favoritos e carrinho salvos na nuvem</li><li>Use em qualquer aparelho</li></ul>` : ""}
+    ${loginReason ? `<div class="msg info" style="margin-bottom:16px">${esc(loginReason)}</div>` : ""}
     ${on ? "" : `<div class="msg info" style="margin-bottom:16px">${note}</div>`}
     <form class="form" id="aform" novalidate>
       ${signup ? `<div class="field"><label for="af-name">Nome</label><input id="af-name" name="name" maxlength="30" autocomplete="nickname" required></div>` : ""}
@@ -2003,12 +2118,16 @@ async function logout() {
   if (!fb) return;
   clearTimeout(syncTimer); await pushCloud();
   if (unsubDoc) { unsubDoc(); unsubDoc = null; }
+  stopSocial();
   await fb.A.signOut(fb.auth);
   resetLocal(); closeSheet(); toast("Você saiu da conta");
 }
 async function deleteAccount() {
   const msg = document.getElementById("p-msg");
   try {
+    stopSocial();
+    try { await fb.F.deleteDoc(fb.F.doc(fb.db, "profiles", user.uid)); } catch (e) {}
+    if (profile.user) { try { await fb.F.deleteDoc(fb.F.doc(fb.db, "handles", profile.user)); } catch (e) {} }
     await fb.F.deleteDoc(userDoc());
     await fb.A.deleteUser(fb.auth.currentUser);
     resetLocal(); closeSheet(); toast("Conta excluída");
@@ -2016,6 +2135,264 @@ async function deleteAccount() {
 }
 document.getElementById("me-btn").addEventListener("click", () => openTool(user || profile.name ? "profile" : "signup"));
 document.getElementById("cart-btn").addEventListener("click", openCart);
+
+
+// ================== AMIGOS E CONVERSAS ==================
+// Firestore: profiles/{uid} (perfil público), handles/{@} → uid, friendships/{uidA_uidB}, chats/{uidA_uidB}/messages
+const social = { ready: false, denied: false, fr: [], chats: {}, chatsLoaded: false, profiles: {}, unsub: [], chatUnsub: null, chatWith: null, firstFr: true };
+const pairId = (a, b) => [a, b].sort().join("_");
+const otherOf = f => f.users.find(u => u !== user.uid);
+const tms = t => (t && t.toMillis) ? t.toMillis() : 0;
+const profLike = p => ({ ...DEFAULT_PROFILE, ...(p || {}) });
+const pname = uid => (social.profiles[uid] && social.profiles[uid].name) || "Alguém";
+let readMap = {};
+try { readMap = JSON.parse(localStorage.getItem("zera-lidas") || "{}") || {}; } catch (e) {}
+function markRead(pid) { readMap[pid] = Date.now(); try { localStorage.setItem("zera-lidas", JSON.stringify(readMap)); } catch (e) {} renderSocialBadges(); }
+function isUnread(pid) { const c = social.chats[pid]; return !!(user && c && c.lastFrom && c.lastFrom !== user.uid && tms(c.lastAt) > (readMap[pid] || 0)); }
+function socialCounts() {
+  if (!user) return { req: 0, unread: 0 };
+  return { req: social.fr.filter(f => f.status === "pending" && f.to === user.uid).length, unread: social.fr.filter(f => f.status === "accepted" && isUnread(f.id)).length };
+}
+function renderSocialBadges() {
+  const b = document.getElementById("me-btn"); if (!b) return;
+  const { req, unread } = socialCounts(); const n = req + unread;
+  const dot = b.querySelector(".dotalert");
+  if (n && !dot) b.insertAdjacentHTML("beforeend", '<span class="dotalert" aria-hidden="true"></span>');
+  if (!n && dot) dot.remove();
+  if (user) b.setAttribute("aria-label", n ? `Meu perfil: ${n} ${n === 1 ? "novidade" : "novidades"} em amigos e conversas` : "Meu perfil");
+}
+function publishProfile() {
+  if (!user || !fb) return;
+  const P = profile;
+  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), updatedAt: fb.F.serverTimestamp() }).catch(() => {});
+}
+async function claimHandle(h, old) {
+  const F = fb.F, ref = F.doc(fb.db, "handles", h);
+  await F.runTransaction(fb.db, async tx => {
+    const snap = await tx.get(ref);
+    if (snap.exists() && snap.data().uid !== user.uid) throw new Error("taken");
+    if (!snap.exists()) tx.set(ref, { uid: user.uid, at: F.serverTimestamp() });
+  });
+  if (old && old !== h) { try { await F.deleteDoc(F.doc(fb.db, "handles", old)); } catch (e) {} }
+}
+async function loadProfiles(uids, force) {
+  const need = [...new Set(uids)].filter(u => u && (force || !social.profiles[u]));
+  await Promise.all(need.map(async u => { try { const s = await fb.F.getDoc(fb.F.doc(fb.db, "profiles", u)); social.profiles[u] = s.exists() ? s.data() : (social.profiles[u] || { name: "Jogador" }); } catch (e) { social.profiles[u] = social.profiles[u] || { name: "Jogador" }; } }));
+}
+function refreshSocial() {
+  renderSocialBadges();
+  if (sheetKind === "friends") renderFriendLists();
+  if (menu.open) renderMenu();
+}
+function startSocial() {
+  stopSocial(); if (!user || !fb) return;
+  const F = fb.F, me = user.uid;
+  social.firstFr = true; social.chatsLoaded = false;
+  if (profile.user) claimHandle(profile.user).catch(err => {
+    if (err && err.message === "taken") { profile.user = ""; saveProfile(); toast("Seu nome de usuário já é de outra pessoa. Escolha outro no perfil."); }
+  });
+  publishProfile();
+  social.unsub.push(F.onSnapshot(F.query(F.collection(fb.db, "friendships"), F.where("users", "array-contains", me)), snap => {
+    social.denied = false; social.ready = true;
+    const prev = new Map(social.fr.map(f => [f.id, f]));
+    social.fr = snap.docs.map(d => ({ id: d.id, ...d.data() })).filter(f => !(f.status === "blocked" && f.blockedBy !== me));
+    if (!social.firstFr) snap.docChanges().forEach(ch => {
+      const f = { id: ch.doc.id, ...ch.doc.data() };
+      if (ch.type === "added" && f.status === "pending" && f.to === me) loadProfiles([f.from]).then(() => toast(`👋 ${pname(f.from)} quer ser seu amigo`));
+      if (ch.type === "modified" && f.status === "accepted" && f.from === me && prev.get(f.id) && prev.get(f.id).status === "pending") loadProfiles([f.to]).then(() => toast(`🎉 ${pname(f.to)} aceitou seu pedido de amizade`));
+    });
+    social.firstFr = false;
+    loadProfiles(social.fr.map(otherOf)).then(refreshSocial);
+    refreshSocial();
+  }, err => { social.denied = !!(err && err.code === "permission-denied"); social.ready = true; refreshSocial(); }));
+  social.unsub.push(F.onSnapshot(F.query(F.collection(fb.db, "chats"), F.where("users", "array-contains", me)), snap => {
+    snap.docChanges().forEach(ch => {
+      const d = ch.doc.data({ serverTimestamps: "estimate" }); const old = social.chats[ch.doc.id];
+      social.chats[ch.doc.id] = d;
+      if (social.chatsLoaded && d.lastFrom && d.lastFrom !== me && (!old || tms(d.lastAt) > tms(old.lastAt)) && social.chatWith !== ch.doc.id) {
+        loadProfiles([d.lastFrom]).then(() => toast(`💬 ${pname(d.lastFrom)}: ${d.lastText}`));
+      }
+    });
+    social.chatsLoaded = true;
+    refreshSocial();
+  }, () => {}));
+}
+function stopSocial() {
+  social.unsub.forEach(u => { try { u(); } catch (e) {} }); social.unsub = [];
+  stopChat();
+  social.fr = []; social.chats = {}; social.ready = false; social.denied = false;
+  renderSocialBadges();
+}
+function stopChat() { if (social.chatUnsub) { try { social.chatUnsub(); } catch (e) {} social.chatUnsub = null; } social.chatWith = null; }
+
+function openFriends() {
+  if (!user) { requireAccount("Crie uma conta grátis ou entre para adicionar amigos e conversar com eles.", openFriends); return; }
+  const hasHandle = !!profile.user;
+  openSheet("friends", "Social", "Amigos e conversas", `
+    ${hasHandle ? `<div class="fr-me"><span>Seu usuário: <b>@${esc(profile.user)}</b></span><button type="button" class="fr-btn" id="fr-copy">Copiar</button></div>`
+      : `<form id="fr-handle" class="form" novalidate style="margin-bottom:14px"><div class="field"><label for="fr-h">Primeiro, escolha seu nome de usuário</label><div class="fr-inline"><span class="at" aria-hidden="true">@</span><input id="fr-h" maxlength="20" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="ex.: fabio_gamer"><button class="btn-brand sm" type="submit">Salvar</button></div><div class="help">É assim que seus amigos vão te encontrar. Letras sem acento, números, ponto ou _.</div></div><div id="fr-hmsg"></div></form>`}
+    <form id="fr-add" class="form" novalidate><div class="field"><label for="fr-q">Adicionar amigo pelo nome de usuário</label><div class="fr-inline"><span class="at" aria-hidden="true">@</span><input id="fr-q" maxlength="21" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="usuário do seu amigo"><button class="btn-brand sm" type="submit">Enviar pedido</button></div></div><div id="fr-msg"></div></form>
+    <div id="fr-lists"></div>
+    <p class="fr-safe">Seu nome, @, bio, avatar e favoritos ficam visíveis para quem tem conta no Zera. Converse só com quem você conhece e nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
+  const lists = document.getElementById("fr-lists");
+  lists.addEventListener("click", onFriendAction);
+  const cp = document.getElementById("fr-copy");
+  if (cp) cp.addEventListener("click", async () => { try { await navigator.clipboard.writeText("@" + profile.user); toast("Copiado: @" + profile.user); } catch (e) { toast("@" + profile.user); } });
+  const hf = document.getElementById("fr-handle");
+  if (hf) hf.addEventListener("submit", async e => {
+    e.preventDefault();
+    const h = hf.querySelector("input").value.trim().replace(/^@/, "").toLowerCase(), m = document.getElementById("fr-hmsg");
+    if (!/^[a-z0-9_.]{3,20}$/.test(h)) { m.innerHTML = `<div class="msg err">Use de 3 a 20 caracteres: letras sem acento, números, ponto ou _.</div>`; return; }
+    try { await claimHandle(h, ""); profile.user = h; saveProfile(); toast("Pronto! Agora você é @" + h); openFriends(); }
+    catch (err) { m.innerHTML = `<div class="msg err">${err && err.message === "taken" ? `O @${esc(h)} já é de outra pessoa. Tente outro.` : "Não foi possível salvar agora. Tente de novo em instantes."}</div>`; }
+  });
+  const af = document.getElementById("fr-add");
+  af.addEventListener("submit", async e => {
+    e.preventDefault();
+    const inp = af.querySelector("input"), m = document.getElementById("fr-msg"), btn = af.querySelector("button");
+    btn.disabled = true;
+    try { const ok = await sendFriendRequest(inp.value); m.innerHTML = `<div class="msg ok">${esc(ok)}</div>`; inp.value = ""; }
+    catch (err) { m.innerHTML = `<div class="msg err">${esc(typeof err === "string" ? err : err && err.code === "permission-denied" ? "As amizades ainda estão sendo ativadas. Tente de novo mais tarde." : "Não foi possível enviar agora. Verifique sua internet.")}</div>`; }
+    btn.disabled = false;
+  });
+  renderFriendLists();
+}
+function friendRow(f, sub, actions, unread) {
+  const o = otherOf(f), p = profLike(social.profiles[o]);
+  return `<div class="fr-row"><button type="button" class="fr-who" data-${f.status === "accepted" ? "fchat" : "fprof"}="${o}">${avatarHTML(44, p)}<span><b>${esc(p.name || "Jogador")}</b><small class="${unread ? "unread" : ""}">${sub}</small></span></button><span class="fr-act">${unread ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}${actions}</span></div>`;
+}
+function renderFriendLists() {
+  const box = document.getElementById("fr-lists"); if (!box) return;
+  if (social.denied) { box.innerHTML = `<div class="msg info">As amizades ainda estão sendo ativadas no servidor. Tente de novo mais tarde.</div>`; return; }
+  if (!social.ready) { box.innerHTML = `<p class="lede-sm" style="margin-top:16px">Carregando amigos…</p>`; return; }
+  const me = user.uid;
+  const at = o => social.profiles[o] && social.profiles[o].user ? "@" + esc(social.profiles[o].user) : "";
+  const inc = social.fr.filter(f => f.status === "pending" && f.to === me);
+  const out = social.fr.filter(f => f.status === "pending" && f.from === me);
+  const acc = social.fr.filter(f => f.status === "accepted").sort((a, b) => tms((social.chats[b.id] || {}).lastAt) - tms((social.chats[a.id] || {}).lastAt));
+  const blk = social.fr.filter(f => f.status === "blocked");
+  let h = "";
+  if (inc.length) h += `<div class="fr-sec"><h4>Pedidos de amizade</h4>${inc.map(f => friendRow(f, at(otherOf(f)) || "Quer ser seu amigo", `<button type="button" class="fr-btn ok" data-facc="${f.id}">Aceitar</button><button type="button" class="fr-btn" data-fdel="${f.id}" aria-label="Recusar">Recusar</button>`)).join("")}</div>`;
+  h += `<div class="fr-sec"><h4>Amigos${acc.length ? " · " + acc.length : ""}</h4>${acc.length ? acc.map(f => { const c = social.chats[f.id], un = isUnread(f.id); return friendRow(f, c && c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(c.lastText) : at(otherOf(f)) || "Toque para conversar", `<button type="button" class="fr-btn" data-fchat="${otherOf(f)}">Conversar</button>`, un); }).join("") : `<div class="fr-empty">Você ainda não tem amigos aqui. Mande seu @ para alguém ou adicione pelo @ da pessoa.</div>`}</div>`;
+  if (out.length) h += `<div class="fr-sec"><h4>Pedidos enviados</h4>${out.map(f => friendRow(f, "Aguardando resposta", `<button type="button" class="fr-btn" data-fdel="${f.id}">Cancelar</button>`)).join("")}</div>`;
+  if (blk.length) h += `<div class="fr-sec"><h4>Bloqueados</h4>${blk.map(f => friendRow(f, "Bloqueado", `<button type="button" class="fr-btn" data-fdel="${f.id}">Desbloquear</button>`)).join("")}</div>`;
+  box.innerHTML = h;
+}
+async function onFriendAction(e) {
+  const F = fb.F, el = e.target.closest("[data-facc],[data-fdel],[data-fchat],[data-fprof]"); if (!el) return;
+  try {
+    if (el.dataset.facc) { el.disabled = true; await F.updateDoc(F.doc(fb.db, "friendships", el.dataset.facc), { status: "accepted", acceptedAt: F.serverTimestamp() }); toast("Agora vocês são amigos!"); }
+    else if (el.dataset.fdel) { el.disabled = true; await F.deleteDoc(F.doc(fb.db, "friendships", el.dataset.fdel)); }
+    else if (el.dataset.fchat) openChat(el.dataset.fchat);
+    else if (el.dataset.fprof) openFriendProfile(el.dataset.fprof);
+  } catch (err) { el.disabled = false; toast("Não foi possível fazer isso agora"); }
+}
+async function sendFriendRequest(raw) {
+  const F = fb.F, me = user.uid;
+  const h = String(raw || "").trim().replace(/^@/, "").toLowerCase();
+  if (!/^[a-z0-9_.]{3,20}$/.test(h)) throw "Digite o nome de usuário do seu amigo (de 3 a 20 caracteres).";
+  if (h === profile.user) throw "Esse é você 😄";
+  const hs = await F.getDoc(F.doc(fb.db, "handles", h));
+  if (!hs.exists()) throw `Não achamos ninguém com o usuário @${h}. Confira se está certinho.`;
+  const other = hs.data().uid;
+  if (other === me) throw "Esse é você 😄";
+  const pid = pairId(me, other), ref = F.doc(fb.db, "friendships", pid);
+  const ex = await F.getDoc(ref);
+  if (ex.exists()) {
+    const f = ex.data();
+    if (f.status === "accepted") throw `Você e @${h} já são amigos.`;
+    if (f.status === "blocked") throw "Não foi possível enviar o pedido.";
+    if (f.from === me) throw `Você já mandou um pedido para @${h}. Agora é esperar.`;
+    await F.updateDoc(ref, { status: "accepted", acceptedAt: F.serverTimestamp() });
+    return `@${h} já tinha te chamado. Agora vocês são amigos!`;
+  }
+  await F.setDoc(ref, { users: pid.split("_"), from: me, to: other, status: "pending", createdAt: F.serverTimestamp() });
+  return `Pedido enviado para @${h}.`;
+}
+function fmtWhen(ms) {
+  const d = new Date(ms), now = new Date();
+  const hm = d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+  return d.toDateString() === now.toDateString() ? hm : d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) + " " + hm;
+}
+function dayLabel(ms) {
+  const d = new Date(ms), t = new Date(); const y = new Date(); y.setDate(t.getDate() - 1);
+  if (d.toDateString() === t.toDateString()) return "Hoje";
+  if (d.toDateString() === y.toDateString()) return "Ontem";
+  return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "long" });
+}
+function openChat(uid) {
+  if (!user) return;
+  stopChat();
+  const F = fb.F, me = user.uid, pid = pairId(me, uid), p = profLike(social.profiles[uid]);
+  openSheet("chat", "Conversa", p.name || "Amigo", `
+    <div class="chat-top"><button type="button" class="fr-who" id="ch-prof">${avatarHTML(40, p)}<span><b>${esc(p.name || "Amigo")}</b><small>${p.user ? "@" + esc(p.user) + " · ver perfil" : "Ver perfil"}</small></span></button><button type="button" class="fr-btn" id="ch-back">← Amigos</button></div>
+    <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Mensagens"><p class="lede-sm" style="margin:auto">Carregando mensagens…</p></div>
+    <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">Mensagem para ${esc(p.name || "seu amigo")}</label><input id="chat-in" maxlength="1000" placeholder="Escreva uma mensagem" enterkeyhint="send"><button class="btn-brand sm" type="submit">Enviar</button></form>
+    <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
+  social.chatWith = pid;
+  document.getElementById("ch-back").addEventListener("click", openFriends);
+  document.getElementById("ch-prof").addEventListener("click", () => openFriendProfile(uid));
+  const box = document.getElementById("chat-box");
+  const q = F.query(F.collection(fb.db, "chats", pid, "messages"), F.orderBy("at", "desc"), F.limit(100));
+  social.chatUnsub = F.onSnapshot(q, snap => {
+    const msgs = snap.docs.map(d => d.data({ serverTimestamps: "estimate" })).reverse();
+    if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Diga oi para ${esc(p.name || "seu amigo")}! 👋</p>`; markRead(pid); return; }
+    const nearBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
+    let last = "";
+    box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; last = day; return sep + `<div class="bub${m.from === me ? " me" : ""}">${esc(m.text)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+    if (nearBottom || snap.docChanges().some(c => c.type === "added")) box.scrollTop = box.scrollHeight;
+    markRead(pid);
+  }, err => { box.innerHTML = `<div class="msg info" style="margin:auto">${err && err.code === "permission-denied" ? "Só dá para conversar com amigos. Se vocês acabaram de virar amigos, tente de novo em instantes." : "Não foi possível carregar as mensagens agora."}</div>`; });
+  const form = document.getElementById("chat-form"), inp = document.getElementById("chat-in");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const text = inp.value.trim(); if (!text) return;
+    inp.value = ""; inp.focus();
+    try {
+      await F.addDoc(F.collection(fb.db, "chats", pid, "messages"), { from: me, text, at: F.serverTimestamp() });
+      await F.setDoc(F.doc(fb.db, "chats", pid), { users: pid.split("_"), lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() }, { merge: true });
+    } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+  });
+}
+async function openFriendProfile(uid) {
+  if (!user) return;
+  await loadProfiles([uid], true);
+  const raw = social.profiles[uid] || {}, p = profLike(raw), me = user.uid, pid = pairId(me, uid);
+  const f = social.fr.find(x => x.id === pid);
+  const fg = p.fav && byId[p.fav];
+  const chips = [p.plat && "Joga no " + ({ ps: "PlayStation", xb: "Xbox", pc: "PC", mob: "Celular" }[p.plat] || p.plat), p.genre && "Curte " + p.genre].filter(Boolean);
+  const fv = (raw.favs || []).map(id => byId[id]).filter(Boolean);
+  const first = esc((p.name || "Jogador").split(" ")[0]);
+  openSheet("friend", "Perfil", p.name || "Jogador", `
+    <div class="pcard">
+      <div class="pbanner" style="background:${BANNERS[p.banner] || BANNERS[0]}"></div>
+      <div class="pbody">
+        <div class="pav">${avatarHTML(92, p)}</div>
+        <div class="pname">${esc(p.name || "Jogador")}</div>
+        ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
+        ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
+        ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
+        <div class="pactions">${f && f.status === "accepted" ? `<button type="button" class="btn-brand" id="fp-chat">Conversar</button>` : f && f.status === "pending" && f.to === me ? `<button type="button" class="btn-brand" id="fp-acc">Aceitar pedido</button>` : ""}<button type="button" class="btn-ghost sm" id="fp-back">← Amigos</button></div>
+      </div>
+    </div>
+    ${fv.length ? `<div class="fr-sec"><h4>Favoritos de ${first} · ${fv.length}</h4><div class="fr-favs">${fv.slice(0, 18).map(g => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}</span></button>`).join("")}</div></div>` : ""}
+    ${f ? `<div class="pactions" style="margin-top:22px">${f.status === "accepted" ? `<button type="button" class="btn-ghost sm" id="fp-rem">Desfazer amizade</button>` : ""}${f.status !== "blocked" ? `<button type="button" class="btn-ghost sm danger" id="fp-block">Bloquear</button>` : ""}</div><div id="fp-msg"></div>` : ""}`);
+  const F = fb.F, ref = F.doc(fb.db, "friendships", pid);
+  const on = (id, fn) => { const b = document.getElementById(id); if (b) b.addEventListener("click", fn); };
+  on("fp-back", openFriends);
+  on("fp-chat", () => openChat(uid));
+  on("fp-acc", async () => { try { await F.updateDoc(ref, { status: "accepted", acceptedAt: F.serverTimestamp() }); toast("Agora vocês são amigos!"); openChat(uid); } catch (e) { toast("Não foi possível aceitar agora"); } });
+  on("fp-rem", async e => {
+    const b = e.currentTarget;
+    if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "Toque de novo para desfazer"; return; }
+    try { await F.deleteDoc(ref); toast("Amizade desfeita"); openFriends(); } catch (err) { toast("Não foi possível fazer isso agora"); }
+  });
+  on("fp-block", async e => {
+    const b = e.currentTarget;
+    if (!b.dataset.confirm) { b.dataset.confirm = "1"; b.textContent = "Toque de novo para bloquear"; document.getElementById("fp-msg").innerHTML = `<div class="msg err">A pessoa não vai poder te mandar mensagens nem novos pedidos. Você pode desbloquear depois em Amigos.</div>`; return; }
+    try { await F.setDoc(ref, { users: pid.split("_"), from: (f && f.from) || me, to: (f && f.to) || uid, status: "blocked", blockedBy: me, blockedAt: F.serverTimestamp() }); toast("Pessoa bloqueada"); openFriends(); } catch (err) { toast("Não foi possível bloquear agora"); }
+  });
+}
 
 // ---------- menu lateral ----------
 const menu = document.getElementById("menu");
@@ -2035,6 +2412,7 @@ function renderMenu() {
     <div class="dr-sec">
       <button type="button" class="dr-item" data-tool="profile"><span class="ic" aria-hidden="true" style="padding:0;overflow:hidden">${avatarHTML(34)}</span><span>${user ? esc(profile.name || "Meu perfil") : "Entrar ou criar conta"}<small>${user ? "Ver e editar seu perfil" : "Salve perfil, favoritos e carrinho"}</small></span></button>
       <button type="button" class="dr-item" data-tool="cart"><span class="ic" aria-hidden="true">🛒</span><span>Carrinho<small>${cart.length ? cart.length + (cart.length === 1 ? " item · " : " itens · ") + brl(cartTotal().total) : "Monte e veja o total"}</small></span></button>
+      <button type="button" class="dr-item" data-tool="friends"><span class="ic" aria-hidden="true">☺</span><span>Amigos e conversas<small>${!user ? "Entre para adicionar amigos" : (() => { const c = socialCounts(); return c.req || c.unread ? [c.req && c.req + (c.req === 1 ? " pedido" : " pedidos"), c.unread && c.unread + (c.unread === 1 ? " conversa nova" : " conversas novas")].filter(Boolean).join(" · ") : social.fr.filter(f => f.status === "accepted").length + " amigos"; })()}</small></span></button>
       <button type="button" class="dr-item" data-home><span class="ic" aria-hidden="true">⌂</span><span>Início<small>Destaques e prateleiras</small></span></button>
       <button type="button" class="dr-item" id="surprise"><span class="ic" aria-hidden="true">?</span><span>Me surpreenda<small>Abre um jogo aleatório bem avaliado</small></span></button>
     </div>
@@ -2059,7 +2437,7 @@ function renderMenu() {
 function openMenu() { renderMenu(); menu.showModal(); }
 function closeMenu() { if (menu.open) menu.close(); }
 function applyList(k, force) {
-  state.list = (state.list === k && !force) ? "" : k;
+  state.list = (state.list === k && !force) ? "" : k; state.tag = null;
   closeMenu(); render();
   document.getElementById("catalog").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
 }
@@ -2077,7 +2455,7 @@ menu.addEventListener("click", e => {
 
 // ---------- logo: volta ao início ----------
 function goHome() {
-  state.q = ""; state.plat = "all"; state.genre = ""; state.list = "";
+  state.q = ""; state.plat = "all"; state.genre = ""; state.list = ""; state.tag = null;
   document.getElementById("q").value = "";
   syncControls();
   closeMenu(); if (dlg.open) closeDetail(); if (sheet.open) closeSheet();

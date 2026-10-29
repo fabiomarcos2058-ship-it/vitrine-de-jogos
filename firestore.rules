@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function me() { return request.auth.uid; }
+    function member(pid) { return signedIn() && me() in pid.split('_'); }
+    function friends(pid) { return get(/databases/$(database)/documents/friendships/$(pid)).data.status == 'accepted'; }
+
+    // Dados privados de cada conta (perfil completo, favoritos, carrinho)
+    match /users/{uid} {
+      allow read, write: if signedIn() && me() == uid;
+    }
+
+    // Perfil público (nome, @, bio, avatar, favoritos)
+    match /profiles/{uid} {
+      allow read: if signedIn();
+      allow write: if signedIn() && me() == uid;
+    }
+
+    // Nomes de usuário únicos: @nome -> uid
+    match /handles/{handle} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.uid == me();
+      allow delete: if signedIn() && resource.data.uid == me();
+    }
+
+    // Amizades: o id é "uidA_uidB" em ordem alfabética
+    match /friendships/{pid} {
+      allow get: if member(pid);
+      allow list: if signedIn() && me() in resource.data.users;
+      allow create: if member(pid)
+        && request.resource.data.users == pid.split('_')
+        && ((request.resource.data.status == 'pending' && request.resource.data.from == me())
+            || (request.resource.data.status == 'blocked' && request.resource.data.blockedBy == me()));
+      allow update: if member(pid)
+        && request.resource.data.users == resource.data.users
+        && resource.data.status != 'blocked'
+        && ((resource.data.status == 'pending' && request.resource.data.status == 'accepted' && resource.data.to == me())
+            || (request.resource.data.status == 'blocked' && request.resource.data.blockedBy == me()));
+      allow delete: if member(pid) && (resource.data.status != 'blocked' || resource.data.blockedBy == me());
+    }
+
+    // Conversas: só entre amigos
+    match /chats/{pid} {
+      allow get: if member(pid);
+      allow list: if signedIn() && me() in resource.data.users;
+      allow create, update: if member(pid) && friends(pid) && request.resource.data.users == pid.split('_');
+      match /messages/{mid} {
+        allow read: if member(pid) && friends(pid);
+        allow create: if member(pid) && friends(pid)
+          && request.resource.data.from == me()
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0
+          && request.resource.data.text.size() <= 1000;
+      }
+    }
+  }
+}
