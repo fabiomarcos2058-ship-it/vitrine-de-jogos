@@ -1,5 +1,5 @@
 // Zera — funciona offline depois da primeira visita.
-const VERSION = "zera-v4";
+const VERSION = "zera-v5";
 const SHELL = ["./", "./index.html", "./games.js", "./firebase-config.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
@@ -14,7 +14,8 @@ self.addEventListener("fetch", e => {
   const url = new URL(req.url);
   // Página e lista de jogos: busca a versão nova primeiro e usa a guardada se estiver sem internet
   if (url.origin === location.origin) {
-    e.respondWith(fetch(req).then(res => {
+    // "no-cache": sempre confere com o servidor, para as atualizações aparecerem na hora
+    e.respondWith(fetch(req.url, { cache: "no-cache", credentials: "same-origin" }).then(res => {
       const copy = res.clone();
       if (res.ok) caches.open(VERSION).then(c => c.put(req, copy));
       return res;
