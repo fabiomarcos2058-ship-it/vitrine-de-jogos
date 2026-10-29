@@ -20,7 +20,7 @@ const norm = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLow
   .replace(/[™®©]/g, "").replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
 const STOP = new Set(["the", "of", "a", "and", "edition", "edicao", "standard", "padrao", "game", "jogo", "ps4", "ps5", "remastered"]);
 const toks = s => norm(s).split(" ").filter(w => w && !STOP.has(w));
-const BAD = /soundtrack|trilha sonora|\bdlc\b|season pass|passe de temporada|\bpack\b|pacote|\bdemo\b|upgrade|artbook|bundle|cosmetic|skin|moedas|coins|points|pontos|virtual currency|expansion pass|costume|traje|ost\b/i;
+const BAD = /soundtrack|trilha sonora|\bdlc\b|season pass|passe de temporada|\bpack\b|pacote|\bdemo\b|upgrade|artbook|bundle|cosmetic|skin|moedas|coins|points|pontos|virtual currency|expansion pass|costume|traje|ost\b|audiobook|audiolivro|piano|\bunlock\b|wallpaper|ringtone/i;
 function score(target, cand) {
   const a = norm(target), b = norm(cand);
   if (!b) return 0;
@@ -66,7 +66,7 @@ const put = (id, k, v) => { (out.p[id] ||= {})[k] = v; };
 const report = (k, info) => { out.report[k] = info; };
 
 // ---------- STEAM ----------
-const STEAM_IDS = {"Elden Ring":1245620,"Sekiro: Shadows Die Twice":814380,"Baldur's Gate 3":1086940,"Cyberpunk 2077":1091500,"The Witcher 3: Wild Hunt":292030,"Red Dead Redemption 2":1174180,"Hogwarts Legacy":990080,"The Elder Scrolls V: Skyrim":489830,"Fallout 4":377160,"Hades":1145360,"Hades II":1145350,"Hollow Knight":367520,"Hollow Knight: Silksong":1030300,"Celeste":504230,"Stardew Valley":413150,"Balatro":2379780,"Cuphead":268910,"Stray":1332010,"Devil May Cry 5":601150,"Resident Evil 4":2050650,"Resident Evil Village":1196590,"Resident Evil 2":883710,"Resident Evil 3":952060,"Resident Evil 7: Biohazard":418370,"Monster Hunter Wilds":2246340,"Street Fighter 6":1364780,"Tekken 8":1778820,"Mortal Kombat 1":1971870,"God of War":1593500,"God of War Ragnarök":2322010,"Marvel's Spider-Man: Miles Morales":1817190,"Marvel's Spider-Man 2":2651280,"Ghost of Tsushima":2215430,"Horizon Forbidden West":2420110,"The Last of Us Part I":1888930,"The Last of Us Part II Remastered":2531310,"Returnal":1649240,"Ratchet & Clank: Em Uma Outra Dimensão":1895880,"Helldivers 2":553850,"Forza Horizon 5":1551360,"Persona 5 Royal":1687950,"Persona 3 Reload":2161700,"Lies of P":1627720,"Black Myth: Wukong":2358720,"Armored Core VI: Fires of Rubicon":1888160,"Dead Space":1693980,"Doom Eternal":782330,"Doom: The Dark Ages":3017860,"Starfield":1716740,"Indiana Jones e o Grande Círculo":2677660,"Sea of Thieves":1172620,"Hi-Fi Rush":1817230,"Clair Obscur: Expedition 33":1903340,"Kingdom Come: Deliverance II":1771300,"Silent Hill 2":2124490,"Apex Legends":1172470,"Final Fantasy XVI":2515020,"Final Fantasy VII Rebirth":2909400,"Final Fantasy VII Remake Intergrade":1462040,"Uncharted: Coleção Legado dos Ladrões":1659420,"Ori and the Will of the Wisps":1057090,"Gears 5":1097840,"Halo: The Master Chief Collection":976730,"Halo Infinite":1240440,"Like a Dragon: Infinite Wealth":2072450,"Yakuza 0":638970,"Tales of Arise":740130,"It Takes Two":1426210,"Split Fiction":2001120,"Star Wars Jedi: Survivor":1774580,"Assassin's Creed Shadows":3159330,"Prince of Persia: The Lost Crown":2751000,"Batman: Arkham Knight":208650,"Call of Duty: Black Ops 6":2933620,"Battlefield 6":2807960,"Sonic X Shadow Generations":2513280,"Sea of Stars":1244090,"Dragon Ball FighterZ":678950,"Dragon Ball Z: Kakarot":851850,"Dragon Ball Xenoverse 2":454650,"Dragon Ball Xenoverse":323470,"Dragon Ball: The Breakers":1272080,"Dragon Ball: Sparking! Zero":1790600,"Mass Effect Legendary Edition":1328670,"Diablo IV":2344520,"The Elder Scrolls IV: Oblivion Remastered":2623190,"Metaphor: ReFantazio":2679460,"Resident Evil 0":339340,"Resident Evil":304240,"Resident Evil 5":21690,"Resident Evil 6":221040,"Resident Evil Revelations":222480,"Resident Evil Revelations 2":287290,"Umbrella Corps":390340,"Grand Theft Auto IV":12210,"Final Fantasy VII":39140,"Final Fantasy VIII Remastered":1026680,"Final Fantasy IX":377840,"Final Fantasy X | X-2 HD Remaster":359870,"Final Fantasy XII: The Zodiac Age":595520,"Final Fantasy XIII":292120,"Final Fantasy XIII-2":292140,"Lightning Returns: Final Fantasy XIII":345350,"Final Fantasy XIV Online":39210,"Final Fantasy XV":637650,"Final Fantasy Type-0 HD":340170,"Dissidia Final Fantasy NT":921590,"World of Final Fantasy":552700,"Crisis Core – Final Fantasy VII – Reunion":1608070,"Nioh 2 Remastered":1325200,"Gears of War: Reloaded":3164330,"Avowed":2457220,"The Outer Worlds 2":1449110,"Ninja Gaiden 4":2627260,"Stellar Blade":3489700,"Grand Theft Auto V":3240220};
+const STEAM_IDS = {"Elden Ring":1245620,"Sekiro: Shadows Die Twice":814380,"Baldur's Gate 3":1086940,"Cyberpunk 2077":1091500,"The Witcher 3: Wild Hunt":292030,"Red Dead Redemption 2":1174180,"Hogwarts Legacy":990080,"The Elder Scrolls V: Skyrim":489830,"Fallout 4":377160,"Hades":1145360,"Hades II":1145350,"Hollow Knight":367520,"Hollow Knight: Silksong":1030300,"Celeste":504230,"Stardew Valley":413150,"Balatro":2379780,"Cuphead":268910,"Stray":1332010,"Devil May Cry 5":601150,"Resident Evil 4":2050650,"Resident Evil Village":1196590,"Resident Evil 2":883710,"Resident Evil 3":952060,"Resident Evil 7: Biohazard":418370,"Monster Hunter Wilds":2246340,"Street Fighter 6":1364780,"Tekken 8":1778820,"Mortal Kombat 1":1971870,"God of War":1593500,"God of War Ragnarök":2322010,"Marvel's Spider-Man: Miles Morales":1817190,"Marvel's Spider-Man 2":2651280,"Ghost of Tsushima":2215430,"Horizon Forbidden West":2420110,"The Last of Us Part I":1888930,"The Last of Us Part II Remastered":2531310,"Returnal":1649240,"Ratchet & Clank: Em Uma Outra Dimensão":1895880,"Helldivers 2":553850,"Forza Horizon 5":1551360,"Persona 5 Royal":1687950,"Persona 3 Reload":2161700,"Lies of P":1627720,"Black Myth: Wukong":2358720,"Armored Core VI: Fires of Rubicon":1888160,"Dead Space":1693980,"Doom Eternal":782330,"Doom: The Dark Ages":3017860,"Starfield":1716740,"Indiana Jones e o Grande Círculo":2677660,"Sea of Thieves":1172620,"Hi-Fi Rush":1817230,"Clair Obscur: Expedition 33":1903340,"Kingdom Come: Deliverance II":1771300,"Silent Hill 2":2124490,"Apex Legends":1172470,"Final Fantasy XVI":2515020,"Final Fantasy VII Rebirth":2909400,"Final Fantasy VII Remake Intergrade":1462040,"Uncharted: Coleção Legado dos Ladrões":1659420,"Ori and the Will of the Wisps":1057090,"Gears 5":1097840,"Halo: The Master Chief Collection":976730,"Halo Infinite":1240440,"Like a Dragon: Infinite Wealth":2072450,"Yakuza 0":638970,"Tales of Arise":740130,"It Takes Two":1426210,"Split Fiction":2001120,"Star Wars Jedi: Survivor":1774580,"Assassin's Creed Shadows":3159330,"Prince of Persia: The Lost Crown":2751000,"Batman: Arkham Knight":208650,"Call of Duty: Black Ops 6":2933620,"Battlefield 6":2807960,"Sonic X Shadow Generations":2513280,"Sea of Stars":1244090,"Dragon Ball FighterZ":678950,"Dragon Ball Z: Kakarot":851850,"Dragon Ball Xenoverse 2":454650,"Dragon Ball Xenoverse":323470,"Dragon Ball: The Breakers":1272080,"Dragon Ball: Sparking! Zero":1790600,"Mass Effect Legendary Edition":1328670,"Diablo IV":2344520,"The Elder Scrolls IV: Oblivion Remastered":2623190,"Metaphor: ReFantazio":2679460,"Resident Evil 0":339340,"Resident Evil":304240,"Resident Evil 5":21690,"Resident Evil 6":221040,"Resident Evil Revelations":222480,"Resident Evil Revelations 2":287290,"Umbrella Corps":390340,"Grand Theft Auto IV":12210,"Final Fantasy VII":39140,"Final Fantasy VIII Remastered":1026680,"Final Fantasy IX":377840,"Final Fantasy X | X-2 HD Remaster":359870,"Final Fantasy XII: The Zodiac Age":595520,"Final Fantasy XIII":292120,"Final Fantasy XIII-2":292140,"Lightning Returns: Final Fantasy XIII":345350,"Final Fantasy XIV Online":39210,"Final Fantasy XV":637650,"Final Fantasy Type-0 HD":340170,"Dissidia Final Fantasy NT":921590,"World of Final Fantasy":552700,"Crisis Core – Final Fantasy VII – Reunion":1608070,"Nioh 2 Remastered":1325200,"Avowed":2457220,"The Outer Worlds 2":1449110,"Ninja Gaiden 4":2627260,"Stellar Blade":3489700,"Grand Theft Auto V":3240220};
 
 async function steam() {
   const list = games.filter(g => g.p.st !== null && g.p.st !== undefined);
@@ -79,9 +79,10 @@ async function steam() {
       const r = await (await get(`https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(term)}&cc=br&l=portuguese`)).json();
       const items = (r.items || []).filter(x => x.type === "app");
       hit = best(term, items, x => x.name) || best(g.t, items, x => x.name);
-      if (!hit && STEAM_IDS[g.t]) hit = items.find(x => x.id === STEAM_IDS[g.t]) || null;
     } catch (e) { unresolved.push(g.t + " (" + e.message + ")"); }
     if (hit && STEAM_IDS[g.t] && hit.id !== STEAM_IDS[g.t]) disagree.push(`${g.t}: busca=${hit.id} "${hit.name}" lista=${STEAM_IDS[g.t]}`);
+    // a lista conferida tem prioridade sobre a busca (evita DLC, trilha sonora e relançamentos)
+    if (STEAM_IDS[g.t] && (!hit || hit.id !== STEAM_IDS[g.t])) hit = { id: STEAM_IDS[g.t], name: g.t };
     if (hit) {
       ids[g.id] = hit.id;
       const url = `https://store.steampowered.com/app/${hit.id}`;
@@ -118,6 +119,7 @@ async function steam() {
 }
 
 // ---------- PLAYSTATION STORE ----------
+let psDebugSaved = false;
 async function playstation() {
   const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
   let ok = 0; const miss = []; let errors = 0;
@@ -128,16 +130,27 @@ async function playstation() {
       const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
       if (!m) { miss.push(g.t + " (sem dados)"); continue; }
       const data = JSON.parse(m[1]);
+      const refs = {};
+      walk(data, o => { for (const [k, v] of Object.entries(o)) if (v && typeof v === "object" && !Array.isArray(v) && /^[A-Z][A-Za-z]+:/.test(k)) refs[k] = v; });
+      const deref = v => { for (let i = 0; i < 4 && v && typeof v === "object"; i++) { const key = v.__ref || (v.type === "id" && v.id) || null; if (!key || !refs[key]) break; v = refs[key]; } return v; };
       const cands = [];
       walk(data, o => {
-        if (typeof o.name === "string" && o.price && typeof o.price === "object" && (o.price.basePrice || o.price.discountedPrice || o.price.isFree)) cands.push(o);
+        if (typeof o.name !== "string") return;
+        const pr = deref(o.price);
+        if (pr && typeof pr === "object" && (pr.basePrice || pr.discountedPrice || pr.isFree || pr.basePriceValue != null)) cands.push({ ...o, price: pr });
       });
+      if (!psDebugSaved) {
+        psDebugSaved = true;
+        const sample = []; walk(data, o => { if (sample.length < 6 && JSON.stringify(o).length < 1500 && /price/i.test(Object.keys(o).join(","))) sample.push(o); });
+        fs.mkdirSync(ROOT + "data", { recursive: true });
+        fs.writeFileSync(ROOT + "data/debug-ps.json", JSON.stringify({ term, topKeys: Object.keys(data.props || {}).concat(Object.keys((data.props || {}).pageProps || {})), refCount: Object.keys(refs).length, cands: cands.length, sample }, null, 1).slice(0, 20000));
+      }
       const full = cands.filter(o => !o.storeDisplayClassification || /FULL_GAME|GAME_BUNDLE|PREMIUM_EDITION/.test(o.storeDisplayClassification));
       const hit = best(term, full.length ? full : cands, o => o.name) || best(g.t, full.length ? full : cands, o => o.name);
       if (!hit) { miss.push(g.t); continue; }
       const pr = hit.price;
-      const b = pr.isFree ? 0 : brNum(pr.basePrice);
-      let f = pr.isFree ? 0 : brNum(pr.discountedPrice);
+      const b = pr.isFree ? 0 : pr.basePriceValue != null ? pr.basePriceValue / 100 : brNum(pr.basePrice);
+      let f = pr.isFree ? 0 : pr.discountedValue != null ? pr.discountedValue / 100 : brNum(pr.discountedPrice);
       if (pr.isTiedToSubscription || (pr.serviceBranding || []).some(x => /PLUS/i.test(x))) f = b; // desconto só para assinantes
       if (b == null || f == null) { miss.push(g.t + " (preço)"); continue; }
       const pct = b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0;
@@ -182,6 +195,29 @@ async function xbox() {
 }
 
 // ---------- EPIC GAMES ----------
+const epicEndpoints = ["https://store.epicgames.com/graphql", "https://graphql.epicgames.com/graphql"];
+async function epicFree() {
+  try {
+    const d = await (await get("https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=pt-BR&country=BR&allowCountries=BR")).json();
+    const els = d.data.Catalog.searchStore.elements || [];
+    const now = Date.now(), list = [];
+    for (const e of els) {
+      const pr = e.promotions || {};
+      const cur = ((pr.promotionalOffers || [])[0] || {}).promotionalOffers || [];
+      const up = ((pr.upcomingPromotionalOffers || [])[0] || {}).promotionalOffers || [];
+      const free = o => o.discountSetting && o.discountSetting.discountPercentage === 0;
+      const live = cur.find(o => free(o) && new Date(o.startDate) <= now && new Date(o.endDate) > now);
+      const next = up.find(free);
+      if (!live && !next) continue;
+      const img = ((e.keyImages || []).find(k => /OfferImageWide|DieselStoreFrontWide|Thumbnail/.test(k.type)) || {}).url || null;
+      const slugP = (e.offerMappings || []).find(x => x.pageType === "productHome")?.pageSlug || (e.catalogNs && (e.catalogNs.mappings || [])[0] || {}).pageSlug || e.productSlug || e.urlSlug;
+      const hitG = best(e.title, games, g => searchName(g));
+      list.push({ name: e.title, img, now: !!live, from: (live || next).startDate, until: (live || next).endDate, b: round2(((e.price || {}).totalPrice || {}).originalPrice / 100 || 0), url: slugP ? `https://store.epicgames.com/pt-BR/p/${String(slugP).replace(/\/home$/, "")}` : "https://store.epicgames.com/pt-BR/free-games", id: hitG ? hitG.id : null });
+    }
+    out.top.epFree = list;
+    report("epFree", { ok: list.length });
+  } catch (e) { report("epFree", { error: e.message }); }
+}
 async function epic() {
   const list = games.filter(g => g.p.ep !== null && g.p.ep !== undefined);
   let ok = 0; const miss = []; let errors = 0;
@@ -192,7 +228,12 @@ async function epic() {
   for (const g of list) {
     const term = searchName(g);
     try {
-      const r = await (await get("https://graphql.epicgames.com/graphql", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ query: Q, variables: { keywords: term, country: "BR", locale: "pt-BR", count: 10 } }) }, 2)).json();
+      const body = JSON.stringify({ query: Q, variables: { keywords: term, country: "BR", locale: "pt-BR", count: 10 } });
+      let r;
+      for (const ep of epicEndpoints) {
+        try { r = await (await get(ep, { method: "POST", headers: { "content-type": "application/json", origin: "https://store.epicgames.com", referer: "https://store.epicgames.com/pt-BR/" }, body }, 1)).json(); epicEndpoints.splice(0, epicEndpoints.length, ep); break; }
+        catch (e) { if (ep === epicEndpoints[epicEndpoints.length - 1]) throw e; }
+      }
       const els = (((r.data || {}).Catalog || {}).searchStore || {}).elements || [];
       const hit = best(term, els, e => e.title);
       if (!hit || !hit.price) { miss.push(g.t); continue; }
@@ -210,7 +251,7 @@ async function epic() {
 }
 
 // ---------- execução ----------
-const steps = { st: steam, ps: playstation, xb: xbox, ep: epic };
+const steps = { st: steam, ps: playstation, xb: xbox, ep: epic, epFree: epicFree };
 for (const [k, fn] of Object.entries(steps)) {
   const t0 = Date.now();
   try { await fn(); } catch (e) { report(k, { error: String(e && e.message || e) }); }
@@ -224,7 +265,7 @@ try {
   if (age < 3 * 864e5) for (const [gid, st] of Object.entries(prev.p || {})) for (const [k, v] of Object.entries(st)) {
     if (!(out.p[gid] && out.p[gid][k]) && (out.report[k] && (out.report[k].error || out.report[k].ok === 0))) put(gid, k, { ...v, stale: true });
   }
-  if (!out.top.st && prev.top && prev.top.st) out.top = prev.top;
+  for (const k of ["st", "stSpecials", "epFree"]) if (!out.top[k] && prev.top && prev.top[k]) out.top[k] = prev.top[k];
 } catch (e) {}
 
 fs.mkdirSync(ROOT + "data", { recursive: true });
