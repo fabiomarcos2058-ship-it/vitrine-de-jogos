@@ -15,6 +15,13 @@ Também disponível em: https://fabiomarcos2058-ship-it.github.io/vitrine-de-jog
 - Ordem para jogar Resident Evil, GTA, Final Fantasy e Dragon Ball
 - Compartilhar jogo pelo WhatsApp ou Telegram
 - Instala como app no celular e funciona sem internet
+- Contas com perfil, favoritos e carrinho sincronizados na hora entre aparelhos
+- Preços e promoções ao vivo, com aviso quando um favorito entra em promoção
+
+## Atualizações automáticas
+- **A cada 3 horas** o robô de preços (`.github/workflows/precos.yml` + `scripts/update-prices.mjs`) busca preços e promoções na Steam, Microsoft Store, PlayStation Store e Epic Games, o mais vendido da Steam e os jogos grátis da Epic, e grava em `data/prices.json`. O relatório de cada loja fica em `data/prices-report.json`.
+- Para rodar na hora: aba **Actions** do GitHub → *Atualizar preços* → *Run workflow*.
+- **Toda segunda-feira** uma revisão revisa mais vendidos do PlayStation e do Xbox, calendário, notas e lançamentos novos em `games.js`.
 
 ## Como editar
 Jogos, preços, edições, trailers, calendário e guias ficam em `games.js`.
