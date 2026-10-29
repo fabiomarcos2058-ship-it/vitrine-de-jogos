@@ -46,6 +46,36 @@ async function steamAssets(appids) {
 }
 
 const result = { updated: new Date().toISOString(), new: [], covers: {} };
+// modo "personagens das wikis": artes oficiais dos personagens nas wikis de fãs (Fandom)
+if (input.fandom) {
+  const spec = JSON.parse(fs.readFileSync(ROOT + "scripts/characters-input.json", "utf8"));
+  const titlesInCatalog = new Set(games.map(g => g.t));
+  const byWiki = {};
+  for (const [game, [wiki, names]] of Object.entries(spec)) if (titlesInCatalog.has(game)) names.forEach(n => (byWiki[wiki] ||= new Set()).add(n));
+  const imgs = {}, misses = [];
+  for (const [wiki, set] of Object.entries(byWiki)) {
+    const names = [...set]; imgs[wiki] = {};
+    for (let i = 0; i < names.length; i += 40) {
+      const b = names.slice(i, i + 40);
+      try {
+        const d = await (await get(`https://${wiki}.fandom.com/api.php?action=query&format=json&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=700&titles=` + encodeURIComponent(b.join("|")))).json();
+        const step = {}; [...(d.query.normalized || []), ...(d.query.redirects || [])].forEach(m => { step[m.from] = m.to; });
+        const th = {}; Object.values(d.query.pages || {}).forEach(p => { if (p.thumbnail) th[p.title] = p.thumbnail.source; });
+        b.forEach(n => { let x = n; for (let k = 0; k < 3 && step[x]; k++) x = step[x]; if (th[x]) imgs[wiki][n] = th[x]; else misses.push(wiki + ": " + n); });
+      } catch (e) { misses.push(wiki + ": ERRO " + e.message); b.forEach(n => misses.push(wiki + ": " + n)); }
+      await sleep(500);
+    }
+  }
+  const out = {};
+  for (const [game, [wiki, names]] of Object.entries(spec)) {
+    if (!titlesInCatalog.has(game)) continue;
+    const list = names.filter(n => imgs[wiki] && imgs[wiki][n]).map(n => ({ n: n.replace(/\s*\(.*\)$/, ""), img: imgs[wiki][n], src: wiki }));
+    if (list.length) out[game] = list;
+  }
+  fs.writeFileSync(ROOT + "data/characters.json", JSON.stringify({ updated: result.updated, source: "fandom", games: out, misses }, null, 0));
+  console.log("jogos:", Object.keys(out).length, "faltaram:", misses.length);
+  process.exit(0);
+}
 // modo "personagens": personagens de cada jogo (Wikidata P674) com foto da Wikipédia
 if (input.characters) {
   const wp = async params => (await get("https://en.wikipedia.org/w/api.php?format=json&" + params)).json();
