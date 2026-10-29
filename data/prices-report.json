@@ -1,7 +1,7 @@
 {
- "updated": "2026-10-29T18:09:16.662Z",
+ "updated": "2026-10-29T18:15:40.373Z",
  "st": {
-  "ok": 122,
+  "ok": 125,
   "total": 130,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
@@ -10,18 +10,12 @@
   ],
   "missing": [
    "j-halo-infinite",
-   "j-yakuza-0",
-   "j-call-of-duty-black-ops-6",
-   "j-final-fantasy-vii",
    "j-dissidia-final-fantasy-nt"
   ],
   "disagree": [
    "Ghost of Tsushima: busca=3929730 \"Ghost of Tsushima: Legends (Unlock)\" lista=2215430",
    "Sea of Thieves: busca=3937210 \"Immerse Gamepack Sea of Thieves\" lista=1172620",
-   "Yakuza 0: busca=2988580 \"Yakuza 0 Director's Cut\" lista=638970",
-   "Call of Duty: Black Ops 6: busca=4384550 \"Call of Duty®: Black Ops 6\" lista=2933620",
    "Dragon Ball: The Breakers: busca=1276760 \"DRAGON BALL: THE BREAKERS\" lista=1272080",
-   "Final Fantasy VII: busca=3837340 \"FINAL FANTASY VII\" lista=39140",
    "Final Fantasy VIII Remastered: busca=39150 \"FINAL FANTASY VIII\" lista=1026680"
   ]
  },

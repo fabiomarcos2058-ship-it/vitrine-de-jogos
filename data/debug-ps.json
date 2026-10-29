@@ -1,19 +1,8 @@
 {
- "term": "The Last of Us Part II",
- "topKeys": [
-  "pageProps",
-  "appProps",
-  "navTree",
-  "apolloState",
-  "locale",
-  "searchTerm",
-  "isClientSideNavigation",
-  "isLoggedIn",
-  "page",
-  "batarangs",
-  "statusCode"
- ],
- "refCount": 7,
- "cands": 0,
- "sample": []
+ "api": null,
+ "disc": {
+  "chunks": 0,
+  "ops": {},
+  "chunkUrls": 0
+ }
 }
