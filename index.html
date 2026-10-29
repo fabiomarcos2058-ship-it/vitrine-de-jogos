@@ -3,17 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Os 100 jogos mais famosos de PS5 e Xbox com nota da crítica e preço em cada loja.">
+<meta name="description" content="Os 100 jogos mais famosos com nota da crítica e preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store.">
 <title>Vitrine de Jogos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
-html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
-body { margin: 0; }
-img { max-width: 100%; }
-[hidden] { display: none !important; }
-
-/* Layout: barra de filtros fixa no topo + grade de "estojos" de jogo com capa, nota e dois preços */
+/* Layout: barra de filtros fixa + grade de capas; cada jogo abre um painel de detalhes com lojas e edições */
 :root {
   --bg: #E8EBF0;
   --surface: #FFFFFF;
@@ -22,12 +17,12 @@ img { max-width: 100%; }
   --line: #D2D7E0;
   --accent: #FFB000;
   --accent-ink: #3D2900;
-  --ps: #1F57D6;
-  --xb: #1C8538;
   --good: #1A9447;
   --mid: #D99E00;
   --bad: #D3402F;
   --off: #9AA2B1;
+  --scrim: rgba(10, 13, 20, 0.55);
+  --c-ps: #1F57D6; --c-xb: #1C8538; --c-st: #1B4F72; --c-ep: #2B2F36; --c-gp: #C2410C; --c-ap: #6B6F7A;
   --display: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -35,30 +30,36 @@ img { max-width: 100%; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0E1117; --surface: #171B24; --fg: #E7EBF2; --muted: #96A0B2; --line: #272E3B;
-    --accent: #FFB21A; --accent-ink: #2A1C00; --ps: #6A95FF; --xb: #4CC46C;
-    --good: #3BC46A; --mid: #F0B72A; --bad: #F06452; --off: #5C6578;
+    --accent: #FFB21A; --accent-ink: #2A1C00; --good: #3BC46A; --mid: #F0B72A; --bad: #F06452; --off: #5C6578;
+    --scrim: rgba(0, 0, 0, 0.7);
+    --c-ps: #6A95FF; --c-xb: #4CC46C; --c-st: #66B3E6; --c-ep: #D7DBE3; --c-gp: #FB8A4E; --c-ap: #B4BAC6;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0E1117; --surface: #171B24; --fg: #E7EBF2; --muted: #96A0B2; --line: #272E3B;
-  --accent: #FFB21A; --accent-ink: #2A1C00; --ps: #6A95FF; --xb: #4CC46C;
-  --good: #3BC46A; --mid: #F0B72A; --bad: #F06452; --off: #5C6578;
+  --accent: #FFB21A; --accent-ink: #2A1C00; --good: #3BC46A; --mid: #F0B72A; --bad: #F06452; --off: #5C6578;
+  --scrim: rgba(0, 0, 0, 0.7);
+  --c-ps: #6A95FF; --c-xb: #4CC46C; --c-st: #66B3E6; --c-ep: #D7DBE3; --c-gp: #FB8A4E; --c-ap: #B4BAC6;
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; }
+html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 
 header.top { padding-block: 28px 18px; }
 .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.brand h1 { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 6vw, 46px); line-height: 1; margin: 0; letter-spacing: -0.01em; text-transform: uppercase; text-wrap: balance; }
+.brand h1 { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 6vw, 46px); line-height: 1; margin: 0; letter-spacing: -0.01em; text-transform: uppercase; }
 .brand h1 span { color: var(--accent); }
 .brand .tag { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
-.lede { margin: 10px 0 0; color: var(--muted); max-width: 62ch; }
+.lede { margin: 10px 0 0; color: var(--muted); max-width: 64ch; }
 .lede strong { color: var(--fg); font-weight: 600; }
 
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-block: 1px solid var(--line); }
@@ -70,60 +71,96 @@ header.top { padding-block: 28px 18px; }
 .seg button { font: 600 13px var(--body); color: var(--muted); background: transparent; border: 0; border-radius: 7px; padding: 7px 11px; cursor: pointer; }
 .seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
 select { font: 500 14px var(--body); color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; max-width: 100%; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; padding-block: 18px 12px; color: var(--muted); font-size: 13px; }
 .meta b { color: var(--fg); font-variant-numeric: tabular-nums; }
 .legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); gap: 16px; padding-bottom: 40px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; padding-bottom: 40px; }
 @media (max-width: 460px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
 
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.card:hover { border-color: var(--muted); }
 
-.cover { position: relative; aspect-ratio: 3 / 4; max-width: 100%; overflow: hidden; color: #FFFFFF; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; isolation: isolate; }
+.cover { position: relative; aspect-ratio: 3 / 4; width: 100%; max-width: 100%; overflow: hidden; color: #FFFFFF; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px; isolation: isolate; }
 .cover::before { content: ""; position: absolute; inset: 0; z-index: -1; background: repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 9px); }
 .cover::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(0,0,0,0.62), rgba(0,0,0,0) 58%); }
 .cover .mono { position: absolute; right: -8px; top: 26px; font-family: var(--display); font-weight: 700; font-size: 150px; line-height: 0.8; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.28); z-index: -1; pointer-events: none; }
-.cover .genre { position: absolute; left: 12px; top: 12px; font: 600 10px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; background: rgba(0,0,0,0.38); padding: 3px 6px; border-radius: 4px; }
-.cover .title { font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.05; text-transform: uppercase; text-wrap: balance; overflow-wrap: anywhere; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+.cover .genre { position: absolute; left: 12px; top: 12px; z-index: 1; font: 600 10px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; background: rgba(0,0,0,0.45); padding: 3px 6px; border-radius: 4px; }
+.cover .title { font-family: var(--display); font-weight: 700; font-size: 19px; line-height: 1.05; text-transform: uppercase; overflow-wrap: anywhere; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
 .cover .studio { font-size: 12px; opacity: 0.85; margin-top: 4px; }
 .cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; background: #11141A; opacity: 0; transition: opacity .25s ease; }
 .cover img.ok { opacity: 1; }
-.cover.has-img .genre, .cover.has-img .score { z-index: 1; }
 .cover.has-img::after { background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0) 30%); z-index: 0; }
-.name { font-weight: 700; font-size: 14.5px; line-height: 1.25; text-wrap: balance; overflow-wrap: anywhere; }
 
 .score { position: absolute; z-index: 1; right: 10px; top: 10px; width: 42px; height: 42px; border-radius: 8px; display: grid; place-items: center; font: 700 18px var(--display); font-variant-numeric: tabular-nums; color: #FFFFFF; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
 .score.good { background: var(--good); }
 .score.mid { background: var(--mid); color: #2A1E00; }
 .score.bad { background: var(--bad); }
-.score.none { background: rgba(0,0,0,0.45); font-size: 11px; font-family: var(--mono); }
+.score.none { background: rgba(0,0,0,0.55); font-size: 11px; font-family: var(--mono); }
 
-.info { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-.year { font: 500 12px var(--mono); margin-top: -2px; color: var(--muted); display: flex; justify-content: space-between; gap: 6px; }
-.prices { display: grid; gap: 4px; margin-top: auto; }
-.price { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; text-decoration: none; color: var(--fg); padding: 6px 8px; border-radius: 7px; border: 1px solid var(--line); background: var(--surface); }
-a.price:hover { border-color: var(--fg); }
-.price .plat { font: 700 11px var(--display); letter-spacing: 0.06em; text-transform: uppercase; }
-.price.ps .plat { color: var(--ps); }
-.price.xb .plat { color: var(--xb); }
-.price .val { font: 600 14px var(--mono); font-variant-numeric: tabular-nums; text-align: right; grid-column: 3; white-space: nowrap; }
-.price .flag { grid-column: 2; justify-self: end; font: 700 9px var(--body); letter-spacing: 0.06em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 2px 5px; border-radius: 4px; }
-.price.na { color: var(--off); border-style: dashed; }
-.price.na .plat { color: var(--off); }
-.price.na .val { font: 500 12px var(--body); }
+.info { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; width: 100%; }
+.name { font-weight: 700; font-size: 14.5px; line-height: 1.25; overflow-wrap: anywhere; }
+.sub { font: 500 12px var(--mono); color: var(--muted); }
+.from { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 6px; flex-wrap: wrap; padding-top: 4px; border-top: 1px dashed var(--line); }
+.from small { font-size: 11px; color: var(--muted); display: block; }
+.from b { font: 600 16px var(--mono); font-variant-numeric: tabular-nums; }
+.from em { font-style: normal; font-size: 11px; font-weight: 700; color: var(--muted); }
+.stores { display: flex; gap: 4px; flex-wrap: wrap; }
+.chip { font: 700 9.5px var(--display); letter-spacing: 0.05em; padding: 2px 5px; border-radius: 4px; border: 1px solid currentColor; text-transform: uppercase; }
+.chip.off { color: var(--off); border-style: dashed; opacity: 0.6; }
 
 .empty { grid-column: 1 / -1; text-align: center; padding: 48px 16px; color: var(--muted); }
 .empty b { display: block; font-family: var(--display); font-size: 22px; color: var(--fg); margin-bottom: 6px; }
 
+/* Painel de detalhes */
+dialog { border: 0; padding: 0; background: var(--surface); color: var(--fg); width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); border-radius: 16px; overflow: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+dialog::backdrop { background: var(--scrim); }
+@media (max-width: 600px) {
+  dialog { width: 100%; max-width: 100%; max-height: 92%; margin: auto 0 0; border-radius: 16px 16px 0 0; padding-bottom: env(safe-area-inset-bottom, 0px); }
+}
+.d-head { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 18px; padding: 20px; padding-bottom: 8px; }
+@media (max-width: 600px) { .d-head { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 16px max(16px, env(safe-area-inset-left, 0px)) 8px; } }
+.d-head .cover { border-radius: 10px; padding: 10px; }
+.d-head .cover .mono { font-size: 110px; }
+.d-head .cover .title { font-size: 14px; }
+.d-close { position: sticky; top: 0; float: right; margin: 10px 10px 0 0; z-index: 2; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font-size: 20px; line-height: 1; cursor: pointer; }
+.d-title { font-family: var(--display); font-weight: 700; font-size: clamp(20px, 4vw, 28px); line-height: 1.1; margin: 0 40px 6px 0; text-transform: uppercase; text-wrap: balance; overflow-wrap: anywhere; }
+.d-facts { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+.d-facts b { color: var(--fg); font-weight: 600; }
+.d-score { display: inline-flex; align-items: center; gap: 10px; }
+.d-score .score { position: static; box-shadow: none; }
+.d-score > span:not(.score) { font-size: 12.5px; color: var(--muted); max-width: 22ch; }
+.d-desc { margin: 0; line-height: 1.6; max-width: 65ch; }
+.d-body { padding: 12px 20px 22px; display: grid; gap: 22px; }
+@media (max-width: 600px) { .d-body { padding: 8px max(16px, env(safe-area-inset-right, 0px)) 22px max(16px, env(safe-area-inset-left, 0px)); } }
+.d-body h3 { font: 700 12px var(--display); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.shops { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.shop { display: grid; grid-template-columns: 10px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; color: var(--fg); text-decoration: none; }
+a.shop:hover { border-color: var(--fg); }
+.shop i { width: 10px; height: 10px; border-radius: 3px; }
+.shop .sn { font-weight: 600; font-size: 14px; }
+.shop .sk { display: block; font-size: 11.5px; color: var(--muted); font-weight: 500; }
+.shop .sv { font: 600 15px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+.shop.best { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.shop .flag { display: inline-block; margin-left: 6px; font: 700 9px var(--body); letter-spacing: 0.06em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 2px 5px; border-radius: 4px; vertical-align: 1px; }
+.shop.na { color: var(--off); border-style: dashed; }
+.shop.na .sv { font: 500 12px var(--body); }
+.eds { display: grid; gap: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.ed { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 11px 14px; align-items: center; }
+.ed + .ed { border-top: 1px solid var(--line); }
+.ed b { display: block; font-size: 14.5px; }
+.ed span { font-size: 13px; color: var(--muted); }
+.ed .ev { font: 600 15px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
-footer .wrap { padding-block: 18px 28px; max-width: 1240px; }
-footer p { margin: 0 0 6px; max-width: 80ch; }
+footer .wrap { padding-block: 18px 28px; }
+footer p { margin: 0 0 6px; max-width: 82ch; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .card { transition: transform .15s ease; }
+  .card { transition: transform .15s ease, border-color .15s ease; }
   .card:hover { transform: translateY(-2px); }
 }
 </style>
@@ -133,9 +170,9 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
   <div class="wrap">
     <div class="brand">
       <h1>Vitrine<span>/</span>Jogos</h1>
-      <span class="tag">PS5 · XBOX SERIES · REF. OUT/2026</span>
+      <span class="tag">CONSOLE · PC · CELULAR · REF. OUT/2026</span>
     </div>
-    <p class="lede">Os <strong>100 jogos mais conhecidos</strong> de PlayStation e Xbox, com a nota da crítica e o preço de tabela em cada loja. Toque num preço para abrir o jogo na loja oficial.</p>
+    <p class="lede">Os <strong>100 jogos mais conhecidos</strong>, com a nota da crítica e o preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store. Toque num jogo para ver a descrição, as edições e onde comprar mais barato.</p>
   </div>
 </header>
 
@@ -149,7 +186,8 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
       <button type="button" data-v="all" aria-pressed="true">Todos</button>
       <button type="button" data-v="ps" aria-pressed="false">PlayStation</button>
       <button type="button" data-v="xb" aria-pressed="false">Xbox</button>
-      <button type="button" data-v="excl" aria-pressed="false">Exclusivos</button>
+      <button type="button" data-v="pc" aria-pressed="false">PC</button>
+      <button type="button" data-v="mob" aria-pressed="false">Celular</button>
     </div>
     <select id="genre" aria-label="Gênero"><option value="">Todos os gêneros</option></select>
     <select id="sort" aria-label="Ordenar">
@@ -173,192 +211,102 @@ footer p { margin: 0 0 6px; max-width: 80ch; }
   <div class="grid" id="grid"></div>
 </main>
 
+<dialog id="detail" aria-labelledby="d-title">
+  <button class="d-close" type="button" id="d-close" aria-label="Fechar">×</button>
+  <div id="d-content"></div>
+</dialog>
+
 <footer>
   <div class="wrap">
-    <p>Notas: Metascore (0–100) da versão de console. Preços em reais, de tabela, sem promoção, nas lojas digitais brasileiras (PlayStation Store e Microsoft Store). Promoções e assinaturas como PS Plus e Game Pass mudam o valor do dia, por isso cada preço leva à página da loja.</p>
-    <p>“Menor” marca a loja mais barata quando o jogo existe nas duas. GTA VI chega em 19 de novembro de 2026 e ainda não tem preço oficial no Brasil.</p>
+    <p>Notas: Metascore (0–100) da versão de console. Preços em reais, de tabela e sem promoção, nas lojas digitais brasileiras. Promoções e assinaturas (PS Plus, Game Pass, Netflix) mudam o valor do dia, por isso cada loja abre a página oficial.</p>
+    <p>Preços das edições são os da versão de console. Capas: Wikipédia. GTA VI chega em 19 de novembro de 2026 e ainda não tem preço oficial no Brasil.</p>
   </div>
 </footer>
 
+<script src="games.js"></script>
 <script>
-// [título, ano, gênero, estúdio, nota (null = sem nota), preço PS, preço Xbox]
-// preço: número em R$, 0 = grátis, null = não disponível, "pre" = pré-venda
-const RAW = [
-["The Last of Us Part II Remastered",2024,"Ação","Naughty Dog",93,249.90,null],
-["The Last of Us Part I",2022,"Ação","Naughty Dog",88,249.90,null],
-["God of War Ragnarök",2022,"Ação","Santa Monica Studio",94,299.90,null],
-["God of War",2018,"Ação","Santa Monica Studio",94,99.50,null],
-["Marvel's Spider-Man 2",2023,"Ação","Insomniac Games",90,349.90,null],
-["Marvel's Spider-Man: Miles Morales",2020,"Ação","Insomniac Games",85,199.90,null],
-["Ghost of Tsushima",2021,"Mundo aberto","Sucker Punch",87,249.90,null],
-["Ghost of Yōtei",2025,"Mundo aberto","Sucker Punch",87,349.90,null],
-["Horizon Forbidden West",2022,"Mundo aberto","Guerrilla Games",88,249.90,null],
-["Gran Turismo 7",2022,"Corrida","Polyphony Digital",87,299.90,null],
-["Ratchet & Clank: Em Uma Outra Dimensão",2021,"Plataforma","Insomniac Games",88,249.90,null],
-["Returnal",2021,"Roguelike","Housemarque",86,249.90,null],
-["Demon's Souls",2020,"RPG","Bluepoint Games",92,249.90,null],
-["Astro Bot",2024,"Plataforma","Team Asobi",94,299.90,null],
-["Death Stranding 2: On the Beach",2025,"Aventura","Kojima Productions",90,349.90,null],
-["Stellar Blade",2024,"Ação","Shift Up",82,299.90,null],
-["Final Fantasy XVI",2023,"RPG","Square Enix",87,299.90,null],
-["Final Fantasy VII Rebirth",2024,"RPG","Square Enix",92,299.90,null],
-["Final Fantasy VII Remake Intergrade",2021,"RPG","Square Enix",89,249.90,249.95],
-["Uncharted: Coleção Legado dos Ladrões",2022,"Aventura","Naughty Dog",87,199.90,null],
-["Bloodborne",2015,"RPG","FromSoftware",92,99.50,null],
-["Nioh 2 Remastered",2021,"RPG","Team Ninja",88,149.90,null],
-["Silent Hill 2",2024,"Terror","Bloober Team",86,349.90,null],
-["Helldivers 2",2024,"Tiro","Arrowhead",82,199.90,199.95],
-["Forza Horizon 5",2021,"Corrida","Playground Games",92,249.90,249.95],
-["Halo Infinite",2021,"Tiro","Halo Studios",87,null,249.95],
-["Halo: The Master Chief Collection",2014,"Tiro","Halo Studios",85,null,149.95],
-["Gears 5",2019,"Tiro","The Coalition",84,null,99.95],
-["Gears of War: Reloaded",2025,"Tiro","The Coalition",81,199.90,199.95],
-["Starfield",2023,"RPG","Bethesda",83,null,349.95],
-["Forza Motorsport",2023,"Corrida","Turn 10",84,null,349.95],
-["Ori and the Will of the Wisps",2020,"Plataforma","Moon Studios",90,null,99.95],
-["Indiana Jones e o Grande Círculo",2024,"Aventura","MachineGames",86,349.90,349.95],
-["Doom: The Dark Ages",2025,"Tiro","id Software",85,349.90,349.95],
-["Doom Eternal",2020,"Tiro","id Software",88,149.90,149.95],
-["Sea of Thieves",2018,"Aventura","Rare",82,149.90,149.95],
-["Hi-Fi Rush",2023,"Ação","Tango Gameworks",89,149.90,149.95],
-["The Outer Worlds 2",2025,"RPG","Obsidian",82,349.90,349.95],
-["Avowed",2025,"RPG","Obsidian",80,349.90,349.95],
-["Ninja Gaiden 4",2025,"Ação","Team Ninja / Platinum",83,349.90,349.95],
-["Clair Obscur: Expedition 33",2025,"RPG","Sandfall Interactive",92,249.90,249.95],
-["Elden Ring",2022,"RPG","FromSoftware",96,249.90,249.95],
-["Sekiro: Shadows Die Twice",2019,"Ação","FromSoftware",90,249.90,249.95],
-["Armored Core VI: Fires of Rubicon",2023,"Ação","FromSoftware",86,249.90,249.95],
-["Lies of P",2023,"RPG","Neowiz",80,249.90,249.95],
-["Black Myth: Wukong",2024,"Ação","Game Science",81,299.90,299.95],
-["Red Dead Redemption 2",2018,"Mundo aberto","Rockstar Games",97,249.90,249.95],
-["Grand Theft Auto V",2022,"Mundo aberto","Rockstar Games",97,149.90,149.95],
-["Grand Theft Auto VI",2026,"Mundo aberto","Rockstar Games",null,"pre","pre"],
-["The Witcher 3: Wild Hunt",2015,"RPG","CD Projekt Red",92,199.90,199.95],
-["Cyberpunk 2077",2020,"RPG","CD Projekt Red",86,199.90,199.95],
-["Baldur's Gate 3",2023,"RPG","Larian Studios",96,299.90,299.95],
-["Hogwarts Legacy",2023,"Mundo aberto","Avalanche Software",84,249.90,249.95],
-["Kingdom Come: Deliverance II",2025,"RPG","Warhorse Studios",88,299.90,299.95],
-["The Elder Scrolls V: Skyrim",2016,"RPG","Bethesda",92,199.90,199.95],
-["The Elder Scrolls IV: Oblivion Remastered",2025,"RPG","Bethesda / Virtuos",82,249.90,249.95],
-["Fallout 4",2015,"RPG","Bethesda",87,99.90,99.95],
-["Mass Effect Legendary Edition",2021,"RPG","BioWare",86,99.90,99.95],
-["Diablo IV",2023,"RPG","Blizzard",88,199.90,199.95],
-["Resident Evil 4",2023,"Terror","Capcom",93,199.90,199.95],
-["Resident Evil Village",2021,"Terror","Capcom",84,149.90,149.95],
-["Resident Evil 2",2019,"Terror","Capcom",91,129.90,129.95],
-["Silent Hill f",2025,"Terror","NeoBards",86,349.90,349.95],
-["Dead Space",2023,"Terror","Motive Studio",89,199.90,199.95],
-["Alan Wake 2",2023,"Terror","Remedy",89,249.90,249.95],
-["Monster Hunter Wilds",2025,"RPG","Capcom",89,299.90,299.95],
-["Devil May Cry 5",2019,"Ação","Capcom",89,99.90,99.95],
-["Street Fighter 6",2023,"Luta","Capcom",92,249.90,249.95],
-["Tekken 8",2024,"Luta","Bandai Namco",90,299.90,299.95],
-["Mortal Kombat 1",2023,"Luta","NetherRealm",84,249.90,249.95],
-["Dragon Ball: Sparking! Zero",2024,"Luta","Spike Chunsoft",81,299.90,299.95],
-["Persona 5 Royal",2020,"RPG","Atlus",95,199.90,199.95],
-["Persona 3 Reload",2024,"RPG","Atlus",87,249.90,249.95],
-["Metaphor: ReFantazio",2024,"RPG","Atlus",94,299.90,299.95],
-["Like a Dragon: Infinite Wealth",2024,"RPG","Ryu Ga Gotoku",89,249.90,249.95],
-["Yakuza 0",2017,"Ação","Ryu Ga Gotoku",85,99.90,99.95],
-["Tales of Arise",2021,"RPG","Bandai Namco",87,249.90,249.95],
-["It Takes Two",2021,"Aventura","Hazelight",89,199.90,199.95],
-["Split Fiction",2025,"Aventura","Hazelight",91,249.90,249.95],
-["Star Wars Jedi: Survivor",2023,"Ação","Respawn",85,199.90,199.95],
-["Assassin's Creed Shadows",2025,"Mundo aberto","Ubisoft Quebec",81,299.90,299.95],
-["Prince of Persia: The Lost Crown",2024,"Plataforma","Ubisoft Montpellier",86,199.90,199.95],
-["Batman: Arkham Knight",2015,"Ação","Rocksteady",87,99.90,99.95],
-["Call of Duty: Black Ops 6",2024,"Tiro","Treyarch / Raven",82,349.90,349.95],
-["Battlefield 6",2025,"Tiro","Battlefield Studios",82,349.90,349.95],
-["EA Sports FC 26",2025,"Esporte","EA Vancouver / Romania",76,349.90,349.95],
-["Fortnite",2017,"Tiro","Epic Games",81,0,0],
-["Apex Legends",2019,"Tiro","Respawn",88,0,0],
-["Rocket League",2015,"Esporte","Psyonix",85,0,0],
-["Minecraft",2011,"Aventura","Mojang",93,99.50,99.95],
-["Hades",2020,"Roguelike","Supergiant Games",93,79.90,79.95],
-["Hollow Knight",2018,"Plataforma","Team Cherry",87,46.90,46.95],
-["Hollow Knight: Silksong",2025,"Plataforma","Team Cherry",91,59.90,59.95],
-["Celeste",2018,"Plataforma","Maddy Makes Games",92,59.90,59.95],
-["Stardew Valley",2016,"Simulação","ConcernedApe",89,49.90,49.95],
-["Balatro",2024,"Roguelike","LocalThunk",90,54.90,54.95],
-["Cuphead",2017,"Plataforma","Studio MDHR",86,79.90,79.95],
-["Stray",2022,"Aventura","BlueTwelve",83,99.90,99.95],
-["Sea of Stars",2023,"RPG","Sabotage Studio",88,129.90,129.95],
-["Sonic X Shadow Generations",2024,"Plataforma","Sega",82,249.90,249.95],
+const STORES = [
+  { k: "ps", name: "PlayStation Store", short: "PS5", kind: "Console", url: q => "https://store.playstation.com/pt-br/search/" + encodeURIComponent(q) },
+  { k: "xb", name: "Microsoft Store", short: "Xbox", kind: "Console Xbox Series", url: q => "https://www.xbox.com/pt-BR/search?q=" + encodeURIComponent(q) },
+  { k: "st", name: "Steam", short: "Steam", kind: "PC", url: q => "https://store.steampowered.com/search/?term=" + encodeURIComponent(q) },
+  { k: "ep", name: "Epic Games Store", short: "Epic", kind: "PC", url: q => "https://store.epicgames.com/pt-BR/browse?q=" + encodeURIComponent(q) },
+  { k: "gp", name: "Google Play", short: "Play", kind: "Android", url: q => "https://play.google.com/store/search?c=apps&hl=pt_BR&q=" + encodeURIComponent(q) },
+  { k: "ap", name: "App Store", short: "iOS", kind: "iPhone e iPad", url: q => "https://apps.apple.com/br/search?term=" + encodeURIComponent(q) }
 ];
+const PLATFORM_KEYS = { ps: ["ps"], xb: ["xb"], pc: ["st", "ep"], mob: ["gp", "ap"] };
 
-const PS_URL = q => "https://store.playstation.com/pt-br/search/" + encodeURIComponent(q);
-const XB_URL = q => "https://www.xbox.com/pt-BR/search?q=" + encodeURIComponent(q);
-
-const WIKI = {"The Last of Us Part II Remastered": "The Last of Us Part II", "The Last of Us Part I": "The Last of Us Part I", "God of War Ragnarök": "God of War Ragnarök", "God of War": "God of War (2018 video game)", "Marvel's Spider-Man 2": "Marvel's Spider-Man 2", "Marvel's Spider-Man: Miles Morales": "Marvel's Spider-Man: Miles Morales", "Ghost of Tsushima": "Ghost of Tsushima", "Ghost of Yōtei": "Ghost of Yōtei", "Horizon Forbidden West": "Horizon Forbidden West", "Gran Turismo 7": "Gran Turismo 7", "Ratchet & Clank: Em Uma Outra Dimensão": "Ratchet & Clank: Rift Apart", "Returnal": "Returnal", "Demon's Souls": "Demon's Souls (2020 video game)", "Astro Bot": "Astro Bot", "Death Stranding 2: On the Beach": "Death Stranding 2: On the Beach", "Stellar Blade": "Stellar Blade", "Final Fantasy XVI": "Final Fantasy XVI", "Final Fantasy VII Rebirth": "Final Fantasy VII Rebirth", "Final Fantasy VII Remake Intergrade": "Final Fantasy VII Remake", "Uncharted: Coleção Legado dos Ladrões": "Uncharted: Legacy of Thieves Collection", "Bloodborne": "Bloodborne", "Silent Hill 2": "Silent Hill 2 (2024 video game)", "Helldivers 2": "Helldivers 2", "Forza Horizon 5": "Forza Horizon 5", "Halo Infinite": "Halo Infinite", "Halo: The Master Chief Collection": "Halo: The Master Chief Collection", "Gears 5": "Gears 5", "Gears of War: Reloaded": "Gears of War: Reloaded", "Starfield": "Starfield (video game)", "Forza Motorsport": "Forza Motorsport (2023 video game)", "Ori and the Will of the Wisps": "Ori and the Will of the Wisps", "Indiana Jones e o Grande Círculo": "Indiana Jones and the Great Circle", "Doom: The Dark Ages": "Doom: The Dark Ages", "Doom Eternal": "Doom Eternal", "Sea of Thieves": "Sea of Thieves", "Hi-Fi Rush": "Hi-Fi Rush", "The Outer Worlds 2": "The Outer Worlds 2", "Avowed": "Avowed", "Ninja Gaiden 4": "Ninja Gaiden 4", "Clair Obscur: Expedition 33": "Clair Obscur: Expedition 33", "Elden Ring": "Elden Ring", "Sekiro: Shadows Die Twice": "Sekiro: Shadows Die Twice", "Armored Core VI: Fires of Rubicon": "Armored Core VI: Fires of Rubicon", "Lies of P": "Lies of P", "Black Myth: Wukong": "Black Myth: Wukong", "Red Dead Redemption 2": "Red Dead Redemption 2", "Grand Theft Auto V": "Grand Theft Auto V", "Grand Theft Auto VI": "Grand Theft Auto VI", "The Witcher 3: Wild Hunt": "The Witcher 3: Wild Hunt", "Cyberpunk 2077": "Cyberpunk 2077", "Baldur's Gate 3": "Baldur's Gate 3", "Hogwarts Legacy": "Hogwarts Legacy", "Kingdom Come: Deliverance II": "Kingdom Come: Deliverance II", "The Elder Scrolls V: Skyrim": "The Elder Scrolls V: Skyrim", "The Elder Scrolls IV: Oblivion Remastered": "The Elder Scrolls IV: Oblivion Remastered", "Fallout 4": "Fallout 4", "Mass Effect Legendary Edition": "Mass Effect Legendary Edition", "Diablo IV": "Diablo IV", "Resident Evil 4": "Resident Evil 4 (2023 video game)", "Resident Evil Village": "Resident Evil Village", "Resident Evil 2": "Resident Evil 2 (2019 video game)", "Silent Hill f": "Silent Hill f", "Dead Space": "Dead Space (2023 video game)", "Alan Wake 2": "Alan Wake 2", "Monster Hunter Wilds": "Monster Hunter Wilds", "Devil May Cry 5": "Devil May Cry 5", "Street Fighter 6": "Street Fighter 6", "Tekken 8": "Tekken 8", "Mortal Kombat 1": "Mortal Kombat 1", "Dragon Ball: Sparking! Zero": "Dragon Ball: Sparking! Zero", "Persona 5 Royal": "Persona 5", "Persona 3 Reload": "Persona 3 Reload", "Metaphor: ReFantazio": "Metaphor: ReFantazio", "Like a Dragon: Infinite Wealth": "Like a Dragon: Infinite Wealth", "Yakuza 0": "Yakuza 0", "Tales of Arise": "Tales of Arise", "It Takes Two": "It Takes Two (video game)", "Split Fiction": "Split Fiction", "Star Wars Jedi: Survivor": "Star Wars Jedi: Survivor", "Assassin's Creed Shadows": "Assassin's Creed Shadows", "Prince of Persia: The Lost Crown": "Prince of Persia: The Lost Crown", "Batman: Arkham Knight": "Batman: Arkham Knight", "Call of Duty: Black Ops 6": "Call of Duty: Black Ops 6", "Battlefield 6": "Battlefield 6", "EA Sports FC 26": "EA Sports FC 26", "Fortnite": "Fortnite Battle Royale", "Apex Legends": "Apex Legends", "Rocket League": "Rocket League", "Minecraft": "Minecraft", "Hades": "Hades (video game)", "Hollow Knight": "Hollow Knight", "Hollow Knight: Silksong": "Hollow Knight: Silksong", "Celeste": "Celeste (video game)", "Stardew Valley": "Stardew Valley", "Balatro": "Balatro", "Cuphead": "Cuphead", "Stray": "Stray (video game)", "Sea of Stars": "Sea of Stars", "Sonic X Shadow Generations": "Sonic X Shadow Generations", "Nioh 2 Remastered": "Nioh 2"};
+const games = window.GAMES.map((g, i) => ({ ...g, id: "j-" + g.t.normalize("NFD").replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/\s+/g, "-") }));
 const covers = {};
-const games = RAW.map(([t, y, g, d, n, ps, xb]) => ({ t, y, g, d, n, ps, xb }));
 document.getElementById("total").textContent = games.length;
 
 const brl = v => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-const hashHue = s => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const has = v => v !== null && v !== undefined;
-const numeric = v => typeof v === "number";
-const minPrice = g => {
-  const vals = [g.ps, g.xb].filter(numeric);
-  return vals.length ? Math.min(...vals) : Infinity;
-};
+const num = v => typeof v === "number";
+const hashHue = s => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
 
+function priceText(v) {
+  if (v === "pre") return "Pré-venda";
+  if (v === "Netflix") return "Netflix";
+  if (v === 0) return "Grátis";
+  return brl(v);
+}
+function cheapest(g, keys) {
+  let best = null;
+  STORES.forEach(s => {
+    if (keys && !keys.includes(s.k)) return;
+    const v = g.p[s.k];
+    if (num(v) && (best === null || v < best.v)) best = { v, s };
+  });
+  return best;
+}
+function available(g, keys) { return (keys || STORES.map(s => s.k)).some(k => has(g.p[k])); }
+
+function scoreClass(n) { return n === null ? "none" : n >= 85 ? "good" : n >= 70 ? "mid" : "bad"; }
+function coverStyle(g) {
+  const h = hashHue(g.t), h1 = h % 360, h2 = (h1 + 28 + (h >> 9) % 50) % 360;
+  return `background: linear-gradient(${150 + (h >> 3) % 60}deg, hsl(${h1} 62% ${30 + (h >> 4) % 12}%), hsl(${h2} 55% ${16 + (h >> 7) % 10}%));`;
+}
+function coverHTML(g, showScore = true) {
+  const initial = g.t.replace(/^(The |Marvel's )/, "").charAt(0);
+  return `<div class="cover" style="${coverStyle(g)}">
+    <span class="mono" aria-hidden="true">${esc(initial)}</span>
+    ${covers[g.t] ? `<img src="${covers[g.t]}" alt="Capa de ${esc(g.t)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('ok');this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ""}
+    <span class="genre">${esc(g.g)}</span>
+    ${showScore ? `<span class="score ${scoreClass(g.n)}" title="Nota da crítica">${g.n ?? "19/11"}</span>` : ""}
+    <div class="title">${esc(g.t)}</div>
+    <div class="studio">${esc(g.d)}</div>
+  </div>`;
+}
+
+// ---------- filtros ----------
 const genreSel = document.getElementById("genre");
 [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR")).forEach(g => {
   const o = document.createElement("option"); o.value = g; o.textContent = g; genreSel.appendChild(o);
 });
-
 const state = { q: "", plat: "all", genre: "", sort: "score" };
 try {
   const saved = JSON.parse(localStorage.getItem("vitrine-filtros") || "null");
-  if (saved && typeof saved === "object") Object.assign(state, { plat: saved.plat || "all", genre: saved.genre || "", sort: saved.sort || "score" });
-} catch (e) {}
-
-function save() {
-  try { localStorage.setItem("vitrine-filtros", JSON.stringify({ plat: state.plat, genre: state.genre, sort: state.sort })); } catch (e) {}
-}
-
-function scoreClass(n) {
-  if (n === null) return "none";
-  return n >= 85 ? "good" : n >= 70 ? "mid" : "bad";
-}
-
-function cover(g) {
-  const h = hashHue(g.t);
-  const h1 = h % 360, h2 = (h1 + 28 + (h >> 9) % 50) % 360;
-  const l1 = 30 + (h >> 4) % 12, l2 = 16 + (h >> 7) % 10;
-  return `background: linear-gradient(${150 + (h >> 3) % 60}deg, hsl(${h1} 62% ${l1}%), hsl(${h2} 55% ${l2}%));`;
-}
-
-function priceRow(kind, g) {
-  const v = g[kind];
-  const label = kind === "ps" ? "PS5" : "Xbox";
-  if (!has(v)) {
-    return `<div class="price ${kind} na"><span class="plat">${label}</span><span class="val">Indisponível</span></div>`;
+  if (saved && typeof saved === "object") {
+    if (["all", "ps", "xb", "pc", "mob"].includes(saved.plat)) state.plat = saved.plat;
+    state.genre = saved.genre || ""; state.sort = saved.sort || "score";
   }
-  const other = kind === "ps" ? g.xb : g.ps;
-  const cheapest = numeric(v) && numeric(other) && v > 0 && v < other - 0.5;
-  const text = v === "pre" ? "Pré-venda" : v === 0 ? "Grátis" : brl(v);
-  const url = kind === "ps" ? PS_URL(g.t) : XB_URL(g.t);
-  return `<a class="price ${kind}" href="${url}" target="_blank" rel="noopener">
-    <span class="plat">${label}</span>${cheapest ? '<span class="flag">menor</span>' : ""}<span class="val">${text}</span></a>`;
-}
-
-const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+} catch (e) {}
+function save() { try { localStorage.setItem("vitrine-filtros", JSON.stringify({ plat: state.plat, genre: state.genre, sort: state.sort })); } catch (e) {} }
 
 function render() {
   const q = state.q.trim().toLowerCase();
-  let list = games.filter(g => {
+  const keys = PLATFORM_KEYS[state.plat];
+  const list = games.filter(g => {
     if (q && !(g.t.toLowerCase().includes(q) || g.d.toLowerCase().includes(q))) return false;
     if (state.genre && g.g !== state.genre) return false;
-    if (state.plat === "ps" && !has(g.ps)) return false;
-    if (state.plat === "xb" && !has(g.xb)) return false;
-    if (state.plat === "excl" && has(g.ps) && has(g.xb)) return false;
+    if (keys && !available(g, keys)) return false;
     return true;
   });
+  const minOf = g => { const c = cheapest(g, keys); return c ? c.v : Infinity; };
   const by = {
     score: (a, b) => (b.n ?? -1) - (a.n ?? -1) || a.t.localeCompare(b.t),
-    cheap: (a, b) => minPrice(a) - minPrice(b) || (b.n ?? 0) - (a.n ?? 0),
+    cheap: (a, b) => minOf(a) - minOf(b) || (b.n ?? 0) - (a.n ?? 0),
     new: (a, b) => b.y - a.y || (b.n ?? 0) - (a.n ?? 0),
     az: (a, b) => a.t.localeCompare(b.t, "pt-BR")
   };
@@ -374,33 +322,94 @@ function render() {
     return;
   }
   grid.innerHTML = list.map(g => {
-    const initial = g.t.replace(/^(The |Marvel's )/, "").charAt(0);
-    const exclusive = has(g.ps) !== has(g.xb);
-    const excl = exclusive ? (has(g.ps) ? "Exclusivo PS" : "Exclusivo Xbox") : "";
-    return `<article class="card">
-      <div class="cover" style="${cover(g)}">
-        <span class="mono" aria-hidden="true">${esc(initial)}</span>
-        ${covers[g.t] ? `<img src="${covers[g.t]}" alt="Capa de ${esc(g.t)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('ok');this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ""}
-        <span class="genre">${esc(g.g)}</span>
-        <span class="score ${scoreClass(g.n)}" title="Nota da crítica">${g.n ?? "19/11"}</span>
-        <div class="title">${esc(g.t)}</div>
-        <div class="studio">${esc(g.d)}</div>
-      </div>
+    const best = cheapest(g, keys);
+    const fromHTML = g.p.ps === "pre"
+      ? `<div><small>Lançamento</small><b>19/11/2026</b></div><em>Pré-venda</em>`
+      : best ? `<div><small>${best.v === 0 ? "Jogue de graça" : "A partir de"}</small><b>${priceText(best.v)}</b></div><em>${best.s.short}</em>`
+             : `<div><small>Disponível via</small><b>Netflix</b></div>`;
+    const chips = STORES.map(s => `<span class="chip${has(g.p[s.k]) ? "" : " off"}" style="${has(g.p[s.k]) ? `color:var(--c-${s.k})` : ""}" title="${s.name}${has(g.p[s.k]) ? "" : ": indisponível"}">${s.short}</span>`).join("");
+    return `<button type="button" class="card" data-id="${g.id}" aria-label="Ver detalhes de ${esc(g.t)}">
+      ${coverHTML(g)}
       <div class="info">
         <div class="name">${esc(g.t)}</div>
-        <div class="year"><span>${g.y}</span><span>${excl}</span></div>
-        <div class="prices">${priceRow("ps", g)}${priceRow("xb", g)}</div>
+        <div class="sub">${g.y} · ${esc(g.d)}</div>
+        <div class="stores">${chips}</div>
+        <div class="from">${fromHTML}</div>
       </div>
-    </article>`;
+    </button>`;
   }).join("");
 }
 
+// ---------- detalhes ----------
+const dlg = document.getElementById("detail");
+const dContent = document.getElementById("d-content");
+let currentId = null;
+
+function scoreLabel(n) {
+  if (n === null) return "Ainda sem nota: o jogo não foi lançado.";
+  return n >= 90 ? "Aclamado pela crítica" : n >= 85 ? "Muito elogiado" : n >= 75 ? "Bem avaliado" : n >= 70 ? "Avaliações positivas" : "Avaliações mistas";
+}
+
+function detailHTML(g) {
+  const best = cheapest(g);
+  const shops = STORES.map(s => ({ s, v: g.p[s.k] }))
+    .sort((a, b) => (has(b.v) - has(a.v)) || ((num(a.v) ? a.v : 1e9) - (num(b.v) ? b.v : 1e9)));
+  const shopHTML = shops.map(({ s, v }) => {
+    if (!has(v)) return `<div class="shop na"><i style="background:var(--off)"></i><span class="sn">${s.name}<span class="sk">${s.kind}</span></span><span class="sv">Indisponível</span></div>`;
+    const isBest = best && num(v) && v === best.v && v > 0 && shops.filter(x => num(x.v)).length > 1;
+    return `<a class="shop${isBest ? " best" : ""}" href="${s.url(g.t)}" target="_blank" rel="noopener">
+      <i style="background:var(--c-${s.k})"></i>
+      <span class="sn">${s.name}${isBest ? '<span class="flag">menor</span>' : ""}<span class="sk">${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
+      <span class="sv">${priceText(v)}</span></a>`;
+  }).join("");
+  const edHTML = g.ed.map(([name, note, price]) => `<div class="ed"><div><b>${esc(name)}</b><span>${esc(note)}</span></div><span class="ev">${price === null ? "A definir" : priceText(price)}</span></div>`).join("");
+  return `<div class="d-head">
+      ${coverHTML(g, false)}
+      <div style="min-width:0">
+        <h2 class="d-title" id="d-title">${esc(g.t)}</h2>
+        <div class="d-facts"><span><b>${g.y}</b></span><span>${esc(g.g)}</span><span>${esc(g.d)}</span></div>
+        <div class="d-score"><span class="score ${scoreClass(g.n)}">${g.n ?? "–"}</span><span>${scoreLabel(g.n)}</span></div>
+      </div>
+    </div>
+    <div class="d-body">
+      <section><h3>Sobre o jogo</h3><p class="d-desc">${esc(g.desc)}</p></section>
+      <section><h3>Onde comprar</h3><div class="shops">${shopHTML}</div></section>
+      <section><h3>Edições</h3><div class="eds">${edHTML}</div><p class="note">Preços das edições na loja do console. No PC os valores costumam ser menores.</p></section>
+    </div>`;
+}
+
+function openDetail(id, push = true) {
+  const g = games.find(x => x.id === id);
+  if (!g) return;
+  currentId = id;
+  dContent.innerHTML = detailHTML(g);
+  if (!dlg.open) dlg.showModal();
+  dlg.scrollTop = 0;
+  if (push && location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+}
+function closeDetail() {
+  currentId = null;
+  if (dlg.open) dlg.close();
+  if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+}
+
+document.getElementById("grid").addEventListener("click", e => {
+  const c = e.target.closest(".card"); if (c) openDetail(c.dataset.id);
+});
+document.getElementById("d-close").addEventListener("click", closeDetail);
+dlg.addEventListener("click", e => { if (e.target === dlg) closeDetail(); });
+dlg.addEventListener("close", () => { if (currentId) closeDetail(); });
+window.addEventListener("hashchange", () => {
+  const id = location.hash.slice(1);
+  if (id.startsWith("j-")) openDetail(id, false); else if (dlg.open) closeDetail();
+});
+
+// ---------- controles ----------
 function syncControls() {
   document.querySelectorAll("#plat button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.plat)));
   genreSel.value = state.genre;
   document.getElementById("sort").value = state.sort;
 }
-
 document.getElementById("q").addEventListener("input", e => { state.q = e.target.value; render(); });
 document.getElementById("plat").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
@@ -411,30 +420,33 @@ document.getElementById("sort").addEventListener("change", e => { state.sort = e
 
 syncControls();
 render();
+if (location.hash.startsWith("#j-")) openDetail(location.hash.slice(1), false);
 
-// Capas: imagem principal do artigo de cada jogo na Wikipédia (em lotes de 50, sem chave de API)
+// ---------- capas (imagem do artigo de cada jogo na Wikipédia) ----------
 async function loadCovers() {
-  const titles = [...new Set(Object.values(WIKI))];
   const back = {};
-  Object.entries(WIKI).forEach(([game, art]) => (back[art] ||= []).push(game));
+  games.forEach(g => (back[g.w] ||= []).push(g.t));
+  const titles = Object.keys(back);
   for (let i = 0; i < titles.length; i += 50) {
+    const batch = titles.slice(i, i + 50);
     const url = "https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1" +
       "&prop=pageimages&piprop=thumbnail&pithumbsize=480&pilicense=any&pilimit=50&titles=" +
-      encodeURIComponent(titles.slice(i, i + 50).join("|"));
+      encodeURIComponent(batch.join("|"));
     try {
       const data = await (await fetch(url)).json();
       const step = {};
       [...(data.query.normalized || []), ...(data.query.redirects || [])].forEach(m => { step[m.from] = m.to; });
       const thumbs = {};
       Object.values(data.query.pages || {}).forEach(p => { if (p.thumbnail) thumbs[p.title] = p.thumbnail.source; });
-      titles.slice(i, i + 50).forEach(art => {
+      batch.forEach(art => {
         let t = art;
         for (let k = 0; k < 3 && step[t]; k++) t = step[t];
-        if (thumbs[t]) back[art].forEach(game => { covers[game] = thumbs[t]; });
+        if (thumbs[t]) back[art].forEach(name => { covers[name] = thumbs[t]; });
       });
-    } catch (e) { /* sem internet ou API fora do ar: ficam as capas ilustradas */ }
+    } catch (e) { /* sem conexão com a Wikipédia: ficam as capas ilustradas */ }
   }
   render();
+  if (currentId) { const top = dlg.scrollTop; dContent.innerHTML = detailHTML(games.find(x => x.id === currentId)); dlg.scrollTop = top; }
 }
 loadCovers();
 </script>
