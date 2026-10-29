@@ -2,7 +2,9 @@
 
 Notas e preços de quase 150 jogos em todas as lojas (PlayStation, Xbox, Steam, Epic Games, Google Play e App Store), num lugar só.
 
-**Site:** https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/
+**Site:** https://asfestore.netlify.app
+
+Também disponível em: https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/
 
 ## O que tem
 - Trailer de cada jogo, descrição, edições e escolha de edição + plataforma com o botão Continuar
