@@ -1,0 +1,46 @@
+{
+ "updated": "2026-10-29T21:17:13.571Z",
+ "urls": {
+  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2072560/library_600x900.jpg": "200 image/jpeg",
+  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/library_600x900.jpg": "404 text/html",
+  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900.jpg": "200 image/jpeg",
+  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900_2x.jpg": "200 image/jpeg",
+  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_600x900.jpg": "200 image/jpeg"
+ },
+ "wiki": {
+  "Fortnite": "NO IMAGE",
+  "Fortnite Battle Royale": "NO IMAGE",
+  "Minecraft": "NO IMAGE",
+  "Dragon Ball: Gekishin Squadra": "MISSING PAGE",
+  "Resident Evil Survival Unit": "MISSING PAGE",
+  "Valorant": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/960px-Valorant_logo_-_pink_color_version.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "Free Fire (video game)": "NO IMAGE",
+  "Garena Free Fire": "NO IMAGE",
+  "Roblox": "NO IMAGE",
+  "Genshin Impact": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5d/Genshin_Impact_logo.svg/960px-Genshin_Impact_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "Metal Gear Solid Delta: Snake Eater": "https://upload.wikimedia.org/wikipedia/en/0/08/MetalGearSolidDelta.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "Call of Duty: Black Ops 7": "https://upload.wikimedia.org/wikipedia/en/a/a3/Call_of_Duty_Black_Ops_7_Key_Art.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+ },
+ "assets": {
+  "1659420": {
+   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_600x900_brazilian_2x.jpg?t=1779309472",
+   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/header_brazilian.jpg?t=1779309472",
+   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_hero.jpg?t=1779309472"
+  },
+  "2072560": {
+   "capsule": null,
+   "header": null,
+   "hero": null
+  },
+  "2417610": {
+   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900_2x.jpg?t=1762249119",
+   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/05c97cbcd0cfc27c8ed6c7fc6d81e0995aa2a7d4/header.jpg?t=1762249119",
+   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_hero.jpg?t=1762249119"
+  },
+  "3606480": {
+   "capsule": null,
+   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
+   "hero": null
+  }
+ }
+}
