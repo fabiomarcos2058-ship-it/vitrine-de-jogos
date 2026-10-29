@@ -1,8 +1,55 @@
 {
  "api": null,
  "disc": {
-  "chunks": 0,
+  "chunks": 20,
   "ops": {},
-  "chunkUrls": 0
+  "htmlLen": 80666,
+  "scripts": [
+   "https://static.playstation.com/wca/v2/js/ui-components.e34a2cb2ca557b1a81e1.js",
+   "https://static.playstation.com/wca/v2/js/telemetry.1d4b4480611b5e73f003.js",
+   "https://static.playstation.com/wca/v2/js/network.47aeae39f76920fe8051.js",
+   "https://static.playstation.com/wca/v2/js/ui-framework.da2b4dfc2af257865cb3.js",
+   "https://static.playstation.com/wca/v2/js/common.7eef2ed9b733ad304690.js",
+   "https://static.playstation.com/wca/v2/js/main.ccaedeaae5731dc88f9a.js",
+   "https://store.playstation.com/_next/static/chunks/polyfills-42372ed130431b0a.js",
+   "https://store.playstation.com/_next/static/chunks/webpack-ec18465b95806051.js",
+   "https://store.playstation.com/_next/static/chunks/framework-18965f38d3621442.js",
+   "https://store.playstation.com/_next/static/chunks/main-be2ccbab57016a70.js",
+   "https://store.playstation.com/_next/static/chunks/pages/_app-0e534ffc4c46f8fa.js",
+   "https://store.playstation.com/_next/static/chunks/68f504b0-1705df05103f55a5.js",
+   "https://store.playstation.com/_next/static/chunks/982-5b7463ab73ab1267.js",
+   "https://store.playstation.com/_next/static/chunks/461-0ae6bba4769064e0.js",
+   "https://store.playstation.com/_next/static/chunks/947-faff78885be9c775.js",
+   "https://store.playstation.com/_next/static/chunks/pages/%5Blocale%5D/search/%5BsearchTerm%5D/%5B%5B...page%5D%5D-5e8a6dfe8bfeb6b6.js",
+   "https://store.playstation.com/_next/static/3GqIwwWnEA1qYqvbvRzc2/_buildManifest.js",
+   "https://store.playstation.com/_next/static/3GqIwwWnEA1qYqvbvRzc2/_ssgManifest.js",
+   "https://web-commerce-anywhere.playstation.com/static/shared-nav/shared-nav.js",
+   "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+  ],
+  "names": [
+   "ualSearchType",
+   "youtubeSearchDataShareConsent",
+   "correctedSearchTerm",
+   "getSearchParams",
+   "getSearchResults",
+   "setSearchLine",
+   "useSearchParams",
+   "getSearchResultsQuery",
+   "addSearchClickListener",
+   "showSearchContextSelector",
+   "onSearchClose",
+   "selectedSearchSource",
+   "isSearchLoading",
+   "onSearchLinkClick",
+   "handleSearchClose",
+   "getSearchLabel",
+   "handleSearchTypeChange",
+   "setSearchSource",
+   "handleSearchInput",
+   "handleSearchRedirect",
+   "clearSearchTerm"
+  ],
+  "query": "query getSearchResults(\\n    $countryCode: String,\\n    $languageCode: String,\\n    $nextCursor: String,\\n    $pageOffset: Float,\\n    $pageSize: Float,\\n    $searchDomains: String,\\n    $searchTerm: String!\\n    ) {\\n    universalSearch(\\n      countryCode: $countryCode,\\n      languageCode: $languageCode\\n      nextCursor: $nextCursor,\\n      pageOffset: $pageOffset,\\n      pageSize: $pageSize,\\n      searchDomains: $searchDomains,\\n      searchTerm: $searchTerm\\n    ) {\\n      searchTerm,\\n      next,\\n      pageInfo {\\n        totalCount,\\n        offset,\\n        size,\\n        isLast\\n      }\\n      results {\\n        ... on Concept {\\n          id,\\n          name,\\n          media {\\n            role,\\n            type,\\n            url,\\n          },\\n          personalizedMeta {\\n            ... personalizedMetaFragment\\n          },\\n          price {\\n            ... priceFragment,\\n            skuId,\\n          },\\n          products {\\n            id,\\n          },\\n        },\\n        ... on Product {\\n          id,\\n          name,\\n          npTitleId,\\n          localizedStoreDisplayClassification,\\n          storeDisplayClassification,\\n          platforms,\\n          price {\\n            ... priceFragment,\\n            skuId,\\n          },\\n          skus {\\n            type,\\n          },\\n          media {\\n            role,\\n            type,\\n            url,\\n          }\\n          personalizedMeta {\\n            ... personalizedMetaFragment\\n        ",
+  "chunkUrls": 20
  }
 }
