@@ -610,6 +610,10 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .ext .ep s { font-weight: 600; font-size: 12px; color: var(--faint); margin-right: 6px; }
 .freepill { position: absolute; z-index: 2; left: 10px; top: 10px; font: 800 11.5px var(--mono); color: #fff; background: #2A2A2A; padding: 4px 9px; border-radius: 999px; }
 .freepill.now { background: var(--good); color: #062612; }
+.ps-note { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0 0; padding: 11px 14px; border-radius: 14px; font-size: 13px; line-height: 1.45; color: var(--muted); background: color-mix(in srgb, var(--c-ps) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--c-ps) 35%, var(--line)); }
+.ps-note b { color: var(--fg); }
+.ps-note .pi { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font: 800 12px var(--mono); color: #fff; background: var(--c-ps); }
+.go-sum .psn, .ci .psn { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 2px; }
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -706,7 +710,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
     </div>
     <div>
       <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
-      <p id="foot-live">Preços da Steam, PlayStation Store, Microsoft Store e Epic Games são atualizados automaticamente várias vezes por dia, com promoções. Google Play e App Store usam preços de referência.</p>
+      <p id="foot-live">Preços da Steam e da Microsoft Store (Xbox) são atualizados automaticamente várias vezes por dia, com promoções. A PlayStation Store não permite consultar promoções automaticamente, então os preços do PlayStation são de referência e o jogo pode estar em promoção na loja. Epic Games, Google Play e App Store também usam preços de referência.</p>
       <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. A ASFE Store não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
@@ -826,6 +830,9 @@ function cardHTML(g, keys) {
 
 
 // ================== PREÇOS AO VIVO ==================
+// A PlayStation Store não libera preços e promoções para consulta automática: o preço mostrado é o de referência.
+const psRef = g => num(g.p.ps) && g.p.ps > 0 && !(g.live && g.live.ps);
+const PS_NOTE = `<p class="ps-note"><span class="pi" aria-hidden="true">i</span><span><b>Pode estar em promoção na PlayStation Store.</b> O sistema da PlayStation não permite consultar promoções automaticamente, então mostramos o preço de referência. Confira o valor do dia na loja.</span></p>`;
 let LIVE = null;
 const BASE_P = Object.fromEntries(games.map(g => [g.id, { ...g.p }]));
 function maxSale(g, keys) {
@@ -1210,7 +1217,7 @@ function detailHTML(g) {
     const until = sale && lv.until ? new Date(lv.until) : null;
     return `<a class="shop${isBest ? " best" : ""}" href="${(lv && lv.url) || s.url(g.t)}" target="_blank" rel="noopener">
       <i style="background:var(--c-${s.k})"></i>
-      <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${lv ? '<span class="live-dot" aria-hidden="true"></span>Preço ao vivo · ' : ""}${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
+      <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${lv ? '<span class="live-dot" aria-hidden="true"></span>Preço ao vivo · ' : s.k === "ps" && psRef(g) ? "Preço de referência · " : ""}${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
       <span class="sv">${sale ? `<s>${brl(lv.b)}</s>` : ""}<span>${priceText(v)}</span>${sale ? `<span class="off">-${lv.pct}%</span>` : ""}${until && !isNaN(until) ? `<span class="until">até ${until.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}</span>` : ""}</span><span class="arr" aria-hidden="true">↗</span></a>`;
   }).join("");
   const img = covers[g.t];
@@ -1233,7 +1240,7 @@ function detailHTML(g) {
       <section><h3>Trailer</h3>${trailerHTML(g)}</section>
       <section><h3>Sobre o jogo</h3><p class="d-desc">${esc(g.desc)}</p></section>
       <section><h3>Escolha a edição e a plataforma</h3>${pickerHTML(g)}</section>
-      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div></section>
+      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div>${psRef(g) ? PS_NOTE : ""}</section>
     </div>`;
 }
 function editionPrice(g, ei, k) {
@@ -1267,7 +1274,7 @@ function updatePicker(g) {
   const [name] = g.ed[ei];
   const v = editionPrice(g, ei, k);
   const isBase = ei === 0 || /^(Padrão|Gratuito)$/.test(name);
-  document.getElementById("go-sum").innerHTML = `${esc(name)} · ${s.label}<b>${v === "pre" ? "Pré-venda" : priceText(v)}</b>`;
+  document.getElementById("go-sum").innerHTML = `${esc(name)} · ${s.label}<b>${v === "pre" ? "Pré-venda" : priceText(v)}</b>${k === "ps" && num(v) && v > 0 && !(isBase && g.live && g.live.ps) ? '<span class="psn">Preço de referência: pode estar em promoção na PS Store</span>' : ""}`;
   const btn = document.getElementById("go-btn");
   const lv = g.live && g.live[k];
   btn.href = isBase && lv && lv.url ? lv.url : s.url(isBase ? g.t : g.t + " " + name);
@@ -1719,7 +1726,8 @@ function openCart() {
   let savings = 0;
   const html = groups.map(({ s, items }) => {
     const sub = items.reduce((a, { it }) => { const v = itemPrice(it); return a + (num(v) ? v : 0); }, 0);
-    return `<div class="cart-gh"><b><span class="dot" style="background:var(--c-${s.k})"></span>${s.name}</b><span>${brl(sub)}</span></div>` + items.map(({ it, i }) => {
+    const psWarn = s.k === "ps" && items.some(({ it }) => { const gg = byId[it.id]; return num(itemPrice(it)) && itemPrice(it) > 0 && !(it.ei === 0 && gg.live && gg.live.ps); });
+    return `<div class="cart-gh"><b><span class="dot" style="background:var(--c-${s.k})"></span>${s.name}</b><span>${brl(sub)}</span></div>` + (psWarn ? PS_NOTE.replace('class="ps-note"', 'class="ps-note" style="margin:0 0 10px"') : "") + items.map(({ it, i }) => {
       const g = byId[it.id]; const [ename] = g.ed[it.ei]; const v = itemPrice(it);
       const isBase = it.ei === 0 || /^(Padrão|Gratuito)$/.test(ename);
       let tip = "";
