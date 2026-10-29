@@ -1,5 +1,6 @@
 # Monta uma folha de conferência com as imagens dos personagens (só para revisão).
-import json, io, urllib.request
+import json, io, sys, urllib.request
+if not json.load(open("scripts/lookup-input.json")).get("sheet"): sys.exit(0)
 from PIL import Image, ImageDraw
 d = json.load(open("data/characters.json"))["games"]
 items = []

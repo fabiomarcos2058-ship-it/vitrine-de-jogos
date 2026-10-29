@@ -1,149 +1,1364 @@
 {
-  "Resident Evil 4": ["residentevil", ["Leon S. Kennedy", "Ada Wong", "Ashley Graham", "Luis Serra Navarro", "Jack Krauser", "Osmund Saddler"]],
-  "Resident Evil 4 (2005)": ["residentevil", ["Leon S. Kennedy", "Ada Wong", "Ashley Graham", "Jack Krauser"]],
-  "Resident Evil 2": ["residentevil", ["Leon S. Kennedy", "Claire Redfield", "Ada Wong", "Sherry Birkin", "William Birkin", "Marvin Branagh"]],
-  "Resident Evil 3": ["residentevil", ["Jill Valentine", "Carlos Oliveira", "Nemesis-T Type", "Nikolai Zinoviev"]],
-  "Resident Evil Village": ["residentevil", ["Ethan Winters", "Alcina Dimitrescu", "Karl Heisenberg", "Mother Miranda", "Donna Beneviento", "Chris Redfield"]],
-  "Resident Evil 7: Biohazard": ["residentevil", ["Ethan Winters", "Mia Winters", "Jack Baker", "Marguerite Baker", "Lucas Baker", "Eveline"]],
-  "Resident Evil Requiem": ["residentevil", ["Grace Ashcroft", "Leon S. Kennedy"]],
-  "Resident Evil": ["residentevil", ["Chris Redfield", "Jill Valentine", "Albert Wesker", "Barry Burton", "Rebecca Chambers"]],
-  "Resident Evil 0": ["residentevil", ["Rebecca Chambers", "Billy Coen", "Albert Wesker"]],
-  "Resident Evil 5": ["residentevil", ["Chris Redfield", "Sheva Alomar", "Albert Wesker", "Jill Valentine"]],
-  "Resident Evil 6": ["residentevil", ["Leon S. Kennedy", "Chris Redfield", "Jake Muller", "Sherry Birkin", "Ada Wong", "Helena Harper"]],
-  "Resident Evil Code: Veronica X": ["residentevil", ["Claire Redfield", "Chris Redfield", "Steve Burnside", "Alexia Ashford"]],
-  "Resident Evil Revelations": ["residentevil", ["Jill Valentine", "Chris Redfield", "Parker Luciani"]],
-  "Resident Evil Revelations 2": ["residentevil", ["Claire Redfield", "Moira Burton", "Barry Burton", "Natalia Korda"]],
-  "Grand Theft Auto V": ["gta", ["Michael De Santa", "Franklin Clinton", "Trevor Philips", "Lamar Davis", "Lester Crest"]],
-  "Grand Theft Auto Online": ["gta", ["Lester Crest", "Lamar Davis", "Franklin Clinton", "Trevor Philips"]],
-  "Grand Theft Auto VI": ["gta", ["Lucia Caminos", "Jason Duval"]],
-  "Grand Theft Auto IV": ["gta", ["Niko Bellic", "Roman Bellic", "Johnny Klebitz", "Luis Fernando Lopez"]],
-  "Grand Theft Auto: The Trilogy – The Definitive Edition": ["gta", ["Carl Johnson", "Tommy Vercetti", "Claude", "Big Smoke"]],
-  "Grand Theft Auto: Liberty City Stories": ["gta", ["Toni Cipriani", "Salvatore Leone"]],
-  "God of War": ["godofwar", ["Kratos", "Atreus", "Freya", "Baldur", "Mimir"]],
-  "God of War Ragnarök": ["godofwar", ["Kratos", "Atreus", "Freya", "Thor", "Odin", "Angrboda"]],
-  "The Last of Us Part I": ["thelastofus", ["Joel Miller", "Ellie Williams", "Tess Servopoulos", "Tommy Miller", "Marlene"]],
-  "The Last of Us Part II Remastered": ["thelastofus", ["Ellie Williams", "Abby Anderson", "Joel Miller", "Dina", "Lev"]],
-  "Marvel's Spider-Man 2": ["marvel", ["Peter Parker (Earth-1048)", "Miles Morales (Earth-1048)", "Mary Jane Watson (Earth-1048)", "Kraven the Hunter (Earth-1048)"]],
-  "Marvel's Spider-Man: Miles Morales": ["marvel", ["Miles Morales (Earth-1048)", "Peter Parker (Earth-1048)"]],
-  "Marvel's Spider-Man Remastered": ["marvel", ["Peter Parker (Earth-1048)", "Mary Jane Watson (Earth-1048)", "Miles Morales (Earth-1048)", "Otto Octavius (Earth-1048)"]],
-  "Ghost of Tsushima": ["ghostoftsushima", ["Jin Sakai", "Yuna", "Lord Shimura", "Khotun Khan", "Ishikawa"]],
-  "Ghost of Yōtei": ["ghostoftsushima", ["Atsu"]],
-  "Horizon Forbidden West": ["horizon", ["Aloy", "Varl", "Zo", "Kotallo", "Erend", "Sylens"]],
-  "Horizon Zero Dawn Remastered": ["horizon", ["Aloy", "Rost", "Sylens", "Erend", "Varl"]],
-  "Uncharted: Coleção Legado dos Ladrões": ["uncharted", ["Nathan Drake", "Chloe Frazer", "Samuel Drake", "Elena Fisher", "Victor Sullivan"]],
-  "Elden Ring": ["eldenring", ["Malenia, Blade of Miquella", "Ranni the Witch", "Melina", "Starscourge Radahn", "Messmer the Impaler", "Godfrey, First Elden Lord"]],
-  "Elden Ring Nightreign": ["eldenring", ["Malenia, Blade of Miquella", "Starscourge Radahn", "Melina"]],
-  "Sekiro: Shadows Die Twice": ["sekiro", ["Wolf", "Genichiro Ashina", "Isshin Ashina", "Kuro", "Emma"]],
-  "Bloodborne": ["bloodborne", ["Lady Maria of the Astral Clocktower", "Gehrman, The First Hunter", "Eileen the Crow", "Plain Doll"]],
-  "Dark Souls III": ["darksouls", ["Fire Keeper (Dark Souls III)", "Soul of Cinder", "Patches", "Siegward of Catarina"]],
-  "Cyberpunk 2077": ["cyberpunk", ["V", "Johnny Silverhand", "Judy Álvarez", "Panam Palmer", "Jackie Welles", "Kerry Eurodyne"]],
-  "The Witcher 3: Wild Hunt": ["witcher", ["Geralt of Rivia", "Ciri", "Yennefer of Vengerberg", "Triss Merigold", "Dandelion"]],
-  "Red Dead Redemption 2": ["reddeadredemption", ["Arthur Morgan", "John Marston", "Dutch van der Linde", "Sadie Adler", "Charles Smith"]],
-  "Red Dead Redemption": ["reddeadredemption", ["John Marston", "Bonnie MacFarlane", "Bill Williamson", "Abigail Marston"]],
-  "Baldur's Gate 3": ["baldursgate", ["Astarion", "Shadowheart", "Karlach", "Lae'zel", "Gale", "Wyll"]],
-  "Hogwarts Legacy": ["harrypotter", ["Sebastian Sallow", "Natsai Onai", "Poppy Sweeting", "Ominis Gaunt"]],
-  "Final Fantasy VII Rebirth": ["finalfantasy", ["Cloud Strife", "Tifa Lockhart", "Aerith Gainsborough", "Sephiroth", "Barret Wallace", "Yuffie Kisaragi"]],
-  "Final Fantasy VII Remake Intergrade": ["finalfantasy", ["Cloud Strife", "Tifa Lockhart", "Aerith Gainsborough", "Barret Wallace", "Sephiroth", "Yuffie Kisaragi"]],
-  "Final Fantasy VII": ["finalfantasy", ["Cloud Strife", "Tifa Lockhart", "Aerith Gainsborough", "Sephiroth", "Vincent Valentine"]],
-  "Crisis Core – Final Fantasy VII – Reunion": ["finalfantasy", ["Zack Fair", "Cloud Strife", "Aerith Gainsborough", "Genesis Rhapsodos", "Sephiroth"]],
-  "Final Fantasy VII Ever Crisis": ["finalfantasy", ["Cloud Strife", "Tifa Lockhart", "Aerith Gainsborough", "Zack Fair", "Sephiroth"]],
-  "Final Fantasy XVI": ["finalfantasy", ["Clive Rosfield", "Jill Warrick", "Joshua Rosfield", "Cidolfus Telamon"]],
-  "Final Fantasy X | X-2 HD Remaster": ["finalfantasy", ["Tidus", "Yuna", "Auron", "Rikku", "Lulu", "Wakka"]],
-  "Final Fantasy XV": ["finalfantasy", ["Noctis Lucis Caelum", "Prompto Argentum", "Gladiolus Amicitia", "Ignis Scientia", "Lunafreya Nox Fleuret"]],
-  "Final Fantasy XII: The Zodiac Age": ["finalfantasy", ["Vaan", "Ashe", "Balthier", "Fran", "Basch fon Ronsenburg"]],
-  "Final Fantasy XIII": ["finalfantasy", ["Lightning", "Snow Villiers", "Oerba Dia Vanille", "Oerba Yun Fang", "Hope Estheim", "Sazh Katzroy"]],
-  "Final Fantasy XIII-2": ["finalfantasy", ["Serah Farron", "Noel Kreiss", "Lightning", "Caius Ballad"]],
-  "Lightning Returns: Final Fantasy XIII": ["finalfantasy", ["Lightning", "Lumina", "Snow Villiers"]],
-  "Final Fantasy IX": ["finalfantasy", ["Zidane Tribal", "Garnet Til Alexandros XVII", "Vivi Orunitia", "Adelbert Steiner", "Kuja"]],
-  "Final Fantasy VIII Remastered": ["finalfantasy", ["Squall Leonhart", "Rinoa Heartilly", "Seifer Almasy", "Quistis Trepe", "Laguna Loire"]],
-  "Final Fantasy XIV Online": ["finalfantasy", ["Y'shtola Rhul", "Alphinaud Leveilleur", "Alisaie Leveilleur", "Thancred Waters", "G'raha Tia"]],
-  "Final Fantasy Type-0 HD": ["finalfantasy", ["Ace (Type-0)", "Machina Kunagiri", "Rem Tokimiya"]],
-  "Stranger of Paradise: Final Fantasy Origin": ["finalfantasy", ["Jack Garland", "Garland"]],
-  "Dissidia Final Fantasy NT": ["finalfantasy", ["Warrior of Light", "Cloud Strife", "Squall Leonhart", "Lightning", "Terra Branford"]],
-  "World of Final Fantasy": ["finalfantasy", ["Lann", "Reynn"]],
-  "Final Fantasy Tactics: The Ivalice Chronicles": ["finalfantasy", ["Ramza Beoulve", "Delita Heiral", "Agrias Oaks"]],
-  "Final Fantasy Pixel Remaster (I–VI)": ["finalfantasy", ["Warrior of Light", "Cecil Harvey", "Terra Branford", "Bartz Klauser", "Firion"]],
-  "Dragon Ball: Sparking! Zero": ["dragonball", ["Goku", "Vegeta", "Gohan", "Broly", "Goku Black", "Frieza", "Beerus", "Gogeta"]],
-  "Dragon Ball FighterZ": ["dragonball", ["Goku", "Vegeta", "Android 21", "Android 18", "Cell", "Frieza", "Trunks", "Gohan"]],
-  "Dragon Ball Z: Kakarot": ["dragonball", ["Goku", "Gohan", "Vegeta", "Piccolo", "Frieza", "Cell", "Majin Buu"]],
-  "Dragon Ball Xenoverse 2": ["dragonball", ["Goku", "Vegeta", "Trunks", "Towa", "Mira", "Beerus"]],
-  "Dragon Ball Xenoverse": ["dragonball", ["Goku", "Vegeta", "Trunks", "Towa", "Mira"]],
-  "Dragon Ball: The Breakers": ["dragonball", ["Cell", "Frieza", "Majin Buu", "Goku"]],
-  "Super Dragon Ball Heroes: World Mission": ["dragonball", ["Goku", "Vegeta", "Gogeta", "Vegito", "Broly"]],
-  "Dragon Ball Gekishin Squadra": ["dragonball", ["Goku", "Vegeta", "Piccolo", "Frieza", "Cell"]],
-  "Dragon Ball Legends": ["dragonball", ["Goku", "Vegeta", "Gohan", "Bardock", "Broly", "Frieza", "Cell", "Piccolo"]],
-  "Dragon Ball Z: Dokkan Battle": ["dragonball", ["Goku", "Vegeta", "Gohan", "Trunks", "Broly", "Frieza", "Majin Buu", "Android 18"]],
-  "Persona 5 Royal": ["megamitensei", ["Joker", "Ryuji Sakamoto", "Ann Takamaki", "Morgana", "Makoto Niijima", "Futaba Sakura", "Goro Akechi", "Kasumi Yoshizawa"]],
-  "Persona 3 Reload": ["megamitensei", ["Makoto Yuki", "Yukari Takeba", "Mitsuru Kirijo", "Aigis", "Junpei Iori", "Akihiko Sanada"]],
-  "Persona 4 Golden": ["megamitensei", ["Yu Narukami", "Chie Satonaka", "Yukiko Amagi", "Teddie", "Rise Kujikawa", "Naoto Shirogane"]],
-  "Street Fighter 6": ["streetfighter", ["Ryu", "Chun-Li", "Ken Masters", "Cammy", "Luke", "Juri Han"]],
-  "Tekken 8": ["tekken", ["Jin Kazama", "Kazuya Mishima", "Reina", "Nina Williams", "Heihachi Mishima"]],
-  "Mortal Kombat 1": ["mortalkombat", ["Scorpion", "Sub-Zero", "Raiden", "Liu Kang", "Kitana", "Mileena"]],
-  "Devil May Cry 5": ["devilmaycry", ["Dante", "Nero", "V", "Vergil", "Lady", "Trish"]],
-  "Monster Hunter Wilds": ["monsterhunter", ["Arkveld", "Rey Dau", "Rathalos", "Gore Magala"]],
-  "Monster Hunter: World": ["monsterhunter", ["Rathalos", "Nergigante", "Zinogre", "Kirin"]],
-  "Hollow Knight": ["hollowknight", ["The Knight", "Hornet", "Quirrel", "The Radiance", "Grimm"]],
-  "Hollow Knight: Silksong": ["hollowknight", ["Hornet", "Lace", "Shakra"]],
-  "Hades": ["hades", ["Zagreus", "Megaera", "Thanatos", "Dusa", "Hades", "Persephone"]],
-  "Hades II": ["hades", ["Melinoë", "Hecate", "Chronos", "Moros", "Odysseus"]],
-  "Celeste": ["celestegame", ["Madeline", "Badeline", "Theo", "Granny"]],
-  "Cuphead": ["cuphead", ["Cuphead", "Mugman", "Ms. Chalice", "The Devil", "King Dice"]],
-  "Halo Infinite": ["halo", ["John-117", "The Weapon", "Escharum", "Fernando Esparza"]],
-  "Halo: The Master Chief Collection": ["halo", ["John-117", "Cortana", "Thel 'Vadam", "Avery Johnson"]],
-  "Gears 5": ["gearsofwar", ["Kait Diaz", "Marcus Fenix", "Del Walker", "JD Fenix"]],
-  "Gears of War: Reloaded": ["gearsofwar", ["Marcus Fenix", "Dominic Santiago", "Augustus Cole", "Damon Baird"]],
-  "Starfield": ["starfield", ["Sarah Morgan", "Sam Coe", "Barrett", "Andreja"]],
-  "Fortnite": ["fortnite", ["Jonesy", "Peely", "Fishstick", "Raven", "Midas", "Drift"]],
-  "Apex Legends": ["apexlegends", ["Wraith", "Bloodhound", "Lifeline", "Pathfinder", "Octane", "Mirage"]],
-  "Valorant": ["valorant", ["Jett", "Phoenix", "Sage", "Reyna", "Sova", "Omen", "Raze", "Killjoy"]],
-  "Marvel Rivals": ["marvelrivals", ["Spider-Man", "Iron Man", "Storm", "Hulk", "Luna Snow", "Magik"]],
-  "Genshin Impact": ["genshin-impact", ["Lumine", "Aether", "Paimon", "Raiden Shogun", "Hu Tao", "Zhongli", "Furina", "Nahida"]],
-  "Minecraft": ["minecraft", ["Steve", "Alex", "Creeper", "Enderman", "Ender Dragon"]],
-  "Cult of the Lamb": ["cult-of-the-lamb", ["The Lamb", "Ratau", "The One Who Waits"]],
-  "Dead by Daylight": ["deadbydaylight", ["The Trapper", "The Huntress", "The Nurse", "Meg Thomas", "Dwight Fairfield", "The Ghost Face"]],
-  "Palworld": ["palworld", ["Lamball", "Cattiva", "Anubis", "Jetragon", "Depresso", "Chikipi"]],
-  "Subnautica": ["subnautica", ["Reaper Leviathan", "Peeper", "Sea Emperor Leviathan", "Cuddlefish"]],
-  "Death Stranding Director's Cut": ["deathstranding", ["Sam Porter Bridges", "Fragile", "Higgs Monaghan", "Die-Hardman", "Amelie"]],
-  "Death Stranding 2: On the Beach": ["deathstranding", ["Sam Porter Bridges", "Fragile", "Higgs Monaghan", "Tomorrow"]],
-  "Detroit: Become Human": ["detroitbecomehuman", ["Connor", "Kara", "Markus", "Hank Anderson", "Alice"]],
-  "Days Gone": ["daysgone", ["Deacon St. John", "Boozer", "Sarah Whitaker"]],
-  "Hitman World of Assassination": ["hitman", ["Agent 47", "Diana Burnwood"]],
-  "Hitman: World of Assassination": ["hitman", ["Agent 47", "Diana Burnwood"]],
-  "Assassin's Creed Mirage": ["assassinscreed", ["Basim Ibn Ishaq", "Roshan"]],
-  "Assassin's Creed Odyssey": ["assassinscreed", ["Kassandra", "Alexios"]],
-  "Assassin's Creed Shadows": ["assassinscreed", ["Naoe", "Yasuke"]],
-  "Metal Gear Solid Delta: Snake Eater": ["metalgear", ["Naked Snake", "The Boss", "EVA", "Revolver Ocelot", "Volgin"]],
-  "Mafia: The Old Country": ["mafiagame", ["Enzo Favara"]],
-  "Borderlands 4": ["borderlands", ["Rafa", "Vex", "Amon", "Harlowe"]],
-  "Black Myth: Wukong": ["blackmythwukong", ["Destined One", "Erlang Shen"]],
-  "Lies of P": ["liesofp", ["P", "Geppetto", "Sophia"]],
-  "Stellar Blade": ["stellarblade", ["EVE", "Lily", "Adam"]],
-  "Clair Obscur: Expedition 33": ["clairobscur", ["Gustave", "Maelle", "Lune", "Sciel", "Verso", "Monoco"]],
-  "Kingdom Come: Deliverance II": ["kingdom-come-deliverance", ["Henry", "Hans Capon"]],
-  "The Elder Scrolls V: Skyrim": ["elderscrolls", ["Alduin", "Serana", "Lydia", "Paarthurnax"]],
-  "Fallout 4": ["fallout", ["Nick Valentine", "Piper Wright", "Preston Garvey", "Dogmeat (Fallout 4)"]],
-  "Mass Effect Legendary Edition": ["masseffect", ["Commander Shepard", "Garrus Vakarian", "Liara T'Soni", "Tali'Zorah", "Urdnot Wrex"]],
-  "Diablo IV": ["diablo", ["Lilith", "Inarius", "Lorath Nahr"]],
-  "Dead Space": ["deadspace", ["Isaac Clarke", "Ellie Langford"]],
-  "Alan Wake 2": ["alanwake", ["Alan Wake", "Saga Anderson"]],
-  "Silent Hill 2": ["silenthill", ["James Sunderland", "Maria", "Pyramid Head", "Angela Orosco"]],
-  "Silent Hill f": ["silenthill", ["Hinako Shimizu"]],
-  "Star Wars Jedi: Survivor": ["starwars", ["Cal Kestis", "BD-1", "Merrin", "Cere Junda"]],
-  "LEGO Star Wars: A Saga Skywalker": ["starwars", ["Luke Skywalker", "Darth Vader", "Rey Skywalker", "Grogu", "Han Solo"]],
-  "Batman: Arkham Knight": ["arkhamcity", ["Batman", "Arkham Knight", "Joker", "Harley Quinn", "Scarecrow"]],
-  "Prince of Persia: The Lost Crown": ["princeofpersia", ["Sargon"]],
-  "Sonic X Shadow Generations": ["sonic", ["Shadow the Hedgehog", "Sonic the Hedgehog", "Black Doom"]],
-  "Crash Bandicoot N. Sane Trilogy": ["crashbandicoot", ["Crash Bandicoot", "Coco Bandicoot", "Doctor Neo Cortex", "Aku Aku"]],
-  "NieR:Automata": ["nier", ["YoRHa No.2 Type B", "YoRHa No.9 Type S", "A2"]],
-  "Yakuza 0": ["yakuza", ["Kazuma Kiryu", "Goro Majima"]],
-  "Like a Dragon: Infinite Wealth": ["yakuza", ["Ichiban Kasuga", "Kazuma Kiryu"]],
-  "Tales of Arise": ["aselia", ["Alphen", "Shionne"]],
-  "Hi-Fi Rush": ["hifirush", ["Chai", "Peppermint", "808"]],
-  "Doom: The Dark Ages": ["doom", ["Doom Slayer"]],
-  "Doom Eternal": ["doom", ["Doom Slayer", "Khan Maykr"]],
-  "Ori and the Will of the Wisps": ["ori", ["Ori", "Ku"]],
-  "Ratchet & Clank: Em Uma Outra Dimensão": ["ratchetandclank", ["Ratchet", "Clank", "Rivet", "Kit"]],
-  "Returnal": ["returnal", ["Selene Vassos"]],
-  "Overwatch": ["overwatch", ["Tracer"]],
-  "Counter-Strike 2": ["counterstrike", ["Counter-Terrorists", "Terrorists"]]
+ "Resident Evil 4": [
+  "residentevil",
+  [
+   "Leon S. Kennedy",
+   "Ada Wong",
+   "Ashley Graham",
+   "Luis Serra Navarro",
+   "Jack Krauser",
+   "Osmund Saddler"
+  ]
+ ],
+ "Resident Evil 4 (2005)": [
+  "residentevil",
+  [
+   "Leon S. Kennedy",
+   "Ada Wong",
+   "Ashley Graham",
+   "Jack Krauser"
+  ]
+ ],
+ "Resident Evil 2": [
+  "residentevil",
+  [
+   "Leon S. Kennedy",
+   "Claire Redfield",
+   "Ada Wong",
+   "Sherry Birkin",
+   "William Birkin",
+   "Marvin Branagh"
+  ]
+ ],
+ "Resident Evil 3": [
+  "residentevil",
+  [
+   "Jill Valentine",
+   "Carlos Oliveira",
+   "Nemesis-T Type",
+   "Nikolai Zinoviev"
+  ]
+ ],
+ "Resident Evil Village": [
+  "residentevil",
+  [
+   "Ethan Winters",
+   "Alcina Dimitrescu",
+   "Karl Heisenberg",
+   "Mother Miranda",
+   "Donna Beneviento",
+   "Chris Redfield"
+  ]
+ ],
+ "Resident Evil 7: Biohazard": [
+  "residentevil",
+  [
+   "Ethan Winters",
+   "Mia Winters",
+   "Jack Baker",
+   "Marguerite Baker",
+   "Lucas Baker",
+   "Eveline"
+  ]
+ ],
+ "Resident Evil Requiem": [
+  "residentevil",
+  [
+   "Grace Ashcroft",
+   "Leon S. Kennedy"
+  ]
+ ],
+ "Resident Evil": [
+  "residentevil",
+  [
+   "Chris Redfield",
+   "Jill Valentine",
+   "Albert Wesker",
+   "Barry Burton",
+   "Rebecca Chambers"
+  ]
+ ],
+ "Resident Evil 0": [
+  "residentevil",
+  [
+   "Rebecca Chambers",
+   "Billy Coen",
+   "Albert Wesker"
+  ]
+ ],
+ "Resident Evil 5": [
+  "residentevil",
+  [
+   "Chris Redfield",
+   "Sheva Alomar",
+   "Albert Wesker",
+   "Jill Valentine"
+  ]
+ ],
+ "Resident Evil 6": [
+  "residentevil",
+  [
+   "Leon S. Kennedy",
+   "Chris Redfield",
+   "Jake Muller",
+   "Sherry Birkin",
+   "Ada Wong",
+   "Helena Harper"
+  ]
+ ],
+ "Resident Evil Code: Veronica X": [
+  "residentevil",
+  [
+   "Claire Redfield",
+   "Chris Redfield",
+   "Steve Burnside",
+   "Alexia Ashford"
+  ]
+ ],
+ "Resident Evil Revelations": [
+  "residentevil",
+  [
+   "Jill Valentine",
+   "Chris Redfield",
+   "Parker Luciani"
+  ]
+ ],
+ "Resident Evil Revelations 2": [
+  "residentevil",
+  [
+   "Claire Redfield",
+   "Moira Burton",
+   "Barry Burton",
+   "Natalia Korda"
+  ]
+ ],
+ "Grand Theft Auto V": [
+  "gta",
+  [
+   "Michael De Santa",
+   "Franklin Clinton",
+   "Trevor Philips",
+   "Lamar Davis",
+   "Lester Crest"
+  ]
+ ],
+ "Grand Theft Auto Online": [
+  "gta",
+  [
+   "Lester Crest",
+   "Lamar Davis",
+   "Franklin Clinton",
+   "Trevor Philips"
+  ]
+ ],
+ "Grand Theft Auto VI": [
+  "gta",
+  [
+   "Lucia Caminos",
+   "Jason Duval"
+  ]
+ ],
+ "Grand Theft Auto IV": [
+  "gta",
+  [
+   "Niko Bellic",
+   "Roman Bellic",
+   "Johnny Klebitz",
+   "Luis Fernando Lopez"
+  ]
+ ],
+ "Grand Theft Auto: The Trilogy – The Definitive Edition": [
+  "gta",
+  [
+   "Carl Johnson",
+   "Tommy Vercetti",
+   "Claude",
+   "Big Smoke"
+  ]
+ ],
+ "Grand Theft Auto: Liberty City Stories": [
+  "gta",
+  [
+   "Toni Cipriani",
+   "Salvatore Leone"
+  ]
+ ],
+ "God of War": [
+  "godofwar",
+  [
+   "Kratos",
+   "Atreus",
+   "Freya",
+   "Baldur",
+   "Mimir"
+  ]
+ ],
+ "God of War Ragnarök": [
+  "godofwar",
+  [
+   "Kratos",
+   "Atreus",
+   "Freya",
+   "Thor",
+   "Odin",
+   "Angrboda"
+  ]
+ ],
+ "The Last of Us Part I": [
+  "thelastofus",
+  [
+   "Joel Miller",
+   "Ellie Williams",
+   "Tess Servopoulos",
+   "Tommy Miller",
+   "Marlene"
+  ]
+ ],
+ "The Last of Us Part II Remastered": [
+  "thelastofus",
+  [
+   "Ellie Williams",
+   "Abby Anderson",
+   "Joel Miller",
+   "Dina",
+   "Lev"
+  ]
+ ],
+ "Marvel's Spider-Man 2": [
+  "marvel",
+  [
+   "Peter Parker (Earth-1048)",
+   "Miles Morales (Earth-1048)",
+   "Kraven || Sergei Kravinoff (Earth-1048)"
+  ]
+ ],
+ "Marvel's Spider-Man: Miles Morales": [
+  "marvel",
+  [
+   "Miles Morales (Earth-1048)",
+   "Peter Parker (Earth-1048)"
+  ]
+ ],
+ "Marvel's Spider-Man Remastered": [
+  "marvel",
+  [
+   "Peter Parker (Earth-1048)",
+   "Miles Morales (Earth-1048)",
+   "Otto Octavius (Earth-1048)"
+  ]
+ ],
+ "Ghost of Tsushima": [
+  "ghostoftsushima",
+  [
+   "Jin Sakai",
+   "Yuna",
+   "Lord Shimura",
+   "Khotun Khan",
+   "Ishikawa"
+  ]
+ ],
+ "Ghost of Yōtei": [
+  "ghostoftsushima",
+  [
+   "Atsu"
+  ]
+ ],
+ "Horizon Forbidden West": [
+  "horizon",
+  [
+   "Aloy",
+   "Varl",
+   "Zo",
+   "Kotallo",
+   "Erend",
+   "Sylens"
+  ]
+ ],
+ "Horizon Zero Dawn Remastered": [
+  "horizon",
+  [
+   "Aloy",
+   "Rost",
+   "Sylens",
+   "Erend",
+   "Varl"
+  ]
+ ],
+ "Uncharted: Coleção Legado dos Ladrões": [
+  "uncharted",
+  [
+   "Nathan Drake",
+   "Chloe Frazer",
+   "Samuel Drake",
+   "Elena Fisher",
+   "Victor Sullivan"
+  ]
+ ],
+ "Elden Ring": [
+  "eldenring",
+  [
+   "Malenia, Blade of Miquella",
+   "Ranni the Witch",
+   "Melina",
+   "Starscourge Radahn",
+   "Messmer the Impaler",
+   "Godfrey, First Elden Lord"
+  ]
+ ],
+ "Elden Ring Nightreign": [
+  "eldenring",
+  [
+   "Malenia, Blade of Miquella",
+   "Starscourge Radahn",
+   "Melina"
+  ]
+ ],
+ "Sekiro: Shadows Die Twice": [
+  "sekiro",
+  [
+   "Wolf",
+   "Genichiro Ashina",
+   "Isshin Ashina",
+   "Kuro",
+   "Emma"
+  ]
+ ],
+ "Bloodborne": [
+  "bloodborne",
+  [
+   "Lady Maria of the Astral Clocktower",
+   "Gehrman, The First Hunter",
+   "Eileen the Crow",
+   "The Doll || Doll || Plain Doll"
+  ]
+ ],
+ "Dark Souls III": [
+  "darksouls",
+  [
+   "Fire Keeper (Dark Souls III)",
+   "Soul of Cinder",
+   "Patches",
+   "Siegward of Catarina"
+  ]
+ ],
+ "Cyberpunk 2077": [
+  "cyberpunk",
+  [
+   "V",
+   "Johnny Silverhand",
+   "Judy Álvarez",
+   "Panam Palmer",
+   "Jackie Welles",
+   "Kerry Eurodyne"
+  ]
+ ],
+ "The Witcher 3: Wild Hunt": [
+  "witcher",
+  [
+   "Geralt of Rivia",
+   "Ciri",
+   "Yennefer of Vengerberg",
+   "Triss Merigold",
+   "Dandelion"
+  ]
+ ],
+ "Red Dead Redemption 2": [
+  "reddeadredemption",
+  [
+   "Arthur Morgan",
+   "John Marston",
+   "Dutch van der Linde",
+   "Sadie Adler",
+   "Charles Smith"
+  ]
+ ],
+ "Red Dead Redemption": [
+  "reddeadredemption",
+  [
+   "John Marston",
+   "Bonnie MacFarlane",
+   "Bill Williamson",
+   "Abigail Marston"
+  ]
+ ],
+ "Baldur's Gate 3": [
+  "forgottenrealms",
+  [
+   "Astarion",
+   "Shadowheart",
+   "Karlach",
+   "Lae'zel",
+   "Gale || Gale Dekarios",
+   "Wyll || Wyll Ravengard"
+  ]
+ ],
+ "Hogwarts Legacy": [
+  "harrypotter",
+  [
+   "Sebastian Sallow",
+   "Natsai Onai",
+   "Poppy Sweeting",
+   "Ominis Gaunt"
+  ]
+ ],
+ "Final Fantasy VII Rebirth": [
+  "finalfantasy",
+  [
+   "Cloud Strife",
+   "Tifa Lockhart",
+   "Aerith Gainsborough",
+   "Sephiroth",
+   "Barret Wallace",
+   "Yuffie Kisaragi"
+  ]
+ ],
+ "Final Fantasy VII Remake Intergrade": [
+  "finalfantasy",
+  [
+   "Cloud Strife",
+   "Tifa Lockhart",
+   "Aerith Gainsborough",
+   "Barret Wallace",
+   "Sephiroth",
+   "Yuffie Kisaragi"
+  ]
+ ],
+ "Final Fantasy VII": [
+  "finalfantasy",
+  [
+   "Cloud Strife",
+   "Tifa Lockhart",
+   "Aerith Gainsborough",
+   "Sephiroth",
+   "Vincent Valentine"
+  ]
+ ],
+ "Crisis Core – Final Fantasy VII – Reunion": [
+  "finalfantasy",
+  [
+   "Zack Fair",
+   "Cloud Strife",
+   "Aerith Gainsborough",
+   "Genesis Rhapsodos",
+   "Sephiroth"
+  ]
+ ],
+ "Final Fantasy VII Ever Crisis": [
+  "finalfantasy",
+  [
+   "Cloud Strife",
+   "Tifa Lockhart",
+   "Aerith Gainsborough",
+   "Zack Fair",
+   "Sephiroth"
+  ]
+ ],
+ "Final Fantasy XVI": [
+  "finalfantasy",
+  [
+   "Clive Rosfield",
+   "Jill Warrick",
+   "Joshua Rosfield",
+   "Cidolfus Telamon"
+  ]
+ ],
+ "Final Fantasy X | X-2 HD Remaster": [
+  "finalfantasy",
+  [
+   "Tidus",
+   "Yuna",
+   "Auron",
+   "Rikku",
+   "Lulu",
+   "Wakka"
+  ]
+ ],
+ "Final Fantasy XV": [
+  "finalfantasy",
+  [
+   "Noctis Lucis Caelum",
+   "Prompto Argentum",
+   "Gladiolus Amicitia",
+   "Ignis Scientia",
+   "Lunafreya Nox Fleuret"
+  ]
+ ],
+ "Final Fantasy XII: The Zodiac Age": [
+  "finalfantasy",
+  [
+   "Vaan",
+   "Ashe",
+   "Balthier",
+   "Fran || Fran (Final Fantasy XII)",
+   "Basch fon Ronsenburg"
+  ]
+ ],
+ "Final Fantasy XIII": [
+  "finalfantasy",
+  [
+   "Lightning || Lightning (Final Fantasy XIII) || Claire Farron",
+   "Snow Villiers",
+   "Oerba Dia Vanille",
+   "Oerba Yun Fang",
+   "Hope Estheim",
+   "Sazh Katzroy"
+  ]
+ ],
+ "Final Fantasy XIII-2": [
+  "finalfantasy",
+  [
+   "Serah Farron",
+   "Noel Kreiss",
+   "Lightning || Lightning (Final Fantasy XIII) || Claire Farron",
+   "Caius Ballad"
+  ]
+ ],
+ "Lightning Returns: Final Fantasy XIII": [
+  "finalfantasy",
+  [
+   "Lightning || Lightning (Final Fantasy XIII) || Claire Farron",
+   "Lumina",
+   "Snow Villiers"
+  ]
+ ],
+ "Final Fantasy IX": [
+  "finalfantasy",
+  [
+   "Zidane Tribal",
+   "Garnet Til Alexandros XVII",
+   "Vivi Orunitia",
+   "Adelbert Steiner",
+   "Kuja"
+  ]
+ ],
+ "Final Fantasy VIII Remastered": [
+  "finalfantasy",
+  [
+   "Squall Leonhart",
+   "Rinoa Heartilly",
+   "Seifer Almasy",
+   "Quistis Trepe",
+   "Laguna Loire"
+  ]
+ ],
+ "Final Fantasy XIV Online": [
+  "finalfantasy",
+  [
+   "Y'shtola Rhul",
+   "Alphinaud Leveilleur",
+   "Alisaie Leveilleur",
+   "Thancred Waters",
+   "G'raha Tia"
+  ]
+ ],
+ "Final Fantasy Type-0 HD": [
+  "finalfantasy",
+  [
+   "Ace (Type-0)",
+   "Machina Kunagiri",
+   "Rem Tokimiya"
+  ]
+ ],
+ "Stranger of Paradise: Final Fantasy Origin": [
+  "finalfantasy",
+  [
+   "Jack Garland",
+   "Garland || Garland (Final Fantasy)"
+  ]
+ ],
+ "Dissidia Final Fantasy NT": [
+  "finalfantasy",
+  [
+   "Warrior of Light || Warrior of Light (Final Fantasy)",
+   "Cloud Strife",
+   "Squall Leonhart",
+   "Lightning || Lightning (Final Fantasy XIII) || Claire Farron",
+   "Terra Branford"
+  ]
+ ],
+ "World of Final Fantasy": [
+  "finalfantasy",
+  [
+   "Lann",
+   "Reynn"
+  ]
+ ],
+ "Final Fantasy Tactics: The Ivalice Chronicles": [
+  "finalfantasy",
+  [
+   "Ramza Beoulve",
+   "Delita Heiral",
+   "Agrias Oaks"
+  ]
+ ],
+ "Final Fantasy Pixel Remaster (I–VI)": [
+  "finalfantasy",
+  [
+   "Warrior of Light || Warrior of Light (Final Fantasy)",
+   "Cecil Harvey",
+   "Terra Branford",
+   "Bartz Klauser",
+   "Firion"
+  ]
+ ],
+ "Dragon Ball: Sparking! Zero": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Gohan",
+   "Broly",
+   "Goku Black",
+   "Frieza",
+   "Beerus",
+   "Gogeta"
+  ]
+ ],
+ "Dragon Ball FighterZ": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Android 21",
+   "Android 18",
+   "Cell",
+   "Frieza",
+   "Trunks",
+   "Gohan"
+  ]
+ ],
+ "Dragon Ball Z: Kakarot": [
+  "dragonball",
+  [
+   "Goku",
+   "Gohan",
+   "Vegeta",
+   "Piccolo",
+   "Frieza",
+   "Cell",
+   "Majin Buu"
+  ]
+ ],
+ "Dragon Ball Xenoverse 2": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Trunks",
+   "Towa",
+   "Mira",
+   "Beerus"
+  ]
+ ],
+ "Dragon Ball Xenoverse": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Trunks",
+   "Towa",
+   "Mira"
+  ]
+ ],
+ "Dragon Ball: The Breakers": [
+  "dragonball",
+  [
+   "Cell",
+   "Frieza",
+   "Majin Buu",
+   "Goku"
+  ]
+ ],
+ "Super Dragon Ball Heroes: World Mission": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Gogeta",
+   "Vegito",
+   "Broly"
+  ]
+ ],
+ "Dragon Ball Gekishin Squadra": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Piccolo",
+   "Frieza",
+   "Cell"
+  ]
+ ],
+ "Dragon Ball Legends": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Gohan",
+   "Bardock",
+   "Broly",
+   "Frieza",
+   "Cell",
+   "Piccolo"
+  ]
+ ],
+ "Dragon Ball Z: Dokkan Battle": [
+  "dragonball",
+  [
+   "Goku",
+   "Vegeta",
+   "Gohan",
+   "Trunks",
+   "Broly",
+   "Frieza",
+   "Majin Buu",
+   "Android 18"
+  ]
+ ],
+ "Persona 5 Royal": [
+  "megamitensei",
+  [
+   "Joker || Protagonist (Persona 5) || Ren Amamiya",
+   "Ryuji Sakamoto",
+   "Ann Takamaki",
+   "Morgana",
+   "Makoto Niijima",
+   "Futaba Sakura",
+   "Goro Akechi",
+   "Kasumi Yoshizawa"
+  ]
+ ],
+ "Persona 3 Reload": [
+  "megamitensei",
+  [
+   "Makoto Yuki",
+   "Yukari Takeba",
+   "Mitsuru Kirijo",
+   "Aigis",
+   "Junpei Iori",
+   "Akihiko Sanada"
+  ]
+ ],
+ "Persona 4 Golden": [
+  "megamitensei",
+  [
+   "Yu Narukami",
+   "Chie Satonaka",
+   "Yukiko Amagi",
+   "Teddie",
+   "Rise Kujikawa",
+   "Naoto Shirogane"
+  ]
+ ],
+ "Street Fighter 6": [
+  "streetfighter",
+  [
+   "Ryu",
+   "Chun-Li",
+   "Ken Masters",
+   "Cammy",
+   "Luke",
+   "Juri Han"
+  ]
+ ],
+ "Tekken 8": [
+  "tekken",
+  [
+   "Jin Kazama",
+   "Kazuya Mishima",
+   "Reina",
+   "Nina Williams",
+   "Heihachi Mishima"
+  ]
+ ],
+ "Mortal Kombat 1": [
+  "mortalkombat",
+  [
+   "Scorpion || Scorpion (MK1) || Hanzo Hasashi",
+   "Sub-Zero || Sub-Zero (MK1) || Bi-Han || Kuai Liang",
+   "Raiden",
+   "Liu Kang",
+   "Kitana",
+   "Mileena"
+  ]
+ ],
+ "Devil May Cry 5": [
+  "devilmaycry",
+  [
+   "Dante",
+   "Nero",
+   "V",
+   "Vergil",
+   "Lady",
+   "Trish"
+  ]
+ ],
+ "Monster Hunter Wilds": [
+  "monsterhunter",
+  [
+   "Arkveld",
+   "Rey Dau",
+   "Rathalos",
+   "Gore Magala"
+  ]
+ ],
+ "Monster Hunter: World": [
+  "monsterhunter",
+  [
+   "Rathalos",
+   "Nergigante",
+   "Zinogre",
+   "Kirin"
+  ]
+ ],
+ "Hollow Knight": [
+  "hollowknight",
+  [
+   "The Knight",
+   "Hornet",
+   "Quirrel",
+   "The Radiance",
+   "Grimm"
+  ]
+ ],
+ "Hollow Knight: Silksong": [
+  "hollowknight",
+  [
+   "Hornet",
+   "Lace",
+   "Shakra"
+  ]
+ ],
+ "Hades": [
+  "hades",
+  [
+   "Zagreus",
+   "Megaera",
+   "Thanatos",
+   "Dusa",
+   "Hades",
+   "Persephone"
+  ]
+ ],
+ "Hades II": [
+  "hades",
+  [
+   "Melinoë",
+   "Hecate",
+   "Chronos",
+   "Moros",
+   "Odysseus"
+  ]
+ ],
+ "Celeste": [
+  "celestegame",
+  [
+   "Madeline",
+   "Badeline",
+   "Theo",
+   "Granny"
+  ]
+ ],
+ "Cuphead": [
+  "cuphead",
+  [
+   "Cuphead || Cuphead (character)",
+   "Mugman",
+   "Ms. Chalice",
+   "The Devil",
+   "King Dice"
+  ]
+ ],
+ "Halo Infinite": [
+  "halo",
+  [
+   "John-117",
+   "The Weapon",
+   "Escharum",
+   "Fernando Esparza"
+  ]
+ ],
+ "Halo: The Master Chief Collection": [
+  "halo",
+  [
+   "John-117",
+   "Cortana",
+   "Thel 'Vadam",
+   "Avery Johnson"
+  ]
+ ],
+ "Gears 5": [
+  "gearsofwar",
+  [
+   "Kait Diaz",
+   "Marcus Fenix",
+   "Del || Delmont Walker || Del Walker",
+   "JD Fenix"
+  ]
+ ],
+ "Gears of War: Reloaded": [
+  "gearsofwar",
+  [
+   "Marcus Fenix",
+   "Dominic Santiago",
+   "Augustus Cole",
+   "Damon Baird"
+  ]
+ ],
+ "Starfield": [
+  "starfield",
+  [
+   "Sarah Morgan",
+   "Sam Coe",
+   "Barrett",
+   "Andreja"
+  ]
+ ],
+ "Fortnite": [
+  "fortnite",
+  [
+   "Jonesy || Jonesy the First",
+   "Peely",
+   "Fishstick",
+   "Raven",
+   "Midas",
+   "Drift"
+  ]
+ ],
+ "Apex Legends": [
+  "apexlegends",
+  [
+   "Wraith",
+   "Bloodhound",
+   "Lifeline",
+   "Pathfinder",
+   "Octane",
+   "Mirage"
+  ]
+ ],
+ "Valorant": [
+  "valorant",
+  [
+   "Jett",
+   "Phoenix",
+   "Sage",
+   "Reyna",
+   "Sova",
+   "Omen",
+   "Raze",
+   "Killjoy"
+  ]
+ ],
+ "Marvel Rivals": [
+  "marvelrivals",
+  [
+   "Spider-Man",
+   "Iron Man",
+   "Storm",
+   "Hulk",
+   "Luna Snow",
+   "Magik"
+  ]
+ ],
+ "Genshin Impact": [
+  "genshin-impact",
+  [
+   "Aether",
+   "Paimon",
+   "Raiden Shogun",
+   "Hu Tao",
+   "Zhongli",
+   "Furina",
+   "Nahida"
+  ]
+ ],
+ "Minecraft": [
+  "minecraft",
+  [
+   "Steve",
+   "Alex",
+   "Creeper",
+   "Enderman",
+   "Ender Dragon"
+  ]
+ ],
+ "Cult of the Lamb": [
+  "cult-of-the-lamb",
+  [
+   "The Lamb",
+   "Ratau",
+   "The One Who Waits"
+  ]
+ ],
+ "Dead by Daylight": [
+  "deadbydaylight",
+  [
+   "The Trapper",
+   "The Huntress",
+   "The Nurse",
+   "Meg Thomas",
+   "Dwight Fairfield",
+   "The Ghost Face"
+  ]
+ ],
+ "Palworld": [
+  "palworld",
+  [
+   "Lamball",
+   "Cattiva",
+   "Anubis",
+   "Jetragon",
+   "Depresso",
+   "Chikipi"
+  ]
+ ],
+ "Subnautica": [
+  "subnautica",
+  [
+   "Reaper Leviathan",
+   "Peeper",
+   "Sea Emperor Leviathan",
+   "Cuddlefish"
+  ]
+ ],
+ "Death Stranding Director's Cut": [
+  "deathstranding",
+  [
+   "Sam Porter Bridges",
+   "Fragile",
+   "Higgs Monaghan",
+   "Die-Hardman",
+   "Amelie"
+  ]
+ ],
+ "Death Stranding 2: On the Beach": [
+  "deathstranding",
+  [
+   "Sam Porter Bridges",
+   "Fragile",
+   "Higgs Monaghan",
+   "Tomorrow"
+  ]
+ ],
+ "Detroit: Become Human": [
+  "detroitbecomehuman",
+  [
+   "Connor",
+   "Kara",
+   "Markus",
+   "Hank Anderson",
+   "Alice"
+  ]
+ ],
+ "Days Gone": [
+  "daysgone",
+  [
+   "Deacon St. John",
+   "Boozer",
+   "Sarah Whitaker"
+  ]
+ ],
+ "Hitman World of Assassination": [
+  "hitman",
+  [
+   "Agent 47",
+   "Diana Burnwood"
+  ]
+ ],
+ "Hitman: World of Assassination": [
+  "hitman",
+  [
+   "Agent 47",
+   "Diana Burnwood"
+  ]
+ ],
+ "Assassin's Creed Mirage": [
+  "assassinscreed",
+  [
+   "Basim || Basim Ibn Ishaq (Mirage)"
+  ]
+ ],
+ "Assassin's Creed Odyssey": [
+  "assassinscreed",
+  [
+   "Kassandra",
+   "Alexios"
+  ]
+ ],
+ "Assassin's Creed Shadows": [
+  "assassinscreed",
+  [
+   "Naoe",
+   "Yasuke"
+  ]
+ ],
+ "Metal Gear Solid Delta: Snake Eater": [
+  "metalgear",
+  [
+   "Naked Snake",
+   "The Boss",
+   "EVA",
+   "Revolver Ocelot",
+   "Volgin"
+  ]
+ ],
+ "Mafia: The Old Country": [
+  "mafiagame",
+  [
+   "Enzo Favara"
+  ]
+ ],
+ "Borderlands 4": [
+  "borderlands",
+  [
+   "Rafa",
+   "Vex",
+   "Amon",
+   "Harlowe"
+  ]
+ ],
+ "Black Myth: Wukong": [
+  "blackmythwukong",
+  [
+   "Destined One",
+   "Erlang Shen"
+  ]
+ ],
+ "Lies of P": [
+  "liesofp",
+  [
+   "P || Pinocchio || P (Lies of P)",
+   "Geppetto",
+   "Sophia"
+  ]
+ ],
+ "Stellar Blade": [
+  "stellarblade",
+  [
+   "EVE",
+   "Lily",
+   "Adam"
+  ]
+ ],
+ "Clair Obscur: Expedition 33": [
+  "clairobscur",
+  [
+   "Gustave",
+   "Maelle",
+   "Lune",
+   "Sciel",
+   "Verso",
+   "Monoco"
+  ]
+ ],
+ "Kingdom Come: Deliverance II": [
+  "kingdom-come-deliverance",
+  [
+   "Henry",
+   "Hans Capon"
+  ]
+ ],
+ "The Elder Scrolls V: Skyrim": [
+  "elderscrolls",
+  [
+   "Alduin",
+   "Serana",
+   "Lydia || Lydia (Skyrim)",
+   "Paarthurnax"
+  ]
+ ],
+ "Fallout 4": [
+  "fallout",
+  [
+   "Nick Valentine",
+   "Piper Wright",
+   "Preston Garvey",
+   "Dogmeat (Fallout 4)"
+  ]
+ ],
+ "Mass Effect Legendary Edition": [
+  "masseffect",
+  [
+   "Commander Shepard",
+   "Garrus Vakarian",
+   "Liara T'Soni",
+   "Tali'Zorah",
+   "Urdnot Wrex"
+  ]
+ ],
+ "Diablo IV": [
+  "diablo",
+  [
+   "Lilith",
+   "Inarius",
+   "Lorath Nahr"
+  ]
+ ],
+ "Dead Space": [
+  "deadspace",
+  [
+   "Isaac Clarke",
+   "Ellie Langford"
+  ]
+ ],
+ "Alan Wake 2": [
+  "alanwake",
+  [
+   "Alan Wake",
+   "Saga Anderson"
+  ]
+ ],
+ "Silent Hill 2": [
+  "silenthill",
+  [
+   "James Sunderland",
+   "Maria",
+   "Pyramid Head",
+   "Angela Orosco"
+  ]
+ ],
+ "Silent Hill f": [
+  "silenthill",
+  [
+   "Hinako Shimizu"
+  ]
+ ],
+ "Star Wars Jedi: Survivor": [
+  "starwars",
+  [
+   "Cal Kestis",
+   "BD-1",
+   "Merrin",
+   "Cere Junda"
+  ]
+ ],
+ "LEGO Star Wars: A Saga Skywalker": [
+  "starwars",
+  [
+   "Luke Skywalker",
+   "Darth Vader",
+   "Rey Skywalker",
+   "Grogu",
+   "Han Solo"
+  ]
+ ],
+ "Batman: Arkham Knight": [
+  "arkhamcity",
+  [
+   "Batman",
+   "Arkham Knight",
+   "Joker",
+   "Harley Quinn",
+   "Scarecrow"
+  ]
+ ],
+ "Prince of Persia: The Lost Crown": [
+  "princeofpersia",
+  [
+   "Sargon"
+  ]
+ ],
+ "Sonic X Shadow Generations": [
+  "sonic",
+  [
+   "Shadow the Hedgehog",
+   "Sonic the Hedgehog",
+   "Black Doom"
+  ]
+ ],
+ "Crash Bandicoot N. Sane Trilogy": [
+  "crashbandicoot",
+  [
+   "Crash Bandicoot",
+   "Coco Bandicoot",
+   "Doctor Neo Cortex",
+   "Aku Aku"
+  ]
+ ],
+ "NieR:Automata": [
+  "nier",
+  [
+   "YoRHa No.2 Type B",
+   "YoRHa No.9 Type S",
+   "A2"
+  ]
+ ],
+ "Yakuza 0": [
+  "yakuza",
+  [
+   "Kazuma Kiryu",
+   "Goro Majima"
+  ]
+ ],
+ "Like a Dragon: Infinite Wealth": [
+  "yakuza",
+  [
+   "Ichiban Kasuga",
+   "Kazuma Kiryu"
+  ]
+ ],
+ "Tales of Arise": [
+  "aselia",
+  [
+   "Alphen",
+   "Shionne"
+  ]
+ ],
+ "Hi-Fi Rush": [
+  "hi-fi-rush",
+  [
+   "Chai",
+   "Peppermint",
+   "808",
+   "Korsica"
+  ]
+ ],
+ "Doom: The Dark Ages": [
+  "doom",
+  [
+   "Doom Slayer || Doomguy || The Doom Slayer"
+  ]
+ ],
+ "Doom Eternal": [
+  "doom",
+  [
+   "Doom Slayer || Doomguy || The Doom Slayer",
+   "Khan Maykr"
+  ]
+ ],
+ "Ori and the Will of the Wisps": [
+  "ori",
+  [
+   "Ori",
+   "Ku"
+  ]
+ ],
+ "Ratchet & Clank: Em Uma Outra Dimensão": [
+  "ratchetandclank",
+  [
+   "Ratchet",
+   "Clank",
+   "Rivet",
+   "Kit"
+  ]
+ ],
+ "Returnal": [
+  "returnal",
+  [
+   "Selene || Selene Vassos"
+  ]
+ ],
+ "Overwatch": [
+  "overwatch",
+  [
+   "Tracer"
+  ]
+ ],
+ "Counter-Strike 2": [
+  "counterstrike",
+  [
+   "Counter-Terrorists",
+   "Terrorists"
+  ]
+ ]
 }

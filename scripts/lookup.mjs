@@ -51,7 +51,8 @@ if (input.fandom) {
   const spec = JSON.parse(fs.readFileSync(ROOT + "scripts/characters-input.json", "utf8"));
   const titlesInCatalog = new Set(games.map(g => g.t));
   const byWiki = {};
-  for (const [game, [wiki, names]] of Object.entries(spec)) if (titlesInCatalog.has(game)) names.forEach(n => (byWiki[wiki] ||= new Set()).add(n));
+  const alts = n => n.split("||").map(x => x.trim()).filter(Boolean);
+  for (const [game, [wiki, names]] of Object.entries(spec)) if (titlesInCatalog.has(game)) names.forEach(n => alts(n).forEach(t => (byWiki[wiki] ||= new Set()).add(t)));
   const imgs = {}, misses = [];
   for (const [wiki, set] of Object.entries(byWiki)) {
     const names = [...set]; imgs[wiki] = {};
@@ -69,10 +70,12 @@ if (input.fandom) {
   const out = {};
   for (const [game, [wiki, names]] of Object.entries(spec)) {
     if (!titlesInCatalog.has(game)) continue;
-    const list = names.filter(n => imgs[wiki] && imgs[wiki][n]).map(n => ({ n: n.replace(/\s*\(.*\)$/, ""), img: imgs[wiki][n], src: wiki }));
+    const list = names.map(n => { const a = alts(n), hit = a.find(t => imgs[wiki] && imgs[wiki][t]); return hit ? { n: a[0].replace(/\s*\(.*\)$/, ""), img: imgs[wiki][hit], src: wiki } : null; }).filter(Boolean);
     if (list.length) out[game] = list;
   }
-  fs.writeFileSync(ROOT + "data/characters.json", JSON.stringify({ updated: result.updated, source: "fandom", games: out, misses }, null, 0));
+  const found = new Set(); for (const [w, m] of Object.entries(imgs)) for (const t of Object.keys(m)) found.add(w + ": " + t);
+  const realMisses = []; for (const [game, [wiki, names]] of Object.entries(spec)) if (titlesInCatalog.has(game)) names.forEach(n => { if (!alts(n).some(t => found.has(wiki + ": " + t))) realMisses.push(wiki + ": " + n); });
+  fs.writeFileSync(ROOT + "data/characters.json", JSON.stringify({ updated: result.updated, source: "fandom", games: out, misses: [...new Set(realMisses)], errors: misses.filter(m => /ERRO/.test(m)) }, null, 0));
   console.log("jogos:", Object.keys(out).length, "faltaram:", misses.length);
   process.exit(0);
 }
