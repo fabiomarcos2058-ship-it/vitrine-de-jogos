@@ -1,0 +1,14 @@
+# O site é publicado de graça pelo GitHub Pages a cada mudança no repositório.
+# A Netlify só repassa o endereço asfestore.netlify.app para lá, sem publicar de novo
+# (cada publicação na Netlify gasta créditos do plano grátis).
+
+[build]
+  publish = "."
+  # Só publica na Netlify quando este arquivo mudar; qualquer outra mudança é ignorada.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- netlify.toml"
+
+[[redirects]]
+  from = "/*"
+  to = "https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/:splat"
+  status = 200
+  force = true
