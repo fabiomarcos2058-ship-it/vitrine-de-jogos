@@ -801,7 +801,7 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 </dialog>
 
 <script src="firebase-config.js?v=2"></script>
-<script src="games.js?v=20261029-zera1"></script>
+<script src="games.js?v=20261029-zera2"></script>
 <script>
 const STORES = [
   { k: "ps", name: "PlayStation Store", short: "PS5", label: "PS5", kind: "Console PlayStation", url: q => "https://store.playstation.com/pt-br/search/" + encodeURIComponent(q) },
@@ -816,6 +816,8 @@ const PLATFORM_KEYS = { ps: ["ps"], xb: ["xb"], pc: ["st", "ep"], mob: ["gp", "a
 const games = window.GAMES.map(g => ({ ...g, id: "j-" + g.t.normalize("NFD").replace(/[^\w\s-]/g, "").trim().toLowerCase().replace(/\s+/g, "-") }));
 const byId = Object.fromEntries(games.map(g => [g.id, g]));
 const covers = {};
+const ownCovers = () => games.forEach(g => { if (g.img) covers[g.t] = g.img; });
+ownCovers();
 document.getElementById("total").textContent = games.length;
 
 const brl = v => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -2516,6 +2518,7 @@ async function loadCovers() {
       });
     } catch (e) { /* sem conexão com a Wikipédia: ficam as capas ilustradas */ }
   }
+  ownCovers();
   render();
   renderShelves();
   renderTray();
