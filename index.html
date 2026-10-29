@@ -168,7 +168,7 @@ select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
 .shelf-head h3 { font: 800 clamp(18px, 2.3vw, 24px)/1.1 var(--display); margin: 0; letter-spacing: -0.035em; }
 .shelf-head p { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
-.see-all { flex-shrink: 0; border: 0; background: transparent; color: var(--brand-text); font: 700 13.5px var(--body); cursor: pointer; padding: 6px 2px; white-space: nowrap; }
+.see-all { flex-shrink: 0; border: 0; background: transparent; color: var(--muted); font: 700 13.5px var(--body); cursor: pointer; padding: 6px 2px; white-space: nowrap; }
 .see-all:hover { text-decoration: underline; }
 .rail { display: grid; grid-auto-flow: column; grid-auto-columns: 172px; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 10px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .rail > * { scroll-snap-align: start; }
@@ -178,7 +178,7 @@ select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body
 .catalog { padding-block: 30px 56px; scroll-margin-top: 140px; }
 .cat-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
 .cat-head h2 { font: 800 clamp(22px, 3vw, 32px)/1.05 var(--display); margin: 0; letter-spacing: -0.015em; text-transform: uppercase; }
-.cat-head .kind { display: block; font: 600 12px var(--body); color: var(--brand-text); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.cat-head .kind { display: block; font: 600 12px var(--body); color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
 .cat-meta { color: var(--muted); font-size: 13.5px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .cat-meta b { color: var(--fg); }
 .legend { display: inline-flex; gap: 12px; }
@@ -325,7 +325,7 @@ footer .brand { margin-bottom: 10px; }
 @media (max-width: 900px) { .promos { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(78%, 1fr); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; } .promos::-webkit-scrollbar { display: none; } .promos > * { scroll-snap-align: start; } }
 .promo { position: relative; overflow: hidden; display: grid; gap: 6px; align-content: start; text-align: left; padding: 18px 20px 20px; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; min-height: 132px; isolation: isolate; }
 .promo:hover { border-color: var(--muted); }
-.promo .pk { font: 700 10.5px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-text); }
+.promo .pk { font: 700 10.5px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .promo b { font: 700 18px/1.15 var(--display); letter-spacing: -0.01em; }
 .promo span.sub { font-size: 13.5px; color: var(--muted); max-width: 34ch; }
 .promo .go-arrow { position: absolute; right: 16px; bottom: 14px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font-weight: 800; }
@@ -388,7 +388,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .sh-head { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 12px; justify-content: space-between; padding: 16px 20px; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 @media (max-width: 680px) { .sh-head { padding: calc(14px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 14px max(16px, env(safe-area-inset-left, 0px)); } }
 .sh-head h2 { margin: 0; font: 800 clamp(18px, 2.6vw, 24px)/1.1 var(--display); text-transform: uppercase; letter-spacing: -0.01em; }
-.sh-head .kicker { display: block; font: 700 10.5px var(--display); letter-spacing: 0.16em; color: var(--brand-text); margin-bottom: 4px; }
+.sh-head .kicker { display: block; font: 700 10.5px var(--display); letter-spacing: 0.16em; color: var(--muted); margin-bottom: 4px; }
 .sh-body { padding: 20px 20px 32px; }
 @media (max-width: 680px) { .sh-body { padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(32px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); } }
 .lede-sm { color: var(--muted); margin: 0 0 18px; max-width: 64ch; }
@@ -471,7 +471,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .countdown b { display: block; font: 800 26px var(--mono); font-variant-numeric: tabular-nums; }
 .countdown small { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
 .cal-hero { display: grid; gap: 4px; padding: 18px; border-radius: 22px; background: color-mix(in srgb, var(--brand) 10%, var(--surface)); border: 1px solid var(--brand); margin-bottom: 8px; }
-.cal-hero .k { font: 700 10.5px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-text); }
+.cal-hero .k { font: 700 10.5px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .cal-hero h3 { margin: 0; font: 800 clamp(20px, 3vw, 28px)/1.1 var(--display); text-transform: uppercase; }
 
 /* guias */
@@ -479,7 +479,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .g-tabs::-webkit-scrollbar { display: none; }
 .g-tabs button { flex-shrink: 0; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 9px 16px; font-weight: 700; font-size: 13.5px; cursor: pointer; }
 .g-tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.g-group h4 { margin: 24px 0 10px; font: 700 12px var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-text); }
+.g-group h4 { margin: 24px 0 10px; font: 700 12px var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .tl li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
 .tl .rail-dot { position: relative; display: flex; justify-content: center; }
@@ -771,6 +771,35 @@ body { top: 0 !important; }
   .icon-btn.me .avatar { --s: 40px; }
 }
 
+/* ---------- limpeza visual ---------- */
+.see-all:hover { color: var(--fg); text-decoration: none; }
+.cover .mono { display: none; }
+.card { gap: 8px; }
+.c-name { font-size: 14px; }
+.c-price { justify-content: flex-start; align-items: baseline; gap: 6px; margin-top: 3px; flex-wrap: wrap; }
+.c-price b { font-size: 14.5px; }
+.c-price s { font-size: 11.5px; }
+.c-price small { display: inline; font-size: 11.5px; }
+.trailer .play { background: rgba(255,255,255,0.92); color: #0D0F14; }
+.shop.best { border-color: color-mix(in srgb, var(--fg) 28%, var(--line)); box-shadow: none; }
+.see-more { grid-column: 1 / -1; justify-self: center; margin-top: 10px; min-height: 48px; padding: 12px 26px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; font-size: 15px; cursor: pointer; }
+.see-more:hover { background: var(--raised); }
+/* página do jogo */
+.d-facts.line { display: block; font-size: 13.5px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+.d-facts.line button { padding: 0; border: 0; background: transparent; border-radius: 0; font-weight: 600; font-size: 13.5px; color: rgba(255,255,255,0.88); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); text-underline-offset: 3px; }
+.d-facts.line button:hover { background: transparent; color: #FFFFFF; text-decoration-color: #FFFFFF; }
+.d-facts.line button::after { content: none; }
+.d-facts.line .sep { margin: 0 7px; opacity: 0.45; padding: 0; background: none; border: 0; border-radius: 0; font-size: 13.5px; }
+.d-actions { flex-wrap: nowrap; }
+.d-actions .act { flex: 1 1 0; justify-content: center; min-width: 0; white-space: nowrap; }
+@media (max-width: 680px) { .d-actions .act { padding: 10px 6px; font-size: 12.5px; gap: 5px; } .d-actions .act svg { width: 14px; height: 14px; flex-shrink: 0; } }
+.d-best { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 16px 18px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+.d-best small { display: block; font-size: 12.5px; color: var(--muted); }
+.d-best b { font: 800 24px var(--mono); }
+.d-best s { font: 600 13px var(--mono); color: var(--faint); margin-left: 8px; }
+.d-best .off { font: 800 12px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 3px 8px; border-radius: 999px; margin-left: 8px; vertical-align: 3px; }
+.go-note { display: none; }
+
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -971,23 +1000,21 @@ function platsShort(g) { return STORES.filter(s => has(g.p[s.k])).map(s => s.sho
 function cardHTML(g, keys) {
   const best = cheapest(g, keys);
   let price;
-  if (g.pre) price = `<div><small>Lançamento</small><b>${g.pre.slice(0, 5)}</b></div>`;
+  if (g.pre) price = `<b>Pré-venda</b><small>chega ${g.pre.slice(0, 5)}</small>`;
   else if (best) {
     const lv = g.live && g.live[best.s.k];
     const onSale = lv && lv.pct > 0 && lv.f > 0;
-    price = `<div><small>${best.v === 0 ? "Jogue de graça" : onSale ? `De <s>${brl(lv.b)}</s>` : "A partir de"}</small><b class="${best.v === 0 ? "free" : onSale ? "now-sale" : ""}">${priceText(best.v)}</b></div>`;
+    price = `<b class="${best.v === 0 ? "free" : onSale ? "now-sale" : ""}">${priceText(best.v)}</b>${onSale ? `<s>${brl(lv.b)}</s>` : ""}`;
   }
-  else if (Object.values(g.p).includes("Netflix")) price = `<div><small>Disponível via</small><b>Netflix</b></div>`;
-  else price = `<div><small>Preço</small><b>Ver na loja</b></div>`;
+  else if (Object.values(g.p).includes("Netflix")) price = `<b>Netflix</b>`;
+  else price = `<b>Ver na loja</b>`;
   const sp = maxSale(g, keys);
   const extras = ringHTML(g) + (sp ? `<span class="salepill" aria-label="${sp}% de desconto">-${sp}%</span>` : g.pre ? `<span class="tagpill">Pré-venda</span>` : g.y >= 2026 ? `<span class="tagpill">Novo</span>` : "") + (favs.has(g.id) ? `<span class="favpill" aria-label="Favorito">♥</span>` : "");
   return `<button type="button" class="card" data-id="${g.id}" aria-label="Ver detalhes de ${esc(g.t)}">
     ${coverHTML(g, extras)}
     <div>
       <div class="c-name notranslate" translate="no">${esc(g.t)}</div>
-      <div class="c-meta">${g.y} · ${esc(g.g)}</div>
       <div class="c-price">${price}</div>
-      <div class="c-plats">${platsShort(g)}</div>
     </div>
   </button>`;
 }
@@ -1083,7 +1110,7 @@ setInterval(renderLiveChip, 60 * 1000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && LIVE && Date.now() - new Date(LIVE.updated) > 20 * 60 * 1000) loadLive(); });
 
 // ---------- estado, favoritos, listas ----------
-const state = { q: "", plat: "all", genre: "", sort: "score", list: "", tag: null };
+const state = { q: "", plat: "all", genre: "", sort: "score", list: "", tag: null, all: false };
 const TAG_NAMES = { y: "Ano", d: "Estúdio", f: "Série" };
 function tagMatch(g, t) { return t.k === "y" ? String(g.y) === String(t.v) : t.k === "d" ? g.d === t.v : t.k === "f" ? g.f === t.v : true; }
 function applyTag(k, v) {
@@ -1183,7 +1210,8 @@ function render() {
       ? `<div class="empty"><b>Nenhum favorito ainda</b>Abra um jogo e toque em “Favoritar” para guardar aqui.</div>`
       : `<div class="empty"><b>Nenhum jogo encontrado</b>Tente outro nome ou limpe os filtros.</div>`;
   } else {
-    grid.innerHTML = list.map(g => cardHTML(g, keys)).join("");
+    const teaser = !filtered && !state.all && list.length > 12;
+    grid.innerHTML = (teaser ? list.slice(0, 12) : list).map(g => cardHTML(g, keys)).join("") + (teaser ? `<button type="button" class="see-more" id="see-all-games">Ver todos os ${list.length} jogos</button>` : "");
   }
   const fc = document.getElementById("fav-count");
   fc.hidden = favs.size === 0; fc.textContent = favs.size;
@@ -1223,8 +1251,7 @@ const SHELVES = [
   { k: "sale", title: "Em promoção agora", sub: "Descontos ativos nas lojas, do maior para o menor", pick: () => games.filter(g => maxSale(g) > 0).sort((a, b) => maxSale(b) - maxSale(a)) },
   { k: "new", title: "Lançamentos", sub: "O que saiu em 2025 e 2026", pick: () => games.filter(g => g.y >= 2025).sort((a, b) => b.y - a.y || (b.n ?? 0) - (a.n ?? 0)) },
   { k: "top90", title: "Aclamados pela crítica", sub: "Nota 90 ou mais", pick: () => games.filter(g => g.n >= 90).sort((a, b) => b.n - a.n) },
-  { k: "free", title: "Grátis para jogar", sub: "Comece sem gastar nada", pick: () => games.filter(g => Object.values(g.p).includes(0)) },
-  { k: "under100", title: "Até R$ 100", sub: "Clássicos e indies em conta", pick: () => games.filter(g => minAll(g) > 0 && minAll(g) <= 100).sort((a, b) => (b.n ?? 0) - (a.n ?? 0)) }
+  { k: "free", title: "Grátis para jogar", sub: "Comece sem gastar nada", pick: () => games.filter(g => Object.values(g.p).includes(0)) }
 ];
 const MONTHS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
 const MONTHS_FULL = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
@@ -1279,13 +1306,15 @@ function renderShelves() {
         <span class="ei" style="${x.img ? `background-image:url('${x.img}')` : ""}"><span class="salepill">-${x.pct}%</span></span>
         <span class="eb"><span class="et">${esc(x.name)}</span><span class="ep"><s>${brl(x.b)}</s>${brl(x.f)}</span></span></a>`).join("")}</div>
     </section>` : "";
-  document.getElementById("shelves").innerHTML = SHELVES.filter(s => s.pick().length).map((s, i) => {
-    const items = s.pick().slice(0, s.k === "sale" ? 20 : 14);
+  const used = new Set();
+  document.getElementById("shelves").innerHTML = SHELVES.map(s => ({ s, items: s.pick().filter(g => !used.has(g.id)).slice(0, s.k === "sale" ? 12 : 10) })).filter(x => x.items.length).map(({ s, items }) => {
+    items.forEach(g => used.add(g.id));
     return `<section class="shelf wrap" aria-labelledby="sh-${s.k}">
       <div class="shelf-head"><div><h3 id="sh-${s.k}">${s.title}</h3><p>${s.sub}</p></div><button type="button" class="see-all" data-list="${s.k}">Ver todos →</button></div>
       <div class="rail">${items.map(g => cardHTML(g)).join("")}</div>
     </section>` + (s.k === "new" ? soonHTML : "") + (s.k === "sale" ? epHTML + stHTML : "");
   }).join("") + (SHELVES[0].pick().length ? "" : epHTML + stHTML);
+  void 0;
 }
 
 // ---------- destaque ----------
@@ -1401,22 +1430,26 @@ function detailHTML(g) {
       ${img ? `<span class="bg" style="background-image:url('${img}')"></span>` : `<span class="bg" style="${coverStyle(g)}"></span>`}
       ${coverHTML(g)}
       <div style="min-width:0">
-        <div class="d-facts">${[["y", g.y, "Ano"], ["g", g.g, "Gênero"], ["d", g.d, "Estúdio"], ["f", g.f, "Série"]].filter(x => x[1]).map(([k, v, l]) => `<button type="button" data-tag="${k}" data-v="${esc(v)}" aria-label="${l}: ${esc(v)}. Ver outros jogos">${esc(v)}</button>`).join("")}</div>
+        <div class="d-facts line">${[["y", g.y, "Ano"], ["g", g.g, "Gênero"], ["d", g.d, "Estúdio"], ["f", g.f, "Série"]].filter(x => x[1]).map(([k, v, l]) => `<button type="button" data-tag="${k}" data-v="${esc(v)}" aria-label="${l}: ${esc(v)}. Ver outros jogos">${esc(v)}</button>`).join('<span class="sep" aria-hidden="true">·</span>')}</div>
         <h2 class="d-title notranslate" translate="no" id="d-title">${esc(g.t)}</h2>
         <div class="d-score">${ringHTML(g)}<span class="lbl">${scoreLabel(g)}</span></div>
-        ${(() => { const d = bestSale(g); return d ? `<span class="d-sale">-${d.pct}% no ${d.s.label} · ${brl(d.f)}</span>` : ""; })()}
       </div>
         <div class="d-actions">
-          <button type="button" class="act" id="fav-btn" aria-pressed="${favs.has(g.id)}">${favs.has(g.id) ? "♥ Nos favoritos" : "♡ Favoritar"}</button>
+          <button type="button" class="act" id="fav-btn" aria-pressed="${favs.has(g.id)}">${favs.has(g.id) ? "♥ Favorito" : "♡ Favoritar"}</button>
           <button type="button" class="act" id="cmp-btn" aria-pressed="${cmp.includes(g.id)}">${cmp.includes(g.id) ? "✓ Comparando" : "⇄ Comparar"}</button>
           <button type="button" class="act" id="share-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"></path></svg>Compartilhar</button>
         </div>
     </div>
     <div class="d-body">
+      ${(() => {
+        if (!best) return "";
+        const lv = g.live && g.live[best.s.k], sale = lv && lv.pct > 0 && lv.f > 0;
+        return `<section class="d-best" aria-label="Menor preço"><div><small>${best.v === 0 ? "Jogue de graça" : "Menor preço agora"} · ${best.s.name}</small><b>${priceText(best.v)}</b>${sale ? `<s>${brl(lv.b)}</s><span class="off">-${lv.pct}%</span>` : ""}</div><a class="btn-brand" href="${(lv && lv.url) || best.s.url(g.t)}" target="_blank" rel="noopener">Ver na loja <span aria-hidden="true">↗</span></a></section>`;
+      })()}
+      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div></section>
+      <section><h3>Escolha a edição e a plataforma</h3>${pickerHTML(g)}</section>
       <section><h3>Trailer</h3>${trailerHTML(g)}</section>
       <section><h3>Sobre o jogo</h3><p class="d-desc">${esc(g.desc)}</p></section>
-      <section><h3>Escolha a edição e a plataforma</h3>${pickerHTML(g)}</section>
-      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div></section>
     </div>`;
 }
 function editionPrice(g, ei, k) {
@@ -1478,7 +1511,7 @@ function bindDetail(g) {
     added ? favs.add(g.id) : favs.delete(g.id);
     saveFavs();
     b.setAttribute("aria-pressed", String(added));
-    b.textContent = added ? "♥ Nos favoritos" : "♡ Favoritar";
+    b.textContent = added ? "♥ Favorito" : "♡ Favoritar";
     toast(added ? "Adicionado aos favoritos" : "Removido dos favoritos");
     render(); renderShelves();
   });
@@ -1551,7 +1584,8 @@ document.getElementById("plat").addEventListener("click", e => {
   state.plat = b.dataset.v; syncControls(); render(); toCatalog();
 });
 genreSel.addEventListener("change", e => { state.genre = e.target.value; state.tag = null; render(); toCatalog(); });
-document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; save(); render(); });
+document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; state.all = true; save(); render(); });
+document.getElementById("grid").addEventListener("click", e => { if (e.target.closest("#see-all-games")) { state.all = true; render(); } });
 document.getElementById("fav-top").addEventListener("click", () => applyList("fav"));
 document.getElementById("clear-all").addEventListener("click", goHome);
 document.getElementById("shelves").addEventListener("click", e => { const s = e.target.closest(".see-all[data-list]"); if (s) applyList(s.dataset.list, true); });
@@ -2276,7 +2310,7 @@ function listenCloud() {
     try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); localStorage.setItem("asfe-carrinho", JSON.stringify(cart)); } catch (e) {}
     applyAccent(); renderMe(); renderBadges(); render(); renderShelves();
     if (sheetKind === "cart") openCart(); else if (sheetKind === "profile") openProfile();
-    if (currentId) { const b = document.getElementById("fav-btn"); if (b) { b.setAttribute("aria-pressed", String(favs.has(currentId))); b.textContent = favs.has(currentId) ? "♥ Nos favoritos" : "♡ Favoritar"; } }
+    if (currentId) { const b = document.getElementById("fav-btn"); if (b) { b.setAttribute("aria-pressed", String(favs.has(currentId))); b.textContent = favs.has(currentId) ? "♥ Favorito" : "♡ Favoritar"; } }
   }, () => {});
 }
 async function onUser(u) {
@@ -3032,7 +3066,7 @@ menu.addEventListener("click", e => {
 
 // ---------- logo: volta ao início ----------
 function goHome() {
-  state.q = ""; state.plat = "all"; state.genre = ""; state.list = ""; state.tag = null;
+  state.q = ""; state.plat = "all"; state.genre = ""; state.list = ""; state.tag = null; state.all = false;
   document.getElementById("q").value = "";
   syncControls();
   closeMenu(); if (dlg.open) closeDetail(); if (sheet.open) closeSheet();
