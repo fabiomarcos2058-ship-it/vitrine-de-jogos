@@ -577,6 +577,41 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .auth-perks li { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--muted); }
 .auth-perks li::before { content: "✓"; width: 22px; height: 22px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-text); font-weight: 800; font-size: 12px; }
 
+/* ---------- promoções ao vivo ---------- */
+:root { --sale: #E5484D; --sale-ink: #FFFFFF; }
+.salepill { position: absolute; z-index: 2; left: 10px; top: 10px; font: 800 11.5px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 4px 8px; border-radius: 999px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.c-price s, .shop s, .ci s, .hero-price s, .live-old { font: 600 12px var(--mono); color: var(--faint); text-decoration: line-through; }
+.c-price .now-sale { color: var(--sale); }
+:root:not([data-theme="light"]) .c-price .now-sale { color: #FF6B70; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .c-price .now-sale { color: #C2272D; } }
+:root[data-theme="light"] .c-price .now-sale { color: #C2272D; }
+.shop .sv { display: grid; justify-items: end; gap: 1px; }
+.shop .off { font: 800 11px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 2px 6px; border-radius: 999px; }
+.shop .until { font-size: 11px; color: var(--muted); font-weight: 600; }
+.live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--good); margin-right: 5px; vertical-align: 1px; box-shadow: 0 0 0 0 color-mix(in srgb, var(--good) 60%, transparent); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--good) 55%, transparent); } 70% { box-shadow: 0 0 0 7px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.livechip { display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.d-sale { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 7px 12px; border-radius: 999px; background: var(--sale); color: var(--sale-ink); font-weight: 800; font-size: 13px; }
+.alert-strip { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 14px; padding: 12px 16px; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--sale) 55%, var(--line)); background: color-mix(in srgb, var(--sale) 12%, var(--surface)); text-align: left; width: 100%; cursor: pointer; }
+.alert-strip b { font-weight: 800; }
+.alert-strip span { color: var(--muted); font-size: 13.5px; }
+.alert-strip .go-arrow { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--sale); color: var(--sale-ink); font-weight: 800; flex-shrink: 0; }
+.icon-btn .dotalert { position: absolute; bottom: -3px; right: -3px; width: 12px; height: 12px; border-radius: 50%; background: var(--sale); border: 2px solid var(--bg); }
+.ci .salechip { display: inline-block; margin-left: 6px; font: 800 10.5px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 2px 6px; border-radius: 999px; vertical-align: 1px; }
+.ext-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 280px; gap: 12px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.ext { scroll-snap-align: start; display: grid; grid-template-rows: auto 1fr; border-radius: 18px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); color: var(--fg); text-decoration: none; }
+.ext:hover { border-color: var(--muted); }
+.ext .ei { aspect-ratio: 16 / 9; background: var(--surface-2, #222) center / cover no-repeat; position: relative; }
+.ext .ei .salepill { left: 10px; top: 10px; }
+.ext .eb { padding: 12px 14px; display: grid; gap: 4px; align-content: start; }
+.ext .et { font-weight: 700; font-size: 14.5px; line-height: 1.25; }
+.ext .em { font-size: 12.5px; color: var(--muted); }
+.ext .ep { font: 700 14px var(--mono); }
+.ext .ep s { font-weight: 600; font-size: 12px; color: var(--faint); margin-right: 6px; }
+.freepill { position: absolute; z-index: 2; left: 10px; top: 10px; font: 800 11.5px var(--mono); color: #fff; background: #2A2A2A; padding: 4px 9px; border-radius: 999px; }
+.freepill.now { background: var(--good); color: #062612; }
+.hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
 }
@@ -627,6 +662,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
           <option value="cheap">Menor preço</option>
           <option value="new">Mais recentes</option>
           <option value="az">Nome (A–Z)</option>
+          <option value="sale">Maior desconto</option>
         </select>
       </div>
     </div>
@@ -637,7 +673,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
   <section class="hero wrap" aria-label="Mais vendidos agora">
     <div class="hero-frame" id="hero"></div>
   </section>
-  <div class="wrap"><div class="promos" id="promos"></div></div>
+  <div class="wrap"><div id="alert-strip"></div><div class="promos" id="promos"></div></div>
   <div id="shelves"></div>
 </div>
 
@@ -649,6 +685,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
     </div>
     <div class="cat-meta">
       <span><b id="count">–</b> de <b id="total">–</b> jogos · nota média <b id="avg">–</b></span>
+      <span class="livechip" id="livechip" hidden></span>
       <span class="legend" aria-label="Legenda das notas"><span><i style="background:var(--good)"></i>85+</span><span><i style="background:var(--mid)"></i>70–84</span><span><i style="background:var(--bad)"></i>&lt;70</span></span>
       <button type="button" class="guide-btn" id="guide-btn" hidden>Ordem para jogar</button>
       <button type="button" class="clear-btn" id="clear-all" hidden>Limpar filtros</button>
@@ -668,8 +705,9 @@ body.has-tray .catalog { padding-bottom: 120px; }
       <p>Compare notas e preços de jogos em todas as lojas, num lugar só.</p>
     </div>
     <div>
-      <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais, de tabela e sem promoção, nas lojas digitais brasileiras. Promoções e assinaturas (PS Plus, Game Pass, Netflix) mudam o valor do dia, por isso cada loja abre a página oficial.</p>
-      <p>Mais vendidos: estimativas e rankings públicos de outubro de 2026. Capas: Wikipédia. A ASFE Store não vende jogos; os links levam às lojas oficiais.</p>
+      <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
+      <p id="foot-live">Preços da Steam, PlayStation Store, Microsoft Store e Epic Games são atualizados automaticamente várias vezes por dia, com promoções. Google Play e App Store usam preços de referência.</p>
+      <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. A ASFE Store não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
 </footer>
@@ -766,10 +804,15 @@ function cardHTML(g, keys) {
   const best = cheapest(g, keys);
   let price;
   if (g.pre) price = `<div><small>Lançamento</small><b>${g.pre.slice(0, 5)}</b></div>`;
-  else if (best) price = `<div><small>${best.v === 0 ? "Jogue de graça" : "A partir de"}</small><b class="${best.v === 0 ? "free" : ""}">${priceText(best.v)}</b></div>`;
+  else if (best) {
+    const lv = g.live && g.live[best.s.k];
+    const onSale = lv && lv.pct > 0 && lv.f > 0;
+    price = `<div><small>${best.v === 0 ? "Jogue de graça" : onSale ? `De <s>${brl(lv.b)}</s>` : "A partir de"}</small><b class="${best.v === 0 ? "free" : onSale ? "now-sale" : ""}">${priceText(best.v)}</b></div>`;
+  }
   else if (Object.values(g.p).includes("Netflix")) price = `<div><small>Disponível via</small><b>Netflix</b></div>`;
   else price = `<div><small>Preço</small><b>Ver na loja</b></div>`;
-  const extras = ringHTML(g) + (g.pre ? `<span class="tagpill">Pré-venda</span>` : g.y >= 2026 ? `<span class="tagpill">Novo</span>` : "") + (favs.has(g.id) ? `<span class="favpill" aria-label="Favorito">♥</span>` : "");
+  const sp = maxSale(g, keys);
+  const extras = ringHTML(g) + (sp ? `<span class="salepill" aria-label="${sp}% de desconto">-${sp}%</span>` : g.pre ? `<span class="tagpill">Pré-venda</span>` : g.y >= 2026 ? `<span class="tagpill">Novo</span>` : "") + (favs.has(g.id) ? `<span class="favpill" aria-label="Favorito">♥</span>` : "");
   return `<button type="button" class="card" data-id="${g.id}" aria-label="Ver detalhes de ${esc(g.t)}">
     ${coverHTML(g, extras)}
     <div>
@@ -780,6 +823,93 @@ function cardHTML(g, keys) {
     </div>
   </button>`;
 }
+
+
+// ================== PREÇOS AO VIVO ==================
+let LIVE = null;
+const BASE_P = Object.fromEntries(games.map(g => [g.id, { ...g.p }]));
+function maxSale(g, keys) {
+  if (!g.live) return 0;
+  let m = 0;
+  for (const [k, v] of Object.entries(g.live)) { if (keys && !keys.includes(k)) continue; if (v.pct > m && v.f > 0) m = v.pct; }
+  return m;
+}
+function bestSale(g) {
+  if (!g.live) return null;
+  let b = null;
+  for (const [k, v] of Object.entries(g.live)) if (v.pct > 0 && v.f > 0 && (!b || v.pct > b.pct)) b = { ...v, s: STORES.find(x => x.k === k) };
+  return b;
+}
+function liveAgo() {
+  if (!LIVE || !LIVE.updated) return "";
+  const min = Math.max(0, Math.round((Date.now() - new Date(LIVE.updated)) / 60000));
+  if (min < 2) return "agora mesmo";
+  if (min < 60) return `há ${min} min`;
+  const h = Math.round(min / 60);
+  return h < 24 ? `há ${h} h` : `há ${Math.round(h / 24)} dia${h >= 48 ? "s" : ""}`;
+}
+function applyLive() {
+  games.forEach(g => {
+    const base = BASE_P[g.id];
+    g.p = { ...base }; g.live = {};
+    const L = LIVE && LIVE.p && LIVE.p[g.id]; if (!L) return;
+    for (const [k, v] of Object.entries(L)) {
+      const b0 = base[k];
+      if (!has(b0) || b0 === "pre" || b0 === "Netflix") continue;
+      if (typeof v.f !== "number" || typeof v.b !== "number") continue;
+      // proteção contra jogo trocado: preço muito diferente do esperado sem promoção
+      if (num(b0) && b0 > 0 && !(v.pct > 0) && (v.f > b0 * 2.6 || v.f < b0 * 0.25)) continue;
+      if (num(b0) && b0 === 0 && v.f > 0) continue;
+      g.live[k] = v; g.p[k] = v.f;
+    }
+  });
+}
+function renderLiveChip() {
+  const c = document.getElementById("livechip");
+  if (!LIVE || !LIVE.updated) { c.hidden = true; return; }
+  c.hidden = false; c.innerHTML = `<span class="live-dot" aria-hidden="true"></span>Preços ao vivo · ${liveAgo()}`;
+}
+function renderAlerts() {
+  const box = document.getElementById("alert-strip"); if (!box) return;
+  const favSale = [...favs].map(id => byId[id]).filter(g => g && maxSale(g) > 0);
+  const cartSale = cart.filter(it => it.ei === 0 && byId[it.id].live && byId[it.id].live[it.k] && byId[it.id].live[it.k].pct > 0);
+  const n = favSale.length + cartSale.length;
+  const dot = document.querySelector("#fav-top .dotalert");
+  if (favSale.length && !dot) document.getElementById("fav-top").insertAdjacentHTML("beforeend", '<span class="dotalert" aria-hidden="true"></span>');
+  if (!favSale.length && dot) dot.remove();
+  if (!n) { box.innerHTML = ""; return; }
+  const parts = [];
+  if (favSale.length) parts.push(`${favSale.length} ${favSale.length === 1 ? "favorito" : "favoritos"}`);
+  if (cartSale.length) parts.push(`${cartSale.length} ${cartSale.length === 1 ? "item do carrinho" : "itens do carrinho"}`);
+  const names = [...favSale.map(g => g.t), ...cartSale.map(it => byId[it.id].t)].filter((v, i, a) => a.indexOf(v) === i).slice(0, 3).join(", ");
+  box.innerHTML = `<button type="button" class="alert-strip" data-tool="${favSale.length ? "favsale" : "cart"}"><span style="font-size:20px" aria-hidden="true">🔥</span><span style="min-width:0"><b style="color:var(--fg)">${parts.join(" e ")} em promoção agora</b><br><span>${esc(names)}${n > 3 ? "…" : ""}</span></span><span class="go-arrow" aria-hidden="true">→</span></button>`;
+  // aviso único por promoção nova
+  try {
+    const seen = new Set(JSON.parse(localStorage.getItem("asfe-alertas") || "[]"));
+    const fresh = favSale.filter(g => { const d = bestSale(g); return d && !seen.has(g.id + "|" + d.s.k + "|" + d.pct); });
+    if (fresh.length) {
+      const g = fresh[0], d = bestSale(g);
+      setTimeout(() => toast(`🔥 ${g.t} está com ${d.pct}% de desconto no ${d.s.label}`), 1200);
+      fresh.forEach(x => { const dd = bestSale(x); seen.add(x.id + "|" + dd.s.k + "|" + dd.pct); });
+      localStorage.setItem("asfe-alertas", JSON.stringify([...seen].slice(-300)));
+    }
+  } catch (e) {}
+}
+async function loadLive() {
+  try {
+    const r = await fetch("data/prices.json?t=" + Math.floor(Date.now() / 300000), { cache: "no-cache" });
+    if (!r.ok) return;
+    const d = await r.json();
+    if (!d || !d.updated || !d.p) return;
+    LIVE = d; applyLive();
+    render(); renderShelves(); renderHero(); showSlide(heroIdx); renderLiveChip(); renderTray();
+    if (currentId) { const g = byId[currentId], top = dlg.scrollTop; dContent.innerHTML = detailHTML(g); bindDetail(g); dlg.scrollTop = top; }
+    if (sheetKind === "cart") openCart(); else if (sheetKind === "compare") openCompare();
+  } catch (e) {}
+}
+setInterval(() => { if (!document.hidden) loadLive(); }, 20 * 60 * 1000);
+setInterval(renderLiveChip, 60 * 1000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden && LIVE && Date.now() - new Date(LIVE.updated) > 20 * 60 * 1000) loadLive(); });
 
 // ---------- estado, favoritos, listas ----------
 const state = { q: "", plat: "all", genre: "", sort: "score", list: "" };
@@ -802,7 +932,8 @@ const LISTS = [
   ["pre", "Pré-vendas", "⏳", "Ainda não lançados", g => !!g.pre],
   ["coop", "Para jogar com amigos", "2P", "Cooperativo ou online", g => COOP.includes(g.t)],
   ["exps", "Exclusivos PlayStation", "PS", "Não saem no Xbox", g => has(g.p.ps) && !has(g.p.xb)],
-  ["exxb", "Exclusivos Xbox", "XB", "Não saem no PlayStation", g => has(g.p.xb) && !has(g.p.ps)]
+  ["exxb", "Exclusivos Xbox", "XB", "Não saem no PlayStation", g => has(g.p.xb) && !has(g.p.ps)],
+  ["sale", "Em promoção agora", "%", "Descontos ativos nas lojas", g => maxSale(g) > 0]
 ];
 const COLLECTIONS = [
   ["c-db", "Dragon Ball", "Todos os jogos, de console e celular", g => g.f === "Dragon Ball"],
@@ -842,7 +973,8 @@ function render() {
     score: (a, b) => (b.n ?? -1) - (a.n ?? -1) || a.t.localeCompare(b.t),
     cheap: (a, b) => minOf(a) - minOf(b) || (b.n ?? 0) - (a.n ?? 0),
     new: (a, b) => b.y - a.y || (b.n ?? 0) - (a.n ?? 0),
-    az: (a, b) => a.t.localeCompare(b.t, "pt-BR")
+    az: (a, b) => a.t.localeCompare(b.t, "pt-BR"),
+    sale: (a, b) => maxSale(b, keys) - maxSale(a, keys) || minOf(a) - minOf(b)
   };
   list.sort(by[state.sort]);
 
@@ -899,12 +1031,13 @@ function renderWish(list) {
       ${bestOne && sumIfOne > total + 0.5 ? `<span class="save">Economia de ${brl(sumIfOne - total)} em vez de comprar tudo no ${bestOne.s.label}</span>` : ""}
     </div>
     <div class="wish-stores">${per.map(x => `<div class="ws${bestOne && x === bestOne ? " best" : ""}"><div class="wn"><span class="dot" style="background:var(--c-${x.s.k})"></span>${x.s.label}</div><div class="wv">${brl(x.sum)}</div><div class="wc">${x.n} de ${list.length} ${list.length === 1 ? "jogo" : "jogos"}${bestOne && x === bestOne ? " · melhor loja única" : ""}</div></div>`).join("")}</div>
-    <p class="wish-note">${pending ? pending + (pending === 1 ? " jogo ainda sem preço (pré-venda ou assinatura) não entra na conta. " : " jogos ainda sem preço (pré-venda ou assinatura) não entram na conta. ") : ""}Preços de tabela, sem promoção.</p>
+    <p class="wish-note">${pending ? pending + (pending === 1 ? " jogo ainda sem preço (pré-venda ou assinatura) não entra na conta. " : " jogos ainda sem preço (pré-venda ou assinatura) não entram na conta. ") : ""}${LIVE ? "Inclui as promoções ativas na edição padrão." : "Preços de tabela."}</p>
   </section>`;
 }
 
 // ---------- prateleiras ----------
 const SHELVES = [
+  { k: "sale", title: "Em promoção agora", sub: "Descontos ativos nas lojas, do maior para o menor", pick: () => games.filter(g => maxSale(g) > 0).sort((a, b) => maxSale(b) - maxSale(a)) },
   { k: "new", title: "Lançamentos", sub: "O que saiu em 2025 e 2026", pick: () => games.filter(g => g.y >= 2025).sort((a, b) => b.y - a.y || (b.n ?? 0) - (a.n ?? 0)) },
   { k: "top90", title: "Aclamados pela crítica", sub: "Nota 90 ou mais", pick: () => games.filter(g => g.n >= 90).sort((a, b) => b.n - a.n) },
   { k: "free", title: "Grátis para jogar", sub: "Comece sem gastar nada", pick: () => games.filter(g => Object.values(g.p).includes(0)) },
@@ -942,17 +1075,34 @@ function renderPromos() {
 }
 function renderShelves() {
   const soon = upcoming();
+  renderAlerts();
   const soonHTML = soon.length ? `<section class="shelf wrap" aria-labelledby="sh-soon">
       <div class="shelf-head"><div><h3 id="sh-soon">Em breve</h3><p>Datas confirmadas de lançamento</p></div><button type="button" class="see-all" data-tool="calendar">Calendário completo →</button></div>
       <div class="soon-rail">${soon.map(soonCard).join("")}</div>
     </section>` : "";
-  document.getElementById("shelves").innerHTML = SHELVES.map((s, i) => {
-    const items = s.pick().slice(0, 14);
+  const T = (LIVE && LIVE.top) || {};
+  const dm = d => new Date(d).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+  const epFree = (T.epFree || []).filter(e => new Date(e.until) > Date.now());
+  const epHTML = epFree.length ? `<section class="shelf wrap" aria-labelledby="sh-epfree">
+      <div class="shelf-head"><div><h3 id="sh-epfree">Grátis na Epic Games</h3><p>Resgate e o jogo fica seu para sempre</p></div></div>
+      <div class="ext-rail">${epFree.map(e => `<a class="ext" href="${e.url}" target="_blank" rel="noopener">
+        <span class="ei" style="${e.img ? `background-image:url('${e.img}')` : ""}"><span class="freepill${e.now ? " now" : ""}">${e.now ? "GRÁTIS AGORA" : "EM BREVE"}</span></span>
+        <span class="eb"><span class="et">${esc(e.name)}</span><span class="em">${e.now ? `Grátis até ${dm(e.until)}` : `Grátis de ${dm(e.from)} a ${dm(e.until)}`}</span>${e.b > 0 ? `<span class="ep"><s>${brl(e.b)}</s>${e.now ? "R$ 0" : ""}</span>` : ""}</span></a>`).join("")}</div>
+    </section>` : "";
+  const stDeals = []; // ofertas avulsas da Steam ficam de fora: podem incluir jogos fora do perfil do catálogo
+  const stHTML = stDeals.length ? `<section class="shelf wrap" aria-labelledby="sh-stdeals">
+      <div class="shelf-head"><div><h3 id="sh-stdeals">Ofertas em destaque na Steam</h3><p>Promoções que a própria Steam está destacando agora</p></div></div>
+      <div class="ext-rail">${stDeals.map(x => `<a class="ext" href="https://store.steampowered.com/app/${x.app}" target="_blank" rel="noopener">
+        <span class="ei" style="${x.img ? `background-image:url('${x.img}')` : ""}"><span class="salepill">-${x.pct}%</span></span>
+        <span class="eb"><span class="et">${esc(x.name)}</span><span class="ep"><s>${brl(x.b)}</s>${brl(x.f)}</span></span></a>`).join("")}</div>
+    </section>` : "";
+  document.getElementById("shelves").innerHTML = SHELVES.filter(s => s.pick().length).map((s, i) => {
+    const items = s.pick().slice(0, s.k === "sale" ? 20 : 14);
     return `<section class="shelf wrap" aria-labelledby="sh-${s.k}">
       <div class="shelf-head"><div><h3 id="sh-${s.k}">${s.title}</h3><p>${s.sub}</p></div><button type="button" class="see-all" data-list="${s.k}">Ver todos →</button></div>
       <div class="rail">${items.map(g => cardHTML(g)).join("")}</div>
-    </section>` + (i === 0 ? soonHTML : "");
-  }).join("");
+    </section>` + (s.k === "new" ? soonHTML : "") + (s.k === "sale" ? epHTML + stHTML : "");
+  }).join("") + (SHELVES[0].pick().length ? "" : epHTML + stHTML);
 }
 
 // ---------- destaque ----------
@@ -960,10 +1110,31 @@ let heroIdx = 0, heroTimer = null;
 const HERO_MS = 7000;
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderHero() {
-  const tops = (window.TOP || []).map(t => ({ t, g: games.find(x => x.t === t.game) })).filter(x => x.g);
+  let tops = (window.TOP || []).map(t => ({ t, g: games.find(x => x.t === t.game) })).filter(x => x.g);
+  const liveTop = LIVE && LIVE.top && (LIVE.top.st || []).find(x => x.f > 0 || x.id);
+  if (liveTop) {
+    const i = tops.findIndex(x => x.t.store === "st");
+    const t = { store: "st", label: "Steam", tag: liveTop.pct > 0 ? `-${liveTop.pct}% agora` : "Agora", fact: "O jogo mais vendido da Steam no Brasil neste momento, segundo o ranking da própria loja.", src: "Steam, atualizado " + liveAgo() };
+    const entry = liveTop.id && byId[liveTop.id] ? { t, g: byId[liveTop.id] } : { t, ext: liveTop };
+    if (i >= 0) tops[i] = entry; else tops.push(entry);
+  }
   const frame = document.getElementById("hero");
   frame.style.setProperty("--dur", HERO_MS + "ms");
-  frame.innerHTML = tops.map(({ t, g }, i) => {
+  frame.innerHTML = tops.map(({ t, g, ext }, i) => {
+    if (ext) return `<article class="slide${i === heroIdx ? " on" : ""}" aria-roledescription="slide" aria-label="${i + 1} de ${tops.length}" style="background:linear-gradient(135deg,#0E1A2B,#1B2838)">
+      ${ext.img ? `<span class="bg" style="background-image:url('${ext.img}')"></span>` : ""}
+      <div>
+        <span class="eyebrow"><i style="background:var(--c-st)"></i>Nº 1 na Steam · ${esc(t.tag)}</span>
+        <h2>${esc(ext.name)}</h2>
+        <p>${esc(t.fact)}</p>
+        <div class="hero-cta">
+          <a class="btn-brand" href="https://store.steampowered.com/app/${ext.app}" target="_blank" rel="noopener">Ver na Steam <span aria-hidden="true">↗</span></a>
+          <div class="hero-price"><small>Steam ${ext.pct > 0 ? `· <s>${brl(ext.b)}</s>` : ""}</small>${ext.f > 0 ? brl(ext.f) : "Grátis"}</div>
+        </div>
+        <div class="hero-src">Fonte: ${esc(t.src)}</div>
+      </div>
+      <div class="hero-art hero-ext">${ext.img ? `<img src="${ext.img}" alt="" loading="lazy">` : ""}</div>
+    </article>`;
     const v = g.p[t.store];
     const store = STORES.find(s => s.k === t.store);
     const img = covers[g.t];
@@ -975,7 +1146,7 @@ function renderHero() {
         <p>${esc(t.fact)}</p>
         <div class="hero-cta">
           <button type="button" class="btn-brand" data-id="${g.id}">Ver jogo <span aria-hidden="true">→</span></button>
-          <div class="hero-price">${g.pre ? `<small>Chega em</small>${g.pre}` : has(v) ? `<small>${store.label}</small>${priceText(v)}` : ""}</div>
+          <div class="hero-price">${g.pre ? `<small>Chega em</small>${g.pre}` : has(v) ? `<small>${store.label}${g.live && g.live[t.store] && g.live[t.store].pct > 0 ? ` · <s>${brl(g.live[t.store].b)}</s> -${g.live[t.store].pct}%` : ""}</small>${priceText(v)}` : ""}</div>
         </div>
         <div class="hero-src">Fonte: ${esc(t.src)}</div>
       </div>
@@ -1034,10 +1205,13 @@ function detailHTML(g) {
   const shopHTML = shops.map(({ s, v }) => {
     if (!has(v)) return `<div class="shop na"><i style="background:var(--faint)"></i><span class="sn">${s.name}<span class="sk">${s.kind}</span></span><span class="sv">Indisponível</span></div>`;
     const isBest = best && num(v) && v === best.v && v > 0 && multi;
-    return `<a class="shop${isBest ? " best" : ""}" href="${s.url(g.t)}" target="_blank" rel="noopener">
+    const lv = g.live && g.live[s.k];
+    const sale = lv && lv.pct > 0 && lv.f > 0;
+    const until = sale && lv.until ? new Date(lv.until) : null;
+    return `<a class="shop${isBest ? " best" : ""}" href="${(lv && lv.url) || s.url(g.t)}" target="_blank" rel="noopener">
       <i style="background:var(--c-${s.k})"></i>
-      <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
-      <span class="sv">${priceText(v)}</span><span class="arr" aria-hidden="true">↗</span></a>`;
+      <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${lv ? '<span class="live-dot" aria-hidden="true"></span>Preço ao vivo · ' : ""}${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
+      <span class="sv">${sale ? `<s>${brl(lv.b)}</s>` : ""}<span>${priceText(v)}</span>${sale ? `<span class="off">-${lv.pct}%</span>` : ""}${until && !isNaN(until) ? `<span class="until">até ${until.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}</span>` : ""}</span><span class="arr" aria-hidden="true">↗</span></a>`;
   }).join("");
   const img = covers[g.t];
   return `<div class="d-hero">
@@ -1047,6 +1221,7 @@ function detailHTML(g) {
         <div class="d-facts"><span>${g.y}</span><span>${esc(g.g)}</span><span>${esc(g.d)}</span>${g.f ? `<span>${esc(g.f)}</span>` : ""}</div>
         <h2 class="d-title" id="d-title">${esc(g.t)}</h2>
         <div class="d-score">${ringHTML(g)}<span class="lbl">${scoreLabel(g)}</span></div>
+        ${(() => { const d = bestSale(g); return d ? `<span class="d-sale">-${d.pct}% no ${d.s.label} · ${brl(d.f)}</span>` : ""; })()}
       </div>
         <div class="d-actions">
           <button type="button" class="act" id="fav-btn" aria-pressed="${favs.has(g.id)}">${favs.has(g.id) ? "♥ Nos favoritos" : "♡ Favoritar"}</button>
@@ -1094,7 +1269,8 @@ function updatePicker(g) {
   const isBase = ei === 0 || /^(Padrão|Gratuito)$/.test(name);
   document.getElementById("go-sum").innerHTML = `${esc(name)} · ${s.label}<b>${v === "pre" ? "Pré-venda" : priceText(v)}</b>`;
   const btn = document.getElementById("go-btn");
-  btn.href = s.url(isBase ? g.t : g.t + " " + name);
+  const lv = g.live && g.live[k];
+  btn.href = isBase && lv && lv.url ? lv.url : s.url(isBase ? g.t : g.t + " " + name);
   btn.setAttribute("aria-label", `Continuar para ${s.name}: ${g.t}, edição ${name}`);
 }
 function trailerHTML(g) {
@@ -1228,6 +1404,7 @@ function openTool(k) {
   else if (k === "compare") openCompare();
   else if (k === "install") openInstall();
   else if (k === "cart") openCart();
+  else if (k === "favsale") { closeSheet(); applyList("fav", true); }
   else if (k === "profile") openProfile();
   else if (k === "login") openLogin("login");
   else if (k === "signup") openLogin("signup");
@@ -1552,8 +1729,8 @@ function openCart() {
       }
       return `<div class="ci">
         <span data-open="${g.id}">${coverHTML(g)}</span>
-        <span style="min-width:0"><b class="cn">${esc(g.t)}</b><span class="ce">${esc(ename)} · ${s.label}</span>${tip}</span>
-        <span class="cp"><b>${v === "pre" ? "Pré-venda" : priceText(v)}</b><span class="row" style="margin:0"><a class="mini" href="${s.url(isBase ? g.t : g.t + " " + ename)}" target="_blank" rel="noopener">Comprar ↗</a><button type="button" class="mini" data-rm="${i}" aria-label="Tirar ${esc(g.t)} do carrinho">✕</button></span></span>
+        <span style="min-width:0"><b class="cn">${esc(g.t)}${it.ei === 0 && g.live && g.live[s.k] && g.live[s.k].pct > 0 ? `<span class="salechip">-${g.live[s.k].pct}%</span>` : ""}</b><span class="ce">${esc(ename)} · ${s.label}</span>${tip}</span>
+        <span class="cp"><b>${v === "pre" ? "Pré-venda" : priceText(v)}</b><span class="row" style="margin:0"><a class="mini" href="${isBase && g.live && g.live[s.k] && g.live[s.k].url ? g.live[s.k].url : s.url(isBase ? g.t : g.t + " " + ename)}" target="_blank" rel="noopener">Comprar ↗</a><button type="button" class="mini" data-rm="${i}" aria-label="Tirar ${esc(g.t)} do carrinho">✕</button></span></span>
       </div>`;
     }).join("");
   }).join("");
@@ -1562,7 +1739,7 @@ function openCart() {
     ${html}
     <div class="cart-total"><div><small>Total${unknown ? ` (${unknown} ${unknown === 1 ? "item sem preço" : "itens sem preço"})` : ""}</small><b>${brl(total)}</b>${savings > 0.5 ? `<small style="color:var(--good);font-weight:700">Dá para economizar ${brl(savings)} trocando de loja</small>` : ""}</div>
       <button type="button" class="btn-ghost sm" id="cart-clear">Esvaziar</button></div>
-    <p class="cart-note">Preços de tabela, sem promoção. ${user ? "Seu carrinho fica salvo na sua conta." : "Entre na sua conta para guardar o carrinho em qualquer aparelho."}</p>`);
+    <p class="cart-note">${LIVE ? "Promoções ativas já aplicadas na edição padrão. " : "Preços de tabela. "}${user ? "Seu carrinho fica salvo na sua conta." : "Entre na sua conta para guardar o carrinho em qualquer aparelho."}</p>`);
   shBody.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { cart.splice(Number(b.dataset.rm), 1); saveCart(); openCart(); }));
   shBody.querySelectorAll("[data-swap]").forEach(b => b.addEventListener("click", () => {
     const i = Number(b.dataset.swap); const moved = { ...cart[i], k: b.dataset.k };
@@ -1684,9 +1861,28 @@ async function initFirebase() {
     if (sheetKind === "login") openLogin(loginMode);
   } catch (e) { authReady = true; fbState = "error"; console.warn("Login indisponível", e); if (sheetKind === "login") openLogin(loginMode); }
 }
+let unsubDoc = null, lastSynced = "";
+function syncKey() { return JSON.stringify({ profile, favs: [...favs].sort(), cart }); }
+function listenCloud() {
+  if (unsubDoc) { unsubDoc(); unsubDoc = null; }
+  if (!user || !fb) return;
+  unsubDoc = fb.F.onSnapshot(userDoc(), snap => {
+    if (snap.metadata.hasPendingWrites || !snap.exists()) return;
+    const d = snap.data();
+    const remote = { profile: { ...DEFAULT_PROFILE, ...(d.profile || {}) }, favs: (d.favs || []).filter(id => byId[id]), cart: (d.cart || []).filter(it => byId[it.id] && byId[it.id].ed[it.ei]).map(it => ({ id: it.id, ei: it.ei, k: it.k })) };
+    const key = JSON.stringify({ profile: remote.profile, favs: [...remote.favs].sort(), cart: remote.cart });
+    if (key === lastSynced || key === syncKey()) { lastSynced = key; return; }
+    lastSynced = key;
+    profile = remote.profile; favs = new Set(remote.favs); cart = remote.cart;
+    try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); localStorage.setItem("asfe-carrinho", JSON.stringify(cart)); } catch (e) {}
+    applyAccent(); renderMe(); renderBadges(); render(); renderShelves();
+    if (sheetKind === "cart") openCart(); else if (sheetKind === "profile") openProfile();
+    if (currentId) { const b = document.getElementById("fav-btn"); if (b) { b.setAttribute("aria-pressed", String(favs.has(currentId))); b.textContent = favs.has(currentId) ? "♥ Nos favoritos" : "♡ Favoritar"; } }
+  }, () => {});
+}
 async function onUser(u) {
   const was = user; user = u; authReady = true;
-  if (u) await pullCloud();
+  if (u) { await pullCloud(); listenCloud(); } else if (unsubDoc) { unsubDoc(); unsubDoc = null; }
   renderMe(); render(); renderShelves(); renderBadges();
   if (!was && u && (sheetKind === "login")) openProfile();
 }
@@ -1710,7 +1906,7 @@ let syncTimer = null;
 function scheduleSync() { if (!user || !fb) return; clearTimeout(syncTimer); syncTimer = setTimeout(pushCloud, 700); }
 async function pushCloud() {
   if (!user || !fb) return;
-  try { await fb.F.setDoc(userDoc(), { profile, favs: [...favs], cart, updatedAt: fb.F.serverTimestamp() }); }
+  try { lastSynced = syncKey(); await fb.F.setDoc(userDoc(), { profile, favs: [...favs], cart, updatedAt: fb.F.serverTimestamp() }); }
   catch (e) { console.warn("Falha ao salvar", e); }
 }
 const AUTH_ERRORS = {
@@ -1794,6 +1990,7 @@ function resetLocal() {
 async function logout() {
   if (!fb) return;
   clearTimeout(syncTimer); await pushCloud();
+  if (unsubDoc) { unsubDoc(); unsubDoc = null; }
   await fb.A.signOut(fb.auth);
   resetLocal(); closeSheet(); toast("Você saiu da conta");
 }
@@ -1844,7 +2041,7 @@ function renderMenu() {
       </div>
     </div>
     <div class="dr-sec"><h3>Sobre a ASFE Store</h3>
-      <p class="dr-about">Comparamos notas da crítica e preços de tabela nas lojas digitais brasileiras. Cada loja abre a página oficial com o valor do dia. Os mais vendidos são atualizados manualmente.</p>
+      <p class="dr-about">Comparamos notas da crítica e preços nas lojas digitais brasileiras, com promoções atualizadas várias vezes por dia. Cada loja abre a página oficial. O mais vendido da Steam é ao vivo; os do PlayStation e do Xbox são revisados toda semana.</p>
     </div>`;
 }
 function openMenu() { renderMenu(); menu.showModal(); }
@@ -1894,6 +2091,7 @@ renderPromos();
 renderShelves();
 renderTray();
 initFirebase();
+loadLive();
 startHero();
 (function route() {
   const qs = new URLSearchParams(location.search);
