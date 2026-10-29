@@ -1,46 +1,205 @@
 {
- "updated": "2026-10-29T21:17:13.571Z",
- "urls": {
-  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2072560/library_600x900.jpg": "200 image/jpeg",
-  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/library_600x900.jpg": "404 text/html",
-  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900.jpg": "200 image/jpeg",
-  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900_2x.jpg": "200 image/jpeg",
-  "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_600x900.jpg": "200 image/jpeg"
+ "updated": "2026-10-29T21:22:31.531Z",
+ "urls": {},
+ "wiki": {},
+ "assets": {},
+ "xboxImg": {
+  "Minecraft": [
+   {
+    "title": "Minecraft",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.46509.13850085746326678.06e2dc5c-7997-46e9-a8e6-0e48b57cb13b.86bf6099-e11f-428b-a60a-1947131b7c26",
+     "poster": "https://store-images.s-microsoft.com/image/apps.53095.13850085746326678.06e2dc5c-7997-46e9-a8e6-0e48b57cb13b.419e3c9d-9dd3-4a28-a9f3-a12350215871",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.58378.13850085746326678.826cc014-d610-46af-bdb3-c5c96be4d22c.64287a91-c69e-4723-bb61-03fecd348c2a",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.63624.13850085746326678.06e2dc5c-7997-46e9-a8e6-0e48b57cb13b.595204d5-9ced-4192-9f66-3f9c36fc4737"
+    }
+   },
+   {
+    "title": "Minecraft Dungeons II",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.55764.14305479850136392.1d44bfb9-b43e-4fae-a421-d6f972529d66.0979208f-b84a-4926-8960-0358abea7f3c",
+     "poster": "https://store-images.s-microsoft.com/image/apps.26573.14305479850136392.1d44bfb9-b43e-4fae-a421-d6f972529d66.fd3f91b2-3de0-4920-a853-4f5725b2495f",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.52340.14305479850136392.1d44bfb9-b43e-4fae-a421-d6f972529d66.0f08e1c6-ec15-4afe-957f-8e79d1ed0712",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.2669.14305479850136392.1d44bfb9-b43e-4fae-a421-d6f972529d66.b525096a-6a06-4bdd-ab9c-98e2172a499b"
+    }
+   },
+   {
+    "title": "Minecraft Launcher",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.52476.14247769038588514.a7fa20d7-bc1c-464b-bf78-16dfcd742fe5.d7a8f421-8edd-41e0-925b-4c7dfea0483b",
+     "poster": "https://store-images.s-microsoft.com/image/apps.19881.14247769038588514.16fb8346-aeb3-4939-8ef6-f5fefab5177f.9e8fc093-2e52-4c04-86cb-a94e29ccede5",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.43152.14247769038588514.3ce72ba0-ff44-4b91-b1ca-eef499b58987.a75b6a42-9c31-452f-b8ec-e955d3ab3d00"
+    }
+   }
+  ],
+  "Fortnite": [
+   {
+    "title": "Fortnite",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.20392.70702278257994163.6d75301b-59c3-4a73-b70c-5901ae9cbb44.24e2eab9-1b75-4157-ba8b-006f4624d839",
+     "poster": "https://store-images.s-microsoft.com/image/apps.17283.70702278257994163.6d75301b-59c3-4a73-b70c-5901ae9cbb44.bd4108fb-c5af-4a9a-90c5-9a25a46d76a1",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.9161.70702278257994163.6d75301b-59c3-4a73-b70c-5901ae9cbb44.315efab2-af78-4d3e-b99d-e89298f83ad9",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.39991.70702278257994163.e25e1cb1-ae4e-49b9-bbeb-a8db9942f1e6.20bdd72b-6007-4ed4-8e77-6e8cb2fa1fde"
+    }
+   },
+   {
+    "title": "Fortnite Battle Royale",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.34485.14622094146520822.5cdb5618-56ef-4fbc-8a51-bc3327c56342.655468de-3495-4c77-ad41-7f1f851fea9f",
+     "poster": "https://store-images.s-microsoft.com/image/apps.53419.14622094146520822.5cdb5618-56ef-4fbc-8a51-bc3327c56342.5fe964dd-5a52-4425-823b-e3c47f7f84f3",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.9161.14622094146520822.5cdb5618-56ef-4fbc-8a51-bc3327c56342.96ed66a6-9687-45ea-93ae-434b2ea5047a"
+    }
+   },
+   {
+    "title": "Fortnite: Raiz",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.28052.14175760236526720.44cedcee-551b-48fc-96b5-9975c4bbaa27.5f44cffd-04d9-4ef0-a714-601f1989edd5",
+     "poster": "https://store-images.s-microsoft.com/image/apps.46764.14175760236526720.44cedcee-551b-48fc-96b5-9975c4bbaa27.a7863a84-9b70-4b78-8c09-5407ea44912d",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.14624.14175760236526720.44cedcee-551b-48fc-96b5-9975c4bbaa27.02a5e679-2ffe-46db-ba20-d318fd3d026e"
+    }
+   }
+  ],
+  "Roblox": [
+   {
+    "title": "Roblox - Xbox",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.15542.68327322396008232.ddd32983-30da-4856-a0ef-70bb8840e88d.96867ef3-7275-4cb7-ba1d-edda9d40e760",
+     "poster": "https://store-images.s-microsoft.com/image/apps.3683.68327322396008232.ddd32983-30da-4856-a0ef-70bb8840e88d.cb3ff148-2c1f-4b84-9eea-ff80eda50c2d",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.11554.68327322396008232.ddd32983-30da-4856-a0ef-70bb8840e88d.127959a6-3e25-4571-996f-39f83e402fd7",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.50501.68327322396008232.ddd32983-30da-4856-a0ef-70bb8840e88d.d2d9a151-1b71-4c8d-bea7-491b59c93494"
+    }
+   },
+   {
+    "title": "Roblox - Windows",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.15542.14294982842551334.bc68eb2f-01f8-451f-85fc-6428e4bd5d81.e499e81b-867d-4917-93a4-72af69489370",
+     "poster": "https://store-images.s-microsoft.com/image/apps.3683.14294982842551334.bc68eb2f-01f8-451f-85fc-6428e4bd5d81.35b3b7f9-a58e-461b-9b11-2e1c4b3c7af2",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.11554.14294982842551334.bc68eb2f-01f8-451f-85fc-6428e4bd5d81.a486c63a-5620-4b2c-9090-914175529870"
+    }
+   },
+   {
+    "title": "Totopia",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.25587.14442857495745949.b82729c3-51d8-4f4a-b9fe-8ef742fd7f9a.9da21655-332e-4870-81ef-4c5a9965ba9d",
+     "poster": "https://store-images.s-microsoft.com/image/apps.14591.14442857495745949.b82729c3-51d8-4f4a-b9fe-8ef742fd7f9a.73a1417c-2a0d-4d91-aef4-791c49c3f41d",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.4572.14442857495745949.b82729c3-51d8-4f4a-b9fe-8ef742fd7f9a.54adefc1-127c-46c0-9942-01ee0d989c94",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.29334.14442857495745949.b82729c3-51d8-4f4a-b9fe-8ef742fd7f9a.df7905cd-ad58-444e-be93-3965e99e77ff"
+    }
+   }
+  ],
+  "Valorant": [
+   {
+    "title": "VALORANT",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.30107.13898029070941789.b9070612-bb75-4081-8f05-4acaf8e47425.c299c14e-745b-45c7-bdfd-d7d8c2348321",
+     "poster": "https://store-images.s-microsoft.com/image/apps.43432.13898029070941789.b9070612-bb75-4081-8f05-4acaf8e47425.19aed1bf-e497-497c-8140-1e0c100cba49",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.1314.13898029070941789.b9070612-bb75-4081-8f05-4acaf8e47425.ab63f426-7ad3-49f1-9eb8-f77b215a3e8e",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.2370.13898029070941789.b9070612-bb75-4081-8f05-4acaf8e47425.d9a00c18-d6dd-4e69-97cf-4f8605770891"
+    }
+   },
+   {
+    "title": "VALORANT PC",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.30107.13663857844271189.005b5800-25c5-439e-8a6e-fdb02b928900.5a37cd3f-3d64-49fd-b6a1-14cc3855f770",
+     "poster": "https://store-images.s-microsoft.com/image/apps.43432.13663857844271189.005b5800-25c5-439e-8a6e-fdb02b928900.96ac9b34-3c66-40bf-a23c-7251edc524dc",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.1314.13663857844271189.005b5800-25c5-439e-8a6e-fdb02b928900.932ff771-0d8b-43fe-b418-86339609caf9",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.2370.13663857844271189.005b5800-25c5-439e-8a6e-fdb02b928900.3a2ccddb-df51-4d30-a821-ff3d56358836"
+    }
+   }
+  ],
+  "Genshin Impact": [
+   {
+    "title": "Genshin Impact",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.40706.14057893183113088.225c959c-4e96-4c0d-b572-af64d573ae06.eb1b05ab-846a-434d-8f78-d9c3d9f4bb76",
+     "poster": "https://store-images.s-microsoft.com/image/apps.58853.14057893183113088.c7459eb1-fd61-4f8d-9636-e286ca6b3f52.1fca4e5c-8445-4fda-a44d-cf68d967866d",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.64361.14057893183113088.c7459eb1-fd61-4f8d-9636-e286ca6b3f52.e666f667-28dd-4155-b1b2-f4403b8b92dc",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.56391.14057893183113088.c7459eb1-fd61-4f8d-9636-e286ca6b3f52.8ec9148a-9bf8-4081-9a5d-2eb2b85adc97"
+    }
+   },
+   {
+    "title": "Impact Winter",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.62306.63693897546213358.8eea6538-164f-4063-bdc5-e5448115728e.8d7aab28-171e-4e76-97a2-038f80cfba32",
+     "poster": "https://store-images.s-microsoft.com/image/apps.3140.63693897546213358.8eea6538-164f-4063-bdc5-e5448115728e.c881be56-05fc-4532-812f-1dc782cb44ca",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.45775.63693897546213358.8eea6538-164f-4063-bdc5-e5448115728e.a16ef118-e7a0-4765-af93-050e7d5381d0",
+     "featurePromotionalSquareArt": "https://store-images.s-microsoft.com/image/apps.57378.63693897546213358.8eea6538-164f-4063-bdc5-e5448115728e.05f13082-5d1f-4f0e-8491-4156a78ed5c9"
+    }
+   },
+   {
+    "title": "Asteroid Impact",
+    "images": {
+     "boxArt": "https://store-images.s-microsoft.com/image/apps.37929.13692734252093952.4e790ef3-92e0-4ee5-8975-ae21802fb3bb.09291181-3d88-4fe1-89c9-a1104f24e3bd",
+     "poster": "https://store-images.s-microsoft.com/image/apps.55847.13692734252093952.4e790ef3-92e0-4ee5-8975-ae21802fb3bb.b95b1c07-c82e-40ee-a96f-e996b94240dd",
+     "tile": "https://store-images.s-microsoft.com/image/apps.43168.13692734252093952.4e790ef3-92e0-4ee5-8975-ae21802fb3bb.467d74bc-fee9-48f8-91d3-f614d03f91c5",
+     "superHeroArt": "https://store-images.s-microsoft.com/image/apps.24989.13692734252093952.4e790ef3-92e0-4ee5-8975-ae21802fb3bb.a347a23d-1839-4838-b309-869cb22a260a"
+    }
+   }
+  ]
  },
- "wiki": {
-  "Fortnite": "NO IMAGE",
-  "Fortnite Battle Royale": "NO IMAGE",
-  "Minecraft": "NO IMAGE",
-  "Dragon Ball: Gekishin Squadra": "MISSING PAGE",
-  "Resident Evil Survival Unit": "MISSING PAGE",
-  "Valorant": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/960px-Valorant_logo_-_pink_color_version.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "Free Fire (video game)": "NO IMAGE",
-  "Garena Free Fire": "NO IMAGE",
-  "Roblox": "NO IMAGE",
-  "Genshin Impact": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5d/Genshin_Impact_logo.svg/960px-Genshin_Impact_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "Metal Gear Solid Delta: Snake Eater": "https://upload.wikimedia.org/wikipedia/en/0/08/MetalGearSolidDelta.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "Call of Duty: Black Ops 7": "https://upload.wikimedia.org/wikipedia/en/a/a3/Call_of_Duty_Black_Ops_7_Key_Art.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
- },
- "assets": {
-  "1659420": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_600x900_brazilian_2x.jpg?t=1779309472",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/header_brazilian.jpg?t=1779309472",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/library_hero.jpg?t=1779309472"
-  },
-  "2072560": {
-   "capsule": null,
-   "header": null,
-   "hero": null
-  },
-  "2417610": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_600x900_2x.jpg?t=1762249119",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/05c97cbcd0cfc27c8ed6c7fc6d81e0995aa2a7d4/header.jpg?t=1762249119",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/library_hero.jpg?t=1762249119"
-  },
-  "3606480": {
-   "capsule": null,
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg?t=1789747703",
-   "hero": null
-  }
+ "itunes": {
+  "Free Fire": [
+   {
+    "n": "Free Fire x NARUTO SHIPPUDEN",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ef/16/6b/ef166bba-1d69-85f5-ed84-6b7c6e73b55c/AppIcon-1788350393-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Instagram",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/44/b0/cc/44b0cc3a-e91f-2824-d98f-3e5e095a73f3/Prod-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "p": 0
+   }
+  ],
+  "Resident Evil Survival Unit": [
+   {
+    "n": "Resident Evil Survival Unit",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c4/0a/00/c40a0060-0c88-f077-1416-cfbfd1aecaf4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Resident Evil 4",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/c8/c9/24c8c984-811f-2806-f307-1535d0fe84c8/AppIcon-1x_U007epad-0-11-0-85-220-0.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Left to Survive: Jogo de Zumbi",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/01/3c/3e/013c3eea-2bf7-c653-4c4b-4a1955e9a2d6/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+    "p": 0
+   }
+  ],
+  "Roblox": [
+   {
+    "n": "Roblox",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c4/73/78/c4737895-ef0a-5de8-35b0-67b9bd2f55d8/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Stumble Guys",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/43/bf/f3/43bff3e4-2680-e0d4-371f-91023f1c1a42/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Block Blast!",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ba/a9/19/baa9198e-fc78-56ed-fdea-e35728062a4d/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg",
+    "p": 0
+   }
+  ],
+  "Genshin Impact": [
+   {
+    "n": "Genshin Impact: 6º Aniversário",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5c/e2/13/5ce21317-a08a-24ac-cc5f-2b25a4d71fa6/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Honkai: Star Rail",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/65/dc/fd65dc18-c4b6-7b64-8266-a423f3f113e0/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   },
+   {
+    "n": "Wuthering Waves",
+    "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cd/8a/a7/cd8aa70c-a4e4-e303-37e3-5d7e735f0834/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+    "p": 0
+   }
+  ]
  }
 }
