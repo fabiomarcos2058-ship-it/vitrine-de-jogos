@@ -1,0 +1,39 @@
+name: Atualizar preços
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # a cada 3 horas
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/precos.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: precos
+  cancel-in-progress: false
+
+jobs:
+  precos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Buscar preços nas lojas
+        run: node scripts/update-prices.mjs
+      - name: Salvar no repositório
+        run: |
+          git config user.name "ASFE robô de preços"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "Preços atualizados $(date -u +'%d/%m %H:%M') UTC"
+          for i in 1 2 3; do git pull --rebase -q && git push && exit 0; sleep 5; done
+          exit 1
