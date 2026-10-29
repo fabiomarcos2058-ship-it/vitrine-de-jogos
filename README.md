@@ -2,7 +2,7 @@
 
 Notas e preços de quase 150 jogos em todas as lojas (PlayStation, Xbox, Steam, Epic Games, Google Play e App Store), num lugar só.
 
-**Site:** https://asfestore.netlify.app
+**Site:** https://zerastorecorp.netlify.app
 
 Também disponível em: https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/
 
@@ -19,7 +19,7 @@ Também disponível em: https://fabiomarcos2058-ship-it.github.io/vitrine-de-jog
 - Preços e promoções ao vivo, com aviso quando um favorito entra em promoção
 
 ## Hospedagem
-O GitHub Pages publica o site a cada mudança, de graça. O endereço asfestore.netlify.app só repassa para lá (`netlify.toml`), então a Netlify não gasta créditos com as atualizações do robô de preços nem com mudanças no site.
+O GitHub Pages publica o site a cada mudança, de graça. O endereço zerastorecorp.netlify.app só repassa para lá (`netlify.toml`), então a Netlify não gasta créditos com as atualizações do robô de preços nem com mudanças no site.
 
 ## Atualizações automáticas
 - **A cada 3 horas** o robô de preços (`.github/workflows/precos.yml` + `scripts/update-prices.mjs`) busca preços e promoções na Steam, Microsoft Store, PlayStation Store e Epic Games, o mais vendido da Steam e os jogos grátis da Epic, e grava em `data/prices.json`. O relatório de cada loja fica em `data/prices-report.json`.
