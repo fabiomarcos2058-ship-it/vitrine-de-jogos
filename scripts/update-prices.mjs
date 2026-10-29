@@ -1,4 +1,4 @@
-// ASFE Store — robô de preços.
+// Zera — robô de preços.
 // Busca preços e promoções nas lojas brasileiras e grava data/prices.json.
 // Roda no GitHub Actions (ver .github/workflows/precos.yml). Não precisa de chaves.
 import fs from "node:fs";

@@ -1,5 +1,5 @@
-// ASFE Store — funciona offline depois da primeira visita.
-const VERSION = "asfe-v3";
+// Zera — funciona offline depois da primeira visita.
+const VERSION = "zera-v1";
 const SHELL = ["./", "./index.html", "./games.js", "./firebase-config.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {

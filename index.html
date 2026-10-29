@@ -3,34 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="ASFE Store: quase 150 jogos com nota da crítica e preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store.">
-<meta name="theme-color" content="#0C0E12">
-<title>ASFE Store</title>
+<meta name="description" content="Zera: quase 150 jogos com nota da crítica e preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store.">
+<meta name="theme-color" content="#0D0F14">
+<title>Zera · notas, preços e promoções de jogos</title>
+<script>try { var zt = localStorage.getItem("zera-tema") || "dark"; if (zt !== "system") document.documentElement.setAttribute("data-theme", zt); } catch (e) { document.documentElement.setAttribute("data-theme", "dark"); }</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="ASFE">
+<meta name="apple-mobile-web-app-title" content="Zera">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23FFC83D'/%3E%3Cpath d='M9 23 16 8l7 15M12.2 17.5h7.6' stroke='%231A1300' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='24.5' cy='9' r='2' fill='%231A1300'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23C6FF3D'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%230D0F14' stroke-width='7' stroke-linecap='round' stroke-dasharray='124 14' transform='rotate(-62 32 32)'/%3E%3Cpath d='M24.5 23.5h15l-15 17h15' fill='none' stroke='%230D0F14' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
-/* ASFE Store — loja escura com amarelo "cartucho" como marca.
+/* Zera — preto profundo com verde-limão como marca (o preço "dropou").
    Layout: cabeçalho fixo (menu, marca, busca, abas) > destaque em carrossel > prateleiras > catálogo em grade. */
 :root {
-  --bg: #0C0E12;
-  --bg-2: #11141A;
-  --surface: #161A21;
-  --raised: #1E232C;
-  --line: #262C37;
-  --fg: #F3F4F7;
-  --muted: #9CA3B3;
-  --faint: #626A7B;
-  --brand: #FFC83D;
-  --brand-ink: #1A1300;
-  --brand-text: #FFC83D;
+  --bg: #0D0F14;
+  --bg-2: #12151C;
+  --surface: #171B23;
+  --raised: #1F242E;
+  --line: #282E3A;
+  --fg: #F4F6F8;
+  --muted: #A3ACBB;
+  --faint: #6B7384;
+  --brand: #C6FF3D;
+  --brand-ink: #0D0F14;
+  --brand-text: #C6FF3D;
+  --brand-edge: var(--brand);
   --good: #3DD68C;
   --mid: #FFC83D;
   --bad: #FF6B5B;
@@ -44,9 +46,9 @@
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #F1F3F6; --bg-2: #E8EBF0; --surface: #FFFFFF; --raised: #F3F5F8; --line: #DCE1E8;
-    --fg: #0E1116; --muted: #5A6273; --faint: #8C93A1;
-    --brand: #FFC21F; --brand-ink: #1A1300; --brand-text: #8A6100;
+    --bg: #F2F3F5; --bg-2: #E8EAEE; --surface: #FFFFFF; --raised: #F4F5F7; --line: #DDE1E7;
+    --fg: #0D0F14; --muted: #555D6D; --faint: #8A919E;
+    --brand: #C6FF3D; --brand-ink: #0D0F14; --brand-text: #4A6600; --brand-edge: #6E9400;
     --good: #138A4F; --mid: #B98500; --bad: #D23B2A;
     --scrim: rgba(14, 17, 22, 0.5); --shadow: 0 18px 50px rgba(20, 28, 40, 0.18);
     --c-ps: #1F57D6; --c-xb: #1C8538; --c-st: #1B5E8C; --c-ep: #2B2F36; --c-gp: #C2410C; --c-ap: #5F6470;
@@ -54,9 +56,9 @@
   }
 }
 :root[data-theme="light"] {
-  --bg: #F1F3F6; --bg-2: #E8EBF0; --surface: #FFFFFF; --raised: #F3F5F8; --line: #DCE1E8;
-  --fg: #0E1116; --muted: #5A6273; --faint: #8C93A1;
-  --brand: #FFC21F; --brand-ink: #1A1300; --brand-text: #8A6100;
+  --bg: #F2F3F5; --bg-2: #E8EAEE; --surface: #FFFFFF; --raised: #F4F5F7; --line: #DDE1E7;
+  --fg: #0D0F14; --muted: #555D6D; --faint: #8A919E;
+  --brand: #C6FF3D; --brand-ink: #0D0F14; --brand-text: #4A6600; --brand-edge: #6E9400;
   --good: #138A4F; --mid: #B98500; --bad: #D23B2A;
   --scrim: rgba(14, 17, 22, 0.5); --shadow: 0 18px 50px rgba(20, 28, 40, 0.18);
   --c-ps: #1F57D6; --c-xb: #1C8538; --c-st: #1B5E8C; --c-ep: #2B2F36; --c-gp: #C2410C; --c-ap: #5F6470;
@@ -83,28 +85,30 @@ button { font: inherit; color: inherit; }
 .icon-btn svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
 .icon-btn .badge { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--brand); color: var(--brand-ink); font: 700 10.5px/18px var(--mono); text-align: center; }
 .brand { display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0; text-decoration: none; color: var(--fg); border-radius: 10px; padding: 2px; }
-.brand svg { width: 34px; height: 34px; flex-shrink: 0; transition: transform .25s ease; }
-.brand:hover svg { transform: rotate(-8deg); }
-.brand b { font: 800 19px/1 var(--display); letter-spacing: 0.02em; }
+.brand svg { width: 32px; height: 32px; flex-shrink: 0; transition: transform .35s ease; }
+.brand:hover svg { transform: rotate(-90deg); }
+:root[data-theme="light"] .brand svg { --logo-ring: #0D0F14; --logo-z: #0D0F14; background: #C6FF3D; border-radius: 10px; padding: 4px; }
+@media (prefers-color-scheme: light) { :root:not([data-theme]) .brand svg { --logo-ring: #0D0F14; --logo-z: #0D0F14; background: #C6FF3D; border-radius: 10px; padding: 4px; } }
+.brand b { font: 800 23px/1 var(--display); letter-spacing: -0.05em; text-transform: lowercase; padding-bottom: 2px; }
 .brand small { display: block; font: 600 9px/1 var(--display); letter-spacing: 0.32em; color: var(--brand-text); margin-top: 4px; }
 .search { position: relative; flex: 1 1 auto; min-width: 0; max-width: 560px; margin-left: auto; }
 .search input { width: 100%; height: 44px; font: 500 15px var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 0 16px 0 42px; }
 .search input::placeholder { color: var(--faint); }
-.search input:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.search input:focus { border-color: var(--brand-edge); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
 .search svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; stroke: var(--muted); stroke-width: 2.2; fill: none; stroke-linecap: round; }
 .nav-row { display: flex; align-items: center; gap: 14px; padding-bottom: 10px; overflow-x: auto; scrollbar-width: none; }
 .nav-row::-webkit-scrollbar { display: none; }
 .tabs { display: flex; gap: 4px; flex-shrink: 0; }
 .tabs button { border: 0; background: transparent; color: var(--muted); font-weight: 600; font-size: 14px; padding: 8px 14px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
 .tabs button:hover { color: var(--fg); background: var(--surface); }
-.tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.tabs button[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); }
 .nav-row .sep { width: 1px; height: 22px; background: var(--line); flex-shrink: 0; }
 .selects { display: flex; gap: 8px; flex-shrink: 0; margin-left: auto; }
 select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body); color: var(--fg); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%239CA3B3' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center / 11px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 34px 8px 14px; cursor: pointer; }
 @media (max-width: 640px) {
-  .brand b { font-size: 16px; }
+  .brand b { font-size: 20px; }
   .brand small { font-size: 8px; letter-spacing: 0.26em; }
-  .brand svg { width: 30px; height: 30px; }
+  .brand svg { width: 28px; height: 28px; }
   .top-row { flex-wrap: wrap; gap: 10px; }
   .search { order: 5; flex-basis: 100%; max-width: none; }
   .top-row .fav-top { margin-left: auto; }
@@ -113,14 +117,14 @@ select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body
 
 /* ---------- destaque (carrossel) ---------- */
 .hero { padding-block: 10px 8px; }
-.hero-frame { position: relative; border-radius: 28px; overflow: hidden; background: #11131A; color: #FFFFFF; isolation: isolate; min-height: 380px; }
+.hero-frame { position: relative; border-radius: 28px; overflow: hidden; background: #0D0F14; color: #FFFFFF; isolation: isolate; min-height: 380px; }
 .slide { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center; gap: 24px; padding: 40px 48px 84px; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility .6s; }
 .slide.on { opacity: 1; visibility: visible; position: relative; }
 .slide .bg { position: absolute; inset: -40px; z-index: -2; background-size: cover; background-position: center; filter: blur(34px) saturate(1.35) brightness(0.75); transform: scale(1.1); }
 .slide::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 90% at 85% 50%, rgba(0,0,0,0) 0%, rgba(8,10,14,0.55) 55%, rgba(8,10,14,0.88) 100%); }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 700 11px var(--display); letter-spacing: 0.16em; text-transform: uppercase; color: #FFFFFF; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); padding: 7px 12px; border-radius: 999px; backdrop-filter: blur(6px); }
 .eyebrow i { width: 8px; height: 8px; border-radius: 50%; }
-.hero h2 { font: 800 clamp(28px, 4.6vw, 60px)/1.02 var(--display); letter-spacing: -0.02em; margin: 16px 0 14px; text-transform: uppercase; text-wrap: balance; overflow-wrap: anywhere; }
+.hero h2 { font: 800 clamp(28px, 4.6vw, 60px)/1.02 var(--display); letter-spacing: -0.04em; margin: 16px 0 14px; text-transform: uppercase; text-wrap: balance; overflow-wrap: anywhere; }
 .hero p { margin: 0; max-width: 46ch; font-size: 16px; color: rgba(255,255,255,0.82); }
 .hero-cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
 .btn-brand { display: inline-flex; align-items: center; gap: 10px; border: 0; cursor: pointer; background: var(--brand); color: var(--brand-ink); font: 700 15px var(--body); padding: 13px 22px; border-radius: 999px; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
@@ -151,7 +155,7 @@ select { appearance: none; -webkit-appearance: none; font: 600 13.5px var(--body
 /* ---------- prateleiras ---------- */
 .shelf { padding-block: 26px 4px; }
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.shelf-head h3 { font: 700 clamp(17px, 2.2vw, 22px)/1.1 var(--display); margin: 0; letter-spacing: -0.01em; }
+.shelf-head h3 { font: 800 clamp(18px, 2.3vw, 24px)/1.1 var(--display); margin: 0; letter-spacing: -0.035em; }
 .shelf-head p { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
 .see-all { flex-shrink: 0; border: 0; background: transparent; color: var(--brand-text); font: 700 13.5px var(--body); cursor: pointer; padding: 6px 2px; white-space: nowrap; }
 .see-all:hover { text-decoration: underline; }
@@ -230,7 +234,7 @@ dialog::backdrop { background: var(--scrim); backdrop-filter: blur(4px); }
 .d-score .ring span { font-size: 16px; }
 .d-score .lbl { font-size: 13.5px; color: rgba(255,255,255,0.8); max-width: 26ch; line-height: 1.35; }
 .fav-btn { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.1); color: #FFFFFF; padding: 9px 16px; border-radius: 999px; font-weight: 700; font-size: 13.5px; cursor: pointer; }
-.fav-btn[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.fav-btn[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
 @media (max-width: 680px) {
   .d-hero { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; padding: calc(64px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px)); align-items: end; }
   .d-score { grid-column: 1 / -1; }
@@ -248,7 +252,7 @@ a.shop:hover { border-color: var(--muted); }
 .shop .sk { display: block; font-size: 12.5px; color: var(--muted); font-weight: 500; }
 .shop .sv { font: 700 16px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .shop .arr { color: var(--faint); font-size: 18px; }
-.shop.best { border-color: var(--brand); box-shadow: inset 0 0 0 1px var(--brand); }
+.shop.best { border-color: var(--brand-edge); box-shadow: inset 0 0 0 1px var(--brand-edge); }
 .shop .flag { display: inline-block; margin-left: 8px; font: 700 9.5px var(--body); letter-spacing: 0.08em; text-transform: uppercase; background: var(--brand); color: var(--brand-ink); padding: 3px 7px; border-radius: 999px; vertical-align: 2px; }
 .shop.na { opacity: 0.5; background: transparent; border-style: dashed; grid-template-columns: 12px minmax(0, 1fr) auto; }
 .shop.na .sv { font: 600 12.5px var(--body); color: var(--muted); }
@@ -265,7 +269,7 @@ a.shop:hover { border-color: var(--muted); }
 .opt .box span { font-size: 12.5px; color: var(--muted); }
 .opt .box .ov { font: 700 14px var(--mono); color: var(--fg); margin-top: 4px; }
 .opt:hover .box { border-color: var(--muted); }
-.opt input:checked + .box { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 9%, var(--bg)); }
+.opt input:checked + .box { border-color: var(--brand-edge); background: color-mix(in srgb, var(--brand) 9%, var(--bg)); }
 .opt input:focus-visible + .box { outline: 2px solid var(--brand); outline-offset: 2px; }
 .dot { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
 .go { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--line); }
@@ -316,7 +320,7 @@ footer .brand { margin-bottom: 10px; }
 .soon-rail > * { scroll-snap-align: start; }
 .soon { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); text-align: left; text-decoration: none; color: var(--fg); cursor: pointer; }
 .soon:hover { border-color: var(--muted); }
-.soon.big { border-color: var(--brand); box-shadow: inset 0 0 0 1px var(--brand); }
+.soon.big { border-color: var(--brand-edge); box-shadow: inset 0 0 0 1px var(--brand-edge); }
 .date { display: grid; place-items: center; align-content: center; height: 62px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); line-height: 1; }
 .date b { font: 800 22px var(--display); }
 .date small { font: 700 10px var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-text); margin-top: 4px; }
@@ -341,7 +345,7 @@ footer .brand { margin-bottom: 10px; }
 @media (max-width: 680px) { .d-actions { grid-column: 1 / -1; margin-top: 0; } .d-actions .act { flex: 1 1 auto; justify-content: center; padding: 10px 12px; } }
 .act { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.1); color: #FFFFFF; padding: 9px 15px; border-radius: 999px; font-weight: 700; font-size: 13.5px; cursor: pointer; }
 .act:hover { background: rgba(255,255,255,0.18); }
-.act[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.act[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
 .act svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ---------- aviso rápido ---------- */
@@ -407,7 +411,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .choice .box .e { width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border-radius: 12px; background: var(--bg); font: 700 13px var(--display); color: var(--brand-text); }
 .choice .box small { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
 .choice:hover .box { border-color: var(--muted); }
-.choice input:checked + .box { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
+.choice input:checked + .box { border-color: var(--brand-edge); background: color-mix(in srgb, var(--brand) 10%, var(--surface)); }
 .choice input:focus-visible + .box { outline: 2px solid var(--brand); outline-offset: 2px; }
 .q-nav { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 24px; }
 .btn-ghost { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 12px 20px; font-weight: 700; cursor: pointer; }
@@ -424,7 +428,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .match { text-align: center; }
 .q-res .match b { display: inline; font: 800 22px var(--display); color: var(--brand-text); }
 .match small { display: block; font-size: 11px; color: var(--muted); }
-.q-res:first-child { border-color: var(--brand); box-shadow: inset 0 0 0 1px var(--brand); }
+.q-res:first-child { border-color: var(--brand-edge); box-shadow: inset 0 0 0 1px var(--brand-edge); }
 @media (max-width: 480px) { .q-res { grid-template-columns: 64px minmax(0, 1fr); } .match { grid-column: 2; text-align: left; margin-top: -4px; } .q-res .match b { font-size: 16px; } .match small { display: inline; margin-left: 4px; } }
 
 /* lista de desejos */
@@ -438,7 +442,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .ws .wn { display: flex; align-items: center; gap: 7px; font-weight: 700; font-size: 13.5px; }
 .ws .wv { font: 700 17px var(--mono); margin-top: 4px; font-variant-numeric: tabular-nums; }
 .ws .wc { font-size: 12px; color: var(--muted); }
-.ws.best { border-color: var(--brand); box-shadow: inset 0 0 0 1px var(--brand); }
+.ws.best { border-color: var(--brand-edge); box-shadow: inset 0 0 0 1px var(--brand-edge); }
 .wish-note { font-size: 12px; color: var(--faint); margin: 0; }
 
 /* calendário */
@@ -544,7 +548,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .field input, .field textarea, .field select { width: 100%; font: 500 15px var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
 .field select { padding-right: 34px; }
 .field textarea { resize: vertical; min-height: 84px; line-height: 1.5; }
-.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--brand-edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
 .field .help { font-size: 12px; color: var(--faint); margin-top: 5px; }
 .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 @media (max-width: 480px) { .two { grid-template-columns: 1fr; } }
@@ -578,13 +582,13 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .auth-perks li::before { content: "✓"; width: 22px; height: 22px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-text); font-weight: 800; font-size: 12px; }
 
 /* ---------- promoções ao vivo ---------- */
-:root { --sale: #E5484D; --sale-ink: #FFFFFF; }
+:root { --sale: #C6FF3D; --sale-ink: #0D0F14; }
 .salepill { position: absolute; z-index: 2; left: 10px; top: 10px; font: 800 11.5px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 4px 8px; border-radius: 999px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 .c-price s, .shop s, .ci s, .hero-price s, .live-old { font: 600 12px var(--mono); color: var(--faint); text-decoration: line-through; }
 .c-price .now-sale { color: var(--sale); }
-:root:not([data-theme="light"]) .c-price .now-sale { color: #FF6B70; }
-@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .c-price .now-sale { color: #C2272D; } }
-:root[data-theme="light"] .c-price .now-sale { color: #C2272D; }
+:root:not([data-theme="light"]) .c-price .now-sale { color: #C6FF3D; }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .c-price .now-sale { color: #3F5A00; } }
+:root[data-theme="light"] .c-price .now-sale { color: #3F5A00; }
 .shop .sv { display: grid; justify-items: end; gap: 1px; }
 .shop .off { font: 800 11px var(--mono); color: var(--sale-ink); background: var(--sale); padding: 2px 6px; border-radius: 999px; }
 .shop .until { font-size: 11px; color: var(--muted); font-weight: 600; }
@@ -623,7 +627,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="logo-mark" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="var(--brand)"/><path d="M9 23 16 8l7 15M12.2 17.5h7.6" stroke="var(--brand-ink)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="24.5" cy="9" r="2" fill="var(--brand-ink)"/></symbol>
+  <symbol id="logo-mark" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring, var(--brand))" stroke-width="8" stroke-linecap="round" stroke-dasharray="146 18" transform="rotate(-62 32 32)"/><path d="M23 22h18L23 42h18" fill="none" stroke="var(--logo-z, var(--fg))" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
 <header class="top" id="top">
@@ -632,9 +636,9 @@ body.has-tray .catalog { padding-bottom: 120px; }
       <button class="icon-btn" type="button" id="menu-btn" aria-label="Abrir menu" aria-haspopup="dialog" aria-controls="menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h11M4 17h16"></path></svg>
       </button>
-      <a class="brand" href="./" id="logo" aria-label="ASFE Store: voltar ao início">
+      <a class="brand" href="./" id="logo" aria-label="Zera: voltar ao início">
         <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-        <span><b>ASFE</b><small>STORE</small></span>
+        <span><b>zera</b></span>
       </a>
       <label class="search" for="q">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
@@ -702,25 +706,25 @@ body.has-tray .catalog { padding-bottom: 120px; }
 <footer>
   <div class="wrap">
     <div>
-      <a class="brand" href="./" data-home aria-label="ASFE Store: voltar ao início">
+      <a class="brand" href="./" data-home aria-label="Zera: voltar ao início">
         <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-        <span><b>ASFE</b><small>STORE</small></span>
+        <span><b>zera</b></span>
       </a>
       <p>Compare notas e preços de jogos em todas as lojas, num lugar só.</p>
     </div>
     <div>
       <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
       <p id="foot-live">Preços da Steam e da Microsoft Store (Xbox) são atualizados automaticamente várias vezes por dia, com promoções. A PlayStation Store não permite consultar promoções automaticamente, então os preços do PlayStation são de referência e o jogo pode estar em promoção na loja. Epic Games, Google Play e App Store também usam preços de referência.</p>
-      <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. A ASFE Store não vende jogos; os links levam às lojas oficiais.</p>
+      <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. O Zera não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
 </footer>
 
 <dialog id="menu" aria-label="Menu">
   <div class="dr-head">
-    <a class="brand" href="./" data-home aria-label="ASFE Store: voltar ao início">
+    <a class="brand" href="./" data-home aria-label="Zera: voltar ao início">
       <svg aria-hidden="true"><use href="#logo-mark"></use></svg>
-      <span><b>ASFE</b><small>STORE</small></span>
+      <span><b>zera</b></span>
     </a>
     <button class="icon-btn" type="button" id="menu-close" aria-label="Fechar menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
   </div>
@@ -742,7 +746,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 </dialog>
 
 <script src="firebase-config.js?v=2"></script>
-<script src="games.js?v=20261029-asfe3"></script>
+<script src="games.js?v=20261029-zera1"></script>
 <script>
 const STORES = [
   { k: "ps", name: "PlayStation Store", short: "PS5", label: "PS5", kind: "Console PlayStation", url: q => "https://store.playstation.com/pt-br/search/" + encodeURIComponent(q) },
@@ -1488,9 +1492,9 @@ async function copyText(text) {
 }
 async function shareGame(g) {
   const url = gameUrl(g);
-  const text = `${g.t} na ASFE Store: nota ${g.n ?? "–"} e preço em todas as lojas.`;
+  const text = `${g.t} no Zera: nota ${g.n ?? "–"} e preço em todas as lojas.`;
   if (navigator.share) {
-    try { await navigator.share({ title: g.t + " · ASFE Store", text, url }); return; } catch (e) { if (e && e.name === "AbortError") return; }
+    try { await navigator.share({ title: g.t + " · Zera", text, url }); return; } catch (e) { if (e && e.name === "AbortError") return; }
   }
   openSheet("share", "Compartilhar", g.t, `<div class="share-opts">
       <a href="https://wa.me/?text=${encodeURIComponent(text + " " + url)}" target="_blank" rel="noopener"><span class="ic">WA</span>Enviar pelo WhatsApp</a>
@@ -1628,9 +1632,9 @@ function openGuides(k) {
 let installEvt = null;
 const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installEvt = e; });
-window.addEventListener("appinstalled", () => { installEvt = null; toast("ASFE Store instalada"); closeSheet(); });
+window.addEventListener("appinstalled", () => { installEvt = null; toast("Zera instalado"); closeSheet(); });
 async function openInstall() {
-  if (isStandalone()) { openSheet("install", "App", "Você já está no app", `<p class="lede-sm">A ASFE Store já está instalada e aberta como aplicativo. Ela funciona mesmo sem internet com os dados da última visita.</p>`); return; }
+  if (isStandalone()) { openSheet("install", "App", "Você já está no app", `<p class="lede-sm">O Zera já está instalado e aberto como aplicativo. Ele funciona mesmo sem internet com os dados da última visita.</p>`); return; }
   if (installEvt) {
     installEvt.prompt();
     const r = await installEvt.userChoice.catch(() => null);
@@ -1641,8 +1645,8 @@ async function openInstall() {
   const steps = ios
     ? ["Abra este site no <b>Safari</b>.", "Toque no botão <b>Compartilhar</b> (o quadrado com a seta para cima).", "Escolha <b>Adicionar à Tela de Início</b> e toque em <b>Adicionar</b>."]
     : ["Abra este site no <b>Chrome</b> (ou no navegador do seu celular).", "Toque no menu <b>⋮</b> no canto da tela.", "Escolha <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>."];
-  openSheet("install", "Instalar o app", "ASFE Store no seu celular", `
-    <div class="install-hero"><img src="icons/icon-192.png" alt=""><div><b style="font:800 18px var(--display)">ASFE Store</b><p class="lede-sm" style="margin:4px 0 0">Ícone na tela inicial, abre em tela cheia e funciona sem internet.</p></div></div>
+  openSheet("install", "Instalar o app", "Zera no seu celular", `
+    <div class="install-hero"><img src="icons/icon-192.png" alt=""><div><b style="font:800 18px var(--display)">zera</b><p class="lede-sm" style="margin:4px 0 0">Ícone na tela inicial, abre em tela cheia e funciona sem internet.</p></div></div>
     <ol class="install-steps">${steps.map(s => `<li><span>${s}</span></li>`).join("")}</ol>`);
 }
 if ("serviceWorker" in navigator && location.protocol === "https:") {
@@ -1654,7 +1658,7 @@ if ("serviceWorker" in navigator && location.protocol === "https:") {
 const AV_SYMBOLS = ["★", "⚡", "♛", "☾", "✦", "♠", "☠", "♥", "◆", "⬢", "✚", "∞"];
 const AV_COLORS = ["#FFC83D", "#FF7A59", "#FF5D8F", "#B57BFF", "#6E9BFF", "#3DD6C6", "#57D17A", "#C7D2E0"];
 const BANNERS = [
-  "linear-gradient(120deg,#1B1F2A,#3A2E12 60%,#FFC83D)",
+  "linear-gradient(120deg,#1B1F2A,#26330A 60%,#C6FF3D)",
   "linear-gradient(120deg,#0F2027,#203A43,#2C5364)",
   "linear-gradient(120deg,#2B1055,#7597DE)",
   "linear-gradient(120deg,#3A1C71,#D76D77,#FFAF7B)",
@@ -1664,7 +1668,7 @@ const BANNERS = [
   "linear-gradient(120deg,#FF512F,#DD2476)"
 ];
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
-const ACCENTS = [["Amarelo", "#FFC83D", "#8A6100"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"]];
+const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
 const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0 };
 let profile = { ...DEFAULT_PROFILE };
 try { const p = JSON.parse(localStorage.getItem("asfe-perfil") || "null"); if (p && typeof p === "object") profile = { ...DEFAULT_PROFILE, ...p }; } catch (e) {}
@@ -1676,8 +1680,8 @@ function applyAccent() {
   if (!profile.accent) { if (el) el.remove(); return; }
   if (!el) { el = document.createElement("style"); el.id = "accent-style"; document.head.appendChild(el); }
   el.textContent = `:root{--brand:${a[1]};--brand-text:${a[1]}}
-@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--brand:${a[1]};--brand-text:${a[2]}}}
-:root[data-theme="light"]{--brand:${a[1]};--brand-text:${a[2]}}`;
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--brand:${a[1]};--brand-text:${a[2]};--brand-edge:${a[2]}}}
+:root[data-theme="light"]{--brand:${a[1]};--brand-text:${a[2]};--brand-edge:${a[2]}}`;
 }
 function avatarLabel(p) { if (p.sym >= 0) return AV_SYMBOLS[p.sym] || "★"; const n = (p.name || "").trim(); return n ? n.charAt(0).toUpperCase() : "?"; }
 function avatarHTML(size, p = profile) { return `<span class="avatar" style="--av:${AV_COLORS[p.color] || AV_COLORS[0]};--s:${size}px">${esc(avatarLabel(p))}</span>`; }
@@ -1939,7 +1943,7 @@ function openLogin(mode = "login") {
   const note = fbState === "loading" ? "Conectando ao serviço de contas…"
     : fbState === "error" ? "Não foi possível conectar ao serviço de contas agora. Verifique sua internet e tente de novo em instantes. Enquanto isso, o perfil e o carrinho funcionam neste aparelho."
     : "As contas estão sendo ativadas e vão funcionar em breve. Enquanto isso, você já pode personalizar um perfil e usar o carrinho neste aparelho.";
-  openSheet("login", "Conta ASFE", signup ? "Criar conta" : "Entrar", `
+  openSheet("login", "Conta Zera", signup ? "Criar conta" : "Entrar", `
     <div class="auth-tabs" role="group" aria-label="Entrar ou criar conta"><button type="button" data-mode="login" aria-pressed="${!signup}">Entrar</button><button type="button" data-mode="signup" aria-pressed="${signup}">Criar conta</button></div>
     ${signup ? `<ul class="auth-perks"><li>Perfil com avatar, capa e cor do app</li><li>Favoritos e carrinho salvos na nuvem</li><li>Use em qualquer aparelho</li></ul>` : ""}
     ${on ? "" : `<div class="msg info" style="margin-bottom:16px">${note}</div>`}
@@ -1979,7 +1983,7 @@ function openLogin(mode = "login") {
         if (!profile.name) profile.name = name;
         if (!profile.user) profile.user = name.normalize("NFD").replace(/[^\w\s.]/g, "").trim().toLowerCase().replace(/\s+/g, "_").slice(0, 20);
         saveProfile();
-        toast("Conta criada! Bem-vindo(a) à ASFE Store");
+        toast("Conta criada! Bem-vindo(a) ao Zera");
       } else {
         await fb.A.signInWithEmailAndPassword(fb.auth, email, pass);
         toast("Bem-vindo(a) de volta");
@@ -2016,10 +2020,10 @@ document.getElementById("cart-btn").addEventListener("click", openCart);
 // ---------- menu lateral ----------
 const menu = document.getElementById("menu");
 const menuBody = document.getElementById("menu-body");
-function getTheme() { try { return localStorage.getItem("vitrine-tema") || "system"; } catch (e) { return "system"; } }
+function getTheme() { try { return localStorage.getItem("zera-tema") || "dark"; } catch (e) { return "dark"; } }
 function applyTheme(t) {
   if (t === "system") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", t);
-  try { localStorage.setItem("vitrine-tema", t); } catch (e) {}
+  try { localStorage.setItem("zera-tema", t); } catch (e) {}
 }
 applyTheme(getTheme());
 function renderMenu() {
@@ -2048,7 +2052,7 @@ function renderMenu() {
         ${[["system", "Automático"], ["light", "Claro"], ["dark", "Escuro"]].map(([v, l]) => `<button type="button" data-theme-v="${v}" aria-pressed="${theme === v}">${l}</button>`).join("")}
       </div>
     </div>
-    <div class="dr-sec"><h3>Sobre a ASFE Store</h3>
+    <div class="dr-sec"><h3>Sobre o Zera</h3>
       <p class="dr-about">Comparamos notas da crítica e preços nas lojas digitais brasileiras, com promoções atualizadas várias vezes por dia. Cada loja abre a página oficial. O mais vendido da Steam é ao vivo; os do PlayStation e do Xbox são revisados toda semana.</p>
     </div>`;
 }

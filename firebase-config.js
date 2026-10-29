@@ -1,4 +1,4 @@
-// Configuração pública do Firebase (contas da ASFE Store).
+// Configuração pública do Firebase (contas do Zera).
 // Estes valores identificam o projeto e podem ficar no site; a segurança vem das regras do Firestore.
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyC7GRDvBZZJm3CsdRtys4FuxeLVPuG9RYU",

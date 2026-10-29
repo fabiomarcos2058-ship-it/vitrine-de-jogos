@@ -30,7 +30,7 @@ jobs:
         run: node scripts/update-prices.mjs
       - name: Salvar no repositório
         run: |
-          git config user.name "ASFE robô de preços"
+          git config user.name "Zera robô de preços"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi

@@ -1,4 +1,4 @@
-# ASFE Store
+# Zera
 
 Notas e preços de quase 150 jogos em todas as lojas (PlayStation, Xbox, Steam, Epic Games, Google Play e App Store), num lugar só.
 
