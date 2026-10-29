@@ -1953,11 +1953,15 @@ const BANNERS = [
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
 const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
 const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "", bgChar: null };
-const safeCharImg = u => typeof u === "string" && u.length < 600 && /^https:\/\/((upload|thumb)\.wikimedia\.org|static\.wikia\.nocookie\.net)\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
+const safeCharImg = u => typeof u === "string" && /^chars\/[a-z0-9-]+\.webp$/.test(u) ? u : typeof u === "string" && u.length < 600 && /^https:\/\/((upload|thumb)\.wikimedia\.org|static\.wikia\.nocookie\.net)\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
 let CHARS = null;
 async function loadChars() {
   if (CHARS) return CHARS;
-  try { CHARS = (await (await fetch("data/characters.json?v=" + Math.floor(Date.now() / 864e5))).json()).games || {}; } catch (e) { CHARS = {}; }
+  const day = Math.floor(Date.now() / 864e5);
+  const get = async u => { try { return (await (await fetch(u + "?v=" + day)).json()).games || {}; } catch (e) { return {}; } };
+  const [base, extra] = await Promise.all([get("data/characters.json"), get("data/characters-extra.json")]);
+  CHARS = { ...base };
+  for (const [g, l] of Object.entries(extra)) CHARS[g] = [...l, ...(base[g] || [])];
   return CHARS;
 }
 const BG_PRESETS = ["#1B2A12", "#14213D", "#2B1055", "#3A0F1F", "#0F3D3E", "#3A2A0B"];

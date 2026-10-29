@@ -1,0 +1,374 @@
+{
+ "games": {
+  "Dragon Ball: Sparking! Zero": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball FighterZ": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Z: Kakarot": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Xenoverse 2": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Xenoverse": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball: The Breakers": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Super Dragon Ball Heroes: World Mission": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Gekishin Squadra": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Legends": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ],
+  "Dragon Ball Z: Dokkan Battle": [
+   {
+    "n": "Goku Ultra Instinto",
+    "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta",
+    "img": "chars/vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Trunks SSJ",
+    "img": "chars/trunks-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegito SSJ",
+    "img": "chars/vegito-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ",
+    "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ4",
+    "img": "chars/gogeta-ssj4.webp",
+    "src": "zera"
+   }
+  ]
+ }
+}
