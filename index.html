@@ -423,8 +423,9 @@ const LISTS = [
 ];
 const COLLECTIONS = [
   ["c-db", "Dragon Ball", "Todos os jogos, de console e celular", g => g.f === "Dragon Ball"],
-  ["c-re", "Resident Evil", "Os remakes e a era moderna", g => g.t.startsWith("Resident Evil")],
-  ["c-ff", "Final Fantasy", "Remake, Rebirth e XVI", g => g.t.startsWith("Final Fantasy")],
+  ["c-re", "Resident Evil", "Todos os jogos à venda", g => g.f === "Resident Evil"],
+  ["c-gta", "Grand Theft Auto", "Todos os GTA à venda, do IV ao VI", g => g.f === "GTA"],
+  ["c-ff", "Final Fantasy", "Do clássico VII ao Resonance", g => g.f === "Final Fantasy"],
   ["c-fs", "FromSoftware", "Elden Ring, Bloodborne e mais", g => g.d === "FromSoftware"],
   ["c-rs", "Rockstar Games", "GTA e Red Dead", g => g.d === "Rockstar Games"],
   ["c-cp", "Capcom", "Resident Evil, Monster Hunter, Street Fighter", g => g.d === "Capcom"],
