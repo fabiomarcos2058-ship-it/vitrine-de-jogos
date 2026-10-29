@@ -673,6 +673,44 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 .fr-fav span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
+/* ---------- personalização: imagens, roda de cores, fundo ---------- */
+.avatar.pic { background: var(--raised); overflow: hidden; }
+.avatar.pic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
+#sheet.has-bg { background: linear-gradient(color-mix(in srgb, var(--bg) 25%, transparent), color-mix(in srgb, var(--bg) 72%, transparent)), var(--sheet-bg), var(--bg); }
+#sheet.has-bg .sh-head { background: color-mix(in srgb, var(--bg) 70%, transparent); }
+.pv2 { position: relative; isolation: isolate; border-radius: 20px; overflow: hidden; padding: 18px; background: var(--bg-2); border: 1px solid var(--line); }
+.pv2-bg { position: absolute; inset: 0; z-index: -1; }
+.pv2-card { border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.pv2-banner { height: 76px; }
+.pv2-row { display: flex; align-items: flex-end; gap: 12px; padding: 0 14px 12px; margin-top: -30px; }
+.pv2-row .pav { width: 66px; height: 66px; --s: 66px; border-width: 3px; flex-shrink: 0; }
+.pv2-row b { display: block; font: 800 16px var(--display); }
+.pv2-row small { color: var(--muted); }
+.img-pick { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.img-pick .pav { width: 64px; height: 64px; --s: 64px; border-width: 3px; box-shadow: none; }
+.img-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.file-btn { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
+.file-btn:focus-within { outline: 2px solid var(--brand-edge); outline-offset: 2px; }
+.sw-custom { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--line); padding: 3px; background: transparent; cursor: pointer; }
+.sw-custom > span { display: block; width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red); }
+.sw-custom.on { border-color: var(--fg); }
+.sw-custom[aria-expanded="true"] { border-color: var(--brand-edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
+.sw-none { background: repeating-linear-gradient(45deg, var(--surface) 0 6px, var(--raised) 6px 12px); font: 700 18px var(--body); color: var(--muted); }
+.wheel-box { margin-top: 12px; }
+.cw { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; padding: 14px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+.cw-disc { position: relative; width: 200px; height: 200px; flex-shrink: 0; touch-action: none; cursor: crosshair; }
+.cw-disc canvas { width: 100%; height: 100%; border-radius: 50%; display: block; }
+.cw-knob { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; border: 3px solid #FFFFFF; box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4); pointer-events: none; }
+.cw-side { flex: 1; min-width: 160px; display: grid; gap: 12px; }
+.cw-now { height: 44px; border-radius: 12px; border: 1px solid var(--line); }
+.cw-lbl { display: grid; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.cw-v { width: 100%; height: 28px; -webkit-appearance: none; appearance: none; background: transparent; }
+.cw-v::-webkit-slider-runnable-track { height: 12px; border-radius: 999px; background: linear-gradient(90deg, #000, var(--cw-full, #fff)); }
+.cw-v::-moz-range-track { height: 12px; border-radius: 999px; background: linear-gradient(90deg, #000, var(--cw-full, #fff)); }
+.cw-v::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; margin-top: -6px; border-radius: 50%; background: #fff; border: 2px solid #0D0F14; }
+.cw-v::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid #0D0F14; }
+.cw-hex { height: 42px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); padding: 0 12px; font: 600 15px var(--mono); text-transform: uppercase; }
+
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1468,6 +1506,7 @@ const sheet = document.getElementById("sheet");
 const shBody = document.getElementById("sh-body");
 let sheetKind = null;
 function openSheet(kind, kicker, title, html) {
+  setSheetBg("");
   if (kind !== "login") loginReason = "";
   if (kind !== "chat") stopChat();
   sheetKind = kind;
@@ -1748,7 +1787,98 @@ const BANNERS = [
 ];
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
 const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
-const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0 };
+const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "" };
+const BG_PRESETS = ["#1B2A12", "#14213D", "#2B1055", "#3A0F1F", "#0F3D3E", "#3A2A0B"];
+const validHex = h => /^#[0-9a-fA-F]{6}$/.test(h || "") ? h.toUpperCase() : "";
+const safeImg = s => typeof s === "string" && s.length < 400000 && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(s) ? s : "";
+let pimg = { avatar: "", banner: "", bg: "" };
+try { const x = JSON.parse(localStorage.getItem("zera-imagens") || "null"); if (x && typeof x === "object") pimg = { avatar: safeImg(x.avatar), banner: safeImg(x.banner), bg: safeImg(x.bg) }; } catch (e) {}
+function savePimg() {
+  try { localStorage.setItem("zera-imagens", JSON.stringify(pimg)); } catch (e) {}
+  if (typeof user !== "undefined" && user && fb) fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { img: pimg }, { merge: true }).catch(() => toast("Não foi possível salvar as imagens na nuvem agora"));
+}
+const selfP = () => ({ ...profile, img: pimg });
+function hexInk(h) { const n = parseInt(h.slice(1), 16); const L = (0.2126 * (n >> 16 & 255) + 0.7152 * (n >> 8 & 255) + 0.0722 * (n & 255)) / 255; return L > 0.55 ? "#14110A" : "#FFFFFF"; }
+function bannerCSS(p) {
+  const im = safeImg(p.img && p.img.banner); if (im) return `url('${im}') center / cover no-repeat`;
+  const h = validHex(p.bannerHex); if (h) return `linear-gradient(120deg, color-mix(in srgb, ${h} 30%, #0D0F14), ${h})`;
+  return BANNERS[p.banner] || BANNERS[0];
+}
+function bgCSS(p) {
+  const im = safeImg(p.img && p.img.bg); if (im) return `url('${im}') center / cover no-repeat`;
+  const h = validHex(p.bgHex); if (h) return `linear-gradient(160deg, ${h}, color-mix(in srgb, ${h} 35%, #0D0F14))`;
+  return "";
+}
+function setSheetBg(css) {
+  if (css) { sheet.classList.add("has-bg"); sheet.style.setProperty("--sheet-bg", css); }
+  else { sheet.classList.remove("has-bg"); sheet.style.removeProperty("--sheet-bg"); }
+}
+async function fileToDataURL(file, kind) {
+  if (!file || !/^image\//.test(file.type || "image/")) throw new Error("Escolha um arquivo de imagem.");
+  if (file.size > 25e6) throw new Error("Essa imagem é grande demais. Tente uma menor.");
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error("Não deu para abrir essa imagem. Tente outra (JPG ou PNG).")); i.src = url; });
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    let W, H;
+    if (kind === "avatar") { W = 256; H = 256; }
+    else if (kind === "banner") { W = 960; H = 320; }
+    else { const k = Math.min(1, 1080 / Math.max(iw, ih)); W = Math.round(iw * k); H = Math.round(ih * k); }
+    const c = document.createElement("canvas"); c.width = W; c.height = H;
+    const x = c.getContext("2d");
+    const sc = Math.max(W / iw, H / ih), w = iw * sc, h = ih * sc;
+    x.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+    let q = 0.82, out = c.toDataURL("image/webp", q);
+    const fmt = out.startsWith("data:image/webp") ? "image/webp" : "image/jpeg";
+    if (fmt === "image/jpeg") out = c.toDataURL(fmt, q);
+    while (out.length > 250000 && q > 0.35) { q -= 0.1; out = c.toDataURL(fmt, q); }
+    if (out.length > 250000) throw new Error("Não deu para deixar essa imagem leve o bastante. Tente outra.");
+    return out;
+  } finally { URL.revokeObjectURL(url); }
+}
+// roda de cores (matiz e saturação no disco, brilho no controle deslizante)
+function hsv2hex(h, s, v) { const f = n => { const k = (n + h / 60) % 6; return v - v * s * Math.max(0, Math.min(k, 4 - k, 1)); }; return "#" + [f(5), f(3), f(1)].map(x => Math.round(x * 255).toString(16).padStart(2, "0")).join("").toUpperCase(); }
+function hex2hsv(hex) { const n = parseInt(hex.slice(1), 16); const r = (n >> 16 & 255) / 255, g = (n >> 8 & 255) / 255, b = (n & 255) / 255; const mx = Math.max(r, g, b), mn = Math.min(r, g, b), d = mx - mn; let h = 0; if (d) { if (mx === r) h = ((g - b) / d) % 6; else if (mx === g) h = (b - r) / d + 2; else h = (r - g) / d + 4; h *= 60; if (h < 0) h += 360; } return { h, s: mx ? d / mx : 0, v: mx }; }
+let wheelImage = null;
+function mountWheel(box, hex, onChange) {
+  box.innerHTML = `<div class="cw"><div class="cw-disc"><canvas width="400" height="400" aria-hidden="true"></canvas><span class="cw-knob"></span></div>
+    <div class="cw-side"><span class="cw-now"></span><label class="cw-lbl">Brilho<input type="range" min="0" max="100" step="1" class="cw-v"></label><label class="cw-lbl">Código da cor<input class="cw-hex" maxlength="7" spellcheck="false" autocomplete="off" autocapitalize="characters" inputmode="text"></label></div></div>`;
+  const cv = box.querySelector("canvas"), disc = box.querySelector(".cw-disc"), knob = box.querySelector(".cw-knob"), now = box.querySelector(".cw-now"), vIn = box.querySelector(".cw-v"), hIn = box.querySelector(".cw-hex");
+  const ctx = cv.getContext("2d"), N = 400, R = N / 2;
+  if (!wheelImage) {
+    wheelImage = ctx.createImageData(N, N);
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      const dx = x - R + 0.5, dy = y - R + 0.5, r = Math.hypot(dx, dy), i = (y * N + x) * 4;
+      if (r > R) { wheelImage.data[i + 3] = 0; continue; }
+      const c = parseInt(hsv2hex((Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360, Math.min(1, r / R), 1).slice(1), 16);
+      wheelImage.data[i] = c >> 16 & 255; wheelImage.data[i + 1] = c >> 8 & 255; wheelImage.data[i + 2] = c & 255; wheelImage.data[i + 3] = 255;
+    }
+  }
+  ctx.putImageData(wheelImage, 0, 0);
+  let st = hex2hsv(validHex(hex) || "#C6FF3D");
+  const paint = (emit, fromHex) => {
+    const out = hsv2hex(st.h, st.s, st.v), full = hsv2hex(st.h, st.s, 1);
+    const a = st.h * Math.PI / 180;
+    knob.style.left = (50 + Math.cos(a) * st.s * 50) + "%"; knob.style.top = (50 + Math.sin(a) * st.s * 50) + "%";
+    knob.style.background = full;
+    cv.style.filter = `brightness(${0.45 + st.v * 0.55})`;
+    now.style.background = out; vIn.style.setProperty("--cw-full", full); vIn.value = Math.round(st.v * 100);
+    vIn.setAttribute("aria-valuetext", Math.round(st.v * 100) + "%");
+    if (!fromHex) hIn.value = out;
+    if (emit) onChange(out);
+  };
+  const pick = e => {
+    const r = disc.getBoundingClientRect(), dx = e.clientX - r.left - r.width / 2, dy = e.clientY - r.top - r.height / 2;
+    st.h = (Math.atan2(dy, dx) * 180 / Math.PI + 360) % 360; st.s = Math.min(1, Math.hypot(dx, dy) / (r.width / 2));
+    if (st.v < 0.15) st.v = 1;
+    paint(true);
+  };
+  disc.addEventListener("pointerdown", e => { e.preventDefault(); disc.setPointerCapture(e.pointerId); pick(e); });
+  disc.addEventListener("pointermove", e => { if (disc.hasPointerCapture(e.pointerId)) pick(e); });
+  vIn.addEventListener("input", () => { st.v = Number(vIn.value) / 100; paint(true); });
+  hIn.addEventListener("input", () => { let v = hIn.value.trim(); if (v && v[0] !== "#") v = "#" + v; if (validHex(v)) { st = hex2hsv(v.toUpperCase()); paint(true, true); } });
+  paint(false);
+}
 let profile = { ...DEFAULT_PROFILE };
 try { const p = JSON.parse(localStorage.getItem("asfe-perfil") || "null"); if (p && typeof p === "object") profile = { ...DEFAULT_PROFILE, ...p }; } catch (e) {}
 function saveProfile() { try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); } catch (e) {} scheduleSync(); renderMe(); }
@@ -1763,7 +1893,12 @@ function applyAccent() {
 :root[data-theme="light"]{--brand:${a[1]};--brand-text:${a[2]};--brand-edge:${a[2]}}`;
 }
 function avatarLabel(p) { if (p.sym >= 0) return AV_SYMBOLS[p.sym] || "★"; const n = (p.name || "").trim(); return n ? n.charAt(0).toUpperCase() : "?"; }
-function avatarHTML(size, p = profile) { return `<span class="avatar" style="--av:${AV_COLORS[p.color] || AV_COLORS[0]};--s:${size}px">${esc(avatarLabel(p))}</span>`; }
+function avatarHTML(size, p = selfP()) {
+  const im = safeImg(p.img && p.img.avatar);
+  if (im) return `<span class="avatar pic" style="--s:${size}px"><img src="${im}" alt=""></span>`;
+  const col = validHex(p.colorHex) || AV_COLORS[p.color] || AV_COLORS[0];
+  return `<span class="avatar" style="--av:${col};--s:${size}px;color:${hexInk(col)}">${esc(avatarLabel(p))}</span>`;
+}
 const PERSON_SVG = `<svg class="person" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>`;
 function renderMe() {
   const b = document.getElementById("me-btn");
@@ -1882,7 +2017,7 @@ function openProfile() {
   const { total } = cartTotal();
   openSheet("profile", user ? "Minha conta" : "Perfil neste aparelho", "Meu perfil", `
     <div class="pcard">
-      <div class="pbanner" style="background:${BANNERS[p.banner] || BANNERS[0]}"></div>
+      <div class="pbanner" style="background:${bannerCSS(selfP())}"></div>
       <div class="pbody">
         <div class="pav">${avatarHTML(92)}</div>
         <div class="pname">${esc(p.name || "Sem nome")}</div>
@@ -1903,6 +2038,7 @@ function openProfile() {
         <div id="p-msg"></div></div>`
       : `<div class="acct"><h4>Salve na nuvem</h4><p>Este perfil está só neste aparelho. Crie uma conta grátis para não perder nada e usar em qualquer lugar.</p>
         <div class="pactions" style="margin:0"><button type="button" class="btn-brand" data-tool="signup">Criar conta</button><button type="button" class="btn-ghost sm" data-tool="login">Já tenho conta</button></div></div>`}`);
+  setSheetBg(bgCSS(selfP()));
   document.getElementById("p-edit").addEventListener("click", openProfileEdit);
   document.getElementById("ps-fav").addEventListener("click", () => { closeSheet(); applyList("fav", true); });
   if (user) {
@@ -1916,22 +2052,33 @@ function openProfile() {
 }
 function openProfileEdit() {
   const p = profile;
+  const ed = { img: { ...pimg }, colorHex: validHex(p.colorHex), bannerHex: validHex(p.bannerHex), bgHex: validHex(p.bgHex) };
+  const KEY = { color: ["colorHex", "color"], banner: ["bannerHex", "banner"], bg: ["bgHex", "bgp"] };
+  const customHex = k => { const h = ed[KEY[k][0]]; return h && !(k === "bg" && BG_PRESETS.includes(h)) ? h : ""; };
+  const customSw = k => `<button type="button" class="sw-custom${customHex(k) ? " on" : ""}" data-wheel="${k}" aria-expanded="false" aria-controls="wb-${k}" aria-label="Escolher qualquer cor na roda de cores" title="Qualquer cor"><span${customHex(k) ? ` style="background:${customHex(k)}"` : ""}></span></button>`;
   const games2 = [...games].sort((a, b) => a.t.localeCompare(b.t, "pt-BR"));
   const genres = [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR"));
   openSheet("profile-edit", "Personalizar", "Editar perfil", `
-    <div class="preview" id="pv"><span class="pv-banner" id="pv-banner"></span><span class="pav" id="pv-av"></span><span><b id="pv-name"></b><small id="pv-user"></small></span></div>
+    <div class="pv2" id="pv" aria-hidden="true"><div class="pv2-bg" id="pv-bg"></div><div class="pv2-card"><div class="pv2-banner" id="pv-banner"></div><div class="pv2-row"><span class="pav" id="pv-av"></span><span><b id="pv-name"></b><small id="pv-user"></small></span></div></div></div>
     <form class="form" id="pform" style="margin-top:18px" novalidate>
       <div class="two">
         <div class="field"><label for="pf-name">Nome</label><input id="pf-name" name="name" maxlength="30" value="${esc(p.name)}" autocomplete="nickname" required></div>
         <div class="field"><label for="pf-user">Nome de usuário</label><input id="pf-user" name="user" maxlength="20" value="${esc(p.user)}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ex.: fabio_gamer"><div class="help">Letras, números, ponto e _</div></div>
       </div>
       <div class="field"><label for="pf-bio">Bio</label><textarea id="pf-bio" name="bio" maxlength="140" placeholder="Conte um pouco do seu jeito de jogar">${esc(p.bio)}</textarea><div class="help"><span id="pf-bio-n">${p.bio.length}</span>/140</div></div>
-      <div class="field"><span class="lbl">Avatar</span><div class="swatches">
+      <div class="field"><span class="lbl">Foto de perfil</span>
+        <div class="img-pick"><span class="pav" id="pf-av-prev"></span><div class="img-btns"><label class="btn-ghost sm file-btn">Enviar foto<input type="file" accept="image/*" class="sr-only" data-img="avatar"></label><button type="button" class="btn-ghost sm" data-rmimg="avatar">Remover foto</button></div></div>
+        <div class="help">Sem foto, o avatar mostra a inicial ou um símbolo na cor que você escolher.</div></div>
+      <div class="field"><span class="lbl">Símbolo do avatar</span><div class="swatches">
         <label class="sw sym"><input type="radio" name="sym" value="-1" ${p.sym === -1 ? "checked" : ""}><span title="Inicial do nome">Aa</span></label>
         ${AV_SYMBOLS.map((c, i) => `<label class="sw sym"><input type="radio" name="sym" value="${i}" ${p.sym === i ? "checked" : ""}><span>${c}</span></label>`).join("")}
       </div></div>
-      <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div></div>
-      <div class="field"><span class="lbl">Capa</span><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}</div></div>
+      <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${!ed.colorHex && p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}${customSw("color")}</div><div class="wheel-box" id="wb-color" hidden></div></div>
+      <div class="field"><span class="lbl">Capa</span><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${!ed.bannerHex && p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}${customSw("banner")}</div><div class="wheel-box" id="wb-banner" hidden></div>
+        <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="banner"></label><button type="button" class="btn-ghost sm" data-rmimg="banner">Remover imagem</button></div></div>
+      <div class="field"><span class="lbl">Fundo do perfil</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
+        <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="bg"></label><button type="button" class="btn-ghost sm" data-rmimg="bg">Remover imagem</button></div>
+        <div class="help">Aparece atrás do seu perfil, para você e para os seus amigos.</div></div>
       <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
       <div class="two">
         <div class="field"><label for="pf-plat">Onde você mais joga</label><select id="pf-plat" name="plat"><option value="">Prefiro não dizer</option>${[["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<option value="${v}" ${p.plat === v ? "selected" : ""}>${l}</option>`).join("")}</select></div>
@@ -1942,23 +2089,55 @@ function openProfileEdit() {
       <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
     </form>`);
   const f = document.getElementById("pform");
-  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value), banner: Number(f.banner.value), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value });
+  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value || p.color || 0), banner: Number(f.banner.value || p.banner || 0), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgHex, img: ed.img });
   const preview = () => {
     const d = read();
-    document.getElementById("pv-banner").style.background = BANNERS[d.banner];
-    document.getElementById("pv-av").innerHTML = avatarHTML(64, d);
+    document.getElementById("pv-banner").style.background = bannerCSS(d);
+    document.getElementById("pv-bg").style.background = bgCSS(d) || "none";
+    document.getElementById("pv-av").innerHTML = avatarHTML(66, d);
+    document.getElementById("pf-av-prev").innerHTML = avatarHTML(64, d);
+    f.querySelectorAll("[data-rmimg]").forEach(b => { b.hidden = !ed.img[b.dataset.rmimg]; });
+    f.querySelectorAll("[data-wheel]").forEach(b => { const h = customHex(b.dataset.wheel); b.classList.toggle("on", !!h); b.firstElementChild.style.background = h || ""; });
     document.getElementById("pv-name").textContent = d.name || "Seu nome";
     document.getElementById("pv-user").textContent = d.user ? "@" + d.user : "";
     document.getElementById("pf-bio-n").textContent = f.bio.value.length;
   };
-  f.addEventListener("input", preview); f.addEventListener("change", preview); preview();
+  f.addEventListener("input", preview);
+  f.addEventListener("change", async e => {
+    const t = e.target;
+    if (t.name === "color") ed.colorHex = "";
+    else if (t.name === "banner") ed.bannerHex = "";
+    else if (t.name === "bgp") ed.bgHex = t.value;
+    else if (t.dataset && t.dataset.img) {
+      const k = t.dataset.img, file = t.files && t.files[0], msg = document.getElementById("pf-msg");
+      t.value = "";
+      if (!file) return;
+      msg.innerHTML = `<div class="msg info">Preparando a imagem…</div>`;
+      try { ed.img[k] = await fileToDataURL(file, k); msg.innerHTML = ""; }
+      catch (err) { msg.innerHTML = `<div class="msg err">${esc(err.message || "Não deu para usar essa imagem.")}</div>`; }
+    }
+    preview();
+  });
+  f.addEventListener("click", e => {
+    const rm = e.target.closest("[data-rmimg]");
+    if (rm) { ed.img[rm.dataset.rmimg] = ""; preview(); return; }
+    const w = e.target.closest("[data-wheel]"); if (!w) return;
+    const k = w.dataset.wheel, box = document.getElementById("wb-" + k), open = w.getAttribute("aria-expanded") === "true";
+    f.querySelectorAll("[data-wheel]").forEach(b => { b.setAttribute("aria-expanded", "false"); document.getElementById("wb-" + b.dataset.wheel).hidden = true; });
+    if (open) return;
+    w.setAttribute("aria-expanded", "true"); box.hidden = false;
+    const [hk, rn] = KEY[k];
+    const start = ed[hk] || (k === "color" ? AV_COLORS[p.color] : k === "banner" ? "#6E9BFF" : "#7B5CFF");
+    mountWheel(box, start, hex => { ed[hk] = hex; f.querySelectorAll(`input[name="${rn}"]`).forEach(r => { r.checked = false; }); preview(); });
+  });
+  preview();
   document.getElementById("pf-cancel").addEventListener("click", openProfile);
   f.addEventListener("submit", e => {
     e.preventDefault();
     const d = read(); const msg = document.getElementById("pf-msg");
     if (!d.name) { msg.innerHTML = `<div class="msg err">Escreva um nome para o perfil.</div>`; f.name.focus(); return; }
     if (d.user && !/^[a-z0-9_.]{3,20}$/.test(d.user)) { msg.innerHTML = `<div class="msg err">O nome de usuário precisa ter de 3 a 20 caracteres: letras sem acento, números, ponto ou _.</div>`; f.user.focus(); return; }
-    const finish = () => { profile = d; saveProfile(); applyAccent(); toast("Perfil salvo"); openProfile(); };
+    const finish = () => { const { img, ...prof } = d; profile = prof; saveProfile(); pimg = { ...img }; savePimg(); applyAccent(); renderMe(); toast("Perfil salvo"); openProfile(); };
     if (user && fb && d.user && d.user !== profile.user) {
       claimHandle(d.user, profile.user).then(finish).catch(err => {
         if (err && err.message === "taken") { msg.innerHTML = `<div class="msg err">O @${esc(d.user)} já é de outra pessoa. Escolha outro.</div>`; f.user.focus(); }
@@ -2025,6 +2204,12 @@ async function pullCloud() {
       (d.cart || []).forEach(it => { if (byId[it.id] && byId[it.id].ed[it.ei] && !cart.some(x => sameItem(x, it))) cart.push({ id: it.id, ei: it.ei, k: it.k }); });
     } else if (!profile.name) profile.name = user.displayName || "";
     try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); localStorage.setItem("asfe-carrinho", JSON.stringify(cart)); } catch (e) {}
+    try {
+      const ps = await fb.F.getDoc(fb.F.doc(fb.db, "profiles", user.uid));
+      const ri = ps.exists() && ps.data().img;
+      if (ri && (ri.avatar || ri.banner || ri.bg)) { pimg = { avatar: safeImg(ri.avatar), banner: safeImg(ri.banner), bg: safeImg(ri.bg) }; try { localStorage.setItem("zera-imagens", JSON.stringify(pimg)); } catch (e) {} }
+      else if (pimg.avatar || pimg.banner || pimg.bg) savePimg();
+    } catch (e) {}
     applyAccent();
     await pushCloud();
   } catch (e) { toast("Não foi possível carregar sua conta agora"); }
@@ -2112,7 +2297,8 @@ function openLogin(mode = "login") {
   });
 }
 function resetLocal() {
-  profile = { ...DEFAULT_PROFILE }; cart = []; favs = new Set();
+  profile = { ...DEFAULT_PROFILE }; cart = []; favs = new Set(); pimg = { avatar: "", banner: "", bg: "" };
+  try { localStorage.removeItem("zera-imagens"); } catch (e) {}
   try { localStorage.removeItem("asfe-perfil"); localStorage.removeItem("asfe-carrinho"); localStorage.removeItem("vitrine-favoritos"); } catch (e) {}
   applyAccent(); renderMe(); renderBadges(); render(); renderShelves();
 }
@@ -2166,7 +2352,7 @@ function renderSocialBadges() {
 function publishProfile() {
   if (!user || !fb) return;
   const P = profile;
-  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), updatedAt: fb.F.serverTimestamp() }).catch(() => {});
+  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
 }
 async function claimHandle(h, old) {
   const F = fb.F, ref = F.doc(fb.db, "handles", h);
@@ -2367,7 +2553,7 @@ async function openFriendProfile(uid) {
   const first = esc((p.name || "Jogador").split(" ")[0]);
   openSheet("friend", "Perfil", p.name || "Jogador", `
     <div class="pcard">
-      <div class="pbanner" style="background:${BANNERS[p.banner] || BANNERS[0]}"></div>
+      <div class="pbanner" style="background:${bannerCSS(p)}"></div>
       <div class="pbody">
         <div class="pav">${avatarHTML(92, p)}</div>
         <div class="pname">${esc(p.name || "Jogador")}</div>
@@ -2379,6 +2565,7 @@ async function openFriendProfile(uid) {
     </div>
     ${fv.length ? `<div class="fr-sec"><h4>Favoritos de ${first} · ${fv.length}</h4><div class="fr-favs">${fv.slice(0, 18).map(g => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}</span></button>`).join("")}</div></div>` : ""}
     ${f ? `<div class="pactions" style="margin-top:22px">${f.status === "accepted" ? `<button type="button" class="btn-ghost sm" id="fp-rem">Desfazer amizade</button>` : ""}${f.status !== "blocked" ? `<button type="button" class="btn-ghost sm danger" id="fp-block">Bloquear</button>` : ""}</div><div id="fp-msg"></div>` : ""}`);
+  setSheetBg(bgCSS(p));
   const F = fb.F, ref = F.doc(fb.db, "friendships", pid);
   const on = (id, fn) => { const b = document.getElementById(id); if (b) b.addEventListener("click", fn); };
   on("fp-back", openFriends);
