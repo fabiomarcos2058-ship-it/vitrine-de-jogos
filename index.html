@@ -623,7 +623,9 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .ext-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 280px; gap: 12px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .ext { scroll-snap-align: start; display: grid; grid-template-rows: auto 1fr; border-radius: 18px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); color: var(--fg); text-decoration: none; }
 .ext:hover { border-color: var(--muted); }
-.ext .ei { aspect-ratio: 16 / 9; background: var(--surface-2, #222) center / cover no-repeat; position: relative; }
+.ext .ei { aspect-ratio: 16 / 9; background: var(--raised); position: relative; overflow: hidden; display: block; }
+.ext .ei img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ext .ei .freepill, .ext .ei .salepill { z-index: 1; }
 .ext .ei .salepill { left: 10px; top: 10px; }
 .ext .eb { padding: 12px 14px; display: grid; gap: 4px; align-content: start; }
 .ext .et { font-weight: 700; font-size: 14.5px; line-height: 1.25; }
@@ -1283,6 +1285,8 @@ function renderPromos() {
     <button type="button" class="promo count" data-tool="calendar"><span class="deco" aria-hidden="true">${next && n !== null ? n : "★"}</span><span class="pk">Calendário</span><b>${next ? esc(next.t) : "Próximos lançamentos"}</b>${next && n !== null ? `<b class="big">${n === 0 ? "Hoje" : n + (n === 1 ? " dia" : " dias")}</b>` : ""}<span class="sub">${next && n !== null && n > 0 ? "para o lançamento. Veja tudo o que chega até 2027." : "Veja tudo o que chega até 2027."}</span><span class="go-arrow" aria-hidden="true">→</span></button>
     <button type="button" class="promo" data-tool="guides"><span class="deco" aria-hidden="true">#</span><span class="pk">Guias de séries</span><b>Ordem para jogar</b><span class="sub">Resident Evil, GTA, Final Fantasy e Dragon Ball na ordem da história.</span><span class="go-arrow" aria-hidden="true">→</span></button>`;
 }
+// imagens da Epic em tamanho de card (os originais podem ter vários MB)
+const epicImg = u => /^https:\/\/cdn\d*\.epicgames\.com\//.test(u) ? u.split("?")[0] + "?h=360&quality=medium&resize=1&w=640" : u;
 function renderShelves() {
   const soon = upcoming();
   renderAlerts();
@@ -1296,7 +1300,7 @@ function renderShelves() {
   const epHTML = epFree.length ? `<section class="shelf wrap" aria-labelledby="sh-epfree">
       <div class="shelf-head"><div><h3 id="sh-epfree">Grátis na Epic Games</h3><p>Resgate e o jogo fica seu para sempre</p></div></div>
       <div class="ext-rail">${epFree.map(e => `<a class="ext" href="${e.url}" target="_blank" rel="noopener">
-        <span class="ei" style="${e.img ? `background-image:url('${e.img}')` : ""}"><span class="freepill${e.now ? " now" : ""}">${e.now ? "GRÁTIS AGORA" : "EM BREVE"}</span></span>
+        <span class="ei">${e.img ? `<img src="${epicImg(e.img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.src.split('?')[0]}else{this.remove()}">` : ""}<span class="freepill${e.now ? " now" : ""}">${e.now ? "GRÁTIS AGORA" : "EM BREVE"}</span></span>
         <span class="eb"><span class="et">${esc(e.name)}</span><span class="em">${e.now ? `Grátis até ${dm(e.until)}` : `Grátis de ${dm(e.from)} a ${dm(e.until)}`}</span>${e.b > 0 ? `<span class="ep"><s>${brl(e.b)}</s>${e.now ? "R$ 0" : ""}</span>` : ""}</span></a>`).join("")}</div>
     </section>` : "";
   const stDeals = []; // ofertas avulsas da Steam ficam de fora: podem incluir jogos fora do perfil do catálogo

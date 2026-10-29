@@ -285,7 +285,8 @@ async function epicFree() {
       const live = cur.find(o => free(o) && new Date(o.startDate) <= now && new Date(o.endDate) > now);
       const next = up.find(free);
       if (!live && !next) continue;
-      const img = ((e.keyImages || []).find(k => /OfferImageWide|DieselStoreFrontWide|Thumbnail/.test(k.type)) || {}).url || null;
+      const ki = e.keyImages || [];
+      const img = (["OfferImageWide", "DieselStoreFrontWide", "featuredMedia", "Thumbnail", "OfferImageTall"].map(t => ki.find(k => k.type === t)).find(Boolean) || ki[0] || {}).url || null;
       const slugP = (e.offerMappings || []).find(x => x.pageType === "productHome")?.pageSlug || (e.catalogNs && (e.catalogNs.mappings || [])[0] || {}).pageSlug || e.productSlug || e.urlSlug;
       const hitG = best(e.title, games, g => searchName(g));
       list.push({ name: e.title, img, now: !!live, from: (live || next).startDate, until: (live || next).endDate, b: round2(((e.price || {}).totalPrice || {}).originalPrice / 100 || 0), url: slugP ? `https://store.epicgames.com/pt-BR/p/${String(slugP).replace(/\/home$/, "")}` : "https://store.epicgames.com/pt-BR/free-games", id: hitG ? hitG.id : null });
