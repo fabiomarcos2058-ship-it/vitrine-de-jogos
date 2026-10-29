@@ -125,7 +125,8 @@ const PS_HEADERS = { "content-type": "application/json", "x-psn-store-locale-ove
 async function psDiscover() {
   const dbg = { chunks: 0, ops: {} };
   const html = await (await get("https://store.playstation.com/pt-br/search/god%20of%20war")).text();
-  const urls = [...new Set([...html.matchAll(/src="([^"]+\/_next\/static\/[^"]+\.js)"/g)].map(m => new URL(m[1], "https://store.playstation.com").href))];
+  const urls = [...new Set([...html.matchAll(/(?:src|href)=["']([^"']+\.js)(?:\?[^"']*)?["']/g)].map(m => new URL(m[1], "https://store.playstation.com/pt-br/").href))].slice(0, 60);
+  dbg.htmlLen = html.length; dbg.scripts = urls.slice(0, 40);
   for (const u of urls) {
     try {
       const js = await (await get(u, {}, 1)).text(); dbg.chunks++;
