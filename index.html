@@ -1218,7 +1218,7 @@ function detailHTML(g) {
     return `<a class="shop${isBest ? " best" : ""}" href="${(lv && lv.url) || s.url(g.t)}" target="_blank" rel="noopener">
       <i style="background:var(--c-${s.k})"></i>
       <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${lv ? '<span class="live-dot" aria-hidden="true"></span>Preço ao vivo · ' : s.k === "ps" && psRef(g) ? "Preço de referência · " : ""}${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
-      <span class="sv">${sale ? `<s>${brl(lv.b)}</s>` : ""}<span>${priceText(v)}</span>${sale ? `<span class="off">-${lv.pct}%</span>` : ""}${until && !isNaN(until) ? `<span class="until">até ${until.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}</span>` : ""}</span><span class="arr" aria-hidden="true">↗</span></a>`;
+      <span class="sv">${sale ? `<s>${brl(lv.b)}</s>` : ""}<span>${priceText(v)}</span>${sale ? `<span class="off">-${lv.pct}%</span>` : ""}${until && !isNaN(until) ? `<span class="until">até ${until.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}</span>` : ""}</span><span class="arr" aria-hidden="true">↗</span></a>` + (s.k === "ps" && psRef(g) ? PS_NOTE.replace('class="ps-note"', 'class="ps-note" style="margin:0 0 4px"') : "");
   }).join("");
   const img = covers[g.t];
   return `<div class="d-hero">
@@ -1240,7 +1240,7 @@ function detailHTML(g) {
       <section><h3>Trailer</h3>${trailerHTML(g)}</section>
       <section><h3>Sobre o jogo</h3><p class="d-desc">${esc(g.desc)}</p></section>
       <section><h3>Escolha a edição e a plataforma</h3>${pickerHTML(g)}</section>
-      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div>${psRef(g) ? PS_NOTE : ""}</section>
+      <section><h3>Preços em todas as lojas</h3><div class="shops">${shopHTML}</div></section>
     </div>`;
 }
 function editionPrice(g, ei, k) {
