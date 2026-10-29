@@ -488,6 +488,95 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .share-opts .ic { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; background: var(--bg); font: 700 13px var(--display); color: var(--brand-text); }
 .share-url { font: 500 12.5px var(--mono); color: var(--muted); overflow-wrap: anywhere; margin-top: 12px; user-select: all; }
 
+/* ---------- avatar ---------- */
+.avatar { --av: #FFC83D; width: 100%; height: 100%; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(120% 120% at 30% 18%, color-mix(in srgb, var(--av) 55%, #FFFFFF), var(--av) 55%, color-mix(in srgb, var(--av) 65%, #000000)); color: #14110A; font: 800 calc(var(--s, 40px) * 0.44)/1 var(--display); }
+.icon-btn.me { padding: 0; overflow: hidden; }
+.icon-btn.me .avatar { --s: 44px; border-radius: 0; }
+.icon-btn.me svg.person { width: 22px; height: 22px; }
+
+/* ---------- carrinho ---------- */
+.go-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-ghost.sm { padding: 12px 16px; }
+.cart-gh { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 20px 0 8px; }
+.cart-gh:first-of-type { margin-top: 4px; }
+.cart-gh b { display: flex; align-items: center; gap: 8px; font: 700 12px var(--display); letter-spacing: 0.12em; text-transform: uppercase; }
+.cart-gh span { font: 700 14px var(--mono); font-variant-numeric: tabular-nums; }
+.ci { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 8px; }
+.ci .cover { border-radius: 9px; padding: 4px; cursor: pointer; }
+.ci .cover .ttl, .ci .cover .mono { display: none; }
+.ci b.cn { display: block; font-size: 14.5px; line-height: 1.25; }
+.ci .ce { display: block; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.ci .cp { text-align: right; display: grid; gap: 6px; justify-items: end; }
+.ci .cp b { font: 700 15px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ci .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.tip { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; font-size: 12.5px; font-weight: 600; color: var(--good); }
+.cart-total { position: sticky; bottom: 12px; z-index: 2; margin-top: 18px; padding: 14px 16px; border-radius: 20px; background: var(--raised); border: 1px solid var(--line); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.cart-total small { display: block; font-size: 12px; color: var(--muted); }
+.cart-total b { font: 800 26px/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.cart-note { font-size: 12px; color: var(--faint); margin: 12px 0 0; }
+@media (max-width: 480px) { .ci { grid-template-columns: 48px minmax(0, 1fr); } .ci .cp { grid-column: 2; justify-items: start; text-align: left; grid-auto-flow: column; align-items: center; justify-content: space-between; } }
+
+/* ---------- perfil ---------- */
+.pcard { position: relative; border-radius: 24px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.pbanner { height: 120px; background-size: cover; }
+.pbody { position: relative; padding: 0 18px 18px; margin-top: -46px; }
+.pav { width: 92px; height: 92px; --s: 92px; border-radius: 50%; overflow: hidden; border: 4px solid var(--surface); box-shadow: var(--shadow); }
+.pname { font: 800 clamp(20px, 3vw, 26px)/1.1 var(--display); margin: 12px 0 2px; overflow-wrap: anywhere; }
+.puser { color: var(--muted); font-size: 14px; }
+.pbio { margin: 10px 0 0; max-width: 60ch; line-height: 1.55; overflow-wrap: anywhere; }
+.pchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.pchips span, .pchips button { font-size: 12.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--fg); }
+.pchips button { cursor: pointer; }
+.pstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.pstats button { padding: 12px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); text-align: left; cursor: pointer; min-width: 0; }
+.pstats b { display: block; font: 800 19px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pstats small { font-size: 12px; color: var(--muted); }
+.pactions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.acct { margin-top: 18px; padding: 16px 18px; border-radius: 20px; border: 1px solid var(--line); background: var(--bg); display: grid; gap: 12px; }
+.acct h4 { margin: 0; font: 700 12px var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.acct p { margin: 0; color: var(--muted); font-size: 14px; }
+.acct .em { font-weight: 700; color: var(--fg); overflow-wrap: anywhere; }
+.danger { color: var(--bad) !important; border-color: color-mix(in srgb, var(--bad) 45%, var(--line)) !important; }
+
+/* ---------- formulários ---------- */
+.form { display: grid; gap: 16px; }
+.field > label, .field .lbl { display: block; font-weight: 600; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.field input, .field textarea, .field select { width: 100%; font: 500 15px var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.field select { padding-right: 34px; }
+.field textarea { resize: vertical; min-height: 84px; line-height: 1.5; }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 25%, transparent); }
+.field .help { font-size: 12px; color: var(--faint); margin-top: 5px; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 480px) { .two { grid-template-columns: 1fr; } }
+.swatches { display: flex; flex-wrap: wrap; gap: 8px; }
+.sw { position: relative; display: inline-block; cursor: pointer; }
+.sw input { position: absolute; opacity: 0; pointer-events: none; }
+.sw > span { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--line); overflow: hidden; --s: 44px; }
+.sw.wide > span { width: 76px; height: 42px; border-radius: 12px; }
+.sw.sym > span { background: var(--surface); font: 800 18px var(--display); color: var(--fg); }
+.sw input:checked + span { border-color: var(--fg); box-shadow: 0 0 0 3px var(--bg) inset; }
+.sw input:focus-visible + span { outline: 2px solid var(--brand); outline-offset: 2px; }
+.preview { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); overflow: hidden; position: relative; isolation: isolate; }
+.preview .pv-banner { position: absolute; inset: 0; z-index: -1; opacity: 0.55; }
+.preview .pav { width: 64px; height: 64px; --s: 64px; border-width: 3px; }
+.preview b { font: 800 17px var(--display); color: #FFFFFF; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.preview small { display: block; color: rgba(255,255,255,0.85); text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.auth-tabs { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 18px; }
+.auth-tabs button { flex: 1; border: 0; background: transparent; border-radius: 999px; padding: 10px; font-weight: 700; color: var(--muted); cursor: pointer; }
+.auth-tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.msg { font-size: 13.5px; padding: 11px 13px; border-radius: 12px; line-height: 1.45; }
+.msg.err { background: color-mix(in srgb, var(--bad) 14%, transparent); color: var(--bad); }
+.msg.ok { background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); }
+.msg.info { background: var(--surface); border: 1px solid var(--line); color: var(--muted); }
+.linkbtn { border: 0; background: transparent; color: var(--brand-text); font-weight: 700; cursor: pointer; padding: 4px 0; font-size: 13.5px; }
+.pw { position: relative; }
+.pw input { padding-right: 64px; }
+.pw .linkbtn { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }
+.btn-full { width: 100%; justify-content: center; }
+.auth-perks { display: grid; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+.auth-perks li { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--muted); }
+.auth-perks li::before { content: "✓"; width: 22px; height: 22px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-text); font-weight: 800; font-size: 12px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
 }
@@ -516,6 +605,11 @@ body.has-tray .catalog { padding-bottom: 120px; }
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg>
         <span class="badge" id="fav-count" hidden>0</span>
       </button>
+      <button class="icon-btn" type="button" id="cart-btn" aria-label="Carrinho">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"></path><path d="M9 10V6a3 3 0 0 1 6 0v4"></path></svg>
+        <span class="badge" id="cart-count" hidden>0</span>
+      </button>
+      <button class="icon-btn me" type="button" id="me-btn" aria-label="Minha conta"></button>
     </div>
     <div class="nav-row">
       <div class="tabs" role="group" aria-label="Plataforma" id="plat">
@@ -605,7 +699,8 @@ body.has-tray .catalog { padding-bottom: 120px; }
   <div id="d-content"></div>
 </dialog>
 
-<script src="games.js?v=20261029-asfe2"></script>
+<script src="firebase-config.js?v=1"></script>
+<script src="games.js?v=20261029-asfe3"></script>
 <script>
 const STORES = [
   { k: "ps", name: "PlayStation Store", short: "PS5", label: "PS5", kind: "Console PlayStation", url: q => "https://store.playstation.com/pt-br/search/" + encodeURIComponent(q) },
@@ -690,7 +785,7 @@ function cardHTML(g, keys) {
 const state = { q: "", plat: "all", genre: "", sort: "score", list: "" };
 let favs = new Set();
 try { favs = new Set(JSON.parse(localStorage.getItem("vitrine-favoritos") || "[]")); } catch (e) {}
-function saveFavs() { try { localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); } catch (e) {} }
+function saveFavs() { try { localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); } catch (e) {} scheduleSync(); }
 try {
   const saved = JSON.parse(localStorage.getItem("vitrine-filtros") || "null");
   if (saved && typeof saved === "object" && ["score", "cheap", "new", "az"].includes(saved.sort)) state.sort = saved.sort;
@@ -986,8 +1081,8 @@ function pickerHTML(g) {
   return `<form class="picker" id="picker">
     <div><h4>Edição</h4><div class="opts eds-opts">${eds}</div></div>
     <div><h4>Plataforma</h4><div class="opts plat-opts">${plats}</div></div>
-    <div class="go"><div class="go-sum" id="go-sum"></div><a class="btn-brand" id="go-btn" href="#" target="_blank" rel="noopener">Continuar <span aria-hidden="true">→</span></a>
-    <p class="go-note">Abre a loja escolhida já buscando a edição selecionada. Preços de edições fora do console podem variar.</p></div>
+    <div class="go"><div class="go-sum" id="go-sum"></div><div class="go-actions"><button type="button" class="btn-ghost sm" id="add-cart">＋ Carrinho</button><a class="btn-brand" id="go-btn" href="#" target="_blank" rel="noopener">Continuar <span aria-hidden="true">→</span></a></div>
+    <p class="go-note">“Continuar” abre a loja escolhida já buscando a edição. “Carrinho” guarda a escolha para somar com outros jogos.</p></div>
   </form>`;
 }
 function updatePicker(g) {
@@ -1030,6 +1125,8 @@ function bindDetail(g) {
   if (c) c.addEventListener("click", () => { toggleCompare(g.id); c.setAttribute("aria-pressed", String(cmp.includes(g.id))); c.textContent = cmp.includes(g.id) ? "✓ Comparando" : "⇄ Comparar"; });
   const sh = document.getElementById("share-btn");
   if (sh) sh.addEventListener("click", () => shareGame(g));
+  const ac = document.getElementById("add-cart");
+  if (ac) ac.addEventListener("click", () => { const f = document.getElementById("picker"); addToCart(g.id, Number(f.ed.value), f.pl.value); });
   const tr = document.querySelector("#trailer button");
   if (tr) tr.addEventListener("click", () => {
     const id = tr.dataset.yt;
@@ -1130,6 +1227,10 @@ function openTool(k) {
   else if (k === "guides") openGuides();
   else if (k === "compare") openCompare();
   else if (k === "install") openInstall();
+  else if (k === "cart") openCart();
+  else if (k === "profile") openProfile();
+  else if (k === "login") openLogin("login");
+  else if (k === "signup") openLogin("signup");
 }
 
 // ---------- comparar ----------
@@ -1364,6 +1465,342 @@ if ("serviceWorker" in navigator && location.protocol === "https:") {
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }
 
+
+// ================== CONTA, PERFIL E CARRINHO ==================
+const AV_SYMBOLS = ["★", "⚡", "♛", "☾", "✦", "♠", "☠", "♥", "◆", "⬢", "✚", "∞"];
+const AV_COLORS = ["#FFC83D", "#FF7A59", "#FF5D8F", "#B57BFF", "#6E9BFF", "#3DD6C6", "#57D17A", "#C7D2E0"];
+const BANNERS = [
+  "linear-gradient(120deg,#1B1F2A,#3A2E12 60%,#FFC83D)",
+  "linear-gradient(120deg,#0F2027,#203A43,#2C5364)",
+  "linear-gradient(120deg,#2B1055,#7597DE)",
+  "linear-gradient(120deg,#3A1C71,#D76D77,#FFAF7B)",
+  "linear-gradient(120deg,#134E5E,#71B280)",
+  "linear-gradient(120deg,#0B0B0F,#3B0A0A 55%,#B3261E)",
+  "linear-gradient(120deg,#232526,#5A6273)",
+  "linear-gradient(120deg,#FF512F,#DD2476)"
+];
+// [nome, cor de destaque, cor do texto de destaque no tema claro]
+const ACCENTS = [["Amarelo", "#FFC83D", "#8A6100"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"]];
+const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0 };
+let profile = { ...DEFAULT_PROFILE };
+try { const p = JSON.parse(localStorage.getItem("asfe-perfil") || "null"); if (p && typeof p === "object") profile = { ...DEFAULT_PROFILE, ...p }; } catch (e) {}
+function saveProfile() { try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); } catch (e) {} scheduleSync(); renderMe(); }
+
+function applyAccent() {
+  let el = document.getElementById("accent-style");
+  const a = ACCENTS[profile.accent] || ACCENTS[0];
+  if (!profile.accent) { if (el) el.remove(); return; }
+  if (!el) { el = document.createElement("style"); el.id = "accent-style"; document.head.appendChild(el); }
+  el.textContent = `:root{--brand:${a[1]};--brand-text:${a[1]}}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--brand:${a[1]};--brand-text:${a[2]}}}
+:root[data-theme="light"]{--brand:${a[1]};--brand-text:${a[2]}}`;
+}
+function avatarLabel(p) { if (p.sym >= 0) return AV_SYMBOLS[p.sym] || "★"; const n = (p.name || "").trim(); return n ? n.charAt(0).toUpperCase() : "?"; }
+function avatarHTML(size, p = profile) { return `<span class="avatar" style="--av:${AV_COLORS[p.color] || AV_COLORS[0]};--s:${size}px">${esc(avatarLabel(p))}</span>`; }
+const PERSON_SVG = `<svg class="person" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>`;
+function renderMe() {
+  const b = document.getElementById("me-btn");
+  const custom = user || profile.name;
+  b.innerHTML = custom ? avatarHTML(44) : PERSON_SVG;
+  b.setAttribute("aria-label", user ? "Meu perfil" : "Entrar ou criar conta");
+}
+
+// ---------- carrinho ----------
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem("asfe-carrinho") || "[]").filter(it => byId[it.id] && byId[it.id].ed[it.ei] && STORES.some(s => s.k === it.k)); } catch (e) {}
+function saveCart() { try { localStorage.setItem("asfe-carrinho", JSON.stringify(cart)); } catch (e) {} scheduleSync(); renderBadges(); }
+const sameItem = (a, b) => a.id === b.id && a.ei === b.ei && a.k === b.k;
+function itemPrice(it) { return editionPrice(byId[it.id], it.ei, it.k); }
+function cartTotal() {
+  let total = 0, unknown = 0;
+  cart.forEach(it => { const v = itemPrice(it); if (num(v)) total += v; else if (v !== 0) unknown++; });
+  return { total, unknown };
+}
+function addToCart(id, ei, k) {
+  const it = { id, ei, k };
+  if (cart.some(x => sameItem(x, it))) { toast("Essa edição já está no carrinho"); return; }
+  const other = cart.findIndex(x => x.id === id);
+  cart.push(it); saveCart();
+  const t = cartTotal().total;
+  toast(`Adicionado ao carrinho · total ${brl(t)}`);
+  if (other >= 0) setTimeout(() => toast("Você tem esse jogo em outra edição ou loja no carrinho"), 2300);
+}
+function renderBadges() {
+  const c = document.getElementById("cart-count");
+  c.hidden = cart.length === 0; c.textContent = cart.length;
+}
+function storeLabel(k) { const s = STORES.find(x => x.k === k); return s ? s.label : k; }
+function openCart() {
+  if (!cart.length) {
+    openSheet("cart", "Carrinho", "Seu carrinho", `<div class="cmp-empty"><b>Seu carrinho está vazio</b>Abra um jogo, escolha a edição e a plataforma e toque em “＋ Carrinho”. Aqui você vê quanto tudo daria junto.</div>
+      <div class="q-nav"><span></span><button type="button" class="btn-brand" id="cart-explore">Explorar jogos <span aria-hidden="true">→</span></button></div>`);
+    document.getElementById("cart-explore").addEventListener("click", () => { closeSheet(); goHome(); });
+    return;
+  }
+  const { total, unknown } = cartTotal();
+  const groups = STORES.map(s => ({ s, items: cart.map((it, i) => ({ it, i })).filter(x => x.it.k === s.k) })).filter(g => g.items.length);
+  let savings = 0;
+  const html = groups.map(({ s, items }) => {
+    const sub = items.reduce((a, { it }) => { const v = itemPrice(it); return a + (num(v) ? v : 0); }, 0);
+    return `<div class="cart-gh"><b><span class="dot" style="background:var(--c-${s.k})"></span>${s.name}</b><span>${brl(sub)}</span></div>` + items.map(({ it, i }) => {
+      const g = byId[it.id]; const [ename] = g.ed[it.ei]; const v = itemPrice(it);
+      const isBase = it.ei === 0 || /^(Padrão|Gratuito)$/.test(ename);
+      let tip = "";
+      if (it.ei === 0 && num(v)) {
+        const best = cheapest(g);
+        if (best && best.s.k !== it.k && best.v < v - 0.5) { savings += v - best.v; tip = `<span class="tip">${brl(v - best.v)} mais barato no ${best.s.label} <button type="button" class="mini" data-swap="${i}" data-k="${best.s.k}">Trocar</button></span>`; }
+      }
+      return `<div class="ci">
+        <span data-open="${g.id}">${coverHTML(g)}</span>
+        <span style="min-width:0"><b class="cn">${esc(g.t)}</b><span class="ce">${esc(ename)} · ${s.label}</span>${tip}</span>
+        <span class="cp"><b>${v === "pre" ? "Pré-venda" : priceText(v)}</b><span class="row" style="margin:0"><a class="mini" href="${s.url(isBase ? g.t : g.t + " " + ename)}" target="_blank" rel="noopener">Comprar ↗</a><button type="button" class="mini" data-rm="${i}" aria-label="Tirar ${esc(g.t)} do carrinho">✕</button></span></span>
+      </div>`;
+    }).join("");
+  }).join("");
+  openSheet("cart", `${cart.length} ${cart.length === 1 ? "item" : "itens"}`, "Seu carrinho", `
+    <p class="lede-sm">Veja quanto daria comprar tudo junto. A compra é feita em cada loja: toque em “Comprar” para abrir a página oficial.</p>
+    ${html}
+    <div class="cart-total"><div><small>Total${unknown ? ` (${unknown} ${unknown === 1 ? "item sem preço" : "itens sem preço"})` : ""}</small><b>${brl(total)}</b>${savings > 0.5 ? `<small style="color:var(--good);font-weight:700">Dá para economizar ${brl(savings)} trocando de loja</small>` : ""}</div>
+      <button type="button" class="btn-ghost sm" id="cart-clear">Esvaziar</button></div>
+    <p class="cart-note">Preços de tabela, sem promoção. ${user ? "Seu carrinho fica salvo na sua conta." : "Entre na sua conta para guardar o carrinho em qualquer aparelho."}</p>`);
+  shBody.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { cart.splice(Number(b.dataset.rm), 1); saveCart(); openCart(); }));
+  shBody.querySelectorAll("[data-swap]").forEach(b => b.addEventListener("click", () => {
+    const i = Number(b.dataset.swap); const moved = { ...cart[i], k: b.dataset.k };
+    if (cart.some((x, j) => j !== i && sameItem(x, moved))) cart.splice(i, 1); else cart[i] = moved;
+    saveCart(); toast("Trocado para " + storeLabel(b.dataset.k)); openCart();
+  }));
+  const clr = document.getElementById("cart-clear");
+  clr.addEventListener("click", () => {
+    if (clr.dataset.confirm) { cart = []; saveCart(); openCart(); return; }
+    clr.dataset.confirm = "1"; clr.textContent = "Toque de novo para esvaziar"; clr.classList.add("danger");
+    setTimeout(() => { if (clr.isConnected) { delete clr.dataset.confirm; clr.textContent = "Esvaziar"; clr.classList.remove("danger"); } }, 3500);
+  });
+}
+
+// ---------- perfil ----------
+function openProfile() {
+  if (!user && !profile.name) { openLogin("signup"); return; }
+  const p = profile;
+  const fg = p.fav && byId[p.fav];
+  const chips = [p.plat && "Joga no " + ({ ps: "PlayStation", xb: "Xbox", pc: "PC", mob: "Celular" }[p.plat] || p.plat), p.genre && "Curte " + p.genre].filter(Boolean);
+  const { total } = cartTotal();
+  openSheet("profile", user ? "Minha conta" : "Perfil neste aparelho", "Meu perfil", `
+    <div class="pcard">
+      <div class="pbanner" style="background:${BANNERS[p.banner] || BANNERS[0]}"></div>
+      <div class="pbody">
+        <div class="pav">${avatarHTML(92)}</div>
+        <div class="pname">${esc(p.name || "Sem nome")}</div>
+        ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
+        ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
+        ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
+        <div class="pstats">
+          <button type="button" id="ps-fav"><b>${favs.size}</b><small>Favoritos</small></button>
+          <button type="button" data-tool="cart"><b>${cart.length}</b><small>No carrinho</small></button>
+          <button type="button" data-tool="cart"><b>${brl(total)}</b><small>Total do carrinho</small></button>
+        </div>
+        <div class="pactions"><button type="button" class="btn-brand" id="p-edit">Editar perfil</button><button type="button" class="btn-ghost sm" data-tool="quiz">Fazer o quiz</button></div>
+      </div>
+    </div>
+    ${user ? `<div class="acct"><h4>Conta</h4><p>Conectado como <span class="em">${esc(user.email || "")}</span></p>
+        <p>Seu perfil, favoritos e carrinho ficam salvos na nuvem e aparecem em qualquer aparelho em que você entrar.</p>
+        <div class="pactions" style="margin:0"><button type="button" class="btn-ghost sm" id="p-logout">Sair</button><button type="button" class="btn-ghost sm danger" id="p-delete">Excluir conta</button></div>
+        <div id="p-msg"></div></div>`
+      : `<div class="acct"><h4>Salve na nuvem</h4><p>Este perfil está só neste aparelho. Crie uma conta grátis para não perder nada e usar em qualquer lugar.</p>
+        <div class="pactions" style="margin:0"><button type="button" class="btn-brand" data-tool="signup">Criar conta</button><button type="button" class="btn-ghost sm" data-tool="login">Já tenho conta</button></div></div>`}`);
+  document.getElementById("p-edit").addEventListener("click", openProfileEdit);
+  document.getElementById("ps-fav").addEventListener("click", () => { closeSheet(); applyList("fav", true); });
+  if (user) {
+    document.getElementById("p-logout").addEventListener("click", logout);
+    const del = document.getElementById("p-delete");
+    del.addEventListener("click", () => {
+      if (!del.dataset.confirm) { del.dataset.confirm = "1"; del.textContent = "Toque de novo para excluir de vez"; document.getElementById("p-msg").innerHTML = `<div class="msg err">Isso apaga sua conta, perfil, favoritos e carrinho salvos. Não dá para desfazer.</div>`; return; }
+      deleteAccount();
+    });
+  }
+}
+function openProfileEdit() {
+  const p = profile;
+  const games2 = [...games].sort((a, b) => a.t.localeCompare(b.t, "pt-BR"));
+  const genres = [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  openSheet("profile-edit", "Personalizar", "Editar perfil", `
+    <div class="preview" id="pv"><span class="pv-banner" id="pv-banner"></span><span class="pav" id="pv-av"></span><span><b id="pv-name"></b><small id="pv-user"></small></span></div>
+    <form class="form" id="pform" style="margin-top:18px" novalidate>
+      <div class="two">
+        <div class="field"><label for="pf-name">Nome</label><input id="pf-name" name="name" maxlength="30" value="${esc(p.name)}" autocomplete="nickname" required></div>
+        <div class="field"><label for="pf-user">Nome de usuário</label><input id="pf-user" name="user" maxlength="20" value="${esc(p.user)}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ex.: fabio_gamer"><div class="help">Letras, números, ponto e _</div></div>
+      </div>
+      <div class="field"><label for="pf-bio">Bio</label><textarea id="pf-bio" name="bio" maxlength="140" placeholder="Conte um pouco do seu jeito de jogar">${esc(p.bio)}</textarea><div class="help"><span id="pf-bio-n">${p.bio.length}</span>/140</div></div>
+      <div class="field"><span class="lbl">Avatar</span><div class="swatches">
+        <label class="sw sym"><input type="radio" name="sym" value="-1" ${p.sym === -1 ? "checked" : ""}><span title="Inicial do nome">Aa</span></label>
+        ${AV_SYMBOLS.map((c, i) => `<label class="sw sym"><input type="radio" name="sym" value="${i}" ${p.sym === i ? "checked" : ""}><span>${c}</span></label>`).join("")}
+      </div></div>
+      <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div></div>
+      <div class="field"><span class="lbl">Capa</span><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}</div></div>
+      <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
+      <div class="two">
+        <div class="field"><label for="pf-plat">Onde você mais joga</label><select id="pf-plat" name="plat"><option value="">Prefiro não dizer</option>${[["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<option value="${v}" ${p.plat === v ? "selected" : ""}>${l}</option>`).join("")}</select></div>
+        <div class="field"><label for="pf-genre">Gênero favorito</label><select id="pf-genre" name="genre"><option value="">Prefiro não dizer</option>${genres.map(gn => `<option ${p.genre === gn ? "selected" : ""}>${esc(gn)}</option>`).join("")}</select></div>
+      </div>
+      <div class="field"><label for="pf-fav">Jogo favorito</label><select id="pf-fav" name="fav"><option value="">Nenhum</option>${games2.map(g => `<option value="${g.id}" ${p.fav === g.id ? "selected" : ""}>${esc(g.t)}</option>`).join("")}</select></div>
+      <div id="pf-msg"></div>
+      <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
+    </form>`);
+  const f = document.getElementById("pform");
+  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value), banner: Number(f.banner.value), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value });
+  const preview = () => {
+    const d = read();
+    document.getElementById("pv-banner").style.background = BANNERS[d.banner];
+    document.getElementById("pv-av").innerHTML = avatarHTML(64, d);
+    document.getElementById("pv-name").textContent = d.name || "Seu nome";
+    document.getElementById("pv-user").textContent = d.user ? "@" + d.user : "";
+    document.getElementById("pf-bio-n").textContent = f.bio.value.length;
+  };
+  f.addEventListener("input", preview); f.addEventListener("change", preview); preview();
+  document.getElementById("pf-cancel").addEventListener("click", openProfile);
+  f.addEventListener("submit", e => {
+    e.preventDefault();
+    const d = read(); const msg = document.getElementById("pf-msg");
+    if (!d.name) { msg.innerHTML = `<div class="msg err">Escreva um nome para o perfil.</div>`; f.name.focus(); return; }
+    if (d.user && !/^[a-z0-9_.]{3,20}$/.test(d.user)) { msg.innerHTML = `<div class="msg err">O nome de usuário precisa ter de 3 a 20 caracteres: letras sem acento, números, ponto ou _.</div>`; f.user.focus(); return; }
+    profile = d; saveProfile(); applyAccent(); toast("Perfil salvo"); openProfile();
+  });
+}
+
+// ---------- login (Firebase) ----------
+let fb = null, user = null, authReady = false;
+const FB_VER = "10.12.2";
+async function initFirebase() {
+  const cfg = window.FIREBASE_CONFIG;
+  if (!cfg || !cfg.apiKey) { authReady = true; return; }
+  try {
+    const base = `https://www.gstatic.com/firebasejs/${FB_VER}/`;
+    const [app, A, F] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]);
+    const a = app.initializeApp(cfg);
+    fb = { A, F, auth: A.getAuth(a), db: F.getFirestore(a) };
+    fb.auth.languageCode = "pt-BR";
+    A.onAuthStateChanged(fb.auth, onUser);
+  } catch (e) { authReady = true; console.warn("Login indisponível", e); }
+}
+async function onUser(u) {
+  const was = user; user = u; authReady = true;
+  if (u) await pullCloud();
+  renderMe(); render(); renderShelves(); renderBadges();
+  if (!was && u && (sheetKind === "login")) openProfile();
+}
+function userDoc() { return fb.F.doc(fb.db, "users", user.uid); }
+async function pullCloud() {
+  try {
+    const snap = await fb.F.getDoc(userDoc());
+    if (snap.exists()) {
+      const d = snap.data();
+      if (d.profile && d.profile.name) profile = { ...DEFAULT_PROFILE, ...d.profile };
+      else if (!profile.name) profile.name = user.displayName || "";
+      (d.favs || []).forEach(id => { if (byId[id]) favs.add(id); });
+      (d.cart || []).forEach(it => { if (byId[it.id] && byId[it.id].ed[it.ei] && !cart.some(x => sameItem(x, it))) cart.push({ id: it.id, ei: it.ei, k: it.k }); });
+    } else if (!profile.name) profile.name = user.displayName || "";
+    try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); localStorage.setItem("vitrine-favoritos", JSON.stringify([...favs])); localStorage.setItem("asfe-carrinho", JSON.stringify(cart)); } catch (e) {}
+    applyAccent();
+    await pushCloud();
+  } catch (e) { toast("Não foi possível carregar sua conta agora"); }
+}
+let syncTimer = null;
+function scheduleSync() { if (!user || !fb) return; clearTimeout(syncTimer); syncTimer = setTimeout(pushCloud, 700); }
+async function pushCloud() {
+  if (!user || !fb) return;
+  try { await fb.F.setDoc(userDoc(), { profile, favs: [...favs], cart, updatedAt: fb.F.serverTimestamp() }); }
+  catch (e) { console.warn("Falha ao salvar", e); }
+}
+const AUTH_ERRORS = {
+  "auth/email-already-in-use": "Já existe uma conta com esse e-mail. Toque em “Entrar”.",
+  "auth/invalid-email": "Esse e-mail não parece válido.",
+  "auth/weak-password": "A senha precisa ter pelo menos 6 caracteres.",
+  "auth/invalid-credential": "E-mail ou senha incorretos.",
+  "auth/wrong-password": "E-mail ou senha incorretos.",
+  "auth/user-not-found": "Não encontramos uma conta com esse e-mail.",
+  "auth/too-many-requests": "Muitas tentativas. Espere alguns minutos e tente de novo.",
+  "auth/network-request-failed": "Sem conexão. Verifique sua internet.",
+  "auth/requires-recent-login": "Por segurança, saia e entre de novo antes de fazer isso.",
+  "auth/missing-password": "Digite sua senha.",
+  "auth/operation-not-allowed": "O login por e-mail ainda não foi ativado no Firebase."
+};
+const authMsg = e => AUTH_ERRORS[e && e.code] || "Algo deu errado. Tente de novo em instantes.";
+function openLogin(mode = "login") {
+  if (user) { openProfile(); return; }
+  const on = !!fb;
+  const signup = mode === "signup";
+  openSheet("login", "Conta ASFE", signup ? "Criar conta" : "Entrar", `
+    <div class="auth-tabs" role="group" aria-label="Entrar ou criar conta"><button type="button" data-mode="login" aria-pressed="${!signup}">Entrar</button><button type="button" data-mode="signup" aria-pressed="${signup}">Criar conta</button></div>
+    ${signup ? `<ul class="auth-perks"><li>Perfil com avatar, capa e cor do app</li><li>Favoritos e carrinho salvos na nuvem</li><li>Use em qualquer aparelho</li></ul>` : ""}
+    ${on ? "" : `<div class="msg info" style="margin-bottom:16px">As contas estão sendo ativadas e vão funcionar em breve. Enquanto isso, você já pode personalizar um perfil e usar o carrinho neste aparelho.</div>`}
+    <form class="form" id="aform" novalidate>
+      ${signup ? `<div class="field"><label for="af-name">Nome</label><input id="af-name" name="name" maxlength="30" autocomplete="nickname" required></div>` : ""}
+      <div class="field"><label for="af-email">E-mail</label><input id="af-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" required></div>
+      <div class="field"><label for="af-pass">Senha</label><div class="pw"><input id="af-pass" name="pass" type="password" minlength="6" autocomplete="${signup ? "new-password" : "current-password"}" required><button type="button" class="linkbtn" id="af-show">Ver</button></div>${signup ? `<div class="help">Pelo menos 6 caracteres.</div>` : ""}</div>
+      <div id="af-msg"></div>
+      <button type="submit" class="btn-brand btn-full" ${on ? "" : "disabled"}>${signup ? "Criar minha conta" : "Entrar"}</button>
+      ${signup ? "" : `<button type="button" class="linkbtn" id="af-reset" ${on ? "" : "disabled"}>Esqueci minha senha</button>`}
+    </form>
+    ${on ? "" : `<div class="q-nav"><span></span><button type="button" class="btn-ghost" id="af-local">Personalizar perfil neste aparelho</button></div>`}`);
+  shBody.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => openLogin(b.dataset.mode)));
+  const f = document.getElementById("aform"), msg = document.getElementById("af-msg");
+  document.getElementById("af-show").addEventListener("click", e => { const t = f.pass.type === "password"; f.pass.type = t ? "text" : "password"; e.currentTarget.textContent = t ? "Ocultar" : "Ver"; });
+  const loc = document.getElementById("af-local"); if (loc) loc.addEventListener("click", openProfileEdit);
+  const rs = document.getElementById("af-reset");
+  if (rs) rs.addEventListener("click", async () => {
+    const email = f.email.value.trim();
+    if (!email) { msg.innerHTML = `<div class="msg err">Digite seu e-mail acima e toque em “Esqueci minha senha” de novo.</div>`; f.email.focus(); return; }
+    try { await fb.A.sendPasswordResetEmail(fb.auth, email); msg.innerHTML = `<div class="msg ok">Se existir uma conta com esse e-mail, enviamos um link para criar uma nova senha. Confira também o spam.</div>`; }
+    catch (e) { msg.innerHTML = `<div class="msg err">${authMsg(e)}</div>`; }
+  });
+  f.addEventListener("submit", async e => {
+    e.preventDefault(); if (!fb) return;
+    const email = f.email.value.trim(), pass = f.pass.value;
+    const btn = f.querySelector("[type=submit]");
+    if (signup && !f.name.value.trim()) { msg.innerHTML = `<div class="msg err">Escreva seu nome.</div>`; f.name.focus(); return; }
+    if (!email) { msg.innerHTML = `<div class="msg err">Digite seu e-mail.</div>`; f.email.focus(); return; }
+    if (pass.length < 6) { msg.innerHTML = `<div class="msg err">A senha precisa ter pelo menos 6 caracteres.</div>`; f.pass.focus(); return; }
+    btn.disabled = true; btn.textContent = signup ? "Criando conta…" : "Entrando…"; msg.innerHTML = "";
+    try {
+      if (signup) {
+        const name = f.name.value.trim();
+        const cred = await fb.A.createUserWithEmailAndPassword(fb.auth, email, pass);
+        await fb.A.updateProfile(cred.user, { displayName: name }).catch(() => {});
+        if (!profile.name) profile.name = name;
+        if (!profile.user) profile.user = name.normalize("NFD").replace(/[^\w\s.]/g, "").trim().toLowerCase().replace(/\s+/g, "_").slice(0, 20);
+        saveProfile();
+        toast("Conta criada! Bem-vindo(a) à ASFE Store");
+      } else {
+        await fb.A.signInWithEmailAndPassword(fb.auth, email, pass);
+        toast("Bem-vindo(a) de volta");
+      }
+    } catch (err) {
+      msg.innerHTML = `<div class="msg err">${authMsg(err)}</div>`;
+      btn.disabled = false; btn.textContent = signup ? "Criar minha conta" : "Entrar";
+    }
+  });
+}
+function resetLocal() {
+  profile = { ...DEFAULT_PROFILE }; cart = []; favs = new Set();
+  try { localStorage.removeItem("asfe-perfil"); localStorage.removeItem("asfe-carrinho"); localStorage.removeItem("vitrine-favoritos"); } catch (e) {}
+  applyAccent(); renderMe(); renderBadges(); render(); renderShelves();
+}
+async function logout() {
+  if (!fb) return;
+  clearTimeout(syncTimer); await pushCloud();
+  await fb.A.signOut(fb.auth);
+  resetLocal(); closeSheet(); toast("Você saiu da conta");
+}
+async function deleteAccount() {
+  const msg = document.getElementById("p-msg");
+  try {
+    await fb.F.deleteDoc(userDoc());
+    await fb.A.deleteUser(fb.auth.currentUser);
+    resetLocal(); closeSheet(); toast("Conta excluída");
+  } catch (e) { msg.innerHTML = `<div class="msg err">${authMsg(e)}</div>`; }
+}
+document.getElementById("me-btn").addEventListener("click", () => openTool(user || profile.name ? "profile" : "signup"));
+document.getElementById("cart-btn").addEventListener("click", openCart);
+
 // ---------- menu lateral ----------
 const menu = document.getElementById("menu");
 const menuBody = document.getElementById("menu-body");
@@ -1380,6 +1817,8 @@ function renderMenu() {
   const theme = getTheme();
   menuBody.innerHTML = `
     <div class="dr-sec">
+      <button type="button" class="dr-item" data-tool="profile"><span class="ic" aria-hidden="true" style="padding:0;overflow:hidden">${avatarHTML(34)}</span><span>${user ? esc(profile.name || "Meu perfil") : "Entrar ou criar conta"}<small>${user ? "Ver e editar seu perfil" : "Salve perfil, favoritos e carrinho"}</small></span></button>
+      <button type="button" class="dr-item" data-tool="cart"><span class="ic" aria-hidden="true">🛒</span><span>Carrinho<small>${cart.length ? cart.length + (cart.length === 1 ? " item · " : " itens · ") + brl(cartTotal().total) : "Monte e veja o total"}</small></span></button>
       <button type="button" class="dr-item" data-home><span class="ic" aria-hidden="true">⌂</span><span>Início<small>Destaques e prateleiras</small></span></button>
       <button type="button" class="dr-item" id="surprise"><span class="ic" aria-hidden="true">?</span><span>Me surpreenda<small>Abre um jogo aleatório bem avaliado</small></span></button>
     </div>
@@ -1441,9 +1880,13 @@ window.addEventListener("scroll", () => topEl.classList.toggle("scrolled", windo
 syncControls();
 render();
 renderHero();
+applyAccent();
+renderMe();
+renderBadges();
 renderPromos();
 renderShelves();
 renderTray();
+initFirebase();
 startHero();
 (function route() {
   const qs = new URLSearchParams(location.search);
