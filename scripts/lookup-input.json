@@ -1,6 +1,1 @@
-{
-  "verify": {
-    "xbox": ["Minecraft", "Fortnite", "Roblox", "Valorant", "Genshin Impact"],
-    "itunes": ["Free Fire", "Resident Evil Survival Unit", "Roblox", "Genshin Impact"]
-  }
-}
+{ "characters": true }

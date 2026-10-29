@@ -46,6 +46,71 @@ async function steamAssets(appids) {
 }
 
 const result = { updated: new Date().toISOString(), new: [], covers: {} };
+// modo "personagens": personagens de cada jogo (Wikidata P674) com foto da Wikipédia
+if (input.characters) {
+  const wp = async params => (await get("https://en.wikipedia.org/w/api.php?format=json&" + params)).json();
+  const wd = async params => (await get("https://www.wikidata.org/w/api.php?format=json&" + params)).json();
+  const titleOf = g => g.w || g.t;
+  const titles = [...new Set(games.map(titleOf))];
+  const qOf = {};
+  for (let i = 0; i < titles.length; i += 50) {
+    const b = titles.slice(i, i + 50);
+    try {
+      const d = await wp("action=query&redirects=1&prop=pageprops&ppprop=wikibase_item&titles=" + encodeURIComponent(b.join("|")));
+      const step = {}; [...(d.query.normalized || []), ...(d.query.redirects || [])].forEach(m => { step[m.from] = m.to; });
+      const q = {}; Object.values(d.query.pages || {}).forEach(p => { if (p.pageprops && p.pageprops.wikibase_item) q[p.title] = p.pageprops.wikibase_item; });
+      b.forEach(t => { let x = t; for (let k = 0; k < 3 && step[x]; k++) x = step[x]; if (q[x]) qOf[t] = q[x]; });
+    } catch (e) { console.log("wp", e.message); }
+    await sleep(400);
+  }
+  const gameQ = [...new Set(Object.values(qOf))], chars = {};
+  for (let i = 0; i < gameQ.length; i += 50) {
+    try {
+      const d = await wd("action=wbgetentities&props=claims&ids=" + gameQ.slice(i, i + 50).join("|"));
+      for (const [id, e] of Object.entries(d.entities || {})) chars[id] = ((e.claims || {}).P674 || []).map(c => c.mainsnak && c.mainsnak.datavalue && c.mainsnak.datavalue.value.id).filter(Boolean);
+    } catch (e) { console.log("wd", e.message); }
+    await sleep(400);
+  }
+  const allC = [...new Set(Object.values(chars).flat())], info = {};
+  for (let i = 0; i < allC.length; i += 50) {
+    try {
+      const d = await wd("action=wbgetentities&props=labels|sitelinks&languages=pt-br|pt|en&sitefilter=enwiki&ids=" + allC.slice(i, i + 50).join("|"));
+      for (const [id, e] of Object.entries(d.entities || {})) {
+        const L = e.labels || {};
+        info[id] = { n: (L["pt-br"] || L.pt || L.en || {}).value || null, w: e.sitelinks && e.sitelinks.enwiki && e.sitelinks.enwiki.title };
+      }
+    } catch (e) { console.log("wd2", e.message); }
+    await sleep(400);
+  }
+  const wTitles = [...new Set(Object.values(info).map(x => x.w).filter(Boolean))], img = {};
+  for (let i = 0; i < wTitles.length; i += 50) {
+    const b = wTitles.slice(i, i + 50);
+    try {
+      const d = await wp("action=query&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=800&pilicense=any&pilimit=50&titles=" + encodeURIComponent(b.join("|")));
+      const step = {}; [...(d.query.normalized || []), ...(d.query.redirects || [])].forEach(m => { step[m.from] = m.to; });
+      const th = {}; Object.values(d.query.pages || {}).forEach(p => { if (p.thumbnail) th[p.title] = p.thumbnail.source; });
+      b.forEach(t => { let x = t; for (let k = 0; k < 3 && step[x]; k++) x = step[x]; if (th[x]) img[t] = th[x]; });
+    } catch (e) { console.log("img", e.message); }
+    await sleep(400);
+  }
+  const out = {}; let n = 0;
+  for (const g of games) {
+    const q = qOf[titleOf(g)]; if (!q) continue;
+    const list = (chars[q] || []).map(c => info[c]).filter(x => x && x.n && x.w && img[x.w] && !/^(list of|characters of)/i.test(x.w)).map(x => ({ n: x.n, img: img[x.w] }));
+    const seen = new Set(), uniq = list.filter(x => !seen.has(x.img) && seen.add(x.img)).slice(0, 16);
+    if (uniq.length) { out[g.t] = uniq; n++; }
+  }
+  // jogos da mesma série herdam os personagens dos outros
+  const bySeries = {};
+  games.forEach(g => { if (g.f && out[g.t]) (bySeries[g.f] ||= []).push(...out[g.t]); });
+  games.forEach(g => {
+    if (out[g.t] || !g.f || !bySeries[g.f]) return;
+    const seen = new Set(); out[g.t] = bySeries[g.f].filter(x => !seen.has(x.img) && seen.add(x.img)).slice(0, 16);
+  });
+  fs.writeFileSync(ROOT + "data/characters.json", JSON.stringify({ updated: result.updated, games: out }));
+  console.log("jogos com personagens:", Object.keys(out).length, "diretos:", n, "de", games.length);
+  process.exit(0);
+}
 // modo "conferir": só testa endereços de imagens e títulos da Wikipédia
 if (input.verify) {
   const out = { updated: result.updated, urls: {}, wiki: {}, assets: {} };
