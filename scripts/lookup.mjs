@@ -46,6 +46,22 @@ async function steamAssets(appids) {
 }
 
 const result = { updated: new Date().toISOString(), new: [], covers: {} };
+// modo "conferir": só testa endereços de imagens e títulos da Wikipédia
+if (input.verify) {
+  const out = { updated: result.updated, urls: {}, wiki: {}, assets: {} };
+  for (const u of input.verify.urls || []) { try { const r = await fetch(u, { headers: { "user-agent": UA } }); out.urls[u] = r.status + " " + (r.headers.get("content-type") || ""); } catch (e) { out.urls[u] = "erro " + e.message; } }
+  const ws = input.verify.wiki || [];
+  if (ws.length) {
+    const d = await (await get("https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageimages&piprop=thumbnail|name&pithumbsize=600&pilicense=any&titles=" + encodeURIComponent(ws.join("|")))).json();
+    const step = {}; [...(d.query.normalized || []), ...(d.query.redirects || [])].forEach(m => { step[m.from] = m.to; });
+    const th = {}; Object.values(d.query.pages || {}).forEach(p => { th[p.title] = p.thumbnail ? p.thumbnail.source : (p.missing !== undefined ? "MISSING PAGE" : "NO IMAGE"); });
+    ws.forEach(w => { let t = w; for (let k = 0; k < 3 && step[t]; k++) t = step[t]; out.wiki[w] = th[t] || null; });
+  }
+  if (input.verify.appids) Object.assign(out.assets, await steamAssets(input.verify.appids));
+  fs.writeFileSync(ROOT + "data/lookup-verify.json", JSON.stringify(out, null, 1));
+  console.log(JSON.stringify(out).slice(0, 2000));
+  process.exit(0);
+}
 
 // ---------- jogos novos ----------
 for (const q of input.new) {
