@@ -529,7 +529,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
 .pchips button { cursor: pointer; }
 .pstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
 .pstats button { padding: 12px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); text-align: left; cursor: pointer; min-width: 0; }
-.pstats b { display: block; font: 800 19px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pstats b { display: block; font: 800 clamp(14px, 3.9vw, 19px) var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .pstats small { font-size: 12px; color: var(--muted); }
 .pactions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 .acct { margin-top: 18px; padding: 16px 18px; border-radius: 20px; border: 1px solid var(--line); background: var(--bg); display: grid; gap: 12px; }
@@ -699,7 +699,7 @@ body.has-tray .catalog { padding-bottom: 120px; }
   <div id="d-content"></div>
 </dialog>
 
-<script src="firebase-config.js?v=1"></script>
+<script src="firebase-config.js?v=2"></script>
 <script src="games.js?v=20261029-asfe3"></script>
 <script>
 const STORES = [
@@ -1667,19 +1667,22 @@ function openProfileEdit() {
 }
 
 // ---------- login (Firebase) ----------
-let fb = null, user = null, authReady = false;
+let fb = null, user = null, authReady = false, fbState = "off", loginMode = "login";
 const FB_VER = "10.12.2";
 async function initFirebase() {
   const cfg = window.FIREBASE_CONFIG;
   if (!cfg || !cfg.apiKey) { authReady = true; return; }
+  fbState = "loading";
   try {
     const base = `https://www.gstatic.com/firebasejs/${FB_VER}/`;
     const [app, A, F] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]);
     const a = app.initializeApp(cfg);
     fb = { A, F, auth: A.getAuth(a), db: F.getFirestore(a) };
     fb.auth.languageCode = "pt-BR";
+    fbState = "ready";
     A.onAuthStateChanged(fb.auth, onUser);
-  } catch (e) { authReady = true; console.warn("Login indisponível", e); }
+    if (sheetKind === "login") openLogin(loginMode);
+  } catch (e) { authReady = true; fbState = "error"; console.warn("Login indisponível", e); if (sheetKind === "login") openLogin(loginMode); }
 }
 async function onUser(u) {
   const was = user; user = u; authReady = true;
@@ -1726,12 +1729,16 @@ const AUTH_ERRORS = {
 const authMsg = e => AUTH_ERRORS[e && e.code] || "Algo deu errado. Tente de novo em instantes.";
 function openLogin(mode = "login") {
   if (user) { openProfile(); return; }
+  loginMode = mode;
   const on = !!fb;
   const signup = mode === "signup";
+  const note = fbState === "loading" ? "Conectando ao serviço de contas…"
+    : fbState === "error" ? "Não foi possível conectar ao serviço de contas agora. Verifique sua internet e tente de novo em instantes. Enquanto isso, o perfil e o carrinho funcionam neste aparelho."
+    : "As contas estão sendo ativadas e vão funcionar em breve. Enquanto isso, você já pode personalizar um perfil e usar o carrinho neste aparelho.";
   openSheet("login", "Conta ASFE", signup ? "Criar conta" : "Entrar", `
     <div class="auth-tabs" role="group" aria-label="Entrar ou criar conta"><button type="button" data-mode="login" aria-pressed="${!signup}">Entrar</button><button type="button" data-mode="signup" aria-pressed="${signup}">Criar conta</button></div>
     ${signup ? `<ul class="auth-perks"><li>Perfil com avatar, capa e cor do app</li><li>Favoritos e carrinho salvos na nuvem</li><li>Use em qualquer aparelho</li></ul>` : ""}
-    ${on ? "" : `<div class="msg info" style="margin-bottom:16px">As contas estão sendo ativadas e vão funcionar em breve. Enquanto isso, você já pode personalizar um perfil e usar o carrinho neste aparelho.</div>`}
+    ${on ? "" : `<div class="msg info" style="margin-bottom:16px">${note}</div>`}
     <form class="form" id="aform" novalidate>
       ${signup ? `<div class="field"><label for="af-name">Nome</label><input id="af-name" name="name" maxlength="30" autocomplete="nickname" required></div>` : ""}
       <div class="field"><label for="af-email">E-mail</label><input id="af-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" required></div>
@@ -1740,7 +1747,7 @@ function openLogin(mode = "login") {
       <button type="submit" class="btn-brand btn-full" ${on ? "" : "disabled"}>${signup ? "Criar minha conta" : "Entrar"}</button>
       ${signup ? "" : `<button type="button" class="linkbtn" id="af-reset" ${on ? "" : "disabled"}>Esqueci minha senha</button>`}
     </form>
-    ${on ? "" : `<div class="q-nav"><span></span><button type="button" class="btn-ghost" id="af-local">Personalizar perfil neste aparelho</button></div>`}`);
+    ${on || fbState === "loading" ? "" : `<div class="q-nav"><span></span><button type="button" class="btn-ghost" id="af-local">Personalizar perfil neste aparelho</button></div>`}`);
   shBody.querySelectorAll("[data-mode]").forEach(b => b.addEventListener("click", () => openLogin(b.dataset.mode)));
   const f = document.getElementById("aform"), msg = document.getElementById("af-msg");
   document.getElementById("af-show").addEventListener("click", e => { const t = f.pass.type === "password"; f.pass.type = t ? "text" : "password"; e.currentTarget.textContent = t ? "Ocultar" : "Ver"; });

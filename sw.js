@@ -1,6 +1,6 @@
 // ASFE Store — funciona offline depois da primeira visita.
-const VERSION = "asfe-v1";
-const SHELL = ["./", "./index.html", "./games.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
+const VERSION = "asfe-v2";
+const SHELL = ["./", "./index.html", "./games.js", "./firebase-config.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
