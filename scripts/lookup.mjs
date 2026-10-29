@@ -58,6 +58,20 @@ if (input.verify) {
     ws.forEach(w => { let t = w; for (let k = 0; k < 3 && step[t]; k++) t = step[t]; out.wiki[w] = th[t] || null; });
   }
   if (input.verify.appids) Object.assign(out.assets, await steamAssets(input.verify.appids));
+  out.xboxImg = {};
+  for (const q of input.verify.xbox || []) {
+    try {
+      const html = await (await get(`https://www.xbox.com/pt-BR/search/results/games?q=${encodeURIComponent(q)}`)).text();
+      const m = html.match(/window\.__PRELOADED_STATE__\s*=\s*(\{[\s\S]*?\})\s*;\s*(?:window\.|<\/script>)/);
+      const c = []; if (m) walk(JSON.parse(m[1]), o => { if (typeof o.title === "string" && o.images && typeof o.images === "object") c.push({ title: o.title, images: Object.fromEntries(Object.entries(o.images).map(([k, v]) => [k, v && (v.url || (Array.isArray(v) && v[0] && v[0].url)) || null])) }); });
+      out.xboxImg[q] = c.slice(0, 3);
+    } catch (e) { out.xboxImg[q] = "erro " + e.message; }
+    await sleep(800);
+  }
+  out.itunes = {};
+  for (const q of input.verify.itunes || []) {
+    try { const d = await (await get(`https://itunes.apple.com/search?term=${encodeURIComponent(q)}&country=br&entity=software&limit=3`)).json(); out.itunes[q] = (d.results || []).map(r => ({ n: r.trackName, a: r.artworkUrl512, p: r.price })); } catch (e) { out.itunes[q] = "erro " + e.message; }
+  }
   fs.writeFileSync(ROOT + "data/lookup-verify.json", JSON.stringify(out, null, 1));
   console.log(JSON.stringify(out).slice(0, 2000));
   process.exit(0);
