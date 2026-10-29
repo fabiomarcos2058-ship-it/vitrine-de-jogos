@@ -1,4 +1,4 @@
-# Vitrine de Jogos
+# ASFE Store
 
 Mais de 100 jogos famosos (incluindo toda a linha de Dragon Ball), com a nota da crítica (Metascore) e o preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store. Cada jogo tem descrição e lista de edições.
 
