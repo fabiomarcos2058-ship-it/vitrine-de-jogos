@@ -1,0 +1,19 @@
+{
+ "term": "The Last of Us Part II",
+ "topKeys": [
+  "pageProps",
+  "appProps",
+  "navTree",
+  "apolloState",
+  "locale",
+  "searchTerm",
+  "isClientSideNavigation",
+  "isLoggedIn",
+  "page",
+  "batarangs",
+  "statusCode"
+ ],
+ "refCount": 7,
+ "cands": 0,
+ "sample": []
+}
