@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Os 100 jogos mais famosos com nota da crítica e preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store.">
+<meta name="description" content="Mais de 100 jogos famosos com nota da crítica e preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store.">
 <title>Vitrine de Jogos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -77,7 +77,7 @@ select { font: 500 14px var(--body); color: var(--fg); background: var(--bg); bo
 .legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; padding-bottom: 40px; }
+.grid { scroll-margin-top: 150px; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; padding-bottom: 40px; }
 @media (max-width: 460px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
 
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
@@ -155,6 +155,70 @@ a.shop:hover { border-color: var(--fg); }
 .ed .ev { font: 600 15px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .note { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
 
+/* Banner dos mais vendidos */
+.top-sellers { padding-block: 0 22px; }
+.ts-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.ts-head h2 { font: 700 13px var(--display); letter-spacing: 0.12em; text-transform: uppercase; margin: 0; }
+.ts-head span { font-size: 12px; color: var(--muted); }
+.ts-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) {
+  .ts-row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(82%, 1fr); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .ts-row > * { scroll-snap-align: start; }
+}
+.ts { position: relative; display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; padding: 14px; border-radius: 14px; color: #FFFFFF; text-align: left; font: inherit; border: 0; cursor: pointer; overflow: hidden; isolation: isolate; min-height: 168px; }
+.ts::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(0,0,0,0.25), rgba(0,0,0,0.65)); }
+.ts .bg { position: absolute; inset: -20px; z-index: -2; background-size: cover; background-position: center; filter: blur(18px) saturate(1.2); transform: scale(1.1); }
+.ts .cover { border-radius: 8px; padding: 6px; align-self: start; }
+.ts .cover .mono { font-size: 80px; top: 10px; }
+.ts .cover .title, .ts .cover .studio, .ts .cover .genre { display: none; }
+.ts-plat { display: inline-flex; align-items: center; gap: 6px; font: 700 11px var(--display); letter-spacing: 0.1em; text-transform: uppercase; }
+.ts-plat i { width: 8px; height: 8px; border-radius: 2px; }
+.ts-name { font: 700 19px/1.1 var(--display); text-transform: uppercase; margin: 6px 0 6px; overflow-wrap: anywhere; }
+.ts-fact { font-size: 13px; line-height: 1.4; opacity: 0.92; margin: 0; }
+.ts-foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.ts-tag { font: 700 10px var(--body); letter-spacing: 0.06em; text-transform: uppercase; background: var(--accent); color: var(--accent-ink); padding: 3px 7px; border-radius: 4px; }
+.ts-price { font: 600 14px var(--mono); }
+.ts-src { font-size: 10.5px; opacity: 0.7; margin-left: auto; }
+
+/* Atalhos */
+.shortcuts { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; padding-bottom: 12px; font-size: 13px; color: var(--muted); }
+.shortcut { font: 600 13px var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.shortcut[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+/* Escolha de edição e plataforma */
+.picker { border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 14px; }
+.picker h4 { margin: 0 0 8px; font: 600 13px var(--body); color: var(--muted); }
+.opts { display: grid; gap: 8px; }
+.opts.eds-opts { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.opts.plat-opts { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+.opt { position: relative; display: block; cursor: pointer; }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .box { display: grid; gap: 2px; height: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.opt .box b { font-size: 14px; }
+.opt .box span { font-size: 12.5px; color: var(--muted); }
+.opt .box .ov { font: 600 13.5px var(--mono); color: var(--fg); margin-top: 2px; }
+.opt input:checked + .box { border-color: var(--fg); box-shadow: inset 0 0 0 1px var(--fg); }
+.opt input:focus-visible + .box { outline: 2px solid var(--accent); outline-offset: 2px; }
+.go { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; border-top: 1px dashed var(--line); }
+.go-sum { font-size: 14px; min-width: 0; }
+.go-sum b { font: 600 17px var(--mono); display: block; }
+.go-btn { display: inline-flex; align-items: center; gap: 8px; font: 700 15px var(--body); background: var(--fg); color: var(--bg); text-decoration: none; padding: 12px 22px; border-radius: 10px; }
+.go-btn:hover { opacity: 0.9; }
+.go-note { font-size: 12px; color: var(--muted); margin: 0; flex-basis: 100%; }
+
+/* Barra de busca compacta no celular */
+@media (max-width: 700px) {
+  .bar .wrap { gap: 8px; padding-block: 10px; }
+  .search { flex-basis: 100%; }
+  .bar .filters { display: flex; gap: 8px; overflow-x: auto; flex: 1 1 100%; min-width: 0; padding-bottom: 2px; scrollbar-width: none; }
+  .bar .filters::-webkit-scrollbar { display: none; }
+  .seg { flex-wrap: nowrap; flex-shrink: 0; }
+  .bar select { flex-shrink: 0; }
+}
+.bar .filters { display: contents; }
+@media (max-width: 700px) { .bar .filters { display: flex; } }
+.bar.scrolled { box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
 footer .wrap { padding-block: 18px 28px; }
 footer p { margin: 0 0 6px; max-width: 82ch; }
@@ -172,16 +236,24 @@ footer p { margin: 0 0 6px; max-width: 82ch; }
       <h1>Vitrine<span>/</span>Jogos</h1>
       <span class="tag">CONSOLE · PC · CELULAR · REF. OUT/2026</span>
     </div>
-    <p class="lede">Os <strong>100 jogos mais conhecidos</strong>, com a nota da crítica e o preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store. Toque num jogo para ver a descrição, as edições e onde comprar mais barato.</p>
+    <p class="lede">Os <strong>jogos mais conhecidos</strong>, com a nota da crítica e o preço no PlayStation, Xbox, Steam, Epic Games, Google Play e App Store. Toque num jogo para ver a descrição, as edições e onde comprar mais barato.</p>
   </div>
 </header>
 
-<div class="bar">
+<section class="top-sellers" aria-labelledby="ts-title">
+  <div class="wrap">
+    <div class="ts-head"><h2 id="ts-title">Mais vendidos agora</h2><span>Atualizado em 29/10/2026</span></div>
+    <div class="ts-row" id="ts-row"></div>
+  </div>
+</section>
+
+<div class="bar" id="bar">
   <div class="wrap">
     <label class="search" for="q">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
       <input id="q" type="search" placeholder="Buscar jogo ou estúdio" autocomplete="off" aria-label="Buscar jogo ou estúdio">
     </label>
+    <div class="filters">
     <div class="seg" role="group" aria-label="Plataforma" id="plat">
       <button type="button" data-v="all" aria-pressed="true">Todos</button>
       <button type="button" data-v="ps" aria-pressed="false">PlayStation</button>
@@ -196,18 +268,20 @@ footer p { margin: 0 0 6px; max-width: 82ch; }
       <option value="new">Mais recentes</option>
       <option value="az">Nome (A–Z)</option>
     </select>
+    </div>
   </div>
 </div>
 
 <main class="wrap">
   <div class="meta">
-    <span>Mostrando <b id="count">100</b> de <b id="total">100</b> jogos · nota média <b id="avg">–</b></span>
+    <span>Mostrando <b id="count">–</b> de <b id="total">–</b> jogos · nota média <b id="avg">–</b></span>
     <span class="legend">
       <span><i style="background:var(--good)"></i>85+ aclamado</span>
       <span><i style="background:var(--mid)"></i>70–84 bom</span>
       <span><i style="background:var(--bad)"></i>abaixo de 70</span>
     </span>
   </div>
+  <div class="shortcuts"><span>Coleções:</span><button type="button" class="shortcut" id="sc-db" aria-pressed="false">Dragon Ball (todos os jogos)</button></div>
   <div class="grid" id="grid"></div>
 </main>
 
@@ -249,6 +323,7 @@ function priceText(v) {
   if (v === "pre") return "Pré-venda";
   if (v === "Netflix") return "Netflix";
   if (v === 0) return "Grátis";
+  if (v === "?") return "Ver na loja";
   return brl(v);
 }
 function cheapest(g, keys) {
@@ -273,7 +348,7 @@ function coverHTML(g, showScore = true) {
     <span class="mono" aria-hidden="true">${esc(initial)}</span>
     ${covers[g.t] ? `<img src="${covers[g.t]}" alt="Capa de ${esc(g.t)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.classList.add('ok');this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ""}
     <span class="genre">${esc(g.g)}</span>
-    ${showScore ? `<span class="score ${scoreClass(g.n)}" title="Nota da crítica">${g.n ?? "19/11"}</span>` : ""}
+    ${showScore ? `<span class="score ${scoreClass(g.n)}" title="${g.n === null ? (g.pre ? "Ainda não lançado" : "Sem nota da crítica") : "Nota da crítica"}">${g.n ?? (g.pre ? g.pre.slice(0, 5) : "–")}</span>` : ""}
     <div class="title">${esc(g.t)}</div>
     <div class="studio">${esc(g.d)}</div>
   </div>`;
@@ -284,7 +359,7 @@ const genreSel = document.getElementById("genre");
 [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR")).forEach(g => {
   const o = document.createElement("option"); o.value = g; o.textContent = g; genreSel.appendChild(o);
 });
-const state = { q: "", plat: "all", genre: "", sort: "score" };
+const state = { q: "", plat: "all", genre: "", sort: "score", fr: "" };
 try {
   const saved = JSON.parse(localStorage.getItem("vitrine-filtros") || "null");
   if (saved && typeof saved === "object") {
@@ -300,6 +375,7 @@ function render() {
   const list = games.filter(g => {
     if (q && !(g.t.toLowerCase().includes(q) || g.d.toLowerCase().includes(q))) return false;
     if (state.genre && g.g !== state.genre) return false;
+    if (state.fr && g.f !== state.fr) return false;
     if (keys && !available(g, keys)) return false;
     return true;
   });
@@ -323,10 +399,10 @@ function render() {
   }
   grid.innerHTML = list.map(g => {
     const best = cheapest(g, keys);
-    const fromHTML = g.p.ps === "pre"
-      ? `<div><small>Lançamento</small><b>19/11/2026</b></div><em>Pré-venda</em>`
+    const fromHTML = g.pre
+      ? `<div><small>Lançamento</small><b>${g.pre}</b></div><em>Pré-venda</em>`
       : best ? `<div><small>${best.v === 0 ? "Jogue de graça" : "A partir de"}</small><b>${priceText(best.v)}</b></div><em>${best.s.short}</em>`
-             : `<div><small>Disponível via</small><b>Netflix</b></div>`;
+             : Object.values(g.p).includes("Netflix") ? `<div><small>Disponível via</small><b>Netflix</b></div>` : `<div><small>Preço</small><b>Ver na loja</b></div>`;
     const chips = STORES.map(s => `<span class="chip${has(g.p[s.k]) ? "" : " off"}" style="${has(g.p[s.k]) ? `color:var(--c-${s.k})` : ""}" title="${s.name}${has(g.p[s.k]) ? "" : ": indisponível"}">${s.short}</span>`).join("");
     return `<button type="button" class="card" data-id="${g.id}" aria-label="Ver detalhes de ${esc(g.t)}">
       ${coverHTML(g)}
@@ -345,8 +421,8 @@ const dlg = document.getElementById("detail");
 const dContent = document.getElementById("d-content");
 let currentId = null;
 
-function scoreLabel(n) {
-  if (n === null) return "Ainda sem nota: o jogo não foi lançado.";
+function scoreLabel(n, g) {
+  if (n === null) return g && g.pre ? "Ainda sem nota: o jogo não foi lançado." : "Sem nota da crítica especializada (comum em jogos de celular).";
   return n >= 90 ? "Aclamado pela crítica" : n >= 85 ? "Muito elogiado" : n >= 75 ? "Bem avaliado" : n >= 70 ? "Avaliações positivas" : "Avaliações mistas";
 }
 
@@ -362,20 +438,58 @@ function detailHTML(g) {
       <span class="sn">${s.name}${isBest ? '<span class="flag">menor</span>' : ""}<span class="sk">${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
       <span class="sv">${priceText(v)}</span></a>`;
   }).join("");
-  const edHTML = g.ed.map(([name, note, price]) => `<div class="ed"><div><b>${esc(name)}</b><span>${esc(note)}</span></div><span class="ev">${price === null ? "A definir" : priceText(price)}</span></div>`).join("");
   return `<div class="d-head">
       ${coverHTML(g, false)}
       <div style="min-width:0">
         <h2 class="d-title" id="d-title">${esc(g.t)}</h2>
         <div class="d-facts"><span><b>${g.y}</b></span><span>${esc(g.g)}</span><span>${esc(g.d)}</span></div>
-        <div class="d-score"><span class="score ${scoreClass(g.n)}">${g.n ?? "–"}</span><span>${scoreLabel(g.n)}</span></div>
+        <div class="d-score"><span class="score ${scoreClass(g.n)}">${g.n ?? "–"}</span><span>${scoreLabel(g.n, g)}</span></div>
       </div>
     </div>
     <div class="d-body">
       <section><h3>Sobre o jogo</h3><p class="d-desc">${esc(g.desc)}</p></section>
       <section><h3>Onde comprar</h3><div class="shops">${shopHTML}</div></section>
-      <section><h3>Edições</h3><div class="eds">${edHTML}</div><p class="note">Preços das edições na loja do console. No PC os valores costumam ser menores.</p></section>
+      <section><h3>Escolha a edição e a plataforma</h3>${pickerHTML(g)}</section>
     </div>`;
+}
+
+// Preço de uma edição numa loja: a padrão usa o preço da loja; as outras usam o preço de console
+function editionPrice(g, ei, k) {
+  const [, , price] = g.ed[ei];
+  const store = g.p[k];
+  if (ei === 0 && has(store)) return store;
+  if (price === 0) return 0;
+  if (k === "ps" || k === "xb") return price === null ? "pre" : (k === "xb" && num(price) && price > 0 ? Math.round((price + 0.05) * 100) / 100 : price);
+  return "?";
+}
+function pickerHTML(g) {
+  const avail = STORES.filter(s => has(g.p[s.k]));
+  if (!avail.length) return "";
+  const best = cheapest(g);
+  const defStore = (best ? best.s : avail[0]).k;
+  const eds = g.ed.map(([name, note, price], i) => `<label class="opt"><input type="radio" name="ed" value="${i}" ${i === 0 ? "checked" : ""}>
+      <span class="box"><b>${esc(name)}</b><span>${esc(note)}</span><span class="ov">${price === null ? "A definir" : priceText(price)}</span></span></label>`).join("");
+  const plats = avail.map(s => `<label class="opt"><input type="radio" name="pl" value="${s.k}" ${s.k === defStore ? "checked" : ""}>
+      <span class="box"><b><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--c-${s.k});margin-right:6px"></i>${s.short === "Play" ? "Google Play" : s.short === "iOS" ? "App Store" : s.short}</b><span>${s.kind}</span></span></label>`).join("");
+  return `<form class="picker" id="picker">
+    <div><h4>Edição</h4><div class="opts eds-opts">${eds}</div></div>
+    <div><h4>Plataforma</h4><div class="opts plat-opts">${plats}</div></div>
+    <div class="go"><div class="go-sum" id="go-sum"></div><a class="go-btn" id="go-btn" href="#" target="_blank" rel="noopener">Continuar <span aria-hidden="true">→</span></a>
+    <p class="go-note">Abre a loja escolhida já buscando a edição selecionada. Preços de edições fora do console podem variar.</p></div>
+  </form>`;
+}
+function updatePicker(g) {
+  const form = document.getElementById("picker"); if (!form) return;
+  const ei = Number(form.ed.value), k = form.pl.value;
+  const s = STORES.find(x => x.k === k);
+  const [name] = g.ed[ei];
+  const v = editionPrice(g, ei, k);
+  const isBase = ei === 0 || /^(Padrão|Gratuito)$/.test(name);
+  const query = isBase ? g.t : g.t + " " + name;
+  document.getElementById("go-sum").innerHTML = `${esc(name)} · ${s.short === "Play" ? "Google Play" : s.short === "iOS" ? "App Store" : s.short}<b>${v === "pre" ? "Pré-venda" : priceText(v)}</b>`;
+  const btn = document.getElementById("go-btn");
+  btn.href = s.url(query);
+  btn.setAttribute("aria-label", `Continuar para ${s.name}: ${g.t}, edição ${name}`);
 }
 
 function openDetail(id, push = true) {
@@ -383,9 +497,16 @@ function openDetail(id, push = true) {
   if (!g) return;
   currentId = id;
   dContent.innerHTML = detailHTML(g);
+  bindPicker(g);
   if (!dlg.open) dlg.showModal();
   dlg.scrollTop = 0;
   if (push && location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+}
+function bindPicker(g) {
+  const form = document.getElementById("picker"); if (!form) return;
+  form.addEventListener("change", () => updatePicker(g));
+  form.addEventListener("submit", e => e.preventDefault());
+  updatePicker(g);
 }
 function closeDetail() {
   currentId = null;
@@ -418,8 +539,39 @@ document.getElementById("plat").addEventListener("click", e => {
 genreSel.addEventListener("change", e => { state.genre = e.target.value; save(); render(); });
 document.getElementById("sort").addEventListener("change", e => { state.sort = e.target.value; save(); render(); });
 
+function renderTop() {
+  const row = document.getElementById("ts-row");
+  row.innerHTML = (window.TOP || []).map(t => {
+    const g = games.find(x => x.t === t.game); if (!g) return "";
+    const v = g.p[t.store];
+    const img = covers[g.t];
+    return `<button type="button" class="ts" data-id="${g.id}" style="${coverStyle(g)}" aria-label="Mais vendido no ${t.label}: ${esc(g.t)}">
+      ${img ? `<span class="bg" style="background-image:url('${img}')"></span>` : ""}
+      ${coverHTML(g, false)}
+      <div style="min-width:0">
+        <span class="ts-plat"><i style="background:var(--c-${t.store})"></i>Mais vendido · ${t.label}</span>
+        <div class="ts-name">${esc(g.t)}</div>
+        <p class="ts-fact">${esc(t.fact)}</p>
+        <div class="ts-foot"><span class="ts-tag">${esc(t.tag)}</span><span class="ts-price">${g.pre ? "Chega em " + g.pre : has(v) ? priceText(v) : ""}</span><span class="ts-src">${esc(t.src)}</span></div>
+      </div>
+    </button>`;
+  }).join("");
+}
+document.getElementById("ts-row").addEventListener("click", e => { const b = e.target.closest(".ts"); if (b) openDetail(b.dataset.id); });
+const scDb = document.getElementById("sc-db");
+scDb.addEventListener("click", () => {
+  state.fr = state.fr ? "" : "Dragon Ball";
+  scDb.setAttribute("aria-pressed", String(!!state.fr));
+  render();
+  if (state.fr) document.getElementById("grid").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+const bar = document.getElementById("bar");
+const onScroll = () => bar.classList.toggle("scrolled", bar.getBoundingClientRect().top <= parseFloat(getComputedStyle(bar).top) + 1 && window.scrollY > 0);
+window.addEventListener("scroll", onScroll, { passive: true });
+
 syncControls();
 render();
+renderTop();
 if (location.hash.startsWith("#j-")) openDetail(location.hash.slice(1), false);
 
 // ---------- capas (imagem do artigo de cada jogo na Wikipédia) ----------
@@ -446,7 +598,8 @@ async function loadCovers() {
     } catch (e) { /* sem conexão com a Wikipédia: ficam as capas ilustradas */ }
   }
   render();
-  if (currentId) { const top = dlg.scrollTop; dContent.innerHTML = detailHTML(games.find(x => x.id === currentId)); dlg.scrollTop = top; }
+  renderTop();
+  if (currentId) { const top = dlg.scrollTop; const g = games.find(x => x.id === currentId); const form = document.getElementById("picker"); const keep = form ? [form.ed.value, form.pl.value] : null; dContent.innerHTML = detailHTML(g); bindPicker(g); if (keep) { const f = document.getElementById("picker"); f.ed.value = keep[0]; f.pl.value = keep[1]; updatePicker(g); } dlg.scrollTop = top; }
 }
 loadCovers();
 </script>
