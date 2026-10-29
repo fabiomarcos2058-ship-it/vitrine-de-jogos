@@ -696,6 +696,9 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 /* ---------- personalização: imagens, roda de cores, fundo ---------- */
 .avatar.pic { background: var(--raised); overflow: hidden; }
 .avatar.pic img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
+#sheet.has-bg.char { background: linear-gradient(color-mix(in srgb, var(--bg) 30%, transparent) 0, color-mix(in srgb, var(--bg) 62%, transparent) 45%, color-mix(in srgb, var(--bg) 86%, transparent) 100%), var(--sheet-bg), var(--bg); }
+#sheet.has-bg.char .pcard { background: color-mix(in srgb, var(--surface) 78%, transparent); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+#sheet.has-bg.char .acct { background: color-mix(in srgb, var(--surface) 82%, transparent); }
 #sheet.has-bg { background: linear-gradient(color-mix(in srgb, var(--bg) 25%, transparent), color-mix(in srgb, var(--bg) 72%, transparent)), var(--sheet-bg), var(--bg); }
 #sheet.has-bg .sh-head { background: color-mix(in srgb, var(--bg) 70%, transparent); }
 .pv2 { position: relative; isolation: isolate; border-radius: 20px; overflow: hidden; padding: 18px; background: var(--bg-2); border: 1px solid var(--line); }
@@ -812,6 +815,31 @@ body { top: 0 !important; }
 .chip-opt:hover span { color: var(--fg); border-color: color-mix(in srgb, var(--fg) 30%, var(--line)); }
 .chip-opt input:checked + span { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
 .chip-opt input:focus-visible + span { outline: 2px solid var(--brand-edge); outline-offset: 2px; }
+
+/* ---------- editor de foto e personagens ---------- */
+.crop { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 16px; box-sizing: border-box; background: transparent; color: var(--fg); place-items: center; overflow: auto; }
+.crop[open] { display: grid; }
+.crop::backdrop { background: rgba(5, 7, 10, 0.86); }
+.crop-card { box-sizing: border-box; max-width: 100%; }
+.crop-card { width: min(calc(100vw - 32px), 500px); background: var(--bg-2); border: 1px solid var(--line); border-radius: 24px; padding: 18px; display: grid; gap: 12px; justify-items: center; box-shadow: var(--shadow); }
+.crop-card h3 { margin: 0; justify-self: start; font: 800 18px var(--display); }
+.crop-card .q-nav { width: 100%; margin: 0; }
+.crop-stage { position: relative; overflow: hidden; border-radius: 14px; touch-action: none; cursor: grab; background: #0D0F14; }
+.crop-stage:active { cursor: grabbing; }
+.crop-stage canvas { display: block; }
+.crop-stage.round::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: 0 0 0 400px rgba(5, 7, 10, 0.55); pointer-events: none; border: 2px solid rgba(255,255,255,0.7); }
+.crop-help { margin: 0; font-size: 13px; color: var(--muted); text-align: center; }
+.crop-tools { display: flex; align-items: center; gap: 10px; width: 100%; }
+.crop-tools .fr-btn { width: 44px; height: 44px; padding: 0; font-size: 20px; flex-shrink: 0; }
+.crop-zoom { flex: 1; }
+.crop-zoom input { width: 100%; accent-color: var(--brand); }
+.char-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+.char-opt { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; overflow: hidden; border: 2px solid var(--line); padding: 0; background: var(--raised); cursor: pointer; }
+.char-opt img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.char-opt span { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 6px 6px; font-size: 11.5px; font-weight: 700; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,0.85)); text-align: center; line-height: 1.2; }
+.char-opt[aria-pressed="true"] { border-color: var(--brand-edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 45%, transparent); }
+.char-cap { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+.pv2-bg { background-size: cover !important; }
 
 .hero-ext img { width: 100%; border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 
@@ -1919,7 +1947,14 @@ const BANNERS = [
 ];
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
 const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
-const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "" };
+const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "", bgChar: null };
+const safeCharImg = u => typeof u === "string" && u.length < 600 && /^https:\/\/(upload|thumb)\.wikimedia\.org\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
+let CHARS = null;
+async function loadChars() {
+  if (CHARS) return CHARS;
+  try { CHARS = (await (await fetch("data/characters.json?v=" + Math.floor(Date.now() / 864e5))).json()).games || {}; } catch (e) { CHARS = {}; }
+  return CHARS;
+}
 const BG_PRESETS = ["#1B2A12", "#14213D", "#2B1055", "#3A0F1F", "#0F3D3E", "#3A2A0B"];
 const validHex = h => /^#[0-9a-fA-F]{6}$/.test(h || "") ? h.toUpperCase() : "";
 const safeImg = s => typeof s === "string" && s.length < 400000 && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(s) ? s : "";
@@ -1937,13 +1972,85 @@ function bannerCSS(p) {
   return BANNERS[p.banner] || BANNERS[0];
 }
 function bgCSS(p) {
-  const im = safeImg(p.img && p.img.bg); if (im) return `url('${im}') center / cover no-repeat`;
+  const ch = p.bgChar && safeCharImg(p.bgChar.img); if (ch) return `url('${ch}') center top / cover no-repeat`;
   const h = validHex(p.bgHex); if (h) return `linear-gradient(160deg, ${h}, color-mix(in srgb, ${h} 35%, #0D0F14))`;
   return "";
 }
 function setSheetBg(css) {
-  if (css) { sheet.classList.add("has-bg"); sheet.style.setProperty("--sheet-bg", css); }
-  else { sheet.classList.remove("has-bg"); sheet.style.removeProperty("--sheet-bg"); }
+  if (css) { sheet.classList.add("has-bg"); sheet.classList.toggle("char", css.startsWith("url(")); sheet.style.setProperty("--sheet-bg", css); }
+  else { sheet.classList.remove("has-bg", "char"); sheet.style.removeProperty("--sheet-bg"); }
+}
+// ---------- editor de foto: arrastar, zoom e girar ----------
+function loadImageFile(file) {
+  return new Promise((res, rej) => {
+    if (!file || !/^image\//.test(file.type || "image/")) return rej(new Error("Escolha um arquivo de imagem."));
+    if (file.size > 25e6) return rej(new Error("Essa imagem é grande demais. Tente uma menor."));
+    const url = URL.createObjectURL(file), i = new Image();
+    i.onload = () => res({ img: i, url });
+    i.onerror = () => { URL.revokeObjectURL(url); rej(new Error("Não deu para abrir essa imagem. Tente outra (JPG ou PNG).")); };
+    i.src = url;
+  });
+}
+function encodeCanvas(c) {
+  let q = 0.85, out = c.toDataURL("image/webp", q);
+  const fmt = out.startsWith("data:image/webp") ? "image/webp" : "image/jpeg";
+  if (fmt === "image/jpeg") out = c.toDataURL(fmt, q);
+  while (out.length > 250000 && q > 0.35) { q -= 0.1; out = c.toDataURL(fmt, q); }
+  if (out.length > 250000) throw new Error("Não deu para deixar essa imagem leve o bastante. Tente outra.");
+  return out;
+}
+function openCropper(img, kind) {
+  return new Promise(resolve => {
+    const round = kind === "avatar", ratio = round ? 1 : 3, OW = round ? 320 : 1200, OH = Math.round(OW / ratio);
+    const box = document.createElement("dialog");
+    box.className = "crop"; box.setAttribute("aria-label", "Ajustar imagem");
+    box.innerHTML = `<div class="crop-card">
+      <h3>${round ? "Ajustar foto de perfil" : "Ajustar capa"}</h3>
+      <div class="crop-stage${round ? " round" : ""}"><canvas></canvas></div>
+      <p class="crop-help">Arraste para escolher a parte da imagem. Use o controle ou dois dedos para aproximar.</p>
+      <div class="crop-tools">
+        <button type="button" class="fr-btn" data-r="-1" aria-label="Girar para a esquerda">↺</button>
+        <label class="crop-zoom"><span class="sr-only">Zoom</span><input type="range" min="1" max="4" step="0.01" value="1"></label>
+        <button type="button" class="fr-btn" data-r="1" aria-label="Girar para a direita">↻</button>
+      </div>
+      <div class="q-nav"><button type="button" class="btn-ghost" data-x="cancel">Cancelar</button><button type="button" class="btn-brand" data-x="ok">Usar imagem</button></div>
+    </div>`;
+    document.body.appendChild(box); box.showModal();
+    const stage = box.querySelector(".crop-stage"), cv = box.querySelector("canvas"), zoomIn = box.querySelector("input[type=range]");
+    const ctx = cv.getContext("2d"), dpr = Math.min(2, window.devicePixelRatio || 1);
+    let VW = 0, VH = 0, rot = 0, zoom = 1, ox = 0, oy = 0;
+    const iw = img.naturalWidth, ih = img.naturalHeight;
+    const dims = () => (rot % 2 ? [ih, iw] : [iw, ih]);
+    const baseScale = () => { const [rw, rh] = dims(); return Math.max(VW / rw, VH / rh); };
+    const clamp = () => { const [rw, rh] = dims(), s = baseScale() * zoom; const mx = Math.max(0, (rw * s - VW) / 2), my = Math.max(0, (rh * s - VH) / 2); ox = Math.min(mx, Math.max(-mx, ox)); oy = Math.min(my, Math.max(-my, oy)); };
+    const paint = (c, W, H, k) => { const s = baseScale() * zoom * k; c.save(); c.fillStyle = "#0D0F14"; c.fillRect(0, 0, W, H); c.translate(W / 2 + ox * k, H / 2 + oy * k); c.rotate(rot * Math.PI / 2); c.scale(s, s); c.drawImage(img, -iw / 2, -ih / 2); c.restore(); };
+    const draw = () => { clamp(); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); paint(ctx, VW, VH, 1); };
+    const size = () => { VW = Math.max(200, Math.min(window.innerWidth - 32 - 36, 460)); VH = Math.round(VW / ratio); stage.style.width = VW + "px"; stage.style.height = VH + "px"; cv.width = VW * dpr; cv.height = VH * dpr; cv.style.width = VW + "px"; cv.style.height = VH + "px"; draw(); };
+    const pts = new Map(); let pinch = null;
+    stage.addEventListener("pointerdown", e => { stage.setPointerCapture(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); if (pts.size === 2) { const [a, b] = [...pts.values()]; pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), z: zoom }; } });
+    stage.addEventListener("pointermove", e => {
+      if (!pts.has(e.pointerId)) return;
+      const prev = pts.get(e.pointerId); pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pts.size === 1) { ox += e.clientX - prev.x; oy += e.clientY - prev.y; draw(); }
+      else if (pinch) { const [a, b] = [...pts.values()]; zoom = Math.min(4, Math.max(1, pinch.z * Math.hypot(a.x - b.x, a.y - b.y) / pinch.d)); zoomIn.value = zoom; draw(); }
+    });
+    const up = e => { pts.delete(e.pointerId); if (pts.size < 2) pinch = null; };
+    stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
+    stage.addEventListener("wheel", e => { e.preventDefault(); zoom = Math.min(4, Math.max(1, zoom * (e.deltaY < 0 ? 1.08 : 0.92))); zoomIn.value = zoom; draw(); }, { passive: false });
+    zoomIn.addEventListener("input", () => { zoom = Number(zoomIn.value); draw(); });
+    box.querySelectorAll("[data-r]").forEach(b => b.addEventListener("click", () => { rot = (rot + Number(b.dataset.r) + 4) % 4; ox = 0; oy = 0; draw(); }));
+    const done = v => { window.removeEventListener("resize", size); if (box.open) box.close(); box.remove(); resolve(v); };
+    box.addEventListener("cancel", e => { e.preventDefault(); done(null); });
+    box.querySelector("[data-x=cancel]").addEventListener("click", () => done(null));
+    box.querySelector("[data-x=ok]").addEventListener("click", () => {
+      const out = document.createElement("canvas"); out.width = OW; out.height = OH;
+      paint(out.getContext("2d"), OW, OH, OW / VW);
+      try { done(encodeCanvas(out)); } catch (err) { toast(err.message); }
+    });
+    window.addEventListener("resize", size);
+    requestAnimationFrame(size);
+    box.querySelector("[data-x=ok]").focus();
+  });
 }
 async function fileToDataURL(file, kind) {
   if (!file || !/^image\//.test(file.type || "image/")) throw new Error("Escolha um arquivo de imagem.");
@@ -2161,6 +2268,7 @@ function openProfile() {
         ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
         ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
         ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
+        ${p.bgChar && safeCharImg(p.bgChar.img) ? `<p class="char-cap">Fundo: <span class="notranslate" translate="no">${esc(p.bgChar.n)}</span></p>` : ""}
         <div class="pstats">
           <button type="button" id="ps-fav"><b>${favs.size}</b><small>Favoritos</small></button>
           <button type="button" data-tool="cart"><b>${cart.length}</b><small>No carrinho</small></button>
@@ -2191,7 +2299,7 @@ function openProfile() {
 }
 function openProfileEdit() {
   const p = profile;
-  const ed = { img: { ...pimg }, colorHex: validHex(p.colorHex), bannerHex: validHex(p.bannerHex), bgHex: validHex(p.bgHex) };
+  const ed = { img: { ...pimg, bg: "" }, colorHex: validHex(p.colorHex), bannerHex: validHex(p.bannerHex), bgHex: validHex(p.bgHex), bgChar: p.bgChar && safeCharImg(p.bgChar.img) ? { ...p.bgChar } : null };
   const KEY = { color: ["colorHex", "color"], banner: ["bannerHex", "banner"], bg: ["bgHex", "bgp"] };
   const customHex = k => { const h = ed[KEY[k][0]]; return h && !(k === "bg" && BG_PRESETS.includes(h)) ? h : ""; };
   const customSw = k => `<button type="button" class="sw-custom${customHex(k) ? " on" : ""}" data-wheel="${k}" aria-expanded="false" aria-controls="wb-${k}" aria-label="Escolher qualquer cor na roda de cores" title="Qualquer cor"><span${customHex(k) ? ` style="background:${customHex(k)}"` : ""}></span></button>`;
@@ -2215,22 +2323,24 @@ function openProfileEdit() {
       <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${!ed.colorHex && p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}${customSw("color")}</div><div class="wheel-box" id="wb-color" hidden></div></div>
       <div class="field"><span class="lbl">Capa</span><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${!ed.bannerHex && p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}${customSw("banner")}</div><div class="wheel-box" id="wb-banner" hidden></div>
         <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="banner"></label><button type="button" class="btn-ghost sm" data-rmimg="banner">Remover imagem</button></div></div>
-      <div class="field"><span class="lbl">Fundo do perfil</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
-        <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="bg"></label><button type="button" class="btn-ghost sm" data-rmimg="bg">Remover imagem</button></div>
-        <div class="help">Aparece atrás do seu perfil, para você e para os seus amigos.</div></div>
+      <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
+      <div class="field"><span class="lbl">Fundo do perfil</span>
+        <div class="help" style="margin:0 0 8px">Um personagem do seu jogo favorito, ou uma cor. Aparece atrás de todo o seu perfil, para você e para os seus amigos.</div>
+        <div id="char-box"></div>
+        <span class="lbl" style="margin-top:14px">Ou uma cor</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex && !ed.bgChar ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
+</div>
       <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
       <fieldset class="field chip-field"><legend class="lbl">Onde você mais joga</legend><div class="chip-opts">${[["", "Não dizer"], ["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="plat" value="${v}" ${(p.plat || "") === v ? "checked" : ""}><span>${l}</span></label>`).join("")}</div></fieldset>
       <fieldset class="field chip-field"><legend class="lbl">Gênero favorito</legend><div class="chip-opts">${[["", "Não dizer"], ...genres.map(gn => [gn, gn])].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="genre" value="${esc(v)}" ${(p.genre || "") === v ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>
-      <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
       <div id="pf-msg"></div>
       <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
     </form>`);
   const f = document.getElementById("pform");
-  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value || p.color || 0), banner: Number(f.banner.value || p.banner || 0), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgHex, img: ed.img });
+  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value || p.color || 0), banner: Number(f.banner.value || p.banner || 0), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgChar ? "" : ed.bgHex, bgChar: ed.bgChar, img: ed.img });
   const preview = () => {
     const d = read();
     document.getElementById("pv-banner").style.background = bannerCSS(d);
-    document.getElementById("pv-bg").style.background = bgCSS(d) || "none";
+    const pvb = document.getElementById("pv-bg"); pvb.style.background = bgCSS(d) || "none"; pvb.style.opacity = d.bgChar ? "0.5" : "1";
     document.getElementById("pv-av").innerHTML = avatarHTML(66, d);
     document.getElementById("pf-av-prev").innerHTML = avatarHTML(64, d);
     f.querySelectorAll("[data-rmimg]").forEach(b => { b.hidden = !ed.img[b.dataset.rmimg]; });
@@ -2239,7 +2349,24 @@ function openProfileEdit() {
     document.getElementById("pv-user").textContent = d.user ? "@" + d.user : "";
     document.getElementById("pf-bio-n").textContent = f.bio.value.length;
   };
+  async function drawChars() {
+    const box = document.getElementById("char-box"); if (!box) return;
+    const g = byId[f.fav.value];
+    if (!g) { box.innerHTML = `<div class="fr-empty">Escolha seu jogo favorito acima para ver os personagens.</div>`; return; }
+    box.innerHTML = `<p class="lede-sm" style="margin:0">Carregando personagens…</p>`;
+    const list = (await loadChars())[g.t] || [];
+    if (byId[f.fav.value] !== g) return;
+    if (!list.length) { box.innerHTML = `<div class="fr-empty">Ainda não temos personagens de ${esc(g.t)}. Escolha uma cor abaixo ou outro jogo favorito.</div>`; return; }
+    box.innerHTML = `<div class="char-grid">${list.map((c, i) => `<button type="button" class="char-opt" data-ci="${i}" aria-pressed="${!!(ed.bgChar && ed.bgChar.img === c.img)}"><img src="${esc(c.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('button').remove()"><span class="notranslate" translate="no">${esc(c.n.replace(/\s*\(.*\)$/, ""))}</span></button>`).join("")}</div>${ed.bgChar ? `<button type="button" class="btn-ghost sm" id="char-rm" style="margin-top:10px">Tirar personagem</button>` : ""}`;
+    box.querySelectorAll("[data-ci]").forEach(b => b.addEventListener("click", () => {
+      const c = list[Number(b.dataset.ci)]; ed.bgChar = { g: g.t, n: c.n.replace(/\s*\(.*\)$/, ""), img: c.img }; ed.bgHex = "";
+      f.querySelectorAll('input[name="bgp"]').forEach(r => { r.checked = false; });
+      drawChars(); preview();
+    }));
+    const rm = document.getElementById("char-rm"); if (rm) rm.addEventListener("click", () => { ed.bgChar = null; const none = f.querySelector('input[name="bgp"][value=""]'); if (none && !ed.bgHex) none.checked = true; drawChars(); preview(); });
+  }
   const favCur = () => {
+    drawChars();
     const g = byId[f.fav.value], box = document.getElementById("fav-cur");
     box.innerHTML = g ? `<div class="fav-cur">${coverHTML(g)}<b class="notranslate" translate="no">${esc(g.t)}</b><button type="button" class="fr-btn" id="fav-rm">Remover</button></div>` : "";
     const rm = document.getElementById("fav-rm"); if (rm) rm.addEventListener("click", () => { f.fav.value = ""; favCur(); });
@@ -2260,14 +2387,17 @@ function openProfileEdit() {
     const t = e.target;
     if (t.name === "color") ed.colorHex = "";
     else if (t.name === "banner") ed.bannerHex = "";
-    else if (t.name === "bgp") ed.bgHex = t.value;
+    else if (t.name === "bgp") { ed.bgHex = t.value; ed.bgChar = null; drawChars(); }
     else if (t.dataset && t.dataset.img) {
       const k = t.dataset.img, file = t.files && t.files[0], msg = document.getElementById("pf-msg");
       t.value = "";
       if (!file) return;
-      msg.innerHTML = `<div class="msg info">Preparando a imagem…</div>`;
-      try { ed.img[k] = await fileToDataURL(file, k); msg.innerHTML = ""; }
-      catch (err) { msg.innerHTML = `<div class="msg err">${esc(err.message || "Não deu para usar essa imagem.")}</div>`; }
+      msg.innerHTML = "";
+      try {
+        const { img, url } = await loadImageFile(file);
+        const data = await openCropper(img, k); URL.revokeObjectURL(url);
+        if (data) ed.img[k] = data;
+      } catch (err) { msg.innerHTML = `<div class="msg err">${esc(err.message || "Não deu para usar essa imagem.")}</div>`; }
     }
     preview();
   });
@@ -2281,7 +2411,7 @@ function openProfileEdit() {
     w.setAttribute("aria-expanded", "true"); box.hidden = false;
     const [hk, rn] = KEY[k];
     const start = ed[hk] || (k === "color" ? AV_COLORS[p.color] : k === "banner" ? "#6E9BFF" : "#7B5CFF");
-    mountWheel(box, start, hex => { ed[hk] = hex; f.querySelectorAll(`input[name="${rn}"]`).forEach(r => { r.checked = false; }); preview(); });
+    mountWheel(box, start, hex => { ed[hk] = hex; if (k === "bg") { ed.bgChar = null; drawChars(); } f.querySelectorAll(`input[name="${rn}"]`).forEach(r => { r.checked = false; }); preview(); });
   });
   preview();
   document.getElementById("pf-cancel").addEventListener("click", openProfile);
@@ -2513,7 +2643,7 @@ function renderSocialBadges() {
 function publishProfile() {
   if (!acct() || !fb) return;
   const P = profile;
-  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), friends: social.fr.filter(f => f.status === "accepted").length, updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
+  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), bgChar: P.bgChar && safeCharImg(P.bgChar.img) ? { g: String(P.bgChar.g || "").slice(0, 80), n: String(P.bgChar.n || "").slice(0, 60), img: P.bgChar.img } : null, plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), friends: social.fr.filter(f => f.status === "accepted").length, updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
 }
 async function claimHandle(h, old) {
   const F = fb.F, ref = F.doc(fb.db, "handles", h);
