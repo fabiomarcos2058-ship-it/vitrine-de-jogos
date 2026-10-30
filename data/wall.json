@@ -1,0 +1,2470 @@
+{
+"updated": "2026-10-30T00:37:23Z",
+"games": {
+"Resident Evil 4": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/c/ee7179cd41ca.webp"
+},
+{
+"n": "Ada Wong",
+"img": "chars/c/7941e7070978.webp"
+},
+{
+"n": "Ashley Graham",
+"img": "chars/c/d7a2085c69dc.webp"
+},
+{
+"n": "Luis Serra Navarro",
+"img": "chars/c/435fb029e7f3.webp"
+},
+{
+"n": "Jack Krauser",
+"img": "chars/c/fe8293b328ea.webp"
+},
+{
+"n": "Osmund Saddler",
+"img": "chars/c/02930f6f9e94.webp"
+}
+],
+"Resident Evil 4 (2005)": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/c/cd123ce79fa6.webp"
+},
+{
+"n": "Ada Wong",
+"img": "chars/c/bac6e470238f.webp"
+},
+{
+"n": "Ashley Graham",
+"img": "chars/c/a9efb26ce07a.webp"
+},
+{
+"n": "Jack Krauser",
+"img": "chars/c/381587bcd678.webp"
+}
+],
+"Resident Evil 2": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/c/a2cf5e987e16.webp"
+},
+{
+"n": "Claire Redfield",
+"img": "chars/c/e80d7137df7a.webp"
+},
+{
+"n": "Ada Wong",
+"img": "chars/c/03b0a6da6525.webp"
+},
+{
+"n": "Sherry Birkin",
+"img": "chars/c/08ff7966172e.webp"
+},
+{
+"n": "William Birkin",
+"img": "chars/c/b82769ba0336.webp"
+},
+{
+"n": "Marvin Branagh",
+"img": "chars/c/42385350edbd.webp"
+}
+],
+"Resident Evil 3": [
+{
+"n": "Jill Valentine",
+"img": "chars/c/568bb394927c.webp"
+},
+{
+"n": "Carlos Oliveira",
+"img": "chars/c/4bd3c1f673ac.webp"
+},
+{
+"n": "Nemesis-T Type",
+"img": "chars/c/4c1a2398a497.webp"
+},
+{
+"n": "Nikolai Zinoviev",
+"img": "chars/c/fa1ab85b69d8.webp"
+}
+],
+"Resident Evil Village": [
+{
+"n": "Ethan Winters",
+"img": "chars/c/da4349b596f4.webp"
+},
+{
+"n": "Alcina Dimitrescu",
+"img": "chars/c/d2993128c4e6.webp"
+},
+{
+"n": "Karl Heisenberg",
+"img": "chars/c/9ce2e44ceb9c.webp"
+},
+{
+"n": "Mother Miranda",
+"img": "chars/c/22c2dc361c45.webp"
+},
+{
+"n": "Donna Beneviento",
+"img": "chars/c/40fb1bd2f6b6.webp"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/c/3938f8825159.webp"
+}
+],
+"Resident Evil 7: Biohazard": [
+{
+"n": "Ethan Winters",
+"img": "chars/c/7ce85d70ba39.webp"
+},
+{
+"n": "Mia Winters",
+"img": "chars/c/78b697e4a695.webp"
+},
+{
+"n": "Jack Baker",
+"img": "chars/c/d7aad8313cc9.webp"
+},
+{
+"n": "Marguerite Baker",
+"img": "chars/c/2fb7cac625cf.webp"
+},
+{
+"n": "Lucas Baker",
+"img": "chars/c/dbbff1351bea.webp"
+},
+{
+"n": "Eveline",
+"img": "chars/c/1f0d70fca570.webp"
+}
+],
+"Resident Evil Requiem": [
+{
+"n": "Grace Ashcroft",
+"img": "chars/c/18d693d6de90.webp"
+},
+{
+"n": "Leon S. Kennedy",
+"img": "chars/c/c51cf563587f.webp"
+}
+],
+"Resident Evil": [
+{
+"n": "Chris Redfield",
+"img": "chars/c/37f954620853.webp"
+},
+{
+"n": "Jill Valentine",
+"img": "chars/c/1c1239bdef45.webp"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/c/98759994d096.webp"
+},
+{
+"n": "Barry Burton",
+"img": "chars/c/8aa0df45d19e.webp"
+},
+{
+"n": "Rebecca Chambers",
+"img": "chars/c/6cc9fd7d0c9b.webp"
+}
+],
+"Resident Evil 0": [
+{
+"n": "Rebecca Chambers",
+"img": "chars/c/9ad14e114f2f.webp"
+},
+{
+"n": "Billy Coen",
+"img": "chars/c/dd994ec50570.webp"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/c/12b5966a4b79.webp"
+}
+],
+"Resident Evil 5": [
+{
+"n": "Chris Redfield",
+"img": "chars/c/c42fc093ae2d.webp"
+},
+{
+"n": "Sheva Alomar",
+"img": "chars/c/191a090b81f7.webp"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/c/4fc6f839774a.webp"
+},
+{
+"n": "Jill Valentine",
+"img": "chars/c/96b0d758914d.webp"
+}
+],
+"Resident Evil 6": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/c/acd1bc4c6e15.webp"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/c/107b03608f87.webp"
+},
+{
+"n": "Jake Muller",
+"img": "chars/c/8e18592c253a.webp"
+},
+{
+"n": "Sherry Birkin",
+"img": "chars/c/890ceb5741db.webp"
+},
+{
+"n": "Ada Wong",
+"img": "chars/c/074272d8fd8f.webp"
+},
+{
+"n": "Helena Harper",
+"img": "chars/c/e8ee5a54d17e.webp"
+}
+],
+"Resident Evil Code: Veronica X": [
+{
+"n": "Claire Redfield",
+"img": "chars/c/0c65104e9165.webp"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/c/d2e5736d4b35.webp"
+},
+{
+"n": "Steve Burnside",
+"img": "chars/c/3c1649d055b4.webp"
+},
+{
+"n": "Alexia Ashford",
+"img": "chars/c/0729be652897.webp"
+}
+],
+"Resident Evil Revelations": [
+{
+"n": "Jill Valentine",
+"img": "chars/c/f267376f2e54.webp"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/c/6b2f0a42d167.webp"
+},
+{
+"n": "Parker Luciani",
+"img": "chars/c/2380e5bb9f06.webp"
+}
+],
+"Resident Evil Revelations 2": [
+{
+"n": "Claire Redfield",
+"img": "chars/c/a005ddda3903.webp"
+},
+{
+"n": "Moira Burton",
+"img": "chars/c/f3c7cb3fc3c1.webp"
+},
+{
+"n": "Barry Burton",
+"img": "chars/c/568d41b5cc51.webp"
+},
+{
+"n": "Natalia Korda",
+"img": "chars/c/13e76f8ff503.webp"
+}
+],
+"Grand Theft Auto V": [
+{
+"n": "Michael De Santa",
+"img": "chars/c/f68fdf59e3c3.webp"
+},
+{
+"n": "Franklin Clinton",
+"img": "chars/c/db79e467ffb2.webp"
+},
+{
+"n": "Trevor Philips",
+"img": "chars/c/a943b7d81030.webp"
+},
+{
+"n": "Lamar Davis",
+"img": "chars/c/76f386077afe.webp"
+},
+{
+"n": "Lester Crest",
+"img": "chars/c/0a7135afc0e2.webp"
+}
+],
+"Grand Theft Auto Online": [
+{
+"n": "Lester Crest",
+"img": "chars/c/de55c03fb822.webp"
+},
+{
+"n": "Lamar Davis",
+"img": "chars/c/ce9d687997c9.webp"
+},
+{
+"n": "Franklin Clinton",
+"img": "chars/c/a67d97fb7d5c.webp"
+},
+{
+"n": "Trevor Philips",
+"img": "chars/c/36a203301268.webp"
+}
+],
+"Grand Theft Auto VI": [
+{
+"n": "Lucia Caminos",
+"img": "chars/c/02fce4f90004.webp"
+},
+{
+"n": "Jason Duval",
+"img": "chars/c/12d1e257f86e.webp"
+}
+],
+"Grand Theft Auto IV": [
+{
+"n": "Niko Bellic",
+"img": "chars/c/241cf16fc1ea.webp"
+},
+{
+"n": "Roman Bellic",
+"img": "chars/c/cafafc6344da.webp"
+},
+{
+"n": "Johnny Klebitz",
+"img": "chars/c/9b38d6767f23.webp"
+},
+{
+"n": "Luis Fernando Lopez",
+"img": "chars/c/3c048e256dc1.webp"
+}
+],
+"Grand Theft Auto: The Trilogy – The Definitive Edition": [
+{
+"n": "Carl Johnson",
+"img": "chars/c/ee098f4f502b.webp"
+},
+{
+"n": "Tommy Vercetti",
+"img": "chars/c/a45180ad9427.webp"
+},
+{
+"n": "Claude",
+"img": "chars/c/d232de3643cc.webp"
+},
+{
+"n": "Big Smoke",
+"img": "chars/c/fad1db9d944b.webp"
+}
+],
+"Grand Theft Auto: Liberty City Stories": [
+{
+"n": "Toni Cipriani",
+"img": "chars/c/e0f845e1f68a.webp"
+},
+{
+"n": "Salvatore Leone",
+"img": "chars/c/f522718595df.webp"
+}
+],
+"God of War": [
+{
+"n": "Kratos",
+"img": "chars/c/8ff94d415198.webp"
+},
+{
+"n": "Atreus",
+"img": "chars/c/3e6056f67461.webp"
+},
+{
+"n": "Freya",
+"img": "chars/c/23cea261d094.webp"
+},
+{
+"n": "Baldur",
+"img": "chars/c/8518ada86160.webp"
+},
+{
+"n": "Mimir",
+"img": "chars/c/ddecc4d51ae6.webp"
+}
+],
+"God of War Ragnarök": [
+{
+"n": "Kratos",
+"img": "chars/c/a489951eb4da.webp"
+},
+{
+"n": "Atreus",
+"img": "chars/c/953d2e4b9ee9.webp"
+},
+{
+"n": "Freya",
+"img": "chars/c/4a380a333678.webp"
+},
+{
+"n": "Thor",
+"img": "chars/c/333657a2778e.webp"
+},
+{
+"n": "Odin",
+"img": "chars/c/758dab5c5529.webp"
+},
+{
+"n": "Angrboda",
+"img": "chars/c/1784928f7140.webp"
+}
+],
+"The Last of Us Part I": [
+{
+"n": "Joel Miller",
+"img": "chars/c/27674ac7c146.webp"
+},
+{
+"n": "Ellie Williams",
+"img": "chars/c/dccbd230544e.webp"
+},
+{
+"n": "Tess Servopoulos",
+"img": "chars/c/43b51400e091.webp"
+},
+{
+"n": "Tommy Miller",
+"img": "chars/c/f81743491470.webp"
+},
+{
+"n": "Marlene",
+"img": "chars/c/7e5bbafe5870.webp"
+}
+],
+"The Last of Us Part II Remastered": [
+{
+"n": "Ellie Williams",
+"img": "chars/c/91a107cf8428.webp"
+},
+{
+"n": "Abby Anderson",
+"img": "chars/c/65ebecb7ed11.webp"
+},
+{
+"n": "Joel Miller",
+"img": "chars/c/e8d7cae54599.webp"
+},
+{
+"n": "Dina",
+"img": "chars/c/20a77e162144.webp"
+},
+{
+"n": "Lev",
+"img": "chars/c/43999d4caedf.webp"
+}
+],
+"Marvel's Spider-Man 2": [
+{
+"n": "Peter Parker",
+"img": "chars/c/0dd27e029270.webp"
+},
+{
+"n": "Miles Morales",
+"img": "chars/c/e59830f624bf.webp"
+},
+{
+"n": "Kraven",
+"img": "chars/c/22c49103ff0d.webp"
+}
+],
+"Marvel's Spider-Man: Miles Morales": [
+{
+"n": "Miles Morales",
+"img": "chars/c/f0d0cd29f1f3.webp"
+},
+{
+"n": "Peter Parker",
+"img": "chars/c/db2eef6d44cb.webp"
+}
+],
+"Marvel's Spider-Man Remastered": [
+{
+"n": "Peter Parker",
+"img": "chars/c/8029c8cae3ab.webp"
+},
+{
+"n": "Miles Morales",
+"img": "chars/c/e62baeb6daaf.webp"
+},
+{
+"n": "Otto Octavius",
+"img": "chars/c/023c45896b8b.webp"
+}
+],
+"Ghost of Tsushima": [
+{
+"n": "Jin Sakai",
+"img": "chars/c/b4e7e7f47fed.webp"
+},
+{
+"n": "Yuna",
+"img": "chars/c/dcd6cc070c77.webp"
+},
+{
+"n": "Lord Shimura",
+"img": "chars/c/c60b220f9584.webp"
+},
+{
+"n": "Khotun Khan",
+"img": "chars/c/0ce1b8f19cd5.webp"
+},
+{
+"n": "Ishikawa",
+"img": "chars/c/a5ef97ad2e55.webp"
+}
+],
+"Ghost of Yōtei": [
+{
+"n": "Atsu",
+"img": "chars/c/b515840a005a.webp"
+}
+],
+"Horizon Forbidden West": [
+{
+"n": "Aloy",
+"img": "chars/c/c25eb476badc.webp"
+},
+{
+"n": "Varl",
+"img": "chars/c/f15267be9f8a.webp"
+},
+{
+"n": "Zo",
+"img": "chars/c/3126c66186ac.webp"
+},
+{
+"n": "Kotallo",
+"img": "chars/c/cc3283f0b7c1.webp"
+},
+{
+"n": "Erend",
+"img": "chars/c/e42a83da6523.webp"
+},
+{
+"n": "Sylens",
+"img": "chars/c/3596f42cc5d7.webp"
+}
+],
+"Horizon Zero Dawn Remastered": [
+{
+"n": "Aloy",
+"img": "chars/c/4e68818d32d1.webp"
+},
+{
+"n": "Rost",
+"img": "chars/c/348983044506.webp"
+},
+{
+"n": "Sylens",
+"img": "chars/c/5f91f831aa91.webp"
+},
+{
+"n": "Erend",
+"img": "chars/c/ed9acd48a74f.webp"
+},
+{
+"n": "Varl",
+"img": "chars/c/db295b05b3a7.webp"
+}
+],
+"Uncharted: Coleção Legado dos Ladrões": [
+{
+"n": "Nathan Drake",
+"img": "chars/c/25d05ef5a604.webp"
+},
+{
+"n": "Chloe Frazer",
+"img": "chars/c/c0c43c999251.webp"
+},
+{
+"n": "Samuel Drake",
+"img": "chars/c/96f9b4bfa63b.webp"
+},
+{
+"n": "Elena Fisher",
+"img": "chars/c/3b4639091594.webp"
+},
+{
+"n": "Victor Sullivan",
+"img": "chars/c/d5f852135cd7.webp"
+}
+],
+"Elden Ring": [
+{
+"n": "Malenia, Blade of Miquella",
+"img": "chars/c/6629803b18c9.webp"
+},
+{
+"n": "Ranni the Witch",
+"img": "chars/c/9dfa4dce5c85.webp"
+},
+{
+"n": "Melina",
+"img": "chars/c/1951e4008b0e.webp"
+},
+{
+"n": "Starscourge Radahn",
+"img": "chars/c/72138a07f25c.webp"
+},
+{
+"n": "Messmer the Impaler",
+"img": "chars/c/1452f6ed2581.webp"
+},
+{
+"n": "Godfrey, First Elden Lord",
+"img": "chars/c/2e26e997c44d.webp"
+}
+],
+"Elden Ring Nightreign": [
+{
+"n": "Malenia, Blade of Miquella",
+"img": "chars/c/1d56030871bf.webp"
+},
+{
+"n": "Starscourge Radahn",
+"img": "chars/c/7ca9af34675c.webp"
+},
+{
+"n": "Melina",
+"img": "chars/c/a190a4aac113.webp"
+}
+],
+"Sekiro: Shadows Die Twice": [
+{
+"n": "Wolf",
+"img": "chars/c/1168666d31f3.webp"
+},
+{
+"n": "Genichiro Ashina",
+"img": "chars/c/62190d51d2c3.webp"
+},
+{
+"n": "Isshin Ashina",
+"img": "chars/c/f1fe4825fb65.webp"
+},
+{
+"n": "Kuro",
+"img": "chars/c/6679e9e9350a.webp"
+},
+{
+"n": "Emma",
+"img": "chars/c/6543d993ada6.webp"
+}
+],
+"Bloodborne": [
+{
+"n": "Lady Maria of the Astral Clocktower",
+"img": "chars/c/5d649000e4b0.webp"
+},
+{
+"n": "Gehrman, The First Hunter",
+"img": "chars/c/6ff00ece6a1a.webp"
+},
+{
+"n": "Eileen the Crow",
+"img": "chars/c/78850c5dea0e.webp"
+},
+{
+"n": "The Doll",
+"img": "chars/c/2c49a7d0976a.webp"
+}
+],
+"Dark Souls III": [
+{
+"n": "Fire Keeper",
+"img": "chars/c/2bb2740b3a47.webp"
+},
+{
+"n": "Soul of Cinder",
+"img": "chars/c/520a9cb0678e.webp"
+},
+{
+"n": "Patches",
+"img": "chars/c/d690c4380fe4.webp"
+},
+{
+"n": "Siegward of Catarina",
+"img": "chars/c/61bb507599b7.webp"
+}
+],
+"Cyberpunk 2077": [
+{
+"n": "V",
+"img": "chars/c/fdfeb0cb1b27.webp"
+},
+{
+"n": "Johnny Silverhand",
+"img": "chars/c/9805780762c5.webp"
+},
+{
+"n": "Judy Álvarez",
+"img": "chars/c/59409e507172.webp"
+},
+{
+"n": "Panam Palmer",
+"img": "chars/c/45995ccbb858.webp"
+},
+{
+"n": "Jackie Welles",
+"img": "chars/c/64cac3808130.webp"
+},
+{
+"n": "Kerry Eurodyne",
+"img": "chars/c/3b4b85c17acc.webp"
+}
+],
+"The Witcher 3: Wild Hunt": [
+{
+"n": "Geralt of Rivia",
+"img": "chars/c/c6e5deb8bf57.webp"
+},
+{
+"n": "Ciri",
+"img": "chars/c/2b72367117df.webp"
+},
+{
+"n": "Yennefer of Vengerberg",
+"img": "chars/c/a581a9323f9c.webp"
+},
+{
+"n": "Triss Merigold",
+"img": "chars/c/939ad3173de4.webp"
+},
+{
+"n": "Dandelion",
+"img": "chars/c/4e78b4653a0d.webp"
+}
+],
+"Red Dead Redemption 2": [
+{
+"n": "Arthur Morgan",
+"img": "chars/c/afa1db63e597.webp"
+},
+{
+"n": "John Marston",
+"img": "chars/c/293396f16abc.webp"
+},
+{
+"n": "Dutch van der Linde",
+"img": "chars/c/8a4df3b09ef0.webp"
+},
+{
+"n": "Sadie Adler",
+"img": "chars/c/a64b5750e127.webp"
+},
+{
+"n": "Charles Smith",
+"img": "chars/c/b3b1dc470f83.webp"
+}
+],
+"Red Dead Redemption": [
+{
+"n": "John Marston",
+"img": "chars/c/fd06c970a8ad.webp"
+},
+{
+"n": "Bonnie MacFarlane",
+"img": "chars/c/7af53e3c4347.webp"
+},
+{
+"n": "Bill Williamson",
+"img": "chars/c/c6a3c875c5f1.webp"
+},
+{
+"n": "Abigail Marston",
+"img": "chars/c/2f20b4162845.webp"
+}
+],
+"Baldur's Gate 3": [
+{
+"n": "Astarion",
+"img": "chars/c/0b43b30ab26f.webp"
+},
+{
+"n": "Shadowheart",
+"img": "chars/c/70bc8bc3f82b.webp"
+},
+{
+"n": "Karlach",
+"img": "chars/c/2d414d39e9aa.webp"
+},
+{
+"n": "Lae'zel",
+"img": "chars/c/634835726c01.webp"
+},
+{
+"n": "Gale",
+"img": "chars/c/a56f36ede53c.webp"
+},
+{
+"n": "Wyll",
+"img": "chars/c/706eb8cf675a.webp"
+}
+],
+"Hogwarts Legacy": [
+{
+"n": "Sebastian Sallow",
+"img": "chars/c/1e3fefa06960.webp"
+},
+{
+"n": "Natsai Onai",
+"img": "chars/c/098c14bb5640.webp"
+},
+{
+"n": "Poppy Sweeting",
+"img": "chars/c/8af709c101bf.webp"
+},
+{
+"n": "Ominis Gaunt",
+"img": "chars/c/de459950d676.webp"
+}
+],
+"Final Fantasy VII Rebirth": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/a80e86994970.webp"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/c/5ecbd0579d80.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/c428fa6ddc74.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/75f281c2a1a9.webp"
+},
+{
+"n": "Barret Wallace",
+"img": "chars/c/1bfac31d8844.webp"
+},
+{
+"n": "Yuffie Kisaragi",
+"img": "chars/c/2431a64696a2.webp"
+}
+],
+"Final Fantasy VII Remake Intergrade": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/7511ed56c8fa.webp"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/c/3d2a1cd7cf7f.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/d53ae06b8bb9.webp"
+},
+{
+"n": "Barret Wallace",
+"img": "chars/c/c2a0e01d1646.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/c73542c23923.webp"
+},
+{
+"n": "Yuffie Kisaragi",
+"img": "chars/c/a4709052c765.webp"
+}
+],
+"Final Fantasy VII": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/baa4b31303a9.webp"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/c/834fa2557a4f.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/d9993729fd59.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/b50a1f4f5911.webp"
+},
+{
+"n": "Vincent Valentine",
+"img": "chars/c/172b36e1d46e.webp"
+}
+],
+"Crisis Core – Final Fantasy VII – Reunion": [
+{
+"n": "Zack Fair",
+"img": "chars/c/df67b1c92d8a.webp"
+},
+{
+"n": "Cloud Strife",
+"img": "chars/c/06e3ed0f0f09.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/d209c6393bf4.webp"
+},
+{
+"n": "Genesis Rhapsodos",
+"img": "chars/c/1f4fd802c2dd.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/71601e16cec9.webp"
+}
+],
+"Final Fantasy VII Ever Crisis": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/0029841c9a12.webp"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/c/3544596e8760.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/5282769d3991.webp"
+},
+{
+"n": "Zack Fair",
+"img": "chars/c/39384fe9b60d.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/97a8ab53afb9.webp"
+}
+],
+"Final Fantasy XVI": [
+{
+"n": "Clive Rosfield",
+"img": "chars/c/8be2cf54bb62.webp"
+},
+{
+"n": "Jill Warrick",
+"img": "chars/c/289bf6da5551.webp"
+},
+{
+"n": "Joshua Rosfield",
+"img": "chars/c/54a2f4db1785.webp"
+},
+{
+"n": "Cidolfus Telamon",
+"img": "chars/c/f5e3e1360d2a.webp"
+}
+],
+"Final Fantasy X | X-2 HD Remaster": [
+{
+"n": "Tidus",
+"img": "chars/c/a8dd4b672611.webp"
+},
+{
+"n": "Yuna",
+"img": "chars/c/47ff8b4b5419.webp"
+},
+{
+"n": "Auron",
+"img": "chars/c/14b935e58acf.webp"
+},
+{
+"n": "Rikku",
+"img": "chars/c/967e1f4d3b89.webp"
+},
+{
+"n": "Lulu",
+"img": "chars/c/6ceae14caa66.webp"
+},
+{
+"n": "Wakka",
+"img": "chars/c/ee0ffb1a072e.webp"
+}
+],
+"Final Fantasy XV": [
+{
+"n": "Noctis Lucis Caelum",
+"img": "chars/c/a0781b482e16.webp"
+},
+{
+"n": "Prompto Argentum",
+"img": "chars/c/90a0b5b16f20.webp"
+},
+{
+"n": "Gladiolus Amicitia",
+"img": "chars/c/723f1af9ffbd.webp"
+},
+{
+"n": "Ignis Scientia",
+"img": "chars/c/6c68e6feb7dd.webp"
+},
+{
+"n": "Lunafreya Nox Fleuret",
+"img": "chars/c/6c42082aeabb.webp"
+}
+],
+"Final Fantasy XII: The Zodiac Age": [
+{
+"n": "Vaan",
+"img": "chars/c/84e4b51f554c.webp"
+},
+{
+"n": "Ashe",
+"img": "chars/c/cde6fe636fbb.webp"
+},
+{
+"n": "Balthier",
+"img": "chars/c/6604e11b61be.webp"
+},
+{
+"n": "Fran",
+"img": "chars/c/a9b00ac24d2e.webp"
+},
+{
+"n": "Basch fon Ronsenburg",
+"img": "chars/c/3f043820c286.webp"
+}
+],
+"Final Fantasy XIII": [
+{
+"n": "Lightning",
+"img": "chars/c/93a6ad6602ff.webp"
+},
+{
+"n": "Snow Villiers",
+"img": "chars/c/b1eafa4039df.webp"
+},
+{
+"n": "Oerba Dia Vanille",
+"img": "chars/c/932a6770c83c.webp"
+},
+{
+"n": "Oerba Yun Fang",
+"img": "chars/c/fec1a871e68b.webp"
+},
+{
+"n": "Hope Estheim",
+"img": "chars/c/f6ebdf653538.webp"
+},
+{
+"n": "Sazh Katzroy",
+"img": "chars/c/10cd0e34fcde.webp"
+}
+],
+"Final Fantasy XIII-2": [
+{
+"n": "Serah Farron",
+"img": "chars/c/28295df5d881.webp"
+},
+{
+"n": "Noel Kreiss",
+"img": "chars/c/f5d1b487b7ee.webp"
+},
+{
+"n": "Lightning",
+"img": "chars/c/e11120836f39.webp"
+},
+{
+"n": "Caius Ballad",
+"img": "chars/c/2afc0e562048.webp"
+}
+],
+"Lightning Returns: Final Fantasy XIII": [
+{
+"n": "Lightning",
+"img": "chars/c/45ad2b6196b9.webp"
+},
+{
+"n": "Lumina",
+"img": "chars/c/529b879835dd.webp"
+},
+{
+"n": "Snow Villiers",
+"img": "chars/c/a972ab5b89ae.webp"
+}
+],
+"Final Fantasy IX": [
+{
+"n": "Zidane Tribal",
+"img": "chars/c/981f6e3ee720.webp"
+},
+{
+"n": "Garnet Til Alexandros XVII",
+"img": "chars/c/7f2ebf3bd616.webp"
+},
+{
+"n": "Vivi Orunitia",
+"img": "chars/c/972dde00fc46.webp"
+},
+{
+"n": "Adelbert Steiner",
+"img": "chars/c/8ef19f5a5f89.webp"
+},
+{
+"n": "Kuja",
+"img": "chars/c/522af4c5c106.webp"
+}
+],
+"Final Fantasy VIII Remastered": [
+{
+"n": "Squall Leonhart",
+"img": "chars/c/9cc6c2653bf7.webp"
+},
+{
+"n": "Rinoa Heartilly",
+"img": "chars/c/9f50a53a4186.webp"
+},
+{
+"n": "Seifer Almasy",
+"img": "chars/c/c701195d884d.webp"
+},
+{
+"n": "Quistis Trepe",
+"img": "chars/c/619c83bae5f9.webp"
+},
+{
+"n": "Laguna Loire",
+"img": "chars/c/8b107e98b54e.webp"
+}
+],
+"Final Fantasy XIV Online": [
+{
+"n": "Y'shtola Rhul",
+"img": "chars/c/0b355e151511.webp"
+},
+{
+"n": "Alphinaud Leveilleur",
+"img": "chars/c/1807aad0715e.webp"
+},
+{
+"n": "Alisaie Leveilleur",
+"img": "chars/c/e45c1bcc2f19.webp"
+},
+{
+"n": "Thancred Waters",
+"img": "chars/c/dd0b8574fe89.webp"
+},
+{
+"n": "G'raha Tia",
+"img": "chars/c/1efa4d3a1a18.webp"
+}
+],
+"Final Fantasy Type-0 HD": [
+{
+"n": "Ace",
+"img": "chars/c/7c8fc268cd47.webp"
+},
+{
+"n": "Machina Kunagiri",
+"img": "chars/c/43f972e9d910.webp"
+},
+{
+"n": "Rem Tokimiya",
+"img": "chars/c/9f4f1a780e0d.webp"
+}
+],
+"Stranger of Paradise: Final Fantasy Origin": [
+{
+"n": "Jack Garland",
+"img": "chars/c/1313f29c3e92.webp"
+},
+{
+"n": "Garland",
+"img": "chars/c/a99a483dbe87.webp"
+}
+],
+"Dissidia Final Fantasy NT": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/6d0d43c42325.webp"
+},
+{
+"n": "Squall Leonhart",
+"img": "chars/c/5314698fc7f7.webp"
+},
+{
+"n": "Lightning",
+"img": "chars/c/fe17550c8573.webp"
+},
+{
+"n": "Terra Branford",
+"img": "chars/c/1c00e5b30847.webp"
+}
+],
+"World of Final Fantasy": [
+{
+"n": "Lann",
+"img": "chars/c/0be4a881587a.webp"
+},
+{
+"n": "Reynn",
+"img": "chars/c/a33fd0037305.webp"
+}
+],
+"Final Fantasy Tactics: The Ivalice Chronicles": [
+{
+"n": "Ramza Beoulve",
+"img": "chars/c/ab29a694cac9.webp"
+},
+{
+"n": "Delita Heiral",
+"img": "chars/c/02d6edcf2e8f.webp"
+},
+{
+"n": "Agrias Oaks",
+"img": "chars/c/75d198764b45.webp"
+}
+],
+"Final Fantasy Pixel Remaster (I–VI)": [
+{
+"n": "Cecil Harvey",
+"img": "chars/c/f6fe790e3106.webp"
+},
+{
+"n": "Terra Branford",
+"img": "chars/c/22bf316e1638.webp"
+},
+{
+"n": "Bartz Klauser",
+"img": "chars/c/cbfa91bf78be.webp"
+},
+{
+"n": "Firion",
+"img": "chars/c/d36217801dfe.webp"
+}
+],
+"Persona 5 Royal": [
+{
+"n": "Joker",
+"img": "chars/c/5b9c946c9e74.webp"
+},
+{
+"n": "Ryuji Sakamoto",
+"img": "chars/c/f1cff6953b05.webp"
+},
+{
+"n": "Ann Takamaki",
+"img": "chars/c/55b974a42253.webp"
+},
+{
+"n": "Morgana",
+"img": "chars/c/033f3079ccf1.webp"
+},
+{
+"n": "Makoto Niijima",
+"img": "chars/c/39512c182db5.webp"
+},
+{
+"n": "Futaba Sakura",
+"img": "chars/c/63b20d3330f4.webp"
+},
+{
+"n": "Goro Akechi",
+"img": "chars/c/6238da63f2db.webp"
+},
+{
+"n": "Kasumi Yoshizawa",
+"img": "chars/c/1809ec07e74c.webp"
+}
+],
+"Persona 3 Reload": [
+{
+"n": "Makoto Yuki",
+"img": "chars/c/a22cb0b7f992.webp"
+},
+{
+"n": "Yukari Takeba",
+"img": "chars/c/729616f448a9.webp"
+},
+{
+"n": "Mitsuru Kirijo",
+"img": "chars/c/69d0753404e4.webp"
+},
+{
+"n": "Aigis",
+"img": "chars/c/7c1f6f8329fd.webp"
+},
+{
+"n": "Junpei Iori",
+"img": "chars/c/186eb33bc1b0.webp"
+},
+{
+"n": "Akihiko Sanada",
+"img": "chars/c/927e714a9a5d.webp"
+}
+],
+"Persona 4 Golden": [
+{
+"n": "Yu Narukami",
+"img": "chars/c/2a1970bc40bd.webp"
+},
+{
+"n": "Chie Satonaka",
+"img": "chars/c/1c226543b70b.webp"
+},
+{
+"n": "Yukiko Amagi",
+"img": "chars/c/37cd982797f2.webp"
+},
+{
+"n": "Teddie",
+"img": "chars/c/31894a754347.webp"
+},
+{
+"n": "Rise Kujikawa",
+"img": "chars/c/c01cbf3a0969.webp"
+},
+{
+"n": "Naoto Shirogane",
+"img": "chars/c/5a07ec41bf44.webp"
+}
+],
+"Street Fighter 6": [
+{
+"n": "Ryu",
+"img": "chars/c/4207c1d0c182.webp"
+},
+{
+"n": "Chun-Li",
+"img": "chars/c/8bf8403251fb.webp"
+},
+{
+"n": "Ken Masters",
+"img": "chars/c/12893a98eee1.webp"
+},
+{
+"n": "Cammy",
+"img": "chars/c/4f0c3fc34b04.webp"
+},
+{
+"n": "Luke",
+"img": "chars/c/4a7a554d81e7.webp"
+},
+{
+"n": "Juri Han",
+"img": "chars/c/5b97a9bd783a.webp"
+}
+],
+"Tekken 8": [
+{
+"n": "Jin Kazama",
+"img": "chars/c/4354a39f9b77.webp"
+},
+{
+"n": "Kazuya Mishima",
+"img": "chars/c/bda1b0335fd1.webp"
+},
+{
+"n": "Reina",
+"img": "chars/c/d38ab3eedabb.webp"
+},
+{
+"n": "Nina Williams",
+"img": "chars/c/9a8e9b083c5c.webp"
+},
+{
+"n": "Heihachi Mishima",
+"img": "chars/c/a80056865ee9.webp"
+}
+],
+"Mortal Kombat 1": [
+{
+"n": "Scorpion",
+"img": "chars/c/553554d20697.webp"
+},
+{
+"n": "Sub-Zero",
+"img": "chars/c/ac852eb87e20.webp"
+},
+{
+"n": "Raiden",
+"img": "chars/c/55ddbc1782bc.webp"
+},
+{
+"n": "Liu Kang",
+"img": "chars/c/4a977ddb6636.webp"
+},
+{
+"n": "Kitana",
+"img": "chars/c/0565b08f28ed.webp"
+},
+{
+"n": "Mileena",
+"img": "chars/c/0d14a4af6be0.webp"
+}
+],
+"Devil May Cry 5": [
+{
+"n": "Dante",
+"img": "chars/c/c93183a529ac.webp"
+},
+{
+"n": "Nero",
+"img": "chars/c/b8ef9b480b05.webp"
+},
+{
+"n": "V",
+"img": "chars/c/0c275b4fc39f.webp"
+},
+{
+"n": "Vergil",
+"img": "chars/c/44c5d3573073.webp"
+},
+{
+"n": "Lady",
+"img": "chars/c/0807643799ea.webp"
+},
+{
+"n": "Trish",
+"img": "chars/c/c58c682637c7.webp"
+}
+],
+"Monster Hunter Wilds": [
+{
+"n": "Arkveld",
+"img": "chars/c/39b24bbc6547.webp"
+},
+{
+"n": "Rey Dau",
+"img": "chars/c/0031711d5173.webp"
+},
+{
+"n": "Rathalos",
+"img": "chars/c/0d4e112c4f71.webp"
+},
+{
+"n": "Gore Magala",
+"img": "chars/c/04838d163020.webp"
+}
+],
+"Monster Hunter: World": [
+{
+"n": "Rathalos",
+"img": "chars/c/baf9d5a6cc20.webp"
+},
+{
+"n": "Nergigante",
+"img": "chars/c/cca7b4137fad.webp"
+},
+{
+"n": "Zinogre",
+"img": "chars/c/9b662dd082d7.webp"
+},
+{
+"n": "Kirin",
+"img": "chars/c/022276e669e1.webp"
+}
+],
+"Hollow Knight": [
+{
+"n": "The Knight",
+"img": "chars/c/44920a0fbab3.webp"
+},
+{
+"n": "Hornet",
+"img": "chars/c/8c46a245b2b1.webp"
+},
+{
+"n": "Quirrel",
+"img": "chars/c/f15203053173.webp"
+},
+{
+"n": "The Radiance",
+"img": "chars/c/9d5f556a83cf.webp"
+},
+{
+"n": "Grimm",
+"img": "chars/c/b68dd72e8394.webp"
+}
+],
+"Hollow Knight: Silksong": [
+{
+"n": "Hornet",
+"img": "chars/c/cb4a43a80aa5.webp"
+},
+{
+"n": "Lace",
+"img": "chars/c/6d9734b5da4d.webp"
+},
+{
+"n": "Shakra",
+"img": "chars/c/259918ad46de.webp"
+}
+],
+"Hades": [
+{
+"n": "Zagreus",
+"img": "chars/c/c2cda73809dd.webp"
+},
+{
+"n": "Megaera",
+"img": "chars/c/6eb64dd33a1e.webp"
+},
+{
+"n": "Thanatos",
+"img": "chars/c/77a0d3a5cb58.webp"
+},
+{
+"n": "Dusa",
+"img": "chars/c/49e6a6faeb36.webp"
+},
+{
+"n": "Hades",
+"img": "chars/c/d4dcf2200627.webp"
+},
+{
+"n": "Persephone",
+"img": "chars/c/8ce59b0044b7.webp"
+}
+],
+"Hades II": [
+{
+"n": "Melinoë",
+"img": "chars/c/27b448ad74c9.webp"
+},
+{
+"n": "Hecate",
+"img": "chars/c/3c900d0749a1.webp"
+},
+{
+"n": "Chronos",
+"img": "chars/c/02cfd26f6b20.webp"
+},
+{
+"n": "Moros",
+"img": "chars/c/8252dc3e0b44.webp"
+},
+{
+"n": "Odysseus",
+"img": "chars/c/d14be69fec0e.webp"
+}
+],
+"Celeste": [
+{
+"n": "Madeline",
+"img": "chars/c/290ba0c6a789.webp"
+},
+{
+"n": "Badeline",
+"img": "chars/c/f11258cee4f1.webp"
+},
+{
+"n": "Theo",
+"img": "chars/c/2c59339d48f7.webp"
+},
+{
+"n": "Granny",
+"img": "chars/c/78f6e1640f9e.webp"
+}
+],
+"Cuphead": [
+{
+"n": "Cuphead",
+"img": "chars/c/473b0f5f7745.webp"
+},
+{
+"n": "Mugman",
+"img": "chars/c/6b822622950c.webp"
+},
+{
+"n": "Ms. Chalice",
+"img": "chars/c/48a9500562c5.webp"
+},
+{
+"n": "The Devil",
+"img": "chars/c/c2f0c7814cd4.webp"
+},
+{
+"n": "King Dice",
+"img": "chars/c/12734ced0399.webp"
+}
+],
+"Halo Infinite": [
+{
+"n": "John-117",
+"img": "chars/c/a19a1b69fea2.webp"
+},
+{
+"n": "The Weapon",
+"img": "chars/c/33c9f4b326d0.webp"
+},
+{
+"n": "Escharum",
+"img": "chars/c/8cc3e24a2cc3.webp"
+},
+{
+"n": "Fernando Esparza",
+"img": "chars/c/842da285cc8f.webp"
+}
+],
+"Halo: The Master Chief Collection": [
+{
+"n": "John-117",
+"img": "chars/c/a68f31e1f11e.webp"
+},
+{
+"n": "Cortana",
+"img": "chars/c/2ab4b6e803ad.webp"
+},
+{
+"n": "Thel 'Vadam",
+"img": "chars/c/fe2f6b580fb8.webp"
+},
+{
+"n": "Avery Johnson",
+"img": "chars/c/9f99ecfb030a.webp"
+}
+],
+"Gears 5": [
+{
+"n": "Kait Diaz",
+"img": "chars/c/64eeb472a734.webp"
+},
+{
+"n": "Marcus Fenix",
+"img": "chars/c/be0a90d9eb95.webp"
+},
+{
+"n": "Del",
+"img": "chars/c/cca1484a6d77.webp"
+},
+{
+"n": "JD Fenix",
+"img": "chars/c/81384bcd53a3.webp"
+}
+],
+"Gears of War: Reloaded": [
+{
+"n": "Marcus Fenix",
+"img": "chars/c/c2d3d0df254e.webp"
+},
+{
+"n": "Dominic Santiago",
+"img": "chars/c/bca2aabd1306.webp"
+},
+{
+"n": "Augustus Cole",
+"img": "chars/c/770f2892b0da.webp"
+},
+{
+"n": "Damon Baird",
+"img": "chars/c/51ef0ed76d45.webp"
+}
+],
+"Starfield": [
+{
+"n": "Sarah Morgan",
+"img": "chars/c/5ad93c3abfbc.webp"
+},
+{
+"n": "Sam Coe",
+"img": "chars/c/1361c150ddd9.webp"
+},
+{
+"n": "Barrett",
+"img": "chars/c/75585fbdec13.webp"
+},
+{
+"n": "Andreja",
+"img": "chars/c/cf0781f2f992.webp"
+}
+],
+"Fortnite": [
+{
+"n": "Peely",
+"img": "chars/c/75e995ec3d4a.webp"
+},
+{
+"n": "Fishstick",
+"img": "chars/c/d0a04bfb9520.webp"
+},
+{
+"n": "Raven",
+"img": "chars/c/fd57490841cb.webp"
+},
+{
+"n": "Midas",
+"img": "chars/c/b0b66666ba51.webp"
+},
+{
+"n": "Drift",
+"img": "chars/c/b36cb211e7a7.webp"
+}
+],
+"Apex Legends": [
+{
+"n": "Wraith",
+"img": "chars/c/ca6ff87d7145.webp"
+},
+{
+"n": "Bloodhound",
+"img": "chars/c/ddefb14460d4.webp"
+},
+{
+"n": "Lifeline",
+"img": "chars/c/6bef191ca7dd.webp"
+},
+{
+"n": "Pathfinder",
+"img": "chars/c/dd4175ffe206.webp"
+},
+{
+"n": "Octane",
+"img": "chars/c/bb46b876c068.webp"
+},
+{
+"n": "Mirage",
+"img": "chars/c/e2d1581778b9.webp"
+}
+],
+"Valorant": [
+{
+"n": "Jett",
+"img": "chars/c/ed29d99cafab.webp"
+},
+{
+"n": "Phoenix",
+"img": "chars/c/b8a75c7e78b7.webp"
+},
+{
+"n": "Sage",
+"img": "chars/c/a37512f39cd3.webp"
+},
+{
+"n": "Reyna",
+"img": "chars/c/0beea5fc98f9.webp"
+},
+{
+"n": "Sova",
+"img": "chars/c/a52f02c0fd98.webp"
+},
+{
+"n": "Omen",
+"img": "chars/c/54fa55adc59f.webp"
+},
+{
+"n": "Raze",
+"img": "chars/c/653ab73368cd.webp"
+},
+{
+"n": "Killjoy",
+"img": "chars/c/23ab65be6b0e.webp"
+}
+],
+"Marvel Rivals": [
+{
+"n": "Spider-Man",
+"img": "chars/c/399121f557a6.webp"
+},
+{
+"n": "Iron Man",
+"img": "chars/c/6a1e3bcbe103.webp"
+},
+{
+"n": "Storm",
+"img": "chars/c/d0433297e3fb.webp"
+},
+{
+"n": "Hulk",
+"img": "chars/c/8aa5a17bdfd8.webp"
+},
+{
+"n": "Luna Snow",
+"img": "chars/c/20e0d808127c.webp"
+},
+{
+"n": "Magik",
+"img": "chars/c/62abdc64f44b.webp"
+}
+],
+"Genshin Impact": [
+{
+"n": "Aether",
+"img": "chars/c/6f3e7ee6b9c8.webp"
+},
+{
+"n": "Paimon",
+"img": "chars/c/f55d4bdccee7.webp"
+},
+{
+"n": "Raiden Shogun",
+"img": "chars/c/0960e372944b.webp"
+},
+{
+"n": "Hu Tao",
+"img": "chars/c/98b014fd95bb.webp"
+},
+{
+"n": "Zhongli",
+"img": "chars/c/afbadd7c8cfa.webp"
+},
+{
+"n": "Furina",
+"img": "chars/c/1f29cdb29c5a.webp"
+},
+{
+"n": "Nahida",
+"img": "chars/c/2eac40795bff.webp"
+}
+],
+"Minecraft": [
+{
+"n": "Steve",
+"img": "chars/c/c4fe80100c82.webp"
+},
+{
+"n": "Alex",
+"img": "chars/c/5914dbcbee59.webp"
+},
+{
+"n": "Creeper",
+"img": "chars/c/9c72346769d4.webp"
+},
+{
+"n": "Enderman",
+"img": "chars/c/dd90fe727731.webp"
+},
+{
+"n": "Ender Dragon",
+"img": "chars/c/e8d76694f770.webp"
+}
+],
+"Cult of the Lamb": [
+{
+"n": "The Lamb",
+"img": "chars/c/a7f9172ad06f.webp"
+},
+{
+"n": "Ratau",
+"img": "chars/c/70a132e899a1.webp"
+},
+{
+"n": "The One Who Waits",
+"img": "chars/c/34def7361a1b.webp"
+}
+],
+"Dead by Daylight": [
+{
+"n": "The Trapper",
+"img": "chars/c/8efb6c3e2693.webp"
+},
+{
+"n": "The Huntress",
+"img": "chars/c/aac2cdb38e34.webp"
+},
+{
+"n": "The Nurse",
+"img": "chars/c/24b67b6eca2e.webp"
+},
+{
+"n": "Meg Thomas",
+"img": "chars/c/2a03c0a0be02.webp"
+},
+{
+"n": "Dwight Fairfield",
+"img": "chars/c/719dd9037aa0.webp"
+},
+{
+"n": "The Ghost Face",
+"img": "chars/c/3039e39f98ae.webp"
+}
+],
+"Palworld": [
+{
+"n": "Lamball",
+"img": "chars/c/af561d136712.webp"
+},
+{
+"n": "Cattiva",
+"img": "chars/c/ef2cafd6acd1.webp"
+},
+{
+"n": "Anubis",
+"img": "chars/c/6c606a371795.webp"
+},
+{
+"n": "Jetragon",
+"img": "chars/c/505a424e6c71.webp"
+},
+{
+"n": "Depresso",
+"img": "chars/c/27d953855c8e.webp"
+},
+{
+"n": "Chikipi",
+"img": "chars/c/f3468fca67d5.webp"
+}
+],
+"Subnautica": [
+{
+"n": "Reaper Leviathan",
+"img": "chars/c/dd1ad0b9c45c.webp"
+},
+{
+"n": "Peeper",
+"img": "chars/c/118f682fefe7.webp"
+},
+{
+"n": "Sea Emperor Leviathan",
+"img": "chars/c/5c0d979a7692.webp"
+},
+{
+"n": "Cuddlefish",
+"img": "chars/c/b07117a932d5.webp"
+}
+],
+"Death Stranding Director's Cut": [
+{
+"n": "Sam Porter Bridges",
+"img": "chars/c/500d3d88ec8f.webp"
+},
+{
+"n": "Fragile",
+"img": "chars/c/686320cf8cd4.webp"
+},
+{
+"n": "Higgs Monaghan",
+"img": "chars/c/041a91786c14.webp"
+},
+{
+"n": "Die-Hardman",
+"img": "chars/c/a689bac79215.webp"
+},
+{
+"n": "Amelie",
+"img": "chars/c/2a08cdad2502.webp"
+}
+],
+"Death Stranding 2: On the Beach": [
+{
+"n": "Sam Porter Bridges",
+"img": "chars/c/333e4e666e3f.webp"
+},
+{
+"n": "Fragile",
+"img": "chars/c/ff3450bdd35d.webp"
+},
+{
+"n": "Higgs Monaghan",
+"img": "chars/c/0acd6ddfa34f.webp"
+},
+{
+"n": "Tomorrow",
+"img": "chars/c/66c67be7877a.webp"
+}
+],
+"Detroit: Become Human": [
+{
+"n": "Connor",
+"img": "chars/c/abe4d82fd37e.webp"
+},
+{
+"n": "Kara",
+"img": "chars/c/6acfdd919160.webp"
+},
+{
+"n": "Markus",
+"img": "chars/c/a081d54c57f4.webp"
+},
+{
+"n": "Hank Anderson",
+"img": "chars/c/1deb9e2fb980.webp"
+},
+{
+"n": "Alice",
+"img": "chars/c/c87564f234ca.webp"
+}
+],
+"Days Gone": [
+{
+"n": "Deacon St. John",
+"img": "chars/c/ff7bbef8bf7d.webp"
+},
+{
+"n": "Boozer",
+"img": "chars/c/5a12b676be0c.webp"
+},
+{
+"n": "Sarah Whitaker",
+"img": "chars/c/8a4525212e1f.webp"
+}
+],
+"Hitman: World of Assassination": [
+{
+"n": "Agent 47",
+"img": "chars/c/09eca4cd62ff.webp"
+},
+{
+"n": "Diana Burnwood",
+"img": "chars/c/df23163430b2.webp"
+}
+],
+"Assassin's Creed Odyssey": [
+{
+"n": "Kassandra",
+"img": "chars/c/e0e77f9320e3.webp"
+},
+{
+"n": "Alexios",
+"img": "chars/c/6ff69d893e48.webp"
+}
+],
+"Assassin's Creed Shadows": [
+{
+"n": "Naoe",
+"img": "chars/c/93232da3ca95.webp"
+},
+{
+"n": "Yasuke",
+"img": "chars/c/fb2a0597bb1e.webp"
+}
+],
+"Metal Gear Solid Delta: Snake Eater": [
+{
+"n": "Naked Snake",
+"img": "chars/c/731f8b4e028b.webp"
+},
+{
+"n": "The Boss",
+"img": "chars/c/ca34fef84203.webp"
+},
+{
+"n": "EVA",
+"img": "chars/c/65216159119e.webp"
+},
+{
+"n": "Revolver Ocelot",
+"img": "chars/c/45f70a760e92.webp"
+},
+{
+"n": "Volgin",
+"img": "chars/c/d2075e66f626.webp"
+}
+],
+"Mafia: The Old Country": [
+{
+"n": "Enzo Favara",
+"img": "chars/c/7eba2f82c910.webp"
+}
+],
+"Borderlands 4": [
+{
+"n": "Rafa",
+"img": "chars/c/cfa729562d28.webp"
+},
+{
+"n": "Vex",
+"img": "chars/c/186ae1097e2a.webp"
+},
+{
+"n": "Amon",
+"img": "chars/c/8503dcafa4ed.webp"
+},
+{
+"n": "Harlowe",
+"img": "chars/c/0c059191e91e.webp"
+}
+],
+"Black Myth: Wukong": [
+{
+"n": "Destined One",
+"img": "chars/c/47f4987aaf4d.webp"
+},
+{
+"n": "Erlang Shen",
+"img": "chars/c/d8884f06f821.webp"
+}
+],
+"Lies of P": [
+{
+"n": "P",
+"img": "chars/c/834f1b75d416.webp"
+},
+{
+"n": "Geppetto",
+"img": "chars/c/6a1140a7c2f9.webp"
+},
+{
+"n": "Sophia",
+"img": "chars/c/4f20eabab688.webp"
+}
+],
+"Stellar Blade": [
+{
+"n": "EVE",
+"img": "chars/c/4d2a44c402bc.webp"
+},
+{
+"n": "Lily",
+"img": "chars/c/cdb771e100d9.webp"
+},
+{
+"n": "Adam",
+"img": "chars/c/5ca7d5ed2cb9.webp"
+}
+],
+"Clair Obscur: Expedition 33": [
+{
+"n": "Gustave",
+"img": "chars/c/e03f32ed6efe.webp"
+},
+{
+"n": "Maelle",
+"img": "chars/c/f7902743b60a.webp"
+},
+{
+"n": "Lune",
+"img": "chars/c/f9cf0a56ae91.webp"
+},
+{
+"n": "Sciel",
+"img": "chars/c/5912175469d8.webp"
+},
+{
+"n": "Verso",
+"img": "chars/c/edcc1945468a.webp"
+},
+{
+"n": "Monoco",
+"img": "chars/c/38002a846aa1.webp"
+}
+],
+"Kingdom Come: Deliverance II": [
+{
+"n": "Henry",
+"img": "chars/c/85773296ec96.webp"
+},
+{
+"n": "Hans Capon",
+"img": "chars/c/857bef2f507d.webp"
+}
+],
+"The Elder Scrolls V: Skyrim": [
+{
+"n": "Alduin",
+"img": "chars/c/44c7cf23d21d.webp"
+},
+{
+"n": "Serana",
+"img": "chars/c/662921e19db3.webp"
+},
+{
+"n": "Lydia",
+"img": "chars/c/654b299a49cd.webp"
+},
+{
+"n": "Paarthurnax",
+"img": "chars/c/72c2fd9b8721.webp"
+}
+],
+"Fallout 4": [
+{
+"n": "Nick Valentine",
+"img": "chars/c/84277ab1e0c7.webp"
+},
+{
+"n": "Piper Wright",
+"img": "chars/c/c9d1038af6f8.webp"
+},
+{
+"n": "Preston Garvey",
+"img": "chars/c/30d995607708.webp"
+},
+{
+"n": "Dogmeat",
+"img": "chars/c/c6f3751451c6.webp"
+}
+],
+"Mass Effect Legendary Edition": [
+{
+"n": "Commander Shepard",
+"img": "chars/c/1a6f4ccfbdeb.webp"
+},
+{
+"n": "Garrus Vakarian",
+"img": "chars/c/d55085aa845c.webp"
+},
+{
+"n": "Liara T'Soni",
+"img": "chars/c/fe5b475483fd.webp"
+},
+{
+"n": "Tali'Zorah",
+"img": "chars/c/748e93f1966d.webp"
+},
+{
+"n": "Urdnot Wrex",
+"img": "chars/c/01205de0a53e.webp"
+}
+],
+"Diablo IV": [
+{
+"n": "Lilith",
+"img": "chars/c/bf68aaeaf750.webp"
+},
+{
+"n": "Inarius",
+"img": "chars/c/db5f01c0ba60.webp"
+},
+{
+"n": "Lorath Nahr",
+"img": "chars/c/a44f96c40794.webp"
+}
+],
+"Dead Space": [
+{
+"n": "Isaac Clarke",
+"img": "chars/c/a44bb509ba32.webp"
+},
+{
+"n": "Ellie Langford",
+"img": "chars/c/63e617cd59b2.webp"
+}
+],
+"Alan Wake 2": [
+{
+"n": "Alan Wake",
+"img": "chars/c/e8d8ddf6981b.webp"
+},
+{
+"n": "Saga Anderson",
+"img": "chars/c/8acfe5fcde9d.webp"
+}
+],
+"Silent Hill 2": [
+{
+"n": "James Sunderland",
+"img": "chars/c/b0c02d619c59.webp"
+},
+{
+"n": "Maria",
+"img": "chars/c/5e2fa4c8150e.webp"
+},
+{
+"n": "Pyramid Head",
+"img": "chars/c/23203324b4ae.webp"
+},
+{
+"n": "Angela Orosco",
+"img": "chars/c/8a44c6021e6e.webp"
+}
+],
+"Silent Hill f": [
+{
+"n": "Hinako Shimizu",
+"img": "chars/c/bbf6b03d3678.webp"
+}
+],
+"Star Wars Jedi: Survivor": [
+{
+"n": "Cal Kestis",
+"img": "chars/c/b4677c6c5133.webp"
+},
+{
+"n": "BD-1",
+"img": "chars/c/632d97e432f9.webp"
+},
+{
+"n": "Merrin",
+"img": "chars/c/fdcf16f1f3b9.webp"
+},
+{
+"n": "Cere Junda",
+"img": "chars/c/310d0ccd8aa5.webp"
+}
+],
+"LEGO Star Wars: A Saga Skywalker": [
+{
+"n": "Luke Skywalker",
+"img": "chars/c/3b21dc055623.webp"
+},
+{
+"n": "Darth Vader",
+"img": "chars/c/1754b0390c4e.webp"
+},
+{
+"n": "Rey Skywalker",
+"img": "chars/c/81b421472512.webp"
+},
+{
+"n": "Grogu",
+"img": "chars/c/9397a33d3e42.webp"
+},
+{
+"n": "Han Solo",
+"img": "chars/c/0f90daa2d2d7.webp"
+}
+],
+"Batman: Arkham Knight": [
+{
+"n": "Batman",
+"img": "chars/c/771165e2ca05.webp"
+},
+{
+"n": "Arkham Knight",
+"img": "chars/c/c230f8fb76ac.webp"
+},
+{
+"n": "Joker",
+"img": "chars/c/67479f52eb25.webp"
+},
+{
+"n": "Harley Quinn",
+"img": "chars/c/8f2f916b998c.webp"
+},
+{
+"n": "Scarecrow",
+"img": "chars/c/b6f47a8c1887.webp"
+}
+],
+"Prince of Persia: The Lost Crown": [
+{
+"n": "Sargon",
+"img": "chars/c/354a5abf56b7.webp"
+}
+],
+"Sonic X Shadow Generations": [
+{
+"n": "Shadow the Hedgehog",
+"img": "chars/c/ffb9af3b383a.webp"
+},
+{
+"n": "Sonic the Hedgehog",
+"img": "chars/c/7990db6671c4.webp"
+},
+{
+"n": "Black Doom",
+"img": "chars/c/29af87ede543.webp"
+}
+],
+"Crash Bandicoot N. Sane Trilogy": [
+{
+"n": "Crash Bandicoot",
+"img": "chars/c/01710ed6cf96.webp"
+},
+{
+"n": "Coco Bandicoot",
+"img": "chars/c/db8f3af19d7c.webp"
+},
+{
+"n": "Doctor Neo Cortex",
+"img": "chars/c/b386a35d56c0.webp"
+},
+{
+"n": "Aku Aku",
+"img": "chars/c/02b2d6baa1ba.webp"
+}
+],
+"NieR:Automata": [
+{
+"n": "YoRHa No.2 Type B",
+"img": "chars/c/0af69eb7d2aa.webp"
+},
+{
+"n": "YoRHa No.9 Type S",
+"img": "chars/c/903df9915201.webp"
+},
+{
+"n": "A2",
+"img": "chars/c/a6b3f2b76184.webp"
+}
+],
+"Yakuza 0": [
+{
+"n": "Kazuma Kiryu",
+"img": "chars/c/31760e6807ea.webp"
+},
+{
+"n": "Goro Majima",
+"img": "chars/c/db658cc1097f.webp"
+}
+],
+"Like a Dragon: Infinite Wealth": [
+{
+"n": "Ichiban Kasuga",
+"img": "chars/c/485503d1f808.webp"
+},
+{
+"n": "Kazuma Kiryu",
+"img": "chars/c/9bf2c9d44bd2.webp"
+}
+],
+"Tales of Arise": [
+{
+"n": "Alphen",
+"img": "chars/c/46ffc4dd20e9.webp"
+},
+{
+"n": "Shionne",
+"img": "chars/c/1a60c8944a56.webp"
+}
+],
+"Doom Eternal": [
+{
+"n": "Khan Maykr",
+"img": "chars/c/005f3536825b.webp"
+}
+],
+"Ori and the Will of the Wisps": [
+{
+"n": "Ori",
+"img": "chars/c/fd649c9a6f3b.webp"
+},
+{
+"n": "Ku",
+"img": "chars/c/85b9cedee928.webp"
+}
+],
+"Ratchet & Clank: Em Uma Outra Dimensão": [
+{
+"n": "Ratchet",
+"img": "chars/c/d1d745f2778c.webp"
+},
+{
+"n": "Clank",
+"img": "chars/c/d252b4a3c218.webp"
+},
+{
+"n": "Rivet",
+"img": "chars/c/9afc2ef3698d.webp"
+},
+{
+"n": "Kit",
+"img": "chars/c/b40fc7d7ebcc.webp"
+}
+],
+"Returnal": [
+{
+"n": "Selene",
+"img": "chars/c/b944b3d67808.webp"
+}
+],
+"Counter-Strike 2": [
+{
+"n": "Counter-Terrorists",
+"img": "chars/c/264bcf651266.webp"
+},
+{
+"n": "Terrorists",
+"img": "chars/c/a9b96c386c71.webp"
+}
+]
+},
+"errors": []
+}
