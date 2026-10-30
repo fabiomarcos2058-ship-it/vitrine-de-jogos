@@ -1,1 +1,31 @@
-{ "fandom": true }
+{
+ "run": 5,
+ "new": [
+  "Dark Souls: Remastered", "Dark Souls II: Scholar of the First Sin", "Sifu", "Ghostrunner", "Dead Cells",
+  "Slay the Spire", "Vampire Survivors", "Hotline Miami", "Inside", "Little Nightmares II",
+  "A Plague Tale: Requiem", "Control", "Remnant II", "Lethal Company", "Phasmophobia",
+  "Valheim", "Satisfactory", "RimWorld", "Cities: Skylines II", "Sid Meier's Civilization VII",
+  "Total War: Warhammer III", "XCOM 2", "Age of Empires II: Definitive Edition", "Age of Empires IV", "Microsoft Flight Simulator 2024",
+  "Dead Island 2", "Dying Light: The Beast", "Sons of the Forest", "Outer Wilds", "Disco Elysium",
+  "Divinity: Original Sin 2", "Monster Hunter Rise", "Guilty Gear -Strive-", "NieR Replicant ver.1.22474487139", "Octopath Traveler II",
+  "Dragon Quest XI S", "Dragon's Dogma 2", "Metal Gear Solid V: The Phantom Pain", "Tunic", "Mortal Kombat 11",
+  "Titanfall 2", "Star Wars Jedi: Fallen Order", "Star Wars Outlaws", "Assassin's Creed Valhalla", "Far Cry 6",
+  "Rainbow Six Siege", "Overwatch 2", "Destiny 2", "Warframe", "Path of Exile 2",
+  "Deep Rock Galactic", "Left 4 Dead 2", "Portal 2", "Half-Life 2", "Ori and the Blind Forest",
+  "Psychonauts 2", "Grounded", "The Callisto Protocol", "Sonic Frontiers", "Spyro Reignited Trilogy",
+  "Kena: Bridge of Spirits", "Undertale", "F1 25", "Bloons TD 6"
+ ],
+ "mobile": [
+  { "q": "Clash Royale", "play": "com.supercell.clashroyale" },
+  { "q": "Brawl Stars", "play": "com.supercell.brawlstars" },
+  { "q": "Subway Surfers", "play": "com.kiloo.subwaysurf" },
+  { "q": "Pokémon GO", "play": "com.nianticlabs.pokemongo" },
+  { "q": "Call of Duty: Mobile", "play": "com.activision.callofduty.shooter" },
+  { "q": "Honkai: Star Rail", "play": "com.HoYoverse.hkrpgoversea" },
+  { "q": "Bloons TD 6", "play": "com.ninjakiwi.bloonstd6" },
+  { "q": "Dead Cells", "play": "com.playdigious.deadcells.mobile" },
+  { "q": "Slay the Spire", "play": "com.humble.SlayTheSpire" },
+  { "q": "Vampire Survivors", "play": "com.poncle.vampiresurvivors" },
+  { "q": "Stardew Valley", "play": "com.chucklefish.stardewvalley" }
+ ]
+}

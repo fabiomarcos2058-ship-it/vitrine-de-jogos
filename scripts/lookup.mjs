@@ -226,5 +226,22 @@ missing.forEach(m => { if (m.appid && assets[m.appid]) m.capsule = assets[m.appi
 result.new.forEach(r => { if (r.steam && assets[r.steam.appid]) Object.assign(r.steam, assets[r.steam.appid]); });
 result.covers = { checked: titles.length, missing };
 
+// ---------- jogos de celular: App Store (iTunes) + Google Play ----------
+result.mobile = [];
+for (const m of input.mobile || []) {
+  const row = { q: m.q, play: m.play };
+  try { const d = await (await get(`https://itunes.apple.com/search?term=${encodeURIComponent(m.q)}&country=br&entity=software&limit=3`)).json(); row.itunes = (d.results || []).map(r => ({ n: r.trackName, a: r.artworkUrl512, p: r.price, dev: r.artistName, y: (r.releaseDate || "").slice(0, 4), genre: r.primaryGenreName })); } catch (e) { row.itunesErr = e.message; }
+  if (m.play) {
+    try {
+      const html = await (await get(`https://play.google.com/store/apps/details?id=${m.play}&hl=pt_BR&gl=BR`)).text();
+      const og = html.match(/<meta property="og:image" content="([^"]+)"/), tt = html.match(/<meta property="og:title" content="([^"]+)"/);
+      const i = html.search(/Comprar|Instalar/);
+      row.playData = { title: tt && tt[1], img: og && og[1], buy: i >= 0 ? html.slice(Math.max(0, i - 300), i + 200).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ") : null, prices: [...html.matchAll(/R\$\s?[\d.]+,\d{2}/g)].slice(0, 8).map(x => x[0]) };
+    } catch (e) { row.playErr = e.message; }
+  }
+  await sleep(700);
+  result.mobile.push(row); console.log("celular", m.q, row.playData ? row.playData.title : row.playErr);
+}
+
 fs.writeFileSync(ROOT + "data/lookup.json", JSON.stringify(result, null, 1));
 console.log("capas faltando:", missing.length);
