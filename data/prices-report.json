@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30T01:08:54.131Z",
+ "updated": "2026-10-30T01:23:57.224Z",
  "st": {
-  "ok": 161,
-  "total": 166,
+  "ok": 225,
+  "total": 230,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -17,12 +17,14 @@
    "Sea of Thieves: busca=3937210 \"Immerse Gamepack Sea of Thieves\" lista=1172620",
    "Dragon Ball: The Breakers: busca=1276760 \"DRAGON BALL: THE BREAKERS\" lista=1272080",
    "Final Fantasy VIII Remastered: busca=39150 \"FINAL FANTASY VIII\" lista=1026680",
-   "Hitman: World of Assassination: busca=1829587 \"HITMAN 3 - Seven Deadly Sins Collection\" lista=1659040"
+   "Hitman: World of Assassination: busca=1829587 \"HITMAN 3 - Seven Deadly Sins Collection\" lista=1659040",
+   "Control: busca=3669870 \"CONTROL Resonant\" lista=870780",
+   "Ori and the Blind Forest: busca=261570 \"Ori and the Blind Forest\" lista=387290"
   ]
  },
  "ps": {
   "ok": 0,
-  "total": 168,
+  "total": 223,
   "errors": 0,
   "miss": [
    "The Last of Us Part II Remastered",
@@ -88,8 +90,8 @@
   ]
  },
  "xb": {
-  "ok": 140,
-  "total": 149,
+  "ok": 192,
+  "total": 205,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -100,12 +102,16 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Lightning Returns: Final Fantasy XIII",
    "Call of Duty: Black Ops 7",
-   "Borderlands 4"
+   "Borderlands 4",
+   "Far Cry 6",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2"
   ]
  },
  "ep": {
   "ok": 0,
-  "total": 59,
+  "total": 86,
   "errors": 5,
   "miss": [
    "The Last of Us Part II Remastered (HTTP 404)",
@@ -120,12 +126,9 @@
   "ok": 3
  },
  "gp": {
-  "ok": 4,
-  "total": 6,
-  "errors": 1,
-  "miss": [
-   "Grand Theft Auto: Liberty City Stories (preço estranho 198.9)",
-   "Final Fantasy IX (HTTP 404)"
-  ]
+  "ok": 7,
+  "total": 7,
+  "errors": 0,
+  "miss": []
  }
 }
