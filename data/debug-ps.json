@@ -3,7 +3,7 @@
  "disc": {
   "chunks": 20,
   "ops": {},
-  "htmlLen": 80664,
+  "htmlLen": 80674,
   "scripts": [
    "https://static.playstation.com/wca/v2/js/ui-components.e34a2cb2ca557b1a81e1.js",
    "https://static.playstation.com/wca/v2/js/telemetry.1d4b4480611b5e73f003.js",
