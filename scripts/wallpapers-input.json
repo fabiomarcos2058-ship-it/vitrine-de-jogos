@@ -1,18 +1,17 @@
 {
- "mode": "explore",
- "perTopic": 16,
- "topics": [
-  "https://pt.wallpapers.com/fotos-do-dragon-ball-z",
-  "goku-ultra-instinct",
-  "super-saiyan-goku",
-  "goku-super-saiyan-blue",
-  "gohan-beast",
-  "ultimate-gohan",
-  "vegeta",
-  "vegeta-ultra-ego",
-  "gogeta",
-  "gogeta-ssj4",
-  "future-trunks",
-  "dragon-ball-gt"
- ]
+ "mode": "pick",
+ "pick": {
+  "goku-ssj": "goku-pictures-a6dwgn4c7qryoug8",
+  "goku-ssj-blue": "super-saiyan-blue-goku-aura-burst-png-64-z1g13x36vs0kcbak",
+  "goku-classico": "dragon-ball-z-pictures-8twvwic6tdfa7q3f",
+  "goku-ssj4": "dragon-ball-gt-m2n8y9k0tdljqs4l",
+  "goku-gt": "dragon-ball-gt-tuuhaxq8gie5nvge",
+  "goku-black-rose": "ps4-anime-bib0xe8yhujil128",
+  "gohan-beast": "beast-gohan-power-unleashed-jpn0v7vu94iz5p9h",
+  "vegeta-ultra-ego": "vegeta-ultra-ego-78pff8oir1ipbnkx",
+  "vegeta-ssj-blue": "vegeta-super-saiyan-blue-1024-x-1917-wallpaper-kidb23v4zv85zkvw",
+  "majin-vegeta": "majin-vegeta-smile-2xw2ednhwu3qqtzq",
+  "gogeta-ssj-blue": "blazing-blue-gogeta-w8aaa0mpr3z30xk0",
+  "gogeta-ssj3": "goku-ssj3-9j4n1ehlyfjnp7g4"
+ }
 }
