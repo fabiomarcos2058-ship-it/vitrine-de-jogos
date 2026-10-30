@@ -233,6 +233,8 @@ dialog::backdrop { background: var(--scrim); backdrop-filter: blur(4px); }
 @media (max-width: 680px) { .d-close { top: calc(10px + env(safe-area-inset-top, 0px)); } }
 .d-hero { position: relative; isolation: isolate; color: #FFFFFF; padding: 36px 32px 28px; display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 28px; align-items: end; overflow: hidden; background: #12151B; }
 .d-hero .bg { position: absolute; inset: -40px; z-index: -2; background-size: cover; background-position: center; filter: blur(30px) saturate(1.3) brightness(0.7); }
+.d-hero .bg.scene { inset: -10px; filter: blur(3px) saturate(1.1) brightness(0.78); background-position: center 35%; }
+.d-hero.has-scene::after { background: linear-gradient(to top, rgba(10,12,16,0.94) 8%, rgba(10,12,16,0.5) 55%, rgba(10,12,16,0.2)); }
 .d-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgba(10,12,16,0.92), rgba(10,12,16,0.35)); }
 .d-hero .cover { border-radius: 16px; box-shadow: 0 20px 44px rgba(0,0,0,0.5); }
 .d-hero .cover .ttl { font-size: 13px; }
@@ -1071,6 +1073,15 @@ function cardHTML(g, keys) {
 const psRef = g => num(g.p.ps) && g.p.ps > 0 && !(g.live && g.live.ps);
 const PS_NOTE = `<p class="ps-note"><span class="pi" aria-hidden="true">i</span><span><b>Pode estar em promoção na PlayStation Store.</b> O sistema da PlayStation não permite consultar promoções automaticamente, então mostramos o preço de referência. Confira o valor do dia na loja.</span></p>`;
 let LIVE = null;
+let SCENES = {};
+async function loadScenes() {
+  try {
+    const r = await fetch("data/scenes.json?v=" + Math.floor(Date.now() / 864e5));
+    if (!r.ok) return;
+    SCENES = await r.json() || {};
+    if (currentId && byId[currentId] && SCENES[byId[currentId].t]) { const g = byId[currentId], top = dlg.scrollTop; dContent.innerHTML = detailHTML(g); bindDetail(g); dlg.scrollTop = top; }
+  } catch (e) {}
+}
 const BASE_P = Object.fromEntries(games.map(g => [g.id, { ...g.p }]));
 function maxSale(g, keys) {
   if (!g.live) return 0;
@@ -1483,9 +1494,9 @@ function detailHTML(g) {
       <span class="sn">${s.name}${isBest ? '<span class="flag">Menor preço</span>' : ""}<span class="sk">${lv ? (lv.manual ? `Promoção conferida em ${new Date(lv.checked + "T12:00:00").toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })} · ` : '<span class="live-dot" aria-hidden="true"></span>Preço ao vivo · ') : s.k === "ps" && psRef(g) ? "Preço de referência · " : ""}${s.kind}${v === "Netflix" ? " · incluso na assinatura" : ""}</span></span>
       <span class="sv">${sale ? `<s>${brl(lv.b)}</s>` : ""}<span>${priceText(v)}</span>${sale ? `<span class="off">-${lv.pct}%</span>` : ""}${until && !isNaN(until) ? `<span class="until">até ${until.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}</span>` : ""}</span><span class="arr" aria-hidden="true">↗</span></a>` + (s.k === "ps" && psRef(g) ? PS_NOTE.replace('class="ps-note"', 'class="ps-note" style="margin:0 0 4px"') : "");
   }).join("");
-  const img = covers[g.t];
-  return `<div class="d-hero">
-      ${img ? `<span class="bg" style="background-image:url('${img}')"></span>` : `<span class="bg" style="${coverStyle(g)}"></span>`}
+  const img = covers[g.t], scene = /^scenes\/[a-f0-9]+\.webp$/.test(SCENES[g.t] || "") ? SCENES[g.t] : "";
+  return `<div class="d-hero${scene ? " has-scene" : ""}">
+      ${scene ? `<span class="bg scene" style="background-image:url('${scene}')"></span>` : img ? `<span class="bg" style="background-image:url('${img}')"></span>` : `<span class="bg" style="${coverStyle(g)}"></span>`}
       ${coverHTML(g)}
       <div style="min-width:0">
         <div class="d-facts line">${[["y", g.y, "Ano"], ["g", g.g, "Gênero"], ["d", g.d, "Estúdio"], ["f", g.f, "Série"]].filter(x => x[1]).map(([k, v, l]) => `<button type="button" data-tag="${k}" data-v="${esc(v)}" aria-label="${l}: ${esc(v)}. Ver outros jogos">${esc(v)}</button>`).join('<span class="sep" aria-hidden="true">·</span>')}</div>
@@ -3258,6 +3269,7 @@ renderShelves();
 renderTray();
 initFirebase();
 loadLive();
+loadScenes();
 startHero();
 (function route() {
   const qs = new URLSearchParams(location.search);
