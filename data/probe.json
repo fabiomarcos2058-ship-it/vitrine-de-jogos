@@ -1,102 +1,200 @@
 {
- "ps_search": {
-  "status": 200,
-  "type": "text/html; charset=utf-8",
-  "len": 80701,
-  "prices": [],
-  "head": "<!DOCTYPE html><html class=\"psw-root psw-rem-base\" dir=\"ltr\" lang=\"pt-br\"><head><meta name=\"wca-ssr-version\" content=\"3.48.0-2026.10.2-1.0\" /><meta name=\"wca-locale\" content=\"pt-BR\" /><meta name=\"wca-theme\" content=\"dark\" /><script id=\"wca-config-overrides\" type=\"application/json\">\n    {\"feature\":{\"enableOneTrustScript\":true,\"enableBundling\":true},\"client\":{\"webCheckout\":{\"clientId\":\"2eb25762-877f-4140-b341-7c7e14c19f98\"}}}</script>\n  <link rel=\"preconnect\" href=\"https://static.playstation.com\" crossorigin />\n    <link rel=\"dns-prefetch\" href=\"https://static.playstation.com\" />\n    <link rel=\""
- },
- "ps_search_links": [],
- "ps_search_price_ctx": null,
- "ps_query_len": 268498,
- "ps_frags": [
-  "on:false",
-  "personalizedMetaFragment:true",
-  "priceFragment:true"
+ "ps_ctx_before": "{\\n      id\\n    }\\n  }\\n\"]))),w=(0,y.Ps)(u||(u=(0,d.Z)([\"\\n  query getNavTree($clientId: ID!) {\\n    emsExperienceRetrieve(clientId: $clientId) {\\n      id\\n      navTree {\\n        ... navTreeFragment\\n      }\\n    }\\n  }\\n  \",\"\\n\"])),g),E=(0,y.Ps)(l||(l=(0,d.Z)([\"\\n  query getView($viewId: ID!, $experienceId: String!) {\\n    emsViewRetrieve(experienceId: $experienceId, viewId: $viewId) {\\n      ... on EMSViewCollection {\\n        ... viewCollectionFragment\\n      }\\n      ... on EMSView {\\n        ... viewFragment\\n      }\\n    }\\n  }\\n  \",\"\\n  \",\"\\n\"])),m,v),_=(0,y.Ps)(p||(p=(0,d.Z)([\"\\n  ",
+ "ps_ctx_after": "`fragment ${e}${nf(\"(\",nl(r,\", \"),\")\")} on ${t} ${nf(\"\",nl(n,\" \"),\" \")}`+i},IntValue:{leave:({value:e})=>e},FloatValue:{leave:({value:e})=>e},StringValue:{leave:({value:e,block:t})=>t?function(e,t){let r=e.replace(/\"\"\"/g,'\\\\\"\"\"'),n=r.split(/\\r\\n|[\\n\\r]/g),i=1===n.length,o=n.length>1&&n.slice(1).every(e=>0===e.length||ni(e.charCodeAt(0))),a=r.endsWith('\\\\\"\"\"'),c=e.endsWith('\"')&&!a,s=e.endsWith(\"\\\\\"),u=c||s,l=!i||e.length>70||u||o||a,p=\"\",f=i&&ni(e.charCodeAt(0));return(l&&!f||o)&&(p+=\"\\n\"),p+=r,(l||u)&&(p+=\"\\n\"),'\"\"\"'+p+'\"\"\"'}(e):`\"${e.replace(no,na)}\"`},BooleanValue:{leave:({value:e})=>e?\"true\":\"false\"},NullValue:{leave:()=>\"null\"},EnumValue:{leave:({value:e})=>e},ListValue:{leave:({values:e})=>\"[\"+nl(e,\", \")+\"]\"},ObjectValue:{leave:({fields:e})=>\"{\"+nl(e,\", \")+\"}\"},ObjectField:{leave:({n",
+ "ps_qsrc": "query getSearchResults(\\n    $countryCode: String,\\n    $languageCode: String,\\n    $nextCursor: String,\\n    $pageOffset: Float,\\n    $pageSize: Float,\\n    $searchDomains: String,\\n    $searchTerm: String!\\n    ) {\\n    universalSearch(\\n      countryCode: $countryCode,\\n      languageCode: $languageCode\\n      nextCursor: $nextCursor,\\n      pageOffset: $pageOffset,\\n      pageSize: $pageSize,\\n      searchDomains: $searchDomains,\\n      searchTerm: $searchTerm\\n    ) {\\n      searchTerm,\\n      next,\\n      pageInfo {\\n        totalCount,\\n        offset,\\n        size,\\n        isLast\\n      }\\n      results {\\n        ... on Concept {\\n          id,\\n          name,\\n          media {\\n            role,\\n            type,\\n            url,\\n          },\\n          personalizedMeta {\\n            ... personalizedMetaFragment\\n          },\\n          price {\\n            ... priceFragment,\\n            skuId,\\n          },\\n          products {\\n            id,\\n          },\\n        },\\n        ... on Product {\\n          id,\\n          name,\\n          npTitleId,\\n          localizedStoreDisplayClassification,\\n          storeDisplayClassification,\\n          platforms,\\n          price {\\n            ... priceFragment,\\n            skuId,\\n          },\\n          skus {\\n            type,\\n          },\\n          media {\\n            role,\\n            type,\\n            url,\\n          }\\n          personalizedMeta {\\n            ... personalizedMetaFragment\\n          }\\n        }\\n      }\\n    }\\n  }\\n  \",\"\\n  \",\"\\n\"])),h.re,h.rV);(0,y.Ps)(f||(f=(0,d.Z)([\"\\n  query getResolvedProduct($id: String) {\\n    resolveToProduct(id: $id) {\\n      id\\n    }\\n  }\\n\"])))},93119:function(e,t,r){\"use strict\";var n=r(41241),i=r(11148),o=r.n(i),a=r(83747);function c(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var n=Object.getOwnPropertySymbols(e);t&&(n=n.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),r.push.apply(r,n)}return r}function s(e){for(var t=1;t<arguments.length;t++){var r=null!=arguments[t]?arguments[t]:{};t%2?c(Object(r),!0).forEach(function(t){(0,n.Z)(e,t,r[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):c(Object(r)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))})}return e}t.Z={getProperties:function(){return s(s({},o()().publicRuntimeConfig),o()().serverRuntimeConfig)},get:function(e){return(0,a.Z)(this.getProperties(),e)},has:function(e){return!!this.get(e)},toString:function(){return JSON.stringify(this.getProperties(),null,\"  \")}}},60743:function(e,t,r){\"use strict\";r.d(t,{$L:function(){return y},$h:function(){return p},GY:function(){return n},Hq:function(){return a},K3:function(){return f},Mk:function(){return d},W7:function(){return o},hJ:function(){return l},hd:function(){return c},oe:function(){return u},xA:function(){return s},xl:function(){return i}});var n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.alias;return\"/[locale]/pages\".concat(t?\"/[alias]\":\"\")},i=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.locale,r=e.alias;return\"/\".concat(t,\"/pages\").concat(r?\"/\".concat(r):\"\")},o=function(){return\"/[locale]/category/[categoryId]/[page]\"},a=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.locale,r=e.categoryId,n=e.page;return\"/\".concat(t,\"/category/\").concat(r,\"/\").concat(void 0===n?1:n)},c=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.page;return\"/[locale]/pages/[alias]\".concat(t?\"/[page]\":\"\")},s=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.locale,r=e.alias,n=e.page;return\"/\".concat(t,\"/pages/\").concat(r).concat(n?\"/\".concat(n):\"\")},u=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},t=e.linkName,r=e.locale,n=e.psPlusUrl;return\"\".concat(n,\"?smcid=web-store:\").concat(r.toLowerCase(),\":search:ser",
+ "ps_frag_names": [
+  "FullType",
+  "InputValue",
+  "TypeRef",
+  "ConceptMedia",
+  "ProductMedia",
+  "ProductCtaPrice",
+  "productWithCtasFragment",
+  "ProductCta",
+  "ConceptCtas",
+  "viewFragment",
+  "viewCollectionFragment",
+  "navItemFragment",
+  "navTreeFragment",
+  "personalizedMetaFragment",
+  "priceFragment",
+  "categoryStrandFragment",
+  "componentFragment",
+  "sectionGroupFragment"
  ],
- "ps_gql_post": {
-  "status": 400,
-  "type": "application/json",
-  "len": 208,
-  "prices": [],
-  "head": "{\"errors\":[{\"message\":\"This endpoint does not allow freeform GraphQL requests; operations must be sent by ID in the persisted queries GraphQL extension.\",\"extensions\":{\"code\":\"PERSISTED_QUERY_ID_REQUIRED\"}}]}"
+ "parse_err": "Syntax Error: Unexpected String \",\".",
+ "ps_tries": {
+  "raw_join": "404 {\"errors\":[{\"message\":\"Persisted query '25c9d2393d9a74e24903ca1a134ced44d10bc8a77b18cf839213b6b9f03fba28' not found in the persisted query list\",\"extensions\":{\"",
+  "raw_q": "404 {\"errors\":[{\"message\":\"Persisted query 'a5b3e64332ac94fb43748271c78d87078fe19507d89c196e73cb99428eba29e5' not found in the persisted query list\",\"extensions\":{\""
  },
- "ps_gql_get_raw": {
-  "status": 404,
-  "type": "application/json",
-  "len": 235,
-  "prices": [],
-  "head": "{\"errors\":[{\"message\":\"Persisted query '7edf9641e950f0773d09b1f88f7c685b2633e9f90e81e3981543bcc46654c32f' not found in the persisted query list\",\"extensions\":{\"operation_name\":\"getSearchResults\",\"code\":\"PERSISTED_QUERY_NOT_IN_LIST\"}}]}"
- },
- "ps_gql_get_full": {
-  "status": 404,
-  "type": "application/json",
-  "len": 235,
-  "prices": [],
-  "head": "{\"errors\":[{\"message\":\"Persisted query 'b5a9a4577384b1348e7895303b11f49d8800358a9d6b2c4ea1272d596440e4c2' not found in the persisted query list\",\"extensions\":{\"operation_name\":\"getSearchResults\",\"code\":\"PERSISTED_QUERY_NOT_IN_LIST\"}}]}"
- },
- "ep_gql_post": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "len": 25190,
-  "prices": [],
-  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
- },
- "ep_gql_get_hash": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "len": 27044,
-  "prices": [],
-  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
- },
- "ep_page": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "len": 24973,
-  "prices": [],
-  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
- },
- "ep_page_ctx": null,
- "ep_page_ld": null,
- "ep_cms": {
+ "ps_site_game": {
   "status": 200,
-  "type": "application/json; charset=utf-8",
-  "len": 15121,
-  "prices": [],
-  "head": "{\"productRatings\":{\"_type\":\"Epic Store Product Ratings\"},\"pageTheme\":{\"preferredMode\":\"dark\",\"light\":{\"_type\":\"Epic Store Page Theme Selection\",\"theme\":\"gray\",\"accent\":\"#A61717\"},\"_type\":\"Epic Store Page Theme\",\"dark\":{\"_type\":\"Epic Store Page Theme Selection\",\"theme\":\"gray\",\"accent\":\"#A61717\"}},\"namespace\":\"min\",\"_title\":\"hades\",\"regionBlock\":\"\",\"productName\":\"Hades\",\"externalNavLinks\":{\"_type\":\"Epic Store Links\"},\"_urlPattern\":\"/pt-BR/productv2/hades\",\"_slug\":\"hades\",\"_activeDate\":\"2018-10-17T15:40:48.524Z\",\"lastModified\":\"2019-08-06T15:51:05.215Z\",\"_locale\":\"pt-BR\",\"_id\":\"74358cab-f2e3-4d27"
- },
- "ep_platform_home": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "len": 25476,
-  "prices": [],
-  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
- },
- "ep_platform_search": {
-  "status": 403,
-  "type": "text/html; charset=UTF-8",
-  "len": 25380,
-  "prices": [],
-  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
- },
- "ep_static_layout": {
-  "status": 200,
-  "type": "application/json; charset=utf-8",
-  "len": 416390,
+  "len": 578545,
   "prices": [
-   "R$ 31,99",
-   "R$ 31,99",
-   "R$ 31,99",
-   "R$ 94,99",
-   "R$ 94,99",
-   "R$ 94,99",
-   "R$ 52,99",
-   "R$ 52,99",
-   "R$ 52,99",
-   "R$ 39,99",
-   "R$ 39,99",
-   "R$ 39,99"
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90"
   ],
-  "head": "{\"data\":{\"Storefront\":{\"storefrontModulesPaginated\":{\"modules\":[{\"id\":\"new-carousel-definitive\",\"type\":\"saleCarousel\",\"title\":\"New Featured Carousel \",\"slides\":[{\"title\":\"The Witcher 3: Wild Hunt — Remastered\",\"eyebrow\":\"Um RPG lendário, agora remasterizado\",\"description\":\"Conheça a aventura épica de Geralt de Rívia, agora aprimorada com atualizações nos elementos visuais, na jogabilidade e muito mais.\",\"textColor\":\"\",\"accentColor\":\"\",\"textAccentColor\":\"\",\"theme\":{\"preferredMode\":null,\"light\":{\"theme\":null,\"accent\":null},\"dark\":{\"theme\":null,\"accent\":null}},\"image\":{\"src\":\"https://cdn2.unreale"
- }
+  "head": "<!DOCTYPE HTML><html lang=\"pt-BR\" xml:lang=\"pt-BR\" dir=\"ltr\"><head><meta name=\"content-page-ref\" content=\"B6_nTNzYIGPeJ3lGUtKEGEJqtA54e5fWr5zpQvcHMjMvfJZN15I2cnoUaKGtkTZ2uOhg0IExBXzaooq4zfXDjTw5z_74luEP48IMbwbhC6UXcRbqtdJl2yGqrXuM4FJ9\"/><script defer=\"defer\" type=\"text/javascript\" src=\"/.rum/@adobe/"
+ },
+ "ps_site_ids": [
+  "UP9000-PPSA08329_00-GOWRAGNAROK00000",
+  "UP9000-CUSA34384_00-GOWRAGNAROK00000",
+  "UP9000-PPSA08329_00-GOWRAGNAROKDELUX"
+ ],
+ "ps_site_concepts": [],
+ "ps_product": {
+  "status": 200,
+  "len": 1107452,
+  "prices": [
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90",
+   "R$349,90"
+  ],
+  "head": "<!DOCTYPE html><html class=\"psw-root psw-rem-base\" dir=\"ltr\" lang=\"pt-br\"><head><meta name=\"wca-ssr-version\" content=\"3.48.0-2026.10.2-1.0\" /><meta name=\"wca-locale\" content=\"pt-BR\" /><meta name=\"wca-theme\" content=\"dark\" /><script id=\"wca-config-overrides\" type=\"application/json\">\n    {\"feature\":{\""
+ },
+ "ps_product_qa": [
+  "mfeCtaMain#offer0#finalPrice = Incluído",
+  "mfeCtaMain#offer0#originalPrice = ",
+  "mfeCtaMain#offer1#finalPrice = R$349,90",
+  "mfeUpsell#productEdition0#ctaWithPrice = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#offer0 = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#offer0#finalPrice = Incluído",
+  "mfeUpsell#productEdition0#ctaWithPrice#offer0#originalPrice = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#offer0#serviceIcon#ps-plus = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#cta = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#cta#action = ",
+  "mfeUpsell#productEdition0#ctaWithPrice#loadingOverlay = ",
+  "mfeUpsell#productEdition1#ctaWithPrice = "
+ ],
+ "ps_product_json": ":\"CTAMeta\",\"upSellService\":\"PS_PLUS\",\"exclusive\":false,\"playabilityDate\":null,\"ineligibilityReasons\":[{\"__typename\":\"IneligibilityReason\",\"type\":\"UNKNOWN\",\"names\":[]}]},\"price\":{\"__typename\":\"Price\",\"basePrice\":\"R$349,90\",\"discountedPrice\":\"Incluído\",\"displayDiscountText\":\"Incluído\",\"serviceBranding\":[\"PS_PLUS\"],\"endTime\":null,\"displayUpsellText\":\"Assine PlayStation Plus Extra para acessar este jogo e centenas de outros no Catálogo de jogos\",\"basePriceValue\":34990,\"discountedValue\":0,\"currencyCode\":\"BRL\",\"qualifications\":[{\"__typename\":\"Qualification\",\"type\":\"ENTITLEMENT_IN_CART\",\"value\":\"SUB0",
+ "ep_layout_offers": 410,
+ "ep_layout_sample": [
+  {
+   "t": "Sigilfarer: A Dice-Rolling Roguelite",
+   "b": 3199,
+   "f": 3199,
+   "c": "BRL"
+  },
+  {
+   "t": "Professional Ship Simulator",
+   "b": 9499,
+   "f": 9499,
+   "c": "BRL"
+  },
+  {
+   "t": "Kernel Hearts",
+   "b": 5299,
+   "f": 5299,
+   "c": "BRL"
+  },
+  {
+   "t": "Trivia Murder Party 3",
+   "b": 3999,
+   "f": 3999,
+   "c": "BRL"
+  },
+  {
+   "t": "Chop Chop Together",
+   "b": 3499,
+   "f": 3499,
+   "c": "BRL"
+  },
+  {
+   "t": "Nightwater",
+   "b": 3999,
+   "f": 3999,
+   "c": "BRL"
+  },
+  {
+   "t": "BODY CAM 2026",
+   "b": 3499,
+   "f": 3499,
+   "c": "BRL"
+  },
+  {
+   "t": "Graveyard Keeper 2",
+   "b": 6699,
+   "f": 6699,
+   "c": "BRL"
+  },
+  {
+   "t": "CONTROL Resonant",
+   "b": 22999,
+   "f": 22999,
+   "c": "BRL"
+  },
+  {
+   "t": "EA SPORTS FC™ 27",
+   "b": 29900,
+   "f": 29900,
+   "c": "BRL"
+  },
+  {
+   "t": "SILENT HILL: Townfall",
+   "b": 28490,
+   "f": 28490,
+   "c": "BRL"
+  },
+  {
+   "t": "Monastery: Ora et Labora",
+   "b": 5349,
+   "f": 5349,
+   "c": "BRL"
+  },
+  {
+   "t": "The Devil is in the Details",
+   "b": 3499,
+   "f": 3499,
+   "c": "BRL"
+  },
+  {
+   "t": "Transport Fever 3",
+   "b": 16499,
+   "f": 16499,
+   "c": "BRL"
+  },
+  {
+   "t": "End of Abyss",
+   "b": 10399,
+   "f": 10399,
+   "c": "BRL"
+  }
+ ],
+ "ep_cms_keys": [
+  "productRatings",
+  "pageTheme",
+  "namespace",
+  "_title",
+  "regionBlock",
+  "productName",
+  "externalNavLinks",
+  "_urlPattern",
+  "_slug",
+  "_activeDate",
+  "lastModified",
+  "_locale",
+  "_id",
+  "_templateName",
+  "pages",
+  "productRatings,pageTheme,namespace,_title,regionBlock,productName,externalNavLinks,_urlPattern,_slug,_activeDate,lastModified,_locale,_id,_templateName,offer,item,data,_metaTags,ageGate,theme,type,_noIndex,_images_"
+ ],
+ "ep_cms_offer": [
+  "\"namespace\":\"min\"",
+  "\"namespace\":\"min\"",
+  "\"namespace\":\"min\"",
+  "\"namespace\":\"min\"",
+  "\"offerId\":\"2ae6edb2223c4f8c97e9839b5b6497bb\"",
+  "\"namespace\":\"min\""
+ ]
 }
