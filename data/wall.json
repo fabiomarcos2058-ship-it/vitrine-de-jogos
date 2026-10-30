@@ -1,0 +1,2725 @@
+{
+"updated": "2026-10-30T00:31:42Z",
+"games": {
+"Resident Evil 4": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/w/w5q3q6.webp",
+"id": "w5q3q6",
+"thumb": "https://th.wallhaven.cc/small/w5/w5q3q6.jpg"
+},
+{
+"n": "Ada Wong",
+"img": "chars/w/39pjkd.webp",
+"id": "39pjkd",
+"thumb": "https://th.wallhaven.cc/small/39/39pjkd.jpg"
+},
+{
+"n": "Ashley Graham",
+"img": "chars/w/ymwm2l.webp",
+"id": "ymwm2l",
+"thumb": "https://th.wallhaven.cc/small/ym/ymwm2l.jpg"
+}
+],
+"Resident Evil 4 (2005)": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/w/w5q3q6.webp",
+"id": "w5q3q6",
+"thumb": "https://th.wallhaven.cc/small/w5/w5q3q6.jpg"
+},
+{
+"n": "Ada Wong",
+"img": "chars/w/39pjkd.webp",
+"id": "39pjkd",
+"thumb": "https://th.wallhaven.cc/small/39/39pjkd.jpg"
+},
+{
+"n": "Ashley Graham",
+"img": "chars/w/ymwm2l.webp",
+"id": "ymwm2l",
+"thumb": "https://th.wallhaven.cc/small/ym/ymwm2l.jpg"
+}
+],
+"Resident Evil 2": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/w/w5q3q6.webp",
+"id": "w5q3q6",
+"thumb": "https://th.wallhaven.cc/small/w5/w5q3q6.jpg"
+},
+{
+"n": "Claire Redfield",
+"img": "chars/w/p8y31j.webp",
+"id": "p8y31j",
+"thumb": "https://th.wallhaven.cc/small/p8/p8y31j.jpg"
+},
+{
+"n": "Ada Wong",
+"img": "chars/w/39pjkd.webp",
+"id": "39pjkd",
+"thumb": "https://th.wallhaven.cc/small/39/39pjkd.jpg"
+},
+{
+"n": "Sherry Birkin",
+"img": "chars/w/ymwm2l.webp",
+"id": "ymwm2l",
+"thumb": "https://th.wallhaven.cc/small/ym/ymwm2l.jpg"
+},
+{
+"n": "William Birkin",
+"img": "chars/w/6klyzw.webp",
+"id": "6klyzw",
+"thumb": "https://th.wallhaven.cc/small/6k/6klyzw.jpg"
+}
+],
+"Resident Evil 3": [
+{
+"n": "Jill Valentine",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+},
+{
+"n": "Carlos Oliveira",
+"img": "chars/w/kwv977.webp",
+"id": "kwv977",
+"thumb": "https://th.wallhaven.cc/small/kw/kwv977.jpg"
+}
+],
+"Resident Evil Village": [
+{
+"n": "Alcina Dimitrescu",
+"img": "chars/w/8ogz8o.webp",
+"id": "8ogz8o",
+"thumb": "https://th.wallhaven.cc/small/8o/8ogz8o.jpg"
+},
+{
+"n": "Mother Miranda",
+"img": "chars/w/9me9qk.webp",
+"id": "9me9qk",
+"thumb": "https://th.wallhaven.cc/small/9m/9me9qk.jpg"
+},
+{
+"n": "Donna Beneviento",
+"img": "chars/w/k7rlyd.webp",
+"id": "k7rlyd",
+"thumb": "https://th.wallhaven.cc/small/k7/k7rlyd.jpg"
+}
+],
+"Resident Evil 7: Biohazard": [
+{
+"n": "Lucas Baker",
+"img": "chars/w/rdrpxm.webp",
+"id": "rdrpxm",
+"thumb": "https://th.wallhaven.cc/small/rd/rdrpxm.jpg"
+}
+],
+"Resident Evil Requiem": [
+{
+"n": "Grace Ashcroft",
+"img": "chars/w/w563p6.webp",
+"id": "w563p6",
+"thumb": "https://th.wallhaven.cc/small/w5/w563p6.jpg"
+},
+{
+"n": "Leon S. Kennedy",
+"img": "chars/w/gwqmgd.webp",
+"id": "gwqmgd",
+"thumb": "https://th.wallhaven.cc/small/gw/gwqmgd.jpg"
+}
+],
+"Resident Evil": [
+{
+"n": "Chris Redfield",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+},
+{
+"n": "Jill Valentine",
+"img": "chars/w/2e5w59.webp",
+"id": "2e5w59",
+"thumb": "https://th.wallhaven.cc/small/2e/2e5w59.jpg"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/w/z8owoy.webp",
+"id": "z8owoy",
+"thumb": "https://th.wallhaven.cc/small/z8/z8owoy.jpg"
+},
+{
+"n": "Barry Burton",
+"img": "chars/w/2ejmvy.webp",
+"id": "2ejmvy",
+"thumb": "https://th.wallhaven.cc/small/2e/2ejmvy.jpg"
+},
+{
+"n": "Rebecca Chambers",
+"img": "chars/w/4y9jwd.webp",
+"id": "4y9jwd",
+"thumb": "https://th.wallhaven.cc/small/4y/4y9jwd.jpg"
+}
+],
+"Resident Evil 0": [
+{
+"n": "Rebecca Chambers",
+"img": "chars/w/4y9jwd.webp",
+"id": "4y9jwd",
+"thumb": "https://th.wallhaven.cc/small/4y/4y9jwd.jpg"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+}
+],
+"Resident Evil 5": [
+{
+"n": "Chris Redfield",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+},
+{
+"n": "Sheva Alomar",
+"img": "chars/w/ymwm2l.webp",
+"id": "ymwm2l",
+"thumb": "https://th.wallhaven.cc/small/ym/ymwm2l.jpg"
+},
+{
+"n": "Albert Wesker",
+"img": "chars/w/z8owoy.webp",
+"id": "z8owoy",
+"thumb": "https://th.wallhaven.cc/small/z8/z8owoy.jpg"
+},
+{
+"n": "Jill Valentine",
+"img": "chars/w/2e5w59.webp",
+"id": "2e5w59",
+"thumb": "https://th.wallhaven.cc/small/2e/2e5w59.jpg"
+}
+],
+"Resident Evil 6": [
+{
+"n": "Leon S. Kennedy",
+"img": "chars/w/w5q3q6.webp",
+"id": "w5q3q6",
+"thumb": "https://th.wallhaven.cc/small/w5/w5q3q6.jpg"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+},
+{
+"n": "Jake Muller",
+"img": "chars/w/ymzlwl.webp",
+"id": "ymzlwl",
+"thumb": "https://th.wallhaven.cc/small/ym/ymzlwl.jpg"
+},
+{
+"n": "Sherry Birkin",
+"img": "chars/w/ymwm2l.webp",
+"id": "ymwm2l",
+"thumb": "https://th.wallhaven.cc/small/ym/ymwm2l.jpg"
+},
+{
+"n": "Ada Wong",
+"img": "chars/w/39pjkd.webp",
+"id": "39pjkd",
+"thumb": "https://th.wallhaven.cc/small/39/39pjkd.jpg"
+}
+],
+"Resident Evil Code: Veronica X": [
+{
+"n": "Claire Redfield",
+"img": "chars/w/p8y31j.webp",
+"id": "p8y31j",
+"thumb": "https://th.wallhaven.cc/small/p8/p8y31j.jpg"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+}
+],
+"Resident Evil Revelations": [
+{
+"n": "Jill Valentine",
+"img": "chars/w/pkjej3.webp",
+"id": "pkjej3",
+"thumb": "https://th.wallhaven.cc/small/pk/pkjej3.jpg"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/w/z8owoy.webp",
+"id": "z8owoy",
+"thumb": "https://th.wallhaven.cc/small/z8/z8owoy.jpg"
+}
+],
+"Resident Evil Revelations 2": [
+{
+"n": "Claire Redfield",
+"img": "chars/w/vm2r5m.webp",
+"id": "vm2r5m",
+"thumb": "https://th.wallhaven.cc/small/vm/vm2r5m.jpg"
+},
+{
+"n": "Barry Burton",
+"img": "chars/w/47xzj3.webp",
+"id": "47xzj3",
+"thumb": "https://th.wallhaven.cc/small/47/47xzj3.jpg"
+}
+],
+"Grand Theft Auto V": [
+{
+"n": "Michael De Santa",
+"img": "chars/w/nr85j4.webp",
+"id": "nr85j4",
+"thumb": "https://th.wallhaven.cc/small/nr/nr85j4.jpg"
+},
+{
+"n": "Franklin Clinton",
+"img": "chars/w/4o7979.webp",
+"id": "4o7979",
+"thumb": "https://th.wallhaven.cc/small/4o/4o7979.jpg"
+},
+{
+"n": "Trevor Philips",
+"img": "chars/w/0j1g3q.webp",
+"id": "0j1g3q",
+"thumb": "https://th.wallhaven.cc/small/0j/0j1g3q.jpg"
+}
+],
+"Grand Theft Auto Online": [
+{
+"n": "Franklin Clinton",
+"img": "chars/w/4o7979.webp",
+"id": "4o7979",
+"thumb": "https://th.wallhaven.cc/small/4o/4o7979.jpg"
+},
+{
+"n": "Trevor Philips",
+"img": "chars/w/0j1g3q.webp",
+"id": "0j1g3q",
+"thumb": "https://th.wallhaven.cc/small/0j/0j1g3q.jpg"
+}
+],
+"Grand Theft Auto VI": [
+{
+"n": "Lucia Caminos",
+"img": "chars/w/vq3g7m.webp",
+"id": "vq3g7m",
+"thumb": "https://th.wallhaven.cc/small/vq/vq3g7m.jpg"
+},
+{
+"n": "Jason Duval",
+"img": "chars/w/yqjm57.webp",
+"id": "yqjm57",
+"thumb": "https://th.wallhaven.cc/small/yq/yqjm57.jpg"
+}
+],
+"Grand Theft Auto IV": [
+{
+"n": "Niko Bellic",
+"img": "chars/w/01popg.webp",
+"id": "01popg",
+"thumb": "https://th.wallhaven.cc/small/01/01popg.jpg"
+}
+],
+"Grand Theft Auto: The Trilogy – The Definitive Edition": [
+{
+"n": "Carl Johnson",
+"img": "chars/w/nr85j4.webp",
+"id": "nr85j4",
+"thumb": "https://th.wallhaven.cc/small/nr/nr85j4.jpg"
+},
+{
+"n": "Tommy Vercetti",
+"img": "chars/w/45pm55.webp",
+"id": "45pm55",
+"thumb": "https://th.wallhaven.cc/small/45/45pm55.jpg"
+},
+{
+"n": "Claude",
+"img": "chars/w/01popg.webp",
+"id": "01popg",
+"thumb": "https://th.wallhaven.cc/small/01/01popg.jpg"
+},
+{
+"n": "Big Smoke",
+"img": "chars/w/vpxl78.webp",
+"id": "vpxl78",
+"thumb": "https://th.wallhaven.cc/small/vp/vpxl78.jpg"
+}
+],
+"God of War": [
+{
+"n": "Kratos",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Atreus",
+"img": "chars/w/w8pydp.webp",
+"id": "w8pydp",
+"thumb": "https://th.wallhaven.cc/small/w8/w8pydp.jpg"
+},
+{
+"n": "Freya",
+"img": "chars/w/5ggpx7.webp",
+"id": "5ggpx7",
+"thumb": "https://th.wallhaven.cc/small/5g/5ggpx7.jpg"
+},
+{
+"n": "Baldur",
+"img": "chars/w/wy9jqp.webp",
+"id": "wy9jqp",
+"thumb": "https://th.wallhaven.cc/small/wy/wy9jqp.jpg"
+}
+],
+"God of War Ragnarök": [
+{
+"n": "Kratos",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Atreus",
+"img": "chars/w/w8pydp.webp",
+"id": "w8pydp",
+"thumb": "https://th.wallhaven.cc/small/w8/w8pydp.jpg"
+},
+{
+"n": "Freya",
+"img": "chars/w/5ggpx7.webp",
+"id": "5ggpx7",
+"thumb": "https://th.wallhaven.cc/small/5g/5ggpx7.jpg"
+},
+{
+"n": "Thor",
+"img": "chars/w/1k32q1.webp",
+"id": "1k32q1",
+"thumb": "https://th.wallhaven.cc/small/1k/1k32q1.jpg"
+}
+],
+"The Last of Us Part I": [
+{
+"n": "Joel Miller",
+"img": "chars/w/831xdo.webp",
+"id": "831xdo",
+"thumb": "https://th.wallhaven.cc/small/83/831xdo.jpg"
+},
+{
+"n": "Ellie Williams",
+"img": "chars/w/j3259p.webp",
+"id": "j3259p",
+"thumb": "https://th.wallhaven.cc/small/j3/j3259p.jpg"
+}
+],
+"The Last of Us Part II Remastered": [
+{
+"n": "Ellie Williams",
+"img": "chars/w/j3259p.webp",
+"id": "j3259p",
+"thumb": "https://th.wallhaven.cc/small/j3/j3259p.jpg"
+},
+{
+"n": "Abby Anderson",
+"img": "chars/w/g8rky3.webp",
+"id": "g8rky3",
+"thumb": "https://th.wallhaven.cc/small/g8/g8rky3.jpg"
+},
+{
+"n": "Joel Miller",
+"img": "chars/w/3qoz6d.webp",
+"id": "3qoz6d",
+"thumb": "https://th.wallhaven.cc/small/3q/3qoz6d.jpg"
+},
+{
+"n": "Dina",
+"img": "chars/w/m911rm.webp",
+"id": "m911rm",
+"thumb": "https://th.wallhaven.cc/small/m9/m911rm.jpg"
+}
+],
+"Marvel's Spider-Man 2": [
+{
+"n": "Peter Parker",
+"img": "chars/w/5gmjd8.webp",
+"id": "5gmjd8",
+"thumb": "https://th.wallhaven.cc/small/5g/5gmjd8.jpg"
+},
+{
+"n": "Miles Morales",
+"img": "chars/w/zm825o.webp",
+"id": "zm825o",
+"thumb": "https://th.wallhaven.cc/small/zm/zm825o.jpg"
+},
+{
+"n": "Kraven",
+"img": "chars/w/ly36yy.webp",
+"id": "ly36yy",
+"thumb": "https://th.wallhaven.cc/small/ly/ly36yy.jpg"
+}
+],
+"Marvel's Spider-Man: Miles Morales": [
+{
+"n": "Miles Morales",
+"img": "chars/w/zm825o.webp",
+"id": "zm825o",
+"thumb": "https://th.wallhaven.cc/small/zm/zm825o.jpg"
+},
+{
+"n": "Peter Parker",
+"img": "chars/w/5gmjd8.webp",
+"id": "5gmjd8",
+"thumb": "https://th.wallhaven.cc/small/5g/5gmjd8.jpg"
+}
+],
+"Marvel's Spider-Man Remastered": [
+{
+"n": "Peter Parker",
+"img": "chars/w/5gmjd8.webp",
+"id": "5gmjd8",
+"thumb": "https://th.wallhaven.cc/small/5g/5gmjd8.jpg"
+},
+{
+"n": "Miles Morales",
+"img": "chars/w/zm825o.webp",
+"id": "zm825o",
+"thumb": "https://th.wallhaven.cc/small/zm/zm825o.jpg"
+},
+{
+"n": "Otto Octavius",
+"img": "chars/w/dp233g.webp",
+"id": "dp233g",
+"thumb": "https://th.wallhaven.cc/small/dp/dp233g.jpg"
+}
+],
+"Ghost of Tsushima": [
+{
+"n": "Jin Sakai",
+"img": "chars/w/mdr829.webp",
+"id": "mdr829",
+"thumb": "https://th.wallhaven.cc/small/md/mdr829.jpg"
+},
+{
+"n": "Yuna",
+"img": "chars/w/j317my.webp",
+"id": "j317my",
+"thumb": "https://th.wallhaven.cc/small/j3/j317my.jpg"
+},
+{
+"n": "Lord Shimura",
+"img": "chars/w/1k1m33.webp",
+"id": "1k1m33",
+"thumb": "https://th.wallhaven.cc/small/1k/1k1m33.jpg"
+},
+{
+"n": "Ishikawa",
+"img": "chars/w/k8xd66.webp",
+"id": "k8xd66",
+"thumb": "https://th.wallhaven.cc/small/k8/k8xd66.jpg"
+}
+],
+"Ghost of Yōtei": [
+{
+"n": "Atsu",
+"img": "chars/w/qrow8l.webp",
+"id": "qrow8l",
+"thumb": "https://th.wallhaven.cc/small/qr/qrow8l.jpg"
+}
+],
+"Horizon Forbidden West": [
+{
+"n": "Aloy",
+"img": "chars/w/g83m3d.webp",
+"id": "g83m3d",
+"thumb": "https://th.wallhaven.cc/small/g8/g83m3d.jpg"
+},
+{
+"n": "Varl",
+"img": "chars/w/1kwy81.webp",
+"id": "1kwy81",
+"thumb": "https://th.wallhaven.cc/small/1k/1kwy81.jpg"
+},
+{
+"n": "Zo",
+"img": "chars/w/yqjz9g.webp",
+"id": "yqjz9g",
+"thumb": "https://th.wallhaven.cc/small/yq/yqjz9g.jpg"
+},
+{
+"n": "Kotallo",
+"img": "chars/w/z8rlrj.webp",
+"id": "z8rlrj",
+"thumb": "https://th.wallhaven.cc/small/z8/z8rlrj.jpg"
+},
+{
+"n": "Erend",
+"img": "chars/w/x1217l.webp",
+"id": "x1217l",
+"thumb": "https://th.wallhaven.cc/small/x1/x1217l.jpg"
+}
+],
+"Horizon Zero Dawn Remastered": [
+{
+"n": "Aloy",
+"img": "chars/w/g83m3d.webp",
+"id": "g83m3d",
+"thumb": "https://th.wallhaven.cc/small/g8/g83m3d.jpg"
+},
+{
+"n": "Rost",
+"img": "chars/w/1jwqeg.webp",
+"id": "1jwqeg",
+"thumb": "https://th.wallhaven.cc/small/1j/1jwqeg.jpg"
+},
+{
+"n": "Sylens",
+"img": "chars/w/z8rlrj.webp",
+"id": "z8rlrj",
+"thumb": "https://th.wallhaven.cc/small/z8/z8rlrj.jpg"
+},
+{
+"n": "Erend",
+"img": "chars/w/x1217l.webp",
+"id": "x1217l",
+"thumb": "https://th.wallhaven.cc/small/x1/x1217l.jpg"
+},
+{
+"n": "Varl",
+"img": "chars/w/1kwy81.webp",
+"id": "1kwy81",
+"thumb": "https://th.wallhaven.cc/small/1k/1kwy81.jpg"
+}
+],
+"Uncharted: Coleção Legado dos Ladrões": [
+{
+"n": "Nathan Drake",
+"img": "chars/w/4ymmyd.webp",
+"id": "4ymmyd",
+"thumb": "https://th.wallhaven.cc/small/4y/4ymmyd.jpg"
+},
+{
+"n": "Chloe Frazer",
+"img": "chars/w/nk5ee1.webp",
+"id": "nk5ee1",
+"thumb": "https://th.wallhaven.cc/small/nk/nk5ee1.jpg"
+},
+{
+"n": "Samuel Drake",
+"img": "chars/w/5dgrx3.webp",
+"id": "5dgrx3",
+"thumb": "https://th.wallhaven.cc/small/5d/5dgrx3.jpg"
+},
+{
+"n": "Elena Fisher",
+"img": "chars/w/eymg2l.webp",
+"id": "eymg2l",
+"thumb": "https://th.wallhaven.cc/small/ey/eymg2l.jpg"
+},
+{
+"n": "Victor Sullivan",
+"img": "chars/w/x1pmjz.webp",
+"id": "x1pmjz",
+"thumb": "https://th.wallhaven.cc/small/x1/x1pmjz.jpg"
+}
+],
+"Elden Ring": [
+{
+"n": "Malenia, Blade of Miquella",
+"img": "chars/w/57o9j5.webp",
+"id": "57o9j5",
+"thumb": "https://th.wallhaven.cc/small/57/57o9j5.jpg"
+},
+{
+"n": "Ranni the Witch",
+"img": "chars/w/wqkxyp.webp",
+"id": "wqkxyp",
+"thumb": "https://th.wallhaven.cc/small/wq/wqkxyp.jpg"
+},
+{
+"n": "Melina",
+"img": "chars/w/9my3o8.webp",
+"id": "9my3o8",
+"thumb": "https://th.wallhaven.cc/small/9m/9my3o8.jpg"
+},
+{
+"n": "Starscourge Radahn",
+"img": "chars/w/gpex2d.webp",
+"id": "gpex2d",
+"thumb": "https://th.wallhaven.cc/small/gp/gpex2d.jpg"
+},
+{
+"n": "Messmer the Impaler",
+"img": "chars/w/m3vvwy.webp",
+"id": "m3vvwy",
+"thumb": "https://th.wallhaven.cc/small/m3/m3vvwy.jpg"
+}
+],
+"Elden Ring Nightreign": [
+{
+"n": "Malenia, Blade of Miquella",
+"img": "chars/w/57o9j5.webp",
+"id": "57o9j5",
+"thumb": "https://th.wallhaven.cc/small/57/57o9j5.jpg"
+},
+{
+"n": "Starscourge Radahn",
+"img": "chars/w/gpex2d.webp",
+"id": "gpex2d",
+"thumb": "https://th.wallhaven.cc/small/gp/gpex2d.jpg"
+}
+],
+"Sekiro: Shadows Die Twice": [
+{
+"n": "Wolf",
+"img": "chars/w/5g5221.webp",
+"id": "5g5221",
+"thumb": "https://th.wallhaven.cc/small/5g/5g5221.jpg"
+},
+{
+"n": "Isshin Ashina",
+"img": "chars/w/zm3wqo.webp",
+"id": "zm3wqo",
+"thumb": "https://th.wallhaven.cc/small/zm/zm3wqo.jpg"
+},
+{
+"n": "Emma",
+"img": "chars/w/739d73.webp",
+"id": "739d73",
+"thumb": "https://th.wallhaven.cc/small/73/739d73.jpg"
+}
+],
+"Bloodborne": [
+{
+"n": "Lady Maria of the Astral Clocktower",
+"img": "chars/w/ym3wlk.webp",
+"id": "ym3wlk",
+"thumb": "https://th.wallhaven.cc/small/ym/ym3wlk.jpg"
+},
+{
+"n": "Gehrman, The First Hunter",
+"img": "chars/w/qr3ozr.webp",
+"id": "qr3ozr",
+"thumb": "https://th.wallhaven.cc/small/qr/qr3ozr.jpg"
+},
+{
+"n": "Eileen the Crow",
+"img": "chars/w/73ql9o.webp",
+"id": "73ql9o",
+"thumb": "https://th.wallhaven.cc/small/73/73ql9o.jpg"
+},
+{
+"n": "The Doll",
+"img": "chars/w/8geml1.webp",
+"id": "8geml1",
+"thumb": "https://th.wallhaven.cc/small/8g/8geml1.jpg"
+}
+],
+"Dark Souls III": [
+{
+"n": "Fire Keeper",
+"img": "chars/w/zmd6my.webp",
+"id": "zmd6my",
+"thumb": "https://th.wallhaven.cc/small/zm/zmd6my.jpg"
+},
+{
+"n": "Soul of Cinder",
+"img": "chars/w/x85qqz.webp",
+"id": "x85qqz",
+"thumb": "https://th.wallhaven.cc/small/x8/x85qqz.jpg"
+},
+{
+"n": "Siegward of Catarina",
+"img": "chars/w/v93p9m.webp",
+"id": "v93p9m",
+"thumb": "https://th.wallhaven.cc/small/v9/v93p9m.jpg"
+}
+],
+"Cyberpunk 2077": [
+{
+"n": "V",
+"img": "chars/w/j353oy.webp",
+"id": "j353oy",
+"thumb": "https://th.wallhaven.cc/small/j3/j353oy.jpg"
+},
+{
+"n": "Johnny Silverhand",
+"img": "chars/w/9d2lek.webp",
+"id": "9d2lek",
+"thumb": "https://th.wallhaven.cc/small/9d/9d2lek.jpg"
+},
+{
+"n": "Panam Palmer",
+"img": "chars/w/2817o9.webp",
+"id": "2817o9",
+"thumb": "https://th.wallhaven.cc/small/28/2817o9.jpg"
+},
+{
+"n": "Jackie Welles",
+"img": "chars/w/mllkx1.webp",
+"id": "mllkx1",
+"thumb": "https://th.wallhaven.cc/small/ml/mllkx1.jpg"
+}
+],
+"The Witcher 3: Wild Hunt": [
+{
+"n": "Geralt of Rivia",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Ciri",
+"img": "chars/w/76qm69.webp",
+"id": "76qm69",
+"thumb": "https://th.wallhaven.cc/small/76/76qm69.jpg"
+},
+{
+"n": "Yennefer of Vengerberg",
+"img": "chars/w/g8gk33.webp",
+"id": "g8gk33",
+"thumb": "https://th.wallhaven.cc/small/g8/g8gk33.jpg"
+},
+{
+"n": "Triss Merigold",
+"img": "chars/w/mpzev1.webp",
+"id": "mpzev1",
+"thumb": "https://th.wallhaven.cc/small/mp/mpzev1.jpg"
+},
+{
+"n": "Dandelion",
+"img": "chars/w/od32kp.webp",
+"id": "od32kp",
+"thumb": "https://th.wallhaven.cc/small/od/od32kp.jpg"
+}
+],
+"Red Dead Redemption 2": [
+{
+"n": "Arthur Morgan",
+"img": "chars/w/zxkgeg.webp",
+"id": "zxkgeg",
+"thumb": "https://th.wallhaven.cc/small/zx/zxkgeg.jpg"
+},
+{
+"n": "John Marston",
+"img": "chars/w/md9wem.webp",
+"id": "md9wem",
+"thumb": "https://th.wallhaven.cc/small/md/md9wem.jpg"
+},
+{
+"n": "Dutch van der Linde",
+"img": "chars/w/8o5ppj.webp",
+"id": "8o5ppj",
+"thumb": "https://th.wallhaven.cc/small/8o/8o5ppj.jpg"
+},
+{
+"n": "Sadie Adler",
+"img": "chars/w/vg9x7l.webp",
+"id": "vg9x7l",
+"thumb": "https://th.wallhaven.cc/small/vg/vg9x7l.jpg"
+},
+{
+"n": "Charles Smith",
+"img": "chars/w/rd66pm.webp",
+"id": "rd66pm",
+"thumb": "https://th.wallhaven.cc/small/rd/rd66pm.jpg"
+}
+],
+"Red Dead Redemption": [
+{
+"n": "John Marston",
+"img": "chars/w/md9wem.webp",
+"id": "md9wem",
+"thumb": "https://th.wallhaven.cc/small/md/md9wem.jpg"
+},
+{
+"n": "Bill Williamson",
+"img": "chars/w/6kqp1w.webp",
+"id": "6kqp1w",
+"thumb": "https://th.wallhaven.cc/small/6k/6kqp1w.jpg"
+},
+{
+"n": "Abigail Marston",
+"img": "chars/w/g7m2mq.webp",
+"id": "g7m2mq",
+"thumb": "https://th.wallhaven.cc/small/g7/g7m2mq.jpg"
+}
+],
+"Baldur's Gate 3": [
+{
+"n": "Astarion",
+"img": "chars/w/vq8w2m.webp",
+"id": "vq8w2m",
+"thumb": "https://th.wallhaven.cc/small/vq/vq8w2m.jpg"
+},
+{
+"n": "Shadowheart",
+"img": "chars/w/x6kze3.webp",
+"id": "x6kze3",
+"thumb": "https://th.wallhaven.cc/small/x6/x6kze3.jpg"
+},
+{
+"n": "Karlach",
+"img": "chars/w/858zwj.webp",
+"id": "858zwj",
+"thumb": "https://th.wallhaven.cc/small/85/858zwj.jpg"
+},
+{
+"n": "Lae'zel",
+"img": "chars/w/8gexlk.webp",
+"id": "8gexlk",
+"thumb": "https://th.wallhaven.cc/small/8g/8gexlk.jpg"
+},
+{
+"n": "Gale",
+"img": "chars/w/qz71g5.webp",
+"id": "qz71g5",
+"thumb": "https://th.wallhaven.cc/small/qz/qz71g5.jpg"
+}
+],
+"Final Fantasy VII Rebirth": [
+{
+"n": "Cloud Strife",
+"img": "chars/w/7j68lo.webp",
+"id": "7j68lo",
+"thumb": "https://th.wallhaven.cc/small/7j/7j68lo.jpg"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/w/21k72y.webp",
+"id": "21k72y",
+"thumb": "https://th.wallhaven.cc/small/21/21k72y.jpg"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/w/l8r8z2.webp",
+"id": "l8r8z2",
+"thumb": "https://th.wallhaven.cc/small/l8/l8r8z2.jpg"
+},
+{
+"n": "Sephiroth",
+"img": "chars/w/po72wp.webp",
+"id": "po72wp",
+"thumb": "https://th.wallhaven.cc/small/po/po72wp.jpg"
+},
+{
+"n": "Barret Wallace",
+"img": "chars/w/3lm6ev.webp",
+"id": "3lm6ev",
+"thumb": "https://th.wallhaven.cc/small/3l/3lm6ev.jpg"
+}
+],
+"Final Fantasy VII Remake Intergrade": [
+{
+"n": "Cloud Strife",
+"img": "chars/w/6oo3wx.webp",
+"id": "6oo3wx",
+"thumb": "https://th.wallhaven.cc/small/6o/6oo3wx.jpg"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/w/m9p7r8.webp",
+"id": "m9p7r8",
+"thumb": "https://th.wallhaven.cc/small/m9/m9p7r8.jpg"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/w/j3dg1m.webp",
+"id": "j3dg1m",
+"thumb": "https://th.wallhaven.cc/small/j3/j3dg1m.jpg"
+},
+{
+"n": "Barret Wallace",
+"img": "chars/w/ey1v9l.webp",
+"id": "ey1v9l",
+"thumb": "https://th.wallhaven.cc/small/ey/ey1v9l.jpg"
+},
+{
+"n": "Sephiroth",
+"img": "chars/w/gjozp7.webp",
+"id": "gjozp7",
+"thumb": "https://th.wallhaven.cc/small/gj/gjozp7.jpg"
+}
+],
+"Final Fantasy VII": [
+{
+"n": "Cloud Strife",
+"img": "chars/w/o3ozzp.webp",
+"id": "o3ozzp",
+"thumb": "https://th.wallhaven.cc/small/o3/o3ozzp.jpg"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/w/m9p7r8.webp",
+"id": "m9p7r8",
+"thumb": "https://th.wallhaven.cc/small/m9/m9p7r8.jpg"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/w/j3dg1m.webp",
+"id": "j3dg1m",
+"thumb": "https://th.wallhaven.cc/small/j3/j3dg1m.jpg"
+},
+{
+"n": "Sephiroth",
+"img": "chars/w/2ke77m.webp",
+"id": "2ke77m",
+"thumb": "https://th.wallhaven.cc/small/2k/2ke77m.jpg"
+},
+{
+"n": "Vincent Valentine",
+"img": "chars/w/7j68lo.webp",
+"id": "7j68lo",
+"thumb": "https://th.wallhaven.cc/small/7j/7j68lo.jpg"
+}
+],
+"Crisis Core – Final Fantasy VII – Reunion": [
+{
+"n": "Zack Fair",
+"img": "chars/w/p9kyqe.webp",
+"id": "p9kyqe",
+"thumb": "https://th.wallhaven.cc/small/p9/p9kyqe.jpg"
+},
+{
+"n": "Cloud Strife",
+"img": "chars/w/rr3m5q.webp",
+"id": "rr3m5q",
+"thumb": "https://th.wallhaven.cc/small/rr/rr3m5q.jpg"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/w/4oowgm.webp",
+"id": "4oowgm",
+"thumb": "https://th.wallhaven.cc/small/4o/4oowgm.jpg"
+},
+{
+"n": "Sephiroth",
+"img": "chars/w/gjozp7.webp",
+"id": "gjozp7",
+"thumb": "https://th.wallhaven.cc/small/gj/gjozp7.jpg"
+}
+],
+"Final Fantasy VII Ever Crisis": [
+{
+"n": "Cloud Strife",
+"img": "chars/w/7je61o.webp",
+"id": "7je61o",
+"thumb": "https://th.wallhaven.cc/small/7j/7je61o.jpg"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/w/m9p7r8.webp",
+"id": "m9p7r8",
+"thumb": "https://th.wallhaven.cc/small/m9/m9p7r8.jpg"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/w/j3dg1m.webp",
+"id": "j3dg1m",
+"thumb": "https://th.wallhaven.cc/small/j3/j3dg1m.jpg"
+},
+{
+"n": "Zack Fair",
+"img": "chars/w/3z2v2d.webp",
+"id": "3z2v2d",
+"thumb": "https://th.wallhaven.cc/small/3z/3z2v2d.jpg"
+},
+{
+"n": "Sephiroth",
+"img": "chars/w/gjozp7.webp",
+"id": "gjozp7",
+"thumb": "https://th.wallhaven.cc/small/gj/gjozp7.jpg"
+}
+],
+"Final Fantasy XVI": [
+{
+"n": "Clive Rosfield",
+"img": "chars/w/exmd98.webp",
+"id": "exmd98",
+"thumb": "https://th.wallhaven.cc/small/ex/exmd98.jpg"
+},
+{
+"n": "Jill Warrick",
+"img": "chars/w/jxz6wm.webp",
+"id": "jxz6wm",
+"thumb": "https://th.wallhaven.cc/small/jx/jxz6wm.jpg"
+},
+{
+"n": "Joshua Rosfield",
+"img": "chars/w/8goj9k.webp",
+"id": "8goj9k",
+"thumb": "https://th.wallhaven.cc/small/8g/8goj9k.jpg"
+}
+],
+"Final Fantasy X | X-2 HD Remaster": [
+{
+"n": "Tidus",
+"img": "chars/w/6qr71q.webp",
+"id": "6qr71q",
+"thumb": "https://th.wallhaven.cc/small/6q/6qr71q.jpg"
+},
+{
+"n": "Yuna",
+"img": "chars/w/3zwd56.webp",
+"id": "3zwd56",
+"thumb": "https://th.wallhaven.cc/small/3z/3zwd56.jpg"
+},
+{
+"n": "Rikku",
+"img": "chars/w/g7llvd.webp",
+"id": "g7llvd",
+"thumb": "https://th.wallhaven.cc/small/g7/g7llvd.jpg"
+},
+{
+"n": "Lulu",
+"img": "chars/w/x68wdz.webp",
+"id": "x68wdz",
+"thumb": "https://th.wallhaven.cc/small/x6/x68wdz.jpg"
+}
+],
+"Final Fantasy XV": [
+{
+"n": "Noctis Lucis Caelum",
+"img": "chars/w/lq5d8r.webp",
+"id": "lq5d8r",
+"thumb": "https://th.wallhaven.cc/small/lq/lq5d8r.jpg"
+},
+{
+"n": "Prompto Argentum",
+"img": "chars/w/lqklxy.webp",
+"id": "lqklxy",
+"thumb": "https://th.wallhaven.cc/small/lq/lqklxy.jpg"
+},
+{
+"n": "Gladiolus Amicitia",
+"img": "chars/w/nzm9vv.webp",
+"id": "nzm9vv",
+"thumb": "https://th.wallhaven.cc/small/nz/nzm9vv.jpg"
+},
+{
+"n": "Ignis Scientia",
+"img": "chars/w/4x1vpv.webp",
+"id": "4x1vpv",
+"thumb": "https://th.wallhaven.cc/small/4x/4x1vpv.jpg"
+},
+{
+"n": "Lunafreya Nox Fleuret",
+"img": "chars/w/g73moq.webp",
+"id": "g73moq",
+"thumb": "https://th.wallhaven.cc/small/g7/g73moq.jpg"
+}
+],
+"Final Fantasy XII: The Zodiac Age": [
+{
+"n": "Vaan",
+"img": "chars/w/yx8l9l.webp",
+"id": "yx8l9l",
+"thumb": "https://th.wallhaven.cc/small/yx/yx8l9l.jpg"
+},
+{
+"n": "Ashe",
+"img": "chars/w/4ymvdk.webp",
+"id": "4ymvdk",
+"thumb": "https://th.wallhaven.cc/small/4y/4ymvdk.jpg"
+},
+{
+"n": "Balthier",
+"img": "chars/w/398rmd.webp",
+"id": "398rmd",
+"thumb": "https://th.wallhaven.cc/small/39/398rmd.jpg"
+},
+{
+"n": "Fran",
+"img": "chars/w/2ex37m.webp",
+"id": "2ex37m",
+"thumb": "https://th.wallhaven.cc/small/2e/2ex37m.jpg"
+}
+],
+"Final Fantasy XIII": [
+{
+"n": "Lightning",
+"img": "chars/w/pkgqxj.webp",
+"id": "pkgqxj",
+"thumb": "https://th.wallhaven.cc/small/pk/pkgqxj.jpg"
+},
+{
+"n": "Snow Villiers",
+"img": "chars/w/45gmv5.webp",
+"id": "45gmv5",
+"thumb": "https://th.wallhaven.cc/small/45/45gmv5.jpg"
+},
+{
+"n": "Oerba Dia Vanille",
+"img": "chars/w/qz3gyd.webp",
+"id": "qz3gyd",
+"thumb": "https://th.wallhaven.cc/small/qz/qz3gyd.jpg"
+},
+{
+"n": "Oerba Yun Fang",
+"img": "chars/w/4gpm6d.webp",
+"id": "4gpm6d",
+"thumb": "https://th.wallhaven.cc/small/4g/4gpm6d.jpg"
+},
+{
+"n": "Hope Estheim",
+"img": "chars/w/6d52r6.webp",
+"id": "6d52r6",
+"thumb": "https://th.wallhaven.cc/small/6d/6d52r6.jpg"
+}
+],
+"Final Fantasy XIII-2": [
+{
+"n": "Serah Farron",
+"img": "chars/w/po22lj.webp",
+"id": "po22lj",
+"thumb": "https://th.wallhaven.cc/small/po/po22lj.jpg"
+},
+{
+"n": "Noel Kreiss",
+"img": "chars/w/yxegpk.webp",
+"id": "yxegpk",
+"thumb": "https://th.wallhaven.cc/small/yx/yxegpk.jpg"
+},
+{
+"n": "Lightning",
+"img": "chars/w/pkgqxj.webp",
+"id": "pkgqxj",
+"thumb": "https://th.wallhaven.cc/small/pk/pkgqxj.jpg"
+}
+],
+"Lightning Returns: Final Fantasy XIII": [
+{
+"n": "Lightning",
+"img": "chars/w/4dz9dl.webp",
+"id": "4dz9dl",
+"thumb": "https://th.wallhaven.cc/small/4d/4dz9dl.jpg"
+},
+{
+"n": "Snow Villiers",
+"img": "chars/w/45gmv5.webp",
+"id": "45gmv5",
+"thumb": "https://th.wallhaven.cc/small/45/45gmv5.jpg"
+}
+],
+"Final Fantasy IX": [
+{
+"n": "Zidane Tribal",
+"img": "chars/w/ymz9o7.webp",
+"id": "ymz9o7",
+"thumb": "https://th.wallhaven.cc/small/ym/ymz9o7.jpg"
+},
+{
+"n": "Garnet Til Alexandros XVII",
+"img": "chars/w/zp9yeo.webp",
+"id": "zp9yeo",
+"thumb": "https://th.wallhaven.cc/small/zp/zp9yeo.jpg"
+},
+{
+"n": "Adelbert Steiner",
+"img": "chars/w/z892jw.webp",
+"id": "z892jw",
+"thumb": "https://th.wallhaven.cc/small/z8/z892jw.jpg"
+},
+{
+"n": "Kuja",
+"img": "chars/w/9m6kww.webp",
+"id": "9m6kww",
+"thumb": "https://th.wallhaven.cc/small/9m/9m6kww.jpg"
+}
+],
+"Final Fantasy VIII Remastered": [
+{
+"n": "Squall Leonhart",
+"img": "chars/w/x1wx1v.webp",
+"id": "x1wx1v",
+"thumb": "https://th.wallhaven.cc/small/x1/x1wx1v.jpg"
+},
+{
+"n": "Rinoa Heartilly",
+"img": "chars/w/j8x95w.webp",
+"id": "j8x95w",
+"thumb": "https://th.wallhaven.cc/small/j8/j8x95w.jpg"
+},
+{
+"n": "Quistis Trepe",
+"img": "chars/w/w89vx6.webp",
+"id": "w89vx6",
+"thumb": "https://th.wallhaven.cc/small/w8/w89vx6.jpg"
+}
+],
+"Final Fantasy XIV Online": [
+{
+"n": "Y'shtola Rhul",
+"img": "chars/w/5w2mj9.webp",
+"id": "5w2mj9",
+"thumb": "https://th.wallhaven.cc/small/5w/5w2mj9.jpg"
+},
+{
+"n": "G'raha Tia",
+"img": "chars/w/j31gvp.webp",
+"id": "j31gvp",
+"thumb": "https://th.wallhaven.cc/small/j3/j31gvp.jpg"
+}
+],
+"Final Fantasy Type-0 HD": [
+{
+"n": "Ace",
+"img": "chars/w/eoo72l.webp",
+"id": "eoo72l",
+"thumb": "https://th.wallhaven.cc/small/eo/eoo72l.jpg"
+}
+],
+"Stranger of Paradise: Final Fantasy Origin": [
+{
+"n": "Garland",
+"img": "chars/w/j3oory.webp",
+"id": "j3oory",
+"thumb": "https://th.wallhaven.cc/small/j3/j3oory.jpg"
+}
+],
+"Dissidia Final Fantasy NT": [
+{
+"n": "Cloud Strife",
+"img": "chars/w/0qdz9l.webp",
+"id": "0qdz9l",
+"thumb": "https://th.wallhaven.cc/small/0q/0qdz9l.jpg"
+},
+{
+"n": "Squall Leonhart",
+"img": "chars/w/4ge7q3.webp",
+"id": "4ge7q3",
+"thumb": "https://th.wallhaven.cc/small/4g/4ge7q3.jpg"
+},
+{
+"n": "Lightning",
+"img": "chars/w/e7ek7k.webp",
+"id": "e7ek7k",
+"thumb": "https://th.wallhaven.cc/small/e7/e7ek7k.jpg"
+},
+{
+"n": "Terra Branford",
+"img": "chars/w/3zlw5d.webp",
+"id": "3zlw5d",
+"thumb": "https://th.wallhaven.cc/small/3z/3zlw5d.jpg"
+}
+],
+"Final Fantasy Tactics: The Ivalice Chronicles": [
+{
+"n": "Ramza Beoulve",
+"img": "chars/w/p2y533.webp",
+"id": "p2y533",
+"thumb": "https://th.wallhaven.cc/small/p2/p2y533.jpg"
+},
+{
+"n": "Delita Heiral",
+"img": "chars/w/mp2o88.webp",
+"id": "mp2o88",
+"thumb": "https://th.wallhaven.cc/small/mp/mp2o88.jpg"
+}
+],
+"Final Fantasy Pixel Remaster (I–VI)": [
+{
+"n": "Cecil Harvey",
+"img": "chars/w/4x38wz.webp",
+"id": "4x38wz",
+"thumb": "https://th.wallhaven.cc/small/4x/4x38wz.jpg"
+},
+{
+"n": "Terra Branford",
+"img": "chars/w/nzd6my.webp",
+"id": "nzd6my",
+"thumb": "https://th.wallhaven.cc/small/nz/nzd6my.jpg"
+},
+{
+"n": "Bartz Klauser",
+"img": "chars/w/k887vm.webp",
+"id": "k887vm",
+"thumb": "https://th.wallhaven.cc/small/k8/k887vm.jpg"
+}
+],
+"Persona 5 Royal": [
+{
+"n": "Joker",
+"img": "chars/w/95ej2k.webp",
+"id": "95ej2k",
+"thumb": "https://th.wallhaven.cc/small/95/95ej2k.jpg"
+},
+{
+"n": "Ryuji Sakamoto",
+"img": "chars/w/p256zp.webp",
+"id": "p256zp",
+"thumb": "https://th.wallhaven.cc/small/p2/p256zp.jpg"
+},
+{
+"n": "Ann Takamaki",
+"img": "chars/w/zme15v.webp",
+"id": "zme15v",
+"thumb": "https://th.wallhaven.cc/small/zm/zme15v.jpg"
+},
+{
+"n": "Morgana",
+"img": "chars/w/p2x7e9.webp",
+"id": "p2x7e9",
+"thumb": "https://th.wallhaven.cc/small/p2/p2x7e9.jpg"
+},
+{
+"n": "Makoto Niijima",
+"img": "chars/w/ymdqr7.webp",
+"id": "ymdqr7",
+"thumb": "https://th.wallhaven.cc/small/ym/ymdqr7.jpg"
+}
+],
+"Persona 3 Reload": [
+{
+"n": "Makoto Yuki",
+"img": "chars/w/k8zd97.webp",
+"id": "k8zd97",
+"thumb": "https://th.wallhaven.cc/small/k8/k8zd97.jpg"
+},
+{
+"n": "Yukari Takeba",
+"img": "chars/w/42wgox.webp",
+"id": "42wgox",
+"thumb": "https://th.wallhaven.cc/small/42/42wgox.jpg"
+},
+{
+"n": "Mitsuru Kirijo",
+"img": "chars/w/kx8621.webp",
+"id": "kx8621",
+"thumb": "https://th.wallhaven.cc/small/kx/kx8621.jpg"
+},
+{
+"n": "Aigis",
+"img": "chars/w/yqg2og.webp",
+"id": "yqg2og",
+"thumb": "https://th.wallhaven.cc/small/yq/yqg2og.jpg"
+},
+{
+"n": "Junpei Iori",
+"img": "chars/w/n6kw86.webp",
+"id": "n6kw86",
+"thumb": "https://th.wallhaven.cc/small/n6/n6kw86.jpg"
+}
+],
+"Persona 4 Golden": [
+{
+"n": "Yu Narukami",
+"img": "chars/w/r7wgg7.webp",
+"id": "r7wgg7",
+"thumb": "https://th.wallhaven.cc/small/r7/r7wgg7.jpg"
+},
+{
+"n": "Chie Satonaka",
+"img": "chars/w/e43r34.webp",
+"id": "e43r34",
+"thumb": "https://th.wallhaven.cc/small/e4/e43r34.jpg"
+},
+{
+"n": "Yukiko Amagi",
+"img": "chars/w/3k9l9v.webp",
+"id": "3k9l9v",
+"thumb": "https://th.wallhaven.cc/small/3k/3k9l9v.jpg"
+},
+{
+"n": "Teddie",
+"img": "chars/w/01jeg1.webp",
+"id": "01jeg1",
+"thumb": "https://th.wallhaven.cc/small/01/01jeg1.jpg"
+},
+{
+"n": "Rise Kujikawa",
+"img": "chars/w/42exd6.webp",
+"id": "42exd6",
+"thumb": "https://th.wallhaven.cc/small/42/42exd6.jpg"
+}
+],
+"Street Fighter 6": [
+{
+"n": "Ryu",
+"img": "chars/w/kxd5d6.webp",
+"id": "kxd5d6",
+"thumb": "https://th.wallhaven.cc/small/kx/kxd5d6.jpg"
+},
+{
+"n": "Chun-Li",
+"img": "chars/w/jxqjv5.webp",
+"id": "jxqjv5",
+"thumb": "https://th.wallhaven.cc/small/jx/jxqjv5.jpg"
+},
+{
+"n": "Ken Masters",
+"img": "chars/w/qrzr35.webp",
+"id": "qrzr35",
+"thumb": "https://th.wallhaven.cc/small/qr/qrzr35.jpg"
+},
+{
+"n": "Cammy",
+"img": "chars/w/p95lv3.webp",
+"id": "p95lv3",
+"thumb": "https://th.wallhaven.cc/small/p9/p95lv3.jpg"
+},
+{
+"n": "Luke",
+"img": "chars/w/96g5dx.webp",
+"id": "96g5dx",
+"thumb": "https://th.wallhaven.cc/small/96/96g5dx.jpg"
+}
+],
+"Tekken 8": [
+{
+"n": "Jin Kazama",
+"img": "chars/w/428zog.webp",
+"id": "428zog",
+"thumb": "https://th.wallhaven.cc/small/42/428zog.jpg"
+},
+{
+"n": "Kazuya Mishima",
+"img": "chars/w/mlzlj8.webp",
+"id": "mlzlj8",
+"thumb": "https://th.wallhaven.cc/small/ml/mlzlj8.jpg"
+},
+{
+"n": "Reina",
+"img": "chars/w/l8vy7l.webp",
+"id": "l8vy7l",
+"thumb": "https://th.wallhaven.cc/small/l8/l8vy7l.jpg"
+},
+{
+"n": "Nina Williams",
+"img": "chars/w/gjze37.webp",
+"id": "gjze37",
+"thumb": "https://th.wallhaven.cc/small/gj/gjze37.jpg"
+},
+{
+"n": "Heihachi Mishima",
+"img": "chars/w/6qgdk7.webp",
+"id": "6qgdk7",
+"thumb": "https://th.wallhaven.cc/small/6q/6qgdk7.jpg"
+}
+],
+"Mortal Kombat 1": [
+{
+"n": "Scorpion",
+"img": "chars/w/nkzpyq.webp",
+"id": "nkzpyq",
+"thumb": "https://th.wallhaven.cc/small/nk/nkzpyq.jpg"
+},
+{
+"n": "Sub-Zero",
+"img": "chars/w/w8zpdp.webp",
+"id": "w8zpdp",
+"thumb": "https://th.wallhaven.cc/small/w8/w8zpdp.jpg"
+},
+{
+"n": "Raiden",
+"img": "chars/w/6k685l.webp",
+"id": "6k685l",
+"thumb": "https://th.wallhaven.cc/small/6k/6k685l.jpg"
+},
+{
+"n": "Liu Kang",
+"img": "chars/w/492g5k.webp",
+"id": "492g5k",
+"thumb": "https://th.wallhaven.cc/small/49/492g5k.jpg"
+},
+{
+"n": "Kitana",
+"img": "chars/w/2ergr6.webp",
+"id": "2ergr6",
+"thumb": "https://th.wallhaven.cc/small/2e/2ergr6.jpg"
+}
+],
+"Devil May Cry 5": [
+{
+"n": "Dante",
+"img": "chars/w/qdy62r.webp",
+"id": "qdy62r",
+"thumb": "https://th.wallhaven.cc/small/qd/qdy62r.jpg"
+},
+{
+"n": "Nero",
+"img": "chars/w/3935xy.webp",
+"id": "3935xy",
+"thumb": "https://th.wallhaven.cc/small/39/3935xy.jpg"
+},
+{
+"n": "V",
+"img": "chars/w/4ymmyd.webp",
+"id": "4ymmyd",
+"thumb": "https://th.wallhaven.cc/small/4y/4ymmyd.jpg"
+},
+{
+"n": "Vergil",
+"img": "chars/w/7232g3.webp",
+"id": "7232g3",
+"thumb": "https://th.wallhaven.cc/small/72/7232g3.jpg"
+},
+{
+"n": "Lady",
+"img": "chars/w/r2zk87.webp",
+"id": "r2zk87",
+"thumb": "https://th.wallhaven.cc/small/r2/r2zk87.jpg"
+}
+],
+"Monster Hunter Wilds": [
+{
+"n": "Rey Dau",
+"img": "chars/w/wepxeq.webp",
+"id": "wepxeq",
+"thumb": "https://th.wallhaven.cc/small/we/wepxeq.jpg"
+},
+{
+"n": "Rathalos",
+"img": "chars/w/y4729n.webp",
+"id": "y4729n",
+"thumb": "https://th.wallhaven.cc/small/y4/y4729n.jpg"
+}
+],
+"Monster Hunter: World": [
+{
+"n": "Rathalos",
+"img": "chars/w/y4729n.webp",
+"id": "y4729n",
+"thumb": "https://th.wallhaven.cc/small/y4/y4729n.jpg"
+},
+{
+"n": "Nergigante",
+"img": "chars/w/9657q1.webp",
+"id": "9657q1",
+"thumb": "https://th.wallhaven.cc/small/96/9657q1.jpg"
+},
+{
+"n": "Zinogre",
+"img": "chars/w/nkr92d.webp",
+"id": "nkr92d",
+"thumb": "https://th.wallhaven.cc/small/nk/nkr92d.jpg"
+},
+{
+"n": "Kirin",
+"img": "chars/w/456dr9.webp",
+"id": "456dr9",
+"thumb": "https://th.wallhaven.cc/small/45/456dr9.jpg"
+}
+],
+"Hollow Knight": [
+{
+"n": "The Knight",
+"img": "chars/w/og3o95.webp",
+"id": "og3o95",
+"thumb": "https://th.wallhaven.cc/small/og/og3o95.jpg"
+},
+{
+"n": "Hornet",
+"img": "chars/w/p89kq9.webp",
+"id": "p89kq9",
+"thumb": "https://th.wallhaven.cc/small/p8/p89kq9.jpg"
+},
+{
+"n": "Quirrel",
+"img": "chars/w/zm9ydg.webp",
+"id": "zm9ydg",
+"thumb": "https://th.wallhaven.cc/small/zm/zm9ydg.jpg"
+},
+{
+"n": "The Radiance",
+"img": "chars/w/gw21xq.webp",
+"id": "gw21xq",
+"thumb": "https://th.wallhaven.cc/small/gw/gw21xq.jpg"
+},
+{
+"n": "Grimm",
+"img": "chars/w/k7kyjd.webp",
+"id": "k7kyjd",
+"thumb": "https://th.wallhaven.cc/small/k7/k7kyjd.jpg"
+}
+],
+"Hollow Knight: Silksong": [
+{
+"n": "Hornet",
+"img": "chars/w/og3o95.webp",
+"id": "og3o95",
+"thumb": "https://th.wallhaven.cc/small/og/og3o95.jpg"
+}
+],
+"Hades": [
+{
+"n": "Zagreus",
+"img": "chars/w/1k8w21.webp",
+"id": "1k8w21",
+"thumb": "https://th.wallhaven.cc/small/1k/1k8w21.jpg"
+},
+{
+"n": "Megaera",
+"img": "chars/w/gpkdvl.webp",
+"id": "gpkdvl",
+"thumb": "https://th.wallhaven.cc/small/gp/gpkdvl.jpg"
+},
+{
+"n": "Thanatos",
+"img": "chars/w/y8ykod.webp",
+"id": "y8ykod",
+"thumb": "https://th.wallhaven.cc/small/y8/y8ykod.jpg"
+},
+{
+"n": "Hades",
+"img": "chars/w/57p5m5.webp",
+"id": "57p5m5",
+"thumb": "https://th.wallhaven.cc/small/57/57p5m5.jpg"
+}
+],
+"Hades II": [
+{
+"n": "Melinoë",
+"img": "chars/w/21y5ey.webp",
+"id": "21y5ey",
+"thumb": "https://th.wallhaven.cc/small/21/21y5ey.jpg"
+},
+{
+"n": "Hecate",
+"img": "chars/w/3qlw13.webp",
+"id": "3qlw13",
+"thumb": "https://th.wallhaven.cc/small/3q/3qlw13.jpg"
+},
+{
+"n": "Odysseus",
+"img": "chars/w/9m5m5k.webp",
+"id": "9m5m5k",
+"thumb": "https://th.wallhaven.cc/small/9m/9m5m5k.jpg"
+}
+],
+"Celeste": [
+{
+"n": "Madeline",
+"img": "chars/w/qr2w95.webp",
+"id": "qr2w95",
+"thumb": "https://th.wallhaven.cc/small/qr/qr2w95.jpg"
+}
+],
+"Cuphead": [
+{
+"n": "Cuphead",
+"img": "chars/w/g875yl.webp",
+"id": "g875yl",
+"thumb": "https://th.wallhaven.cc/small/g8/g875yl.jpg"
+},
+{
+"n": "Mugman",
+"img": "chars/w/g7xzrq.webp",
+"id": "g7xzrq",
+"thumb": "https://th.wallhaven.cc/small/g7/g7xzrq.jpg"
+},
+{
+"n": "The Devil",
+"img": "chars/w/96g5dx.webp",
+"id": "96g5dx",
+"thumb": "https://th.wallhaven.cc/small/96/96g5dx.jpg"
+},
+{
+"n": "King Dice",
+"img": "chars/w/g897dl.webp",
+"id": "g897dl",
+"thumb": "https://th.wallhaven.cc/small/g8/g897dl.jpg"
+}
+],
+"Halo Infinite": [
+{
+"n": "The Weapon",
+"img": "chars/w/j5qyew.webp",
+"id": "j5qyew",
+"thumb": "https://th.wallhaven.cc/small/j5/j5qyew.jpg"
+}
+],
+"Halo: The Master Chief Collection": [
+{
+"n": "Cortana",
+"img": "chars/w/nmpyqk.webp",
+"id": "nmpyqk",
+"thumb": "https://th.wallhaven.cc/small/nm/nmpyqk.jpg"
+}
+],
+"Gears 5": [
+{
+"n": "Kait Diaz",
+"img": "chars/w/3k91r6.webp",
+"id": "3k91r6",
+"thumb": "https://th.wallhaven.cc/small/3k/3k91r6.jpg"
+},
+{
+"n": "Marcus Fenix",
+"img": "chars/w/5dvqv8.webp",
+"id": "5dvqv8",
+"thumb": "https://th.wallhaven.cc/small/5d/5dvqv8.jpg"
+}
+],
+"Gears of War: Reloaded": [
+{
+"n": "Marcus Fenix",
+"img": "chars/w/5dvqv8.webp",
+"id": "5dvqv8",
+"thumb": "https://th.wallhaven.cc/small/5d/5dvqv8.jpg"
+}
+],
+"Starfield": [
+{
+"n": "Sarah Morgan",
+"img": "chars/w/x69y7z.webp",
+"id": "x69y7z",
+"thumb": "https://th.wallhaven.cc/small/x6/x69y7z.jpg"
+},
+{
+"n": "Andreja",
+"img": "chars/w/gpxy93.webp",
+"id": "gpxy93",
+"thumb": "https://th.wallhaven.cc/small/gp/gpxy93.jpg"
+}
+],
+"Apex Legends": [
+{
+"n": "Wraith",
+"img": "chars/w/z8z3py.webp",
+"id": "z8z3py",
+"thumb": "https://th.wallhaven.cc/small/z8/z8z3py.jpg"
+},
+{
+"n": "Bloodhound",
+"img": "chars/w/y8j6od.webp",
+"id": "y8j6od",
+"thumb": "https://th.wallhaven.cc/small/y8/y8j6od.jpg"
+},
+{
+"n": "Lifeline",
+"img": "chars/w/9ddox8.webp",
+"id": "9ddox8",
+"thumb": "https://th.wallhaven.cc/small/9d/9ddox8.jpg"
+},
+{
+"n": "Pathfinder",
+"img": "chars/w/q2jvrr.webp",
+"id": "q2jvrr",
+"thumb": "https://th.wallhaven.cc/small/q2/q2jvrr.jpg"
+},
+{
+"n": "Octane",
+"img": "chars/w/28zm36.webp",
+"id": "28zm36",
+"thumb": "https://th.wallhaven.cc/small/28/28zm36.jpg"
+}
+],
+"Valorant": [
+{
+"n": "Jett",
+"img": "chars/w/j3z8qw.webp",
+"id": "j3z8qw",
+"thumb": "https://th.wallhaven.cc/small/j3/j3z8qw.jpg"
+},
+{
+"n": "Phoenix",
+"img": "chars/w/dg92pg.webp",
+"id": "dg92pg",
+"thumb": "https://th.wallhaven.cc/small/dg/dg92pg.jpg"
+},
+{
+"n": "Sage",
+"img": "chars/w/kwmxw1.webp",
+"id": "kwmxw1",
+"thumb": "https://th.wallhaven.cc/small/kw/kwmxw1.jpg"
+},
+{
+"n": "Reyna",
+"img": "chars/w/kwp2qq.webp",
+"id": "kwp2qq",
+"thumb": "https://th.wallhaven.cc/small/kw/kwp2qq.jpg"
+},
+{
+"n": "Sova",
+"img": "chars/w/dg96go.webp",
+"id": "dg96go",
+"thumb": "https://th.wallhaven.cc/small/dg/dg96go.jpg"
+}
+],
+"Marvel Rivals": [
+{
+"n": "Spider-Man",
+"img": "chars/w/weg5g7.webp",
+"id": "weg5g7",
+"thumb": "https://th.wallhaven.cc/small/we/weg5g7.jpg"
+},
+{
+"n": "Iron Man",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Storm",
+"img": "chars/w/2yv1vm.webp",
+"id": "2yv1vm",
+"thumb": "https://th.wallhaven.cc/small/2y/2yv1vm.jpg"
+},
+{
+"n": "Luna Snow",
+"img": "chars/w/9o9lyw.webp",
+"id": "9o9lyw",
+"thumb": "https://th.wallhaven.cc/small/9o/9o9lyw.jpg"
+}
+],
+"Genshin Impact": [
+{
+"n": "Aether",
+"img": "chars/w/y8vlox.webp",
+"id": "y8vlox",
+"thumb": "https://th.wallhaven.cc/small/y8/y8vlox.jpg"
+},
+{
+"n": "Paimon",
+"img": "chars/w/28eqqx.webp",
+"id": "28eqqx",
+"thumb": "https://th.wallhaven.cc/small/28/28eqqx.jpg"
+},
+{
+"n": "Raiden Shogun",
+"img": "chars/w/3z1dg9.webp",
+"id": "3z1dg9",
+"thumb": "https://th.wallhaven.cc/small/3z/3z1dg9.jpg"
+},
+{
+"n": "Hu Tao",
+"img": "chars/w/x82d83.webp",
+"id": "x82d83",
+"thumb": "https://th.wallhaven.cc/small/x8/x82d83.jpg"
+},
+{
+"n": "Zhongli",
+"img": "chars/w/jxkyk5.webp",
+"id": "jxkyk5",
+"thumb": "https://th.wallhaven.cc/small/jx/jxkyk5.jpg"
+}
+],
+"Minecraft": [
+{
+"n": "Steve",
+"img": "chars/w/e7651w.webp",
+"id": "e7651w",
+"thumb": "https://th.wallhaven.cc/small/e7/e7651w.jpg"
+},
+{
+"n": "Alex",
+"img": "chars/w/mlzlj8.webp",
+"id": "mlzlj8",
+"thumb": "https://th.wallhaven.cc/small/ml/mlzlj8.jpg"
+},
+{
+"n": "Creeper",
+"img": "chars/w/w8zpdp.webp",
+"id": "w8zpdp",
+"thumb": "https://th.wallhaven.cc/small/w8/w8zpdp.jpg"
+},
+{
+"n": "Enderman",
+"img": "chars/w/o31p97.webp",
+"id": "o31p97",
+"thumb": "https://th.wallhaven.cc/small/o3/o31p97.jpg"
+},
+{
+"n": "Ender Dragon",
+"img": "chars/w/85jvly.webp",
+"id": "85jvly",
+"thumb": "https://th.wallhaven.cc/small/85/85jvly.jpg"
+}
+],
+"Cult of the Lamb": [
+{
+"n": "The Lamb",
+"img": "chars/w/rrxxkj.webp",
+"id": "rrxxkj",
+"thumb": "https://th.wallhaven.cc/small/rr/rrxxkj.jpg"
+}
+],
+"Dead by Daylight": [
+{
+"n": "The Huntress",
+"img": "chars/w/3q37gd.webp",
+"id": "3q37gd",
+"thumb": "https://th.wallhaven.cc/small/3q/3q37gd.jpg"
+},
+{
+"n": "The Nurse",
+"img": "chars/w/5wwew7.webp",
+"id": "5wwew7",
+"thumb": "https://th.wallhaven.cc/small/5w/5wwew7.jpg"
+}
+],
+"Palworld": [
+{
+"n": "Lamball",
+"img": "chars/w/w539y6.webp",
+"id": "w539y6",
+"thumb": "https://th.wallhaven.cc/small/w5/w539y6.jpg"
+},
+{
+"n": "Depresso",
+"img": "chars/w/og7re5.webp",
+"id": "og7re5",
+"thumb": "https://th.wallhaven.cc/small/og/og7re5.jpg"
+}
+],
+"Death Stranding Director's Cut": [
+{
+"n": "Sam Porter Bridges",
+"img": "chars/w/we57yq.webp",
+"id": "we57yq",
+"thumb": "https://th.wallhaven.cc/small/we/we57yq.jpg"
+},
+{
+"n": "Fragile",
+"img": "chars/w/6kjkyw.webp",
+"id": "6kjkyw",
+"thumb": "https://th.wallhaven.cc/small/6k/6kjkyw.jpg"
+},
+{
+"n": "Higgs Monaghan",
+"img": "chars/w/l36pzy.webp",
+"id": "l36pzy",
+"thumb": "https://th.wallhaven.cc/small/l3/l36pzy.jpg"
+},
+{
+"n": "Die-Hardman",
+"img": "chars/w/5wxjr3.webp",
+"id": "5wxjr3",
+"thumb": "https://th.wallhaven.cc/small/5w/5wxjr3.jpg"
+},
+{
+"n": "Amelie",
+"img": "chars/w/6ok3m6.webp",
+"id": "6ok3m6",
+"thumb": "https://th.wallhaven.cc/small/6o/6ok3m6.jpg"
+}
+],
+"Death Stranding 2: On the Beach": [
+{
+"n": "Sam Porter Bridges",
+"img": "chars/w/d68kdl.webp",
+"id": "d68kdl",
+"thumb": "https://th.wallhaven.cc/small/d6/d68kdl.jpg"
+},
+{
+"n": "Fragile",
+"img": "chars/w/3q9k69.webp",
+"id": "3q9k69",
+"thumb": "https://th.wallhaven.cc/small/3q/3q9k69.jpg"
+},
+{
+"n": "Higgs Monaghan",
+"img": "chars/w/5wxjr3.webp",
+"id": "5wxjr3",
+"thumb": "https://th.wallhaven.cc/small/5w/5wxjr3.jpg"
+},
+{
+"n": "Tomorrow",
+"img": "chars/w/w5mxd7.webp",
+"id": "w5mxd7",
+"thumb": "https://th.wallhaven.cc/small/w5/w5mxd7.jpg"
+}
+],
+"Detroit: Become Human": [
+{
+"n": "Connor",
+"img": "chars/w/8373y2.webp",
+"id": "8373y2",
+"thumb": "https://th.wallhaven.cc/small/83/8373y2.jpg"
+},
+{
+"n": "Kara",
+"img": "chars/w/6kjo9x.webp",
+"id": "6kjo9x",
+"thumb": "https://th.wallhaven.cc/small/6k/6kjo9x.jpg"
+},
+{
+"n": "Markus",
+"img": "chars/w/1j6vo3.webp",
+"id": "1j6vo3",
+"thumb": "https://th.wallhaven.cc/small/1j/1j6vo3.jpg"
+},
+{
+"n": "Alice",
+"img": "chars/w/d5jdmo.webp",
+"id": "d5jdmo",
+"thumb": "https://th.wallhaven.cc/small/d5/d5jdmo.jpg"
+}
+],
+"Days Gone": [
+{
+"n": "Deacon St. John",
+"img": "chars/w/vgydo8.webp",
+"id": "vgydo8",
+"thumb": "https://th.wallhaven.cc/small/vg/vgydo8.jpg"
+}
+],
+"Hitman: World of Assassination": [
+{
+"n": "Agent 47",
+"img": "chars/w/n6lywn.webp",
+"id": "n6lywn",
+"thumb": "https://th.wallhaven.cc/small/n6/n6lywn.jpg"
+},
+{
+"n": "Diana Burnwood",
+"img": "chars/w/28z9ex.webp",
+"id": "28z9ex",
+"thumb": "https://th.wallhaven.cc/small/28/28z9ex.jpg"
+}
+],
+"Assassin's Creed Odyssey": [
+{
+"n": "Kassandra",
+"img": "chars/w/g8d3qe.webp",
+"id": "g8d3qe",
+"thumb": "https://th.wallhaven.cc/small/g8/g8d3qe.jpg"
+},
+{
+"n": "Alexios",
+"img": "chars/w/7367k3.webp",
+"id": "7367k3",
+"thumb": "https://th.wallhaven.cc/small/73/7367k3.jpg"
+}
+],
+"Assassin's Creed Shadows": [
+{
+"n": "Naoe",
+"img": "chars/w/o5mowl.webp",
+"id": "o5mowl",
+"thumb": "https://th.wallhaven.cc/small/o5/o5mowl.jpg"
+},
+{
+"n": "Yasuke",
+"img": "chars/w/e89l7k.webp",
+"id": "e89l7k",
+"thumb": "https://th.wallhaven.cc/small/e8/e89l7k.jpg"
+}
+],
+"Metal Gear Solid Delta: Snake Eater": [
+{
+"n": "Naked Snake",
+"img": "chars/w/4vjvkl.webp",
+"id": "4vjvkl",
+"thumb": "https://th.wallhaven.cc/small/4v/4vjvkl.jpg"
+},
+{
+"n": "The Boss",
+"img": "chars/w/zxw1pv.webp",
+"id": "zxw1pv",
+"thumb": "https://th.wallhaven.cc/small/zx/zxw1pv.jpg"
+},
+{
+"n": "Revolver Ocelot",
+"img": "chars/w/2ypk5g.webp",
+"id": "2ypk5g",
+"thumb": "https://th.wallhaven.cc/small/2y/2ypk5g.jpg"
+}
+],
+"Borderlands 4": [
+{
+"n": "Vex",
+"img": "chars/w/rqrk71.webp",
+"id": "rqrk71",
+"thumb": "https://th.wallhaven.cc/small/rq/rqrk71.jpg"
+}
+],
+"Black Myth: Wukong": [
+{
+"n": "Destined One",
+"img": "chars/w/85yx22.webp",
+"id": "85yx22",
+"thumb": "https://th.wallhaven.cc/small/85/85yx22.jpg"
+},
+{
+"n": "Erlang Shen",
+"img": "chars/w/y8gwdg.webp",
+"id": "y8gwdg",
+"thumb": "https://th.wallhaven.cc/small/y8/y8gwdg.jpg"
+}
+],
+"Lies of P": [
+{
+"n": "P",
+"img": "chars/w/7j36we.webp",
+"id": "7j36we",
+"thumb": "https://th.wallhaven.cc/small/7j/7j36we.jpg"
+}
+],
+"Stellar Blade": [
+{
+"n": "EVE",
+"img": "chars/w/r2o3d7.webp",
+"id": "r2o3d7",
+"thumb": "https://th.wallhaven.cc/small/r2/r2o3d7.jpg"
+},
+{
+"n": "Lily",
+"img": "chars/w/po9p73.webp",
+"id": "po9p73",
+"thumb": "https://th.wallhaven.cc/small/po/po9p73.jpg"
+},
+{
+"n": "Adam",
+"img": "chars/w/rr9p2m.webp",
+"id": "rr9p2m",
+"thumb": "https://th.wallhaven.cc/small/rr/rr9p2m.jpg"
+}
+],
+"Clair Obscur: Expedition 33": [
+{
+"n": "Gustave",
+"img": "chars/w/lyq1j2.webp",
+"id": "lyq1j2",
+"thumb": "https://th.wallhaven.cc/small/ly/lyq1j2.jpg"
+},
+{
+"n": "Maelle",
+"img": "chars/w/zp8r3o.webp",
+"id": "zp8r3o",
+"thumb": "https://th.wallhaven.cc/small/zp/zp8r3o.jpg"
+},
+{
+"n": "Lune",
+"img": "chars/w/k87lz1.webp",
+"id": "k87lz1",
+"thumb": "https://th.wallhaven.cc/small/k8/k87lz1.jpg"
+},
+{
+"n": "Sciel",
+"img": "chars/w/e8wywl.webp",
+"id": "e8wywl",
+"thumb": "https://th.wallhaven.cc/small/e8/e8wywl.jpg"
+},
+{
+"n": "Verso",
+"img": "chars/w/1q1361.webp",
+"id": "1q1361",
+"thumb": "https://th.wallhaven.cc/small/1q/1q1361.jpg"
+}
+],
+"Kingdom Come: Deliverance II": [
+{
+"n": "Henry",
+"img": "chars/w/rrml1q.webp",
+"id": "rrml1q",
+"thumb": "https://th.wallhaven.cc/small/rr/rrml1q.jpg"
+},
+{
+"n": "Hans Capon",
+"img": "chars/w/211xd9.webp",
+"id": "211xd9",
+"thumb": "https://th.wallhaven.cc/small/21/211xd9.jpg"
+}
+],
+"The Elder Scrolls V: Skyrim": [
+{
+"n": "Alduin",
+"img": "chars/w/0wp5pn.webp",
+"id": "0wp5pn",
+"thumb": "https://th.wallhaven.cc/small/0w/0wp5pn.jpg"
+},
+{
+"n": "Serana",
+"img": "chars/w/ly2762.webp",
+"id": "ly2762",
+"thumb": "https://th.wallhaven.cc/small/ly/ly2762.jpg"
+},
+{
+"n": "Lydia",
+"img": "chars/w/nmlqgk.webp",
+"id": "nmlqgk",
+"thumb": "https://th.wallhaven.cc/small/nm/nmlqgk.jpg"
+},
+{
+"n": "Paarthurnax",
+"img": "chars/w/lm5d1q.webp",
+"id": "lm5d1q",
+"thumb": "https://th.wallhaven.cc/small/lm/lm5d1q.jpg"
+}
+],
+"Fallout 4": [
+{
+"n": "Nick Valentine",
+"img": "chars/w/2ke3g6.webp",
+"id": "2ke3g6",
+"thumb": "https://th.wallhaven.cc/small/2k/2ke3g6.jpg"
+},
+{
+"n": "Piper Wright",
+"img": "chars/w/nzww1o.webp",
+"id": "nzww1o",
+"thumb": "https://th.wallhaven.cc/small/nz/nzww1o.jpg"
+},
+{
+"n": "Dogmeat",
+"img": "chars/w/48qlm2.webp",
+"id": "48qlm2",
+"thumb": "https://th.wallhaven.cc/small/48/48qlm2.jpg"
+}
+],
+"Mass Effect Legendary Edition": [
+{
+"n": "Commander Shepard",
+"img": "chars/w/y879mk.webp",
+"id": "y879mk",
+"thumb": "https://th.wallhaven.cc/small/y8/y879mk.jpg"
+},
+{
+"n": "Garrus Vakarian",
+"img": "chars/w/y85j1d.webp",
+"id": "y85j1d",
+"thumb": "https://th.wallhaven.cc/small/y8/y85j1d.jpg"
+},
+{
+"n": "Liara T'Soni",
+"img": "chars/w/7peypv.webp",
+"id": "7peypv",
+"thumb": "https://th.wallhaven.cc/small/7p/7peypv.jpg"
+},
+{
+"n": "Tali'Zorah",
+"img": "chars/w/d8vzdj.webp",
+"id": "d8vzdj",
+"thumb": "https://th.wallhaven.cc/small/d8/d8vzdj.jpg"
+},
+{
+"n": "Urdnot Wrex",
+"img": "chars/w/vqkxzl.webp",
+"id": "vqkxzl",
+"thumb": "https://th.wallhaven.cc/small/vq/vqkxzl.jpg"
+}
+],
+"Diablo IV": [
+{
+"n": "Lilith",
+"img": "chars/w/zyd1dy.webp",
+"id": "zyd1dy",
+"thumb": "https://th.wallhaven.cc/small/zy/zyd1dy.jpg"
+},
+{
+"n": "Inarius",
+"img": "chars/w/eyvmyo.webp",
+"id": "eyvmyo",
+"thumb": "https://th.wallhaven.cc/small/ey/eyvmyo.jpg"
+},
+{
+"n": "Lorath Nahr",
+"img": "chars/w/kxl1md.webp",
+"id": "kxl1md",
+"thumb": "https://th.wallhaven.cc/small/kx/kxl1md.jpg"
+}
+],
+"Dead Space": [
+{
+"n": "Isaac Clarke",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+}
+],
+"Alan Wake 2": [
+{
+"n": "Alan Wake",
+"img": "chars/w/gwjwv7.webp",
+"id": "gwjwv7",
+"thumb": "https://th.wallhaven.cc/small/gw/gwjwv7.jpg"
+},
+{
+"n": "Saga Anderson",
+"img": "chars/w/zp833o.webp",
+"id": "zp833o",
+"thumb": "https://th.wallhaven.cc/small/zp/zp833o.jpg"
+}
+],
+"Silent Hill 2": [
+{
+"n": "James Sunderland",
+"img": "chars/w/k8wxy7.webp",
+"id": "k8wxy7",
+"thumb": "https://th.wallhaven.cc/small/k8/k8wxy7.jpg"
+},
+{
+"n": "Maria",
+"img": "chars/w/1qjqgw.webp",
+"id": "1qjqgw",
+"thumb": "https://th.wallhaven.cc/small/1q/1qjqgw.jpg"
+},
+{
+"n": "Pyramid Head",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+}
+],
+"Silent Hill f": [
+{
+"n": "Hinako Shimizu",
+"img": "chars/w/vpdq5p.webp",
+"id": "vpdq5p",
+"thumb": "https://th.wallhaven.cc/small/vp/vpdq5p.jpg"
+}
+],
+"Star Wars Jedi: Survivor": [
+{
+"n": "Cal Kestis",
+"img": "chars/w/rr1w67.webp",
+"id": "rr1w67",
+"thumb": "https://th.wallhaven.cc/small/rr/rr1w67.jpg"
+},
+{
+"n": "Merrin",
+"img": "chars/w/2ewlr6.webp",
+"id": "2ewlr6",
+"thumb": "https://th.wallhaven.cc/small/2e/2ewlr6.jpg"
+}
+],
+"LEGO Star Wars: A Saga Skywalker": [
+{
+"n": "Luke Skywalker",
+"img": "chars/w/4oxgzp.webp",
+"id": "4oxgzp",
+"thumb": "https://th.wallhaven.cc/small/4o/4oxgzp.jpg"
+},
+{
+"n": "Darth Vader",
+"img": "chars/w/d56qem.webp",
+"id": "d56qem",
+"thumb": "https://th.wallhaven.cc/small/d5/d56qem.jpg"
+},
+{
+"n": "Rey Skywalker",
+"img": "chars/w/zyem8g.webp",
+"id": "zyem8g",
+"thumb": "https://th.wallhaven.cc/small/zy/zyem8g.jpg"
+},
+{
+"n": "Han Solo",
+"img": "chars/w/0pk939.webp",
+"id": "0pk939",
+"thumb": "https://th.wallhaven.cc/small/0p/0pk939.jpg"
+}
+],
+"Batman: Arkham Knight": [
+{
+"n": "Batman",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Arkham Knight",
+"img": "chars/w/eyq2vk.webp",
+"id": "eyq2vk",
+"thumb": "https://th.wallhaven.cc/small/ey/eyq2vk.jpg"
+},
+{
+"n": "Joker",
+"img": "chars/w/w8zpdp.webp",
+"id": "w8zpdp",
+"thumb": "https://th.wallhaven.cc/small/w8/w8zpdp.jpg"
+},
+{
+"n": "Harley Quinn",
+"img": "chars/w/ymvrjl.webp",
+"id": "ymvrjl",
+"thumb": "https://th.wallhaven.cc/small/ym/ymvrjl.jpg"
+},
+{
+"n": "Scarecrow",
+"img": "chars/w/48d22y.webp",
+"id": "48d22y",
+"thumb": "https://th.wallhaven.cc/small/48/48d22y.jpg"
+}
+],
+"Sonic X Shadow Generations": [
+{
+"n": "Shadow the Hedgehog",
+"img": "chars/w/qr2w95.webp",
+"id": "qr2w95",
+"thumb": "https://th.wallhaven.cc/small/qr/qr2w95.jpg"
+},
+{
+"n": "Sonic the Hedgehog",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Black Doom",
+"img": "chars/w/0q6vol.webp",
+"id": "0q6vol",
+"thumb": "https://th.wallhaven.cc/small/0q/0q6vol.jpg"
+}
+],
+"Crash Bandicoot N. Sane Trilogy": [
+{
+"n": "Crash Bandicoot",
+"img": "chars/w/yjd3ld.webp",
+"id": "yjd3ld",
+"thumb": "https://th.wallhaven.cc/small/yj/yjd3ld.jpg"
+},
+{
+"n": "Doctor Neo Cortex",
+"img": "chars/w/4l898y.webp",
+"id": "4l898y",
+"thumb": "https://th.wallhaven.cc/small/4l/4l898y.jpg"
+},
+{
+"n": "Aku Aku",
+"img": "chars/w/1p89y3.webp",
+"id": "1p89y3",
+"thumb": "https://th.wallhaven.cc/small/1p/1p89y3.jpg"
+}
+],
+"NieR:Automata": [
+{
+"n": "YoRHa No.2 Type B",
+"img": "chars/w/rrp6vj.webp",
+"id": "rrp6vj",
+"thumb": "https://th.wallhaven.cc/small/rr/rrp6vj.jpg"
+},
+{
+"n": "YoRHa No.9 Type S",
+"img": "chars/w/gjlg2q.webp",
+"id": "gjlg2q",
+"thumb": "https://th.wallhaven.cc/small/gj/gjlg2q.jpg"
+},
+{
+"n": "A2",
+"img": "chars/w/mpxy8m.webp",
+"id": "mpxy8m",
+"thumb": "https://th.wallhaven.cc/small/mp/mpxy8m.jpg"
+}
+],
+"Yakuza 0": [
+{
+"n": "Kazuma Kiryu",
+"img": "chars/w/zmjo7o.webp",
+"id": "zmjo7o",
+"thumb": "https://th.wallhaven.cc/small/zm/zmjo7o.jpg"
+},
+{
+"n": "Goro Majima",
+"img": "chars/w/q2leqq.webp",
+"id": "q2leqq",
+"thumb": "https://th.wallhaven.cc/small/q2/q2leqq.jpg"
+}
+],
+"Like a Dragon: Infinite Wealth": [
+{
+"n": "Ichiban Kasuga",
+"img": "chars/w/gpjxv3.webp",
+"id": "gpjxv3",
+"thumb": "https://th.wallhaven.cc/small/gp/gpjxv3.jpg"
+},
+{
+"n": "Kazuma Kiryu",
+"img": "chars/w/zmjo7o.webp",
+"id": "zmjo7o",
+"thumb": "https://th.wallhaven.cc/small/zm/zmjo7o.jpg"
+}
+],
+"Tales of Arise": [
+{
+"n": "Alphen",
+"img": "chars/w/721vgo.webp",
+"id": "721vgo",
+"thumb": "https://th.wallhaven.cc/small/72/721vgo.jpg"
+},
+{
+"n": "Shionne",
+"img": "chars/w/v95eml.webp",
+"id": "v95eml",
+"thumb": "https://th.wallhaven.cc/small/v9/v95eml.jpg"
+}
+],
+"Ori and the Will of the Wisps": [
+{
+"n": "Ori",
+"img": "chars/w/5dvqv8.webp",
+"id": "5dvqv8",
+"thumb": "https://th.wallhaven.cc/small/5d/5dvqv8.jpg"
+},
+{
+"n": "Ku",
+"img": "chars/w/x8jeld.webp",
+"id": "x8jeld",
+"thumb": "https://th.wallhaven.cc/small/x8/x8jeld.jpg"
+}
+],
+"Ratchet & Clank: Em Uma Outra Dimensão": [
+{
+"n": "Ratchet",
+"img": "chars/w/q65edl.webp",
+"id": "q65edl",
+"thumb": "https://th.wallhaven.cc/small/q6/q65edl.jpg"
+},
+{
+"n": "Clank",
+"img": "chars/w/o565z9.webp",
+"id": "o565z9",
+"thumb": "https://th.wallhaven.cc/small/o5/o565z9.jpg"
+},
+{
+"n": "Rivet",
+"img": "chars/w/p9l1oe.webp",
+"id": "p9l1oe",
+"thumb": "https://th.wallhaven.cc/small/p9/p9l1oe.jpg"
+}
+],
+"Counter-Strike 2": [
+{
+"n": "Counter-Terrorists",
+"img": "chars/w/oxem35.webp",
+"id": "oxem35",
+"thumb": "https://th.wallhaven.cc/small/ox/oxem35.jpg"
+},
+{
+"n": "Terrorists",
+"img": "chars/w/0qmedr.webp",
+"id": "0qmedr",
+"thumb": "https://th.wallhaven.cc/small/0q/0qmedr.jpg"
+}
+]
+},
+"misses": [
+"Resident Evil 4|Luis Serra Navarro",
+"Resident Evil 4|Jack Krauser",
+"Resident Evil 4 (2005)|Jack Krauser",
+"Resident Evil 3|Nemesis-T Type",
+"Resident Evil 3|Nikolai Zinoviev",
+"Resident Evil Village|Ethan Winters",
+"Resident Evil Village|Karl Heisenberg",
+"Resident Evil 7: Biohazard|Ethan Winters",
+"Resident Evil 7: Biohazard|Mia Winters",
+"Resident Evil 7: Biohazard|Jack Baker",
+"Resident Evil 7: Biohazard|Marguerite Baker",
+"Resident Evil 0|Billy Coen",
+"Resident Evil Code: Veronica X|Steve Burnside",
+"Resident Evil Code: Veronica X|Alexia Ashford",
+"Resident Evil Revelations|Parker Luciani",
+"Resident Evil Revelations 2|Moira Burton",
+"Resident Evil Revelations 2|Natalia Korda",
+"Grand Theft Auto V|Lamar Davis",
+"Grand Theft Auto V|Lester Crest",
+"Grand Theft Auto Online|Lester Crest",
+"Grand Theft Auto Online|Lamar Davis",
+"Grand Theft Auto IV|Roman Bellic",
+"Grand Theft Auto IV|Johnny Klebitz",
+"Grand Theft Auto IV|Luis Fernando Lopez",
+"Grand Theft Auto: Liberty City Stories|Toni Cipriani",
+"Grand Theft Auto: Liberty City Stories|Salvatore Leone",
+"God of War|Mimir",
+"God of War Ragnarök|Odin",
+"The Last of Us Part I|Tess Servopoulos",
+"The Last of Us Part I|Tommy Miller",
+"The Last of Us Part I|Marlene",
+"The Last of Us Part II Remastered|Lev",
+"Ghost of Tsushima|Khotun Khan",
+"Elden Ring Nightreign|Melina",
+"Sekiro: Shadows Die Twice|Genichiro Ashina",
+"Sekiro: Shadows Die Twice|Kuro",
+"Dark Souls III|Patches",
+"Cyberpunk 2077|Judy Álvarez",
+"Red Dead Redemption|Bonnie MacFarlane",
+"Hogwarts Legacy|Sebastian Sallow",
+"Hogwarts Legacy|Natsai Onai",
+"Hogwarts Legacy|Poppy Sweeting",
+"Hogwarts Legacy|Ominis Gaunt",
+"Crisis Core – Final Fantasy VII – Reunion|Genesis Rhapsodos",
+"Final Fantasy XVI|Cidolfus Telamon",
+"Final Fantasy X | X-2 HD Remaster|Auron",
+"Final Fantasy XII: The Zodiac Age|Basch fon Ronsenburg",
+"Final Fantasy XIII-2|Caius Ballad",
+"Lightning Returns: Final Fantasy XIII|Lumina",
+"Final Fantasy IX|Vivi Orunitia",
+"Final Fantasy VIII Remastered|Seifer Almasy",
+"Final Fantasy VIII Remastered|Laguna Loire",
+"Final Fantasy XIV Online|Alphinaud Leveilleur",
+"Final Fantasy XIV Online|Alisaie Leveilleur",
+"Final Fantasy XIV Online|Thancred Waters",
+"Final Fantasy Type-0 HD|Machina Kunagiri",
+"Final Fantasy Type-0 HD|Rem Tokimiya",
+"Stranger of Paradise: Final Fantasy Origin|Jack Garland",
+"World of Final Fantasy|Lann",
+"World of Final Fantasy|Reynn",
+"Final Fantasy Tactics: The Ivalice Chronicles|Agrias Oaks",
+"Final Fantasy Pixel Remaster (I–VI)|Firion",
+"Monster Hunter Wilds|Arkveld",
+"Monster Hunter Wilds|Gore Magala",
+"Hollow Knight: Silksong|Lace",
+"Hollow Knight: Silksong|Shakra",
+"Hades|Dusa",
+"Hades II|Chronos",
+"Hades II|Moros",
+"Celeste|Badeline",
+"Celeste|Theo",
+"Celeste|Granny",
+"Cuphead|Ms. Chalice",
+"Halo Infinite|John-117",
+"Halo Infinite|Escharum",
+"Halo Infinite|Fernando Esparza",
+"Halo: The Master Chief Collection|John-117",
+"Halo: The Master Chief Collection|Thel 'Vadam",
+"Halo: The Master Chief Collection|Avery Johnson",
+"Gears 5|Del",
+"Gears 5|JD Fenix",
+"Gears of War: Reloaded|Dominic Santiago",
+"Gears of War: Reloaded|Augustus Cole",
+"Gears of War: Reloaded|Damon Baird",
+"Starfield|Sam Coe",
+"Starfield|Barrett",
+"Fortnite|Peely",
+"Fortnite|Fishstick",
+"Fortnite|Raven",
+"Fortnite|Midas",
+"Fortnite|Drift",
+"Marvel Rivals|Hulk",
+"Cult of the Lamb|Ratau",
+"Cult of the Lamb|The One Who Waits",
+"Dead by Daylight|The Trapper",
+"Dead by Daylight|Meg Thomas",
+"Dead by Daylight|Dwight Fairfield",
+"Palworld|Cattiva",
+"Palworld|Anubis",
+"Palworld|Jetragon",
+"Subnautica|Reaper Leviathan",
+"Subnautica|Peeper",
+"Subnautica|Sea Emperor Leviathan",
+"Subnautica|Cuddlefish",
+"Detroit: Become Human|Hank Anderson",
+"Days Gone|Boozer",
+"Days Gone|Sarah Whitaker",
+"Metal Gear Solid Delta: Snake Eater|EVA",
+"Metal Gear Solid Delta: Snake Eater|Volgin",
+"Mafia: The Old Country|Enzo Favara",
+"Borderlands 4|Rafa",
+"Borderlands 4|Amon",
+"Borderlands 4|Harlowe",
+"Lies of P|Geppetto",
+"Lies of P|Sophia",
+"Fallout 4|Preston Garvey",
+"Dead Space|Ellie Langford",
+"Silent Hill 2|Angela Orosco",
+"Star Wars Jedi: Survivor|BD-1",
+"Star Wars Jedi: Survivor|Cere Junda",
+"LEGO Star Wars: A Saga Skywalker|Grogu",
+"Prince of Persia: The Lost Crown|Sargon",
+"Crash Bandicoot N. Sane Trilogy|Coco Bandicoot",
+"Doom Eternal|Khan Maykr",
+"Ratchet & Clank: Em Uma Outra Dimensão|Kit",
+"Returnal|Selene"
+]
+}
