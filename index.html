@@ -1025,7 +1025,7 @@ body { top: 0 !important; }
     </div>
     <div>
       <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
-      <p id="foot-live">Preços da Steam e da Microsoft Store (Xbox) são atualizados automaticamente várias vezes por dia, com promoções. A PlayStation Store não permite consultar promoções automaticamente, então os preços do PlayStation são de referência e o jogo pode estar em promoção na loja. Na Google Play, os preços de vários jogos pagos também são conferidos automaticamente. Epic Games e App Store usam preços de referência, e os jogos grátis da Epic aparecem assim que são liberados.</p>
+      <p id="foot-live">Preços e promoções são conferidos automaticamente nas lojas: Steam, Microsoft Store (Xbox), Google Play e App Store várias vezes por dia, e PlayStation Store duas vezes por dia. Na Epic Games, atualizamos os jogos que aparecem na vitrine da loja e os jogos grátis da semana; os demais usam preço de referência.</p>
       <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. O Zera não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
@@ -1147,7 +1147,7 @@ function cardHTML(g, keys) {
 // ================== PREÇOS AO VIVO ==================
 // A PlayStation Store não libera preços e promoções para consulta automática: o preço mostrado é o de referência.
 const psRef = g => num(g.p.ps) && g.p.ps > 0 && !(g.live && g.live.ps);
-const PS_NOTE = `<p class="ps-note"><span class="pi" aria-hidden="true">i</span><span><b>Pode estar em promoção na PlayStation Store.</b> O sistema da PlayStation não permite consultar promoções automaticamente, então mostramos o preço de referência. Confira o valor do dia na loja.</span></p>`;
+const PS_NOTE = `<p class="ps-note"><span class="pi" aria-hidden="true">i</span><span><b>Preço de referência.</b> Não conseguimos conferir o preço de hoje deste jogo na PlayStation Store, então pode haver promoção. Confira o valor do dia na loja.</span></p>`;
 let LIVE = null;
 let SCENES = {};
 let ADDED = {};

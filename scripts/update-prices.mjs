@@ -239,6 +239,83 @@ async function playstationHtml() {
   report("ps", { ok, total: list.length, errors, miss: miss.slice(0, 60) });
 }
 
+// ---------- PLAYSTATION (via páginas oficiais) ----------
+// 1) acha o código do produto na página do jogo em playstation.com/pt-br/games/<slug>/ (guardado em data/ps-ids.json)
+// 2) lê o preço na página do produto na PS Store (preço normal e promoção para todos; ignora preços só para assinantes)
+// Roda duas vezes por dia no horário agendado (ou sempre que o robô for disparado à mão).
+const psSlugs = g => {
+  const base = [g.w, g.t].filter(Boolean).map(t => t.replace(/\s*\((\d{4} )?video game\)$/i, ""));
+  const sl = t => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/&/g, " and ").replace(/['’™®:.,!?]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const out = [];
+  for (const t of base) { out.push(sl(t)); if (t.includes(":")) out.push(sl(t.split(":")[0])); out.push(sl(t.replace(/^(Marvel's|The)\s+/i, ""))); }
+  return [...new Set(out)].filter(Boolean);
+};
+function psPickId(html) {
+  const ids = [...new Set([...html.matchAll(/[A-Z]{2}\d{4}-[A-Z]{4}\d{5}_00-[A-Z0-9]{16}/g)].map(m => m[0]))];
+  const plain = ids.filter(i => !/DELUX|ULTIM|GOLD|PREMIU|COMPLET|BUNDLE|SEASON|PASS|DLC|VIRTUAL|CURRENC|COINS|POINTS|EXPANS|UPGRADE|SOUNDTR|ARTBOOK/i.test(i.split("-")[2]));
+  return plain.find(i => /-PPSA/.test(i)) || plain.find(i => /-CUSA/.test(i)) || ids[0] || null;
+}
+function psPricesFromProduct(html) {
+  const outp = []; let i = 0;
+  while ((i = html.indexOf('{"__typename":"Price"', i)) >= 0) {
+    let d = 0, j = i;
+    for (; j < html.length && j - i < 6000; j++) { if (html[j] === "{") d++; else if (html[j] === "}") { d--; if (!d) break; } }
+    try { outp.push(JSON.parse(html.slice(i, j + 1))); } catch (e) {}
+    i = j + 1;
+  }
+  return outp;
+}
+async function playstationWeb() {
+  const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
+  let cache = {}; try { cache = JSON.parse(fs.readFileSync(ROOT + "data/ps-ids.json", "utf8")); } catch (e) {}
+  let ok = 0, found = 0, errors = 0; const miss = [], usedIds = {};
+  for (const g of list) {
+    try {
+      let id = g.psid || (cache[g.t] && cache[g.t].id) || null;
+      const old = cache[g.t];
+      if (!id && !(old && old.none && Date.now() - new Date(old.at) < 7 * 864e5)) {
+        for (const sl of psSlugs(g)) {
+          const r = await fetch(`https://www.playstation.com/pt-br/games/${sl}/`, { headers: { "user-agent": UA, "accept-language": "pt-BR" } });
+          await sleep(400);
+          if (!r.ok) continue;
+          id = psPickId(await r.text());
+          if (id) { found++; break; }
+        }
+        cache[g.t] = id ? { id, at: new Date().toISOString() } : { none: true, at: new Date().toISOString() };
+      }
+      if (!id) { miss.push(g.t + " (sem página)"); continue; }
+      if (usedIds[id]) { miss.push(g.t + " (mesmo produto de " + usedIds[id] + ")"); continue; }
+      usedIds[id] = g.t;
+      const url = `https://store.playstation.com/pt-br/product/${id}`;
+      const html = await (await get(url, {}, 2)).text();
+      const prices = psPricesFromProduct(html).filter(p => !p.isTiedToSubscription && !(p.serviceBranding || []).some(x => /PLUS|EA_ACCESS|UBISOFT|GAME_?PASS/i.test(x)) && (p.isFree || p.basePriceValue > 0));
+      const pr = prices[0];
+      if (!pr) { miss.push(g.t + " (sem preço)"); await sleep(600); continue; }
+      const b = pr.isFree ? 0 : pr.basePriceValue / 100, f = pr.isFree ? 0 : (pr.discountedValue != null ? pr.discountedValue : pr.basePriceValue) / 100;
+      const pct = b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0;
+      const until = pr.endTime && /^\d+$/.test(String(pr.endTime)) ? new Date(Number(pr.endTime)).toISOString() : null;
+      const nm = (html.match(/<title>([^<]+)<\/title>/) || [])[1];
+      put(g.id, "ps", { b: round2(b), f: round2(f), pct, until, url, n: nm ? nm.replace(/\s*\|.*$/, "").trim() : g.t });
+      ok++;
+    } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); if (errors >= 12 && ok === 0) { miss.push("parado"); break; } }
+    await sleep(600);
+  }
+  fs.mkdirSync(ROOT + "data", { recursive: true });
+  fs.writeFileSync(ROOT + "data/ps-ids.json", JSON.stringify(cache, null, 0));
+  report("ps", { ok, total: list.length, novosIds: found, errors, via: "páginas oficiais", miss: miss.slice(0, 80) });
+}
+async function playstationScheduled() {
+  const forced = process.env.GITHUB_EVENT_NAME && process.env.GITHUB_EVENT_NAME !== "schedule";
+  if (forced || new Date().getUTCHours() % 12 < 3) return playstationWeb();
+  // fora do horário: mantém os preços do PlayStation da última leitura (até 2 dias)
+  try {
+    const prev = JSON.parse(fs.readFileSync(ROOT + "data/prices.json", "utf8"));
+    let n = 0;
+    if (Date.now() - new Date(prev.updated).getTime() < 2 * 864e5) for (const [gid, st] of Object.entries(prev.p || {})) if (st.ps) { put(gid, "ps", st.ps); n++; }
+    report("ps", { ok: n, skipped: true, via: "última leitura" });
+  } catch (e) { report("ps", { ok: 0, skipped: true }); }
+}
+
 // ---------- XBOX / MICROSOFT STORE ----------
 async function xbox() {
   const list = games.filter(g => g.p.xb !== null && g.p.xb !== undefined && g.p.xb !== "pre");
@@ -294,6 +371,38 @@ async function epicFree() {
     out.top.epFree = list;
     report("epFree", { ok: list.length });
   } catch (e) { report("epFree", { error: e.message }); }
+}
+// A busca de preços da Epic fica atrás de bloqueio anti-robô; a vitrine pública (storefrontLayout) continua aberta
+// e traz centenas de jogos com preço em reais, incluindo as promoções em destaque. Usamos o que aparecer lá.
+async function epicStorefront() {
+  const list = games.filter(g => g.p.ep !== null && g.p.ep !== undefined);
+  const offers = new Map();
+  for (const start of [0, 30, 60]) {
+    try {
+      const d = await (await get(`https://store-site-backend-static-ipv4.ak.epicgames.com/storefrontLayout?locale=pt-BR&country=BR&start=${start}&count=30`)).json();
+      walk(d, o => {
+        const tp = o && o.price && o.price.totalPrice;
+        if (typeof o.title !== "string" || !tp || tp.currencyCode !== "BRL" || typeof tp.originalPrice !== "number") return;
+        const slugP = ((o.offerMappings || []).find(x => x.pageType === "productHome") || {}).pageSlug || (((o.catalogNs || {}).mappings || [])[0] || {}).pageSlug || o.productSlug || o.urlSlug;
+        const rule = (((o.price.lineOffers || [])[0] || {}).appliedRules || [])[0];
+        const dec = Math.pow(10, (tp.currencyInfo && tp.currencyInfo.decimals) || 2);
+        const prev = offers.get(o.title);
+        const v = { title: o.title, b: round2(tp.originalPrice / dec), f: round2(tp.discountPrice / dec), until: rule && rule.endDate || null, url: slugP ? `https://store.epicgames.com/pt-BR/p/${String(slugP).replace(/\/home$/, "")}` : null };
+        if (!prev || v.f < prev.f) offers.set(o.title, v);
+      });
+    } catch (e) { report("epErr" + start, { error: e.message }); }
+    await sleep(800);
+  }
+  const all = [...offers.values()].filter(o => !BAD.test(o.title));
+  let ok = 0;
+  for (const g of list) {
+    const strict = t => { let top = null; for (const o of all) { const sc = score(t, o.title); if (sc >= 92 && (!top || sc > top.sc)) top = { o, sc }; } return top && top.o; };
+    const hit = strict(searchName(g)) || strict(g.t);
+    if (!hit) continue;
+    put(g.id, "ep", { b: hit.b, f: hit.f, pct: hit.b > 0 && hit.f < hit.b ? Math.round((1 - hit.f / hit.b) * 100) : 0, until: hit.until, url: hit.url, n: hit.title });
+    ok++;
+  }
+  report("ep", { ok, total: list.length, ofertasNaVitrine: all.length, via: "vitrine pública da Epic" });
 }
 async function epic() {
   const list = games.filter(g => g.p.ep !== null && g.p.ep !== undefined);
@@ -351,8 +460,30 @@ async function googlePlay() {
   report("gp", { ok, total: list.length, errors, miss: miss.slice(0, 30) });
 }
 
+// ---------- APP STORE (busca pública da Apple, Brasil) ----------
+async function appStore() {
+  const list = games.filter(g => g.p.ap !== null && g.p.ap !== undefined && g.p.ap !== "Netflix" && g.p.ap !== "pre");
+  let ok = 0; const miss = []; let errors = 0;
+  for (const g of list) {
+    const term = searchName(g);
+    try {
+      const d = await (await get(`https://itunes.apple.com/search?term=${encodeURIComponent(term)}&country=br&entity=software&limit=15&lang=pt_br`)).json();
+      const items = (d.results || []).filter(x => x.kind === "software" && ((x.genres || []).includes("Games") || (x.genres || []).includes("Jogos") || x.primaryGenreName === "Games" || x.primaryGenreName === "Jogos"));
+      const hit = best(term, items, x => x.trackName) || best(g.t, items, x => x.trackName);
+      if (!hit || typeof hit.price !== "number") { miss.push(g.t); await sleep(2500); continue; }
+      const f = round2(hit.price), base = typeof g.p.ap === "number" ? g.p.ap : null;
+      if (base && f > 0 && (f > base * 2.6 || f < base * 0.15)) { miss.push(g.t + " (preço estranho " + f + ")"); await sleep(2500); continue; }
+      const b = base && base > f ? base : f;
+      put(g.id, "ap", { b, f, pct: b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0, until: null, url: hit.trackViewUrl ? hit.trackViewUrl.split("?")[0] : null, n: hit.trackName });
+      ok++;
+    } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); }
+    await sleep(2500);
+  }
+  report("ap", { ok, total: list.length, errors, miss: miss.slice(0, 40) });
+}
+
 // ---------- execução ----------
-const steps = { st: steam, ps: playstation, xb: xbox, ep: epic, epFree: epicFree, gp: googlePlay };
+const steps = { st: steam, ps: playstationScheduled, xb: xbox, ep: epicStorefront, epFree: epicFree, gp: googlePlay, ap: appStore };
 for (const [k, fn] of Object.entries(steps)) {
   const t0 = Date.now();
   try { await fn(); } catch (e) { report(k, { error: String(e && e.message || e) }); }
