@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30T19:56:38.946Z",
+ "updated": "2026-10-30T21:30:30.065Z",
  "st": {
-  "ok": 225,
-  "total": 230,
+  "ok": 262,
+  "total": 267,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -23,13 +23,48 @@
   ]
  },
  "ps": {
-  "ok": 196,
-  "skipped": true,
-  "via": "última leitura"
+  "ok": 229,
+  "total": 260,
+  "novosIds": 33,
+  "errors": 0,
+  "via": "páginas oficiais",
+  "miss": [
+   "Ghost of Yōtei",
+   "Avowed",
+   "Clair Obscur: Expedition 33",
+   "Yakuza 0",
+   "Call of Duty: Black Ops 6",
+   "EA Sports FC 26",
+   "Hollow Knight",
+   "Dragon Ball: The Breakers",
+   "Resident Evil Revelations 2",
+   "Umbrella Corps",
+   "Grand Theft Auto: The Trilogy – The Definitive Edition",
+   "Grand Theft Auto Online",
+   "Final Fantasy Pixel Remaster (I–VI)",
+   "Call of Duty: Black Ops 7",
+   "Terraria",
+   "Hotline Miami",
+   "Control",
+   "Remnant II",
+   "RimWorld",
+   "Sid Meier's Civilization VII",
+   "NieR Replicant ver.1.22474487139...",
+   "Dragon Quest XI S",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2",
+   "F1 25",
+   "Bloons TD 6",
+   "Rise of the Ronin",
+   "Marvel's Guardians of the Galaxy",
+   "Fall Guys",
+   "Don't Starve Together"
+  ]
  },
  "xb": {
-  "ok": 192,
-  "total": 205,
+  "ok": 225,
+  "total": 240,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -44,12 +79,14 @@
    "Far Cry 6",
    "Rainbow Six Siege X",
    "Overwatch 2",
-   "Path of Exile 2"
+   "Path of Exile 2",
+   "Persona 5 Strikers",
+   "Marvel's Guardians of the Galaxy"
   ]
  },
  "ep": {
-  "ok": 25,
-  "total": 86,
+  "ok": 30,
+  "total": 108,
   "ofertasNaVitrine": 244,
   "via": "vitrine pública da Epic"
  },
@@ -63,8 +100,8 @@
   "miss": []
  },
  "ap": {
-  "ok": 20,
-  "total": 36,
+  "ok": 22,
+  "total": 38,
   "errors": 0,
   "miss": [
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
