@@ -36,35 +36,52 @@ def cover(im, w, h, fy=0.5):
     l = (im.width - w) // 2; t = int((im.height - h) * fy)
     return im.crop((l, t, l + w, t + h))
 
-bgcache = {}
-def background(game):
-    if game in bgcache: return bgcache[game]
+shots = {}
+def shotlist(game):
+    if game in shots: return shots[game]
     srcs = []
     o = bgover.get(game)
-    if o: srcs.append(o if str(o).startswith("http") else f"https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/{o}/library_hero.jpg")
-    a = appid(game)
+    if o and str(o).startswith("http"): srcs.append(o)
+    a = str(o) if o and not str(o).startswith("http") else appid(game)
     if a:
-        srcs += [f"https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/{a}/library_hero.jpg",
-                 f"https://cdn.cloudflare.steamstatic.com/steam/apps/{a}/library_hero.jpg"]
+        try:
+            time.sleep(0.6)
+            j = json.loads(get(f"https://store.steampowered.com/api/appdetails?appids={a}&filters=screenshots"))
+            srcs += [x["path_full"] for x in (j.get(a, {}).get("data") or {}).get("screenshots", [])[:6]]
+        except Exception as e: print("appdetails", game, e)
     c = (games.get(game) or {}).get("img")
     if c: srcs.append(c)
-    bg = None
-    for s in srcs:
+    shots[game] = srcs
+    return srcs
+
+bgcache = {}
+def background(game, i):
+    srcs = shotlist(game)
+    order = list(range(len(srcs)))
+    if len(srcs) > 1: k = i % max(1, len(srcs) - 1); order = [k] + [j for j in order if j != k]
+    for j in order:
+        s = srcs[j]
+        if s in bgcache: return bgcache[s]
         try:
             bg = Image.open(s).convert("RGB") if not s.startswith("http") else img(s).convert("RGB")
-            break
-        except Exception: pass
-    if bg is None: bg = Image.new("RGB", (W, H), (24, 26, 32))
-    bg = cover(bg, W, H).filter(ImageFilter.GaussianBlur(4))
-    bg = ImageEnhance.Brightness(bg).enhance(0.62)
-    # escurece embaixo para o personagem "pisar" no cenário
-    grad = Image.linear_gradient("L").resize((W, H)).point(lambda v: int(v * 0.55))
-    bg = Image.composite(Image.new("RGB", (W, H), (8, 8, 10)), bg, grad)
-    bgcache[game] = bg
-    return bg
+        except Exception: continue
+        bg = cover(bg, W, H).filter(ImageFilter.GaussianBlur(3))
+        bg = ImageEnhance.Brightness(bg).enhance(0.72)
+        g = Image.linear_gradient("L").resize((W, H)).point(lambda v: 0 if v < 110 else int((v - 110) / 145 * 170))
+        bg = Image.composite(Image.new("RGB", (W, H), (8, 8, 10)), bg, g)
+        bgcache[s] = bg
+        return bg
+    return Image.new("RGB", (W, H), (24, 26, 32))
 
-def compose(game, url):
-    ch = img(full(url))
+def unwhite(ch):  # tira fundo branco liso (artes antigas) a partir dos cantos
+    ch = ch.convert("RGBA"); px = ch.load(); w, h = ch.size
+    corners = [(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)]
+    if not all(min(px[c][:3]) > 235 for c in corners): return ch
+    for c in corners: ImageDraw.floodfill(ch, c, (255, 255, 255, 0), thresh=28)
+    return ch
+
+def compose(game, url, i=0):
+    ch = unwhite(img(full(url)))
     if ch.mode in ("P", "LA") or "transparency" in ch.info: ch = ch.convert("RGBA")
     if ch.mode == "RGBA":
         a = ch.getchannel("A"); hist = a.histogram()
@@ -78,7 +95,7 @@ def compose(game, url):
     ch = ch.resize((max(1, int(ch.width * s)), max(1, int(ch.height * s))), Image.LANCZOS)
     x, y = (W - ch.width) // 2, H - ch.height
     if ch.height < H * 0.7: y = int(H * 0.18)   # retrato (busto) pequeno: um pouco acima do meio
-    out = background(game).copy().convert("RGBA")
+    out = background(game, i).copy().convert("RGBA")
     sh = Image.new("RGBA", out.size, (0, 0, 0, 0))
     sh.paste(Image.new("RGBA", ch.size, (0, 0, 0, 170)), (x, y + 10), ch.getchannel("A"))
     out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
@@ -91,15 +108,15 @@ errs = []
 for game, lst in base.items():
     if game in skip or (only and game not in only): continue
     out = []
-    for c in lst:
+    for i, c in enumerate(lst):
         fn = "chars/c/" + hashlib.md5((game + "|" + c["n"]).encode()).hexdigest()[:12] + ".webp"
         try:
-            compose(game, c["img"]).save(fn, "WEBP", quality=74, method=6)
+            compose(game, c["img"], i).save(fn, "WEBP", quality=74, method=6)
             out.append({"n": c["n"], "img": fn})
         except Exception as e:
             errs.append(f"{game}|{c['n']}: {e}")
     if out: result[game] = out
-    print(game, len(out), "fundo:", appid(game) or "capa", flush=True)
+    print(game, len(out), "fundos:", len(shots.get(game, [])), flush=True)
 
 json.dump({"updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "games": result, "errors": errs},
           open("data/wall.json", "w"), ensure_ascii=False, indent=0)
