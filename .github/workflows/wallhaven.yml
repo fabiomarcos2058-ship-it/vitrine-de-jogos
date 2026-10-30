@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Lista de jogos
-        run: node -e "global.window={};require('./games.js');require('fs').writeFileSync('/tmp/games.json',JSON.stringify(window.GAMES.map(g=>({id:g.id,t:g.t,img:g.img}))))"
+        run: node -e "global.window={};require('./games.js');require('fs').writeFileSync('/tmp/games.json',JSON.stringify(window.GAMES.map(g=>({id:\"j-\"+g.t.normalize(\"NFD\").replace(/[^\\w\\s-]/g,\"\").trim().toLowerCase().replace(/\\s+/g,\"-\"),t:g.t,img:g.img}))))"
       - run: pip install --quiet pillow && python3 scripts/compose.py
       - name: Salvar resultado
         run: |

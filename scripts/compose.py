@@ -118,7 +118,7 @@ for game, lst in base.items():
     if out: result[game] = out
     print(game, len(out), "fundos:", len(shots.get(game, [])), flush=True)
 
-json.dump({"updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "games": result, "errors": errs},
+json.dump({"updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "games": result, "errors": errs, "fundos": {g: len(v) for g, v in shots.items()}},
           open("data/wall.json", "w"), ensure_ascii=False, indent=0)
 
 if cfg.get("sheet"):
