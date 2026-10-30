@@ -789,6 +789,16 @@ body { top: 0 !important; }
 .c-price small { display: inline; font-size: 11.5px; }
 .trailer .play { background: rgba(255,255,255,0.92); color: #0D0F14; }
 .shop.best { border-color: color-mix(in srgb, var(--fg) 28%, var(--line)); box-shadow: none; }
+.rail-more { white-space: normal; min-width: 0; width: 100%; box-sizing: border-box; align-self: start; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; aspect-ratio: 3 / 4; border-radius: 18px; border: 1px dashed var(--line); background: var(--surface); color: var(--fg); padding: 14px; cursor: pointer; font: inherit; }
+.rail-more:hover { border-color: var(--brand); }
+.rail-more .rm-ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font-size: 22px; font-weight: 800; }
+.rail-more b { font-size: 16px; }
+.rail-more small { color: var(--muted); font-size: 12.5px; line-height: 1.35; }
+.add-win { margin: 0 auto 14px; }
+.add-win .chiprow { display: flex; flex-wrap: wrap; gap: 8px; }
+.add-win .chip { min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer; }
+.add-win .chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.add-win .chip-n { opacity: .7; font-weight: 700; margin-left: 2px; }
 .see-more { grid-column: 1 / -1; justify-self: center; margin-top: 10px; min-height: 48px; padding: 12px 26px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-weight: 700; font-size: 15px; cursor: pointer; }
 .see-more:hover { background: var(--raised); }
 /* página do jogo */
@@ -934,6 +944,7 @@ body { top: 0 !important; }
       <button type="button" class="clear-btn" id="clear-all" hidden>Limpar filtros</button>
     </div>
   </div>
+  <div class="add-win" id="add-win" hidden></div>
   <div id="wish"></div>
   <div class="grid" id="grid"></div>
 </main>
@@ -1074,6 +1085,23 @@ const psRef = g => num(g.p.ps) && g.p.ps > 0 && !(g.live && g.live.ps);
 const PS_NOTE = `<p class="ps-note"><span class="pi" aria-hidden="true">i</span><span><b>Pode estar em promoção na PlayStation Store.</b> O sistema da PlayStation não permite consultar promoções automaticamente, então mostramos o preço de referência. Confira o valor do dia na loja.</span></p>`;
 let LIVE = null;
 let SCENES = {};
+let ADDED = {};
+const ADD_WIN = { "1h": [3600e3, "Última hora"], "24h": [864e5, "Últimas 24 horas"], "7d": [7 * 864e5, "Última semana"], "30d": [30 * 864e5, "Último mês"] };
+const addedMs = g => { const v = ADDED[g.t]; return v ? Date.parse(v) : 0; };
+function addedAgo(ms) {
+  const m = Math.max(1, Math.round((Date.now() - ms) / 60000));
+  if (m < 60) return `há ${m} min`;
+  const h = Math.round(m / 60); if (h < 24) return `há ${h} h`;
+  const d = Math.round(h / 24); return d === 1 ? "ontem" : `há ${d} dias`;
+}
+async function loadAdded() {
+  try {
+    const r = await fetch("data/added.json?t=" + Math.floor(Date.now() / 600000), { cache: "no-cache" });
+    if (!r.ok) return;
+    ADDED = ((await r.json()) || {}).games || {};
+    renderShelves(); if (state.list === "added") render();
+  } catch (e) {}
+}
 async function loadScenes() {
   try {
     const r = await fetch("data/scenes.json?v=" + Math.floor(Date.now() / 864e5));
@@ -1177,7 +1205,7 @@ setInterval(renderLiveChip, 60 * 1000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && LIVE && Date.now() - new Date(LIVE.updated) > 20 * 60 * 1000) loadLive(); });
 
 // ---------- estado, favoritos, listas ----------
-const state = { q: "", plat: "all", genre: "", sort: "score", list: "", tag: null, all: false };
+const state = { q: "", plat: "all", genre: "", sort: "score", list: "", tag: null, all: false, addWin: "7d" };
 const TAG_NAMES = { y: "Ano", d: "Estúdio", f: "Série" };
 function tagMatch(g, t) { return t.k === "y" ? String(g.y) === String(t.v) : t.k === "d" ? g.d === t.v : t.k === "f" ? g.f === t.v : true; }
 function applyTag(k, v) {
@@ -1208,7 +1236,8 @@ const LISTS = [
   ["coop", "Para jogar com amigos", "2P", "Cooperativo ou online", g => COOP.includes(g.t)],
   ["exps", "Exclusivos PlayStation", "PS", "Não saem no Xbox", g => has(g.p.ps) && !has(g.p.xb)],
   ["exxb", "Exclusivos Xbox", "XB", "Não saem no PlayStation", g => has(g.p.xb) && !has(g.p.ps)],
-  ["sale", "Em promoção agora", "%", "Descontos ativos nas lojas", g => maxSale(g) > 0]
+  ["sale", "Em promoção agora", "%", "Descontos ativos nas lojas", g => maxSale(g) > 0],
+  ["added", "Adicionados recentemente", "+", "Jogos que acabaram de entrar no site", g => { const t = addedMs(g); return t > 0 && Date.now() - t <= ADD_WIN[state.addWin][0]; }]
 ];
 const COLLECTIONS = [
   ["c-db", "Dragon Ball", "Todos os jogos, de console e celular", g => g.f === "Dragon Ball"],
@@ -1252,7 +1281,8 @@ function render() {
     az: (a, b) => a.t.localeCompare(b.t, "pt-BR"),
     sale: (a, b) => maxSale(b, keys) - maxSale(a, keys) || minOf(a) - minOf(b)
   };
-  list.sort(by[state.sort]);
+  list.sort(state.list === "added" ? (a, b) => addedMs(b) - addedMs(a) || a.t.localeCompare(b.t) : by[state.sort]);
+  renderAddWin();
 
   const filtered = isFiltered();
   document.getElementById("home-view").hidden = filtered;
@@ -1288,6 +1318,21 @@ function render() {
   renderWish(state.list === "fav" ? list : null);
 }
 
+// ---------- adicionados recentemente: escolha do período ----------
+function renderAddWin() {
+  const box = document.getElementById("add-win"); if (!box) return;
+  box.hidden = state.list !== "added"; if (box.hidden) return;
+  const now = Date.now();
+  box.innerHTML = `<div class="chiprow" role="group" aria-label="Período">${Object.entries(ADD_WIN).map(([k, [ms, label]]) => {
+    const n = games.filter(g => { const t = addedMs(g); return t > 0 && now - t <= ms; }).length;
+    return `<button type="button" class="chip" data-win="${k}" aria-pressed="${state.addWin === k}">${label} <span class="chip-n">${n}</span></button>`;
+  }).join("")}</div>`;
+}
+document.getElementById("add-win").addEventListener("click", e => {
+  const b = e.target.closest("[data-win]"); if (!b) return;
+  state.addWin = b.dataset.win; render();
+});
+
 // ---------- lista de desejos: total dos favoritos ----------
 function renderWish(list) {
   const box = document.getElementById("wish");
@@ -1316,6 +1361,7 @@ function renderWish(list) {
 // ---------- prateleiras ----------
 const SHELVES = [
   { k: "sale", title: "Em promoção agora", sub: "Descontos ativos nas lojas, do maior para o menor", pick: () => games.filter(g => maxSale(g) > 0).sort((a, b) => maxSale(b) - maxSale(a)) },
+  { k: "added", title: "Últimos adicionados", sub: "Os jogos que acabaram de entrar no site", pick: () => games.filter(g => addedMs(g)).sort((a, b) => addedMs(b) - addedMs(a) || a.t.localeCompare(b.t)) },
   { k: "new", title: "Lançamentos", sub: "O que saiu em 2025 e 2026", pick: () => games.filter(g => g.y >= 2025).sort((a, b) => b.y - a.y || (b.n ?? 0) - (a.n ?? 0)) },
   { k: "top90", title: "Aclamados pela crítica", sub: "Nota 90 ou mais", pick: () => games.filter(g => g.n >= 90).sort((a, b) => b.n - a.n) },
   { k: "free", title: "Grátis para jogar", sub: "Comece sem gastar nada", pick: () => games.filter(g => Object.values(g.p).includes(0)) }
@@ -1376,11 +1422,13 @@ function renderShelves() {
         <span class="eb"><span class="et">${esc(x.name)}</span><span class="ep"><s>${brl(x.b)}</s>${brl(x.f)}</span></span></a>`).join("")}</div>
     </section>` : "";
   const used = new Set();
-  document.getElementById("shelves").innerHTML = SHELVES.map(s => ({ s, items: s.pick().filter(g => !used.has(g.id)).slice(0, s.k === "sale" ? 12 : 10) })).filter(x => x.items.length).map(({ s, items }) => {
-    items.forEach(g => used.add(g.id));
+  document.getElementById("shelves").innerHTML = SHELVES.map(s => ({ s, items: s.k === "added" ? s.pick().slice(0, 10) : s.pick().filter(g => !used.has(g.id)).slice(0, s.k === "sale" ? 12 : 10) })).filter(x => x.items.length).map(({ s, items }) => {
+    if (s.k !== "added") items.forEach(g => used.add(g.id));
+    const more = s.k === "added" ? `<button type="button" class="rail-more see-all" data-list="added"><span class="rm-ic" aria-hidden="true">→</span><b>Ver tudo</b><small>Todos os jogos que entraram no site</small></button>` : "";
+    const sub = s.k === "added" && items[0] ? `${s.sub} · último ${addedAgo(addedMs(items[0]))}` : s.sub;
     return `<section class="shelf wrap" aria-labelledby="sh-${s.k}">
-      <div class="shelf-head"><div><h3 id="sh-${s.k}">${s.title}</h3><p>${s.sub}</p></div><button type="button" class="see-all" data-list="${s.k}">Ver todos →</button></div>
-      <div class="rail">${items.map(g => cardHTML(g)).join("")}</div>
+      <div class="shelf-head"><div><h3 id="sh-${s.k}">${s.title}</h3><p>${sub}</p></div><button type="button" class="see-all" data-list="${s.k}">${s.k === "added" ? "Ver tudo" : "Ver todos"} →</button></div>
+      <div class="rail">${items.map(g => cardHTML(g)).join("")}${more}</div>
     </section>` + (s.k === "new" ? soonHTML : "") + (s.k === "sale" ? epHTML + stHTML : "");
   }).join("") + (SHELVES[0].pick().length ? "" : epHTML + stHTML);
   void 0;
@@ -3270,6 +3318,7 @@ renderTray();
 initFirebase();
 loadLive();
 loadScenes();
+loadAdded();
 startHero();
 (function route() {
   const qs = new URLSearchParams(location.search);
