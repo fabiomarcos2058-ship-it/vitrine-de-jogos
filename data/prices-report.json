@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T16:44:02.579Z",
+ "updated": "2026-10-30T17:01:09.771Z",
  "st": {
   "ok": 225,
   "total": 230,
@@ -23,15 +23,15 @@
   ]
  },
  "ps": {
-  "ok": 197,
+  "ok": 196,
   "total": 223,
   "novosIds": 6,
   "errors": 0,
   "via": "páginas oficiais",
   "miss": [
+   "Ghost of Yōtei",
    "Avowed",
    "Clair Obscur: Expedition 33",
-   "Resident Evil 4",
    "Yakuza 0",
    "Call of Duty: Black Ops 6",
    "EA Sports FC 26",
@@ -45,6 +45,7 @@
    "Call of Duty: Black Ops 7",
    "Terraria",
    "Hotline Miami",
+   "Control",
    "Remnant II",
    "RimWorld",
    "Sid Meier's Civilization VII",
