@@ -1,96 +1,1147 @@
 {
- "updated": "2026-10-30T01:08:15.908Z",
+ "updated": "2026-10-30T21:25:49.053Z",
  "new": [
   {
-   "q": "Control Ultimate Edition",
+   "q": "Lords of the Fallen",
    "steam": {
-    "appid": 870780,
-    "name": "CONTROL Ultimate Edition",
+    "appid": 1501750,
+    "name": "Lords of the Fallen",
     "free": false,
-    "b": 99.99,
-    "f": 99.99,
+    "b": 119.99,
+    "f": 119.99,
     "pct": 0,
-    "mc": 85,
-    "date": "27/ago./2020",
+    "mc": 75,
+    "date": "13/out./2023",
     "soon": false,
     "genres": [
      "Ação",
-     "Aventura"
+     "Aventura",
+     "RPG"
     ],
     "devs": [
-     "Remedy Entertainment"
+     "CI Games"
     ],
     "pubs": [
-     "Remedy Entertainment"
+     "CI Games"
     ],
-    "desc": "Vencedor de mais de 80 prêmios, o CONTROL é uma aventura de ação em terceira pessoa visualmente impressionante que irá te manter à beira do seu assento.",
+    "desc": "Um vasto mundo aguarda no RPG medieval de ação e fantasia sombria, Lords of the Fallen. Você é um lendário Cruzado das Trevas que embarca em uma missão épica para derrotar Adyr, o deus-demônio. A versão 2.5 definitiva contém: Progresso Cooperativo Compartilhado e Passe Grátis de Amizade.",
     "plat": {
      "windows": true,
-     "mac": true,
+     "mac": false,
      "linux": false
     },
     "other": [
-     "CONTROL Ultimate Edition #870780"
+     "Lords of the Fallen #1501750",
+     "Lords Of The Fallen™ 2014 #265300",
+     "Lords of the Fallen II #4767480",
+     "Lords of the Fallen™ Artbook #328820",
+     "Lords of the Fallen Soundtrack #327270"
     ],
-    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/library_600x900_2x.jpg?t=1781607969",
-    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ec621653454cdad232187af4eb79f23c05aceca5/header.jpg?t=1781607969",
-    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/63bafa99ba970320663e1117c0068db326a3ef1f/library_hero.jpg?t=1781607969"
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/library_600x900_2x.jpg?t=1792592985",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/c793d85dc133f22112c7283b79dd89e2c0aa58a4/header.jpg?t=1792592985",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1501750/library_hero.jpg?t=1792592985"
    },
    "xboxAll": [
     {
-     "title": "Control Ultimate Edition",
-     "id": "9P2WJCRJBMRM",
-     "b": 179,
-     "f": 179,
-     "on": [
-      "XboxOne",
-      "XboxSeriesX"
-     ]
-    },
-    {
-     "title": "Control Ultimate Edition",
-     "id": "9P7LVXNVQ6K7",
-     "b": 129,
-     "f": 129,
-     "on": [
-      "PC"
-     ]
-    },
-    {
-     "title": "Grand Theft Auto VI: Ultimate Edition",
-     "id": "9NNZSNHLR63L",
-     "b": 549.9,
-     "f": 549.9,
-     "on": [
-      "XboxSeriesX"
-     ]
-    },
-    {
-     "title": "Control Ultimate Edition - Xbox Series X|S",
-     "id": "9P4D0K92BM7V",
-     "b": 129,
-     "f": 129,
+     "title": "Lords of the Fallen",
+     "id": "9N3CJZ3HFHTF",
+     "b": 112.45,
+     "f": 112.45,
      "on": [
       "XboxSeriesX",
       "XCloud"
      ]
     },
     {
-     "title": "SNØ: Ultimate Freeriding",
-     "id": "9P0K674SVRCH",
-     "b": 72.95,
-     "f": 72.95,
+     "title": "Lords of the Fallen",
+     "id": "9NP4C0X8MDK7",
+     "b": 112.45,
+     "f": 112.45,
      "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Lords of the Fallen II",
+     "id": "9P2WWHWD5V4V",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Lords of the Fallen Deluxe Edition",
+     "id": "9P6QSZH8RL0C",
+     "b": 147.45,
+     "f": 36.86,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Lords of the Fallen (2014)",
+     "id": "C5FP8DQ3R1WF",
+     "b": 79,
+     "f": 79,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Lords of the Fallen Complete Edition (2014)",
+     "id": "BSHDWV6HV59G",
+     "b": 99,
+     "f": 99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Wo Long: Fallen Dynasty",
+   "steam": {
+    "appid": 1448440,
+    "name": "Wo Long: Fallen Dynasty",
+    "free": false,
+    "b": 199,
+    "f": 199,
+    "pct": 0,
+    "mc": 79,
+    "date": "3/mar./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "KOEI TECMO GAMES CO., LTD."
+    ],
+    "pubs": [
+     "KOEI TECMO GAMES CO., LTD.",
+     "CE-Asia(Asia)"
+    ],
+    "desc": "Um novo RPG de ação e fantasia sombria dos Três Reinos da Team NINJA, os criadores de Nioh.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Wo Long: Fallen Dynasty #1448440",
+     "Wo Long: Fallen Dynasty Season Pass #2205893",
+     "Wo Long: Fallen Dynasty Upheaval in Jingxiang #2205896",
+     "Wo Long: Fallen Dynasty Conqueror of Jiangdong #2205895",
+     "Wo Long: Fallen Dynasty Battle of Zhongyuan #2205894"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1448440/library_600x900_2x.jpg?t=1792378963",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1448440/header.jpg?t=1792378963",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1448440/library_hero.jpg?t=1792378963"
+   },
+   "xboxAll": [
+    {
+     "title": "Wo Long: Fallen Dynasty",
+     "id": "9N9X9PC8V9CP",
+     "b": 228,
+     "f": 228,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Wo Long: Fallen Dynasty Complete Edition",
+     "id": "9NZXN1T0MQMK",
+     "b": 340,
+     "f": 340,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Wo Long: Fallen Dynasty Digital Deluxe Edition",
+     "id": "9PDWBHVD24T3",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Wo Long: Fallen Dynasty Complete Edition Demo",
+     "id": "9P22TPLQHXWZ",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Lords of the Fallen",
+     "id": "9N3CJZ3HFHTF",
+     "b": 112.45,
+     "f": 112.45,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Sacred 2 Fallen Angel",
+     "id": "9PDG551F7QGC",
+     "b": 89,
+     "f": 89,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Rise of the Ronin",
+   "steam": {
+    "appid": 1340990,
+    "name": "Rise of the Ronin",
+    "free": false,
+    "b": 249,
+    "f": 249,
+    "pct": 0,
+    "mc": 73,
+    "date": "10/mar./2025",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "KOEI TECMO GAMES CO., LTD."
+    ],
+    "pubs": [
+     "KOEI TECMO GAMES CO., LTD."
+    ],
+    "desc": "Embarque em uma jornada épica pela Era do Bakumatsu arrasada pela guerra neste RPG de ação em mundo aberto do estúdio veterano Team NINJA, o mesmo por trás de Nioh e NINJA GAIDEN.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Rise of the Ronin #1340990"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1340990/99c163f474860ce798f5457134b675f8eebb63ab/library_600x900_brazilian_2x.jpg?t=1775540130",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1340990/header_brazilian.jpg?t=1775540130",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1340990/6cb0f38b1da1688c8a0c022cd43e646fc1c2c579/library_hero.jpg?t=1775540130"
+   },
+   "xboxAll": [
+    {
+     "title": "Rise of the Slime",
+     "id": "9N65873LRS41",
+     "b": 57.79,
+     "f": 57.79,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Rise of Nations: Edição Estendida",
+     "id": "9NS84HCWZD8B",
+     "b": 35.95,
+     "f": 35.95,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Rise of the Third Power",
+     "id": "9P0FZ4WW0P3D",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Rise & Shine",
+     "id": "BR3152PVJV5J",
+     "b": 29,
+     "f": 29,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Rise of the Triad: Ludicrous Edition",
+     "id": "9P17WWMQVP91",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Double Dragon Gaiden: Rise of the Dragons",
+     "id": "9NVJM3BH2R0X",
+     "b": 88.84,
+     "f": 22.21,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Nioh 3",
+   "steam": {
+    "appid": 3681010,
+    "name": "Nioh 3",
+    "free": false,
+    "b": 349,
+    "f": 349,
+    "pct": 0,
+    "mc": 85,
+    "date": "5/fev./2026",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "RPG"
+    ],
+    "devs": [
+     "KOEI TECMO GAMES CO., LTD."
+    ],
+    "pubs": [
+     "KOEI TECMO GAMES CO., LTD."
+    ],
+    "desc": "No terceiro jogo da série sombria de RPG de ação com samurais Nioh, você precisará usar os estilos de combate Samurai e Ninja para enfrentar yokais formidáveis conforme explora um campo aberto arrepiante.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Nioh 3 #3681010",
+     "Nioh 3 Season Pass #4003930",
+     "Nioh 3 Demo #4198760",
+     "Nioh 3 Ascensão do Inferno #4003950"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/a6c07532fbcfa8c7aeecddc251aa4a6a7156323c/library_capsule_2x.jpg?t=1772090941",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/a21264e9fd476dcb2901c2432b598107d024c5a8/header.jpg?t=1772090941",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/8207558c4385cc2803570202f7b0514ca2adab28/library_hero.jpg?t=1772090941"
+   },
+   "xboxAll": [
+    {
+     "title": "The Witcher 3: Wild Hunt — Remastered",
+     "id": "C261457LCNMJ",
+     "b": 159.99,
+     "f": 159.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Fallout 3",
+     "id": "C29HQ887KH4B",
+     "b": 49.9,
+     "f": 49.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Skate 3",
+     "id": "BNKDKQXMXRR2",
+     "b": 79,
+     "f": 79,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Gears of War 3",
+     "id": "BPKDQSSFQ9WV",
+     "b": 47,
+     "f": 47,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Halo 3",
+     "id": "BSXZVK24CMR3",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Max Payne 3",
+     "id": "9PFKHJH25TFF",
+     "b": 104.9,
+     "f": 104.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Like a Dragon Gaiden: The Man Who Erased His Name",
+   "steam": {
+    "appid": 2375550,
+    "name": "Like a Dragon Gaiden: The Man Who Erased His Name",
+    "free": false,
+    "b": 249,
+    "f": 249,
+    "pct": 0,
+    "mc": null,
+    "date": "8/nov./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "RGG Studio"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "APAGUE SEU PASSADO PARA PROTEGER SEU FUTURO Certa vez um yakuza lendário, Kazuma Kiryu forjou a própria morte e abandonou seu nome para proteger sua família. Agora, ele é levado a um conflito por uma figura misteriosa que tenta obrigá-lo a se revelar.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Like a Dragon Gaiden: The Man Who Erased His Name #2375550",
+     "Like a Dragon Gaiden: The Man Who Erased His Name - Legendary Fighter Pack #2438750"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2375550/library_600x900_2x.jpg?t=1781263435",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2375550/header.jpg?t=1781263435",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2375550/library_hero.jpg?t=1781263435"
+   },
+   "xboxAll": [
+    {
+     "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
+     "id": "9PCMWNDPPBFZ",
+     "b": 249,
+     "f": 249,
+     "on": [
+      "XboxOne",
       "XboxSeriesX",
       "PC",
       "Handheld"
      ]
     },
     {
-     "title": "Gears of War: Ultimate Edition",
-     "id": "BQT21VXFS52F",
+     "title": "Like a Dragon Gaiden: The Man Who Erased His Name Deluxe Edition",
+     "id": "9NX1KVDWPZBK",
+     "b": 269,
+     "f": 269,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Yakuza: Like a Dragon",
+     "id": "9NXCSWCQTNFG",
+     "b": 109.9,
+     "f": 109.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Like a Dragon: Ishin!",
+     "id": "9N4BH9FLLMWD",
+     "b": 295,
+     "f": 295,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Like a Dragon: Infinite Wealth",
+     "id": "9P00SVGWDJCP",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Yakuza: Like a Dragon Legendary Hero Edition",
+     "id": "9MWFTJF7G5XF",
+     "b": 159.9,
+     "f": 159.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Like a Dragon: Pirate Yakuza in Hawaii",
+   "steam": {
+    "appid": 3061810,
+    "name": "Like a Dragon: Pirate Yakuza in Hawaii",
+    "free": false,
+    "b": 249.9,
+    "f": 249.9,
+    "pct": 0,
+    "mc": 81,
+    "date": "20/fev./2025",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "RGG Studio"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "Embarque em uma exagerada aventura com um ex-yakuza, agora um capitão pirata moderno, e sua tripulação. Encare combates emocionantes na terra e no mar em busca das memórias perdidas e de um tesouro lendário.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Like a Dragon: Pirate Yakuza in Hawaii #3061810",
+     "Like a Dragon: Pirate Yakuza in Hawaii Demo #3352550",
+     "Like a Dragon: Pirate Yakuza in Hawaii - Ichiban Pirate Crew Set #3183940",
+     "Like a Dragon: Pirate Yakuza in Hawaii - Legendary Pirate Crew Pack #3184040",
+     "Like a Dragon: Pirate Yakuza in Hawaii - Extra Karaoke & CD Pack #3184020"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3061810/library_600x900_2x.jpg?t=1781258528",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3061810/header.jpg?t=1781258528",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3061810/library_hero.jpg?t=1781258528"
+   },
+   "xboxAll": [
+    {
+     "title": "Like a Dragon: Pirate Yakuza in Hawaii",
+     "id": "9P1303FCXW6X",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Like a Dragon: Pirate Yakuza in Hawaii Edição de Luxo",
+     "id": "9PCQGW5HFKG9",
+     "b": 399.9,
+     "f": 399.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Demo de Like a Dragon: Pirate Yakuza in Hawaii",
+     "id": "9PD5KS38G36M",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Yakuza: Like a Dragon",
+     "id": "9NXCSWCQTNFG",
+     "b": 109.9,
+     "f": 109.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Yakuza: Like a Dragon Legendary Hero Edition",
+     "id": "9MWFTJF7G5XF",
+     "b": 159.9,
+     "f": 159.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Yakuza: Like a Dragon Hero Edition",
+     "id": "9NF464C2W777",
+     "b": 139.9,
+     "f": 139.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Judgment",
+   "steam": {
+    "appid": 2058180,
+    "name": "Judgment",
+    "free": false,
+    "b": 199.95,
+    "f": 199.95,
+    "pct": 0,
+    "mc": null,
+    "date": "14/set./2022",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "RGG Studio"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "Fight for the truth and uncover the twisted crime running deep beneath the surface of Tokyo. In this legal thriller , the balance between justice and mercy teeters on the edge.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Your Judgment, Inquisitor #3953700",
+     "Lost Judgment #2058190",
+     "Judgment #2058180",
+     "Steel Judgment #3394690",
+     "Lost Judgment - The Kaito Files Story Expansion #2060280"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/library_600x900_2x.jpg?t=1781263750",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/header.jpg?t=1781263750",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/library_hero.jpg?t=1781263750"
+   },
+   "xboxAll": [
+    {
+     "title": "Gears of War: Judgment",
+     "id": "BSHMMGRP84N4",
+     "b": 47,
+     "f": 47,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Lost Judgment",
+     "id": "9NDJJQDF411C",
+     "b": 295,
+     "f": 295,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Lost Judgment – Digital Ultimate Edition",
+     "id": "9NBJG3597KGH",
+     "b": 439,
+     "f": 439,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Lost Judgment – Digital Deluxe Edition",
+     "id": "9NN5VLL9JW8F",
+     "b": 345,
+     "f": 345,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Judgment",
+     "id": "9N1R83CKGZJP",
+     "b": 195,
+     "f": 195,
+     "on": [
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Persona 5 Strikers",
+   "steam": {
+    "appid": 1382330,
+    "name": "Persona® 5 Strikers",
+    "free": false,
+    "b": 249,
+    "f": 249,
+    "pct": 0,
+    "mc": 76,
+    "date": "22/fev./2021",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "ATLUS"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "Join the Phantom Thieves and strike back against the corruption overtaking cities across Japan. A summer vacation with close friends takes a sudden turn as a distorted reality emerges; reveal the truth and redeem the hearts of those imprisoned at the center of the crisis!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Persona® 5 Strikers #1382330",
+     "Persona® 5 Strikers - Legacy BGM Pack #1482080",
+     "Persona® 5 Strikers - All-Out Attack Pack #1482081"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382330/library_600x900_2x.jpg?t=1763530465",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382330/header.jpg?t=1763530465",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382330/library_hero.jpg?t=1763530465"
+   },
+   "xboxAll": [
+    {
+     "title": "Persona 5 Tactica",
+     "id": "9P07F616XR9R",
+     "b": 295,
+     "f": 295,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Grand Theft Auto V (Xbox One)",
+     "id": "BPJ686W6S0NH",
      "b": null,
      "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Persona 5 Tactica: Edição Digital de Luxo",
+     "id": "9P5R32316ZK4",
+     "b": 395,
+     "f": 395,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "KINGDOM HEARTS - HD 1.5+2.5 ReMIX -",
+     "id": "9NHDF1Q6HGMH",
+     "b": 229.9,
+     "f": 229.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Halo 5: Guardians",
+     "id": "BRRC2BP0G9P0",
+     "b": 99,
+     "f": 99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "UFC™ 5",
+     "id": "9NH8K4B707H0",
+     "b": 359,
+     "f": 359,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Assassin's Creed Origins",
+   "steam": {
+    "appid": 582160,
+    "name": "Assassin's Creed® Origins",
+    "free": false,
+    "b": 179.99,
+    "f": 179.99,
+    "pct": 0,
+    "mc": null,
+    "date": "26/out./2017",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Ubisoft Montreal"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "Explore o Egito Antigo nesse jogo de ação e aventura. Batalhe contra inimigos poderosos, descubra conspirações e desvende a história da origem da Irmandade dos Assassinos.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Assassin's Creed® Origins #582160",
+     "Assassin's Creed® Origins - Deluxe Pack #683850",
+     "Assassin's Creed® Origins - Season Pass #660080",
+     "Assassin's Creed® Origins - Horus Pack #662353",
+     "Assassin's Creed® Origins - The Hidden Ones #662350"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/library_600x900_2x.jpg?t=1792778037",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/header.jpg?t=1792778037",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/library_hero.jpg?t=1792778037"
+   },
+   "xboxAll": [
+    {
+     "title": "Assassin's Creed Origins",
+     "id": "BZGJRJC1FGF3",
+     "b": 199,
+     "f": 199,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Origins",
+     "id": "9P2CHXX6D861",
+     "b": 179.99,
+     "f": 179.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Origins - Edição Gold",
+     "id": "BX8J66WFQ1VK",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Assassin's Creed Origins - Edição Deluxe",
+     "id": "BWCF86S64BWW",
+     "b": 229,
+     "f": 229,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Pacote Assassin's Creed®: Assassin's Creed® Valhalla, Assassin's Creed® Odyssey e Assassin's Creed® Origins",
+     "id": "9PKXGL2GD008",
+     "b": 664.95,
+     "f": 664.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Assassin's Creed 2",
+     "id": "9NN1M88HL5M6",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Far Cry 5",
+   "steam": {
+    "appid": 552520,
+    "name": "Far Cry® 5",
+    "free": false,
+    "b": 179.99,
+    "f": 179.99,
+    "pct": 0,
+    "mc": null,
+    "date": "26/mar./2018",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Ubisoft Montreal",
+     "Red Storm",
+     "Ubisoft Shanghai",
+     "Ubisoft Toronto",
+     "Ubisoft Kiev"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "Lute contra uma seita fanática neste jogo de tiro em primeira pessoa no mundo aberto. Participe de combate intenso, liberte territórios hostis, recrute seguidores leais e aliados animais para liberar Hope County sozinho ou no modo cooperativo para 2 jogadores.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Far Cry® 5 #552520",
+     "Far Cry® 5 - Deluxe Pack #823990",
+     "Far Cry® 5 - Season Pass #763820",
+     "Far Cry® 5 - Hours of Darkness #761821",
+     "Far Cry® 5 - Lost On Mars #761820"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/17a8fde1e04966697669485d53f4c03d0afb7efd/library_capsule_2x.jpg?t=1792530774",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/0dbbd22689fafc2b5b86996257a8e115ff935e81/header.jpg?t=1792530774",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/5c5e0810499b727dbb89dcf0ecc5724d3e2828fe/library_hero.jpg?t=1792530774"
+   },
+   "xboxAll": [
+    {
+     "title": "Far Cry® 5",
+     "id": "BR7X7MVBBQKM",
+     "b": 199,
+     "f": 199,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Far Cry® 5",
+     "id": "9NG3KNWZ7RZ7",
+     "b": 179.99,
+     "f": 179.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Far Cry® 5 Gold Edition",
+     "id": "BWJK7NTJLKV9",
+     "b": 279.95,
+     "f": 279.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Far Cry® 5 Gold Edition",
+     "id": "9N554J15FM17",
+     "b": 259.99,
+     "f": 259.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Conjunto Far Cry® 5 + Far Cry® New Dawn Deluxe Edition",
+     "id": "9PB92853HCNT",
+     "b": 299.99,
+     "f": 299.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Conjunto Far Cry® 5 + Far Cry® New Dawn Deluxe Edition",
+     "id": "C3585Q6D4BFT",
+     "b": 350,
+     "f": 350,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Tom Clancy's The Division 2",
+   "steam": {
+    "appid": 2221490,
+    "name": "Tom Clancy’s The Division® 2",
+    "free": false,
+    "b": 149.99,
+    "f": 149.99,
+    "pct": 0,
+    "mc": 84,
+    "date": "12/jan./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "RPG"
+    ],
+    "devs": [
+     "Ubisoft"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "Entre para a Division neste jogo de tiro tático de mundo aberto. Participe de combate intenso com base em cobertura, agrupe-se com amigos e desenvolva o seu agente definitivo para salvar Washington DC.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Tom Clancy’s The Division® 2 #2221490",
+     "DLC Ecos do Central Park Deluxe - Tom Clancy’s The Division 2 #5109220",
+     "DLC Ecos do Central Park - Tom Clancy’s The Division 2 #5109260",
+     "Tom Clancy’s The Division 2 – Entrega de suprimentos Horizonte Vermelho #4974000",
+     "Tom Clancy's The Division 2 – Activation Bundle #3268800"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2221490/8517c0415397d69e5c0e818eb1f2eb0ae83806b2/library_600x900_2x.jpg?t=1791884938",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2221490/cbba91ad5e65bce519fca6297c61f14e7e8af6ea/header_alt_assets_12.jpg?t=1791884938",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2221490/e9799d3ab7d370e4a901a56b3422a919cba3c469/library_hero.jpg?t=1791884938"
+   },
+   "xboxAll": [
+    {
+     "title": "Tom Clancy’s The Division 2",
+     "id": "BVQ3V30ZXVT5",
+     "b": 149.95,
+     "f": 149.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Tom Clancy’s The Division 2",
+     "id": "9PHR6KG3D1RQ",
+     "b": 149.99,
+     "f": 149.99,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Tom Clancy’s The Division 2",
+     "id": "9NRXKRVCGRNM",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Tom Clancy's Rainbow Six® Siege – Acesso Gratuito",
+     "id": "9P4837D6TSFD",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Edição Créditos Premium de Tom Clancy’s The Division®",
+     "id": "BP9JL0BT2QQ0",
+     "b": 199,
+     "f": 199,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Tom Clancy’s The Division - Definitive Edition",
+     "id": "9PGFFB0WZPKH",
+     "b": 251.95,
+     "f": 251.95,
      "on": [
       "XboxOne",
       "XboxSeriesX",
@@ -100,68 +1151,71 @@
    ]
   },
   {
-   "q": "Ori and the Blind Forest: Definitive Edition",
+   "q": "Mafia: Definitive Edition",
    "steam": {
-    "appid": 387290,
-    "name": "Ori and the Blind Forest: Definitive Edition",
+    "appid": 1030840,
+    "name": "Mafia: Definitive Edition",
     "free": false,
-    "b": 99,
-    "f": 99,
+    "b": 199.9,
+    "f": 199.9,
     "pct": 0,
-    "mc": 88,
-    "date": "27/abr./2016",
+    "mc": 78,
+    "date": "24/set./2020",
     "soon": false,
     "genres": [
-     "Ação"
+     "Ação",
+     "Aventura"
     ],
     "devs": [
-     "Moon Studios GmbH"
+     "Hangar 13"
     ],
     "pubs": [
-     "Xbox Game Studios"
+     "2K"
     ],
-    "desc": "“Ori and the Blind Forest” conta a história de um jovem órfão destinado ao heroísmo, em um jogo de Ação em Plataformas com visual incrível criado pela Moon Studios.",
+    "desc": "Após um encontro com a máfia, o taxista Tommy Angelo entra para o mundo do crime. Apesar de relutar em se relacionar com a família Salieri, logo as oportunidades ficam grandes demais para ignorar.",
     "plat": {
      "windows": true,
      "mac": false,
      "linux": false
     },
     "other": [
-     "Ori and the Blind Forest: Definitive Edition #387290"
+     "Mafia: Definitive Edition #1030840",
+     "Mafia: Definitive Edition Soundtrack #1421480",
+     "Mafia: Definitive Edition Chicago Outfit Pack #1316300",
+     "Mafia II: Definitive Edition #1030830",
+     "Mafia III: Definitive Edition #360430"
     ],
-    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/library_600x900_2x.jpg?t=1701967651",
-    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/header.jpg?t=1701967651",
-    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/library_hero.jpg?t=1701967651"
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030840/library_600x900_2x.jpg?t=1786727529",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030840/header.jpg?t=1786727529",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030840/library_hero.jpg?t=1786727529"
    },
    "xboxAll": [
     {
-     "title": "Ori and the Blind Forest: Definitive Edition",
-     "id": "BW85KQB8Q31M",
-     "b": 99.95,
-     "f": 99.95,
+     "title": "Mafia: Definitive Edition",
+     "id": "9PGWB5ZMDPDM",
+     "b": 199.9,
+     "f": 199.9,
      "on": [
       "XboxOne",
-      "XboxSeriesX",
-      "XCloud"
+      "XboxSeriesX"
      ]
     },
     {
-     "title": "Ori and the Blind Forest: Definitive Edition",
-     "id": "9NBLGGH1Z6FB",
-     "b": 99.95,
-     "f": 99.95,
+     "title": "Mafia: Definitive Edition (Windows PC)",
+     "id": "9N24WGZTP92S",
+     "b": 199.5,
+     "f": 199.5,
      "on": [
       "PC",
       "Handheld"
      ]
     },
     {
-     "title": "Ori and the Blind Forest",
-     "id": "C0MCC9R22KBJ",
+     "title": "Mafia: Definitive Edition para XBOX Series X|S",
+     "id": "9NP3CC2X23BN",
      "b": null,
      "f": null,
      "on": [
-      "XboxOne",
       "XboxSeriesX"
      ]
     },
@@ -176,10 +1230,72 @@
      ]
     },
     {
-     "title": "Halo Wars: Definitive Edition",
-     "id": "BPRPQSKXTD1L",
-     "b": 40,
-     "f": 40,
+     "title": "Mafia: A Coleção Omertà",
+     "id": "9MTJQF3R185J",
+     "b": 499.9,
+     "f": 499.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Mafia III: Definitive Edition para XBOX Series X|S",
+     "id": "9P4V2BGJFWW7",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Borderlands 3",
+   "steam": {
+    "appid": 397540,
+    "name": "Borderlands 3",
+    "free": false,
+    "b": 119.9,
+    "f": 119.9,
+    "pct": 0,
+    "mc": 81,
+    "date": "13/mar./2020",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "RPG"
+    ],
+    "devs": [
+     "Gearbox Software"
+    ],
+    "pubs": [
+     "2K"
+    ],
+    "desc": "O jogo de tiro e saque original voltou, trazendo milhares de armas e uma nova aventura movida a caos! Exploda novos inimigos em mundos inéditos como um dos quatro Caça-Arcas novos, com árvores de talentos, habilidades e personalização robustas.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Borderlands 3 #397540",
+     "Borderlands 3: Season Pass #1233062",
+     "Borderlands 3: Season Pass 2 #1396474",
+     "Borderlands®4 - Bounty Pack 3: Um Zane de Morrer #4598000",
+     "Borderlands®4 - Bounty Pack 3: Vault Card 3 #4598010"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/397540/library_600x900_2x.jpg?t=1793288452",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/397540/header.jpg?t=1793288452",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/397540/library_hero.jpg?t=1793288452"
+   },
+   "xboxAll": [
+    {
+     "title": "Borderlands 3",
+     "id": "C34NB0F1B5WQ",
+     "b": 250,
+     "f": 250,
      "on": [
       "XboxOne",
       "XboxSeriesX",
@@ -187,10 +1303,2641 @@
      ]
     },
     {
-     "title": "Mafia: Definitive Edition",
-     "id": "9PGWB5ZMDPDM",
-     "b": 199.9,
-     "f": 199.9,
+     "title": "Borderlands 3 - Edição Superdeluxe",
+     "id": "BTKGPC4331HC",
+     "b": 333,
+     "f": 333,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Borderlands 3",
+     "id": "9NDDHR8STXQL",
+     "b": 250,
+     "f": 250,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Borderlands 3 - Ultimate Edition",
+     "id": "9NK6X8JHTQSS",
+     "b": 416,
+     "f": 83.2,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Borderlands 3 - Ultimate Edition",
+     "id": "9NR3P7V543DK",
+     "b": 416,
+     "f": 83.2,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Borderlands 3 - Next Level Edition",
+     "id": "9NRPQ7Z4Q2D7",
+     "b": 292,
+     "f": 29.2,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Wolfenstein II: The New Colossus",
+   "steam": {
+    "appid": 612880,
+    "name": "Wolfenstein II: The New Colossus",
+    "free": false,
+    "b": 155,
+    "f": 155,
+    "pct": 0,
+    "mc": 86,
+    "date": "26/out./2017",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "MachineGames"
+    ],
+    "pubs": [
+     "Bethesda Softworks"
+    ],
+    "desc": "América, 1961. O assassinato do general nazista Deathshead foi uma vitória curta. Os nazistas mantêm o mundo sob seu jugo. Você é B. J. Blazkowicz, conhecido como Billy, o Terrível, membro da resistência, flagelo do império nazista e última esperança da humanidade.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Wolfenstein II: The New Colossus #612880",
+     "Wolfenstein II: The New Colossus Demo #754730"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/library_600x900_2x.jpg?t=1750784115",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/header.jpg?t=1750784115",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/library_hero.jpg?t=1750784115"
+   },
+   "xboxAll": [
+    {
+     "title": "Wolfenstein® II: The New Colossus™",
+     "id": "C4LLMHFQ1BXQ",
+     "b": 154.95,
+     "f": 154.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Wolfenstein II: The New Colossus",
+     "id": "9N26X2PMTWBT",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Wolfenstein® II: The New Colossus™ Digital Deluxe Edition",
+     "id": "C181BBDG2NT5",
+     "b": 249.95,
+     "f": 249.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Wolfenstein®: The Two-Pack",
+     "id": "BZJ43GK4L0JC",
+     "b": 70,
+     "f": 70,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Wolfenstein: The Old Blood",
+     "id": "BPV4GXTDCNSH",
+     "b": 64,
+     "f": 64,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Black Ops II",
+     "id": "C1QJM5XT9SXV",
+     "b": 219.9,
+     "f": 219.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Dishonored 2",
+   "steam": {
+    "appid": 403640,
+    "name": "Dishonored 2",
+    "free": false,
+    "b": 89.99,
+    "f": 89.99,
+    "pct": 0,
+    "mc": 86,
+    "date": "11/nov./2016",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Arkane Studios"
+    ],
+    "pubs": [
+     "Bethesda Softworks"
+    ],
+    "desc": "Assuma novamente o papel de um assassino sobrenatural em Dishonored 2. Declarado como “obra-prima” pelo Eurogamer e “um conto de vingança que não pode faltar” pelo Game Informer, Dishonored 2 é a sequência do sucesso de ação em 1ª pessoa da Arkane com mais de 100 prêmios de Jogo do Ano, Dishonored.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Dishonored 2 #403640",
+     "Dishonored 2 Demo #596060"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/library_600x900_2x.jpg?t=1750785918",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/header.jpg?t=1750785918",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/library_hero.jpg?t=1750785918"
+   },
+   "xboxAll": [
+    {
+     "title": "Dishonored 2",
+     "id": "BSZM480TSWGP",
+     "b": 149.95,
+     "f": 149.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dishonored 2",
+     "id": "9MW4RJDRSF78",
+     "b": 89.95,
+     "f": 89.95,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Dishonored®: Death of the Outsider™ Deluxe Bundle",
+     "id": "C4P7FRCMJVWX",
+     "b": 299.95,
+     "f": 299.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Dishonored® Definitive Edition",
+     "id": "C299QVC2BSJF",
+     "b": 99.95,
+     "f": 99.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dishonored®: Death of the Outsider™",
+     "id": "C5F2XDQPPJKZ",
+     "b": 149.95,
+     "f": 149.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Dishonored®: Death of the Outsider™ (PC)",
+     "id": "9MVF0PGV94F7",
+     "b": 89.95,
+     "f": 89.95,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Shadow of the Tomb Raider",
+   "steam": {
+    "appid": 750920,
+    "name": "Shadow of the Tomb Raider: Definitive Edition",
+    "free": false,
+    "b": 166.49,
+    "f": 16.64,
+    "pct": 90,
+    "mc": 77,
+    "date": "14/set./2018",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Eidos-Montréal",
+     "Crystal Dynamics",
+     "Nixxes",
+     "Feral Interactive (Mac)",
+     "Feral interactive (Linux)"
+    ],
+    "pubs": [
+     "Crystal Dynamics",
+     "Feral Interactive (Mac)",
+     "Feral interactive (Linux)"
+    ],
+    "desc": "Enquanto Lara Croft corre contra o tempo para salvar o mundo do apocalipse maia, ela precisará se tornar a desbravadora que está destinada a ser.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "Shadow of the Tomb Raider: Definitive Edition #750920",
+     "Shadow of the Tomb Raider Demo #974630",
+     "Shadow of the Tomb Raider - The Nightmare #849308",
+     "Shadow of the Tomb Raider - Sworn Defender #1058360",
+     "Shadow of the Tomb Raider - Spectre Gear #849300"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/library_600x900_2x.jpg?t=1792675045",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/86f9744a410121ff869cc19f63aa9e3dfcf54b8d/header_alt_assets_0.jpg?t=1792675045",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/library_hero.jpg?t=1792675045"
+   },
+   "xboxAll": [
+    {
+     "title": "Shadow of the Tomb Raider",
+     "id": "BRVK4W7RVCXR",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Shadow of the Tomb Raider Definitive Edition",
+     "id": "BNQQ3WVBNZCQ",
+     "b": 199.95,
+     "f": 19.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Tomb Raider: Definitive Edition",
+     "id": "BQXTS0SX4W0N",
+     "b": 82.45,
+     "f": 8.24,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Rise of the Tomb Raider",
+     "id": "BPCN22ZVT05C",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Tomb of the Dash",
+     "id": "9NKDCZKFH69K",
+     "b": 3.45,
+     "f": 3.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "MobileDevice",
+      "PC",
+      "HoloLens",
+      "Hub"
+     ]
+    },
+    {
+     "title": "Tomb Raider Underworld",
+     "id": "BVMFBCFLL6QP",
+     "b": 104.95,
+     "f": 10.49,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Marvel's Guardians of the Galaxy",
+   "steam": {
+    "appid": 1088850,
+    "name": "Marvel's Guardians of the Galaxy",
+    "free": false,
+    "b": 249.99,
+    "f": 249.99,
+    "pct": 0,
+    "mc": 78,
+    "date": "26/out./2021",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Eidos-Montréal"
+    ],
+    "pubs": [
+     "Eidos Interactive Corp."
+    ],
+    "desc": "Embarque numa nova e empolgante viagem pelo cosmos em Guardiões da Galáxia da Marvel. Neste jogo de ação e aventura, você é o Senhor das Estrelas, que lidera os imprevisíveis Guardiões em situações caóticas. Você consegue. Acho.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Marvel's Guardians of the Galaxy #1088850"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1088850/library_600x900_2x.jpg?t=1780588517",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1088850/bdbf8be37e665ba0e6f44111e3665d280f13ed16/header.jpg?t=1780588517",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1088850/library_hero.jpg?t=1780588517"
+   },
+   "xboxAll": [
+    {
+     "title": "Gears of War: E-Day",
+     "id": "9N4PT8HGCDHQ",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Halo 5: Guardians",
+     "id": "BRRC2BP0G9P0",
+     "b": 99,
+     "f": 99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Radiant: Guardians Of Light",
+     "id": "9PDKHVGG337W",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Radiant: Guardians Of Light Demo",
+     "id": "9ND12RR2ZQHS",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Marvel's Midnight Suns",
+   "steam": {
+    "appid": 368260,
+    "name": "Marvel's Midnight Suns",
+    "free": false,
+    "b": 299.9,
+    "f": 44.98,
+    "pct": 85,
+    "mc": null,
+    "date": "1/dez./2022",
+    "soon": false,
+    "genres": [
+     "RPG",
+     "Estratégia"
+    ],
+    "devs": [
+     "Firaxis Games"
+    ],
+    "pubs": [
+     "2K"
+    ],
+    "desc": "LUTE E CRIE ESTRATÉGIAS COMO UM SUPER-HERÓI NOS CANTOS MAIS SOMBRIOS DO UNIVERSO MARVEL. Jogue como Hunter, um lendário matador de demônios que lidera uma equipe de super-heróis e guerreiros sobrenaturais para enfrentar ameaças apocalípticas.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Marvel's Midnight Suns #368260",
+     "Marvel's Midnight Suns - Redenção #1922632",
+     "Midnight Suns da Marvel - Blood Storm #1922634",
+     "Marvel's Midnight Suns - The Hunger #1922633",
+     "Marvel's Midnight Suns Season Pass #2074340"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368260/library_600x900_2x.jpg?t=1732138093",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368260/header.jpg?t=1732138093",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368260/library_hero.jpg?t=1732138093"
+   },
+   "xboxAll": [
+    {
+     "title": "Marvel's Midnight Suns Edição Enhanced",
+     "id": "9NZV28P1ZMQ0",
+     "b": 349.9,
+     "f": 349.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel's Midnight Suns para Xbox One",
+     "id": "9NS10SXBG0HX",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel's Midnight Suns Edição Digital+ para Xbox One",
+     "id": "9NPHNLJTCZC2",
+     "b": 399.5,
+     "f": 79.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel's Midnight Suns Edição Lendária para Xbox One",
+     "id": "9PN089KML0BL",
+     "b": 499.5,
+     "f": 499.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel's Midnight Suns Edição Lendária para Xbox Series X|S",
+     "id": "9PCVWW89JKVW",
+     "b": 499.5,
+     "f": 499.5,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Marvel's Midnight Suns para Xbox Series X|S",
+     "id": "9PFB5GX9FXP5",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Batman: Arkham City",
+   "steam": {
+    "appid": 200260,
+    "name": "Batman: Arkham City - Game of the Year Edition",
+    "free": false,
+    "b": 89.99,
+    "f": 89.99,
+    "pct": 0,
+    "mc": 91,
+    "date": "7/set./2012",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Rocksteady Studios"
+    ],
+    "pubs": [
+     "WB Games"
+    ],
+    "desc": "Adquira Batman: Arkham City e todos os DLCs por um preço único com o lançamento da Edição GOTY!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Batman: Arkham City - Game of the Year Edition #200260",
+     "Batman Arkham City: Harley Quinn's Revenge #200891"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200260/library_600x900_2x.jpg?t=1745964057",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200260/header.jpg?t=1745964057",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200260/library_hero.jpg?t=1745964057"
+   },
+   "xboxAll": [
+    {
+     "title": "Batman™: Arkham Knight",
+     "id": "BSLX1RNXR6H7",
+     "b": 180,
+     "f": 180,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Batman: Return to Arkham",
+     "id": "BRW49CBS558D",
+     "b": 100,
+     "f": 100,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Batman: Arkham Collection",
+     "id": "C4H36B87SVL1",
+     "b": 250,
+     "f": 250,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Batman: Return to Arkham - Arkham City",
+     "id": "BTV379CSHGQ0",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Batman: Return to Arkham - Arkham Asylum",
+     "id": "BSJ3TWD7R47V",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Batman: Arkham Knight Edição Premium",
+     "id": "C3DRG5G7FCB5",
+     "b": 280,
+     "f": 42,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Injustice 2",
+   "steam": {
+    "appid": 627270,
+    "name": "Injustice™ 2",
+    "free": false,
+    "b": 229.99,
+    "f": 229.99,
+    "pct": 0,
+    "mc": 86,
+    "date": "30/nov./2017",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "NetherRealm Studios",
+     "QLOC"
+    ],
+    "pubs": [
+     "WB Games"
+    ],
+    "desc": "Crie uma versão aperfeiçoada e suprema das suas lendas favoritas da DC no INJUSTICE 2. Mas esta é a sua Lenda. Sua Aventura. Seu Injustice.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Injustice™ 2 #627270",
+     "Injustice™ 2 - Darkseid #721270",
+     "Injustice™ 2 - TMNT #779401",
+     "Injustice™ 2 - Starfire #704810",
+     "Injustice™ 2 - Hellboy #759581"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/library_600x900_2x.jpg?t=1745536404",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/header.jpg?t=1745536404",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/library_hero.jpg?t=1745536404"
+   },
+   "xboxAll": [
+    {
+     "title": "Injustice™2 - Edição Lendária",
+     "id": "BQQWKGXZGJ17",
+     "b": 199,
+     "f": 19.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Injustice™ 2",
+     "id": "BPKVH4C4XV4N",
+     "b": 120,
+     "f": 120,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Injustice™ 2",
+     "id": "9PHT4W7WBBDQ",
+     "b": 127.45,
+     "f": 127.45,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Injustice™2 - Edição Lendária",
+     "id": "9NHM9137SSP3",
+     "b": 194.95,
+     "f": 19.49,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Pacote Mortal Kombat 11 Ultimate + Injustice 2 Ed. Lendária",
+     "id": "9NPKFN7M233T",
+     "b": 449,
+     "f": 449,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Injustice: Gods Among Us",
+     "id": "C24DMFCJKDH2",
+     "b": 129,
+     "f": 129,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Naruto x Boruto Ultimate Ninja Storm Connections",
+   "steam": {
+    "appid": 1020790,
+    "name": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
+    "free": false,
+    "b": 229.9,
+    "f": 75.86,
+    "pct": 67,
+    "mc": null,
+    "date": "16/nov./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "CyberConnect2 Co., Ltd."
+    ],
+    "pubs": [
+     "Bandai Namco Entertainment"
+    ],
+    "desc": "Ninjas lendários se reúnem no próximo jogo da série STORM! NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS é um jogo de ação/luta com batalhas ninja frenéticas e dois modos história diferentes.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS #1020790",
+     "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS - Season Pass #2171332"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1020790/library_600x900_2x.jpg?t=1727301927",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1020790/header.jpg?t=1727301927",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1020790/library_hero.jpg?t=1727301927"
+   },
+   "xboxAll": [
+    {
+     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS",
+     "id": "9NM8JFMGVCVB",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Ultimate Edition",
+     "id": "9N0VPSQMG5QC",
+     "b": 509.9,
+     "f": 509.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS Deluxe Edition",
+     "id": "9PBB7WKGG8HN",
+     "b": 454.91,
+     "f": 454.91,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NARUTO SHIPPUDEN™: Ultimate Ninja® STORM 4 ROAD TO BORUTO",
+     "id": "BR1QZ16D82Q4",
+     "b": 249.5,
+     "f": 249.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NARUTO SHIPPUDEN™: Ultimate Ninja® STORM 4 Demo",
+     "id": "BPT5V5ZJTHN3",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "NARUTO™: Ultimate Ninja® STORM",
+     "id": "BQ2M15PMBLKD",
+     "b": 100,
+     "f": 100,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+   "steam": {
+    "appid": 1490890,
+    "name": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+    "free": false,
+    "b": 167.9,
+    "f": 167.9,
+    "pct": 0,
+    "mc": null,
+    "date": "15/out./2021",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "CyberConnect2"
+    ],
+    "pubs": [
+     "SEGA"
+    ],
+    "desc": "Torne-se a lâmina que destrói demônios!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles #1490890",
+     "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 #2928600",
+     "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Character Pass #1981880",
+     "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Pack de personagem Gyutaro #1981884",
+     "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles: Pack de personagem Daki #1981883"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1490890/library_600x900_2x.jpg?t=1762753763",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1490890/header.jpg?t=1762753763",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1490890/library_hero.jpg?t=1762753763"
+   },
+   "xboxAll": [
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles Ultimate Edition",
+     "id": "9NZSF0BLP606",
+     "b": 270.9,
+     "f": 270.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2",
+     "id": "9NCV4N00N94J",
+     "b": 167.9,
+     "f": 167.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+     "id": "9NVH4XG38T95",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+     "id": "9PHW7BZS9P7Z",
+     "b": 167.9,
+     "f": 167.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Deluxe Edition",
+     "id": "9NM7GZF84QMF",
+     "b": 210.9,
+     "f": 210.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Ultimate Edition",
+     "id": "9NTBR98XBG9C",
+     "b": 270.9,
+     "f": 270.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "One Piece Odyssey",
+   "steam": {
+    "appid": 814000,
+    "name": "ONE PIECE ODYSSEY",
+    "free": false,
+    "b": 197.9,
+    "f": 197.9,
+    "pct": 0,
+    "mc": 77,
+    "date": "12/jan./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Casual",
+     "RPG"
+    ],
+    "devs": [
+     "ILCA, Inc."
+    ],
+    "pubs": [
+     "Bandai Namco Entertainment Inc."
+    ],
+    "desc": "Um novo RPG no mundo do anime ONE PIECE! Faça parte da tripulação do Chapéu de Palha em uma aventura fantástica no mundo de ONE PIECE!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "ONE PIECE ODYSSEY #814000",
+     "ONE PIECE ODYSSEY Traveling Outfit Set #2004600",
+     "ONE PIECE ODYSSEY Adventure Expansion Pack+100,000 Berries #2114030",
+     "ONE PIECE ODYSSEY Jewelry Pack #2282610",
+     "ONE PIECE ODYSSEY HP Conversion Petite Jewelry #2004607"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814000/library_600x900_2x.jpg?t=1703657096",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814000/header.jpg?t=1703657096",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814000/library_hero.jpg?t=1703657096"
+   },
+   "xboxAll": [
+    {
+     "title": "ONE PIECE ODYSSEY Demo",
+     "id": "9NSJPCS94DQB",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ONE PIECE ODYSSEY",
+     "id": "9PND6XZTCZWT",
+     "b": 199.5,
+     "f": 199.5,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ONE PIECE ODYSSEY Deluxe Edition",
+     "id": "9N4H3J2JX5J4",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ONE PIECE World Seeker",
+     "id": "BP95H7BN67D4",
+     "b": 262.93,
+     "f": 262.93,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "One Piece: Burning Blood",
+     "id": "BT3RWJD102LX",
+     "b": 261.86,
+     "f": 261.86,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "ONE PIECE BURNING BLOOD - DEMO",
+     "id": "C18KC00GSX00",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Need for Speed Heat",
+   "steam": {
+    "appid": 1222680,
+    "name": "Need for Speed™ Heat",
+    "free": false,
+    "b": 279,
+    "f": 279,
+    "pct": 0,
+    "mc": 72,
+    "date": "4/jun./2020",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Corrida",
+     "Esportes"
+    ],
+    "devs": [
+     "Ghost Games"
+    ],
+    "pubs": [
+     "Electronic Arts"
+    ],
+    "desc": "Trabalhe de dia e arrisque tudo à noite em Need for Speed™ Heat Edição Deluxe, um jogo eletrizante de corridas de rua, onde a lei desaparece com o pôr do sol.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Need for Speed™ Heat #1222680",
+     "Need for Speed™ Heat - As chaves do mapa #1281881",
+     "Need for Speed™ Heat - Entrega do Mercado Negro McLaren F1 #1281880"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/library_600x900_2x.jpg?t=1777414224",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/header.jpg?t=1777414224",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222680/library_hero.jpg?t=1777414224"
+   },
+   "xboxAll": [
+    {
+     "title": "Need for Speed™ Heat",
+     "id": "BRZZLBF5T245",
+     "b": 239,
+     "f": 239,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Heat Edição Deluxe",
+     "id": "BVH2R2SBWL51",
+     "b": 279,
+     "f": 279,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Heat Edição Deluxe",
+     "id": "9NM857B8P3SC",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Rivals",
+     "id": "C3VM0TMWNZ5M",
+     "b": 80,
+     "f": 80,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Need for Speed™ Unbound",
+     "id": "9PP837L3Q75D",
+     "b": 339,
+     "f": 339,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Need For Speed™ Rivals: Complete Edition",
+     "id": "9P1CWNG8F7B5",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "The Crew Motorfest",
+   "steam": {
+    "appid": 2698940,
+    "name": "The Crew Motorfest",
+    "free": false,
+    "b": 259,
+    "f": 259,
+    "pct": 0,
+    "mc": null,
+    "date": "18/abr./2024",
+    "soon": false,
+    "genres": [
+     "Corrida"
+    ],
+    "devs": [
+     "Ubisoft Ivory Tower"
+    ],
+    "pubs": [
+     "Ubisoft"
+    ],
+    "desc": "The Crew Motorfest é um jogo de corrida online de mundo aberto ambientado na ilha de O'ahu, no Havaí. Experimente o melhor da cultura do automobilismo participando de corridas intensas e eventos temáticos, e colecionando centenas de carros icônicos. Aproveite o jogo grátis por cinco horas!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "The Crew Motorfest #2698940",
+     "The Crew Motorfest | Passe do Ano 3 #3917380",
+     "The Crew Motorfest | Year 1 Pass #2805000",
+     "The Crew Motorfest | Passe do Ano 4 #4922020",
+     "The Crew Motorfest - Pacote Tomb Raider #4922000"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/library_600x900_2x.jpg?t=1791551745",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/4e51b5d3593569eb2214bf5277c5c5aded6d05be/header_alt_assets_3.jpg?t=1791551745",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/library_hero.jpg?t=1791551745"
+   },
+   "xboxAll": [
+    {
+     "title": "The Crew Motorfest",
+     "id": "9NNS41P5J1C7",
+     "b": 299.95,
+     "f": 299.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Crew Motorfest - Xbox Series X|S",
+     "id": "9NTB0ZG811GR",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Crew Motorfest Deluxe Edition",
+     "id": "9NGL5DS0BBJ6",
+     "b": 348.95,
+     "f": 348.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Crew Motorfest - Xbox One",
+     "id": "9PB5JN044BHZ",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Pacote Cross-Gen de The Crew Motorfest",
+     "id": "9N2TS3W9KLTZ",
+     "b": 299.95,
+     "f": 299.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Crew Motorfest",
+     "id": "9NC4PV16GVT1",
+     "b": 259,
+     "f": 259,
+     "on": [
+      "PC"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Fall Guys",
+   "xboxAll": [
+    {
+     "title": "Fall Guys",
+     "id": "9PMXH5249DG5",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Stumble Guys",
+     "id": "9N9L211HC9LQ",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "TRANSFORMERS: Fall of Cybertron",
+     "id": "BTMR0JDRPRQL",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Chicken's Fall",
+     "id": "9NKGGW7KB5W7",
+     "b": 3.45,
+     "f": 3.45,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "Hub"
+     ]
+    },
+    {
+     "title": "The Fall Part 2: Unbound",
+     "id": "BPRHCSPK9VX2",
+     "b": 34.69,
+     "f": 34.69,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Fall of Light: Darkest Edition",
+     "id": "BW9M9JCMKQV8",
+     "b": 29,
+     "f": 29,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Rust",
+   "steam": {
+    "appid": 252490,
+    "name": "Rust",
+    "free": false,
+    "b": 119.99,
+    "f": 59.99,
+    "pct": 50,
+    "mc": 69,
+    "date": "8/fev./2018",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "Multijogador Massivo",
+     "RPG"
+    ],
+    "devs": [
+     "Facepunch Studios"
+    ],
+    "pubs": [
+     "Facepunch Studios"
+    ],
+    "desc": "O único objetivo no Rust é sobreviver. Tudo contribui para sua morte: os animais selvagens da ilha, outros habitantes, o ambiente e outros sobreviventes. Faça o que for preciso para durar mais uma noite.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "Rust #252490",
+     "Rust - Warhammer 40,000 Pack #3891560",
+     "Rust - Sunburn Pack #1353060",
+     "Rust - Voice Props Pack #1670430",
+     "Rust - Instruments Pack #1174370"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/library_600x900_2x.jpg?t=1781536981",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg?t=1781536981",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/810d28529f0c40e9a283f74cea09583f501c57e2/library_hero.jpg?t=1781536981"
+   },
+   "xboxAll": [
+    {
+     "title": "Rust Console Edition X|S - Deluxe",
+     "id": "9N1204MH6DXR",
+     "b": 292.95,
+     "f": 292.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Rust Console Edition X|S - Ultimate",
+     "id": "9NQ7991WPX1Z",
+     "b": 414.95,
+     "f": 414.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Rust Console Edition X|S - Public Test Branch",
+     "id": "9N7XX1GHT1ZV",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Rust Console Edition X|S",
+     "id": "9PJVJ4WF031H",
+     "b": 243.95,
+     "f": 243.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "RUST DREAD REVENGE",
+     "id": "9NMKGRG0H8CZ",
+     "b": 97.95,
+     "f": 97.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Rustler",
+     "id": "9P52H84FW7RV",
+     "b": 112.45,
+     "f": 112.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "ARK: Survival Ascended",
+   "steam": {
+    "appid": 2399830,
+    "name": "ARK: Survival Ascended",
+    "free": false,
+    "b": 220,
+    "f": 55,
+    "pct": 75,
+    "mc": null,
+    "date": "25/out./2023",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "Multijogador Massivo",
+     "RPG",
+     "Acesso Antecipado"
+    ],
+    "devs": [
+     "Studio Wildcard",
+     "Grove Street Games",
+     "Instinct Games"
+    ],
+    "pubs": [
+     "Studio Wildcard",
+     "Snail Games USA"
+    ],
+    "desc": "A Ark é reimaginada desde o início nesta próxima geração de tecnologia de videogame com Unreal Engine 5! Formar uma tribo, manso e raça centenas de dinossauros exclusivos e criaturas primitivas, explore, artesanato, construa e lute para o topo da cadeia de alimentos. Seu novo mundo aguarda!",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "ARK: Survival Ascended #2399830"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/166deeb025b36ce418449883606ee12edf1c0b07/library_capsule_2x.jpg?t=1793226168",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg?t=1793226168",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/library_hero.jpg?t=1793226168"
+   },
+   "xboxAll": [
+    {
+     "title": "ARK: Survival Ascended",
+     "id": "9P33VJGVPHVP",
+     "b": 248.46,
+     "f": 248.46,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "ARK: Survival Evolved",
+     "id": "BNBLC4ZGFNKB",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "ARK: Survival Evolved",
+     "id": "9NBLGGH52XC6",
+     "b": 54.95,
+     "f": 54.95,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "ARK: Survival Evolved Explorer's Edition",
+     "id": "BPP79RSDN892",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "ARK: Survival Evolved Explorer's Edition",
+     "id": "9MT8ND8BS6NB",
+     "b": null,
+     "f": null,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "ARK: Bob's Bundle",
+     "id": "9NF0RTSMR2ST",
+     "b": 364.95,
+     "f": 364.95,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Don't Starve Together",
+   "steam": {
+    "appid": 322330,
+    "name": "Don't Starve Together",
+    "free": false,
+    "b": 27.99,
+    "f": 9.51,
+    "pct": 66,
+    "mc": 83,
+    "date": "21/abr./2016",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie",
+     "RPG",
+     "Simulação",
+     "Estratégia"
+    ],
+    "devs": [
+     "Klei Entertainment"
+    ],
+    "pubs": [
+     "Klei Entertainment"
+    ],
+    "desc": "Don't Starve Together é uma expansão multiplayer autônoma para o jogo de sobrevivência em lugares inóspitos, Don't Starve.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "Don't Starve Together #322330",
+     "Don't Starve Together: Bounteous Bundle #1230830",
+     "Don't Starve Together: Wortox Deluxe Chest #1051700",
+     "Don't Starve Together: Wurt Deluxe Chest #1167330",
+     "Don't Starve Together: Wormwood Deluxe Chest #1084430"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322330/5738483868f5a1cd12a83422ddfd1300ca1dcb84/library_capsule_2x.jpg?t=1793044716",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322330/050ea9c51a4e96f707309d33b7cdd38e0a6cbfff/header_alt_assets_51.jpg?t=1793044716",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322330/516815fcb3a671bd0b12f9fd9fd0de1f699cdfac/library_hero.jpg?t=1793044716"
+   },
+   "xboxAll": [
+    {
+     "title": "Don't Starve: Giant Edition + Shipwrecked Expansion",
+     "id": "BP3J6W71NHMP",
+     "b": 37,
+     "f": 37,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Don't Starve Together: Console Edition",
+     "id": "BQ7NMRJT1NQ4",
+     "b": 29,
+     "f": 29,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Don't Starve: Giant Edition",
+     "id": "C0XBNVR137DZ",
+     "b": 29,
+     "f": 29,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Don't Starve Mega Pack 2020",
+     "id": "9N0935HNZWGL",
+     "b": 119.95,
+     "f": 119.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Flame in the Flood",
+     "id": "9P0XMKJ8W7BW",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Dont Fear",
+     "id": "9PDZ9DQ1PB0H",
+     "b": 18.45,
+     "f": 18.45,
+     "on": [
+      "PC",
+      "MobileDevice",
+      "XboxOne",
+      "XboxSeriesX",
+      "Hub"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Little Nightmares III",
+   "steam": {
+    "appid": 1392860,
+    "name": "Little Nightmares III",
+    "free": false,
+    "b": 182.9,
+    "f": 91.45,
+    "pct": 50,
+    "mc": null,
+    "date": "9/out./2025",
+    "soon": false,
+    "genres": [
+     "Aventura"
+    ],
+    "devs": [
+     "Supermassive Games"
+    ],
+    "pubs": [
+     "Bandai Namco Entertainment"
+    ],
+    "desc": "Little Nightmares III é um jogo de aventura imersivo que acompanha a jornada de Low e Alone, dois melhores amigos em busca de uma saída de Lugar Nenhum. Seja 2 jogadores cooperando online ou sozinho com uma I.A., trabalhem juntos para solucionar quebra-cabeças e sobreviver neste mundo de pesadelos.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Little Nightmares III #1392860",
+     "Little Nightmares III - The Shores #2088782",
+     "Little Nightmares III - The Backstage #2088781",
+     "Little Nightmares III - Residents Costumes Pack #2088785",
+     "Little Nightmares III - Klonoa Costumes Set #2088788"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1392860/library_600x900_2x.jpg?t=1790849221",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1392860/0fd9c7cef7e84dbb6f6d3d3cfde32e247e1305a6/header_alt_assets_1.jpg?t=1790849221",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1392860/library_hero.jpg?t=1790849221"
+   },
+   "xboxAll": [
+    {
+     "title": "Little Nightmares III",
+     "id": "9PMWB693ZK7X",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Little Nightmares III",
+     "id": "9MVBJ3NX67DS",
+     "b": 199.5,
+     "f": 199.5,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Little Nightmares II DEMO",
+     "id": "9PNXV84C0T2H",
+     "b": 0,
+     "f": 0,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Little Nightmares II Enhanced Edition",
+     "id": "C1H74N0TR8KT",
+     "b": 149.5,
+     "f": 149.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Little Nightmares III Edição Deluxe",
+     "id": "9NXSMCH8RP60",
+     "b": 299.9,
+     "f": 299.9,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Pacote Little Nightmares I e II",
+     "id": "9P9K6RPTCHC3",
+     "b": 264.9,
+     "f": 79.47,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "The Outlast Trials",
+   "steam": {
+    "appid": 1304930,
+    "name": "The Outlast Trials",
+    "free": false,
+    "b": 107.99,
+    "f": 32.39,
+    "pct": 70,
+    "mc": null,
+    "date": "5/mar./2024",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie"
+    ],
+    "devs": [
+     "Red Barrels"
+    ],
+    "pubs": [
+     "Red Barrels"
+    ],
+    "desc": "Red Barrels invites you to experience mind-numbing terror, this time with friends. Whether you go through the trials alone or in teams, if you survive long enough and complete the therapy, Murkoff will happily let you leave… but will you be the same?",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "The Outlast Trials #1304930",
+     "The Outlast Trials - Reagent Starter Pack #2328320",
+     "The Outlast Trials - Sweet Release Pack #3518320",
+     "The Outlast Trials - Exotica Pack #3030370",
+     "The Outlast Trials - Unholy Night Pack #3307910"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1304930/b511ed32e00d90a15e6d1bf7861fe88f0cdde5db/library_capsule_2x.jpg?t=1792554994",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1304930/e3b17cf268afa51334b63124a2fe0aef3f1d136b/header_alt_assets_4.jpg?t=1792554994",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1304930/library_hero.jpg?t=1792554994"
+   },
+   "xboxAll": [
+    {
+     "title": "The Outlast Trials",
+     "id": "9NR13RF1V2WV",
+     "b": 159.95,
+     "f": 159.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Outlast Trials Deluxe Edition",
+     "id": "9NCTX4DHL605",
+     "b": 184.95,
+     "f": 18.49,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Outlast",
+     "id": "BP3GH4D3HP2H",
+     "b": 57.45,
+     "f": 57.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Outlast 2",
+     "id": "BZVPNM21TCJC",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Outlast 2",
+     "id": "9N633BP2KCKD",
+     "b": 118.27,
+     "f": 118.27,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Trials of the Blood Dragon",
+     "id": "BPPR6D5C2GLF",
+     "b": 39,
+     "f": 39,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Alien: Isolation",
+   "steam": {
+    "appid": 214490,
+    "name": "Alien: Isolation",
+    "free": false,
+    "b": 179,
+    "f": 44.75,
+    "pct": 75,
+    "mc": 81,
+    "date": "6/out./2014",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Creative Assembly",
+     "Feral Interactive (Mac)",
+     "Feral Interactive (Linux)"
+    ],
+    "pubs": [
+     "SEGA",
+     "Feral Interactive (Mac)",
+     "Feral Interactive (Linux)"
+    ],
+    "desc": "Discover the true meaning of fear in Alien: Isolation, a survival horror set in an atmosphere of constant dread and mortal danger.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "Alien: Isolation #214490",
+     "Alien: Isolation 2 #4665290",
+     "Alien: Isolation - Trauma #282513",
+     "Alien: Isolation - Safe Haven #282514",
+     "Alien: Isolation - Corporate Lockdown #282512"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/library_600x900_2x.jpg?t=1793034411",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/header.jpg?t=1793034411",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/library_hero.jpg?t=1793034411"
+   },
+   "xboxAll": [
+    {
+     "title": "Alien: Isolation",
+     "id": "C1H9V6SLK2K5",
+     "b": 179,
+     "f": 44.75,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Alien: Isolation",
+     "id": "9NSRJ872SGH7",
+     "b": 179,
+     "f": 44.75,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Alien: Isolation - The Collection",
+     "id": "BR3TMVZ9PNWZ",
+     "b": 239.99,
+     "f": 239.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Alien: Isolation 2",
+     "id": "9NVC76MLKDBB",
+     "b": null,
+     "f": null,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Aliens: Fireteam Elite Into The Hive Edition",
+     "id": "9PK7W69MFT5B",
+     "b": 214.95,
+     "f": 214.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Aliens: Fireteam Elite 2",
+     "id": "9MTP6NRFJBGR",
+     "b": 275.95,
+     "f": 275.95,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "The Evil Within 2",
+   "steam": {
+    "appid": 601430,
+    "name": "The Evil Within 2",
+    "free": false,
+    "b": 155,
+    "f": 31,
+    "pct": 80,
+    "mc": 80,
+    "date": "12/out./2017",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura"
+    ],
+    "devs": [
+     "Tango Gameworks"
+    ],
+    "pubs": [
+     "Bethesda Softworks"
+    ],
+    "desc": "O detetive Sebastian Castellanos perdeu tudo, inclusive sua filha, Lily. Para salvá-la, ele deve descer ao mundo tenebroso de STEM. Ameaças assustadoras surgem de cada canto, e ele deve confiar na sua perspicácia para sobreviver. Para sua chance de redenção, a única forma de sair é entrar.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "The Evil Within 2 #601430",
+     "The Evil Within 2 Demo #757570"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601430/library_600x900_2x.jpg?t=1750783701",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601430/header.jpg?t=1750783701",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601430/library_hero.jpg?t=1750783701"
+   },
+   "xboxAll": [
+    {
+     "title": "The Evil Within® 2",
+     "id": "C40860J5R2MP",
+     "b": 154.95,
+     "f": 30.99,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Evil Within® 2 (PC)",
+     "id": "9NT0NT8JQMQN",
+     "b": 199.95,
+     "f": 39.99,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "The Evil Within Digital Bundle",
+     "id": "BXZ0B7S1JD0Z",
+     "b": 149.95,
+     "f": 37.48,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Evil Within",
+     "id": "C2M8HBNVPT1T",
+     "b": 99.95,
+     "f": 24.98,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "The Evil Within (PC)",
+     "id": "9MX8R81JW1B5",
+     "b": 59.95,
+     "f": 14.98,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "RESIDENT EVIL 2",
+     "id": "BWMH951M3G3P",
+     "b": 167.22,
+     "f": 33.44,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Five Nights at Freddy's: Security Breach",
+   "steam": {
+    "appid": 747660,
+    "name": "Five Nights at Freddy's: Security Breach",
+    "free": false,
+    "b": 75.49,
+    "f": 75.49,
+    "pct": 0,
+    "mc": null,
+    "date": "16/dez./2021",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Aventura",
+     "Indie"
+    ],
+    "devs": [
+     "Steel Wool Studios"
+    ],
+    "pubs": [
+     "ScottGames"
+    ],
+    "desc": "Em Five Nights at Freddy’s: Security Breach, você joga como Gregory, um garotinho que ficou preso à noite no Freddy Fazbear’s Mega Pizzaplex. Com a ajuda do próprio Freddy, Gregory deve desvendar os segredos do Pizzaplex, descobrir a verdade e sobreviver até o amanhecer.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Five Nights at Freddy's: Security Breach #747660",
+     "Five Nights at Freddy's: Security Breach - Ruin #1924720"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/library_600x900_2x.jpg?t=1686587905",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/header.jpg?t=1686587905",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/747660/library_hero.jpg?t=1686587905"
+   },
+   "xboxAll": [
+    {
+     "title": "Five Nights at Freddy's: Security Breach",
+     "id": "9NMP8KFRTNCD",
+     "b": 147.45,
+     "f": 147.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Five Nights at Freddy's Into the Pit",
+     "id": "9PMP3DDWDRNW",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Five Nights at Freddy's",
+     "id": "9N5253J559LR",
+     "b": 29.95,
+     "f": 29.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "PC",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Five Nights at Freddy's: Série Original",
+     "id": "9PJ2DSSXZR0P",
+     "b": 117.45,
+     "f": 117.45,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Five Nights at Freddy's 3",
+     "id": "9P6N7LQ4HZFD",
+     "b": 29.95,
+     "f": 29.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Five Nights at Freddy's 2",
+     "id": "9NBR2ZSD99FX",
+     "b": 29.95,
+     "f": 29.95,
+     "on": [
+      "PC",
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Risk of Rain 2",
+   "steam": {
+    "appid": 632360,
+    "name": "Risk of Rain 2",
+    "free": false,
+    "b": 59.99,
+    "f": 59.99,
+    "pct": 0,
+    "mc": 85,
+    "date": "11/ago./2020",
+    "soon": false,
+    "genres": [
+     "Ação",
+     "Indie"
+    ],
+    "devs": [
+     "Hopoo Games"
+    ],
+    "pubs": [
+     "Gearbox Publishing",
+     "2K"
+    ],
+    "desc": "Fuja de um planeta alienígena caótico enfrentando hordas de monstros frenéticos com seus amigos ou por conta própria. Combine itens de maneiras inusitadas e domine cada personagem para se tornar o caos que você temia depois da primeira aterrissagem forçada.",
+    "plat": {
+     "windows": true,
+     "mac": false,
+     "linux": false
+    },
+    "other": [
+     "Risk of Rain 2 #632360",
+     "Risk of Rain 2: Hallowed Concepts #3055670",
+     "Risk of Rain 2: Alloyed Collective #2781620",
+     "Risk of Rain 2: Seekers of the Storm #2306620",
+     "Risk of Rain 2: Survivors of the Void #1607890"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/library_600x900_2x.jpg?t=1791475448",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/77f4cff7fea7de8a4566d1fb76ace16967604da7/header_alt_assets_7.jpg?t=1791475448",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/library_hero.jpg?t=1791475448"
+   },
+   "xboxAll": [
+    {
+     "title": "Risk of Rain 2",
+     "id": "9P6F6TBGGVK3",
+     "b": 124.5,
+     "f": 124.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Risk of Rain 2 + Survivors of the Void + Seekers of the Storm+ Alloyed Collective + Hallowed Concepts para XBOX Series X|S",
+     "id": "9PNQFGV8PHRK",
+     "b": 359.9,
+     "f": 359.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Risk of Rain 2 + Survivors of the Void Expansion",
+     "id": "9NS027TDJMXP",
+     "b": 199.5,
+     "f": 199.5,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Gears of War: E-Day",
+     "id": "9N4PT8HGCDHQ",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Risk of Rain",
+     "id": "9P7XX5LQN0ZD",
+     "b": 21.02,
+     "f": 21.02,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Black Ops II",
+     "id": "C1QJM5XT9SXV",
+     "b": 219.9,
+     "f": 219.9,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "The Binding of Isaac: Rebirth",
+   "steam": {
+    "appid": 250900,
+    "name": "The Binding of Isaac: Rebirth",
+    "free": false,
+    "b": 27.99,
+    "f": 27.99,
+    "pct": 0,
+    "mc": null,
+    "date": "4/nov./2014",
+    "soon": false,
+    "genres": [
+     "Ação"
+    ],
+    "devs": [
+     "Nicalis, Inc.",
+     "Edmund McMillen"
+    ],
+    "pubs": [
+     "Nicalis, Inc."
+    ],
+    "desc": "The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac’s form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": true
+    },
+    "other": [
+     "The Binding of Isaac: Rebirth #250900",
+     "The Binding of Isaac: Rebirth - Soundtrack #322660"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/library_600x900_2x.jpg?t=1731977365",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/header.jpg?t=1731977365",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/library_hero.jpg?t=1731977365"
+   },
+   "xboxAll": [
+    {
+     "title": "The Binding of Isaac: Rebirth",
+     "id": "BQD45PQR4F4J",
+     "b": 57.79,
+     "f": 57.79,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Binding of Isaac: Repentance",
+     "id": "9PGHSK2QR07H",
+     "b": 233.94,
+     "f": 233.94,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "The Legend of Bum-bo",
+     "id": "9N5Z0K787FDD",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Gears of War: E-Day",
+     "id": "9N4PT8HGCDHQ",
+     "b": 299,
+     "f": 299,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre (Windows)",
+     "id": "9PK3G146XXVF",
+     "b": 463.9,
+     "f": 463.9,
+     "on": [
+      "PC"
+     ]
+    },
+    {
+     "title": "Call of Duty®: Modern Warfare® 4 - Edição Cofre",
+     "id": "9NWWNS0C3007",
+     "b": 479.9,
+     "f": 479.9,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Gris",
+   "steam": {
+    "appid": 683320,
+    "name": "GRIS",
+    "free": false,
+    "b": 46.99,
+    "f": 46.99,
+    "pct": 0,
+    "mc": 84,
+    "date": "13/dez./2018",
+    "soon": false,
+    "genres": [
+     "Aventura",
+     "Indie"
+    ],
+    "devs": [
+     "Nomada Studio"
+    ],
+    "pubs": [
+     "Devolver Digital"
+    ],
+    "desc": "Gris é uma jovem esperançosa, perdida em seu próprio mundo, que lida com uma dolorosa experiência.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "GRIS #683320",
+     "GRIS Soundtrack #986250",
+     "The Fruit of Grisaia #345610",
+     "The Labyrinth of Grisaia #345620",
+     "The Eden of Grisaia #345630"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/library_600x900_2x.jpg?t=1759429603",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/header.jpg?t=1759429603",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/library_hero.jpg?t=1759429603"
+   },
+   "xboxAll": [
+    {
+     "title": "Gris",
+     "id": "9NHHP2H0ZP98",
+     "b": 62.45,
+     "f": 62.45,
+     "on": [
+      "PC",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "GRIS",
+     "id": "9N6C6J7C3GTQ",
+     "b": 62.45,
+     "f": 62.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "GRIS + Neva Bundle",
+     "id": "9P1SXSHCN7BR",
+     "b": 145.95,
+     "f": 145.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Neva",
+     "id": "9N2LN3WRT82H",
+     "b": 74.95,
+     "f": 74.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "GRIS + Arise A Simple Story Bundle",
+     "id": "9NNC1GS6JP8W",
+     "b": 136.95,
+     "f": 136.95,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX"
+     ]
+    },
+    {
+     "title": "Neva - Complete Edition",
+     "id": "9P2KWH9MSW6X",
+     "b": 106.95,
+     "f": 106.95,
+     "on": [
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    }
+   ]
+  },
+  {
+   "q": "Frostpunk 2",
+   "steam": {
+    "appid": 1601580,
+    "name": "Frostpunk 2",
+    "free": false,
+    "b": 119.95,
+    "f": 119.95,
+    "pct": 0,
+    "mc": 85,
+    "date": "20/set./2024",
+    "soon": false,
+    "genres": [
+     "Simulação",
+     "Estratégia"
+    ],
+    "devs": [
+     "11 bit studios"
+    ],
+    "pubs": [
+     "11 bit studios"
+    ],
+    "desc": "Desenvolva, expanda e traga o progresso à sua cidade em um jogo de sobrevivência em sociedade, 30 anos após uma nevasca apocalíptica arrasar a Terra. Em Frostpunk 2, você enfrentará os perigos do inverno sem fim e as facções do Conselho Municipal que o acompanham de perto.",
+    "plat": {
+     "windows": true,
+     "mac": true,
+     "linux": false
+    },
+    "other": [
+     "Frostpunk 2 #1601580",
+     "Frostpunk 2: Fractured Utopias #2791510",
+     "Frostpunk 2: Breach of Trust #4124750",
+     "Frostpunk 2: Original Soundtrack #3197520",
+     "Frostpunk 2: Deluxe Edition Upgrade #4065430"
+    ],
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/library_600x900_2x.jpg?t=1793379038",
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/header.jpg?t=1793379038",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/library_hero.jpg?t=1793379038"
+   },
+   "xboxAll": [
+    {
+     "title": "Frostpunk 2",
+     "id": "9N0KN24FWP6B",
+     "b": 119.95,
+     "f": 119.95,
+     "on": [
+      "PC",
+      "XboxSeriesX",
+      "XCloud",
+      "Handheld"
+     ]
+    },
+    {
+     "title": "Frostpunk 2: Deluxe Edition",
+     "id": "9PFM09X52KS9",
+     "b": 204.95,
+     "f": 204.95,
+     "on": [
+      "XboxSeriesX",
+      "PC",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Frostpunk 2: Deluxe Edition Upgrade",
+     "id": "9NM5W016S01V",
+     "b": 84.95,
+     "f": 84.95,
+     "on": [
+      "XboxSeriesX",
+      "PC"
+     ]
+    },
+    {
+     "title": "Frostpunk: Console Edition",
+     "id": "9NP539LHJD8S",
+     "b": 112.45,
+     "f": 112.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Frostpunk: Complete Collection",
+     "id": "9MVMKRVTX1G5",
+     "b": 167.45,
+     "f": 167.45,
+     "on": [
+      "XboxOne",
+      "XboxSeriesX",
+      "XCloud"
+     ]
+    },
+    {
+     "title": "Red Dead Redemption 2",
+     "id": "9N2ZDN7NWQKV",
+     "b": 299.9,
+     "f": 299.9,
      "on": [
       "XboxOne",
       "XboxSeriesX"
@@ -200,30 +3947,162 @@
   }
  ],
  "covers": {
-  "checked": 187,
+  "checked": 257,
   "missing": []
  },
- "assetsExtra": {
-  "359550": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/5878a9291aaf2334e08424c6db8e9635d9fa05b4/library_capsule_2x.jpg?t=1792001976",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/555b5051d332c5f6b86f88ba5dfd80404dc91aaa/header_alt_assets_27.jpg?t=1792001976",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/6a17af1cb99e9822a54b6b80f8186ac932b88d3d/library_hero.jpg?t=1792001976"
+ "assetsExtra": {},
+ "mobile": [
+  {
+   "q": "Clash of Clans",
+   "play": "com.supercell.clashofclans",
+   "itunes": [
+    {
+     "n": "Clash of Clans",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/0a/6d/e30a6d11-7bed-dcf6-0659-ee8c7b27c400/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Supercell",
+     "y": "2012",
+     "genre": "Games"
+    },
+    {
+     "n": "Clash Royale",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/8f/83/038f835b-27e2-40e4-a196-80444df3a217/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Supercell",
+     "y": "2016",
+     "genre": "Games"
+    },
+    {
+     "n": "Clash Fanatic - Bases and Tips",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/ed/6f/deed6fb2-54df-d869-2d59-402bf614ee8c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.jpeg/512x512bb.jpg",
+     "p": 0,
+     "dev": "Too Much Wasabi, LLC",
+     "y": "2016",
+     "genre": "Utilities"
+    }
+   ],
+   "playData": {
+    "title": "Clash of Clans – Apps no Google Play",
+    "img": "https://play-lh.googleusercontent.com/sFmWfYbYp_2ea7VRMTnwd3gjIBrPGXHj_d_ab1_k1q1p2OMk4riGMF1vqxdhONOtTYOt_BVpk7a4AYcKU68LNGQ=s0-br30",
+    "buy": "Qfub ishze\" jscontroller=\"soHxf\" jsaction=\"click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;\" data-disable-idom='true' aria-label=\"Instalar no Windows\"> Instalar no Windows </b",
+    "prices": [
+     "R$ 1,90",
+     "R$ 1.499,90",
+     "R$ 1,90",
+     "R$ 1.499,90",
+     "R$ 1,90",
+     "R$ 1.499,90",
+     "R$ 1,90",
+     "R$ 1.499,90"
+    ]
+   }
   },
-  "387290": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/library_600x900_2x.jpg?t=1701967651",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/header.jpg?t=1701967651",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/library_hero.jpg?t=1701967651"
+  {
+   "q": "Pokémon TCG Pocket",
+   "play": "jp.pokemon.pokemontcgp",
+   "itunes": [
+    {
+     "n": "Pokémon TCG Pocket",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cc/36/be/cc36be7e-34a8-367e-5ebb-343175027e2a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "The Pokemon Company",
+     "y": "2024",
+     "genre": "Games"
+    },
+    {
+     "n": "Pokémon Trading Card Game Live",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/c8/67/0ac86797-5b71-57ce-cdd6-9b6c9ee5e4cd/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "THE POKEMON COMPANY INTERNATIONAL, INC.",
+     "y": "2022",
+     "genre": "Games"
+    },
+    {
+     "n": "Pokémon GO",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/dc/39/eadc39e3-9f46-fe9e-7810-3b943989bf96/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Scopely Explore, Inc.",
+     "y": "2016",
+     "genre": "Games"
+    }
+   ],
+   "playData": {
+    "title": "Pokémon TCG Pocket – Apps no Google Play",
+    "img": "https://play-lh.googleusercontent.com/p_05nasYCOpKzbj4n-j6qFrWRu5mb4oBFiulf9kc-SdLssRKbIqIt8u-XkI2R07vfHh0KE_Vr4L8R0l7c3JTWw=s0-br30",
+    "buy": "fub zwjsl\" jscontroller=\"soHxf\" jsaction=\"click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd;\" data-disable-idom='true' aria-label=\"Instalar\"> <span itemprop=\"offers\" itemscope ",
+    "prices": [
+     "R$ 4,90",
+     "R$ 499,90",
+     "R$ 4,90",
+     "R$ 499,90",
+     "R$ 23,90",
+     "R$ 299,90",
+     "R$ 3,19",
+     "R$ 27,99"
+    ]
+   }
   },
-  "870780": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/library_600x900_2x.jpg?t=1781607969",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ec621653454cdad232187af4eb79f23c05aceca5/header.jpg?t=1781607969",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/63bafa99ba970320663e1117c0068db326a3ef1f/library_hero.jpg?t=1781607969"
+  {
+   "q": "Gris",
+   "play": "com.devolverdigital.gris",
+   "itunes": [
+    {
+     "n": "Grindr - Conversa gay",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/6c/a2/996ca2c3-b47c-64c4-1f6e-7090997271c1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Grindr LLC",
+     "y": "2009",
+     "genre": "Social Networking"
+    },
+    {
+     "n": "GRIS",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/e3/ef/a7/e3efa728-6f4d-17b6-f6ab-7a4575beea6f/AppIcon-0-0-1x_U007emarketing-0-0-0-9-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg",
+     "p": 29.9,
+     "dev": "Devolver",
+     "y": "2019",
+     "genre": "Games"
+    },
+    {
+     "n": "INSIDE da Playdead",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/83/ae/8b83ae1c-1be7-89bd-3cfa-211204ba8f2f/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Playdead",
+     "y": "2017",
+     "genre": "Games"
+    }
+   ],
+   "playErr": "HTTP 404"
   },
-  "2357570": {
-   "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/b591811fd6efff2893c36be58921012d89a4c976/library_capsule_brazilian_2x.jpg?t=1791576843",
-   "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5738f4f59272204dd06c6010b56e2aab135b94dd/header_alt_assets_23_brazilian.jpg?t=1791576843",
-   "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/a7d765e7cdda687879dda4a84e78a17d77cde467/library_hero.jpg?t=1791576843"
+  {
+   "q": "Alien: Isolation",
+   "play": "com.feralinteractive.alienisolation",
+   "itunes": [
+    {
+     "n": "Alien: Isolation",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/f7/01/58f70113-7310-82af-dc05-619d6f520f37/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Feral Interactive Ltd",
+     "y": "2022",
+     "genre": "Games"
+    },
+    {
+     "n": "Alien Invasion: RPG Idle Space",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/14/f2/02/14f202dd-3b1e-b612-d836-faa3056ec494/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "Crazy Labs",
+     "y": "2022",
+     "genre": "Games"
+    },
+    {
+     "n": "Resident Evil 4",
+     "a": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/c8/c9/24c8c984-811f-2806-f307-1535d0fe84c8/AppIcon-1x_U007epad-0-11-0-85-220-0.png/512x512bb.jpg",
+     "p": 0,
+     "dev": "CAPCOM",
+     "y": "2023",
+     "genre": "Games"
+    }
+   ],
+   "playErr": "HTTP 404"
   }
- },
- "mobile": []
+ ]
 }
