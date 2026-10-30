@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T23:02:08.926Z",
+ "updated": "2026-10-30T01:08:54.131Z",
  "st": {
   "ok": 161,
   "total": 166,
@@ -118,5 +118,14 @@
  },
  "epFree": {
   "ok": 3
+ },
+ "gp": {
+  "ok": 4,
+  "total": 6,
+  "errors": 1,
+  "miss": [
+   "Grand Theft Auto: Liberty City Stories (preço estranho 198.9)",
+   "Final Fantasy IX (HTTP 404)"
+  ]
  }
 }
