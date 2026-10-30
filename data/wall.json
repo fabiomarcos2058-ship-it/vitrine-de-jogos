@@ -1,5 +1,5 @@
 {
-"updated": "2026-10-30T00:45:24Z",
+"updated": "2026-10-30T00:46:37Z",
 "games": {
 "Resident Evil 4": [
 {
@@ -229,24 +229,6 @@
 {
 "n": "Helena Harper",
 "img": "chars/c/e8ee5a54d17e.webp"
-}
-],
-"Resident Evil Code: Veronica X": [
-{
-"n": "Claire Redfield",
-"img": "chars/c/0c65104e9165.webp"
-},
-{
-"n": "Chris Redfield",
-"img": "chars/c/d2e5736d4b35.webp"
-},
-{
-"n": "Steve Burnside",
-"img": "chars/c/3c1649d055b4.webp"
-},
-{
-"n": "Alexia Ashford",
-"img": "chars/c/0729be652897.webp"
 }
 ],
 "Resident Evil Revelations": [
@@ -527,12 +509,6 @@
 {
 "n": "Ishikawa",
 "img": "chars/c/a5ef97ad2e55.webp"
-}
-],
-"Ghost of Yōtei": [
-{
-"n": "Atsu",
-"img": "chars/c/b515840a005a.webp"
 }
 ],
 "Horizon Forbidden West": [
@@ -927,28 +903,6 @@
 "img": "chars/c/71601e16cec9.webp"
 }
 ],
-"Final Fantasy VII Ever Crisis": [
-{
-"n": "Cloud Strife",
-"img": "chars/c/0029841c9a12.webp"
-},
-{
-"n": "Tifa Lockhart",
-"img": "chars/c/3544596e8760.webp"
-},
-{
-"n": "Aerith Gainsborough",
-"img": "chars/c/5282769d3991.webp"
-},
-{
-"n": "Zack Fair",
-"img": "chars/c/39384fe9b60d.webp"
-},
-{
-"n": "Sephiroth",
-"img": "chars/c/97a8ab53afb9.webp"
-}
-],
 "Final Fantasy XVI": [
 {
 "n": "Clive Rosfield",
@@ -1185,24 +1139,6 @@
 "img": "chars/c/a99a483dbe87.webp"
 }
 ],
-"Dissidia Final Fantasy NT": [
-{
-"n": "Cloud Strife",
-"img": "chars/c/6d0d43c42325.webp"
-},
-{
-"n": "Squall Leonhart",
-"img": "chars/c/5314698fc7f7.webp"
-},
-{
-"n": "Lightning",
-"img": "chars/c/fe17550c8573.webp"
-},
-{
-"n": "Terra Branford",
-"img": "chars/c/1c00e5b30847.webp"
-}
-],
 "World of Final Fantasy": [
 {
 "n": "Lann",
@@ -1225,24 +1161,6 @@
 {
 "n": "Agrias Oaks",
 "img": "chars/c/75d198764b45.webp"
-}
-],
-"Final Fantasy Pixel Remaster (I–VI)": [
-{
-"n": "Cecil Harvey",
-"img": "chars/c/f6fe790e3106.webp"
-},
-{
-"n": "Terra Branford",
-"img": "chars/c/22bf316e1638.webp"
-},
-{
-"n": "Bartz Klauser",
-"img": "chars/c/cbfa91bf78be.webp"
-},
-{
-"n": "Firion",
-"img": "chars/c/d36217801dfe.webp"
 }
 ],
 "Persona 5 Royal": [
@@ -1585,24 +1503,6 @@
 {
 "n": "King Dice",
 "img": "chars/c/12734ced0399.webp"
-}
-],
-"Halo Infinite": [
-{
-"n": "John-117",
-"img": "chars/c/a19a1b69fea2.webp"
-},
-{
-"n": "The Weapon",
-"img": "chars/c/33c9f4b326d0.webp"
-},
-{
-"n": "Escharum",
-"img": "chars/c/8cc3e24a2cc3.webp"
-},
-{
-"n": "Fernando Esparza",
-"img": "chars/c/842da285cc8f.webp"
 }
 ],
 "Halo: The Master Chief Collection": [
@@ -2456,96 +2356,115 @@
 "n": "Terrorists",
 "img": "chars/c/a9b96c386c71.webp"
 }
+],
+"Resident Evil Code: Veronica X": [
+{
+"n": "Claire Redfield",
+"img": "chars/c/0c65104e9165.webp"
+},
+{
+"n": "Chris Redfield",
+"img": "chars/c/d2e5736d4b35.webp"
+},
+{
+"n": "Steve Burnside",
+"img": "chars/c/3c1649d055b4.webp"
+},
+{
+"n": "Alexia Ashford",
+"img": "chars/c/0729be652897.webp"
+}
+],
+"Ghost of Yōtei": [
+{
+"n": "Atsu",
+"img": "chars/c/b515840a005a.webp"
+}
+],
+"Final Fantasy VII Ever Crisis": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/0029841c9a12.webp"
+},
+{
+"n": "Tifa Lockhart",
+"img": "chars/c/3544596e8760.webp"
+},
+{
+"n": "Aerith Gainsborough",
+"img": "chars/c/5282769d3991.webp"
+},
+{
+"n": "Zack Fair",
+"img": "chars/c/39384fe9b60d.webp"
+},
+{
+"n": "Sephiroth",
+"img": "chars/c/97a8ab53afb9.webp"
+}
+],
+"Dissidia Final Fantasy NT": [
+{
+"n": "Cloud Strife",
+"img": "chars/c/6d0d43c42325.webp"
+},
+{
+"n": "Squall Leonhart",
+"img": "chars/c/5314698fc7f7.webp"
+},
+{
+"n": "Lightning",
+"img": "chars/c/fe17550c8573.webp"
+},
+{
+"n": "Terra Branford",
+"img": "chars/c/1c00e5b30847.webp"
+}
+],
+"Final Fantasy Pixel Remaster (I–VI)": [
+{
+"n": "Cecil Harvey",
+"img": "chars/c/f6fe790e3106.webp"
+},
+{
+"n": "Terra Branford",
+"img": "chars/c/22bf316e1638.webp"
+},
+{
+"n": "Bartz Klauser",
+"img": "chars/c/cbfa91bf78be.webp"
+},
+{
+"n": "Firion",
+"img": "chars/c/d36217801dfe.webp"
+}
+],
+"Halo Infinite": [
+{
+"n": "John-117",
+"img": "chars/c/a19a1b69fea2.webp"
+},
+{
+"n": "The Weapon",
+"img": "chars/c/33c9f4b326d0.webp"
+},
+{
+"n": "Escharum",
+"img": "chars/c/8cc3e24a2cc3.webp"
+},
+{
+"n": "Fernando Esparza",
+"img": "chars/c/842da285cc8f.webp"
+}
 ]
 },
 "errors": [],
 "fundos": {
-"Resident Evil 4": 6,
-"Resident Evil 4 (2005)": 6,
-"Resident Evil 2": 6,
-"Resident Evil 3": 6,
-"Resident Evil Village": 6,
-"Resident Evil 7: Biohazard": 6,
-"Resident Evil Requiem": 6,
-"Resident Evil": 6,
-"Resident Evil 0": 6,
-"Resident Evil 5": 6,
-"Resident Evil 6": 6,
-"Resident Evil Code: Veronica X": 0,
-"Resident Evil Revelations": 6,
-"Resident Evil Revelations 2": 6,
-"God of War": 6,
-"God of War Ragnarök": 6,
-"Ghost of Yōtei": 0,
-"Horizon Forbidden West": 6,
-"Horizon Zero Dawn Remastered": 7,
-"Uncharted: Coleção Legado dos Ladrões": 7,
-"Cyberpunk 2077": 6,
-"The Witcher 3: Wild Hunt": 6,
-"Baldur's Gate 3": 6,
-"Final Fantasy VII Rebirth": 5,
-"Final Fantasy VII Remake Intergrade": 5,
-"Final Fantasy VII": 6,
-"Crisis Core – Final Fantasy VII – Reunion": 5,
-"Final Fantasy VII Ever Crisis": 0,
-"Final Fantasy XVI": 6,
-"Final Fantasy X | X-2 HD Remaster": 6,
-"Final Fantasy XV": 6,
-"Final Fantasy XII: The Zodiac Age": 6,
-"Final Fantasy XIII": 6,
-"Final Fantasy XIII-2": 6,
-"Lightning Returns: Final Fantasy XIII": 6,
-"Final Fantasy IX": 6,
-"Final Fantasy VIII Remastered": 6,
-"Final Fantasy XIV Online": 6,
-"Final Fantasy Type-0 HD": 6,
-"Stranger of Paradise: Final Fantasy Origin": 5,
-"Dissidia Final Fantasy NT": 0,
-"World of Final Fantasy": 6,
-"Final Fantasy Tactics: The Ivalice Chronicles": 6,
-"Final Fantasy Pixel Remaster (I–VI)": 0,
-"Persona 5 Royal": 6,
-"Persona 3 Reload": 6,
-"Persona 4 Golden": 7,
-"Street Fighter 6": 6,
-"Mortal Kombat 1": 6,
-"Devil May Cry 5": 5,
-"Monster Hunter Wilds": 6,
-"Monster Hunter: World": 7,
-"Hollow Knight": 6,
-"Hollow Knight: Silksong": 6,
-"Hades": 6,
-"Hades II": 6,
-"Celeste": 6,
-"Cuphead": 6,
-"Halo Infinite": 0,
-"Halo: The Master Chief Collection": 6,
-"Fortnite": 1,
-"Valorant": 1,
-"Marvel Rivals": 7,
-"Minecraft": 1,
-"Cult of the Lamb": 7,
-"Dead by Daylight": 7,
-"Palworld": 7,
-"Subnautica": 7,
-"Detroit: Become Human": 7,
-"Assassin's Creed Odyssey": 7,
-"Assassin's Creed Shadows": 6,
-"Borderlands 4": 7,
-"Clair Obscur: Expedition 33": 6,
-"Kingdom Come: Deliverance II": 6,
-"Dead Space": 6,
-"Silent Hill 2": 6,
-"Silent Hill f": 6,
-"Star Wars Jedi: Survivor": 6,
-"LEGO Star Wars: A Saga Skywalker": 7,
-"Prince of Persia: The Lost Crown": 5,
-"Sonic X Shadow Generations": 6,
-"Crash Bandicoot N. Sane Trilogy": 7,
-"NieR:Automata": 7,
-"Tales of Arise": 6,
-"Doom Eternal": 6,
-"Ori and the Will of the Wisps": 6,
-"Ratchet & Clank: Em Uma Outra Dimensão": 6
+"Resident Evil Code: Veronica X": 6,
+"Ghost of Yōtei": 6,
+"Final Fantasy VII Ever Crisis": 5,
+"Dissidia Final Fantasy NT": 5,
+"Final Fantasy Pixel Remaster (I–VI)": 6,
+"Halo Infinite": 6
 }
 }
