@@ -265,10 +265,11 @@ function psPricesFromProduct(html) {
   }
   return outp;
 }
-const PS_SLUGS = { "Rainbow Six Siege X": ["tom-clancys-rainbow-six-siege-x", "tom-clancys-rainbow-six-siege"], "RimWorld": ["rimworld-console-edition"], "Dragon Quest XI S": ["dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition"], "NieR Replicant ver.1.22474487139...": ["nier-replicant-ver122474487139"], "Grand Theft Auto: The Trilogy – The Definitive Edition": ["grand-theft-auto-the-trilogy-the-definitive-edition"], "Hades II": ["hades-ii", "hades-2"], "Remnant II": ["remnant-2", "remnant-ii"] };
+const PS_SLUGS = { "Resident Evil 4": ["resident-evil-4", "resident-evil-4-remake"], "Rainbow Six Siege X": ["tom-clancys-rainbow-six-siege-x", "tom-clancys-rainbow-six-siege"], "RimWorld": ["rimworld-console-edition"], "Dragon Quest XI S": ["dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition"], "NieR Replicant ver.1.22474487139...": ["nier-replicant-ver122474487139"], "Grand Theft Auto: The Trilogy – The Definitive Edition": ["grand-theft-auto-the-trilogy-the-definitive-edition"], "Hades II": ["hades-ii", "hades-2"], "Remnant II": ["remnant-2", "remnant-ii"] };
 const ROMAN = { ii: "2", iii: "3", iv: "4", v: "5", vi: "6", vii: "7", viii: "8", ix: "9", x: "10", xi: "11", xii: "12", xiii: "13", xiv: "14", xv: "15", xvi: "16" };
 const decodeHtml = t => String(t || "").replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
-const psClean = n => decodeHtml(n).replace(/\s*\|.*$/, "").replace(/\(PlayStation®?\s*\d\)|PS4\s*(&|e|and)\s*PS5|PS5\s*(&|e|and)\s*PS4|\bPS[45]\b|Edição Padrão|Standard Edition|Edição Standard|™|®/gi, " ").replace(/\s+/g, " ").trim();
+const psClean = n => decodeHtml(n).replace(/\s*\|.*$/, "").replace(/\(PlayStation®?\s*\d\)|PS4\s*(&|＆|e|and)\s*PS5|PS5\s*(&|＆|e|and)\s*PS4|\bPS[45]\b|Edição Padrão|Standard Edition|Edição Standard|™|®/gi, " ").replace(/\(\s*(e|&|＆|and)?\s*\)|\[\s*\]|\s[&＆]\s*$/g, " ").replace(/\s+/g, " ").trim();
+const PS_EXTRA = /deluxe|ultimate|gold|premium|complet[ae]|bundle|pacote|collection|cole[cç][aã]o|beyond the dawn|season pass|passe de temporada|cross-gen|vault|cofre|digital deluxe/i;
 function psIds(html) {
   const ids = [...new Set([...html.matchAll(/[A-Z]{2}\d{4}-[A-Z]{4}\d{5}_00-[A-Z0-9]{16}/g)].map(m => m[0]))];
   const plain = ids.filter(i => !/DELUX|ULTIM|GOLD|PREMIU|COMPLET|BUNDLE|SEASON|PASS|DLC|VIRTUAL|CURRENC|COINS|POINTS|EXPANS|UPGRADE|SOUNDTR|ARTBOOK|DEMO|TRIAL/i.test(i.split("-")[2]));
@@ -278,7 +279,10 @@ async function playstationWeb() {
   const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
   let cache = {}; try { cache = JSON.parse(fs.readFileSync(ROOT + "data/ps-ids.json", "utf8")); } catch (e) {}
   let ok = 0, found = 0, errors = 0; const miss = [], usedIds = {};
-  const matches = (g, name) => Math.max(score(searchName(g), name), score(g.t, name)) >= 70;
+  const matches = (g, name) => {
+    const extra = (name.match(new RegExp(PS_EXTRA.source, "gi")) || []).filter(w => !new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i").test(g.t + " " + (g.w || "")));
+    return !extra.length && Math.max(score(searchName(g), name), score(g.t, name)) >= 74;
+  };
   async function readProduct(id) {
     const url = `https://store.playstation.com/pt-br/product/${id}`;
     const html = await (await get(url, {}, 2)).text();
@@ -303,7 +307,7 @@ async function playstationWeb() {
           const r = await fetch(`https://www.playstation.com/pt-br/games/${sl}/`, { headers: { "user-agent": UA, "accept-language": "pt-BR" } });
           await sleep(400);
           if (!r.ok) continue;
-          for (const id of psIds(await r.text()).slice(0, 5)) {
+          for (const id of psIds(await r.text()).slice(0, 9)) {
             if (tried.has(id) || usedIds[id]) continue; tried.add(id);
             const p = await readProduct(id); await sleep(500);
             if (p.pr && matches(g, p.name)) { hit = { id, ...p }; found++; break outer; }
