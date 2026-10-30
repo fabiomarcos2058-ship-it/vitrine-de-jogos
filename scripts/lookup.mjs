@@ -221,7 +221,8 @@ const missing = games.filter(g => !g.img && !thumbs[g.w || g.t]).map(g => {
   const u = prices.p[slug(g.t)] && prices.p[slug(g.t)].st && prices.p[slug(g.t)].st.url;
   return { t: g.t, w: g.w || g.t, appid: u ? Number(u.split("/app/")[1]) : null };
 });
-const assets = await steamAssets([...new Set([...missing.map(m => m.appid).filter(Boolean), ...newIds])]);
+const assets = await steamAssets([...new Set([...missing.map(m => m.appid).filter(Boolean), ...newIds, ...(input.assets || [])])]);
+result.assetsExtra = Object.fromEntries((input.assets || []).map(a => [a, assets[a] || null]));
 missing.forEach(m => { if (m.appid && assets[m.appid]) m.capsule = assets[m.appid].capsule; });
 result.new.forEach(r => { if (r.steam && assets[r.steam.appid]) Object.assign(r.steam, assets[r.steam.appid]); });
 result.covers = { checked: titles.length, missing };
