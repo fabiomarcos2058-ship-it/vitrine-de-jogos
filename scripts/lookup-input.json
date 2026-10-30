@@ -1,14 +1,61 @@
 {
- "run": 6,
+ "run": 7,
  "new": [
-  "Control Ultimate Edition",
-  "Ori and the Blind Forest: Definitive Edition"
+  "Lords of the Fallen",
+  "Wo Long: Fallen Dynasty",
+  "Rise of the Ronin",
+  "Nioh 3",
+  "Like a Dragon Gaiden: The Man Who Erased His Name",
+  "Like a Dragon: Pirate Yakuza in Hawaii",
+  "Judgment",
+  "Persona 5 Strikers",
+  "Assassin's Creed Origins",
+  "Far Cry 5",
+  "Tom Clancy's The Division 2",
+  "Mafia: Definitive Edition",
+  "Borderlands 3",
+  "Wolfenstein II: The New Colossus",
+  "Dishonored 2",
+  "Shadow of the Tomb Raider",
+  "Marvel's Guardians of the Galaxy",
+  "Marvel's Midnight Suns",
+  "Batman: Arkham City",
+  "Injustice 2",
+  "Naruto x Boruto Ultimate Ninja Storm Connections",
+  "Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles",
+  "One Piece Odyssey",
+  "Need for Speed Heat",
+  "The Crew Motorfest",
+  "Fall Guys",
+  "Rust",
+  "ARK: Survival Ascended",
+  "Don't Starve Together",
+  "Little Nightmares III",
+  "The Outlast Trials",
+  "Alien: Isolation",
+  "The Evil Within 2",
+  "Five Nights at Freddy's: Security Breach",
+  "Risk of Rain 2",
+  "The Binding of Isaac: Rebirth",
+  "Gris",
+  "Frostpunk 2"
  ],
- "assets": [
-  870780,
-  387290,
-  359550,
-  2357570
- ],
- "mobile": []
+ "mobile": [
+  {
+   "q": "Clash of Clans",
+   "play": "com.supercell.clashofclans"
+  },
+  {
+   "q": "Pokémon TCG Pocket",
+   "play": "jp.pokemon.pokemontcgp"
+  },
+  {
+   "q": "Gris",
+   "play": "com.devolverdigital.gris"
+  },
+  {
+   "q": "Alien: Isolation",
+   "play": "com.feralinteractive.alienisolation"
+  }
+ ]
 }
