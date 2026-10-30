@@ -23,7 +23,7 @@ service cloud.firestore {
     }
     match /friendships/{pid} {
       allow get: if member(pid);
-      allow list: if signedIn() && me() in resource.data.users;
+      allow list: if signedIn() && (me() in resource.data.users || resource.data.status == 'accepted');
       allow create: if verified() && member(pid)
         && request.resource.data.users == pid.split('_')
         && ((request.resource.data.status == 'pending' && request.resource.data.from == me())

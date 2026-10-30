@@ -320,6 +320,15 @@ footer { border-top: 1px solid var(--line); background: var(--bg-2); }
 footer .wrap { padding-block: 34px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; }
 footer p { margin: 0 0 8px; color: var(--muted); font-size: 13px; max-width: 72ch; }
 footer .brand { margin-bottom: 10px; }
+footer .ig { margin-top: 14px; display: grid; gap: 6px; }
+footer .ig a { color: var(--fg); text-decoration: none; font-weight: 600; font-size: 14px; }
+footer .ig a:hover { color: var(--brand-text); text-decoration: underline; }
+footer .ig-main { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; }
+footer .ig-main svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; }
+footer .ig-lbl { margin: 4px 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+footer .ig-list { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+footer .ig-list a { min-height: 32px; display: inline-flex; align-items: center; font-weight: 500; color: var(--muted); }
+.icon-btn.on { background: color-mix(in srgb, var(--brand) 16%, var(--surface)); border-color: var(--brand); color: var(--brand-text); }
 @media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; gap: 12px; } }
 
 /* ---------- atalhos da página inicial ---------- */
@@ -716,6 +725,55 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 .img-btns { display: flex; gap: 8px; flex-wrap: wrap; }
 .file-btn { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
 .file-btn:focus-within { outline: 2px solid var(--brand-edge); outline-offset: 2px; }
+.sw-list { display: contents; }
+.gav.pic { background: var(--raised); overflow: hidden; }
+.gav.pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gi-head { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
+.gi-txt { min-width: 0; }
+.gi-txt b { font: 800 20px var(--display); display: block; overflow-wrap: anywhere; }
+.gi-txt p { margin: 4px 0 0; color: var(--fg); font-size: 14.5px; line-height: 1.45; overflow-wrap: anywhere; white-space: pre-wrap; }
+.gi-txt p.empty { color: var(--muted); font-style: italic; }
+.chat-form { align-items: center; }
+.ch-ic { flex-shrink: 0; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; padding: 0; }
+.ch-ic svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ch-ic:hover { background: var(--raised); }
+.rec-bar { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); margin-top: 10px; flex-wrap: wrap; }
+.rec-bar span:nth-child(2) { flex: 1; font-weight: 600; font-variant-numeric: tabular-nums; }
+.rec-dot { width: 12px; height: 12px; border-radius: 50%; background: #FF4D4D; animation: recpulse 1s infinite; }
+@keyframes recpulse { 50% { opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .rec-dot { animation: none; } }
+.bub.has-file { padding: 6px; }
+.bub.has-file .bub-t { display: block; padding: 6px 6px 0; }
+.bub.has-file time { padding: 0 6px; }
+.bub-img { display: block; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 12px; overflow: hidden; max-width: 260px; }
+.bub-img img { display: block; width: 100%; max-height: 320px; object-fit: cover; }
+.bub-audio { display: block; width: 240px; max-width: 100%; height: 44px; }
+.bub-video { display: block; width: 260px; max-width: 100%; max-height: 340px; border-radius: 12px; background: #000; }
+.bub-file { display: flex; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 12px; background: color-mix(in srgb, var(--fg) 8%, transparent); color: inherit; text-decoration: none; min-width: 180px; }
+.bub-file .bf-ic { font-size: 22px; }
+.bub-file b { display: block; font-size: 14px; overflow-wrap: anywhere; }
+.bub-file small { font-size: 12px; opacity: .75; }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+.lightbox::backdrop { background: rgba(0,0,0,.88); }
+.lightbox img { position: absolute; inset: 0; margin: auto; max-width: calc(100vw - 32px); max-height: calc(100vh - 96px); object-fit: contain; border-radius: 12px; }
+.lightbox .lb-x { position: absolute; top: 16px; right: 16px; z-index: 1; }
+#filter-tg { align-items: center; }
+#filter-tg .tg { margin-left: auto; flex-shrink: 0; width: 44px; height: 26px; border-radius: 13px; background: var(--line); position: relative; transition: background .2s; }
+#filter-tg .tg::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s; }
+#filter-tg[aria-checked="true"] .tg { background: var(--brand); }
+#filter-tg[aria-checked="true"] .tg::after { transform: translateX(18px); background: var(--brand-ink); }
+.psince { margin-top: 4px; font-size: 13px; color: var(--muted); }
+.pbio.empty { color: var(--muted); font-style: italic; }
+.pstats.fp-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.fp-stats > div { display: grid; gap: 2px; justify-items: center; padding: 10px 6px; border-radius: 14px; background: color-mix(in srgb, var(--bg) 82%, transparent); border: 1px solid var(--line); }
+.fp-stats > div b { font: 800 18px var(--display); }
+.fp-stats > div small { font-size: 12px; color: var(--muted); }
+.fr-store { display: block; font-size: 11px; color: var(--muted); font-weight: 500; }
+.sw-hex { width: 48px; height: 48px; padding: 0; border: 0; background: none; cursor: pointer; border-radius: 50%; }
+.sw-hex.wide { width: 76px; height: 42px; border-radius: 12px; }
+.sw-hex > span { display: grid; place-items: center; width: 100%; height: 100%; border-radius: inherit; border: 2px solid var(--line); box-sizing: border-box; }
+.sw-hex[aria-pressed="true"] > span { border-color: var(--fg); box-shadow: 0 0 0 3px var(--bg) inset; }
+.sw-hex:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .sw-custom { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--line); padding: 3px; background: transparent; cursor: pointer; }
 .sw-custom > span { display: block; width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red); }
 .sw-custom.on { border-color: var(--fg); }
@@ -744,6 +802,8 @@ body { top: 0 !important; }
 .lang-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 12px; }
 .lang-list button { min-height: 44px; text-align: left; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; cursor: pointer; }
 .lang-list button[aria-pressed="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand-edge); }
+.lang-list button small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.lang-list button[aria-pressed="true"] small { color: inherit; opacity: .75; }
 /* ---------- confirmação de e-mail ---------- */
 .verify { text-align: center; padding: 8px 4px; }
 .verify .vi { width: 72px; height: 72px; margin: 4px auto 14px; border-radius: 22px; display: grid; place-items: center; background: color-mix(in srgb, var(--brand) 16%, transparent); color: var(--brand-text); }
@@ -957,10 +1017,15 @@ body { top: 0 !important; }
         <span class="notranslate" translate="no"><b>zera</b></span>
       </a>
       <p>Compare notas e preços de jogos em todas as lojas, num lugar só.</p>
+      <div class="ig">
+        <a class="ig-main" href="https://www.instagram.com/zera.corporation/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.2 6.8h.01"></path></svg><span class="notranslate" translate="no">@zera.corporation</span></a>
+        <p class="ig-lbl">Criado por</p>
+        <div class="ig-list notranslate" translate="no"><a href="https://www.instagram.com/enzo.frtx/" target="_blank" rel="noopener">@enzo.frtx</a><a href="https://www.instagram.com/fbm.7k/" target="_blank" rel="noopener">@fbm.7k</a><a href="https://www.instagram.com/arthx.777/" target="_blank" rel="noopener">@arthx.777</a><a href="https://www.instagram.com/abreuzxt_/" target="_blank" rel="noopener">@abreuzxt_</a></div>
+      </div>
     </div>
     <div>
       <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
-      <p id="foot-live">Preços da Steam e da Microsoft Store (Xbox) são atualizados automaticamente várias vezes por dia, com promoções. A PlayStation Store não permite consultar promoções automaticamente, então os preços do PlayStation são de referência e o jogo pode estar em promoção na loja. Epic Games, Google Play e App Store também usam preços de referência.</p>
+      <p id="foot-live">Preços da Steam e da Microsoft Store (Xbox) são atualizados automaticamente várias vezes por dia, com promoções. A PlayStation Store não permite consultar promoções automaticamente, então os preços do PlayStation são de referência e o jogo pode estar em promoção na loja. Na Google Play, os preços de vários jogos pagos também são conferidos automaticamente. Epic Games e App Store usam preços de referência, e os jogos grátis da Epic aparecem assim que são liberados.</p>
       <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. O Zera não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
@@ -1316,6 +1381,7 @@ function render() {
   const gb = document.getElementById("guide-btn");
   gb.hidden = !guide; if (guide) gb.dataset.k = guide.k;
   renderWish(state.list === "fav" ? list : null);
+  if (typeof syncTopIcons === "function") syncTopIcons();
 }
 
 // ---------- adicionados recentemente: escolha do período ----------
@@ -1723,6 +1789,7 @@ const shBody = document.getElementById("sh-body");
 let sheetKind = null;
 function openSheet(kind, kicker, title, html) {
   setSheetBg("");
+  if (kind !== "profile-edit" && sheetKind === "profile-edit") applyAccent();
   if (kind !== "login") loginReason = "";
   if (kind !== "chat") stopChat();
   sheetKind = kind;
@@ -1731,12 +1798,19 @@ function openSheet(kind, kicker, title, html) {
   shBody.innerHTML = html;
   if (!sheet.open) sheet.showModal();
   sheet.scrollTop = 0;
+  syncTopIcons();
 }
-function closeSheet() { sheetKind = null; if (sheet.open) sheet.close(); if (/^#(calendario|quiz|guias|comparar|instalar)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); }
+function syncTopIcons() {
+  const chatKinds = ["chats", "chat", "group-new", "group-info", "friends", "friend"];
+  const on = { "cart-btn": sheetKind === "cart", "chat-btn": chatKinds.includes(sheetKind), "fav-top": state.list === "fav" && !sheetKind };
+  for (const [id, v] of Object.entries(on)) { const b = document.getElementById(id); if (b) { b.classList.toggle("on", v); if (id === "fav-top") b.setAttribute("aria-pressed", String(state.list === "fav")); } }
+}
+function closeSheet() { sheetKind = null; syncTopIcons(); if (sheet.open) sheet.close(); if (/^#(calendario|quiz|guias|comparar|instalar)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); }
 document.getElementById("sh-close").addEventListener("click", closeSheet);
 sheet.addEventListener("click", e => { if (e.target === sheet) closeSheet(); });
-sheet.addEventListener("close", () => { sheetKind = null; loginReason = ""; stopChat(); });
+sheet.addEventListener("close", () => { sheetKind = null; loginReason = ""; stopChat(); syncTopIcons(); applyAccent(); });
 document.addEventListener("click", e => {
+  const lb = e.target.closest("[data-lightbox]"); if (lb) { e.preventDefault(); const im = lb.querySelector("img"); if (im) openLightbox(im.src); return; }
   const o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); openDetail(o.dataset.open); return; }
   const t = e.target.closest("[data-tool]"); if (t) { e.preventDefault(); openTool(t.dataset.tool); }
 });
@@ -2011,7 +2085,9 @@ const BANNERS = [
 ];
 // [nome, cor de destaque, cor do texto de destaque no tema claro]
 const ACCENTS = [["Limão", "#C6FF3D", "#4A6600"], ["Coral", "#FF7A59", "#B23A1C"], ["Rosa", "#FF5D8F", "#B0204F"], ["Lilás", "#B57BFF", "#6B2FD1"], ["Azul", "#6E9BFF", "#1F4FC2"], ["Menta", "#3DD6C6", "#0B7A6F"], ["Amarelo", "#FFC83D", "#8A6100"]];
-const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, colorHex: "", bannerHex: "", bgHex: "", bgChar: null };
+const DEFAULT_PROFILE = { name: "", user: "", bio: "", sym: -1, color: 0, banner: 0, plat: "", genre: "", fav: "", accent: 0, accentHex: "", colorHex: "", bannerHex: "", bgHex: "", bgChar: null, recentColors: [] };
+const recentColors = () => (Array.isArray(profile.recentColors) ? profile.recentColors : []).map(validHex).filter(Boolean);
+function addRecent(list, hexes) { const out = []; [...hexes, ...list].forEach(h => { h = validHex(h); if (h && !out.includes(h)) out.push(h); }); return out.slice(0, 10); }
 const safeCharImg = u => typeof u === "string" && /^chars\/(c\/)?[a-z0-9-]+\.webp$/.test(u) ? u : typeof u === "string" && u.length < 600 && /^https:\/\/((upload|thumb)\.wikimedia\.org|static\.wikia\.nocookie\.net)\/[^'"\\\s<>]+$/.test(u) ? u.replace(/\(/g, "%28").replace(/\)/g, "%29") : "";
 let CHARS = null;
 async function loadChars() {
@@ -2195,10 +2271,20 @@ let profile = { ...DEFAULT_PROFILE };
 try { const p = JSON.parse(localStorage.getItem("asfe-perfil") || "null"); if (p && typeof p === "object") profile = { ...DEFAULT_PROFILE, ...p }; } catch (e) {}
 function saveProfile() { try { localStorage.setItem("asfe-perfil", JSON.stringify(profile)); } catch (e) {} scheduleSync(); renderMe(); }
 
-function applyAccent() {
+function applyAccent(over) {
   let el = document.getElementById("accent-style");
-  const a = ACCENTS[profile.accent] || ACCENTS[0];
-  if (!profile.accent) { if (el) el.remove(); return; }
+  const P = over || profile, hx = validHex(P.accentHex);
+  if (hx) {
+    if (!el) { el = document.createElement("style"); el.id = "accent-style"; document.head.appendChild(el); }
+    const ink = hexInk(hx), dark = `color-mix(in srgb, ${hx} 55%, #000)`, lite = `color-mix(in srgb, ${hx} 70%, #fff)`;
+    const L = hex2hsv(hx).v, txtDark = L < 0.55 ? lite : hx;
+    el.textContent = `:root{--brand:${hx};--brand-ink:${ink};--brand-text:${txtDark};--brand-edge:${hx}}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--brand:${hx};--brand-ink:${ink};--brand-text:${dark};--brand-edge:${dark}}}
+:root[data-theme="light"]{--brand:${hx};--brand-ink:${ink};--brand-text:${dark};--brand-edge:${dark}}`;
+    return;
+  }
+  const a = ACCENTS[P.accent] || ACCENTS[0];
+  if (!P.accent) { if (el) el.remove(); return; }
   if (!el) { el = document.createElement("style"); el.id = "accent-style"; document.head.appendChild(el); }
   el.textContent = `:root{--brand:${a[1]};--brand-text:${a[1]}}
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--brand:${a[1]};--brand-text:${a[2]};--brand-edge:${a[2]}}}
@@ -2339,6 +2425,7 @@ function openProfile() {
         <div class="pav">${avatarHTML(92)}</div>
         <div class="pname">${esc(p.name || "Sem nome")}</div>
         ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
+        ${user && sinceText(myCreated()) ? `<div class="psince">${sinceText(myCreated())}</div>` : ""}
         ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
         ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
         ${p.bgChar && safeCharImg(p.bgChar.img) ? `<p class="char-cap">Personagem: <span class="notranslate" translate="no">${esc(p.bgChar.n)}</span></p>` : ""}
@@ -2372,10 +2459,21 @@ function openProfile() {
 }
 function openProfileEdit() {
   const p = profile;
-  const ed = { img: { ...pimg, bg: "" }, colorHex: validHex(p.colorHex), bannerHex: validHex(p.bannerHex), bgHex: validHex(p.bgHex), bgChar: p.bgChar && safeCharImg(p.bgChar.img) ? { ...p.bgChar } : null };
-  const KEY = { color: ["colorHex", "color"], banner: ["bannerHex", "banner"], bg: ["bgHex", "bgp"] };
-  const customHex = k => { const h = ed[KEY[k][0]]; return h && !(k === "bg" && BG_PRESETS.includes(h)) ? h : ""; };
-  const customSw = k => `<button type="button" class="sw-custom${customHex(k) ? " on" : ""}" data-wheel="${k}" aria-expanded="false" aria-controls="wb-${k}" aria-label="Escolher qualquer cor na roda de cores" title="Qualquer cor"><span${customHex(k) ? ` style="background:${customHex(k)}"` : ""}></span></button>`;
+  const ed = { img: { ...pimg, bg: "" }, colorHex: validHex(p.colorHex), bannerHex: validHex(p.bannerHex), bgHex: validHex(p.bgHex), accentHex: validHex(p.accentHex), bgChar: p.bgChar && safeCharImg(p.bgChar.img) ? { ...p.bgChar } : null };
+  const KEY = { color: "colorHex", banner: "bannerHex", bg: "bgHex", accent: "accentHex" };
+  const curHex = k => k === "color" ? ed.colorHex || AV_COLORS[p.color] || AV_COLORS[0] : k === "accent" ? ed.accentHex || (ACCENTS[p.accent] || ACCENTS[0])[1] : ed[KEY[k]];
+  const swBg = (k, h) => k === "banner" ? `linear-gradient(120deg, color-mix(in srgb, ${h} 30%, #0D0F14), ${h})` : k === "bg" ? `linear-gradient(160deg, ${h}, color-mix(in srgb, ${h} 35%, #0D0F14))` : h;
+  const startRecent = recentColors();
+  const swList = k => {
+    const cur = curHex(k), out = [];
+    if (k === "bg") out.push(`<button type="button" class="sw-hex" data-none="bg" aria-pressed="${!ed.bgHex && !ed.bgChar}" aria-label="Sem fundo" title="Sem fundo"><span class="sw-none">∅</span></button>`);
+    if (k === "banner" && !ed.bannerHex) out.push(`<button type="button" class="sw-hex wide" data-preset="banner" aria-pressed="${!ed.img.banner}" aria-label="Capa atual" title="Capa atual"><span style="background:${BANNERS[p.banner] || BANNERS[0]}"></span></button>`);
+    const hexes = cur && !startRecent.includes(cur) ? [cur, ...startRecent] : startRecent;
+    hexes.slice(0, 9).forEach(h => out.push(`<button type="button" class="sw-hex${k === "banner" ? " wide" : ""}" data-set="${k}" data-hex="${h}" aria-pressed="${h === cur && !(k === "banner" && ed.img.banner)}" aria-label="Cor ${h}" title="${h}"><span style="background:${swBg(k, h)}"></span></button>`));
+    return out.join("");
+  };
+  const customSw = k => `<button type="button" class="sw-custom" data-wheel="${k}" aria-expanded="false" aria-controls="wb-${k}" aria-label="Escolher qualquer cor na roda de cores" title="Roda de cores"><span></span></button>`;
+  const colorField = k => `<div class="swatches"><span class="sw-list" id="swl-${k}">${swList(k)}</span>${customSw(k)}</div>${startRecent.length || k !== "color" ? "" : `<div class="help">Não há cores predefinidas: escolha qualquer cor na roda colorida. As que você usar ficam guardadas aqui como recentes.</div>`}<div class="wheel-box" id="wb-${k}" hidden></div>`;
   const games2 = [...games].sort((a, b) => a.t.localeCompare(b.t, "pt-BR"));
   const genres = [...new Set(games.map(g => g.g))].sort((a, b) => a.localeCompare(b, "pt-BR"));
   openSheet("profile-edit", "Personalizar", "Editar perfil", `
@@ -2392,29 +2490,30 @@ function openProfileEdit() {
         <label class="sw sym"><input type="radio" name="sym" value="-1" ${p.sym === -1 ? "checked" : ""}><span title="Inicial do nome">Aa</span></label>
         ${AV_SYMBOLS.map((c, i) => `<label class="sw sym"><input type="radio" name="sym" value="${i}" ${p.sym === i ? "checked" : ""}><span>${c}</span></label>`).join("")}
       </div></div>
-      <div class="field"><span class="lbl">Cor do avatar</span><div class="swatches">${AV_COLORS.map((c, i) => `<label class="sw"><input type="radio" name="color" value="${i}" ${!ed.colorHex && p.color === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}${customSw("color")}</div><div class="wheel-box" id="wb-color" hidden></div></div>
-      <div class="field"><span class="lbl">Capa</span><div class="ban-prev" id="ban-prev" aria-hidden="true"></div><div class="swatches">${BANNERS.map((b, i) => `<label class="sw wide"><input type="radio" name="banner" value="${i}" ${!ed.bannerHex && p.banner === i ? "checked" : ""}><span style="background:${b}"></span></label>`).join("")}${customSw("banner")}</div><div class="wheel-box" id="wb-banner" hidden></div>
+      <div class="field"><span class="lbl">Cor do avatar</span>${colorField("color")}</div>
+      <div class="field"><span class="lbl">Capa</span><div class="ban-prev" id="ban-prev" aria-hidden="true"></div>${colorField("banner")}
         <div class="img-btns" style="margin-top:10px"><label class="btn-ghost sm file-btn">Usar uma imagem<input type="file" accept="image/*" class="sr-only" data-img="banner"></label><button type="button" class="btn-ghost sm" data-rmimg="banner">Remover imagem</button></div></div>
       <div class="field"><label for="pf-fav-q">Jogo favorito</label><input type="hidden" name="fav" value="${esc(p.fav || "")}"><div id="fav-cur"></div><input id="pf-fav-q" type="search" placeholder="Pesquisar um jogo…" autocomplete="off" enterkeyhint="search"><div class="fav-res" id="fav-res" aria-live="polite"></div></div>
       <div class="field"><span class="lbl">Personagem e fundo</span>
         <div class="help" style="margin:0 0 8px">Escolha um personagem do seu jogo favorito para aparecer no seu cartão de perfil, e uma cor para o fundo. Seus amigos também veem.</div>
         <div id="char-box"></div>
-        <span class="lbl" style="margin-top:14px">Cor do fundo</span><div class="swatches"><label class="sw" title="Sem fundo"><input type="radio" name="bgp" value="" ${!ed.bgHex && !ed.bgChar ? "checked" : ""}><span class="sw-none">∅</span></label>${BG_PRESETS.map(c => `<label class="sw"><input type="radio" name="bgp" value="${c}" ${ed.bgHex === c ? "checked" : ""}><span style="background:linear-gradient(160deg, ${c}, color-mix(in srgb, ${c} 35%, #0D0F14))"></span></label>`).join("")}${customSw("bg")}</div><div class="wheel-box" id="wb-bg" hidden></div>
+        <span class="lbl" style="margin-top:14px">Cor do fundo</span>${colorField("bg")}
 </div>
-      <div class="field"><span class="lbl">Cor do app</span><div class="swatches">${ACCENTS.map(([n, c], i) => `<label class="sw" title="${n}"><input type="radio" name="accent" value="${i}" ${p.accent === i ? "checked" : ""}><span style="background:${c}"></span></label>`).join("")}</div><div class="help">Muda a cor de destaque do site inteiro para você.</div></div>
+      <div class="field"><span class="lbl">Cor do site</span>${colorField("accent")}<div class="help">Muda a cor de destaque do site inteiro para você. Toque na roda para escolher qualquer cor.</div></div>
       <fieldset class="field chip-field"><legend class="lbl">Onde você mais joga</legend><div class="chip-opts">${[["", "Não dizer"], ["ps", "PlayStation"], ["xb", "Xbox"], ["pc", "PC"], ["mob", "Celular"]].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="plat" value="${v}" ${(p.plat || "") === v ? "checked" : ""}><span>${l}</span></label>`).join("")}</div></fieldset>
       <fieldset class="field chip-field"><legend class="lbl">Gênero favorito</legend><div class="chip-opts">${[["", "Não dizer"], ...genres.map(gn => [gn, gn])].map(([v, l]) => `<label class="chip-opt"><input type="radio" name="genre" value="${esc(v)}" ${(p.genre || "") === v ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>
       <div id="pf-msg"></div>
       <div class="q-nav" style="margin-top:4px"><button type="button" class="btn-ghost" id="pf-cancel">Cancelar</button><button type="submit" class="btn-brand">Salvar perfil</button></div>
     </form>`);
   const f = document.getElementById("pform");
-  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: Number(f.color.value || p.color || 0), banner: Number(f.banner.value || p.banner || 0), accent: Number(f.accent.value), plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgChar ? "" : ed.bgHex, bgChar: ed.bgChar, img: ed.img });
+  const read = () => ({ ...profile, name: f.name.value.trim(), user: f.user.value.trim().replace(/^@/, "").toLowerCase(), bio: f.bio.value.trim(), sym: Number(f.sym.value), color: p.color || 0, banner: p.banner || 0, accent: p.accent || 0, accentHex: ed.accentHex, plat: f.plat.value, genre: f.genre.value, fav: f.fav.value, colorHex: ed.colorHex, bannerHex: ed.bannerHex, bgHex: ed.bgChar ? "" : ed.bgHex, bgChar: ed.bgChar, img: ed.img });
   const preview = () => {
     const d = read();
     document.getElementById("ban-prev").style.background = bannerCSS(d);
     document.getElementById("pf-av-prev").innerHTML = avatarHTML(64, d);
     f.querySelectorAll("[data-rmimg]").forEach(b => { b.hidden = !ed.img[b.dataset.rmimg]; });
-    f.querySelectorAll("[data-wheel]").forEach(b => { const h = customHex(b.dataset.wheel); b.classList.toggle("on", !!h); b.firstElementChild.style.background = h || ""; });
+    ["color", "banner", "bg", "accent"].forEach(k => { const el = document.getElementById("swl-" + k); if (el) el.innerHTML = swList(k); });
+    applyAccent({ accentHex: ed.accentHex, accent: p.accent });
     document.getElementById("pf-bio-n").textContent = f.bio.value.length;
   };
   async function drawChars() {
@@ -2428,10 +2527,9 @@ function openProfileEdit() {
     box.innerHTML = `<div class="char-grid">${list.map((c, i) => `<button type="button" class="char-opt" data-ci="${i}" aria-pressed="${!!(ed.bgChar && ed.bgChar.img === c.img)}"><img src="${esc(c.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('button').remove()"><span class="notranslate" translate="no">${esc(c.n.replace(/\s*\(.*\)$/, ""))}</span></button>`).join("")}</div>${ed.bgChar ? `<button type="button" class="btn-ghost sm" id="char-rm" style="margin-top:10px">Tirar personagem</button>` : ""}`;
     box.querySelectorAll("[data-ci]").forEach(b => b.addEventListener("click", () => {
       const c = list[Number(b.dataset.ci)]; ed.bgChar = { g: g.t, n: c.n.replace(/\s*\(.*\)$/, ""), img: c.img }; ed.bgHex = "";
-      f.querySelectorAll('input[name="bgp"]').forEach(r => { r.checked = false; });
       drawChars(); preview();
     }));
-    const rm = document.getElementById("char-rm"); if (rm) rm.addEventListener("click", () => { ed.bgChar = null; const none = f.querySelector('input[name="bgp"][value=""]'); if (none && !ed.bgHex) none.checked = true; drawChars(); preview(); });
+    const rm = document.getElementById("char-rm"); if (rm) rm.addEventListener("click", () => { ed.bgChar = null; drawChars(); preview(); });
   }
   const favCur = () => {
     drawChars();
@@ -2453,10 +2551,7 @@ function openProfileEdit() {
   f.addEventListener("input", preview);
   f.addEventListener("change", async e => {
     const t = e.target;
-    if (t.name === "color") ed.colorHex = "";
-    else if (t.name === "banner") ed.bannerHex = "";
-    else if (t.name === "bgp") { ed.bgHex = t.value; ed.bgChar = null; drawChars(); }
-    else if (t.dataset && t.dataset.img) {
+    if (t.dataset && t.dataset.img) {
       const k = t.dataset.img, file = t.files && t.files[0], msg = document.getElementById("pf-msg");
       t.value = "";
       if (!file) return;
@@ -2472,23 +2567,30 @@ function openProfileEdit() {
   f.addEventListener("click", e => {
     const rm = e.target.closest("[data-rmimg]");
     if (rm) { ed.img[rm.dataset.rmimg] = ""; preview(); return; }
+    const sw = e.target.closest("[data-set],[data-none],[data-preset]");
+    if (sw) {
+      if (sw.dataset.none) { ed.bgHex = ""; ed.bgChar = null; drawChars(); }
+      else if (sw.dataset.preset) { ed.bannerHex = ""; ed.img.banner = ""; }
+      else { const k = sw.dataset.set; ed[KEY[k]] = sw.dataset.hex; if (k === "bg") { ed.bgChar = null; drawChars(); } if (k === "banner") ed.img.banner = ""; }
+      preview(); return;
+    }
     const w = e.target.closest("[data-wheel]"); if (!w) return;
     const k = w.dataset.wheel, box = document.getElementById("wb-" + k), open = w.getAttribute("aria-expanded") === "true";
     f.querySelectorAll("[data-wheel]").forEach(b => { b.setAttribute("aria-expanded", "false"); document.getElementById("wb-" + b.dataset.wheel).hidden = true; });
     if (open) return;
     w.setAttribute("aria-expanded", "true"); box.hidden = false;
-    const [hk, rn] = KEY[k];
-    const start = ed[hk] || (k === "color" ? AV_COLORS[p.color] : k === "banner" ? "#6E9BFF" : "#7B5CFF");
-    mountWheel(box, start, hex => { ed[hk] = hex; if (k === "bg") { ed.bgChar = null; drawChars(); } f.querySelectorAll(`input[name="${rn}"]`).forEach(r => { r.checked = false; }); preview(); });
+    const hk = KEY[k];
+    const start = curHex(k) || (k === "banner" ? "#6E9BFF" : "#7B5CFF");
+    mountWheel(box, start, hex => { ed[hk] = hex; if (k === "bg") { ed.bgChar = null; drawChars(); } if (k === "banner") ed.img.banner = ""; preview(); });
   });
   preview();
-  document.getElementById("pf-cancel").addEventListener("click", openProfile);
+  document.getElementById("pf-cancel").addEventListener("click", () => { applyAccent(); openProfile(); });
   f.addEventListener("submit", e => {
     e.preventDefault();
     const d = read(); const msg = document.getElementById("pf-msg");
     if (!d.name) { msg.innerHTML = `<div class="msg err">Escreva um nome para o perfil.</div>`; f.name.focus(); return; }
     if (d.user && !/^[a-z0-9_.]{3,20}$/.test(d.user)) { msg.innerHTML = `<div class="msg err">O nome de usuário precisa ter de 3 a 20 caracteres: letras sem acento, números, ponto ou _.</div>`; f.user.focus(); return; }
-    const finish = () => { const { img, ...prof } = d; profile = prof; saveProfile(); pimg = { ...img }; savePimg(); applyAccent(); renderMe(); toast("Perfil salvo"); openProfile(); };
+    const finish = () => { const { img, ...prof } = d; prof.recentColors = addRecent(recentColors(), [d.accentHex, d.bgHex, d.bannerHex, d.colorHex].filter((h, i) => h && h !== [p.accentHex, p.bgHex, p.bannerHex, p.colorHex][i])); profile = prof; saveProfile(); pimg = { ...img }; savePimg(); applyAccent(); renderMe(); toast("Perfil salvo"); openProfile(); };
     if (user && fb && d.user && d.user !== profile.user) {
       claimHandle(d.user, profile.user).then(finish).catch(err => {
         if (err && err.message === "taken") { msg.innerHTML = `<div class="msg err">O @${esc(d.user)} já é de outra pessoa. Escolha outro.</div>`; f.user.focus(); }
@@ -2711,7 +2813,7 @@ function renderSocialBadges() {
 function publishProfile() {
   if (!acct() || !fb) return;
   const P = profile;
-  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), bgChar: P.bgChar && safeCharImg(P.bgChar.img) ? { g: String(P.bgChar.g || "").slice(0, 80), n: String(P.bgChar.n || "").slice(0, 60), img: P.bgChar.img } : null, plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), friends: social.fr.filter(f => f.status === "accepted").length, updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
+  fb.F.setDoc(fb.F.doc(fb.db, "profiles", user.uid), { name: P.name || "", user: P.user || "", bio: P.bio || "", sym: P.sym, color: P.color, banner: P.banner, colorHex: validHex(P.colorHex), bannerHex: validHex(P.bannerHex), bgHex: validHex(P.bgHex), bgChar: P.bgChar && safeCharImg(P.bgChar.img) ? { g: String(P.bgChar.g || "").slice(0, 80), n: String(P.bgChar.n || "").slice(0, 60), img: P.bgChar.img } : null, plat: P.plat || "", genre: P.genre || "", fav: P.fav || "", favs: [...favs].slice(0, 60), cart: cart.slice(0, 40).map(it => ({ id: it.id, k: it.k })), created: myCreated(), ...(social.ready ? { friends: social.fr.filter(f => f.status === "accepted").length } : {}), updatedAt: fb.F.serverTimestamp() }, { merge: true }).catch(() => {});
 }
 async function claimHandle(h, old) {
   const F = fb.F, ref = F.doc(fb.db, "handles", h);
@@ -2760,7 +2862,7 @@ function startSocial() {
       const d = ch.doc.data({ serverTimestamps: "estimate" }); const old = social.chats[ch.doc.id];
       social.chats[ch.doc.id] = d;
       if (social.chatsLoaded && d.lastFrom && d.lastFrom !== me && (!old || tms(d.lastAt) > tms(old.lastAt)) && social.chatWith !== ch.doc.id) {
-        loadProfiles([d.lastFrom]).then(() => toast(`💬 ${pname(d.lastFrom)}: ${d.lastText}`));
+        loadProfiles([d.lastFrom]).then(() => toast(`💬 ${pname(d.lastFrom)}: ${cleanText(d.lastText)}`));
       }
     });
     social.chatsLoaded = true;
@@ -2772,7 +2874,7 @@ function startSocial() {
       if (ch.type === "removed") { delete social.groups[id]; return; }
       const d = ch.doc.data({ serverTimestamps: "estimate" }), old = social.groups[id];
       social.groups[id] = d;
-      if (social.groupsLoaded && d.lastFrom && d.lastFrom !== me && (!old || tms(d.lastAt) > tms(old.lastAt)) && social.chatWith !== "g_" + id) loadProfiles([d.lastFrom]).then(() => toast(`💬 ${d.name} · ${pname(d.lastFrom)}: ${d.lastText}`));
+      if (social.groupsLoaded && d.lastFrom && d.lastFrom !== me && (!old || tms(d.lastAt) > tms(old.lastAt)) && social.chatWith !== "g_" + id) loadProfiles([d.lastFrom]).then(() => toast(`💬 ${d.name} · ${pname(d.lastFrom)}: ${cleanText(d.lastText)}`));
     });
     social.groupsLoaded = true;
     loadProfiles(Object.values(social.groups).flatMap(g => g.members || [])).then(refreshSocial);
@@ -2796,7 +2898,7 @@ function openFriends() {
       : `<form id="fr-handle" class="form" novalidate style="margin-bottom:14px"><div class="field"><label for="fr-h">Primeiro, escolha seu nome de usuário</label><div class="fr-inline"><span class="at" aria-hidden="true">@</span><input id="fr-h" maxlength="20" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="ex.: fabio_gamer"><button class="btn-brand sm" type="submit">Salvar</button></div><div class="help">É assim que seus amigos vão te encontrar. Letras sem acento, números, ponto ou _.</div></div><div id="fr-hmsg"></div></form>`}
     <form id="fr-add" class="form" novalidate><div class="field"><label for="fr-q">Adicionar amigo pelo nome de usuário</label><div class="fr-inline"><span class="at" aria-hidden="true">@</span><input id="fr-q" maxlength="21" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="usuário do seu amigo"><button class="btn-brand sm" type="submit">Enviar pedido</button></div></div><div id="fr-msg"></div></form>
     <div id="fr-lists"></div>
-    <p class="fr-safe">Seu nome, @, bio, avatar e favoritos ficam visíveis para quem tem conta no Zera. Converse só com quem você conhece e nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
+    <p class="fr-safe">Seu nome, @, bio, avatar, favoritos, carrinho e a data de criação da conta ficam visíveis para quem tem conta no Zera. Converse só com quem você conhece e nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
   const lists = document.getElementById("fr-lists");
   lists.addEventListener("click", onFriendAction);
   const cp = document.getElementById("fr-copy");
@@ -2836,7 +2938,7 @@ function renderFriendLists() {
   const blk = social.fr.filter(f => f.status === "blocked");
   let h = "";
   if (inc.length) h += `<div class="fr-sec"><h4>Pedidos de amizade</h4>${inc.map(f => friendRow(f, at(otherOf(f)) || "Quer ser seu amigo", `<button type="button" class="fr-btn ok" data-facc="${f.id}">Aceitar</button><button type="button" class="fr-btn" data-fdel="${f.id}" aria-label="Recusar">Recusar</button>`)).join("")}</div>`;
-  h += `<div class="fr-sec"><h4>Amigos${acc.length ? " · " + acc.length : ""}</h4>${acc.length ? acc.map(f => { const c = social.chats[f.id], un = isUnread(f.id); return friendRow(f, c && c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(c.lastText) : at(otherOf(f)) || "Toque para conversar", `<button type="button" class="fr-btn" data-fchat="${otherOf(f)}">Conversar</button>`, un); }).join("") : `<div class="fr-empty">Você ainda não tem amigos aqui. Mande seu @ para alguém ou adicione pelo @ da pessoa.</div>`}</div>`;
+  h += `<div class="fr-sec"><h4>Amigos${acc.length ? " · " + acc.length : ""}</h4>${acc.length ? acc.map(f => { const c = social.chats[f.id], un = isUnread(f.id); return friendRow(f, c && c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(cleanText(c.lastText)) : at(otherOf(f)) || "Toque para conversar", `<button type="button" class="fr-btn" data-fchat="${otherOf(f)}">Conversar</button>`, un); }).join("") : `<div class="fr-empty">Você ainda não tem amigos aqui. Mande seu @ para alguém ou adicione pelo @ da pessoa.</div>`}</div>`;
   if (out.length) h += `<div class="fr-sec"><h4>Pedidos enviados</h4>${out.map(f => friendRow(f, "Aguardando resposta", `<button type="button" class="fr-btn" data-fdel="${f.id}">Cancelar</button>`)).join("")}</div>`;
   if (blk.length) h += `<div class="fr-sec"><h4>Bloqueados</h4>${blk.map(f => friendRow(f, "Bloqueado", `<button type="button" class="fr-btn" data-fdel="${f.id}">Desbloquear</button>`)).join("")}</div>`;
   box.innerHTML = h;
@@ -2872,6 +2974,12 @@ async function sendFriendRequest(raw) {
   await F.setDoc(ref, { users: pid.split("_"), from: me, to: other, status: "pending", createdAt: F.serverTimestamp() });
   return `Pedido enviado para @${h}.`;
 }
+function sinceText(v) {
+  const d = v ? new Date(v) : null;
+  if (!d || isNaN(d)) return "";
+  return "Membro desde " + d.toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" });
+}
+const myCreated = () => (user && user.metadata && user.metadata.creationTime) ? new Date(user.metadata.creationTime).toISOString() : "";
 function fmtWhen(ms) {
   const d = new Date(ms), now = new Date();
   const hm = d.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
@@ -2890,7 +2998,7 @@ function openChat(uid) {
   openSheet("chat", "Conversa", p.name || "Amigo", `
     <div class="chat-top"><button type="button" class="fr-who" id="ch-prof">${avatarHTML(40, p)}<span><b>${esc(p.name || "Amigo")}</b><small>${p.user ? "@" + esc(p.user) + " · ver perfil" : "Ver perfil"}</small></span></button><button type="button" class="fr-btn" id="ch-back">← Conversas</button></div>
     <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Mensagens"><p class="lede-sm" style="margin:auto">Carregando mensagens…</p></div>
-    <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">Mensagem para ${esc(p.name || "seu amigo")}</label><input id="chat-in" maxlength="1000" placeholder="Escreva uma mensagem" enterkeyhint="send"><button class="btn-brand sm" type="submit">Enviar</button></form>
+    ${chatFormHTML("Mensagem para " + esc(p.name || "seu amigo"), "Mensagem")}
     <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
   social.chatWith = pid;
   document.getElementById("ch-back").addEventListener("click", () => openChats());
@@ -2902,19 +3010,13 @@ function openChat(uid) {
     if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Diga oi para ${esc(p.name || "seu amigo")}! 👋</p>`; markRead(pid); return; }
     const nearBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
     let last = "";
-    box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; last = day; return sep + `<div class="bub${m.from === me ? " me" : ""}">${esc(m.text)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+    box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; last = day; return sep + `<div class="bub${m.from === me ? " me" : ""}${m.file ? " has-file" : ""}">${bubbleBody(m)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
     if (nearBottom || snap.docChanges().some(c => c.type === "added")) box.scrollTop = box.scrollHeight;
     markRead(pid);
   }, err => { box.innerHTML = `<div class="msg info" style="margin:auto">${err && err.code === "permission-denied" ? "Só dá para conversar com amigos. Se vocês acabaram de virar amigos, tente de novo em instantes." : "Não foi possível carregar as mensagens agora."}</div>`; });
-  const form = document.getElementById("chat-form"), inp = document.getElementById("chat-in");
-  form.addEventListener("submit", async e => {
-    e.preventDefault();
-    const text = inp.value.trim(); if (!text) return;
-    inp.value = ""; inp.focus();
-    try {
-      await F.addDoc(F.collection(fb.db, "chats", pid, "messages"), { from: me, text, at: F.serverTimestamp() });
-      await F.setDoc(F.doc(fb.db, "chats", pid), { users: pid.split("_"), lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() }, { merge: true });
-    } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+  bindChatForm(async ({ text, file }) => {
+    await F.addDoc(F.collection(fb.db, "chats", pid, "messages"), { from: me, text, ...(file ? { file } : {}), at: F.serverTimestamp() });
+    await F.setDoc(F.doc(fb.db, "chats", pid), { users: pid.split("_"), lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() }, { merge: true });
   });
 }
 async function openFriendProfile(uid) {
@@ -2924,8 +3026,11 @@ async function openFriendProfile(uid) {
   const f = social.fr.find(x => x.id === pid);
   const fg = p.fav && byId[p.fav];
   const chips = [p.plat && "Joga no " + ({ ps: "PlayStation", xb: "Xbox", pc: "PC", mob: "Celular" }[p.plat] || p.plat), p.genre && "Curte " + p.genre].filter(Boolean);
-  const fv = (raw.favs || []).map(id => byId[id]).filter(Boolean);
+  const fv = (Array.isArray(raw.favs) ? raw.favs : []).map(id => byId[id]).filter(Boolean);
+  const cv = (Array.isArray(raw.cart) ? raw.cart : []).filter(it => it && byId[it.id]).filter((it, i, a) => a.findIndex(x => x.id === it.id) === i).map(it => ({ g: byId[it.id], k: it.k }));
   const first = esc((p.name || "Jogador").split(" ")[0]);
+  const nFr = Number(raw.friends) || 0;
+  const since = sinceText(raw.created);
   openSheet("friend", "Perfil", p.name || "Jogador", `
     <div class="pcard">
       <div class="pbanner" style="background:${bannerCSS(p)}"></div>${charHTML(p)}
@@ -2933,16 +3038,24 @@ async function openFriendProfile(uid) {
         <div class="pav">${avatarHTML(92, p)}</div>
         <div class="pname">${esc(p.name || "Jogador")}</div>
         ${p.user ? `<div class="puser">@${esc(p.user)}</div>` : ""}
-        ${p.bio ? `<p class="pbio">${esc(p.bio)}</p>` : ""}
+        ${since ? `<div class="psince">${since}</div>` : ""}
+        <p class="pbio${p.bio ? "" : " empty"}">${p.bio ? esc(p.bio) : `${first} ainda não escreveu uma bio.`}</p>
         ${chips.length || fg ? `<div class="pchips">${chips.map(c => `<span>${esc(c)}</span>`).join("")}${fg ? `<button type="button" data-open="${fg.id}">♥ ${esc(fg.t)}</button>` : ""}</div>` : ""}
-        <div class="pchips" style="margin-top:6px"><span>${Number(raw.friends) || 0} ${Number(raw.friends) === 1 ? "amigo" : "amigos"}</span>${fv.length ? `<span>${fv.length} favoritos</span>` : ""}</div>
+        <div class="pstats fp-stats">
+          <div><b id="fp-nfr">${nFr}</b><small>${nFr === 1 ? "Amigo" : "Amigos"}</small></div>
+          <div><b>${fv.length}</b><small>Favoritos</small></div>
+          <div><b>${cv.length}</b><small>No carrinho</small></div>
+        </div>
         <div class="pactions">${f && f.status === "accepted" ? `<button type="button" class="btn-brand" id="fp-chat">Conversar</button>` : f && f.status === "pending" && f.to === me ? `<button type="button" class="btn-brand" id="fp-acc">Aceitar pedido</button>` : ""}<button type="button" class="btn-ghost sm" id="fp-back">← Amigos</button></div>
       </div>
     </div>
-    ${fv.length ? `<div class="fr-sec"><h4>Favoritos de ${first} · ${fv.length}</h4><div class="fr-favs">${fv.slice(0, 18).map(g => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}</span></button>`).join("")}</div></div>` : ""}
+    <div class="fr-sec"><h4>Favoritos de ${first}${fv.length ? " · " + fv.length : ""}</h4>${fv.length ? `<div class="fr-favs">${fv.slice(0, 24).map(g => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}</span></button>`).join("")}</div>` : `<div class="fr-empty">Nenhum favorito ainda.</div>`}</div>
+    <div class="fr-sec"><h4>Carrinho de ${first}${cv.length ? " · " + cv.length : ""}</h4>${cv.length ? `<div class="fr-favs">${cv.slice(0, 24).map(({ g, k }) => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}<small class="fr-store">${esc(storeLabel(k))}</small></span></button>`).join("")}</div>` : `<div class="fr-empty">O carrinho está vazio.</div>`}</div>
     ${f ? `<div class="pactions" style="margin-top:22px">${f.status === "accepted" ? `<button type="button" class="btn-ghost sm" id="fp-rem">Desfazer amizade</button>` : ""}${f.status !== "blocked" ? `<button type="button" class="btn-ghost sm danger" id="fp-block">Bloquear</button>` : ""}</div><div id="fp-msg"></div>` : ""}`);
   setSheetBg(bgCSS(p));
   const F = fb.F, ref = F.doc(fb.db, "friendships", pid);
+  if (F.getCountFromServer) F.getCountFromServer(F.query(F.collection(fb.db, "friendships"), F.where("users", "array-contains", uid), F.where("status", "==", "accepted")))
+    .then(c => { const n = c.data().count, el = document.getElementById("fp-nfr"); if (el && sheetKind === "friend") { el.textContent = n; el.nextElementSibling.textContent = n === 1 ? "Amigo" : "Amigos"; } }).catch(() => {});
   const on = (id, fn) => { const b = document.getElementById(id); if (b) b.addEventListener("click", fn); };
   on("fp-back", openFriends);
   on("fp-chat", () => openChat(uid));
@@ -2992,6 +3105,15 @@ const LIST_ICONS = { fav: "heart", free: "gift", under100: "tag", top90: "star",
 function getCookie(n) { const m = document.cookie.match(new RegExp("(?:^|; )" + n + "=([^;]*)")); return m ? decodeURIComponent(m[1]) : ""; }
 function curLang() { const m = getCookie("googtrans").match(/^\/[^/]+\/(.+)$/); return m && m[1] !== "pt" ? m[1] : "pt"; }
 function langName(code) { try { const n = new Intl.DisplayNames(["pt-BR"], { type: "language" }).of(code); return n.charAt(0).toUpperCase() + n.slice(1); } catch (e) { return code; } }
+const LANG_FIX = { iw: "he", jw: "jv", "zh-CN": "zh-Hans", "zh-TW": "zh-Hant", "mni-Mtei": "mni", "ckb": "ckb" };
+function nativeName(code, fallback) {
+  const c = LANG_FIX[code] || code;
+  try {
+    const n = new Intl.DisplayNames([c], { type: "language" }).of(c);
+    if (n && n.toLowerCase() !== c.toLowerCase()) return n.charAt(0).toLocaleUpperCase(c) + n.slice(1);
+  } catch (e) {}
+  return fallback || langName(code);
+}
 let gtLoading = null;
 function loadTranslate() {
   if (gtLoading) return gtLoading;
@@ -3020,26 +3142,27 @@ async function openLang() {
   const cur = curLang();
   openSheet("lang", "Aparência", "Idioma do site", `
     <div class="field"><label for="lang-q">Buscar idioma</label><input id="lang-q" type="search" placeholder="Ex.: inglês, espanhol, japonês" autocomplete="off"></div>
-    <div class="lang-list" id="lang-list"><button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button><p class="lede-sm" style="grid-column:1/-1">Carregando idiomas…</p></div>
+    <div class="lang-list" id="lang-list"><button type="button" data-lang="pt" aria-pressed="${cur === "pt"}" class="notranslate" translate="no">Português <small>original</small></button><p class="lede-sm" style="grid-column:1/-1">Carregando idiomas…</p></div>
     <p class="fr-safe">A tradução é automática, feita pelo Google Tradutor, e pode ter alguns erros. Nomes de jogos e preços continuam iguais.</p>`);
   const list = document.getElementById("lang-list"), q = document.getElementById("lang-q");
   list.addEventListener("click", e => { const b = e.target.closest("[data-lang]"); if (b) setLang(b.dataset.lang); });
   let langs = [];
   const draw = () => {
     const t = q.value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-    const pick = langs.filter(([, n]) => !t || n.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").includes(t));
-    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button>` + pick.map(([c, n]) => `<button type="button" data-lang="${esc(c)}" aria-pressed="${cur === c}">${esc(n)}</button>`).join("");
+    const nz = x => x.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const pick = langs.filter(([, n, nat]) => !t || nz(n).includes(t) || nz(nat).includes(t));
+    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}" class="notranslate" translate="no">Português <small>original</small></button>` + pick.map(([c, n, nat]) => `<button type="button" data-lang="${esc(c)}" aria-pressed="${cur === c}" class="notranslate" translate="no" lang="${esc(LANG_FIX[c] || c)}">${esc(nat)}${nat !== n ? `<small lang="pt-BR">${esc(n)}</small>` : ""}</button>`).join("");
   };
   q.addEventListener("input", draw);
   try {
     const c = await loadTranslate();
-    langs = [...c.options].filter(o => o.value && o.value !== "pt").map(o => [o.value, o.textContent.trim()]).sort((a, b) => a[1].localeCompare(b[1], "pt-BR"));
+    langs = [...c.options].filter(o => o.value && o.value !== "pt").map(o => { const n = o.textContent.trim(); return [o.value, n, nativeName(o.value, n)]; }).sort((a, b) => a[1].localeCompare(b[1], "pt-BR"));
     draw();
   } catch (e) {
     // plano B: abre o site traduzido pelo próprio Google Tradutor
     const host = location.hostname.replace(/-/g, "--").replace(/\./g, "-");
     const FALLBACK = ["en", "es", "fr", "de", "it", "ja", "ko", "zh-CN", "ru", "ar", "hi", "tr", "pl", "nl", "id", "vi", "uk", "sv"];
-    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}">Português (original)</button>` + FALLBACK.map(c => `<a class="btn-ghost" style="display:flex;align-items:center;text-decoration:none;color:var(--fg);border-radius:14px;min-height:44px" href="https://${host}.translate.goog${location.pathname}?_x_tr_sl=pt&_x_tr_tl=${c}&_x_tr_hl=${c}" target="_blank" rel="noopener">${esc(langName(c))} ↗</a>`).join("") + `<p class="lede-sm" style="grid-column:1/-1">A tradução dentro do site não carregou agora, então estes links abrem o Zera traduzido pelo Google Tradutor numa nova aba (lá não dá para entrar na conta).</p>`;
+    list.innerHTML = `<button type="button" data-lang="pt" aria-pressed="${cur === "pt"}" class="notranslate" translate="no">Português <small>original</small></button>` + FALLBACK.map(c => `<a class="btn-ghost notranslate" translate="no" lang="${esc(LANG_FIX[c] || c)}" style="display:flex;align-items:center;text-decoration:none;color:var(--fg);border-radius:14px;min-height:44px" href="https://${host}.translate.goog${location.pathname}?_x_tr_sl=pt&_x_tr_tl=${c}&_x_tr_hl=${c}" target="_blank" rel="noopener">${esc(nativeName(c))} ↗</a>`).join("") + `<p class="lede-sm" style="grid-column:1/-1">A tradução dentro do site não carregou agora, então estes links abrem o Zera traduzido pelo Google Tradutor numa nova aba (lá não dá para entrar na conta).</p>`;
   }
 }
 if (curLang() !== "pt") loadTranslate().catch(() => {});
@@ -3098,9 +3221,120 @@ function openVerify(justSent) {
 }
 document.addEventListener("visibilitychange", () => { if (!document.hidden && user && !user.emailVerified && fb) checkVerified(true); });
 
+// ---------- filtro de palavrões (ligado por padrão; dá para desligar no menu) ----------
+const BAD_RX = /^(porra|porr[ao]|caralh\w*|krl|crl|carai|caraio|merd\w*|put[ao]s?|putaria|putinh\w*|fod[aeio]\w*|fud\w*|fdp|vsf|vtnc|tnc|pqp|pnc|bucet\w*|bocet\w*|cu|cus|cuzao|cuzinho|arrombad\w*|viad[ao]s?|viadinho|bost\w*|cacete|piroc\w*|pirok\w*|otari\w*|babac\w*|corn[oa]s?|vagabund\w*|xoxot\w*|xereca|punhet\w*|retardad\w*|desgracad\w*|escrot\w*|fuck\w*|fck|shit\w*|bitch\w*|asshole\w*|dick|pussy|cunt\w*|nigg\w*|bastard\w*|motherfuck\w*|stfu)$/;
+const chatFilterOn = () => profile.chatFilter !== false;
+function cleanText(t) {
+  if (!t || !chatFilterOn()) return t || "";
+  return String(t).replace(/[\p{L}\p{N}]+/gu, w => BAD_RX.test(w.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")) ? w[0] + "*".repeat(Math.max(2, w.length - 1)) : w);
+}
+// ---------- arquivos no chat (fotos, áudios, vídeos e outros, guardados na própria mensagem) ----------
+const FILE_MAX = 700 * 1024;
+const FILE_LABEL = { image: "📷 Foto", audio: "🎤 Áudio", video: "🎬 Vídeo", file: "📎 Arquivo" };
+const kindOf = type => /^image\//.test(type) ? "image" : /^audio\//.test(type) ? "audio" : /^video\//.test(type) ? "video" : "file";
+const readDataURL = blob => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = () => rej(new Error("Não deu para ler esse arquivo.")); r.readAsDataURL(blob); });
+async function prepareFile(file) {
+  const type = file.type || "application/octet-stream", kind = kindOf(type), name = String(file.name || FILE_LABEL[kind]).slice(0, 80);
+  if (kind === "image" && type !== "image/gif") {
+    const { img, url } = await loadImageFile(file);
+    try {
+      const k = Math.min(1, 1280 / Math.max(img.naturalWidth, img.naturalHeight));
+      const c = document.createElement("canvas"); c.width = Math.round(img.naturalWidth * k); c.height = Math.round(img.naturalHeight * k);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      let q = 0.82, out = c.toDataURL("image/webp", q); const fmt = out.startsWith("data:image/webp") ? "image/webp" : "image/jpeg";
+      if (fmt === "image/jpeg") out = c.toDataURL(fmt, q);
+      while (out.length > 480000 && q > 0.35) { q -= 0.1; out = c.toDataURL(fmt, q); }
+      if (out.length > 600000) throw new Error("Não deu para deixar essa foto leve o bastante. Tente outra.");
+      return { kind, name, type: fmt, size: Math.round(out.length * 0.75), data: out };
+    } finally { URL.revokeObjectURL(url); }
+  }
+  if (file.size > FILE_MAX) throw new Error(kind === "video" ? "Esse vídeo é grande demais. Por enquanto dá para mandar vídeos de até 700 KB (alguns segundos)." : "Esse arquivo é grande demais. O limite é 700 KB.");
+  const data = await readDataURL(file);
+  return { kind, name, type, size: file.size, data };
+}
+const SAFE_DATA = { image: /^data:image\/(png|jpeg|jpg|webp|gif);base64,[A-Za-z0-9+/=]+$/, audio: /^data:audio\/[\w.+-]+(;[\w.+=-]+)*;base64,[A-Za-z0-9+/=]+$/, video: /^data:video\/[\w.+-]+(;[\w.+=-]+)*;base64,[A-Za-z0-9+/=]+$/ };
+function fileHTML(f) {
+  if (!f || typeof f.data !== "string" || f.data.length > 1100000) return "";
+  const kind = ["image", "audio", "video"].includes(f.kind) ? f.kind : "file";
+  if (kind !== "file" && !SAFE_DATA[kind].test(f.data)) return "";
+  if (kind === "image") return `<button type="button" class="bub-img" data-lightbox><img src="${f.data}" alt="Foto enviada" loading="lazy"></button>`;
+  if (kind === "audio") return `<audio class="bub-audio" controls preload="metadata" src="${f.data}"></audio>`;
+  if (kind === "video") return `<video class="bub-video" controls preload="metadata" playsinline src="${f.data}"></video>`;
+  if (!/^data:[^,]*;base64,[A-Za-z0-9+/=]+$/.test(f.data)) return "";
+  const href = f.data.replace(/^data:[^;,]*/, "data:application/octet-stream"), kb = Math.max(1, Math.round((Number(f.size) || 0) / 1024));
+  return `<a class="bub-file" href="${href}" download="${esc(f.name || "arquivo")}"><span class="bf-ic" aria-hidden="true">📎</span><span><b>${esc(f.name || "Arquivo")}</b><small>${kb} KB · baixar</small></span></a>`;
+}
+function bubbleBody(m) {
+  const f = m.file ? fileHTML(m.file) : "";
+  const showText = !(m.file && m.file.auto) && m.text;
+  return f + (showText ? `<span class="bub-t">${esc(cleanText(m.text))}</span>` : (m.file && !f ? `<span class="bub-t">${esc(m.text || "Arquivo")}</span>` : ""));
+}
+function openLightbox(src) {
+  const d = document.createElement("dialog"); d.className = "lightbox"; d.setAttribute("aria-label", "Foto");
+  d.innerHTML = `<button type="button" class="icon-btn lb-x" aria-label="Fechar">✕</button><img src="${src}" alt="">`;
+  document.body.appendChild(d); d.showModal();
+  const close = () => { if (d.open) d.close(); d.remove(); };
+  d.addEventListener("click", e => { if (e.target === d || e.target.closest(".lb-x")) close(); });
+  d.addEventListener("cancel", e => { e.preventDefault(); close(); });
+}
+const ATT_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5 12 20a5.5 5.5 0 0 1-7.8-7.8l8.9-8.9a3.7 3.7 0 0 1 5.2 5.2l-8.9 8.9a1.8 1.8 0 0 1-2.6-2.6l8.2-8.2"/></svg>`;
+const MIC_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>`;
+function chatFormHTML(label, ph) {
+  return `<div class="rec-bar" id="rec-bar" hidden><span class="rec-dot" aria-hidden="true"></span><span id="rec-t">Gravando 0:00</span><button type="button" class="fr-btn" id="rec-cancel">Cancelar</button><button type="button" class="btn-brand sm" id="rec-send">Enviar áudio</button></div>
+    <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">${label}</label>
+      <button type="button" class="ch-ic" id="ch-att" aria-label="Enviar foto, vídeo, áudio ou arquivo" title="Enviar arquivo">${ATT_SVG}</button><input type="file" id="ch-file" class="sr-only" tabindex="-1" aria-hidden="true">
+      <input id="chat-in" maxlength="1000" placeholder="${ph}" enterkeyhint="send">
+      <button type="button" class="ch-ic" id="ch-mic" aria-label="Gravar áudio" title="Gravar áudio">${MIC_SVG}</button>
+      <button class="btn-brand sm" type="submit">Enviar</button></form>`;
+}
+function bindChatForm(send) {
+  const form = document.getElementById("chat-form"), inp = document.getElementById("chat-in"), fileIn = document.getElementById("ch-file");
+  const sendFile = async file => {
+    let f;
+    try { f = await prepareFile(file); } catch (err) { toast(err.message || "Não deu para enviar esse arquivo."); return; }
+    const cap = inp.value.trim(); inp.value = "";
+    if (cap) f.auto = false; else f.auto = true;
+    toast("Enviando…");
+    try { await send({ text: cap || (f.kind === "file" ? "📎 " + f.name : FILE_LABEL[f.kind]), file: f }); }
+    catch (err) { if (cap) inp.value = cap; toast(err && /size|exceeds|maximum/i.test(String(err.message)) ? "Esse arquivo ficou grande demais para enviar." : "Não foi possível enviar. Verifique sua internet."); }
+  };
+  document.getElementById("ch-att").addEventListener("click", () => fileIn.click());
+  fileIn.addEventListener("change", () => { const file = fileIn.files && fileIn.files[0]; fileIn.value = ""; if (file) sendFile(file); });
+  // gravação de áudio
+  const mic = document.getElementById("ch-mic"), bar = document.getElementById("rec-bar"), rt = document.getElementById("rec-t");
+  let rec = null, chunks = [], t0 = 0, tick = null, keep = false;
+  const stopUI = () => { clearInterval(tick); bar.hidden = true; form.hidden = false; };
+  if (!window.MediaRecorder || !navigator.mediaDevices) mic.hidden = true;
+  mic.addEventListener("click", async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mime = ["audio/webm;codecs=opus", "audio/mp4", "audio/ogg;codecs=opus", "audio/webm"].find(m => MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(m)) || "";
+      rec = new MediaRecorder(stream, mime ? { mimeType: mime, audioBitsPerSecond: 32000 } : { audioBitsPerSecond: 32000 });
+      chunks = []; keep = false;
+      rec.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+      rec.onstop = () => {
+        stream.getTracks().forEach(t => t.stop()); stopUI();
+        if (!keep || !chunks.length) return;
+        const type = (rec.mimeType || "audio/webm").split(";")[0], blob = new Blob(chunks, { type });
+        sendFile(new File([blob], "audio." + (type.includes("mp4") ? "m4a" : type.includes("ogg") ? "ogg" : "webm"), { type }));
+      };
+      rec.start(); t0 = Date.now(); form.hidden = true; bar.hidden = false;
+      tick = setInterval(() => { const sec = Math.floor((Date.now() - t0) / 1000); rt.textContent = `Gravando ${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`; if (sec >= 90) { keep = true; rec.stop(); } }, 250);
+    } catch (err) { toast("Não deu para usar o microfone. Confira a permissão do navegador."); }
+  });
+  document.getElementById("rec-send").addEventListener("click", () => { if (rec && rec.state === "recording") { keep = true; rec.stop(); } });
+  document.getElementById("rec-cancel").addEventListener("click", () => { if (rec && rec.state === "recording") { keep = false; rec.stop(); } });
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const text = inp.value.trim(); if (!text) return;
+    inp.value = ""; inp.focus();
+    try { await send({ text }); } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+  });
+}
+
 // ================== CONVERSAS E GRUPOS ==================
 const gColor = s => `hsl(${hashHue(s) % 360} 75% 64%)`;
-const gavHTML = (g, size = 44) => `<span class="gav" style="--s:${size}px;--gc:${gColor(g.name || "grupo")}" aria-hidden="true">${ico("users")}</span>`;
+const gavHTML = (g, size = 44) => { const im = safeImg(g && g.img); return im ? `<span class="gav pic" style="--s:${size}px" aria-hidden="true"><img src="${im}" alt=""></span>` : `<span class="gav" style="--s:${size}px;--gc:${gColor(g.name || "grupo")}" aria-hidden="true">${ico("users")}</span>`; };
 function ago(ms) {
   if (!ms) return "";
   const d = new Date(ms), now = new Date();
@@ -3124,8 +3358,8 @@ function renderChatList() {
   const box = document.getElementById("cv-list"); if (!box) return;
   if (social.denied) { box.innerHTML = `<div class="msg info">As conversas ainda estão sendo ativadas no servidor. Tente de novo mais tarde.</div>`; return; }
   const me = user.uid, rows = [];
-  social.fr.filter(f => f.status === "accepted").forEach(f => { const c = social.chats[f.id] || {}; rows.push({ t: tms(c.lastAt), html: () => { const o = otherOf(f), p = profLike(social.profiles[o]), un = isUnread(f.id); return `<div class="fr-row"><button type="button" class="fr-who" data-fchat="${o}">${avatarHTML(44, p)}<span><b>${esc(p.name || "Amigo")}</b><small class="${un ? "unread" : ""}">${c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(c.lastText) : "Toque para conversar"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(c.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }); });
-  Object.entries(social.groups).forEach(([id, g]) => rows.push({ t: tms(g.lastAt), html: () => { const un = isUnreadG(id); const who = g.lastFrom === me ? "Você" : (pname(g.lastFrom) || "").split(" ")[0]; return `<div class="fr-row"><button type="button" class="fr-who" data-gchat="${id}">${gavHTML(g)}<span><b>${esc(g.name)}</b><small class="${un ? "unread" : ""}">${g.lastText ? esc(who) + ": " + esc(g.lastText) : (g.members || []).length + " membros"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(g.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }));
+  social.fr.filter(f => f.status === "accepted").forEach(f => { const c = social.chats[f.id] || {}; rows.push({ t: tms(c.lastAt), html: () => { const o = otherOf(f), p = profLike(social.profiles[o]), un = isUnread(f.id); return `<div class="fr-row"><button type="button" class="fr-who" data-fchat="${o}">${avatarHTML(44, p)}<span><b>${esc(p.name || "Amigo")}</b><small class="${un ? "unread" : ""}">${c.lastText ? (c.lastFrom === me ? "Você: " : "") + esc(cleanText(c.lastText)) : "Toque para conversar"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(c.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }); });
+  Object.entries(social.groups).forEach(([id, g]) => rows.push({ t: tms(g.lastAt), html: () => { const un = isUnreadG(id); const who = g.lastFrom === me ? "Você" : (pname(g.lastFrom) || "").split(" ")[0]; return `<div class="fr-row"><button type="button" class="fr-who" data-gchat="${id}">${gavHTML(g)}<span><b>${esc(g.name)}</b><small class="${un ? "unread" : ""}">${g.lastText ? esc(who) + ": " + esc(cleanText(g.lastText)) : (g.members || []).length + " membros"}</small></span></button><span class="fr-act"><span class="cv-time">${ago(tms(g.lastAt))}</span>${un ? '<span class="fr-dot" aria-label="Mensagem nova"></span>' : ""}</span></div>`; } }));
   rows.sort((a, b) => b.t - a.t);
   box.innerHTML = rows.length ? rows.map(r => r.html()).join("") : `<div class="fr-empty">Nenhuma conversa ainda. Adicione amigos em “Amigos e pedidos” ou crie um grupo.</div>`;
 }
@@ -3164,9 +3398,9 @@ function openGroup(gid) {
   stopChat();
   const F = fb.F, me = user.uid, g = social.groups[gid] || { name: "Grupo", members: [] };
   openSheet("chat", "Grupo", g.name, `
-    <div class="chat-top"><button type="button" class="fr-who" id="gc-info">${gavHTML(g, 40)}<span><b>${esc(g.name)}</b><small>${(g.members || []).length} membros · ver detalhes</small></span></button><button type="button" class="fr-btn" id="ch-back">← Conversas</button></div>
+    <div class="chat-top"><button type="button" class="fr-who" id="gc-info">${gavHTML(g, 40)}<span><b>${esc(g.name)}</b><small>${g.desc ? esc(g.desc.slice(0, 60)) + (g.desc.length > 60 ? "…" : "") : (g.members || []).length + " membros"} · ver detalhes</small></span></button><button type="button" class="fr-btn" id="ch-back">← Conversas</button></div>
     <div class="chat-box" id="chat-box" role="log" aria-live="polite" aria-label="Mensagens do grupo"><p class="lede-sm" style="margin:auto">Carregando mensagens…</p></div>
-    <form class="chat-form" id="chat-form" autocomplete="off"><label class="sr-only" for="chat-in">Mensagem para o grupo</label><input id="chat-in" maxlength="1000" placeholder="Escreva para o grupo" enterkeyhint="send"><button class="btn-brand sm" type="submit">Enviar</button></form>
+    ${chatFormHTML("Mensagem para o grupo", "Mensagem")}
     <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento.</p>`);
   social.chatWith = "g_" + gid;
   document.getElementById("ch-back").addEventListener("click", () => openChats());
@@ -3178,28 +3412,29 @@ function openGroup(gid) {
     loadProfiles(msgs.map(m => m.from)).then(() => {
       if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Mande a primeira mensagem do grupo! 👋</p>`; markRead("g_" + gid); return; }
       let last = "", prevFrom = "";
-      box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; if (sep) prevFrom = ""; last = day; const mine = m.from === me; const who = !mine && m.from !== prevFrom ? `<span class="who">${esc(pname(m.from))}</span>` : ""; prevFrom = m.from; return sep + `<div class="bub${mine ? " me" : ""}">${who}${esc(m.text)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+      box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; if (sep) prevFrom = ""; last = day; const mine = m.from === me; const who = !mine && m.from !== prevFrom ? `<span class="who">${esc(pname(m.from))}</span>` : ""; prevFrom = m.from; return sep + `<div class="bub${mine ? " me" : ""}${m.file ? " has-file" : ""}">${who}${bubbleBody(m)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
       box.scrollTop = box.scrollHeight;
       markRead("g_" + gid);
     });
   }, err => { box.innerHTML = `<div class="msg info" style="margin:auto">${err && err.code === "permission-denied" ? "Você não faz mais parte deste grupo." : "Não foi possível carregar as mensagens agora."}</div>`; });
-  const form = document.getElementById("chat-form"), inp = document.getElementById("chat-in");
-  form.addEventListener("submit", async e => {
-    e.preventDefault();
-    const text = inp.value.trim(); if (!text) return;
-    inp.value = ""; inp.focus();
-    try {
-      await F.addDoc(F.collection(fb.db, "groups", gid, "messages"), { from: me, text, at: F.serverTimestamp() });
-      await F.updateDoc(F.doc(fb.db, "groups", gid), { lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() });
-    } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+  bindChatForm(async ({ text, file }) => {
+    await F.addDoc(F.collection(fb.db, "groups", gid, "messages"), { from: me, text, ...(file ? { file } : {}), at: F.serverTimestamp() });
+    await F.updateDoc(F.doc(fb.db, "groups", gid), { lastText: text.slice(0, 90), lastFrom: me, lastAt: F.serverTimestamp() });
   });
 }
 async function openGroupInfo(gid) {
   const F = fb.F, me = user.uid, g = social.groups[gid]; if (!g) { openChats(); return; }
   await loadProfiles(g.members || []);
   const owner = g.owner === me;
+  let newImg = null;
   openSheet("group-info", "Grupo", g.name, `
-    ${owner ? `<form class="form" id="gi-form" novalidate style="margin-bottom:16px"><div class="field"><label for="gi-name">Nome do grupo</label><div class="fr-inline"><input id="gi-name" maxlength="40" value="${esc(g.name)}"><button class="btn-brand sm" type="submit">Salvar</button></div></div></form>` : ""}
+    <div class="gi-head"><span id="gi-av">${gavHTML(g, 88)}</span><div class="gi-txt"><b>${esc(g.name)}</b><p class="${g.desc ? "" : "empty"}">${g.desc ? esc(g.desc) : owner ? "Sem descrição ainda. Adicione uma abaixo." : "Sem descrição."}</p></div></div>
+    ${owner ? `<form class="form" id="gi-form" novalidate style="margin-bottom:16px">
+      <div class="field"><span class="lbl">Foto do grupo</span><div class="img-btns"><label class="btn-ghost sm file-btn">Escolher foto<input type="file" accept="image/*" class="sr-only" id="gi-file"></label>${safeImg(g.img) ? `<button type="button" class="btn-ghost sm" id="gi-rmimg">Remover foto</button>` : ""}</div></div>
+      <div class="field"><label for="gi-name">Nome do grupo</label><input id="gi-name" maxlength="40" value="${esc(g.name)}"></div>
+      <div class="field"><label for="gi-desc">Descrição</label><textarea id="gi-desc" maxlength="200" placeholder="Sobre o que é este grupo? Ex.: jogatina de sexta, campeonato de FIFA…">${esc(g.desc || "")}</textarea><div class="help"><span id="gi-dn">${(g.desc || "").length}</span>/200</div></div>
+      <button class="btn-brand" type="submit">Salvar alterações</button>
+    </form>` : ""}
     <div class="fr-sec"><h4>Membros · ${(g.members || []).length}</h4>${(g.members || []).map(u => { const p = profLike(social.profiles[u]); return `<div class="fr-row"><span class="fr-who" style="cursor:default">${avatarHTML(40, p)}<span><b>${esc(u === me ? "Você" : p.name || "Jogador")}</b><small>${p.user ? "@" + esc(p.user) : ""}</small></span></span><span class="fr-act">${u === g.owner ? '<span class="own-tag">DONO</span>' : ""}${owner && u !== me ? `<button type="button" class="fr-btn" data-gkick="${u}">Remover</button>` : ""}</span></div>`; }).join("")}</div>
     ${owner ? `<div class="fr-sec"><h4>Chamar mais amigos</h4>${friendPicker(g.members || [])}<div class="pactions" style="margin-top:10px"><button type="button" class="btn-ghost sm" id="gi-add">Adicionar escolhidos</button></div></div>` : ""}
     <div id="gi-msg"></div>
@@ -3208,7 +3443,26 @@ async function openGroupInfo(gid) {
   const fail = () => { msg.innerHTML = `<div class="msg err">Não foi possível fazer isso agora.</div>`; };
   document.getElementById("gi-back").addEventListener("click", () => openGroup(gid));
   const gf = document.getElementById("gi-form");
-  if (gf) gf.addEventListener("submit", async e => { e.preventDefault(); const n = document.getElementById("gi-name").value.trim(); if (!n) return; try { await F.updateDoc(ref, { name: n }); toast("Nome do grupo salvo"); } catch (err) { fail(); } });
+  if (gf) {
+    const di = document.getElementById("gi-desc");
+    di.addEventListener("input", () => { document.getElementById("gi-dn").textContent = di.value.length; });
+    document.getElementById("gi-file").addEventListener("change", async e => {
+      const file = e.target.files && e.target.files[0]; e.target.value = ""; if (!file) return;
+      try { const { img, url } = await loadImageFile(file); const data = await openCropper(img, "avatar"); URL.revokeObjectURL(url); if (data) { newImg = data; document.getElementById("gi-av").innerHTML = gavHTML({ ...g, img: data }, 88); } }
+      catch (err) { msg.innerHTML = `<div class="msg err">${esc(err.message || "Não deu para usar essa imagem.")}</div>`; }
+    });
+    const rmi = document.getElementById("gi-rmimg");
+    if (rmi) rmi.addEventListener("click", () => { newImg = ""; document.getElementById("gi-av").innerHTML = gavHTML({ ...g, img: "" }, 88); rmi.remove(); });
+    gf.addEventListener("submit", async e => {
+      e.preventDefault();
+      const n = document.getElementById("gi-name").value.trim(), d = di.value.trim().slice(0, 200);
+      if (!n) { msg.innerHTML = `<div class="msg err">O grupo precisa de um nome.</div>`; return; }
+      const upd = { name: n, desc: d }; if (newImg !== null) upd.img = newImg;
+      const btn = gf.querySelector("[type=submit]"); btn.disabled = true;
+      try { await F.updateDoc(ref, upd); social.groups[gid] = { ...social.groups[gid], ...upd }; toast("Grupo atualizado"); openGroupInfo(gid); }
+      catch (err) { btn.disabled = false; fail(); }
+    });
+  }
   shBody.querySelectorAll("[data-gkick]").forEach(b => b.addEventListener("click", async () => { try { await F.updateDoc(ref, { members: g.members.filter(u => u !== b.dataset.gkick) }); toast("Membro removido"); setTimeout(() => openGroupInfo(gid), 300); } catch (err) { fail(); } }));
   const add = document.getElementById("gi-add");
   if (add) add.addEventListener("click", async () => { const sel = [...shBody.querySelectorAll(".pick-row input:checked")].map(i => i.value); if (!sel.length) return; if (g.members.length + sel.length > 30) { msg.innerHTML = `<div class="msg err">Um grupo pode ter até 30 pessoas.</div>`; return; } try { await F.updateDoc(ref, { members: [...g.members, ...sel] }); toast("Amigos adicionados"); setTimeout(() => openGroupInfo(gid), 300); } catch (err) { fail(); } });
@@ -3263,7 +3517,10 @@ function renderMenu() {
       <div class="theme-seg" role="group" aria-label="Tema">
         ${[["system", "Automático"], ["light", "Claro"], ["dark", "Escuro"]].map(([v, l]) => `<button type="button" data-theme-v="${v}" aria-pressed="${theme === v}">${l}</button>`).join("")}
       </div>
-      <div style="margin-top:10px">${tool('data-tool="lang"', "globe", "Idioma do site", curLang() === "pt" ? "Português" : langName(curLang()))}</div>
+      <div style="margin-top:10px">${tool('data-tool="lang"', "globe", "Idioma do site", curLang() === "pt" ? "Português" : nativeName(curLang()))}</div>
+    </div>
+    <div class="dr-sec"><h3>Conversas</h3>
+      <button type="button" class="dr-item" id="filter-tg" role="switch" aria-checked="${chatFilterOn()}"><span class="ic">${ico("chat")}</span><span>Filtrar palavrões<small>${chatFilterOn() ? "Ligado: palavrões aparecem como p****" : "Desligado: mensagens aparecem como foram escritas"}</small></span><span class="tg" aria-hidden="true"></span></button>
     </div>
     <div class="dr-sec"><h3>Sobre o Zera</h3>
       <p class="dr-about">Comparamos notas da crítica e preços nas lojas digitais brasileiras, com promoções atualizadas várias vezes por dia. Cada loja abre a página oficial. O mais vendido da Steam é ao vivo; os do PlayStation e do Xbox são revisados toda semana.</p>
@@ -3282,6 +3539,7 @@ menu.addEventListener("click", e => {
   if (e.target === menu) return closeMenu();
   const li = e.target.closest("[data-list]"); if (li) return applyList(li.dataset.list);
   const th = e.target.closest("[data-theme-v]"); if (th) { applyTheme(th.dataset.themeV); renderMenu(); return; }
+  if (e.target.closest("#filter-tg")) { profile.chatFilter = !chatFilterOn(); saveProfile(); renderMenu(); refreshSocial(); toast(profile.chatFilter ? "Filtro de palavrões ligado" : "Filtro de palavrões desligado"); return; }
   if (e.target.closest("#surprise")) {
     const pool = games.filter(g => (g.n ?? 0) >= 85);
     closeMenu(); openDetail(pool[Math.floor(Math.random() * pool.length)].id);
