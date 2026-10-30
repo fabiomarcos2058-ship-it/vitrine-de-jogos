@@ -265,40 +265,61 @@ function psPricesFromProduct(html) {
   }
   return outp;
 }
+const PS_SLUGS = { "Rainbow Six Siege X": ["tom-clancys-rainbow-six-siege-x", "tom-clancys-rainbow-six-siege"], "RimWorld": ["rimworld-console-edition"], "Dragon Quest XI S": ["dragon-quest-xi-s-echoes-of-an-elusive-age-definitive-edition"], "NieR Replicant ver.1.22474487139...": ["nier-replicant-ver122474487139"], "Grand Theft Auto: The Trilogy – The Definitive Edition": ["grand-theft-auto-the-trilogy-the-definitive-edition"], "Hades II": ["hades-ii", "hades-2"], "Remnant II": ["remnant-2", "remnant-ii"] };
+const ROMAN = { ii: "2", iii: "3", iv: "4", v: "5", vi: "6", vii: "7", viii: "8", ix: "9", x: "10", xi: "11", xii: "12", xiii: "13", xiv: "14", xv: "15", xvi: "16" };
+const decodeHtml = t => String(t || "").replace(/&amp;/g, "&").replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+const psClean = n => decodeHtml(n).replace(/\s*\|.*$/, "").replace(/\(PlayStation®?\s*\d\)|PS4\s*(&|e|and)\s*PS5|PS5\s*(&|e|and)\s*PS4|\bPS[45]\b|Edição Padrão|Standard Edition|Edição Standard|™|®/gi, " ").replace(/\s+/g, " ").trim();
+function psIds(html) {
+  const ids = [...new Set([...html.matchAll(/[A-Z]{2}\d{4}-[A-Z]{4}\d{5}_00-[A-Z0-9]{16}/g)].map(m => m[0]))];
+  const plain = ids.filter(i => !/DELUX|ULTIM|GOLD|PREMIU|COMPLET|BUNDLE|SEASON|PASS|DLC|VIRTUAL|CURRENC|COINS|POINTS|EXPANS|UPGRADE|SOUNDTR|ARTBOOK|DEMO|TRIAL/i.test(i.split("-")[2]));
+  return [...plain.filter(i => /-PPSA/.test(i)), ...plain.filter(i => /-CUSA/.test(i))];
+}
 async function playstationWeb() {
   const list = games.filter(g => g.p.ps !== null && g.p.ps !== undefined && g.p.ps !== "pre");
   let cache = {}; try { cache = JSON.parse(fs.readFileSync(ROOT + "data/ps-ids.json", "utf8")); } catch (e) {}
   let ok = 0, found = 0, errors = 0; const miss = [], usedIds = {};
+  const matches = (g, name) => Math.max(score(searchName(g), name), score(g.t, name)) >= 70;
+  async function readProduct(id) {
+    const url = `https://store.playstation.com/pt-br/product/${id}`;
+    const html = await (await get(url, {}, 2)).text();
+    const name = psClean((html.match(/<title>([^<]+)<\/title>/) || [])[1] || "");
+    const prices = psPricesFromProduct(html).filter(p => !p.isTiedToSubscription && !(p.serviceBranding || []).some(x => /PLUS|EA_ACCESS|UBISOFT|GAME_?PASS/i.test(x)) && (p.isFree || p.basePriceValue > 0));
+    return { url, name, pr: prices[0] || null };
+  }
   for (const g of list) {
     try {
-      let id = g.psid || (cache[g.t] && cache[g.t].id) || null;
+      let hit = null;
+      const cached = g.psid || (cache[g.t] && cache[g.t].id);
+      if (cached && !usedIds[cached]) {
+        const r = await readProduct(cached); await sleep(500);
+        if (r.pr && (g.psid || matches(g, r.name))) hit = { id: cached, ...r }; else if (!g.psid) delete cache[g.t];
+      }
       const old = cache[g.t];
-      if (!id && !(old && old.none && Date.now() - new Date(old.at) < 7 * 864e5)) {
-        for (const sl of psSlugs(g)) {
+      if (!hit && !(old && old.none && Date.now() - new Date(old.at) < 7 * 864e5)) {
+        const tried = new Set();
+        const slugs = [...(PS_SLUGS[g.t] || []), ...psSlugs(g)];
+        slugs.slice().forEach(sl => { const parts = sl.split("-"); const r = parts.map(w => ROMAN[w] || w).join("-"); if (r !== sl) slugs.push(r); });
+        outer: for (const sl of [...new Set(slugs)]) {
           const r = await fetch(`https://www.playstation.com/pt-br/games/${sl}/`, { headers: { "user-agent": UA, "accept-language": "pt-BR" } });
           await sleep(400);
           if (!r.ok) continue;
-          id = psPickId(await r.text());
-          if (id) { found++; break; }
+          for (const id of psIds(await r.text()).slice(0, 5)) {
+            if (tried.has(id) || usedIds[id]) continue; tried.add(id);
+            const p = await readProduct(id); await sleep(500);
+            if (p.pr && matches(g, p.name)) { hit = { id, ...p }; found++; break outer; }
+          }
         }
-        cache[g.t] = id ? { id, at: new Date().toISOString() } : { none: true, at: new Date().toISOString() };
+        cache[g.t] = hit ? { id: hit.id, at: new Date().toISOString() } : { none: true, at: new Date().toISOString() };
       }
-      if (!id) { miss.push(g.t + " (sem página)"); continue; }
-      if (usedIds[id]) { miss.push(g.t + " (mesmo produto de " + usedIds[id] + ")"); continue; }
-      usedIds[id] = g.t;
-      const url = `https://store.playstation.com/pt-br/product/${id}`;
-      const html = await (await get(url, {}, 2)).text();
-      const prices = psPricesFromProduct(html).filter(p => !p.isTiedToSubscription && !(p.serviceBranding || []).some(x => /PLUS|EA_ACCESS|UBISOFT|GAME_?PASS/i.test(x)) && (p.isFree || p.basePriceValue > 0));
-      const pr = prices[0];
-      if (!pr) { miss.push(g.t + " (sem preço)"); await sleep(600); continue; }
+      if (!hit) { miss.push(g.t); continue; }
+      usedIds[hit.id] = g.t;
+      const pr = hit.pr;
       const b = pr.isFree ? 0 : pr.basePriceValue / 100, f = pr.isFree ? 0 : (pr.discountedValue != null ? pr.discountedValue : pr.basePriceValue) / 100;
       const pct = b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0;
       const until = pr.endTime && /^\d+$/.test(String(pr.endTime)) ? new Date(Number(pr.endTime)).toISOString() : null;
-      const nm = (html.match(/<title>([^<]+)<\/title>/) || [])[1];
-      put(g.id, "ps", { b: round2(b), f: round2(f), pct, until, url, n: nm ? nm.replace(/\s*\|.*$/, "").trim() : g.t });
+      put(g.id, "ps", { b: round2(b), f: round2(f), pct, until, url: hit.url, n: hit.name || g.t });
       ok++;
     } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); if (errors >= 12 && ok === 0) { miss.push("parado"); break; } }
-    await sleep(600);
   }
   fs.mkdirSync(ROOT + "data", { recursive: true });
   fs.writeFileSync(ROOT + "data/ps-ids.json", JSON.stringify(cache, null, 0));
@@ -472,9 +493,10 @@ async function appStore() {
       const hit = best(term, items, x => x.trackName) || best(g.t, items, x => x.trackName);
       if (!hit || typeof hit.price !== "number") { miss.push(g.t); await sleep(2500); continue; }
       const f = round2(hit.price), base = typeof g.p.ap === "number" ? g.p.ap : null;
+      if (base > 0 && f === 0) { miss.push(g.t + " (grátis para baixar, desbloqueio dentro do app)"); await sleep(2500); continue; }
       if (base && f > 0 && (f > base * 2.6 || f < base * 0.15)) { miss.push(g.t + " (preço estranho " + f + ")"); await sleep(2500); continue; }
-      const b = base && base > f ? base : f;
-      put(g.id, "ap", { b, f, pct: b > 0 && f < b ? Math.round((1 - f / b) * 100) : 0, until: null, url: hit.trackViewUrl ? hit.trackViewUrl.split("?")[0] : null, n: hit.trackName });
+      // a Apple só informa o preço atual (sem o preço "de"), então não marcamos promoção
+      put(g.id, "ap", { b: f, f, pct: 0, until: null, url: hit.trackViewUrl ? hit.trackViewUrl.split("?")[0] : null, n: hit.trackName });
       ok++;
     } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); }
     await sleep(2500);
