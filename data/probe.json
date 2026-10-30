@@ -1,0 +1,102 @@
+{
+ "ps_search": {
+  "status": 200,
+  "type": "text/html; charset=utf-8",
+  "len": 80701,
+  "prices": [],
+  "head": "<!DOCTYPE html><html class=\"psw-root psw-rem-base\" dir=\"ltr\" lang=\"pt-br\"><head><meta name=\"wca-ssr-version\" content=\"3.48.0-2026.10.2-1.0\" /><meta name=\"wca-locale\" content=\"pt-BR\" /><meta name=\"wca-theme\" content=\"dark\" /><script id=\"wca-config-overrides\" type=\"application/json\">\n    {\"feature\":{\"enableOneTrustScript\":true,\"enableBundling\":true},\"client\":{\"webCheckout\":{\"clientId\":\"2eb25762-877f-4140-b341-7c7e14c19f98\"}}}</script>\n  <link rel=\"preconnect\" href=\"https://static.playstation.com\" crossorigin />\n    <link rel=\"dns-prefetch\" href=\"https://static.playstation.com\" />\n    <link rel=\""
+ },
+ "ps_search_links": [],
+ "ps_search_price_ctx": null,
+ "ps_query_len": 268498,
+ "ps_frags": [
+  "on:false",
+  "personalizedMetaFragment:true",
+  "priceFragment:true"
+ ],
+ "ps_gql_post": {
+  "status": 400,
+  "type": "application/json",
+  "len": 208,
+  "prices": [],
+  "head": "{\"errors\":[{\"message\":\"This endpoint does not allow freeform GraphQL requests; operations must be sent by ID in the persisted queries GraphQL extension.\",\"extensions\":{\"code\":\"PERSISTED_QUERY_ID_REQUIRED\"}}]}"
+ },
+ "ps_gql_get_raw": {
+  "status": 404,
+  "type": "application/json",
+  "len": 235,
+  "prices": [],
+  "head": "{\"errors\":[{\"message\":\"Persisted query '7edf9641e950f0773d09b1f88f7c685b2633e9f90e81e3981543bcc46654c32f' not found in the persisted query list\",\"extensions\":{\"operation_name\":\"getSearchResults\",\"code\":\"PERSISTED_QUERY_NOT_IN_LIST\"}}]}"
+ },
+ "ps_gql_get_full": {
+  "status": 404,
+  "type": "application/json",
+  "len": 235,
+  "prices": [],
+  "head": "{\"errors\":[{\"message\":\"Persisted query 'b5a9a4577384b1348e7895303b11f49d8800358a9d6b2c4ea1272d596440e4c2' not found in the persisted query list\",\"extensions\":{\"operation_name\":\"getSearchResults\",\"code\":\"PERSISTED_QUERY_NOT_IN_LIST\"}}]}"
+ },
+ "ep_gql_post": {
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "len": 25190,
+  "prices": [],
+  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
+ },
+ "ep_gql_get_hash": {
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "len": 27044,
+  "prices": [],
+  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
+ },
+ "ep_page": {
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "len": 24973,
+  "prices": [],
+  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
+ },
+ "ep_page_ctx": null,
+ "ep_page_ld": null,
+ "ep_cms": {
+  "status": 200,
+  "type": "application/json; charset=utf-8",
+  "len": 15121,
+  "prices": [],
+  "head": "{\"productRatings\":{\"_type\":\"Epic Store Product Ratings\"},\"pageTheme\":{\"preferredMode\":\"dark\",\"light\":{\"_type\":\"Epic Store Page Theme Selection\",\"theme\":\"gray\",\"accent\":\"#A61717\"},\"_type\":\"Epic Store Page Theme\",\"dark\":{\"_type\":\"Epic Store Page Theme Selection\",\"theme\":\"gray\",\"accent\":\"#A61717\"}},\"namespace\":\"min\",\"_title\":\"hades\",\"regionBlock\":\"\",\"productName\":\"Hades\",\"externalNavLinks\":{\"_type\":\"Epic Store Links\"},\"_urlPattern\":\"/pt-BR/productv2/hades\",\"_slug\":\"hades\",\"_activeDate\":\"2018-10-17T15:40:48.524Z\",\"lastModified\":\"2019-08-06T15:51:05.215Z\",\"_locale\":\"pt-BR\",\"_id\":\"74358cab-f2e3-4d27"
+ },
+ "ep_platform_home": {
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "len": 25476,
+  "prices": [],
+  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
+ },
+ "ep_platform_search": {
+  "status": 403,
+  "type": "text/html; charset=UTF-8",
+  "len": 25380,
+  "prices": [],
+  "head": "<html>\n\n<head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <style>.cf_challenge_text_small {\n    font-size: 11px;\n}\n\nbody {\n    height: 100vh;\n    width: 100vw;\n    overflow-x: hidden;\n    font-family: sans-serif;\n    font-weight: 400;\n    font-size: 14px;\n    line-height: 20px;\n    letter-spacing: 0.2px;\n    color: rgba(255, 255, 255, 0.5);\n    margin: 0;\n    background: #101014;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.logo {\n    display: flex;\n    align-items: center;\n    flex-direction: column"
+ },
+ "ep_static_layout": {
+  "status": 200,
+  "type": "application/json; charset=utf-8",
+  "len": 416390,
+  "prices": [
+   "R$ 31,99",
+   "R$ 31,99",
+   "R$ 31,99",
+   "R$ 94,99",
+   "R$ 94,99",
+   "R$ 94,99",
+   "R$ 52,99",
+   "R$ 52,99",
+   "R$ 52,99",
+   "R$ 39,99",
+   "R$ 39,99",
+   "R$ 39,99"
+  ],
+  "head": "{\"data\":{\"Storefront\":{\"storefrontModulesPaginated\":{\"modules\":[{\"id\":\"new-carousel-definitive\",\"type\":\"saleCarousel\",\"title\":\"New Featured Carousel \",\"slides\":[{\"title\":\"The Witcher 3: Wild Hunt — Remastered\",\"eyebrow\":\"Um RPG lendário, agora remasterizado\",\"description\":\"Conheça a aventura épica de Geralt de Rívia, agora aprimorada com atualizações nos elementos visuais, na jogabilidade e muito mais.\",\"textColor\":\"\",\"accentColor\":\"\",\"textAccentColor\":\"\",\"theme\":{\"preferredMode\":null,\"light\":{\"theme\":null,\"accent\":null},\"dark\":{\"theme\":null,\"accent\":null}},\"image\":{\"src\":\"https://cdn2.unreale"
+ }
+}
