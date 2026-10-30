@@ -327,8 +327,32 @@ async function epic() {
   report("ep", { ok, total: list.length, errors, miss: miss.slice(0, 40) });
 }
 
+// ---------- GOOGLE PLAY ----------
+// Para jogos pagos com "gpid" (pacote do app): lê o preço atual na página da loja.
+// Se estiver abaixo do preço normal do catálogo, é promoção.
+async function googlePlay() {
+  const list = games.filter(g => g.gpid && typeof g.p.gp === "number" && g.p.gp > 0);
+  let ok = 0; const miss = []; let errors = 0;
+  for (const g of list) {
+    try {
+      const url = `https://play.google.com/store/apps/details?id=${g.gpid}&hl=pt_BR&gl=BR`;
+      const html = await (await get(url)).text();
+      const m = html.match(/R\$\s?([\d.]+,\d{2})/);
+      if (!m) { miss.push(g.t + " (sem preço)"); continue; }
+      const f = round2(Number(m[1].replace(/\./g, "").replace(",", ".")));
+      const base = g.p.gp;
+      if (!(f > base * 0.15 && f < base * 2)) { miss.push(g.t + " (preço estranho " + f + ")"); continue; }
+      const b = Math.max(base, f), pct = f < b * 0.98 ? Math.round((1 - f / b) * 100) : 0;
+      put(g.id, "gp", { b, f, pct, until: null, url, n: g.t });
+      ok++;
+    } catch (e) { errors++; miss.push(g.t + " (" + e.message + ")"); }
+    await sleep(700);
+  }
+  report("gp", { ok, total: list.length, errors, miss: miss.slice(0, 30) });
+}
+
 // ---------- execução ----------
-const steps = { st: steam, ps: playstation, xb: xbox, ep: epic, epFree: epicFree };
+const steps = { st: steam, ps: playstation, xb: xbox, ep: epic, epFree: epicFree, gp: googlePlay };
 for (const [k, fn] of Object.entries(steps)) {
   const t0 = Date.now();
   try { await fn(); } catch (e) { report(k, { error: String(e && e.message || e) }); }
