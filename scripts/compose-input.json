@@ -1,14 +1,6 @@
 {
- "run": 4,
- "sheet": true,
- "only": [
-  "Resident Evil Code: Veronica X",
-  "Ghost of Yōtei",
-  "Final Fantasy VII Ever Crisis",
-  "Dissidia Final Fantasy NT",
-  "Final Fantasy Pixel Remaster (I–VI)",
-  "Halo Infinite"
- ],
+ "run": 5,
+ "scenes": true,
  "bg": {
   "Resident Evil Code: Veronica X": "304240",
   "Ghost of Yōtei": "2215430",

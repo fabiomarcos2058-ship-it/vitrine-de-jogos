@@ -102,6 +102,22 @@ def compose(game, url, i=0):
     out.alpha_composite(ch, (x, y))
     return out.convert("RGB")
 
+if cfg.get("scenes"):   # cenas para o topo da página de cada jogo
+    os.makedirs("scenes", exist_ok=True)
+    old = json.load(open("data/scenes.json")) if os.path.exists("data/scenes.json") else {}
+    out = {}
+    for game in games:
+        if not cfg.get("scenesRedo") and game in old and os.path.exists(old[game]): out[game] = old[game]; continue
+        url = next((u for u in shotlist(game) if u.startswith("http") and "/ss_" in u), None)
+        if not url: continue
+        try:
+            im = img(url).convert("RGB"); im.thumbnail((1280, 1280), Image.LANCZOS)
+            fn = "scenes/" + hashlib.md5(game.encode()).hexdigest()[:12] + ".webp"
+            im.save(fn, "WEBP", quality=70, method=6); out[game] = fn
+        except Exception as e: print("cena", game, e)
+    json.dump(out, open("data/scenes.json", "w"), ensure_ascii=False, indent=0)
+    print("cenas:", len(out), "de", len(games)); raise SystemExit(0)
+
 prev = json.load(open("data/wall.json")) if os.path.exists("data/wall.json") else {"games": {}}
 result = {g: v for g, v in prev.get("games", {}).items() if only and g not in only}
 errs = []
