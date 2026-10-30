@@ -1,9 +1,57 @@
 {
+ "replace": [
+  "Goku",
+  "Vegeta",
+  "Gohan",
+  "Trunks",
+  "Vegito",
+  "Gogeta"
+ ],
  "games": {
   "Dragon Ball: Sparking! Zero": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -12,8 +60,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -29,6 +87,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -39,8 +107,48 @@
   ],
   "Dragon Ball FighterZ": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -49,8 +157,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -66,6 +184,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -76,8 +204,48 @@
   ],
   "Dragon Ball Z: Kakarot": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -86,8 +254,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -103,6 +281,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -113,8 +301,48 @@
   ],
   "Dragon Ball Xenoverse 2": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -123,8 +351,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -140,6 +378,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -150,8 +398,48 @@
   ],
   "Dragon Ball Xenoverse": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -160,8 +448,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -177,6 +475,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -187,8 +495,48 @@
   ],
   "Dragon Ball: The Breakers": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -197,8 +545,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -214,6 +572,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -224,8 +592,48 @@
   ],
   "Super Dragon Ball Heroes: World Mission": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -234,8 +642,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -251,6 +669,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -261,8 +689,48 @@
   ],
   "Dragon Ball Gekishin Squadra": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -271,8 +739,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -288,6 +766,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -298,8 +786,48 @@
   ],
   "Dragon Ball Legends": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -308,8 +836,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -325,6 +863,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
@@ -335,8 +883,48 @@
   ],
   "Dragon Ball Z: Dokkan Battle": [
    {
+    "n": "Goku Clássico",
+    "img": "chars/goku-classico.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ",
+    "img": "chars/goku-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ Blue",
+    "img": "chars/goku-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
     "n": "Goku Ultra Instinto",
     "img": "chars/goku-ui.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku SSJ4",
+    "img": "chars/goku-ssj4.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku GT",
+    "img": "chars/goku-gt.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Goku Black Rosé",
+    "img": "chars/goku-black-rose.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan SSJ2",
+    "img": "chars/gohan-ssj2.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gohan Beast",
+    "img": "chars/gohan-beast.webp",
     "src": "zera"
    },
    {
@@ -345,8 +933,18 @@
     "src": "zera"
    },
    {
-    "n": "Gohan SSJ2",
-    "img": "chars/gohan-ssj2.webp",
+    "n": "Majin Vegeta",
+    "img": "chars/majin-vegeta.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta SSJ Blue",
+    "img": "chars/vegeta-ssj-blue.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Vegeta Ultra Ego",
+    "img": "chars/vegeta-ultra-ego.webp",
     "src": "zera"
    },
    {
@@ -362,6 +960,16 @@
    {
     "n": "Gogeta SSJ",
     "img": "chars/gogeta-ssj.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ3",
+    "img": "chars/gogeta-ssj3.webp",
+    "src": "zera"
+   },
+   {
+    "n": "Gogeta SSJ Blue",
+    "img": "chars/gogeta-ssj-blue.webp",
     "src": "zera"
    },
    {
