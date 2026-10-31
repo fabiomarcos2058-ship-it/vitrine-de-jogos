@@ -143,11 +143,32 @@ const GENRE = gs => {
   return "Ação";
 };
 
+// ---------- avaliações em lote (API oficial da Steam) ----------
+const REV = {};
+{
+  const ids = [...cands.keys()];
+  for (let i = 0; i < ids.length; i += 50) {
+    const q = { ids: ids.slice(i, i + 50).map(a => ({ appid: Number(a) })), context: { language: "brazilian", country_code: "BR" }, data_request: { include_reviews: true } };
+    try {
+      const r = await (await get("https://api.steampowered.com/IStoreBrowseService/GetItems/v1?input_json=" + encodeURIComponent(JSON.stringify(q)))).json();
+      for (const it of (r.response && r.response.store_items) || []) {
+        const sm = (it.reviews && (it.reviews.summary_filtered || it.reviews.summary_unfiltered)) || {};
+        REV[it.appid] = { total: Number(sm.review_count) || 0, pos: (Number(sm.percent_positive) || 0) / 100 };
+      }
+    } catch (e) { console.log("avaliações", e.message); }
+    await sleep(800);
+  }
+  console.log("avaliações lidas:", Object.keys(REV).length);
+}
+
 // ---------- avaliação dos candidatos ----------
 const added = [], log = [];
 const reject = (id, why) => { state.rejected[id] = why; log.push(id + " " + why); };
 for (const c of cands.values()) {
   if (added.length >= PER_RUN || games.length + added.length >= MAX_TOTAL) break;
+  const rv0 = REV[c.id];
+  if (rv0 && (rv0.total < MIN_REVIEWS || rv0.pos < MIN_POSITIVE)) { reject(c.id, `avaliações ${rv0.total} / ${Math.round(rv0.pos * 100)}%`); continue; }
+  if (!rv0) { log.push(c.id + " sem avaliações"); continue; }
   try {
     const d = (await (await get(`https://store.steampowered.com/api/appdetails?appids=${c.id}&cc=br&l=brazilian`)).json())[c.id];
     await sleep(1700);
@@ -161,10 +182,7 @@ for (const c of cands.values()) {
     if (cd.some(x => [3, 4].includes(x))) { reject(c.id, "conteúdo adulto"); continue; }
     if (a.release_date && a.release_date.coming_soon) { continue; } // tenta de novo quando lançar
     if (!a.is_free && !a.price_overview) { reject(c.id, "sem preço no Brasil"); continue; }
-    const rv = ((await (await get(`https://store.steampowered.com/appreviews/${c.id}?json=1&language=all&purchase_type=all&num_per_page=0`)).json()).query_summary) || {};
-    await sleep(600);
-    const total = rv.total_reviews || 0, pos = total ? (rv.total_positive || 0) / total : 0;
-    if (total < MIN_REVIEWS || pos < MIN_POSITIVE) { reject(c.id, `avaliações ${total} / ${Math.round(pos * 100)}%`); continue; }
+    const total = rv0.total, pos = rv0.pos;
     const st = a.is_free ? 0 : round2(a.price_overview.initial / 100);
     let xb = null; try { xb = await xboxPrice(name); } catch (e) {} await sleep(800);
     let ps = null; try { ps = await psFind(name); } catch (e) {}
