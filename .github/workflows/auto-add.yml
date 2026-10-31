@@ -1,0 +1,34 @@
+name: Adicionar jogos automaticamente
+on:
+  schedule:
+    - cron: "41 */4 * * *"   # confere a cada 4 h; o robô só adiciona quando já passaram 16 h
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: auto-add, cancel-in-progress: false }
+jobs:
+  adicionar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Escolher e adicionar jogos
+        run: node scripts/auto-add.mjs
+      - name: Datas e cenas dos jogos novos
+        run: |
+          git diff --quiet -- games.js && exit 0
+          node scripts/added-dates.mjs
+          node -e "global.window={};require('./games.js');require('fs').writeFileSync('/tmp/games.json',JSON.stringify(window.GAMES.map(g=>({id:\"j-\"+g.t.normalize(\"NFD\").replace(/[^\\w\\s-]/g,\"\").trim().toLowerCase().replace(/\\s+/g,\"-\"),t:g.t,img:g.img,stid:g.stid}))))"
+          pip install --quiet pillow && python3 scripts/compose.py || true
+      - name: Salvar resultado
+        run: |
+          git config user.name "Zera robô de catálogo"
+          git config user.email "robo@users.noreply.github.com"
+          git add games.js data/auto-add.json data/added.json data/scenes.json scenes/ 2>/dev/null || git add games.js data/
+          git diff --cached --quiet && exit 0
+          git commit -m "Catálogo: jogos adicionados automaticamente $(date -u +'%d/%m %H:%M') UTC"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

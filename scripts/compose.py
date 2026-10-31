@@ -27,6 +27,7 @@ def full(u):  # tira o redimensionamento da Fandom para pegar a arte no tamanho 
 
 def appid(game):
     g = games.get(game) or {}
+    if g.get("stid"): return str(g["stid"])
     st = (prices.get(g.get("id", ""), {}) or {}).get("st") or {}
     m = re.search(r"/app/(\d+)", st.get("url", ""))
     return m.group(1) if m else None

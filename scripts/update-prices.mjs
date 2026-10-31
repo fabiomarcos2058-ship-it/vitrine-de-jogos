@@ -75,21 +75,23 @@ async function steam() {
   for (const g of list) {
     const term = searchName(g);
     let hit = null;
+    if (g.stid) { ids[g.id] = g.stid; queue.push([g.id, g.stid]); continue; }
     try {
       const r = await (await get(`https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(term)}&cc=br&l=portuguese`)).json();
       const items = (r.items || []).filter(x => x.type === "app");
       hit = best(term, items, x => x.name) || best(g.t, items, x => x.name);
     } catch (e) { unresolved.push(g.t + " (" + e.message + ")"); }
-    if (hit && STEAM_IDS[g.t] && hit.id !== STEAM_IDS[g.t]) disagree.push(`${g.t}: busca=${hit.id} "${hit.name}" lista=${STEAM_IDS[g.t]}`);
+    const fixedId = g.stid || STEAM_IDS[g.t];
+    if (hit && fixedId && hit.id !== fixedId) disagree.push(`${g.t}: busca=${hit.id} "${hit.name}" lista=${fixedId}`);
     // a lista conferida tem prioridade sobre a busca (evita DLC, trilha sonora e relançamentos)
-    if (STEAM_IDS[g.t] && (!hit || hit.id !== STEAM_IDS[g.t])) hit = { id: STEAM_IDS[g.t], name: g.t };
+    if (fixedId && (!hit || hit.id !== fixedId)) hit = { id: fixedId, name: g.t };
     if (hit) {
       ids[g.id] = hit.id;
       const url = `https://store.steampowered.com/app/${hit.id}`;
       if (hit.price && hit.price.currency === "BRL") { put(g.id, "st", { b: round2(hit.price.initial / 100), f: round2(hit.price.final / 100), pct: hit.price.initial > hit.price.final ? Math.round((1 - hit.price.final / hit.price.initial) * 100) : 0, url, n: hit.name }); ok++; }
       else if (g.p.st === 0) { put(g.id, "st", { b: 0, f: 0, pct: 0, url, n: hit.name }); ok++; }
       else queue.push([g.id, hit.id]);
-    } else if (STEAM_IDS[g.t]) { ids[g.id] = STEAM_IDS[g.t]; queue.push([g.id, STEAM_IDS[g.t]]); }
+    } else if (g.stid || STEAM_IDS[g.t]) { const fx = g.stid || STEAM_IDS[g.t]; ids[g.id] = fx; queue.push([g.id, fx]); }
     else unresolved.push(g.t);
     await sleep(350);
   }
