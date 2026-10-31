@@ -175,7 +175,10 @@ for (const c of cands.values()) {
     const a = d && d.success && d.data;
     if (!a) { reject(c.id, "sem dados"); continue; }
     if (a.type !== "game") { reject(c.id, "não é jogo"); continue; }
-    const name = decode(a.name);
+    const name = decode(a.name).replace(/[™®©]/g, "").replace(/\s+/g, " ").trim();
+    const gnames = (a.genres || []).map(x => x.description);
+    if (gnames.some(x => /utilit|design|ilustra|produ[cç][aã]o|v[ií]deo|[aá]udio|anima[cç][aã]o|modelagem|treinamento|educa[cç]|desenvolvimento|contabilidade|fotografia|software|web publishing|publica[cç][aã]o/i.test(x)) && !gnames.some(x => /a[cç][aã]o|aventura|rpg|estrat|simula|corrida|esporte|casual|indie|multijogador/i.test(x))) { reject(c.id, "não é jogo (programa)"); continue; }
+    if (/^(obs studio|wallpaper engine|crosshair x|bongo cat|aimlabs|lossless scaling|steamvr|soundpad|spacedesk|vtube studio)$/i.test(name)) { reject(c.id, "não é jogo (programa)"); continue; }
     if (BAD.test(name)) { reject(c.id, "extra/DLC"); continue; }
     if (have.has(norm(name)) || added.some(x => norm(x.t) === norm(name))) { reject(c.id, "já no catálogo"); continue; }
     const cd = ((a.content_descriptors || {}).ids || []).map(Number);
