@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-31T00:49:42.528Z",
+ "updated": "2026-10-31T09:43:09.307Z",
  "st": {
-  "ok": 262,
-  "total": 267,
+  "ok": 303,
+  "total": 324,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -10,7 +10,23 @@
   ],
   "missing": [
    "j-halo-infinite",
-   "j-dissidia-final-fantasy-nt"
+   "j-dissidia-final-fantasy-nt",
+   "j-dota-2",
+   "j-war-thunder",
+   "j-limbus-company",
+   "j-team-fortress-2",
+   "j-aniimo",
+   "j-vrchat",
+   "j-naraka-bladepoint",
+   "j-yu-gi-oh-master-duel",
+   "j-the-finals",
+   "j-arena-breakout-infinite",
+   "j-brawlhalla",
+   "j-wuthering-waves",
+   "j-aimlabs",
+   "j-once-human",
+   "j-zenless-zone-zero",
+   "j-umamusume-pretty-derby"
   ],
   "disagree": [
    "Ghost of Tsushima: busca=3929730 \"Ghost of Tsushima: Legends (Unlock)\" lista=2215430",
@@ -24,47 +40,12 @@
  },
  "ps": {
   "ok": 229,
-  "total": 260,
-  "novosIds": 0,
-  "errors": 0,
-  "via": "páginas oficiais",
-  "miss": [
-   "Ghost of Yōtei",
-   "Avowed",
-   "Clair Obscur: Expedition 33",
-   "Yakuza 0",
-   "Call of Duty: Black Ops 6",
-   "EA Sports FC 26",
-   "Hollow Knight",
-   "Dragon Ball: The Breakers",
-   "Resident Evil Revelations 2",
-   "Umbrella Corps",
-   "Grand Theft Auto: The Trilogy – The Definitive Edition",
-   "Grand Theft Auto Online",
-   "Final Fantasy Pixel Remaster (I–VI)",
-   "Call of Duty: Black Ops 7",
-   "Terraria",
-   "Hotline Miami",
-   "Control",
-   "Remnant II",
-   "RimWorld",
-   "Sid Meier's Civilization VII",
-   "NieR Replicant ver.1.22474487139...",
-   "Dragon Quest XI S",
-   "Rainbow Six Siege X",
-   "Overwatch 2",
-   "Path of Exile 2",
-   "F1 25",
-   "Bloons TD 6",
-   "Rise of the Ronin",
-   "Marvel's Guardians of the Galaxy",
-   "Fall Guys",
-   "Don't Starve Together"
-  ]
+  "skipped": true,
+  "via": "última leitura"
  },
  "xb": {
-  "ok": 225,
-  "total": 240,
+  "ok": 262,
+  "total": 277,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -87,7 +68,7 @@
  "ep": {
   "ok": 30,
   "total": 108,
-  "ofertasNaVitrine": 244,
+  "ofertasNaVitrine": 243,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
