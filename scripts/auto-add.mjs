@@ -43,7 +43,7 @@ async function get(url, opts = {}, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
       const r = await fetch(url, { ...opts, headers: { "user-agent": UA, "accept-language": "pt-BR,pt;q=0.9", ...(opts.headers || {}) } });
-      if (r.status === 429) { await sleep(8000 * (i + 1)); continue; }
+      if (r.status === 429) { await sleep(30000 * (i + 1)); continue; }
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r;
     } catch (e) { if (i === tries - 1) throw e; await sleep(1500 * (i + 1)); }
@@ -150,7 +150,7 @@ for (const c of cands.values()) {
   if (added.length >= PER_RUN || games.length + added.length >= MAX_TOTAL) break;
   try {
     const d = (await (await get(`https://store.steampowered.com/api/appdetails?appids=${c.id}&cc=br&l=brazilian`)).json())[c.id];
-    await sleep(1300);
+    await sleep(1700);
     const a = d && d.success && d.data;
     if (!a) { reject(c.id, "sem dados"); continue; }
     if (a.type !== "game") { reject(c.id, "não é jogo"); continue; }
@@ -158,10 +158,10 @@ for (const c of cands.values()) {
     if (BAD.test(name)) { reject(c.id, "extra/DLC"); continue; }
     if (have.has(norm(name)) || added.some(x => norm(x.t) === norm(name))) { reject(c.id, "já no catálogo"); continue; }
     const cd = ((a.content_descriptors || {}).ids || []).map(Number);
-    if (cd.some(x => [1, 3, 4].includes(x))) { reject(c.id, "conteúdo adulto"); continue; }
+    if (cd.some(x => [3, 4].includes(x))) { reject(c.id, "conteúdo adulto"); continue; }
     if (a.release_date && a.release_date.coming_soon) { continue; } // tenta de novo quando lançar
     if (!a.is_free && !a.price_overview) { reject(c.id, "sem preço no Brasil"); continue; }
-    const rv = ((await (await get(`https://store.steampowered.com/appreviews/${c.id}?json=1&language=all&purchase_type=all&num_per_page=0&filter=summary`)).json()).query_summary) || {};
+    const rv = ((await (await get(`https://store.steampowered.com/appreviews/${c.id}?json=1&language=all&purchase_type=all&num_per_page=0`)).json()).query_summary) || {};
     await sleep(600);
     const total = rv.total_reviews || 0, pos = total ? (rv.total_positive || 0) / total : 0;
     if (total < MIN_REVIEWS || pos < MIN_POSITIVE) { reject(c.id, `avaliações ${total} / ${Math.round(pos * 100)}%`); continue; }
@@ -180,7 +180,7 @@ for (const c of cands.values()) {
     if (ps) e.psid = ps.id;
     added.push(e);
     console.log("+", name, "| Steam", st, "| Xbox", xb, "| PS", ps ? ps.b : "—", "|", total, "avaliações", Math.round(pos * 100) + "%");
-  } catch (err) { log.push(c.id + " erro " + err.message); }
+  } catch (err) { log.push(c.id + " erro " + (err && err.stack ? err.stack.split("\n").slice(0, 2).join(" ") : err)); }
 }
 // capas e gravação
 const caps = await steamAssets(added.map(e => e.stid));
@@ -193,6 +193,6 @@ if (added.length) {
   fs.writeFileSync(ROOT + "games.js", pre + added.map(e => "\n" + line(e)).join(",") + src.slice(i));
 }
 state.last = new Date().toISOString();
-state.runs = [{ at: state.last, added: added.map(e => e.t), checked: log.length + added.length }, ...state.runs].slice(0, 30);
+state.runs = [{ at: state.last, added: added.map(e => e.t), checked: log.length + added.length, errors: log.filter(x => / erro /.test(x)).slice(0, 15) }, ...state.runs].slice(0, 30);
 fs.writeFileSync(statePath, JSON.stringify(state));
 console.log("adicionados:", added.length, "| rejeitados nesta rodada:", log.length, "| catálogo:", games.length + added.length);
