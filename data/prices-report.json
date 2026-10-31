@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T09:43:09.307Z",
+ "updated": "2026-10-31T17:16:01.123Z",
  "st": {
   "ok": 303,
   "total": 324,
@@ -66,7 +66,7 @@
   ]
  },
  "ep": {
-  "ok": 30,
+  "ok": 31,
   "total": 108,
   "ofertasNaVitrine": 243,
   "via": "vitrine pública da Epic"
