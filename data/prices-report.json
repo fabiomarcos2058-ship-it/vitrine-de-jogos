@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-31T17:16:01.123Z",
+ "updated": "2026-10-31T21:39:30.882Z",
  "st": {
-  "ok": 303,
-  "total": 324,
+  "ok": 357,
+  "total": 384,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -26,7 +26,13 @@
    "j-aimlabs",
    "j-once-human",
    "j-zenless-zone-zero",
-   "j-umamusume-pretty-derby"
+   "j-umamusume-pretty-derby",
+   "j-poppy-playtime",
+   "j-warface",
+   "j-blood-strike",
+   "j-idleon---the-idle-rpg",
+   "j-albion-online",
+   "j-dcs-world-steam-edition"
   ],
   "disagree": [
    "Ghost of Tsushima: busca=3929730 \"Ghost of Tsushima: Legends (Unlock)\" lista=2215430",
@@ -44,8 +50,8 @@
   "via": "última leitura"
  },
  "xb": {
-  "ok": 262,
-  "total": 277,
+  "ok": 294,
+  "total": 309,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -81,7 +87,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 22,
+  "ok": 24,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -98,9 +104,7 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Genshin Impact",
-   "Dead Cells",
-   "Slay the Spire"
+   "Genshin Impact"
   ]
  }
 }
