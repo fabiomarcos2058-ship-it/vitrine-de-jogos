@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T06:12:53.478Z",
+ "updated": "2026-11-01T13:32:14.186Z",
  "st": {
   "ok": 357,
   "total": 384,
@@ -45,9 +45,44 @@
   ]
  },
  "ps": {
-  "ok": 229,
-  "skipped": true,
-  "via": "última leitura"
+  "ok": 275,
+  "total": 306,
+  "novosIds": 0,
+  "errors": 0,
+  "via": "páginas oficiais",
+  "miss": [
+   "Ghost of Yōtei",
+   "Avowed",
+   "Clair Obscur: Expedition 33",
+   "Yakuza 0",
+   "Call of Duty: Black Ops 6",
+   "EA Sports FC 26",
+   "Hollow Knight",
+   "Dragon Ball: The Breakers",
+   "Resident Evil Revelations 2",
+   "Umbrella Corps",
+   "Grand Theft Auto: The Trilogy – The Definitive Edition",
+   "Grand Theft Auto Online",
+   "Final Fantasy Pixel Remaster (I–VI)",
+   "Call of Duty: Black Ops 7",
+   "Terraria",
+   "Hotline Miami",
+   "Control",
+   "Remnant II",
+   "RimWorld",
+   "Sid Meier's Civilization VII",
+   "NieR Replicant ver.1.22474487139...",
+   "Dragon Quest XI S",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2",
+   "F1 25",
+   "Bloons TD 6",
+   "Rise of the Ronin",
+   "Marvel's Guardians of the Galaxy",
+   "Fall Guys",
+   "Don't Starve Together"
+  ]
  },
  "xb": {
   "ok": 294,
@@ -72,9 +107,9 @@
   ]
  },
  "ep": {
-  "ok": 31,
+  "ok": 30,
   "total": 108,
-  "ofertasNaVitrine": 243,
+  "ofertasNaVitrine": 241,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -87,14 +122,14 @@
   "miss": []
  },
  "ap": {
-  "ok": 24,
+  "ok": 23,
   "total": 38,
   "errors": 0,
   "miss": [
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil Village (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil 2 (grátis para baixar, desbloqueio dentro do app)",
-   "Assassin's Creed Shadows",
+   "Assassin's Creed Shadows (grátis para baixar, desbloqueio dentro do app)",
    "Prince of Persia: The Lost Crown (grátis para baixar, desbloqueio dentro do app)",
    "Dragon Ball Legends",
    "Dragon Ball Z: Dokkan Battle",
@@ -104,7 +139,8 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Genshin Impact"
+   "Genshin Impact",
+   "Dead Cells"
   ]
  }
 }
