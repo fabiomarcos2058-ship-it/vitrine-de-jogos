@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-02T11:16:14.793Z",
+ "updated": "2026-11-02T21:44:03.524Z",
  "st": {
-  "ok": 413,
-  "total": 444,
+  "ok": 470,
+  "total": 505,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -36,7 +36,11 @@
    "j-where-winds-meet",
    "j-guild-wars-2",
    "j-star-wars-the-old-republic",
-   "j-yu-gi-oh-duel-links"
+   "j-yu-gi-oh-duel-links",
+   "j-fishing-planet",
+   "j-nte-neverness-to-everness",
+   "j-transformice",
+   "j-sword-of-convallaria"
   ],
   "disagree": [
    "Ghost of Tsushima: busca=3929730 \"Ghost of Tsushima: Legends (Unlock)\" lista=2215430",
@@ -54,8 +58,8 @@
   "via": "última leitura"
  },
  "xb": {
-  "ok": 334,
-  "total": 349,
+  "ok": 376,
+  "total": 391,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -76,9 +80,9 @@
   ]
  },
  "ep": {
-  "ok": 28,
-  "total": 108,
-  "ofertasNaVitrine": 249,
+  "ok": 29,
+  "total": 109,
+  "ofertasNaVitrine": 253,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -91,7 +95,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 23,
+  "ok": 22,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -109,7 +113,8 @@
    "Final Fantasy IX",
    "Free Fire",
    "Genshin Impact",
-   "Dead Cells"
+   "Dead Cells",
+   "Slay the Spire"
   ]
  }
 }
