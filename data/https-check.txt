@@ -1,0 +1,28 @@
+Tue Nov  3 19:40:12 UTC 2026
+== http://zerajogos.com.br/
+code=301 redirect=https://zerajogos.com.br/ ssl_verify=0
+== http://www.zerajogos.com.br/
+code=301 redirect=https://zerajogos.com.br/ ssl_verify=0
+== https://zerajogos.com.br/
+code=200 redirect= ssl_verify=0
+== https://www.zerajogos.com.br/
+code=301 redirect=https://zerajogos.com.br/ ssl_verify=0
+== https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/
+code=301 redirect=https://zerajogos.com.br/ ssl_verify=0
+== https://zerastorecorp.netlify.app/
+code=301 redirect=https://zerajogos.com.br/ ssl_verify=0
+== https://zerajogos.com.br/jogo/elden-ring/
+code=200 redirect= ssl_verify=0
+== certificado zerajogos.com.br
+subject=CN=zerajogos.com.br
+issuer=C=US, O=Let's Encrypt, CN=YR2
+notBefore=Nov  3 18:15:11 2026 GMT
+notAfter=Feb  1 18:15:10 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:www.zerajogos.com.br, DNS:zerajogos.com.br
+== certificado www
+subject=CN=zerajogos.com.br
+issuer=C=US, O=Let's Encrypt, CN=YR2
+notBefore=Nov  3 18:15:11 2026 GMT
+notAfter=Feb  1 18:15:10 2027 GMT
+== conteúdo misto (http:// na página)
