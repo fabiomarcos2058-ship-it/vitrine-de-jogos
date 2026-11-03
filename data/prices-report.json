@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-03T06:53:11.878Z",
+ "updated": "2026-11-03T17:06:24.477Z",
  "st": {
-  "ok": 470,
-  "total": 505,
+  "ok": 525,
+  "total": 565,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -40,7 +40,12 @@
    "j-fishing-planet",
    "j-nte-neverness-to-everness",
    "j-transformice",
-   "j-sword-of-convallaria"
+   "j-sword-of-convallaria",
+   "j-sky---filhos-da-luz",
+   "j-runescape",
+   "j-dc-universe-online",
+   "j-stumble-guys",
+   "j-world-of-warships"
   ],
   "disagree": [
    "Ghost of Tsushima: busca=3929730 \"Ghost of Tsushima: Legends (Unlock)\" lista=2215430",
@@ -58,8 +63,8 @@
   "via": "última leitura"
  },
  "xb": {
-  "ok": 376,
-  "total": 391,
+  "ok": 420,
+  "total": 435,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -80,9 +85,9 @@
   ]
  },
  "ep": {
-  "ok": 29,
+  "ok": 30,
   "total": 109,
-  "ofertasNaVitrine": 252,
+  "ofertasNaVitrine": 248,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -102,7 +107,7 @@
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil Village (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil 2 (grátis para baixar, desbloqueio dentro do app)",
-   "Assassin's Creed Shadows",
+   "Assassin's Creed Shadows (grátis para baixar, desbloqueio dentro do app)",
    "Prince of Persia: The Lost Crown (grátis para baixar, desbloqueio dentro do app)",
    "Dragon Ball Legends",
    "Dragon Ball Z: Dokkan Battle",
