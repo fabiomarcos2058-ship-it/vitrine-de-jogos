@@ -8,17 +8,39 @@ service cloud.firestore {
     function friends(pid) { return get(/databases/$(database)/documents/friendships/$(pid)).data.status == 'accepted'; }
     function inGroup(gid) { return me() in get(/databases/$(database)/documents/groups/$(gid)).data.members; }
     function okText(t) { return t is string && t.size() > 0 && t.size() <= 1000; }
+    function isAdmin() { return signedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
+    function isBanned() { return signedIn() && exists(/databases/$(database)/documents/banned/$(request.auth.uid)); }
+    function ok() { return verified() && !isBanned(); }
+
+    // equipe de moderação: os documentos são criados à mão no console
+    match /admins/{uid} {
+      allow get: if signedIn() && me() == uid;
+    }
+    // contas suspensas
+    match /banned/{uid} {
+      allow get: if signedIn() && (me() == uid || isAdmin());
+      allow write: if isAdmin();
+    }
+    // denúncias: qualquer conta confirmada envia; só a moderação lê e resolve
+    match /reports/{rid} {
+      allow create: if verified() && request.resource.data.by == me()
+        && request.resource.data.reason is string && request.resource.data.reason.size() <= 60
+        && request.resource.data.note is string && request.resource.data.note.size() <= 500
+        && request.resource.data.excerpt is string && request.resource.data.excerpt.size() <= 300
+        && request.resource.data.status == 'aberta';
+      allow read, update, delete: if isAdmin();
+    }
 
     match /users/{uid} {
       allow read, write: if verified() && me() == uid;
     }
     match /profiles/{uid} {
       allow read: if signedIn();
-      allow write: if verified() && me() == uid;
+      allow write: if (ok() && me() == uid) || isAdmin();
     }
     match /handles/{handle} {
       allow read: if signedIn();
-      allow create: if verified() && request.resource.data.uid == me();
+      allow create: if ok() && request.resource.data.uid == me();
       allow delete: if signedIn() && resource.data.uid == me();
     }
     match /friendships/{pid} {
@@ -26,7 +48,7 @@ service cloud.firestore {
       allow list: if signedIn() && (me() in resource.data.users || resource.data.status == 'accepted');
       allow create: if verified() && member(pid)
         && request.resource.data.users == pid.split('_')
-        && ((request.resource.data.status == 'pending' && request.resource.data.from == me())
+        && ((request.resource.data.status == 'pending' && !isBanned() && request.resource.data.from == me())
             || (request.resource.data.status == 'blocked' && request.resource.data.blockedBy == me()));
       allow update: if verified() && member(pid)
         && request.resource.data.users == resource.data.users
@@ -38,21 +60,22 @@ service cloud.firestore {
     match /chats/{pid} {
       allow get: if member(pid);
       allow list: if signedIn() && me() in resource.data.users;
-      allow create, update: if verified() && member(pid) && friends(pid) && request.resource.data.users == pid.split('_');
+      allow create, update: if ok() && member(pid) && friends(pid) && request.resource.data.users == pid.split('_');
       match /messages/{mid} {
-        allow read: if member(pid) && friends(pid);
-        allow create: if verified() && member(pid) && friends(pid)
+        allow read: if (member(pid) && friends(pid)) || isAdmin();
+        allow create: if ok() && member(pid) && friends(pid)
           && request.resource.data.from == me() && okText(request.resource.data.text);
+        allow delete: if isAdmin();
       }
     }
     match /groups/{gid} {
-      allow read: if signedIn() && me() in resource.data.members;
-      allow create: if verified()
+      allow read: if signedIn() && (me() in resource.data.members || isAdmin());
+      allow create: if ok()
         && request.resource.data.owner == me()
         && me() in request.resource.data.members
         && request.resource.data.members.size() >= 2 && request.resource.data.members.size() <= 30
         && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 40;
-      allow update: if verified() && me() in resource.data.members && (
+      allow update: if ok() && me() in resource.data.members && (
         (resource.data.owner == me()
           && request.resource.data.members.size() <= 30
           && request.resource.data.owner in request.resource.data.members
@@ -61,11 +84,12 @@ service cloud.firestore {
         || (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members'])
             && request.resource.data.members.toSet() == resource.data.members.toSet().difference([me()].toSet()))
       );
-      allow delete: if verified() && resource.data.owner == me();
+      allow delete: if (verified() && resource.data.owner == me()) || isAdmin();
       match /messages/{mid} {
-        allow read: if signedIn() && inGroup(gid);
-        allow create: if verified() && inGroup(gid)
+        allow read: if (signedIn() && inGroup(gid)) || isAdmin();
+        allow create: if ok() && inGroup(gid)
           && request.resource.data.from == me() && okText(request.resource.data.text);
+        allow delete: if isAdmin();
       }
     }
   }

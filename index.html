@@ -726,6 +726,31 @@ a.mini { color: var(--fg); text-decoration: none; display: inline-flex; align-it
 .file-btn { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
 .file-btn:focus-within { outline: 2px solid var(--brand-edge); outline-offset: 2px; }
 .sw-list { display: contents; }
+.bub-rep { border: 0; background: none; color: inherit; opacity: .5; cursor: pointer; font-size: 12px; padding: 0 6px 0 0; min-height: 0; }
+.bub-rep:hover, .bub-rep:focus-visible { opacity: 1; }
+.rep-dlg .crop-card { max-width: 440px; }
+.rep-ex { margin: 8px 0; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--fg) 6%, transparent); font-size: 14px; overflow-wrap: anywhere; }
+.rep-why { border: 0; padding: 0; margin: 8px 0; display: grid; gap: 6px; }
+.mod-card { border: 1px solid var(--line); border-radius: 16px; padding: 14px; margin-top: 12px; background: var(--surface); }
+.mod-top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.mod-top small { margin-left: auto; color: var(--muted); }
+.mod-kind { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; padding: 3px 8px; border-radius: 999px; background: color-mix(in srgb, var(--brand) 22%, transparent); }
+.mod-line { margin: 6px 0 0; font-size: 14px; }
+.mod-line small { color: var(--muted); }
+.mod-view { margin-top: 8px; }
+.fr-btn.danger { color: #FF6B6B; border-color: color-mix(in srgb, #FF6B6B 50%, var(--line)); }
+.legal { font-size: 15px; line-height: 1.6; }
+.legal h3 { font: 800 17px var(--display); margin: 22px 0 6px; }
+.legal p, .legal li { color: var(--fg); }
+.legal ul { padding-left: 20px; margin: 6px 0; }
+.legal li { margin: 4px 0; }
+.legal a { color: var(--brand-text); }
+.lg-date { color: var(--muted) !important; font-size: 13px; margin-top: 0; }
+.lg-other { margin-top: 24px; }
+footer .lg-links a { color: var(--fg); font-weight: 600; }
+.af-terms { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.45; color: var(--muted); margin: 4px 0 12px; cursor: pointer; }
+.af-terms input { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; accent-color: var(--brand); }
+.af-terms .linkbtn { font-size: inherit; padding: 0; min-height: 0; display: inline; }
 .gav.pic { background: var(--raised); overflow: hidden; }
 .gav.pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .gi-head { display: flex; gap: 16px; align-items: center; margin-bottom: 18px; }
@@ -1026,6 +1051,7 @@ body { top: 0 !important; }
     <div>
       <p>Notas: Metascore (0–100) da crítica; em relançamentos antigos, a nota da versão original. Preços em reais nas lojas digitais brasileiras, com promoções ativas quando a loja informa. Descontos só para assinantes (PS Plus, Game Pass) e edições especiais usam o preço normal; confira o valor final na página oficial.</p>
       <p id="foot-live">Preços e promoções são conferidos automaticamente nas lojas: Steam, Microsoft Store (Xbox), Google Play e App Store várias vezes por dia, e PlayStation Store duas vezes por dia. Na Epic Games, atualizamos os jogos que aparecem na vitrine da loja e os jogos grátis da semana; os demais usam preço de referência.</p>
+      <p class="lg-links"><a href="#privacidade" data-legal="privacidade">Política de Privacidade</a> · <a href="#termos" data-legal="termos">Termos de Uso</a></p>
       <p>Mais vendidos do PlayStation e do Xbox, calendário e notas são revisados toda semana. Capas: Wikipédia. O Zera não vende jogos; os links levam às lojas oficiais.</p>
     </div>
   </div>
@@ -1744,6 +1770,7 @@ window.addEventListener("hashchange", () => {
   else if (id === "calendario") openCalendar();
   else if (id === "quiz") startQuiz();
   else if (id === "guias") openGuides();
+  else if (id === "privacidade" || id === "termos") openLegal(id);
   else if (dlg.open) closeDetail();
 });
 
@@ -1805,17 +1832,19 @@ function syncTopIcons() {
   const on = { "cart-btn": sheetKind === "cart", "chat-btn": chatKinds.includes(sheetKind), "fav-top": state.list === "fav" && !sheetKind };
   for (const [id, v] of Object.entries(on)) { const b = document.getElementById(id); if (b) { b.classList.toggle("on", v); if (id === "fav-top") b.setAttribute("aria-pressed", String(state.list === "fav")); } }
 }
-function closeSheet() { sheetKind = null; syncTopIcons(); if (sheet.open) sheet.close(); if (/^#(calendario|quiz|guias|comparar|instalar)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); }
+function closeSheet() { sheetKind = null; syncTopIcons(); if (sheet.open) sheet.close(); if (/^#(calendario|quiz|guias|comparar|instalar|privacidade|termos)/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search); }
 document.getElementById("sh-close").addEventListener("click", closeSheet);
 sheet.addEventListener("click", e => { if (e.target === sheet) closeSheet(); });
 sheet.addEventListener("close", () => { sheetKind = null; loginReason = ""; stopChat(); syncTopIcons(); applyAccent(); });
 document.addEventListener("click", e => {
+  const rm = e.target.closest("[data-repmsg]"); if (rm) { e.preventDefault(); const m = social.msgs[rm.dataset.repmsg]; if (m) openReport({ kind: "msg", target: m.from, path: m.path, excerpt: m.text || "", fileKind: m.file ? m.file.kind : "" }); return; }
   const lb = e.target.closest("[data-lightbox]"); if (lb) { e.preventDefault(); const im = lb.querySelector("img"); if (im) openLightbox(im.src); return; }
   const o = e.target.closest("[data-open]"); if (o) { e.preventDefault(); openDetail(o.dataset.open); return; }
   const t = e.target.closest("[data-tool]"); if (t) { e.preventDefault(); openTool(t.dataset.tool); }
 });
 function openTool(k) {
   closeMenu();
+  if (k === "moderation") { openModeration(); return; }
   if (k === "quiz") startQuiz();
   else if (k === "calendar") openCalendar();
   else if (k === "guides") openGuides();
@@ -2709,6 +2738,7 @@ function openLogin(mode = "login") {
       ${signup ? `<div class="field"><label for="af-name">Nome</label><input id="af-name" name="name" maxlength="30" autocomplete="nickname" required></div>` : ""}
       <div class="field"><label for="af-email">E-mail</label><input id="af-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="off" required></div>
       <div class="field"><label for="af-pass">Senha</label><div class="pw"><input id="af-pass" name="pass" type="password" minlength="6" autocomplete="${signup ? "new-password" : "current-password"}" required><button type="button" class="linkbtn" id="af-show">Ver</button></div>${signup ? `<div class="help">Pelo menos 6 caracteres.</div>` : ""}</div>
+      ${signup ? `<label class="af-terms"><input type="checkbox" id="af-terms" required><span>Li e aceito os <button type="button" class="linkbtn" data-legal="termos">Termos de Uso</button> e a <button type="button" class="linkbtn" data-legal="privacidade">Política de Privacidade</button>. Se tenho menos de 18 anos, tenho autorização dos meus responsáveis.</span></label>` : ""}
       <div id="af-msg"></div>
       <button type="submit" class="btn-brand btn-full" ${on ? "" : "disabled"}>${signup ? "Criar minha conta" : "Entrar"}</button>
       ${signup ? "" : `<button type="button" class="linkbtn" id="af-reset" ${on ? "" : "disabled"}>Esqueci minha senha</button>`}
@@ -2732,12 +2762,14 @@ function openLogin(mode = "login") {
     if (signup && !f.name.value.trim()) { msg.innerHTML = `<div class="msg err">Escreva seu nome.</div>`; f.name.focus(); return; }
     if (!email) { msg.innerHTML = `<div class="msg err">Digite seu e-mail.</div>`; f.email.focus(); return; }
     if (pass.length < 6) { msg.innerHTML = `<div class="msg err">A senha precisa ter pelo menos 6 caracteres.</div>`; f.pass.focus(); return; }
+    if (signup && !document.getElementById("af-terms").checked) { msg.innerHTML = `<div class="msg err">Para criar a conta, aceite os Termos de Uso e a Política de Privacidade.</div>`; return; }
     btn.disabled = true; btn.textContent = signup ? "Criando conta…" : "Entrando…"; msg.innerHTML = "";
     try {
       if (signup) {
         const name = f.name.value.trim();
         const cred = await fb.A.createUserWithEmailAndPassword(fb.auth, email, pass);
         await fb.A.updateProfile(cred.user, { displayName: name }).catch(() => {});
+        profile.termsAt = new Date().toISOString();
         await sendVerify(cred.user);
         if (!profile.name) profile.name = name;
         if (!profile.user) profile.user = name.normalize("NFD").replace(/[^\w\s.]/g, "").trim().toLowerCase().replace(/\s+/g, "_").slice(0, 20);
@@ -2785,7 +2817,7 @@ document.getElementById("chat-btn").addEventListener("click", () => openChats())
 
 // ================== AMIGOS E CONVERSAS ==================
 // Firestore: profiles/{uid} (perfil público), handles/{@} → uid, friendships/{uidA_uidB}, chats/{uidA_uidB}/messages
-const social = { ready: false, denied: false, fr: [], chats: {}, chatsLoaded: false, groups: {}, groupsLoaded: false, lastCount: -1, profiles: {}, unsub: [], chatUnsub: null, chatWith: null, firstFr: true };
+const social = { msgs: {}, admin: false, banned: null, openReports: 0, ready: false, denied: false, fr: [], chats: {}, chatsLoaded: false, groups: {}, groupsLoaded: false, lastCount: -1, profiles: {}, unsub: [], chatUnsub: null, chatWith: null, firstFr: true };
 const pairId = (a, b) => [a, b].sort().join("_");
 const otherOf = f => f.users.find(u => u !== user.uid);
 const tms = t => (t && t.toMillis) ? t.toMillis() : 0;
@@ -2842,6 +2874,7 @@ function startSocial() {
     if (err && err.message === "taken") { profile.user = ""; saveProfile(); toast("Seu nome de usuário já é de outra pessoa. Escolha outro no perfil."); }
   });
   publishProfile();
+  checkModeration();
   social.unsub.push(F.onSnapshot(F.query(F.collection(fb.db, "friendships"), F.where("users", "array-contains", me)), snap => {
     social.denied = false; social.ready = true;
     const prev = new Map(social.fr.map(f => [f.id, f]));
@@ -3006,11 +3039,12 @@ function openChat(uid) {
   const box = document.getElementById("chat-box");
   const q = F.query(F.collection(fb.db, "chats", pid, "messages"), F.orderBy("at", "desc"), F.limit(100));
   social.chatUnsub = F.onSnapshot(q, snap => {
-    const msgs = snap.docs.map(d => d.data({ serverTimestamps: "estimate" })).reverse();
+    const msgs = snap.docs.map(d => ({ id: d.id, ...d.data({ serverTimestamps: "estimate" }) })).reverse();
+    msgs.forEach(m => { social.msgs[m.id] = { ...m, path: `chats/${pid}/messages/${m.id}` }; });
     if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Diga oi para ${esc(p.name || "seu amigo")}! 👋</p>`; markRead(pid); return; }
     const nearBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
     let last = "";
-    box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; last = day; return sep + `<div class="bub${m.from === me ? " me" : ""}${m.file ? " has-file" : ""}">${bubbleBody(m)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+    box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; last = day; return sep + `<div class="bub${m.from === me ? " me" : ""}${m.file ? " has-file" : ""}">${bubbleBody(m)}<time>${m.from !== me ? `<button type="button" class="bub-rep" data-repmsg="${m.id}" aria-label="Denunciar mensagem" title="Denunciar">⚑</button>` : ""}${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
     if (nearBottom || snap.docChanges().some(c => c.type === "added")) box.scrollTop = box.scrollHeight;
     markRead(pid);
   }, err => { box.innerHTML = `<div class="msg info" style="margin:auto">${err && err.code === "permission-denied" ? "Só dá para conversar com amigos. Se vocês acabaram de virar amigos, tente de novo em instantes." : "Não foi possível carregar as mensagens agora."}</div>`; });
@@ -3051,13 +3085,15 @@ async function openFriendProfile(uid) {
     </div>
     <div class="fr-sec"><h4>Favoritos de ${first}${fv.length ? " · " + fv.length : ""}</h4>${fv.length ? `<div class="fr-favs">${fv.slice(0, 24).map(g => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}</span></button>`).join("")}</div>` : `<div class="fr-empty">Nenhum favorito ainda.</div>`}</div>
     <div class="fr-sec"><h4>Carrinho de ${first}${cv.length ? " · " + cv.length : ""}</h4>${cv.length ? `<div class="fr-favs">${cv.slice(0, 24).map(({ g, k }) => `<button type="button" class="fr-fav" data-open="${g.id}">${coverHTML(g)}<span>${esc(g.t)}<small class="fr-store">${esc(storeLabel(k))}</small></span></button>`).join("")}</div>` : `<div class="fr-empty">O carrinho está vazio.</div>`}</div>
-    ${f ? `<div class="pactions" style="margin-top:22px">${f.status === "accepted" ? `<button type="button" class="btn-ghost sm" id="fp-rem">Desfazer amizade</button>` : ""}${f.status !== "blocked" ? `<button type="button" class="btn-ghost sm danger" id="fp-block">Bloquear</button>` : ""}</div><div id="fp-msg"></div>` : ""}`);
+    ${f ? `<div class="pactions" style="margin-top:22px">${f.status === "accepted" ? `<button type="button" class="btn-ghost sm" id="fp-rem">Desfazer amizade</button>` : ""}${f.status !== "blocked" ? `<button type="button" class="btn-ghost sm danger" id="fp-block">Bloquear</button>` : ""}<button type="button" class="btn-ghost sm" id="fp-report">⚑ Denunciar perfil</button></div><div id="fp-msg"></div>` : `<div class="pactions" style="margin-top:22px"><button type="button" class="btn-ghost sm" id="fp-report">⚑ Denunciar perfil</button></div>`}
+    ${social.admin ? `<div class="pactions"><button type="button" class="btn-ghost sm" data-tool="moderation">Abrir moderação</button></div>` : ""}`);
   setSheetBg(bgCSS(p));
   const F = fb.F, ref = F.doc(fb.db, "friendships", pid);
   if (F.getCountFromServer) F.getCountFromServer(F.query(F.collection(fb.db, "friendships"), F.where("users", "array-contains", uid), F.where("status", "==", "accepted")))
     .then(c => { const n = c.data().count, el = document.getElementById("fp-nfr"); if (el && sheetKind === "friend") { el.textContent = n; el.nextElementSibling.textContent = n === 1 ? "Amigo" : "Amigos"; } }).catch(() => {});
   const on = (id, fn) => { const b = document.getElementById(id); if (b) b.addEventListener("click", fn); };
   on("fp-back", openFriends);
+  on("fp-report", () => openReport({ kind: "profile", target: uid, excerpt: [p.name, p.user ? "@" + p.user : "", p.bio].filter(Boolean).join(" · ") }));
   on("fp-chat", () => openChat(uid));
   on("fp-acc", async () => { try { await F.updateDoc(ref, { status: "accepted", acceptedAt: F.serverTimestamp() }); toast("Agora vocês são amigos!"); openChat(uid); } catch (e) { toast("Não foi possível aceitar agora"); } });
   on("fp-rem", async e => {
@@ -3296,7 +3332,7 @@ function bindChatForm(send) {
     if (cap) f.auto = false; else f.auto = true;
     toast("Enviando…");
     try { await send({ text: cap || (f.kind === "file" ? "📎 " + f.name : FILE_LABEL[f.kind]), file: f }); }
-    catch (err) { if (cap) inp.value = cap; toast(err && /size|exceeds|maximum/i.test(String(err.message)) ? "Esse arquivo ficou grande demais para enviar." : "Não foi possível enviar. Verifique sua internet."); }
+    catch (err) { if (cap) inp.value = cap; toast(social.banned ? "Sua conta está suspensa: não dá para enviar mensagens." : err && /size|exceeds|maximum/i.test(String(err.message)) ? "Esse arquivo ficou grande demais para enviar." : "Não foi possível enviar. Verifique sua internet."); }
   };
   document.getElementById("ch-att").addEventListener("click", () => fileIn.click());
   fileIn.addEventListener("change", () => { const file = fileIn.files && fileIn.files[0]; fileIn.value = ""; if (file) sendFile(file); });
@@ -3328,8 +3364,106 @@ function bindChatForm(send) {
     e.preventDefault();
     const text = inp.value.trim(); if (!text) return;
     inp.value = ""; inp.focus();
-    try { await send({ text }); } catch (err) { inp.value = text; toast("Não foi possível enviar. Verifique sua internet."); }
+    try { await send({ text }); } catch (err) { inp.value = text; toast(social.banned ? "Sua conta está suspensa: não dá para enviar mensagens." : "Não foi possível enviar. Verifique sua internet."); }
   });
+}
+
+// ================== DENÚNCIAS E MODERAÇÃO ==================
+// Firestore: reports/{id} (só a moderação lê), admins/{uid} (equipe), banned/{uid} (contas suspensas)
+const REPORT_REASONS = ["Ofensa ou assédio", "Conteúdo sexual ou nudez", "Golpe, spam ou propaganda", "Violência ou ameaça", "Dados pessoais de alguém", "Outro"];
+const REPORT_KIND = { msg: "Mensagem", profile: "Perfil", group: "Grupo" };
+function openReport(info) {
+  if (!acct()) return;
+  if (info.target === user.uid) { toast("Esse conteúdo é seu 🙂"); return; }
+  const pid = pairId(user.uid, info.target), fr = social.fr.find(x => x.id === pid);
+  const d = document.createElement("dialog"); d.className = "crop rep-dlg"; d.setAttribute("aria-label", "Denunciar");
+  d.innerHTML = `<form class="crop-card form" novalidate>
+    <h3>Denunciar ${REPORT_KIND[info.kind].toLowerCase()}</h3>
+    <p class="crop-help">A denúncia é anônima para a outra pessoa. A equipe do Zera vai analisar o conteúdo.</p>
+    ${info.excerpt || info.fileKind ? `<div class="rep-ex">${info.fileKind ? `<b>${FILE_LABEL[info.fileKind] || "Arquivo"}</b> ` : ""}${esc(cleanText(String(info.excerpt || "")).slice(0, 200))}</div>` : ""}
+    <fieldset class="rep-why"><legend class="lbl">Qual o problema?</legend>${REPORT_REASONS.map((r, i) => `<label class="pick-row"><input type="radio" name="why" value="${esc(r)}" ${i ? "" : ""}><b>${esc(r)}</b></label>`).join("")}</fieldset>
+    <div class="field"><label for="rep-note">Quer contar mais? (opcional)</label><textarea id="rep-note" maxlength="500" placeholder="O que aconteceu?"></textarea></div>
+    ${fr && fr.status !== "blocked" ? `<label class="af-terms"><input type="checkbox" id="rep-block"><span>Bloquear essa pessoa também</span></label>` : ""}
+    <div id="rep-msg"></div>
+    <div class="q-nav"><button type="button" class="btn-ghost" data-x="cancel">Cancelar</button><button type="submit" class="btn-brand">Enviar denúncia</button></div>
+  </form>`;
+  document.body.appendChild(d); d.showModal();
+  const close = () => { if (d.open) d.close(); d.remove(); };
+  d.addEventListener("cancel", e => { e.preventDefault(); close(); });
+  d.querySelector("[data-x=cancel]").addEventListener("click", close);
+  d.querySelector("form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const why = d.querySelector("input[name=why]:checked"), msg = d.querySelector("#rep-msg");
+    if (!why) { msg.innerHTML = `<div class="msg err">Escolha o motivo da denúncia.</div>`; return; }
+    const btn = d.querySelector("[type=submit]"); btn.disabled = true;
+    const F = fb.F;
+    try {
+      await F.addDoc(F.collection(fb.db, "reports"), { by: user.uid, target: info.target || "", kind: info.kind, path: info.path || "", excerpt: String(info.excerpt || "").slice(0, 300), fileKind: info.fileKind || "", reason: why.value, note: d.querySelector("#rep-note").value.trim().slice(0, 500), status: "aberta", at: F.serverTimestamp() });
+      const bl = d.querySelector("#rep-block");
+      if (bl && bl.checked) await F.setDoc(F.doc(fb.db, "friendships", pid), { users: pid.split("_"), from: fr.from || user.uid, to: fr.to || info.target, status: "blocked", blockedBy: user.uid, blockedAt: F.serverTimestamp() }).catch(() => {});
+      close(); toast("Denúncia enviada. Obrigado por ajudar a manter o Zera seguro.");
+    } catch (err) { btn.disabled = false; msg.innerHTML = `<div class="msg err">${err && err.code === "permission-denied" ? "As denúncias ainda estão sendo ativadas no servidor. Tente de novo mais tarde." : "Não foi possível enviar agora. Verifique sua internet."}</div>`; }
+  });
+}
+async function checkModeration() {
+  social.admin = false; social.banned = null;
+  if (!acct() || !fb) return;
+  const F = fb.F;
+  try { const b = await F.getDoc(F.doc(fb.db, "banned", user.uid)); social.banned = b.exists() ? b.data() : null; } catch (e) {}
+  try { const a = await F.getDoc(F.doc(fb.db, "admins", user.uid)); social.admin = a.exists(); } catch (e) {}
+  if (social.banned) toast("Sua conta está suspensa por violar os Termos de Uso. Conversas e amizades estão bloqueadas.");
+  if (social.admin) { try { const r = await F.getDocs(F.query(F.collection(fb.db, "reports"), F.orderBy("at", "desc"), F.limit(100))); social.openReports = r.docs.filter(x => x.data().status === "aberta").length; } catch (e) {} }
+  if (menu.open) renderMenu();
+  renderSocialBadges();
+}
+let modTab = "aberta";
+async function openModeration() {
+  if (!social.admin) { toast("Só a equipe de moderação tem acesso"); return; }
+  const F = fb.F;
+  openSheet("moderation", "Equipe Zera", "Moderação", `<div class="theme-seg" role="group" aria-label="Filtro"><button type="button" data-mtab="aberta" aria-pressed="${modTab === "aberta"}">Abertas</button><button type="button" data-mtab="feita" aria-pressed="${modTab !== "aberta"}">Resolvidas</button></div><div id="mod-list"><p class="lede-sm" style="margin-top:14px">Carregando denúncias…</p></div>`);
+  shBody.querySelectorAll("[data-mtab]").forEach(b => b.addEventListener("click", () => { modTab = b.dataset.mtab; openModeration(); }));
+  let docs = [];
+  try { docs = (await F.getDocs(F.query(F.collection(fb.db, "reports"), F.orderBy("at", "desc"), F.limit(150)))).docs.map(x => ({ id: x.id, ...x.data() })); }
+  catch (e) { document.getElementById("mod-list").innerHTML = `<div class="msg err">Não foi possível carregar as denúncias. Confira se as regras novas do Firestore foram publicadas.</div>`; return; }
+  social.openReports = docs.filter(r => r.status === "aberta").length; renderSocialBadges();
+  const list = docs.filter(r => modTab === "aberta" ? r.status === "aberta" : r.status !== "aberta");
+  await loadProfiles(list.flatMap(r => [r.by, r.target]).filter(Boolean));
+  let banned = {};
+  await Promise.all([...new Set(list.map(r => r.target).filter(Boolean))].map(async u => { try { banned[u] = (await F.getDoc(F.doc(fb.db, "banned", u))).exists(); } catch (e) {} }));
+  const who = u => { const p = social.profiles[u] || {}; return `${esc(p.name || "Jogador")}${p.user ? ` <small>@${esc(p.user)}</small>` : ""}`; };
+  const box = document.getElementById("mod-list"); if (!box) return;
+  box.innerHTML = list.length ? list.map(r => `<div class="mod-card" data-rid="${r.id}">
+      <div class="mod-top"><span class="mod-kind">${REPORT_KIND[r.kind] || r.kind}</span><b>${esc(r.reason || "")}</b><small>${r.at && r.at.toMillis ? fmtWhen(r.at.toMillis()) : ""}</small></div>
+      <p class="mod-line">Denunciado: ${r.target ? who(r.target) : "—"}${banned[r.target] ? ' <span class="own-tag" style="background:#FF5D5D;color:#fff">SUSPENSO</span>' : ""}</p>
+      <p class="mod-line">Por: ${r.by ? who(r.by) : "—"}</p>
+      ${r.excerpt || r.fileKind ? `<div class="rep-ex">${r.fileKind ? `<b>${FILE_LABEL[r.fileKind] || "Arquivo"}</b> ` : ""}${esc(r.excerpt || "")}</div>` : ""}
+      ${r.note ? `<p class="mod-line"><i>“${esc(r.note)}”</i></p>` : ""}
+      ${r.status !== "aberta" ? `<p class="mod-line"><small>Resultado: ${esc(r.action || r.status)}</small></p>` : ""}
+      <div class="mod-view" hidden></div>
+      <div class="pactions">
+        ${r.kind === "msg" && r.path ? `<button type="button" class="fr-btn" data-mact="view">Ver mensagem</button><button type="button" class="fr-btn" data-mact="delmsg">Apagar mensagem</button>` : ""}
+        ${r.kind === "group" && r.path ? `<button type="button" class="fr-btn" data-mact="delgroup">Apagar grupo</button>` : ""}
+        ${r.target ? `<button type="button" class="fr-btn" data-mact="prof">Ver perfil</button><button type="button" class="fr-btn" data-mact="clean">Limpar perfil</button><button type="button" class="fr-btn ${banned[r.target] ? "" : "danger"}" data-mact="${banned[r.target] ? "unban" : "ban"}">${banned[r.target] ? "Reativar conta" : "Suspender conta"}</button>` : ""}
+        ${r.status === "aberta" ? `<button type="button" class="fr-btn" data-mact="archive">Arquivar sem ação</button>` : ""}
+      </div></div>`).join("") : `<div class="fr-empty" style="margin-top:14px">${modTab === "aberta" ? "Nenhuma denúncia aberta. 🎉" : "Nenhuma denúncia resolvida ainda."}</div>`;
+  box.onclick = async e => {
+    const b = e.target.closest("[data-mact]"); if (!b) return;
+    const card = b.closest("[data-rid]"), r = list.find(x => x.id === card.dataset.rid), act = b.dataset.mact;
+    const done = async action => { await F.updateDoc(F.doc(fb.db, "reports", r.id), { status: "resolvida", action, by_mod: user.uid, doneAt: F.serverTimestamp() }); };
+    const confirmBtn = () => { if (b.dataset.confirm) return true; b.dataset.confirm = "1"; b.textContent = "Toque de novo para confirmar"; return false; };
+    try {
+      if (act === "view") {
+        const v = card.querySelector(".mod-view"); const snap = await F.getDoc(F.doc(fb.db, ...r.path.split("/")));
+        v.hidden = false; v.innerHTML = snap.exists() ? `<div class="bub has-file" style="max-width:100%">${bubbleBody({ ...snap.data(), file: snap.data().file ? { ...snap.data().file, auto: false } : null })}</div>` : `<div class="fr-empty">A mensagem já foi apagada.</div>`;
+      } else if (act === "prof") openFriendProfile(r.target);
+      else if (act === "delmsg") { if (!confirmBtn()) return; await F.deleteDoc(F.doc(fb.db, ...r.path.split("/"))); await done("mensagem apagada"); toast("Mensagem apagada"); openModeration(); }
+      else if (act === "delgroup") { if (!confirmBtn()) return; await F.deleteDoc(F.doc(fb.db, ...r.path.split("/"))); await done("grupo apagado"); toast("Grupo apagado"); openModeration(); }
+      else if (act === "clean") { if (!confirmBtn()) return; await F.updateDoc(F.doc(fb.db, "profiles", r.target), { name: "Usuário", bio: "", img: { avatar: "", banner: "", bg: "" }, bgChar: null }); await done("perfil limpo"); toast("Perfil limpo"); openModeration(); }
+      else if (act === "ban") { if (!confirmBtn()) return; await F.setDoc(F.doc(fb.db, "banned", r.target), { by: user.uid, reason: r.reason || "", at: F.serverTimestamp() }); await done("conta suspensa"); toast("Conta suspensa"); openModeration(); }
+      else if (act === "unban") { await F.deleteDoc(F.doc(fb.db, "banned", r.target)); toast("Conta reativada"); openModeration(); }
+      else if (act === "archive") { await done("arquivada sem ação"); toast("Denúncia arquivada"); openModeration(); }
+    } catch (err) { toast(err && err.code === "permission-denied" ? "Sem permissão: confira as regras do Firestore" : "Não foi possível fazer isso agora"); }
+  };
 }
 
 // ================== CONVERSAS E GRUPOS ==================
@@ -3344,6 +3478,7 @@ function ago(ms) {
 function openChats() {
   if (!acct()) { requireAccount("Crie uma conta grátis ou entre para conversar com seus amigos.", openChats); return; }
   openSheet("chats", "Social", "Conversas", `
+    ${social.banned ? `<div class="msg err" style="margin-bottom:12px">Sua conta está suspensa por violar os <button type="button" class="linkbtn" data-legal="termos">Termos de Uso</button>. Você não pode enviar mensagens.</div>` : ""}
     <div class="cv-actions"><button type="button" class="btn-brand sm" id="cv-new">＋ Novo grupo</button><button type="button" class="btn-ghost sm" data-tool="friends">Amigos e pedidos</button></div>
     <div id="cv-list"></div>
     <p class="fr-safe">Nunca envie senha, endereço, telefone ou dados de pagamento pelas conversas.</p>`);
@@ -3408,11 +3543,12 @@ function openGroup(gid) {
   const box = document.getElementById("chat-box");
   const q = F.query(F.collection(fb.db, "groups", gid, "messages"), F.orderBy("at", "desc"), F.limit(100));
   social.chatUnsub = F.onSnapshot(q, snap => {
-    const msgs = snap.docs.map(d => d.data({ serverTimestamps: "estimate" })).reverse();
+    const msgs = snap.docs.map(d => ({ id: d.id, ...d.data({ serverTimestamps: "estimate" }) })).reverse();
+    msgs.forEach(m => { social.msgs[m.id] = { ...m, path: `groups/${gid}/messages/${m.id}` }; });
     loadProfiles(msgs.map(m => m.from)).then(() => {
       if (!msgs.length) { box.innerHTML = `<p class="lede-sm" style="margin:auto;text-align:center">Mande a primeira mensagem do grupo! 👋</p>`; markRead("g_" + gid); return; }
       let last = "", prevFrom = "";
-      box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; if (sep) prevFrom = ""; last = day; const mine = m.from === me; const who = !mine && m.from !== prevFrom ? `<span class="who">${esc(pname(m.from))}</span>` : ""; prevFrom = m.from; return sep + `<div class="bub${mine ? " me" : ""}${m.file ? " has-file" : ""}">${who}${bubbleBody(m)}<time>${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
+      box.innerHTML = msgs.map(m => { const ms = tms(m.at) || Date.now(); const day = dayLabel(ms); const sep = day !== last ? `<div class="chat-day">${day}</div>` : ""; if (sep) prevFrom = ""; last = day; const mine = m.from === me; const who = !mine && m.from !== prevFrom ? `<span class="who">${esc(pname(m.from))}</span>` : ""; prevFrom = m.from; return sep + `<div class="bub${mine ? " me" : ""}${m.file ? " has-file" : ""}">${who}${bubbleBody(m)}<time>${!mine ? `<button type="button" class="bub-rep" data-repmsg="${m.id}" aria-label="Denunciar mensagem" title="Denunciar">⚑</button>` : ""}${fmtWhen(ms).slice(-5)}</time></div>`; }).join("");
       box.scrollTop = box.scrollHeight;
       markRead("g_" + gid);
     });
@@ -3438,10 +3574,11 @@ async function openGroupInfo(gid) {
     <div class="fr-sec"><h4>Membros · ${(g.members || []).length}</h4>${(g.members || []).map(u => { const p = profLike(social.profiles[u]); return `<div class="fr-row"><span class="fr-who" style="cursor:default">${avatarHTML(40, p)}<span><b>${esc(u === me ? "Você" : p.name || "Jogador")}</b><small>${p.user ? "@" + esc(p.user) : ""}</small></span></span><span class="fr-act">${u === g.owner ? '<span class="own-tag">DONO</span>' : ""}${owner && u !== me ? `<button type="button" class="fr-btn" data-gkick="${u}">Remover</button>` : ""}</span></div>`; }).join("")}</div>
     ${owner ? `<div class="fr-sec"><h4>Chamar mais amigos</h4>${friendPicker(g.members || [])}<div class="pactions" style="margin-top:10px"><button type="button" class="btn-ghost sm" id="gi-add">Adicionar escolhidos</button></div></div>` : ""}
     <div id="gi-msg"></div>
-    <div class="pactions" style="margin-top:20px"><button type="button" class="btn-ghost sm" id="gi-back">← Voltar ao grupo</button><button type="button" class="btn-ghost sm danger" id="gi-leave">Sair do grupo</button></div>`);
+    <div class="pactions" style="margin-top:20px"><button type="button" class="btn-ghost sm" id="gi-back">← Voltar ao grupo</button><button type="button" class="btn-ghost sm danger" id="gi-leave">Sair do grupo</button>${owner ? "" : `<button type="button" class="btn-ghost sm" id="gi-report">⚑ Denunciar grupo</button>`}</div>`);
   const ref = F.doc(fb.db, "groups", gid), msg = document.getElementById("gi-msg");
   const fail = () => { msg.innerHTML = `<div class="msg err">Não foi possível fazer isso agora.</div>`; };
   document.getElementById("gi-back").addEventListener("click", () => openGroup(gid));
+  const grp = document.getElementById("gi-report"); if (grp) grp.addEventListener("click", () => openReport({ kind: "group", target: g.owner, path: "groups/" + gid, excerpt: [g.name, g.desc].filter(Boolean).join(" · ") }));
   const gf = document.getElementById("gi-form");
   if (gf) {
     const di = document.getElementById("gi-desc");
@@ -3479,6 +3616,97 @@ async function openGroupInfo(gid) {
   });
 }
 
+// ================== PRIVACIDADE E TERMOS ==================
+const LEGAL_DATE = "3 de novembro de 2026";
+const LEGAL_CONTACT = `pelo Instagram <a href="https://www.instagram.com/zera.corporation/" target="_blank" rel="noopener">@zera.corporation</a>`;
+const LEGAL = {
+  privacidade: ["Política de Privacidade", `
+    <p class="lg-date">Última atualização: ${LEGAL_DATE}</p>
+    <p>Esta política explica quais dados o Zera usa, por que e como você controla eles, de acordo com a Lei Geral de Proteção de Dados (LGPD, Lei 13.709/2018).</p>
+    <h3>1. Quem somos</h3>
+    <p>O Zera é um site que compara notas e preços de jogos nas lojas digitais brasileiras. O Zera não vende jogos: os links levam às lojas oficiais. Fale com a gente ${LEGAL_CONTACT}.</p>
+    <h3>2. O que dá para usar sem conta</h3>
+    <p>Você pode ver o catálogo, os preços e as promoções sem criar conta. Nesse caso, favoritos, filtros, tema e idioma ficam salvos só no seu aparelho (no armazenamento do navegador) e não são enviados para nós.</p>
+    <h3>3. Dados que coletamos quando você cria uma conta</h3>
+    <ul>
+      <li><b>Dados da conta:</b> e-mail, senha (guardada de forma protegida pelo Google Firebase; nós não temos acesso a ela), data de criação da conta e confirmação do e-mail.</li>
+      <li><b>Perfil público:</b> nome, nome de usuário (@), bio, foto, capa, cores, personagem e jogo favorito, onde você mais joga e gênero favorito.</li>
+      <li><b>Uso do site:</b> favoritos, carrinho e cores usadas recentemente, para sincronizar entre aparelhos.</li>
+      <li><b>Social:</b> pedidos de amizade, amizades, bloqueios, grupos, mensagens e arquivos enviados no chat (fotos, áudios, vídeos e outros).</li>
+      <li><b>Denúncias:</b> quando alguém denuncia uma mensagem ou perfil, guardamos a denúncia, o motivo e um trecho do conteúdo denunciado.</li>
+    </ul>
+    <h3>4. Para que usamos</h3>
+    <ul>
+      <li>Criar e manter sua conta e salvar suas preferências (execução do serviço que você pediu).</li>
+      <li>Permitir amizades, conversas e grupos entre usuários.</li>
+      <li>Manter o site seguro: analisar denúncias, apagar conteúdo que viola os Termos e suspender contas (legítimo interesse e cumprimento de obrigações legais).</li>
+    </ul>
+    <p>Não vendemos seus dados e não usamos seus dados para anúncios personalizados.</p>
+    <h3>5. Quem pode ver o quê</h3>
+    <ul>
+      <li><b>Qualquer pessoa com conta no Zera:</b> seu perfil público, seus favoritos, seu carrinho, a data de criação da conta e o número de amigos.</li>
+      <li><b>Seus amigos e membros dos seus grupos:</b> as mensagens e arquivos das conversas de que participam.</li>
+      <li><b>Equipe de moderação do Zera:</b> conteúdo denunciado (mensagens, arquivos e perfis), apenas para analisar a denúncia.</li>
+    </ul>
+    <h3>6. Serviços de terceiros</h3>
+    <ul>
+      <li><b>Google Firebase</b> (Google LLC): login, banco de dados das contas, perfis e conversas. Os dados podem ficar em servidores fora do Brasil, com as proteções do Google.</li>
+      <li><b>GitHub Pages e Netlify:</b> hospedagem do site. Eles podem registrar dados técnicos de acesso, como endereço IP e navegador.</li>
+      <li><b>Google Tradutor:</b> só é carregado se você escolher outro idioma no menu.</li>
+      <li><b>Imagens e preços:</b> capas, cenas e preços vêm das próprias lojas e da Wikipédia; ao abrir o site, seu navegador pode carregar imagens desses endereços.</li>
+    </ul>
+    <h3>7. Por quanto tempo guardamos</h3>
+    <p>Enquanto sua conta existir. Ao excluir a conta (Meu perfil → Excluir conta), apagamos seu perfil, nome de usuário, favoritos e carrinho. Mensagens já enviadas em conversas e grupos podem continuar visíveis para as outras pessoas da conversa. Denúncias e registros de suspensão podem ser mantidos pelo tempo necessário para a segurança do site e para cumprir a lei.</p>
+    <h3>8. Seus direitos</h3>
+    <p>Pela LGPD, você pode pedir confirmação e acesso aos seus dados, correção, exclusão, portabilidade e informações sobre com quem compartilhamos. A maior parte você faz sozinho no site (editar perfil e excluir conta). Para o resto, fale com a gente ${LEGAL_CONTACT}.</p>
+    <h3>9. Crianças e adolescentes</h3>
+    <p>Menores de 18 anos só devem criar conta com o conhecimento e a autorização dos pais ou responsáveis. Menores de 12 anos não devem criar conta. Se um responsável quiser que a conta de um menor seja apagada, é só falar com a gente.</p>
+    <h3>10. Segurança</h3>
+    <p>Usamos login com e-mail confirmado e regras de acesso no banco de dados para que cada pessoa veja só o que pode ver. Nenhum sistema é 100% seguro: nunca envie senhas, documentos, endereço, telefone ou dados de pagamento pelo chat.</p>
+    <h3>11. Mudanças</h3>
+    <p>Se esta política mudar, atualizamos a data acima e avisamos no site quando a mudança for importante.</p>`],
+  termos: ["Termos de Uso", `
+    <p class="lg-date">Última atualização: ${LEGAL_DATE}</p>
+    <p>Ao usar o Zera, você concorda com estes termos. Se não concordar, não use o site.</p>
+    <h3>1. O que é o Zera</h3>
+    <p>Um comparador de notas e preços de jogos. Os preços e promoções são coletados automaticamente das lojas e podem estar desatualizados ou conter erros. O preço que vale é sempre o da loja na hora da compra. O Zera não vende jogos e não se responsabiliza por compras feitas nas lojas.</p>
+    <h3>2. Sua conta</h3>
+    <ul>
+      <li>Você é responsável pela sua conta e pela sua senha. Use um e-mail que seja seu.</li>
+      <li>Menores de 18 anos só podem usar contas com autorização dos pais ou responsáveis. Menores de 12 anos não devem criar conta.</li>
+      <li>Uma conta por pessoa. Não finja ser outra pessoa ou empresa.</li>
+    </ul>
+    <h3>3. O que não é permitido</h3>
+    <ul>
+      <li>Ofender, ameaçar, perseguir ou humilhar outras pessoas; discurso de ódio ou preconceito.</li>
+      <li>Enviar conteúdo sexual, pornográfico ou de nudez; qualquer conteúdo sexual envolvendo menores leva a banimento imediato e comunicação às autoridades.</li>
+      <li>Conteúdo violento, chocante ou que incentive automutilação ou crimes.</li>
+      <li>Golpes, spam, propagandas, links maliciosos, vírus ou pedidos de senha, pagamento ou dados pessoais.</li>
+      <li>Compartilhar dados pessoais de outras pessoas sem permissão.</li>
+      <li>Enviar arquivos que você não tem direito de compartilhar (pirataria).</li>
+      <li>Tentar invadir, sobrecarregar ou burlar a segurança do site.</li>
+    </ul>
+    <h3>4. Denúncias e moderação</h3>
+    <p>Qualquer pessoa pode denunciar mensagens, perfis e grupos. A equipe do Zera pode ver o conteúdo denunciado, apagar mensagens, limpar perfis e suspender contas que violem estes termos, com ou sem aviso prévio, conforme a gravidade.</p>
+    <h3>5. Seu conteúdo</h3>
+    <p>O que você publica (perfil, mensagens e arquivos) continua sendo seu. Você permite que o Zera guarde e mostre esse conteúdo para as pessoas certas, apenas para o site funcionar.</p>
+    <h3>6. Marcas e imagens</h3>
+    <p>Nomes de jogos, capas, artes e marcas pertencem aos seus donos e são usados só para identificar os jogos. O Zera não tem ligação oficial com as lojas ou empresas citadas.</p>
+    <h3>7. Disponibilidade</h3>
+    <p>O site é oferecido como está e pode passar por mudanças, falhas ou ficar fora do ar. Recursos podem ser alterados ou removidos.</p>
+    <h3>8. Mudanças e contato</h3>
+    <p>Estes termos podem mudar; a data acima mostra a versão atual. Dúvidas: ${LEGAL_CONTACT}. Vale a lei brasileira.</p>`]
+};
+let legalBack = null;
+function openLegal(k) {
+  const L = LEGAL[k]; if (!L) return;
+  if (sheetKind === "login") legalBack = loginMode; else if (sheetKind !== "legal") legalBack = null;
+  openSheet("legal", "Zera", L[0], `<div class="legal">${L[1]}<p class="lg-other"><button type="button" class="linkbtn" data-legal="${k === "termos" ? "privacidade" : "termos"}">Ler também: ${k === "termos" ? "Política de Privacidade" : "Termos de Uso"}</button></p>${legalBack ? `<div class="q-nav"><span></span><button type="button" class="btn-brand" id="lg-back">Voltar ao cadastro</button></div>` : ""}</div>`);
+  const bk = document.getElementById("lg-back"); if (bk) bk.addEventListener("click", () => { const m = legalBack; legalBack = null; openLogin(m || "signup"); });
+  if (location.hash !== "#" + k) history.replaceState(null, "", "#" + k);
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-legal]"); if (b) { e.preventDefault(); openLegal(b.dataset.legal); } });
+
 // ---------- menu lateral ----------
 const menu = document.getElementById("menu");
 const menuBody = document.getElementById("menu-body");
@@ -3500,6 +3728,7 @@ function renderMenu() {
       <button type="button" class="dr-item" data-tool="profile"><span class="ic" aria-hidden="true" style="padding:0;overflow:hidden">${avatarHTML(34)}</span><span>${user ? esc(profile.name || "Meu perfil") : "Entrar ou criar conta"}<small>${user ? "Ver e editar seu perfil" : "Salve perfil, favoritos e carrinho"}</small></span></button>
       ${tool('data-tool="chats"', "chat", "Conversas", !acct() ? "Converse com amigos e grupos" : sc.unread ? `${sc.unread} ${sc.unread === 1 ? "conversa nova" : "conversas novas"}` : "Amigos e grupos", sc.unread ? '<span class="dot"></span>' : "")}
       ${tool('data-tool="friends"', "users", "Amigos", !acct() ? "Entre para adicionar amigos" : sc.req ? `${sc.req} ${sc.req === 1 ? "pedido de amizade" : "pedidos de amizade"}` : `${nFr} ${nFr === 1 ? "amigo" : "amigos"}`, sc.req ? '<span class="dot"></span>' : "")}
+      ${social.admin ? tool('data-tool="moderation"', "spark", "Moderação", social.openReports ? `${social.openReports} ${social.openReports === 1 ? "denúncia aberta" : "denúncias abertas"}` : "Nenhuma denúncia aberta", social.openReports ? '<span class="dot"></span>' : "") : ""}
       ${tool('data-tool="cart"', "bag", "Carrinho", cart.length && acct() ? cart.length + (cart.length === 1 ? " item · " : " itens · ") + brl(cartTotal().total) : "Monte e veja o total")}
       ${tool("data-home", "home", "Início", "Destaques e prateleiras")}
       ${tool('id="surprise"', "shuffle", "Me surpreenda", "Abre um jogo aleatório bem avaliado")}
@@ -3524,6 +3753,7 @@ function renderMenu() {
     </div>
     <div class="dr-sec"><h3>Sobre o Zera</h3>
       <p class="dr-about">Comparamos notas da crítica e preços nas lojas digitais brasileiras, com promoções atualizadas várias vezes por dia. Cada loja abre a página oficial. O mais vendido da Steam é ao vivo; os do PlayStation e do Xbox são revisados toda semana.</p>
+      <p class="dr-about"><button type="button" class="linkbtn" data-legal="privacidade">Política de Privacidade</button> · <button type="button" class="linkbtn" data-legal="termos">Termos de Uso</button></p>
     </div>`;
 }
 function openMenu() { renderMenu(); menu.showModal(); }
@@ -3586,6 +3816,7 @@ startHero();
   else if (h === "calendario") openCalendar();
   else if (h === "quiz") startQuiz();
   else if (h === "guias") openGuides();
+  else if (h === "privacidade" || h === "termos") openLegal(h);
 })();
 
 // ---------- capas (imagem do artigo de cada jogo na Wikipédia) ----------
