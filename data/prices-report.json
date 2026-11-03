@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T17:06:24.477Z",
+ "updated": "2026-11-03T23:26:30.859Z",
  "st": {
   "ok": 525,
   "total": 565,
@@ -100,14 +100,14 @@
   "miss": []
  },
  "ap": {
-  "ok": 22,
+  "ok": 23,
   "total": 38,
   "errors": 0,
   "miss": [
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil Village (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil 2 (grátis para baixar, desbloqueio dentro do app)",
-   "Assassin's Creed Shadows (grátis para baixar, desbloqueio dentro do app)",
+   "Assassin's Creed Shadows",
    "Prince of Persia: The Lost Crown (grátis para baixar, desbloqueio dentro do app)",
    "Dragon Ball Legends",
    "Dragon Ball Z: Dokkan Battle",
@@ -117,7 +117,6 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Genshin Impact",
    "Dead Cells",
    "Slay the Spire"
   ]
