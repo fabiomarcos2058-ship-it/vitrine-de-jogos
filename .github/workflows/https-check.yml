@@ -1,0 +1,31 @@
+name: Checar HTTPS do domínio
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/https-check.yml"]
+permissions:
+  contents: write
+jobs:
+  checar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testar
+        run: |
+          mkdir -p data; out=data/https-check.txt
+          { date -u
+            for u in http://zerajogos.com.br/ http://www.zerajogos.com.br/ https://zerajogos.com.br/ https://www.zerajogos.com.br/ https://fabiomarcos2058-ship-it.github.io/vitrine-de-jogos/ https://zerastorecorp.netlify.app/ https://zerajogos.com.br/jogo/elden-ring/; do
+              echo "== $u"; curl -sS -o /dev/null -m 20 -w "code=%{http_code} redirect=%{redirect_url} ssl_verify=%{ssl_verify_result}\n" "$u" 2>&1
+            done
+            echo "== certificado zerajogos.com.br"
+            echo | timeout 15 openssl s_client -connect zerajogos.com.br:443 -servername zerajogos.com.br 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName 2>&1
+            echo "== certificado www"
+            echo | timeout 15 openssl s_client -connect www.zerajogos.com.br:443 -servername www.zerajogos.com.br 2>/dev/null | openssl x509 -noout -subject -issuer -dates 2>&1
+            echo "== conteúdo misto (http:// na página)"
+            curl -sS -m 20 https://zerajogos.com.br/ -k | grep -o 'src="http://[^"]*"\|href="http://[^"]*"' | head
+          } > $out 2>&1
+          cat $out
+          git config user.name "Zera robô"; git config user.email "robo@users.noreply.github.com"
+          git add $out; git commit -qm "Checagem HTTPS" && for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 3; done
