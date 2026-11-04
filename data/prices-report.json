@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:17:39.240Z",
+ "updated": "2026-11-04T23:43:10.607Z",
  "st": {
   "ok": 576,
   "total": 622,
@@ -90,20 +90,22 @@
  "ep": {
   "ok": 37,
   "total": 109,
-  "ofertasNaVitrine": 247,
+  "ofertasNaVitrine": 248,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
   "ok": 3
  },
  "gp": {
-  "ok": 7,
+  "ok": 6,
   "total": 7,
   "errors": 0,
-  "miss": []
+  "miss": [
+   "Final Fantasy VII (sem preço)"
+  ]
  },
  "ap": {
-  "ok": 24,
+  "ok": 25,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -119,8 +121,7 @@
    "Grand Theft Auto: Liberty City Stories",
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
-   "Free Fire",
-   "Slay the Spire"
+   "Free Fire"
   ]
  }
 }
