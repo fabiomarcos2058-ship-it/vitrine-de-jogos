@@ -16,7 +16,7 @@ jobs:
         with: { node-version: 20 }
       - run: npm i playwright@1.47.2 && npx playwright install --with-deps chromium
       - run: |
-          if [ -f tools/so-atual ]; then node tools/shoot2.js; else node tools/shoot.js $(cat tools/versoes.txt); fi
+          if [ -f tools/so-atual ]; then SITE_URL=http://localhost:8200 node scripts/seo-pages.mjs; node tools/shoot2.js || true; git checkout -- jogo sitemap.xml robots.txt data 2>/dev/null || true; else node tools/shoot.js $(cat tools/versoes.txt); fi
           mkdir -p shots/fonts
           for f in "ofl/unbounded/Unbounded%5Bwght%5D.ttf" "ofl/onest/Onest%5Bwght%5D.ttf" "ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf"; do curl -sSfL -o "shots/fonts/$(basename "$f" | sed 's/%5Bwght%5D//')" "https://raw.githubusercontent.com/google/fonts/main/$f" || true; done
       - run: |

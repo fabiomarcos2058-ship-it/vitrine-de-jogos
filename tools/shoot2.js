@@ -15,16 +15,15 @@ const { spawn } = require('child_process');
     ['atual-pagina-cel', 390, 844, true, '/jogo/elden-ring/', null],
     ['atual-lista-pc', 1440, 900, false, '/jogo/', null]
   ];
-  for (const [n, w, h, m, path, act] of shots) {
+  for (const [n, w, h, m, path, act] of shots) { try {
     const ctx = await b.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 2, isMobile: m, hasTouch: m, locale: 'pt-BR' });
     const p = await ctx.newPage();
     // as páginas dos jogos apontam para o domínio: troca pelo endereço local
-    await p.route('https://zerajogos.com.br/**', r => r.continue({ url: r.request().url().replace('https://zerajogos.com.br', 'http://localhost:8200') }));
     try { await p.goto('http://localhost:8200' + path, { waitUntil: 'networkidle', timeout: 45000 }); } catch (e) { console.log(n, e.message); }
     await p.waitForTimeout(4000);
     if (act) { try { await act(p); } catch (e) { console.log(n, e.message); } await p.waitForTimeout(1800); }
     await p.screenshot({ path: `shots/${n}.png` });
     await ctx.close(); console.log('ok', n);
-  }
+  } catch (e) { console.log('erro', n, e.message); } }
   await b.close(); srv.kill();
 })();
