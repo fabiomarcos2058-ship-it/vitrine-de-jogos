@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T23:43:10.607Z",
+ "updated": "2026-11-05T06:54:12.129Z",
  "st": {
   "ok": 576,
   "total": 622,
@@ -97,12 +97,10 @@
   "ok": 3
  },
  "gp": {
-  "ok": 6,
+  "ok": 7,
   "total": 7,
   "errors": 0,
-  "miss": [
-   "Final Fantasy VII (sem preço)"
-  ]
+  "miss": []
  },
  "ap": {
   "ok": 25,
