@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T23:40:09.415Z",
+ "updated": "2026-11-06T06:53:28.439Z",
  "st": {
   "ok": 612,
   "total": 660,
@@ -103,7 +103,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 24,
+  "ok": 25,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -119,8 +119,7 @@
    "Grand Theft Auto: Liberty City Stories",
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
-   "Free Fire",
-   "Dead Cells"
+   "Free Fire"
   ]
  }
 }
