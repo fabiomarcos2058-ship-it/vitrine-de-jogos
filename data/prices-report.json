@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-07T06:04:05.842Z",
+ "updated": "2026-11-07T13:08:41.617Z",
  "st": {
-  "ok": 632,
-  "total": 683,
+  "ok": 653,
+  "total": 706,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -61,13 +61,49 @@
   ]
  },
  "ps": {
-  "ok": 298,
-  "skipped": true,
-  "via": "última leitura"
+  "ok": 396,
+  "total": 428,
+  "novosIds": 1,
+  "errors": 0,
+  "via": "páginas oficiais",
+  "miss": [
+   "Ghost of Yōtei",
+   "Avowed",
+   "Clair Obscur: Expedition 33",
+   "Yakuza 0",
+   "Call of Duty: Black Ops 6",
+   "EA Sports FC 27",
+   "EA Sports FC 26",
+   "Hollow Knight",
+   "Dragon Ball: The Breakers",
+   "Resident Evil Revelations 2",
+   "Umbrella Corps",
+   "Grand Theft Auto: The Trilogy – The Definitive Edition",
+   "Grand Theft Auto Online",
+   "Final Fantasy Pixel Remaster (I–VI)",
+   "Call of Duty: Black Ops 7",
+   "Terraria",
+   "Hotline Miami",
+   "Control",
+   "Remnant II",
+   "RimWorld",
+   "Sid Meier's Civilization VII",
+   "NieR Replicant ver.1.22474487139...",
+   "Dragon Quest XI S",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2",
+   "F1 25",
+   "Bloons TD 6",
+   "Rise of the Ronin",
+   "Marvel's Guardians of the Galaxy",
+   "Fall Guys",
+   "Don't Starve Together"
+  ]
  },
  "xb": {
-  "ok": 492,
-  "total": 507,
+  "ok": 504,
+  "total": 519,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -88,9 +124,9 @@
   ]
  },
  "ep": {
-  "ok": 37,
+  "ok": 38,
   "total": 109,
-  "ofertasNaVitrine": 246,
+  "ofertasNaVitrine": 247,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -103,14 +139,14 @@
   "miss": []
  },
  "ap": {
-  "ok": 24,
+  "ok": 23,
   "total": 38,
   "errors": 0,
   "miss": [
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil Village (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil 2 (grátis para baixar, desbloqueio dentro do app)",
-   "Assassin's Creed Shadows",
+   "Assassin's Creed Shadows (grátis para baixar, desbloqueio dentro do app)",
    "Prince of Persia: The Lost Crown (grátis para baixar, desbloqueio dentro do app)",
    "Dragon Ball Legends",
    "Dragon Ball Z: Dokkan Battle",
@@ -120,7 +156,8 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Dead Cells"
+   "Dead Cells",
+   "Slay the Spire"
   ]
  }
 }
