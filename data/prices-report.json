@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-07T19:27:44.530Z",
+ "updated": "2026-11-08T00:41:25.122Z",
  "st": {
-  "ok": 653,
-  "total": 706,
+  "ok": 675,
+  "total": 729,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -61,13 +61,49 @@
   ]
  },
  "ps": {
-  "ok": 396,
-  "skipped": true,
-  "via": "última leitura"
+  "ok": 399,
+  "total": 431,
+  "novosIds": 0,
+  "errors": 0,
+  "via": "páginas oficiais",
+  "miss": [
+   "Ghost of Yōtei",
+   "Avowed",
+   "Clair Obscur: Expedition 33",
+   "Yakuza 0",
+   "Call of Duty: Black Ops 6",
+   "EA Sports FC 27",
+   "EA Sports FC 26",
+   "Hollow Knight",
+   "Dragon Ball: The Breakers",
+   "Resident Evil Revelations 2",
+   "Umbrella Corps",
+   "Grand Theft Auto: The Trilogy – The Definitive Edition",
+   "Grand Theft Auto Online",
+   "Final Fantasy Pixel Remaster (I–VI)",
+   "Call of Duty: Black Ops 7",
+   "Terraria",
+   "Hotline Miami",
+   "Control",
+   "Remnant II",
+   "RimWorld",
+   "Sid Meier's Civilization VII",
+   "NieR Replicant ver.1.22474487139...",
+   "Dragon Quest XI S",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2",
+   "F1 25",
+   "Bloons TD 6",
+   "Rise of the Ronin",
+   "Marvel's Guardians of the Galaxy",
+   "Fall Guys",
+   "Don't Starve Together"
+  ]
  },
  "xb": {
-  "ok": 504,
-  "total": 519,
+  "ok": 511,
+  "total": 526,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
