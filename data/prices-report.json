@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:57:03.459Z",
+ "updated": "2026-11-08T22:10:37.997Z",
  "st": {
   "ok": 686,
   "total": 741,
@@ -90,7 +90,7 @@
  "ep": {
   "ok": 39,
   "total": 109,
-  "ofertasNaVitrine": 247,
+  "ofertasNaVitrine": 248,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -103,7 +103,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 23,
+  "ok": 24,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -120,8 +120,7 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Dead Cells",
-   "Slay the Spire"
+   "Dead Cells"
   ]
  }
 }
