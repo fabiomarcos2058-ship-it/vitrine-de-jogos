@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:41:25.122Z",
+ "updated": "2026-11-08T10:29:19.098Z",
  "st": {
   "ok": 675,
   "total": 729,
@@ -62,44 +62,8 @@
  },
  "ps": {
   "ok": 399,
-  "total": 431,
-  "novosIds": 0,
-  "errors": 0,
-  "via": "páginas oficiais",
-  "miss": [
-   "Ghost of Yōtei",
-   "Avowed",
-   "Clair Obscur: Expedition 33",
-   "Yakuza 0",
-   "Call of Duty: Black Ops 6",
-   "EA Sports FC 27",
-   "EA Sports FC 26",
-   "Hollow Knight",
-   "Dragon Ball: The Breakers",
-   "Resident Evil Revelations 2",
-   "Umbrella Corps",
-   "Grand Theft Auto: The Trilogy – The Definitive Edition",
-   "Grand Theft Auto Online",
-   "Final Fantasy Pixel Remaster (I–VI)",
-   "Call of Duty: Black Ops 7",
-   "Terraria",
-   "Hotline Miami",
-   "Control",
-   "Remnant II",
-   "RimWorld",
-   "Sid Meier's Civilization VII",
-   "NieR Replicant ver.1.22474487139...",
-   "Dragon Quest XI S",
-   "Rainbow Six Siege X",
-   "Overwatch 2",
-   "Path of Exile 2",
-   "F1 25",
-   "Bloons TD 6",
-   "Rise of the Ronin",
-   "Marvel's Guardians of the Galaxy",
-   "Fall Guys",
-   "Don't Starve Together"
-  ]
+  "skipped": true,
+  "via": "última leitura"
  },
  "xb": {
   "ok": 511,
@@ -124,9 +88,9 @@
   ]
  },
  "ep": {
-  "ok": 38,
+  "ok": 39,
   "total": 109,
-  "ofertasNaVitrine": 246,
+  "ofertasNaVitrine": 245,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
