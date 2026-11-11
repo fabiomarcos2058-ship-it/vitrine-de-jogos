@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-10T21:19:27.635Z",
+ "updated": "2026-11-11T06:31:28.162Z",
  "st": {
-  "ok": 724,
-  "total": 781,
+  "ok": 748,
+  "total": 808,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -66,8 +66,8 @@
   "via": "última leitura"
  },
  "xb": {
-  "ok": 543,
-  "total": 558,
+  "ok": 561,
+  "total": 576,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -90,7 +90,7 @@
  "ep": {
   "ok": 33,
   "total": 109,
-  "ofertasNaVitrine": 255,
+  "ofertasNaVitrine": 256,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
