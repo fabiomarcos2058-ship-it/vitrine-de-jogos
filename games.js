@@ -486,7 +486,7 @@ window.GAMES = [
 {"t":"Fishing Planet","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/380600/f56493d3bccfb4545414e2c1315f12c01bbd7868/library_capsule_2x.jpg?t=1793632710","y":2017,"g":"Esporte","d":"Fishing Planet LLC","n":null,"p":{"ps":null,"xb":0,"st":0,"ep":null,"gp":null,"ap":null},"desc":"Fishing Planet® é um simulador de pesca online multijogador em primeira pessoa altamente realista. Desenvolvido por verdadeiros entusiastas da pesca para trazer a você toda a emoção da pescaria real no seu PC. Gratuito: basta baixar!","ed":[["Gratuito","Jogo completo",0]],"w":"Fishing Planet","stid":380600,"auto":true},
 {"t":"Owlboy","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/115800/library_600x900_2x.jpg?t=1793528438","y":2016,"g":"Ação","d":"D-Pad Studio","n":88,"p":{"ps":null,"xb":51.53,"st":59.99,"ep":null,"gp":null,"ap":null},"desc":"Owlboy é um jogo de aventura plataforma em narrativa no qual você pode voar e explorar um mundo novinho nas nuvens! Pegue seus amigos e traga com você enquanto explora os céus abertos.","ed":[["Padrão","Jogo completo",59.99]],"w":"Owlboy","stid":115800,"auto":true},
 {"t":"Teardown","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1167630/943e8110c7b4eafc6a02c87703ea5f6f8e2ef2ba/library_capsule_2x.jpg?t=1791807602","y":2022,"g":"Estratégia","d":"Tuxedo Labs","n":80,"p":{"ps":159.9,"xb":112.45,"st":89.99,"ep":null,"gp":null,"ap":null},"desc":"Prepare o assalto perfeito em um mundo de voxels totalmente destrutível. Derrube paredes com veículos ou explosivos para criar seus próprios atalhos. Molde o ambiente como for mais vantajoso e das formas mais criativas que você puder imaginar. Jogue solo ou com até 12 jogadores no modo multijogador.","ed":[["Padrão","Jogo completo",89.99]],"w":"Teardown","stid":1167630,"psid":"UP6856-PPSA15246_00-TRDNBASE00000000","auto":true},
-{"t":"CONTROL Resonant","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/7d4b4f430dc4d07e6562eb445456f9615cb52f77/library_capsule_2x.jpg?t=1793357289","y":2026,"g":"RPG","d":"Remedy Entertainment","n":null,"p":{"ps":230.9,"xb":219.95,"st":229.99,"ep":null,"gp":null,"ap":null},"desc":"Explore uma Manhattan distorcida à beira da aniquilação paranatural neste emocionante RPG de ação e aventura. Liberte os poderes extraordinários de Dylan Faden na luta pela própria humanidade e pela nossa sobrevivência contra uma ameaça cósmica capaz de distorcer a realidade.","ed":[["Padrão","Jogo completo",229.99]],"w":"CONTROL Resonant","stid":3669870,"psid":"EP5291-PPSA34547_00-0210080241603648","auto":true},
+{"t":"CONTROL Resonant","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/7d4b4f430dc4d07e6562eb445456f9615cb52f77/library_capsule_2x.jpg?t=1793357289","y":2026,"g":"RPG","d":"Remedy Entertainment","n":84,"p":{"ps":230.9,"xb":219.95,"st":229.99,"ep":null,"gp":null,"ap":null},"desc":"Explore uma Manhattan distorcida à beira da aniquilação paranatural neste emocionante RPG de ação e aventura. Liberte os poderes extraordinários de Dylan Faden na luta pela própria humanidade e pela nossa sobrevivência contra uma ameaça cósmica capaz de distorcer a realidade.","ed":[["Padrão","Jogo completo",229.99]],"w":"CONTROL Resonant","stid":3669870,"psid":"EP5291-PPSA34547_00-0210080241603648","auto":true},
 {"t":"Thymesia","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343240/library_600x900_2x.jpg?t=1778528381","y":2022,"g":"Ação","d":"OverBorder Studio","n":null,"p":{"ps":null,"xb":159.9,"st":74.9,"ep":null,"gp":null,"ap":null},"desc":"Thymesia é um RPG de ação pauleira com combate frenético e um sistema intricado de armas pestilentas. Num reino onde a morte se espalha, jogue com o misterioso personagem conhecido apenas como \"Corvus\". Cace os inimigos, manipule enfermidades e descubra a verdade por trás de suas próprias memórias.","ed":[["Padrão","Jogo completo",74.9]],"w":"Thymesia","stid":1343240,"auto":true},
 {"t":"Solasta II","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2975950/c7d612c89c85b49bcafac12ea1f8a7e73241c0cf/library_capsule_2x.jpg?t=1789129642","y":2026,"g":"Estratégia","d":"Tactical Adventures","n":null,"p":{"ps":null,"xb":null,"st":109.99,"ep":null,"gp":null,"ap":null},"desc":"As forças malignas da enigmática Shadwyn ameaçam Neokos, um continente rico em poder arcano. Junte-se ao seu grupo de aventureiros e desbrave esta terra perigosa e desconhecida neste RPG tático em turnos que utiliza o sistema de regras SRD 5e. Você faz as escolhas, mas os dados decidem o destino.","ed":[["Padrão","Jogo completo",109.99]],"w":"Solasta II","stid":2975950,"auto":true},
 {"t":"inZOI","img":"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/library_600x900_2x.jpg?t=1792372965","y":2025,"g":"Simulação","d":"inZOI Studio","n":null,"p":{"ps":null,"xb":null,"st":149.9,"ep":null,"gp":null,"ap":null},"desc":"“Toda vida se torna uma história”. Crie sua própria história única enquanto guia e observa a vida de seus Zois. Crie a vida ideal com as ferramentas do inZOI, projetando personagens únicos, construindo casas deslumbrantes e mergulhando em uma simulação rica que captura todas as emoções da vida.","ed":[["Padrão","Jogo completo",149.9]],"w":"inZOI","stid":2456740,"auto":true},
@@ -940,13 +940,12 @@ window.GAMES = [
 // Banner: mais vendidos por plataforma (ref. 09/11/2026)
 window.TOP = [
   { store: "ps", label: "PlayStation", game: "Call of Duty: Modern Warfare 4", tag: "Nº 1 em outubro", fact: "Jogo de PS5 mais baixado da PS Store em outubro, tanto nos EUA e Canadá quanto na Europa, à frente de EA Sports FC 27 e BeamNG.drive.", src: "PlayStation Blog, downloads de out/2026" },
-  { store: "xb", label: "Xbox", game: "Grand Theft Auto VI", tag: "Pré-venda", fact: "Cerca de 1,6 milhão de cópias digitais já reservadas no Xbox até meados de outubro.", src: "Estimativa Sensor Tower, out/2026" },
+  { store: "xb", label: "Xbox", game: "Grand Theft Auto VI", tag: "Lança dia 19", fact: "Pré-venda mais vendida do Xbox: cerca de 3,8 milhões de cópias digitais reservadas a três dias do lançamento.", src: "Estimativa Sensor Tower, 16/nov/2026" },
   { store: "st", label: "Steam", game: "Phantom Blade Zero", tag: "Lança hoje", fact: "Jogo pago mais vendido da Steam na semana de 20 a 27 de outubro, ainda em pré-venda. Nota 88 da crítica.", src: "Steam, semana de 20 a 27/out" }
 ];
 
 // Calendário de lançamentos (fontes: VGC, Gematsu e iTechGuides, nov/2026). "id" liga ao jogo do catálogo quando existe.
 window.CALENDAR = [
-  { d: "2026-11-12", t: "Sonic Pico Park", p: "PS5 · Xbox · PC" },
   { d: "2026-11-19", t: "Grand Theft Auto VI", p: "PS5 · Xbox", id: "Grand Theft Auto VI", big: true },
   { d: "2026-12-01", t: "Hela", p: "PS5 · Xbox · PC" },
   { d: "2026-12-03", t: "Dragon Quest Monsters: The Withered World", p: "PS5 · Xbox · PC" },
@@ -962,6 +961,7 @@ window.CALENDAR = [
   { d: "2027", t: "Dragon Ball: projeto AGE 1000", p: "Plataformas a anunciar" }
 ];
 window.RECENT = [
+  { d: "2026-11-12", t: "Sonic Pico Park", p: "PS5 · Xbox · PC" },
   { d: "2026-10-29", t: "Phantom Blade Zero", p: "PS5 · PC", id: "Phantom Blade Zero" },
   { d: "2026-10-29", t: "The Wolf Among Us Remastered", p: "PS5 · Xbox · PC" },
   { d: "2026-10-23", t: "Call of Duty: Modern Warfare 4", p: "PS5 · Xbox · PC", id: "Call of Duty: Modern Warfare 4" },
@@ -970,8 +970,7 @@ window.RECENT = [
   { d: "2026-10-13", t: "Planet Zoo 2", p: "PS5 · Xbox · PC" },
   { d: "2026-10-13", t: "Valor Mortis", p: "PS5 · Xbox · PC" },
   { d: "2026-10-09", t: "Dragon's Dogma 2: Dark Arisen", p: "PS5 · Xbox · PC" },
-  { d: "2026-10-08", t: "Kingdom Hearts Collection", p: "PS5 · Xbox · PC" },
-  { d: "2026-10-06", t: "Gears of War: E-Day", p: "Xbox · PC", id: "Gears of War: E-Day" }
+  { d: "2026-10-08", t: "Kingdom Hearts Collection", p: "PS5 · Xbox · PC" }
 ];
 
 // Guias de série: ordem para jogar. "id" liga ao jogo do catálogo.
@@ -1070,14 +1069,16 @@ window.GUIDES = [
 // Promoções conferidas à mão em lojas sem leitura automática (PlayStation Store Brasil).
 // "until" em UTC: depois dessa data a promoção some sozinha do site.
 window.PROMOS = [
-  // Black Friday — PlayStation Store, de 04/11 a 30/11/2026, com troca de ofertas em 16/11 (algumas acabam antes).
-  // Por segurança, vale até 15/11/2026 às 23h59 (Brasília); a revisão de 16/11 confere de novo. Conferido em 09/11/2026 (Gazeta Culturismo).
-  { t: "Control", k: "ps", b: 108.5, f: 16.27, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Batman: Arkham Knight", k: "ps", b: 62.5, f: 15.62, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Resident Evil 4", k: "ps", b: 199.5, f: 49.87, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Silent Hill 2", k: "ps", b: 349.9, f: 97.97, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Silent Hill f", k: "ps", b: 399.9, f: 111.97, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Horizon Zero Dawn Remastered", k: "ps", b: 284.9, f: 119.65, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Death Stranding 2: On the Beach", k: "ps", b: 399.9, f: 227.94, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" },
-  { t: "Astro Bot", k: "ps", b: 339.9, f: 224.33, until: "2026-11-16T02:59:00Z", checked: "2026-11-09" }
+  // Black Friday — PlayStation Store, segunda leva de ofertas (16/11 a 30/11/2026). Fim às 23h59 de 30/11 (Brasília),
+  // exceto Red Dead Redemption 2, que acaba em 17/11 às 14h (Brasília). Conferido em 16/11/2026 (Game Over Drive).
+  { t: "007 First Light", k: "ps", b: 299.9, f: 149.95, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "Marvel's Wolverine", k: "ps", b: 399.9, f: 283.92, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "EA Sports FC 27", k: "ps", b: 349, f: 174.5, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "CONTROL Resonant", k: "ps", b: 230.9, f: 184.72, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "ACE COMBAT 8: WINGS OF THEVE", k: "ps", b: 399.9, f: 319.92, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "Hogwarts Legacy", k: "ps", b: 299.9, f: 29.99, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "Mortal Kombat 1", k: "ps", b: 199.5, f: 29.92, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "It Takes Two", k: "ps", b: 198.9, f: 39.78, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "Gears of War: Reloaded", k: "ps", b: 199, f: 49.75, until: "2026-12-01T02:59:00Z", checked: "2026-11-16" },
+  { t: "Red Dead Redemption 2", k: "ps", b: 299.9, f: 74.97, until: "2026-11-17T17:00:00Z", checked: "2026-11-16" }
 ];
