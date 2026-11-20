@@ -1,9 +1,10 @@
 {
- "updated": "2026-11-20T11:46:39.163Z",
+ "updated": "2026-11-20T20:26:19.741Z",
  "st": {
   "ok": 951,
   "total": 1031,
   "unresolved": [
+   "Red Dead Redemption 2 (HTTP 503)",
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy VII Ever Crisis"
@@ -90,7 +91,7 @@
  "ep": {
   "ok": 27,
   "total": 109,
-  "ofertasNaVitrine": 250,
+  "ofertasNaVitrine": 248,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
