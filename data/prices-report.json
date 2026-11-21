@@ -1,10 +1,9 @@
 {
- "updated": "2026-11-20T20:26:19.741Z",
+ "updated": "2026-11-21T02:21:24.798Z",
  "st": {
-  "ok": 951,
-  "total": 1031,
+  "ok": 967,
+  "total": 1047,
   "unresolved": [
-   "Red Dead Redemption 2 (HTTP 503)",
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy VII Ever Crisis"
@@ -62,13 +61,51 @@
   ]
  },
  "ps": {
-  "ok": 463,
-  "skipped": true,
-  "via": "última leitura"
+  "ok": 477,
+  "total": 511,
+  "novosIds": 1,
+  "errors": 0,
+  "via": "páginas oficiais",
+  "miss": [
+   "Ghost of Yōtei",
+   "Avowed",
+   "Clair Obscur: Expedition 33",
+   "Yakuza 0",
+   "Call of Duty: Black Ops 6",
+   "EA Sports FC 27",
+   "EA Sports FC 26",
+   "Hollow Knight",
+   "Dragon Ball: The Breakers",
+   "Resident Evil Revelations 2",
+   "Umbrella Corps",
+   "Grand Theft Auto: The Trilogy – The Definitive Edition",
+   "Grand Theft Auto Online",
+   "Final Fantasy Pixel Remaster (I–VI)",
+   "Call of Duty: Black Ops 7",
+   "Terraria",
+   "Hotline Miami",
+   "Control",
+   "Remnant II",
+   "RimWorld",
+   "Sid Meier's Civilization VII",
+   "NieR Replicant ver.1.22474487139...",
+   "Dragon Quest XI S",
+   "Rainbow Six Siege X",
+   "Overwatch 2",
+   "Path of Exile 2",
+   "F1 25",
+   "Bloons TD 6",
+   "Rise of the Ronin",
+   "Marvel's Guardians of the Galaxy",
+   "Fall Guys",
+   "Don't Starve Together",
+   "Exo One",
+   "Deep Rock Galactic: Survivor"
+  ]
  },
  "xb": {
-  "ok": 686,
-  "total": 701,
+  "ok": 700,
+  "total": 715,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -104,7 +141,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 23,
+  "ok": 25,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -120,9 +157,7 @@
    "Grand Theft Auto: Liberty City Stories",
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
-   "Free Fire",
-   "Dead Cells",
-   "Slay the Spire"
+   "Free Fire"
   ]
  }
 }
