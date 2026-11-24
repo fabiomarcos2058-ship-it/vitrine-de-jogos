@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:54:15.916Z",
+ "updated": "2026-11-24T02:15:02.613Z",
  "st": {
   "ok": 997,
   "total": 1077,
@@ -61,9 +61,9 @@
   ]
  },
  "ps": {
-  "ok": 488,
-  "total": 522,
-  "novosIds": 0,
+  "ok": 489,
+  "total": 523,
+  "novosIds": 2,
   "errors": 0,
   "via": "páginas oficiais",
   "miss": [
@@ -104,8 +104,8 @@
   ]
  },
  "xb": {
-  "ok": 723,
-  "total": 738,
+  "ok": 724,
+  "total": 739,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -128,7 +128,7 @@
  "ep": {
   "ok": 30,
   "total": 109,
-  "ofertasNaVitrine": 253,
+  "ofertasNaVitrine": 252,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -148,7 +148,7 @@
    "Resident Evil 4 (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil Village (grátis para baixar, desbloqueio dentro do app)",
    "Resident Evil 2 (grátis para baixar, desbloqueio dentro do app)",
-   "Assassin's Creed Shadows",
+   "Assassin's Creed Shadows (grátis para baixar, desbloqueio dentro do app)",
    "Prince of Persia: The Lost Crown (grátis para baixar, desbloqueio dentro do app)",
    "Dragon Ball Legends",
    "Dragon Ball Z: Dokkan Battle",
