@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T01:45:38.912Z",
+ "updated": "2026-11-27T12:30:44.901Z",
  "st": {
   "ok": 1059,
   "total": 1139,
@@ -63,7 +63,7 @@
  "ps": {
   "ok": 511,
   "total": 545,
-  "novosIds": 2,
+  "novosIds": 1,
   "errors": 0,
   "via": "páginas oficiais",
   "miss": [
@@ -126,9 +126,9 @@
   ]
  },
  "ep": {
-  "ok": 28,
+  "ok": 27,
   "total": 109,
-  "ofertasNaVitrine": 258,
+  "ofertasNaVitrine": 257,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
