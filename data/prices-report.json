@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-28T07:54:50.447Z",
+ "updated": "2026-11-28T17:35:58.632Z",
  "st": {
-  "ok": 1070,
-  "total": 1150,
+  "ok": 1073,
+  "total": 1153,
   "unresolved": [
    "Grand Theft Auto: The Trilogy – The Definitive Edition",
    "Final Fantasy Pixel Remaster (I–VI)",
@@ -66,8 +66,8 @@
   "via": "última leitura"
  },
  "xb": {
-  "ok": 776,
-  "total": 791,
+  "ok": 779,
+  "total": 794,
   "errors": 0,
   "miss": [
    "Sea of Thieves",
@@ -88,9 +88,9 @@
   ]
  },
  "ep": {
-  "ok": 27,
+  "ok": 29,
   "total": 109,
-  "ofertasNaVitrine": 256,
+  "ofertasNaVitrine": 249,
   "via": "vitrine pública da Epic"
  },
  "epFree": {
@@ -103,7 +103,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 23,
+  "ok": 24,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -120,7 +120,6 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
-   "Dead Cells",
    "Slay the Spire"
   ]
  }
