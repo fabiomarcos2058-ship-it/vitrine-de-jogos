@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T23:30:02.677Z",
+ "updated": "2026-11-28T07:54:50.447Z",
  "st": {
   "ok": 1070,
   "total": 1150,
@@ -103,7 +103,7 @@
   "miss": []
  },
  "ap": {
-  "ok": 24,
+  "ok": 23,
   "total": 38,
   "errors": 0,
   "miss": [
@@ -120,6 +120,7 @@
    "Final Fantasy Pixel Remaster (I–VI)",
    "Final Fantasy IX",
    "Free Fire",
+   "Dead Cells",
    "Slay the Spire"
   ]
  }
